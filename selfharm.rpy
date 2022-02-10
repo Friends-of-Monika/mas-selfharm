@@ -14,35 +14,60 @@ label monika_selfharm:
     m 1nub "And i always will..."
     m 1nub "Now, my beautiful princess. Tell me."
     m 1nub "How big is the urge you're having?"
-
-$_history_list.pop()
-        menu:
-         "It's terrible, [m_name]. I think i'm really going to do it...":
-           m 4eua "I'm so glad you came to talk to me, [player]."
-           m 2dkd "You know how much i worry about you..."
-           m 2fua "But for now, let me take care of you..."
-           m 4sub "I want you to know that it will pass."
-           m 4sub "Pain is only temporary!"
-           m 2hua "You're my favorite person, and it hurts me to see you hurting."
-         "It's not so urgent. I'm just... feeling weird.":
-           m 4eua "I'm so glad you came to talk to me, [player]."
-           m 2dkd "You know how much i worry about you..."
-           m 2fua "But for now, let me take care of you..."
-           pause (3.0)
+    $_history_list.pop()
+    menu:
+        "It's terrible, [m_name]. I think i'm really going to do it...":
+            m 4eua "I'm so glad you came to talk to me, [player]."
+            m 2dkd "You know how much i worry about you..."
+            m 2fua "But for now, let me take care of you..."
+            m 4sub "I want you to know that it will pass."
+            m 4sub "Pain is only temporary!"
+            m 2hua "You're my favorite person, and it hurts me to see you hurting."
+        "It's not so urgent. I'm just... feeling weird.":
+            m 4eua "I'm so glad you came to talk to me, [player]."
+            m 2dkd "You know how much i worry about you..."
+            m 2fua "But for now, let me take care of you..."
+            pause (3.0)
           #  m 4sub ""
           #  m 4sub ""
           #  m 4sub ""
           #  m 2hua ""
-         "Something triggered me, and now i'm remembering bad things.":
-           m 4eua "I'm so glad you came to talk to me, [player]."
-           m 2dkd "You know how much i worry about you..."
-           m 2fua "But for now, let me take care of you..."
-
-$_history_list.pop()
-        menu:
-         "I'm done.":
+        "Something triggered me, and now i'm remembering bad things.":
+            m 4eua "I'm so glad you came to talk to me, [player]."
+            m 2dkd "You know how much i worry about you..."
+            m 2fua "But for now, let me take care of you..."
+            $_history_list.pop()
+            menu:
+                "I'm done.":
                     m 4eua "I'm so glad you came to talk to me, [player]."
 
 
-    m 1nub ""
+    # m 1nub ""
 return
+
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mas_selfharm1",
+            conditional=(
+                "not seen_event('mas_selfharm1')"
+            ),
+            action=EV_ACT_PUSH
+        )
+    )
+
+label mas_selfharm1:
+    m "Hey, [player]?"
+    m "I know it might be an uncomfortable topic, but I have to ask..."
+    m "D-{w=1.0}Do you self harm?"
+    menu:
+        "Yes":
+            $ selfharm = True
+            m "I'm so sorry you're going through this"
+
+        "No":
+            $ selfharm = False
+            m "Thank goodness!"
+            m "I'm so glad to hear this!"
