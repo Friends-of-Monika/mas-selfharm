@@ -17,7 +17,7 @@ label monika_selfharm:
 
 $_history_list.pop()
         menu:
-         "It's terrible, Momo. I think i'm really going to do it...":
+         "It's terrible, [m_name]. I think i'm really going to do it...":
            m 4eua "I'm so glad you came to talk to me, [player]."
            m 2dkd "You know how much i worry about you..."
            m 2fua "But for now, let me take care of you..."
@@ -28,10 +28,11 @@ $_history_list.pop()
            m 4eua "I'm so glad you came to talk to me, [player]."
            m 2dkd "You know how much i worry about you..."
            m 2fua "But for now, let me take care of you..."
-           m 4sub ""
-           m 4sub ""
-           m 4sub ""
-           m 2hua ""
+           pause (3.0)
+          #  m 4sub ""
+          #  m 4sub ""
+          #  m 4sub ""
+          #  m 2hua ""
          "Something triggered me, and now i'm remembering bad things.":
            m 4eua "I'm so glad you came to talk to me, [player]."
            m 2dkd "You know how much i worry about you..."
