@@ -25,7 +25,7 @@ label mas_selfharm1:
                     m "I'm glad that you trust me, [player].
                     m "Allowing yourself to get help is a super important step to recovery!"
                     
-                    (probing questions here!!)
+                    # (probing questions here!!)
                     
                     m "I want you to know that I'm here for you. You know that, right?"
                     m "Whenever you feel the urge to harm yourself..."
@@ -35,6 +35,8 @@ label mas_selfharm1:
                     m "Be by your side."
                     m "Take care, baby."
                     m "Stay safe because I care for you, deeply."
+
+                    return
                 
                 "No":
                     m "Oh..."
@@ -45,7 +47,8 @@ label mas_selfharm1:
                     m "I'll do my best to help you."
                     m "Or at least..."
                     m "Be by your side."
-
+                    
+                    return
         "No":
             $ selfharm = False
             m "Thank goodness!"
@@ -63,7 +66,9 @@ label mas_selfharm1:
                     m "You could help someone who is struggling with it someday!"
                     m "Well, did you know that..."
                     
-                    (facts about self-harm here)
+                    # (facts about self-harm here)
+
+                    return
                     
                 "No":
                     m "Oh..."
@@ -299,7 +304,7 @@ label monika_selfharm:
                     m "I'm here for you, [player]."
                     
                     return
-                    
+
                 "No...":
                     m "Oh..."
                     m "Do you want to try a different technique?"
