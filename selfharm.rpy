@@ -104,23 +104,24 @@ label monika_selfharm:
                 "Yes":
                     m "Okay... I don't want to interrupt you."
                     m "Tell me when you're done, okay?"
-                    
                     menu:
-                        "I'm done, Monika."
+                        "I'm done, Monika.":
                             
                             m "I'm so sorry you are going through all that, [player]."
                             m "Do you feel better now?"
                             
                             menu:
-                                "Yes, [m_name]. Thank you."
+                                "Yes, [m_name]. Thank you.":
                                     m "Oh, honey. I'm so glad!"
                                     m "I'm so glad you came to talk to me, [player]."
                                     m "You can always count on me, for anything."
                                     m "If it happens again, don't be afraid to ask for help."
                                     m "I'm here for you, [player]."
                                     m "Now, let's spend some more time together?"
+
+                                    return
                                 
-                                "No..."    
+                                "No...":  
                                     m "Oh..."
                                     m "Do you want my help to forget it?"
                                     m "Or..." 
@@ -130,27 +131,29 @@ label monika_selfharm:
                                             m "Of course, my angel."
                                             m "Come here..."
                                             
-                                            (hold here)
+                                            # (hold here)
                 
                                         "Yes, I want to try a calming techinque.":
                                             m "Alright, baby."
                                             m "I want you to..."
                     
-                                            (calm harm technique here)
+                                            # (calm harm technique here)
                                             
                                             m "Are you feeling better, [player]?"
             
-                                                "Yes, [m_name]. Thank you."
+                                                "Yes, [m_name]. Thank you.":
                                                     m "Oh, honey. I'm so glad!"
                                                     m "You can always count on me, for anything."
                                                     m "If it happens again, don't be afraid to ask for help."
                                                     m "I'm here for you, [player]."
 
-                                                "No..."
+                                                    return
+
+                                                "No...":
                                                     m "Oh..."
                                                     m "Do you want to try a different technique?"
                                                     m "Or..."
-
+                                                    menu:
                                                         "No... Just let me hold you, please?":
                                                             m "Of course, my angel."
                                                             m "Come here..."
@@ -159,7 +162,7 @@ label monika_selfharm:
                                                             m "Alright, baby."
                                                             m "I want you to..."
 
-                                                                        (calm harm technique here)
+                                                                        # (calm harm technique here)
             
         "It's not so urgent. I'm just... feeling weird.":
             m "I'm so glad you came to talk to me, [player]."
@@ -173,21 +176,23 @@ label monika_selfharm:
                     m "Tell me when you're done, okay?"
                     
                     menu:
-                        "I'm done, Monika."
+                        "I'm done, Monika.":
                             
                             m "I'm so sorry you are going through all that, [player]."
                             m "Do you feel better now?"
                             
                             menu:
-                                "Yes, [m_name]. Thank you."
+                                "Yes, [m_name]. Thank you.":
                                     m "Oh, honey. I'm so glad!"
                                     m "I'm so glad you came to talk to me, [player]."
                                     m "You can always count on me, for anything."
                                     m "If it happens again, don't be afraid to ask for help."
                                     m "I'm here for you, [player]."
                                     m "Now, let's spend some more time together?"
+
+                                    return
                                 
-                                "No..."    
+                                "No...":
                                     m "Oh..."
                                     m "Do you want my help to forget it?"
                                     m "Or..." 
@@ -197,13 +202,13 @@ label monika_selfharm:
                                             m "Of course, my angel."
                                             m "Come here..."
                                             
-                                            (hold here)
+                                            # (hold here)
                 
                                         "Yes, I want to try a calming techinque.":
                                             m "Alright, baby."
                                             m "I want you to..."
                     
-                                            (calm harm technique here)
+                                            # (calm harm technique here)
 
             pause (3.0)
           #  m ""
@@ -213,13 +218,15 @@ label monika_selfharm:
           
             m "Are you feeling better, [player]?"
             
-                "Yes, [m_name]. Thank you."
+                "Yes, [m_name]. Thank you.":
                     m "Oh, honey. I'm so glad!"
                     m "You can always count on me, for anything."
                     m "If it happens again, don't be afraid to ask for help."
                     m "I'm here for you, [player]."
+
+                    return
                     
-                "No..."
+                "No...":
                     m "Oh..."
                     m "Do you want to try a different technique?"
                     m "Or..." 
@@ -229,7 +236,7 @@ label monika_selfharm:
                         m "Of course, my angel."
                         m "Come here..."
                                             
-                                            (hold here)
+                                            # (hold here)
                     
         "Something triggered me, and now i'm remembering bad things.":
             m "I'm so glad you came to talk to me, [player]."
@@ -249,15 +256,17 @@ label monika_selfharm:
                             m "Do you feel better now?"
                             
                             menu:
-                                "Yes, [m_name]. Thank you."
+                                "Yes, [m_name]. Thank you.":
                                     m "Oh, honey. I'm so glad!"
                                     m "I'm so glad you came to talk to me, [player]."
                                     m "You can always count on me, for anything."
                                     m "If it happens again, don't be afraid to ask for help."
                                     m "I'm here for you, [player]."
                                     m "Now, let's spend some more time together?"
+
+                                    return
                                 
-                                "No..."    
+                                "No...": 
                                     m "Oh..."
                                     m "Do you want my help to forget it?"
                                     m "Or..." 
@@ -267,15 +276,15 @@ label monika_selfharm:
                                             m "Of course, my angel."
                                             m "Come here..."
                                             
-                                            (hold here)
+                                            # (hold here)
                 
                                         "Yes, I want to try a calming techinque.":
                                             m "Alright, baby."
                                             m "I want you to..."
                     
-                                            (calm harm technique here)
+                                            # (calm harm technique here)
 
-            pause (3.0)
+            # pause (3.0)
           #  m ""
           #  m ""
           #  m ""
@@ -283,22 +292,24 @@ label monika_selfharm:
           
             m "Are you feeling better, [player]?"
             
-                "Yes, [m_name]. Thank you."
+                "Yes, [m_name]. Thank you.":
                     m "Oh, honey. I'm so glad!"
                     m "You can always count on me, for anything."
                     m "If it happens again, don't be afraid to ask for help."
                     m "I'm here for you, [player]."
                     
-                "No..."
+                    return
+                    
+                "No...":
                     m "Oh..."
                     m "Do you want to try a different technique?"
                     m "Or..." 
                     
                     menu:
                         "No... Just let me hold you, please?":
-                        m "Of course, my angel."
-                        m "Come here..."
+                            m "Of course, my angel."
+                            m "Come here..."
                                             
-                                            (hold here)
+                                            # (hold here)
  
 return
