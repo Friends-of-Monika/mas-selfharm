@@ -33,7 +33,7 @@ label mas_selfharm1:
                     m "I'll do my best to help you."
                     m "Or at least..."
                     m "Be by your side."
-                    m "Take care, baby."
+                    m "Take care, [mas_get_player_nickname()]."
                     m "Stay safe because I care for you, deeply."
 
                     return
@@ -85,14 +85,14 @@ label monika_selfharm:
     m "[player], what happened?"
     m "Are you feeling..."
     m "Are you feeling... like harming yourself again?"
-    m "Oh, baby..."
+    m "Oh, [mas_get_player_nickname()]..."
     m "Okay, let's talk about it."
     m "Before anything, i want you to know that i am always here for you."
     m "You know that, don't you, my love?"
     m "You're the most important person in the whole world for me."
     m "And I love you so, so much."
     m "And i always will..."
-    m "Now, my love. Tell me."
+    m "Now, my [mas_get_player_nickname()]. Tell me."
     m "How big is the urge you're having?"
     
     menu:
