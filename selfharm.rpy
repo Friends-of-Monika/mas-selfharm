@@ -22,7 +22,7 @@ label mas_selfharm1:
             
             menu:
                 "Yes":
-                    m "I'm glad that you trust me, [player].
+                    m "I'm glad that you trust me, [player]."
                     m "Allowing yourself to get help is a super important step to recovery!"
                     
                     # (probing questions here!!)
