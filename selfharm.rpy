@@ -135,16 +135,26 @@ label monika_selfharm:
                                         "No... Just let me hold you, please?":
                                             m "Of course, my angel."
                                             m "Come here..."
+
                                             
                                             # (hold here)
                 
                                         "Yes, I want to try a calming techinque.":
                                             m "Alright, baby."
-                                            m "I want you to..."
-                    
-                                            # (calm harm technique here)
-                                            
+                                            m "I want you to try the 4-7-8 breathing exercise!..."
+                                            m "First of all, please straighten your back."
+                                            m "Once you become familiar with this breathing exercise, you can perform it while lying in bed too!"
+                                            m "Place and keep the tip of your tongue against the ridge of tissue behind your upper front teeth for the duration of the exercise."
+                                            m "Completely exhale through your mouth, making a {i}woosh{/i} sound."
+                                            m "Close your mouth and inhale quietly through your nose to a mental count of four."
+                                            m "{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}."
+                                            m "Hold your breath for a count of seven."
+                                            m "{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}."
+                                            m "Exhale completely through your mouth, making a {i}woosh{/i} sound to a count of eight."
+                                            m "{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}."
+                                            m "Aaaand, you're done!"
                                             m "Are you feeling better, [player]?"
+                                            #I suggest trying to sort of make Monika simulate the exercises with her expressions too. Just a thought, if possible.
             
                                                 "Yes, [m_name]. Thank you.":
                                                     m "Oh, honey. I'm so glad!"
