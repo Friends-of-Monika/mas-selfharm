@@ -1,8 +1,11 @@
+# FIRST RANDOM EVENT ABOUT SELF-HARM.
+
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
             eventlabel="mas_selfharm1",
+            if mas_isMoniNormal(higher=True):
             conditional=(
                 "not seen_event('mas_selfharm1')"
             ),
@@ -18,12 +21,18 @@ label mas_selfharm1:
         "Yes":
             $ selfharm = True
             m "I'm so sorry you're going through this."
+            m "You know... It's really sad to see you feel bad in any way."
+            m "After all, you're such a wonderful and kind person."
+            m "You did so many good things for me, and stayed with me after everything that happened..."
+            m "But let's stay on this subject."
             m "Do you want to talk about it?"
             
             menu:
                 "Yes":
                     m "I'm glad that you trust me, [player]."
                     m "Allowing yourself to get help is a super important step to recovery!"
+                    m "I may not understand exactly what you feel right now..."
+                    m "But I will still try to make you feel better, because you deserve it!"
                     
                     # (probing questions here!)
                     
@@ -57,6 +66,7 @@ label mas_selfharm1:
             m "If this ever changes... You can tell me, okay?"
             m "You can tell me anything, you know?"
             m "Ahaha!"
+            m "Sorry. I'm just so relieved!"
             m "But for now... Do you want to know more about self-harm?"
             
             menu: 
@@ -78,6 +88,8 @@ label mas_selfharm1:
 
 return
 
+# NON-RANDOM EVENT FOR WHEN THE PLAYER IS FEELING SELF HARMING URGES.
+
 init 5 python:
     addEvent(Event(persistent.event_database,eventlabel="monika_selfharm",category=['You'],prompt="Monika, It's happening again...",random=False))
 
@@ -96,6 +108,8 @@ label monika_selfharm:
     m "How big is the urge you're having?"
     
     menu:
+    # DIALOGUE FOR URGE MAX LEVEL
+    
         "It's terrible, [m_name]. I think i'm really going to do it...":
             m "I'm so glad you came to talk to me, [player]."
             m "You know how much i worry about you..."
@@ -178,7 +192,9 @@ label monika_selfharm:
                                                             m "I want you to..."
 
                                                                         # (calm harm technique here)
-            
+       
+       # DIALOGUE FOR URGE MEDIUM LEVEL
+       
         "It's not so urgent. I'm just... feeling weird.":
             m "I'm so glad you came to talk to me, [player]."
             m "You know how much i worry about you..."
@@ -252,7 +268,9 @@ label monika_selfharm:
                         m "Come here..."
                                             
                                             # (hold here)
-                    
+        
+        # DIALOGUE FOR URGE LOW LEVEL
+
         "Something triggered me, and now i'm remembering bad things.":
             m "I'm so glad you came to talk to me, [player]."
             m "You know how much i worry about you..."
@@ -328,3 +346,93 @@ label monika_selfharm:
                                             # (hold here)
  
 return
+
+# RANDOM EVENT ABOUT SELF-HARM TECHNIQUES.
+ 
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mas_selfharm2",
+            conditional=(
+                "seen_event('mas_selfharm1')"
+                "selfharm = True"
+                "
+            ),
+            action=EV_ACT_PUSH
+        )
+    )
+
+label mas_selfharm2:
+    m "Hey, [player]..."
+    m "Remember when you told me about you... harming yourself?"
+    m "I decided to research some techniques that could help you."
+    m "Please make sure to tell me what would work for you."
+    m "I hope some of these solutions can help you..."
+    m "But please, try not to harm yourself, okay?"
+    m "I know it's really hard to not do so when things get tough."
+    m "But in the end, isn't it about feeling bad about yourself?"
+    m "Of course everyone has a different reason..."
+    m "Stress, low self-esteem, and so on."
+    m "But all these bad feelings can be slowly neutered with the habit to take better care of yourself."
+    m "So, please, [player]..."
+    m "Do something good for yourself today, and remember that I really love you."
+    
+return
+    
+# RANDOM EVENT, TECHNIQUE 1.
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mas_selfharm2",
+            ),
+            action=EV_ACT_PUSH
+        )
+    )
+
+label mas_selfharm3:
+
+    m "Hey... [player]?"
+    m "This may sound a bit random, but..."
+    m "Is it sunny today over there?"
+    m "If it is, I think you should go out and enjoy the sun for a bit."
+    m "Don't worry! I'll wait!"
+    m "Maybe bring a book with you so you can relax even more."
+    m "Enjoying literature in the nature would surely relax me..."
+    m "I hope this works for you, too."
+    
+return
+
+# calm techniques (archive for randomizing)
+# 1
+
+# I DONT KNOW WHERE TO PUT THIS, HELP, KIT
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mas_selfharm1",
+            if mas_isMoniUpset(lower=True):
+            conditional=(
+                "not seen_event('mas_selfharm1')"
+            ),
+            action=EV_ACT_PUSH
+        )
+    )
+
+label mas_selfharm1:
+    m "Hey, [player]?"
+    m "I know it might be an uncomfortable topic, but I have to ask..."
+    m "D-{w=1.0}Do you self harm?"
+    menu:
+        "Yes":
+            $ selfharm = True
+            m "I'm so sorry you're going through this."
+            m "You know... It's really sad to see you feel bad in any way."
+            m "After all, you wanted to be with me at some point..."
+            m "That was kind of you."
+            m "Whatever the reason you stayed with me was, I appreciate it."
+            m "But let's stay on this subject."
+            m "Do you want to talk about it?"
