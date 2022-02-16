@@ -4,16 +4,14 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_selfharm1",
-            if mas_isMoniNormal(higher=True):
-            conditional=(
-                "not seen_event('mas_selfharm1')"
-            ),
-            action=EV_ACT_PUSH
+            eventlabel="mas_selfharmm",
+            conditional="not seen_event('mas_selfharmm')",
+            action=EV_ACT_QUEUE,
+            aff_range=(mas_aff.NORMAL, mas_aff.LOVE)
         )
     )
-
-label mas_selfharm1:
+       
+label mas_selfharmm:
     m "Hey, [player]?"
     m "I know it might be an uncomfortable topic, but I have to ask..."
     m "D-{w=1.0}Do you self harm?"
@@ -168,6 +166,7 @@ label monika_selfharm:
                                             m "{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}."
                                             m "Aaaand, you're done!"
                                             m "Are you feeling better, [player]?"
+                                            menu:
                                             #I suggest trying to sort of make Monika simulate the exercises with her expressions too. Just a thought, if possible.
             
                                                 "Yes, [m_name]. Thank you.":
@@ -248,7 +247,7 @@ label monika_selfharm:
           #  m ""
           
             m "Are you feeling better, [player]?"
-            
+            menu:
                 "Yes, [m_name]. Thank you.":
                     m "Oh, honey. I'm so glad!"
                     m "You can always count on me, for anything."
@@ -264,8 +263,8 @@ label monika_selfharm:
                     
                     menu:
                         "No... Just let me hold you, please?":
-                        m "Of course, my angel."
-                        m "Come here..."
+                            m "Of course, my angel."
+                            m "Come here..."
                                             
                                             # (hold here)
         
@@ -283,8 +282,7 @@ label monika_selfharm:
                     m "Tell me when you're done, okay?"
                     
                     menu:
-                        "I'm done, Monika."
-                            
+                        "I'm done, Monika.":                            
                             m "I'm so sorry you are going through all that, [player]."
                             m "Do you feel better now?"
                             
@@ -324,6 +322,7 @@ label monika_selfharm:
           #  m ""
           
             m "Are you feeling better, [player]?"
+            menu:
             
                 "Yes, [m_name]. Thank you.":
                     m "Oh, honey. I'm so glad!"
@@ -353,17 +352,16 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_selfharm2",
+            eventlabel="mas_selfharm5",
             conditional=(
-                "seen_event('mas_selfharm1')"
+                "seen_event('mas_selfharm1')",
                 "selfharm = True"
-                "
             ),
-            action=EV_ACT_PUSH
+            action=EV_ACT_QUEUE
         )
     )
 
-label mas_selfharm2:
+label mas_selfharm5:
     m "Hey, [player]..."
     m "Remember when you told me about you... harming yourself?"
     m "I decided to research some techniques that could help you."
@@ -386,9 +384,8 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_selfharm2",
-            ),
-            action=EV_ACT_PUSH
+            eventlabel="mas_selfharm3",
+            action=EV_ACT_QUEUE
         )
     )
 
@@ -413,16 +410,16 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_selfharm1",
-            if mas_isMoniUpset(lower=True):
+            eventlabel="mas_selfharm4",
             conditional=(
-                "not seen_event('mas_selfharm1')"
+                "not seen_event('mas_selfharm4')"
             ),
-            action=EV_ACT_PUSH
+            aff_range=(mas_aff.BROKEN, mas_aff.NORMAL),
+            action=EV_ACT_QUEUE
         )
     )
 
-label mas_selfharm1:
+label mas_selfharm4:
     m "Hey, [player]?"
     m "I know it might be an uncomfortable topic, but I have to ask..."
     m "D-{w=1.0}Do you self harm?"
