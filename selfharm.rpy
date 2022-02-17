@@ -85,3 +85,33 @@ label mas_selfharmm:
                     m "I'll be glad to tell you all I know about the subject."
 
 return
+
+# ALTERNATE DIALOGUE IF MONIKA IS NOT HAPPY
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mas_selfharm4",
+            conditional=(
+                "not seen_event('mas_selfharm4')"
+            ),
+            aff_range=(mas_aff.BROKEN, mas_aff.NORMAL),
+            action=EV_ACT_QUEUE
+        )
+    )
+
+label mas_selfharm4:
+    m "Hey, [player]?"
+    m "I know it might be an uncomfortable topic, but I have to ask..."
+    m "D-{w=1.0}Do you self harm?"
+    menu:
+        "Yes":
+            $ selfharm = True
+            m "I'm so sorry you're going through this."
+            m "You know... It's really sad to see you feel bad in any way."
+            m "After all, you wanted to be with me at some point..."
+            m "That was kind of you."
+            m "Whatever the reason you stayed with me was, I appreciate it."
+            m "But let's stay on this subject."
+            m "Do you want to talk about it?"
