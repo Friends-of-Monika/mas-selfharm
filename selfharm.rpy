@@ -22,6 +22,8 @@ label mas_selfharm4:
     m "You can access it on "Music"."
     m "I hope you like it, [player]!"
     m "I know you struggle sometimes with bad thoughts, but this playlist is to comfort you."
+    m "Listening to your favourite music that you can relate also relieves pain and stress!"
+    m "I find it very powerful to say the least."
     m "Please think of me when you give it a listen."
     m "And if something happens, and you feel sad or lonely..."
     m "If you think things won't get better..."
