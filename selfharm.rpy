@@ -1,4 +1,4 @@
-# RANDOM EVENT, TECHNIQUE 2.
+# RANDOM SAD/WORRIED MONIKA #1.
 
 init 5 python:
     addEvent(
