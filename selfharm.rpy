@@ -77,3 +77,28 @@
     m "Focus on certain instruments or parts, their notes, and how they add to the song as a whole!"
     m "That could serve as a distraction and learning something about the things you love at the same time!"
     m "We could always listen to them together if you'd like!"
+    
+#9
+    m "Could you take some deep breaths? And also, a marker, or a pen."
+    m "I would like for you to scribble on the place you want to harm yourself."
+    m "Most methods use a butterfly drawing."
+    m "You could draw the butterfly and name it, and if you do harm yourself, you harm it, too."
+    m "Whenever you look at it and think of harming yourself, do something comforting instead!"
+    m "Sing along to a tune, watch your favorite film, go out on a walk..."
+    m "Maybe you have some old photos? If they bring back good memories, why not trying to search for them?"
+    m "I would really like to look at them with you, [player]."
+    m "But that's not about me, I want you to feel better!"
+    m "And don't give up, [mas_get_player_nickname()]."
+    
+#10
+    m "[player], do you have a first aid kit at home?"
+    m "Maybe some sticking plasters, band-aids?"
+    m "Could you stick some of them where you want to hurt yourself?"
+    m "As a reminder that you are letting yourself heal."
+    m "And remember, healing takes time."
+    m "And we have all the time in the world."
+    m "No need to rush this, okay?"
+    m "Baby steps!"
+    
+    
+    
