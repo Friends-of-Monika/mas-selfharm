@@ -67,3 +67,13 @@
     m "Say out loud or in your head whatever you'd want them to know."
     m "Then say the exact same words to yourself."
     m "I bet that's what they would tell you!"
+    m "Maybe you can even think of me? Ahahaha~{w=0.5} Sorry to be pretentious, [player.]"
+    m "I love you so much!"
+
+#8
+    m "Try listening to a few songs you love!"
+    m "But don't {i}just{/i} listen."
+    m "Try paying attention."
+    m "Focus on certain instruments or parts, their notes, and how they add to the song as a whole!"
+    m "That could serve as a distraction and learning something about the things you love at the same time!"
+    m "We could always listen to them together if you'd like!"
