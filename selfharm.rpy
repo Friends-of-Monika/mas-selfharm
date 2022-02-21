@@ -11,6 +11,7 @@
     m "If you believe in an actual god or deity, you can imagine them out there, looking out and caring for you."
     m "You are needed, [player]. And you are part of something much bigger than your bad thoughts or bad feelings!"
 
+    return
 #2
     m "You know what often helps me calm down?"
     m "Staying cozy!"
@@ -19,6 +20,8 @@
     m "Anything works, really."
     m "As long as you get that calming sensation!"
     m "There's nothing like it!"
+
+    return
 
 #3
     m "Nothing is ever really lost to us as long as we remember it."
@@ -29,6 +32,8 @@
     m "I wish we had some together..."
     m "I'd look at us all the time!"
 
+    return
+
 #4
     m "I remember hearing this quote somewhere {i}'Hope is the last thing ever lost'{/i}."
     m "Doing your best to believe in positive things can be really uplifting!"
@@ -36,6 +41,7 @@
     m "You should find some quotes on the internet that you like, write each of them on a sticky note and put them somewhere you'd regularly see." #add a link for some quotes??
     m "Every time you see one, you will remember things get better!"
 
+    return
 #5
     m "This one's going to be really simple."
     m "Sing a song!"
@@ -48,6 +54,8 @@
     m "You could also imagine we're singing 'Your Reality' together!" # I don't know about this. I'm trying to get Moni more involved SOMEHOW. Since the player is there in the first place it makes sense, right?? Feel free to adjust anything...
     m "Hehe~"
 
+    return
+
 #6
     m "Sometimes simply talking about your problems can help a lot!"
     m "Or just talking to distract yourself."
@@ -57,6 +65,7 @@
     m "We could talk for hours!"
     m "As long as you'd want."
 
+    return
 #7
     m "Okay.{w=0.5} I want you to try this."
     m "Get the biggest pillow you have and hug it tightly."
@@ -70,6 +79,8 @@
     m "Maybe you can even think of me? Ahahaha~{w=0.5} Sorry to be pretentious, [player.]"
     m "I love you so much!"
 
+    return
+
 #8
     m "Try listening to a few songs you love!"
     m "But don't {i}just{/i} listen."
@@ -77,6 +88,8 @@
     m "Focus on certain instruments or parts, their notes, and how they add to the song as a whole!"
     m "That could serve as a distraction and learning something about the things you love at the same time!"
     m "We could always listen to them together if you'd like!"
+
+    return
     
 #9
     m "Could you take some deep breaths? And also, a marker, or a pen."
@@ -89,6 +102,8 @@
     m "I would really like to look at them with you, [player]."
     m "But that's not about me, I want you to feel better!"
     m "And don't give up, [mas_get_player_nickname()]."
+
+    return
     
 #10
     m "[player], do you have a first aid kit at home?"
@@ -99,6 +114,61 @@
     m "And we have all the time in the world."
     m "No need to rush this, okay?"
     m "Baby steps!"
+
+    return
+
+#10
+    m "[player], perhaps playing something would make you feel better?"
+    m "Do you want to play Pong?"
+    menu:
+        "Sure!":
+            m "Great!"
+            m "Bring it on!"
+            call demo_minigame_pong
+            m "Hope you're feeling better, [player]!"
+
+            return
+        
+        "Maybe next time, [m_name]":
+            m "Okay, [player]."
+            m "Let's play soon!"
+
+            return
+
+
+#11
+    m "[player], perhaps playing something would make you feel better?"
+    m "Do you want to play Chess?"
+    menu:
+        "Sure!":
+            m "Okay!"
+            call mas_chess
+            m "Hope you're feeling better, [player]!"
+
+            return
+
+        "Maybe next time, [m_name]":
+            m "Okay, [player]."
+            m "Let's play soon!"
+
+            return
+
+#12
+    m "[player], perhaps playing something would make you feel better?"
+    m "Do you want to play the Piano?"
+    menu:
+        "Sure!":
+            m "Alright!"  
+            call mas_piano_start
+            m "Hope you're feeling better, [player]!"
+
+            return
+
+        "Maybe next time, [m_name]":
+            m "Okay, [player]."
+            m "Let's play soon!"
+            
+            return
     
     
     
