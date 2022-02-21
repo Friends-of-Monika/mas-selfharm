@@ -155,6 +155,8 @@
 
 #12
     m "[player], perhaps playing something would make you feel better?"
+    m "Music really is a great way to relieve stress!"
+    m "I love listening to some music to when trying to relax."
     m "Do you want to play the Piano?"
     menu:
         "Sure!":
