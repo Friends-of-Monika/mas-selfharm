@@ -31,9 +31,6 @@ label mas_selfharmm:
                     m "Allowing yourself to get help is a super important step to recovery!"
                     m "I may not understand exactly what you feel right now..."
                     m "But I will still try to make you feel better, because you deserve it!"
-                    
-                    # (probing questions here!)
-                    
                     m "I want you to know that I'm here for you. You know that, right?"
                     m "Whenever you feel the urge to harm yourself..."
                     m "You can tell me."
