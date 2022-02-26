@@ -323,6 +323,17 @@ label technique_piano:
             return
     
  #14
+    init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_technique_database,
+            eventlabel="technique_videos",
+            unlocked=True,
+        ),
+    ) 
+    
+    label technique_videos:
+    $ technique14 = True
  #  $ mas_unlockEVL('monika_openvideo')                   #not entirely sure if this one works, I'll test later.
     m "When you told me you were having those kinda thoughts, i did some research."
     m "And there are many people on Youtube that create little comfort videos."
@@ -337,7 +348,11 @@ label technique_piano:
                     m "There we go!"
                     m "I hope it helps, [player]."
                     m "I will give you some time to watch it."
-                    # put pause command here
+                    pause(3.0)
+                    menu:
+                        "I'm done, [m_name]":
+                            m "Alright!"
+                            m "Hope you enjoyed it!"
                     
                     return  
   
@@ -346,14 +361,22 @@ label technique_piano:
                     m "There we go!"
                     m "I hope it helps, [player]."
                     m "I will give you some time to watch it."
-                    # put pause command here
+                    pause(3.0)
+                    menu:
+                        "I'm done, [m_name]":
+                            m "Alright!"
+                            m "Hope you enjoyed it!"
                      
                   label Moni_:
                     $ webbrowser.open("https://www.youtube.com/watch?v=ORkx63VeP9Y&")
                     m "There we go!"
                     m "I hope it helps, [player]."
                     m "I will give you some time to watch it."
-                    # put pause command here
+                    pause(3.0)
+                    menu:
+                        "I'm done, [m_name]":
+                            m "Alright!"
+                            m "Hope you enjoyed it!"
                     
                     return 
                     
