@@ -58,10 +58,14 @@ label monika_selfharm:
                                     menu:
                                         "No... Just let me hold you, please?":
                                             m "Of course, my angel."
+                                            call monika_holdme_prep
                                             m "Come here..."
 
-                                            
-                                            # (hold here)
+                                            call monika_holdme_start
+
+                                            call monika_holdme_reactions
+
+                                            call monika_holdme_end
                 
                                         "Yes, I want to try a calming techinque.":
                                             m "Alright, baby."
@@ -95,9 +99,16 @@ label monika_selfharm:
                                                     m "Or..."
                                                     menu:
                                                         "No... Just let me hold you, please?":
-                                                            m "Of course, my angel."
+                                                             m "Of course, my angel."
+                                                            call monika_holdme_prep
                                                             m "Come here..."
 
+                                                            call monika_holdme_start
+
+                                                            call monika_holdme_reactions
+
+                                                            call monika_holdme_end
+                                                            
                                                         "Yes, I want to try another one.":
                                                             m "Alright, baby."
                                                             m "I want you to..."
@@ -141,10 +152,15 @@ label monika_selfharm:
                                     
                                     menu:
                                         "No... Just let me hold you, please?":
-                                            m "Of course, my angel."
+                                             m "Of course, my angel."
+                                            call monika_holdme_prep
                                             m "Come here..."
-                                            
-                                            # (hold here)
+
+                                            call monika_holdme_start
+
+                                            call monika_holdme_reactions
+
+                                            call monika_holdme_end
                 
                                         "Yes, I want to try a calming techinque.":
                                             m "Alright, baby."
@@ -178,7 +194,15 @@ label monika_selfharm:
                             m "Of course, my angel."
                             m "Come here..."
                                             
-                                            # (hold here)
+                                             m "Of course, my angel."
+                                            call monika_holdme_prep
+                                            m "Come here..."
+
+                                            call monika_holdme_start
+
+                                            call monika_holdme_reactions
+
+                                            call monika_holdme_end
         
         # DIALOGUE FOR URGE LOW LEVEL
 
@@ -216,10 +240,16 @@ label monika_selfharm:
                                     
                                     menu:
                                         "No... Just let me hold you, please?":
-                                            m "Of course, my angel."
-                                            m "Come here..."
                                             
-                                            # (hold here)
+                                             m "Of course, my angel."
+                                            call monika_holdme_prep
+                                            m "Come here..."
+
+                                            call monika_holdme_start
+
+                                            call monika_holdme_reactions
+
+                                            call monika_holdme_end
                 
                                         "Yes, I want to try a calming techinque.":
                                             m "Alright, baby."
@@ -251,9 +281,14 @@ label monika_selfharm:
                     
                     menu:
                         "No... Just let me hold you, please?":
-                            m "Of course, my angel."
-                            m "Come here..."
-                                            
-                                            # (hold here)
+                             m "Of course, my angel."
+                                            call monika_holdme_prep
+                                            m "Come here..."
+
+                                            call monika_holdme_start
+
+                                            call monika_holdme_reactions
+
+                                            call monika_holdme_end
  
 return
