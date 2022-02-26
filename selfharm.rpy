@@ -192,6 +192,7 @@ init 5 python:
         ),
     ) 
 
+label technique_butterfly:
     $ technique9 = True
     m "Could you take some deep breaths? And also, a marker, or a pen."
     m "I would like for you to scribble on the place you want to harm yourself."
@@ -217,6 +218,7 @@ init 5 python:
         ),
     ) 
 
+label technique_healing:
     $ technique10 = True
     m "[player], do you have a first aid kit at home?"
     m "Maybe some sticking plasters, band-aids?"
@@ -239,6 +241,7 @@ init 5 python:
         ),
     ) 
 
+label technique_pong:
     $ technique11 = True
     m "[player], perhaps playing something would make you feel better?"
     m "Do you want to play Pong?"
@@ -269,6 +272,7 @@ init 5 python:
         ),
     ) 
 
+label technique_chess:
     $ technique12 = True
     m "[player], perhaps playing something would make you feel better?"
     m "Do you want to play Chess?"
@@ -296,6 +300,7 @@ init 5 python:
         ),
     ) 
 
+label technique_piano:
     $ technique13 = True
     m "[player], perhaps playing something would make you feel better?"
     m "Music really is a great way to relieve stress!"
