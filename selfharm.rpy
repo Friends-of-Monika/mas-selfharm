@@ -1,7 +1,21 @@
 # RANDOM TECHNIQUES TO BE PICKED IN THE NON-RANDOM MAIN EVENT.
 # A reminder that I'm going to have to add conditions for things like religion------------------------------------------------
+default persistent._mas_technique_database = {}
+#1  
 
-#1   
+
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_technique_database,
+            eventlabel="technique_religion",
+            unlocked=True,
+        ),
+    ) 
+
+label technique_religion:
+    $ technique1 = True
     m "I remember you mentioned having a religion before."
     m "Could you please say a little prayer?"
     m "It can be silent, you don't need to say anything out loud."
@@ -12,7 +26,19 @@
     m "You are needed, [player]. And you are part of something much bigger than your bad thoughts or bad feelings!"
 
     return
+
 #2
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_technique_database,
+            eventlabel="technique_cozy",
+            unlocked=True,
+        ),
+    ) 
+
+label technique_cozy:
+    $ technique2 = True
     m "You know what often helps me calm down?"
     m "Staying cozy!"
     m "Try wrapping up in something suuuper cozy!"
@@ -22,8 +48,18 @@
     m "There's nothing like it!"
 
     return
-
 #3
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_technique_database,
+            eventlabel="technique_photographs",
+            unlocked=True,
+        ),
+    ) 
+
+label technique_photographs:
+    $ technique3 = True
     m "Nothing is ever really lost to us as long as we remember it."
     m "Do you see where I'm going with this, [player]?"
     m "One thing that could help you get over bad times is look at photographs of the good ones!"
@@ -35,6 +71,17 @@
     return
 
 #4
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_technique_database,
+            eventlabel="technique_quotes",
+            unlocked=True,
+        ),
+    ) 
+
+label technique_quotes:
+    $ technique4 = True
     m "I remember hearing this quote somewhere {i}'Hope is the last thing ever lost'{/i}."
     m "Doing your best to believe in positive things can be really uplifting!"
     m "I think a good way of seeing the things around you in a better light would be seeing inspirational quotes!"
@@ -43,6 +90,17 @@
 
     return
 #5
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_technique_database,
+            eventlabel="technique_singing",
+            unlocked=True,
+        ),
+    ) 
+
+label technique_singing:
+    $ technique5 = True
     m "This one's going to be really simple."
     m "Sing a song!"
     m "Not just any song, though."
@@ -57,6 +115,17 @@
     return
 
 #6
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_technique_database,
+            eventlabel="technique_talking",
+            unlocked=True,
+        ),
+    ) 
+
+label technique_talking:
+    $ technique6 = True
     m "Sometimes simply talking about your problems can help a lot!"
     m "Or just talking to distract yourself."
     m "You should call or text a friend!"
@@ -67,6 +136,17 @@
 
     return
 #7
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_technique_database,
+            eventlabel="technique_hugs",
+            unlocked=True,
+        ),
+    ) 
+
+label technique_hugs:
+    $ technique7 = True
     m "Okay.{w=0.5} I want you to try this."
     m "Get the biggest pillow you have and hug it tightly."
     m "Curl your body around it."
@@ -82,6 +162,17 @@
     return
 
 #8
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_technique_database,
+            eventlabel="technique_listening",
+            unlocked=True,
+        ),
+    ) 
+
+label technique_listening:
+    $ technique8 = True
     m "Try listening to a few songs you love!"
     m "But don't {i}just{/i} listen."
     m "Try paying attention."
@@ -92,6 +183,16 @@
     return
     
 #9
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_technique_database,
+            eventlabel="technique_butterfly",
+            unlocked=True,
+        ),
+    ) 
+
+    $ technique9 = True
     m "Could you take some deep breaths? And also, a marker, or a pen."
     m "I would like for you to scribble on the place you want to harm yourself."
     m "Most methods use a butterfly drawing."
@@ -106,6 +207,17 @@
     return
     
 #10
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_technique_database,
+            eventlabel="technique_healing",
+            unlocked=True,
+        ),
+    ) 
+
+    $ technique10 = True
     m "[player], do you have a first aid kit at home?"
     m "Maybe some sticking plasters, band-aids?"
     m "Could you stick some of them where you want to hurt yourself?"
@@ -117,7 +229,17 @@
 
     return
 
-#10
+#11
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_technique_database,
+            eventlabel="technique_pong",
+            unlocked=True,
+        ),
+    ) 
+
+    $ technique11 = True
     m "[player], perhaps playing something would make you feel better?"
     m "Do you want to play Pong?"
     menu:
@@ -136,7 +258,18 @@
             return
 
 
-#11
+#12
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_technique_database,
+            eventlabel="technique_chess",
+            unlocked=True,
+        ),
+    ) 
+
+    $ technique12 = True
     m "[player], perhaps playing something would make you feel better?"
     m "Do you want to play Chess?"
     menu:
@@ -153,7 +286,17 @@
 
             return
 
-#12
+#13
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_technique_database,
+            eventlabel="technique_piano",
+            unlocked=True,
+        ),
+    ) 
+
+    $ technique13 = True
     m "[player], perhaps playing something would make you feel better?"
     m "Music really is a great way to relieve stress!"
     m "I love listening to some music to when trying to relax."
@@ -171,6 +314,5 @@
             m "Let's play soon!"
             
             return
-    
     
     
