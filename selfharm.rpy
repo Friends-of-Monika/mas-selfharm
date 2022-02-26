@@ -323,6 +323,7 @@ label technique_piano:
             return
     
  #14
+ #  $ mas_unlock('monika_openvideo')                   #not entirely sure if this one works, I'll test later.
     m "When you told me you were having those kinda thoughts, i did some research."
     m "And there are many people on Youtube that create little comfort videos."
     m "I selected one of them for you to watch when you were having an urge."
@@ -357,20 +358,9 @@ label technique_piano:
                     return 
                     
 #15 (NON-RANDOM)
-init 5 python:
-    addEvent(
-        Event(
-            persistent.event_database,
-            eventlabel="monika_openvideo",
-            category=[''],
-            prompt="Video",
-            action=EV_ACT_PUSH,
-            random=False,
-            pool=True,
-            unlocked=True
-        )
-    )
 
+init 5 python:
+    addEvent(Event(persistent.event_database,eventlabel="monika_openvideo",category=["you, misc"],prompt="I would like to see the videos again.",pool=True,unlocked=False))
 
 init python:
     import webbrowser
