@@ -1,5 +1,4 @@
 # RANDOM TECHNIQUES TO BE PICKED IN THE NON-RANDOM MAIN EVENT.
-# A reminder that I'm going to have to add conditions for things like religion------------------------------------------------
 default persistent._mas_technique_database = {}
 #1  
 
@@ -323,4 +322,93 @@ label technique_piano:
             
             return
     
-    
+ #14
+    m "When you told me you were having those kinda thoughts, i did some research."
+    m "And there are many people on Youtube that create little comfort videos."
+    m "I selected one of them for you to watch when you were having an urge."
+    m "I will open one of them for you right now."
+         jump Moni_
+
+                    return
+
+                label Moni_:
+                    $ webbrowser.open("https://www.youtube.com/watch?v=PppkNH3bKV4&")
+                    m "There we go!"
+                    m "I hope it helps, [player]."
+                    m "I will give you some time to watch it."
+                    # put pause command here
+                    
+                    return  
+  
+                  label Moni_:
+                    $ webbrowser.open("https://www.youtube.com/watch?v=-SJywvgaJEI&")
+                    m "There we go!"
+                    m "I hope it helps, [player]."
+                    m "I will give you some time to watch it."
+                    # put pause command here
+                     
+                  label Moni_:
+                    $ webbrowser.open("https://www.youtube.com/watch?v=ORkx63VeP9Y&")
+                    m "There we go!"
+                    m "I hope it helps, [player]."
+                    m "I will give you some time to watch it."
+                    # put pause command here
+                    
+                    return 
+                    
+#15 (NON-RANDOM)
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="monika_openvideo",
+            category=[''],
+            prompt="Video",
+            action=EV_ACT_PUSH,
+            random=False,
+            pool=True,
+            unlocked=True
+        )
+    )
+
+
+init python:
+    import webbrowser
+
+label monika_openvideo:
+    m "Want to watch the comfort video again?"
+    m "Which one do you want to see?"
+        menu
+            "":
+                m "Let me open it for you!"
+                    jump Moni_
+
+                    return
+
+                label Moni_:
+                    $ webbrowser.open("")
+                    m "There we go!"
+                    return    
+            
+            "":
+                m "Let me open it for you!"
+                        jump Moni_
+
+                        return
+
+                    label Moni_:
+                        $ webbrowser.open("")
+                        m "There we go!"
+                        return 
+            
+            "":
+                m "Let me open it for you!"
+                    jump Moni_
+
+                    return
+
+                label Moni_:
+                    $ webbrowser.open("")
+                    m "There we go!"
+                    return 
+            
