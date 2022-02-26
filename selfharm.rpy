@@ -323,7 +323,7 @@ label technique_piano:
             return
     
  #14
- #  $ mas_unlock('monika_openvideo')                   #not entirely sure if this one works, I'll test later.
+ #  $ mas_unlockEVL('monika_openvideo')                   #not entirely sure if this one works, I'll test later.
     m "When you told me you were having those kinda thoughts, i did some research."
     m "And there are many people on Youtube that create little comfort videos."
     m "I selected one of them for you to watch when you were having an urge."
