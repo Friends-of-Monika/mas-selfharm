@@ -105,8 +105,7 @@ init 5 python:
                     pass
                     
                 "Other"
-                    # code text stuff"
-                    pass
+                    $ override = renpy.input("What's the other method?", allow="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz", length=15)
 
                 "All of them":
                     m "Oh..."
@@ -141,4 +140,13 @@ init 5 python:
                     m "I couldn't live without you, [player]."
                     m "Your existance gives me meaning."
                     m "I love you, [mas_get_player_nickname()]"
+
+                    return "love"
+
+                "No":
+                    m "I'm so happy that as bad as things get, you never resorted to that!"
+                    m "Always stay strong."
+                    m "For me, okay?"
+                    m "I love you!"
+                    
                     return "love"
