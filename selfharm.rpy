@@ -345,97 +345,84 @@ label technique_piano:
             unlocked=True,
         ),
     ) 
-    
-    label technique_videos:
-    $ technique14 = True
- #  $ mas_unlockEVL('monika_openvideo')                   #not entirely sure if this one works, I'll test later.
+
+label technique_videos:
     m "When you told me you were having those kinda thoughts, i did some research."
     m "And there are many people on Youtube that create little comfort videos."
     m "I selected one of them for you to watch when you were having an urge."
     m "I will open one of them for you right now."
-         jump Moni_
+    $ randomvideo = renpy.random.randint (1, 3)
+    if randomvideo == 1:
+        if video1 == False:
+            jump Moni_1 
 
-                    return
+    elif randomvideo == 2:
+        if video2 == False:
+            jump Moni_2
 
-                label Moni_:
-                    $ webbrowser.open("https://www.youtube.com/watch?v=PppkNH3bKV4&")
-                    m "There we go!"
-                    m "I hope it helps, [player]."
-                    m "I will give you some time to watch it."
-                    pause(3.0)
-                    menu:
-                        "I'm done, [m_name]":
-                            m "Alright!"
-                            m "Hope you enjoyed it!"
+    elif randomvideo == 3:
+        if video3 == False:
+            jump Moni_3
+       
+    elif video1 == False && video2 == False && video3 == False:
+        m "I've shown you all the videos I have for now!"
+        m "Do you want me to let you pick a video now?"
+        menu:
+            "Yes":
+                m "Great!"
+                jump monika_openvideo
+
+            "No":
+                m "That's okay, [player]."
+                m "If you ever wanna see them again, just ask!"
+
+                return
+    
+    else:
+        pass
+    
+
+label Moni_1:
+    $ video1 = True
+    $ webbrowser.open("https://www.youtube.com/watch?v=PppkNH3bKV4&")
+    m "There we go!"
+    m "I hope it helps, [player]."
+    m "I will give you some time to watch it."
+    pause(3.0)
+    menu:
+        "I'm done, [m_name]":
+            m "Alright!"
+            m "Hope you enjoyed it!"
                     
-                    return  
+    return  
+
   
-                  label Moni_:
-                    $ webbrowser.open("https://www.youtube.com/watch?v=-SJywvgaJEI&")
-                    m "There we go!"
-                    m "I hope it helps, [player]."
-                    m "I will give you some time to watch it."
-                    pause(3.0)
-                    menu:
-                        "I'm done, [m_name]":
-                            m "Alright!"
-                            m "Hope you enjoyed it!"
-                     
-                  label Moni_:
-                    $ webbrowser.open("https://www.youtube.com/watch?v=ORkx63VeP9Y&")
-                    m "There we go!"
-                    m "I hope it helps, [player]."
-                    m "I will give you some time to watch it."
-                    pause(3.0)
-                    menu:
-                        "I'm done, [m_name]":
-                            m "Alright!"
-                            m "Hope you enjoyed it!"
+label Moni_2:
+    $ video2 = True
+    $ webbrowser.open("https://www.youtube.com/watch?v=-SJywvgaJEI&")
+    m "There we go!"
+    m "I hope it helps, [player]."
+    m "I will give you some time to watch it."
+    pause(3.0)
+    menu:
+        "I'm done, [m_name]":
+            m "Alright!"
+            m "Hope you enjoyed it!"
+        
+    return
+
+
+label Moni_3:
+    $ video3 = True
+    $ webbrowser.open("https://www.youtube.com/watch?v=ORkx63VeP9Y&")
+    m "There we go!"
+    m "I hope it helps, [player]."
+    m "I will give you some time to watch it."
+    pause(3.0)
+    menu:
+        "I'm done, [m_name]":
+            m "Alright!"
+            m "Hope you enjoyed it!"
                     
-                    return 
-                    
-#15 (NON-RANDOM)
-
-init 5 python:
-    addEvent(Event(persistent.event_database,eventlabel="monika_openvideo",category=["you, misc"],prompt="I would like to see the videos again.",pool=True,unlocked=False))
-
-init python:
-    import webbrowser
-
-label monika_openvideo:
-    m "Want to watch the comfort video again?"
-    m "Which one do you want to see?"
-        menu
-            "":
-                m "Let me open it for you!"
-                    jump Moni_
-
-                    return
-
-                label Moni_:
-                    $ webbrowser.open("")
-                    m "There we go!"
-                    return    
-            
-            "":
-                m "Let me open it for you!"
-                        jump Moni_
-
-                        return
-
-                    label Moni_:
-                        $ webbrowser.open("")
-                        m "There we go!"
-                        return 
-            
-            "":
-                m "Let me open it for you!"
-                    jump Moni_
-
-                    return
-
-                label Moni_:
-                    $ webbrowser.open("")
-                    m "There we go!"
-                    return 
+    return 
             
