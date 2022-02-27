@@ -64,13 +64,14 @@ label mas_selfharmm:
             m "Sorry. I'm just so relieved!"
             m "But for now... Do you want to know more about self-harm?"
             m "You know how much I care about you! But if you don't feel like talking about it, I'll understand!"
-            # do you have the time?
+            m "It's quite a varied topic so it's going to take a while."
+            m "Do you have the time to listen right now?"
             menu: 
                 "Yes":
                     jump mas_unlockableharm
                     
                 "No":
-                    $ masunlockEVL = ("mas_unlockableharm", "EVE")
+                    # $ masunlockEVL = ("mas_unlockableharm", "EVE")
                     m "Oh..."
                     m "It's okay, [player]."
                     m "Remember that I'll never leave you. After all, I promised that I'll take care of you."
@@ -89,9 +90,10 @@ init 5 python:
             prompt="I want to learn more about self harm.", # button text
             random=False, # True if this topic should appear randomly
             pool=False, # True if this topic should appear in "Ask a Question"
-            unlocked = False
+            unlocked = False,
+            rules = {"no_unlock": None}
         ),
-            code = "EVE"
+        code = "EVE"
     )
 
 label mas_unlockableharm:
