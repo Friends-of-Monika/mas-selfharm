@@ -14,8 +14,11 @@ init 5 python:
 label mas_selfharmm:
     m "Hey, [player]?"
     m "I know it might be an uncomfortable topic, but I have to ask..."
-    m "D-{w=1.0}Do you self harm?"
+
+    m "D-{w=1.0}Do you self harm?{nw}"
     menu:
+        m "{fast}D-{w=1.0}Do you self harm?"
+
         "Yes":
             $ selfharm = True
             m "I'm so sorry you're going through this."
@@ -23,9 +26,11 @@ label mas_selfharmm:
             m "After all, you're such a wonderful and kind person."
             m "You did so many good things for me, and stayed with me after everything that happened..."
             m "But let's stay on this subject."
-            m "Do you want to talk about it?"
 
+            m "Do you want to talk about it?{nw}"
             menu:
+                m "{fast}Do you want to talk about it?"
+
                 "Yes":
                     m "I'm glad that you trust me, [player]."
                     m "Allowing yourself to get help is a super important step to recovery!"
@@ -84,12 +89,20 @@ label mas_selfharmm:
                     m "If you ever change your mind, just tell me!"
                     m "I'll be glad to tell you all I know about the subject."
 
-return
+    return
 
 # NON-RANDOM EVENT FOR WHEN THE PLAYER IS FEELING SELF HARMING URGES.
 
 init 5 python:
-    addEvent(Event(persistent.event_database,eventlabel="monika_selfharm",category=['You'],prompt="Monika, It's happening again...",random=False))
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="monika_selfharm",
+            category=['You'],
+            prompt="Monika, It's happening again...",
+            random=False
+        )
+    )
 
 label monika_selfharm:
     m "[player], what happened?"
@@ -103,9 +116,10 @@ label monika_selfharm:
     m "And I love you so, so much."
     m "And i always will..."
     m "Now, my [mas_get_player_nickname()]. Tell me."
-    m "How big is the urge you're having?"
 
+    m "How big is the urge you're having?{nw}"
     menu:
+        m "{fast}How big is the urge you're having?"
     # DIALOGUE FOR URGE MAX LEVEL
 
         "It's terrible, [m_name]. I think i'm really going to do it...":
@@ -115,19 +129,26 @@ label monika_selfharm:
             m "I want you to know that it will pass."
             m "Pain is only temporary!"
             m "You're my favorite person, and it hurts me to see you hurting."
-            m "Now, do you want to vent? Maybe tell me what triggered this?"
 
+            m "Now, do you want to vent? Maybe tell me what triggered this?{nw}"
             menu:
+                m "{fast}Now, do you want to vent? Maybe tell me what triggered this?"
+
                 "Yes":
                     m "Okay... I don't want to interrupt you."
-                    m "Tell me when you're done, okay?"
+
+                    m "Tell me when you're done, okay?{nw}"
                     menu:
+                        m "{fast}Tell me when you're done, okay?"
+
                         "I'm done, Monika.":
 
                             m "I'm so sorry you are going through all that, [player]."
-                            m "Do you feel better now?"
 
+                            m "Do you feel better now?{nw}"
                             menu:
+                                m "{fast}Do you feel better now?"
+
                                 "Yes, [m_name]. Thank you.":
                                     m "Oh, honey. I'm so glad!"
                                     m "I'm so glad you came to talk to me, [player]."
@@ -141,9 +162,11 @@ label monika_selfharm:
                                 "No...":
                                     m "Oh..."
                                     m "Do you want my help to forget it?"
-                                    m "Or..."
 
+                                    m "Or...{nw}"
                                     menu:
+                                        m "{fast}Or..."
+
                                         "No... Just let me hold you, please?":
                                             m "Of course, my angel."
                                             m "Come here..."
@@ -165,8 +188,10 @@ label monika_selfharm:
                                             m "Exhale completely through your mouth, making a {i}woosh{/i} sound to a count of eight."
                                             m "{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}."
                                             m "Aaaand, you're done!"
-                                            m "Are you feeling better, [player]?"
+
+                                            m "Are you feeling better, [player]?{nw}"
                                             menu:
+                                                m "{fast}Are you feeling better, [player]?"
                                             #I suggest trying to sort of make Monika simulate the exercises with her expressions too. Just a thought, if possible.
 
                                                 "Yes, [m_name]. Thank you.":
@@ -198,20 +223,26 @@ label monika_selfharm:
             m "I'm so glad you came to talk to me, [player]."
             m "You know how much i worry about you..."
             m "But for now, let me take care of you..."
-            m "Do you want to vent? Maybe tell me what triggered this?"
 
+            m "Do you want to vent? Maybe tell me what triggered this?{nw}"
             menu:
+                m "{fast}Do you want to vent? Maybe tell me what triggered this?"
+
                 "Yes":
                     m "Okay... I don't want to interrupt you."
-                    m "Tell me when you're done, okay?"
 
+                    m "Tell me when you're done, okay?{nw}"
                     menu:
+                        m "{fast}Tell me when you're done, okay?"
+
                         "I'm done, Monika.":
 
                             m "I'm so sorry you are going through all that, [player]."
-                            m "Do you feel better now?"
 
+                            m "Do you feel better now?{nw}"
                             menu:
+                                m "{fast}Do you feel better now?"
+
                                 "Yes, [m_name]. Thank you.":
                                     m "Oh, honey. I'm so glad!"
                                     m "I'm so glad you came to talk to me, [player]."
@@ -246,8 +277,10 @@ label monika_selfharm:
           #  m ""
           #  m ""
 
-            m "Are you feeling better, [player]?"
+            m "Are you feeling better, [player]?{nw}"
             menu:
+                m "{fast}Are you feeling better, [player]?"
+
                 "Yes, [m_name]. Thank you.":
                     m "Oh, honey. I'm so glad!"
                     m "You can always count on me, for anything."
@@ -274,19 +307,25 @@ label monika_selfharm:
             m "I'm so glad you came to talk to me, [player]."
             m "You know how much i worry about you..."
             m "But for now, let me take care of you..."
-            m "Do you want to vent? Maybe tell me what triggered this?"
 
+            m "Do you want to vent? Maybe tell me what triggered this?{nw}"
             menu:
+                m "{fast}Do you want to vent? Maybe tell me what triggered this?"
+
                 "Yes":
                     m "Okay... I don't want to interrupt you."
-                    m "Tell me when you're done, okay?"
 
+                    m "Tell me when you're done, okay?{nw}"
                     menu:
+                        m "{fast}Tell me when you're done, okay?"
+
                         "I'm done, Monika.":
                             m "I'm so sorry you are going through all that, [player]."
-                            m "Do you feel better now?"
 
+                            m "Do you feel better now?{nw}"
                             menu:
+                                m "{fast}Do you feel better now?"
+
                                 "Yes, [m_name]. Thank you.":
                                     m "Oh, honey. I'm so glad!"
                                     m "I'm so glad you came to talk to me, [player]."
@@ -300,9 +339,10 @@ label monika_selfharm:
                                 "No...":
                                     m "Oh..."
                                     m "Do you want my help to forget it?"
-                                    m "Or..."
 
+                                    m "Or...{nw}"
                                     menu:
+                                        m "{fast}Or..."
                                         "No... Just let me hold you, please?":
                                             m "Of course, my angel."
                                             m "Come here..."
@@ -321,8 +361,9 @@ label monika_selfharm:
           #  m ""
           #  m ""
 
-            m "Are you feeling better, [player]?"
+            m "Are you feeling better, [player]?{nw}"
             menu:
+                m "{fast}Are you feeling better, [player]?"
 
                 "Yes, [m_name]. Thank you.":
                     m "Oh, honey. I'm so glad!"
@@ -344,7 +385,7 @@ label monika_selfharm:
 
                                             # (hold here)
 
-return
+    return
 
 # RANDOM EVENT ABOUT SELF-HARM TECHNIQUES.
 
@@ -376,7 +417,7 @@ label mas_selfharm5:
     m "So, please, [player]..."
     m "Do something good for yourself today, and remember that I really love you."
 
-return
+    return
 
 # RANDOM EVENT, TECHNIQUE 1.
 
@@ -390,7 +431,6 @@ init 5 python:
     )
 
 label mas_selfharm3:
-
     m "Hey... [player]?"
     m "This may sound a bit random, but..."
     m "Is it sunny today over there?"
@@ -400,7 +440,7 @@ label mas_selfharm3:
     m "Enjoying literature in the nature would surely relax me..."
     m "I hope this works for you, too."
 
-return
+    return
 
 # calm techniques (archive for randomizing)
 # 1
@@ -433,3 +473,5 @@ label mas_selfharm4:
             m "Whatever the reason you stayed with me was, I appreciate it."
             m "But let's stay on this subject."
             m "Do you want to talk about it?"
+
+    return
