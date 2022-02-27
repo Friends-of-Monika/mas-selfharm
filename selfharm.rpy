@@ -8,7 +8,6 @@ init 5 python:
             conditional="not seen_event('mas_selfharmm')",
             action=EV_ACT_QUEUE,
             aff_range=(mas_aff.NORMAL, mas_aff.LOVE),
-            code = "MOO"
         )
     )
        
@@ -71,7 +70,7 @@ label mas_selfharmm:
                     jump mas_unlockableharm
                     
                 "No":
-                    $ masunlockEVL = ("mas_unlockableharm", "MOO")
+                    $ masunlockEVL = ("mas_unlockableharm", "EVE")
                     m "Oh..."
                     m "It's okay, [player]."
                     m "Remember that I'll never leave you. After all, I promised that I'll take care of you."
@@ -80,17 +79,20 @@ label mas_selfharmm:
 
 return
                     
-                "No":
-                    m "Oh..."
-                    m "That's okay." 
-                    m "If you ever change your mind, just tell me!"
-                    m "I'll be glad to tell you all I know about the subject."
-
-return
-
 
 init 5 python:
-    addEvent(Event(persistent.event_database,eventlabel="mas_unlockableharm",category=["you"],prompt="I want to know more about self-harm",pool=True,unlocked=False)code = "MOO")
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mas_unlockableharm", # event label (MUST BE UNIQUE)
+            category=["you", "monika"], # list of categories this topic belongs in (These are automatically capitalized)
+            prompt="I want to learn more about self harm.", # button text
+            random=False, # True if this topic should appear randomly
+            pool=False, # True if this topic should appear in "Ask a Question"
+            unlocked = False
+        ),
+            code = "EVE"
+    )
 
 label mas_unlockableharm:
     m "Great!"
@@ -102,7 +104,7 @@ label mas_unlockableharm:
     m "There are many factors that come into play!"
     m "Yeah, it's not limited to... self inflicted wounds, for example."
     m "Lack of Self-Care routine, which we already talked about, is also a method."
-    m "There's also binge eating, starving, self-poisoining, misusing alcohol or drugs.
+    m "There's also binge eating, starving, self-poisoining, misusing alcohol or drugs."
     m "Some new studies even show that patients might abuse of frequency of sex in order to self-harm!"
     m "This could all be result of self-hatred, feelings of wanting to punish yourself or mental ilnesses." 
     m "Or anything that could end on self-harm in any way."
@@ -129,6 +131,8 @@ label mas_unlockableharm:
     m "You know that I love you, [mas_get_player_nickname()]."
     m "Stay safe!"
     m "And know that you can always talk to me."   
+
+    return
 
 
 # ALTERNATE DIALOGUE IF MONIKA IS NOT HAPPY
