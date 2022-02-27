@@ -43,7 +43,7 @@ label mas_probing_questions:
                     pass
                 
                 "Other"
-                    # code text stuff"
+                    $ override = renpy.input("What's the other method?", allow="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz", length=15)
                     pass
                     
                 "All of them":
