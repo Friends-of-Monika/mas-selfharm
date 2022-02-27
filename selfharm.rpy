@@ -2,6 +2,20 @@
 default persistent._mas_technique_database = {}
 #1  
 
+label randomness:
+    $ randtechnique = renpy.random.randint (1, 2)
+    if randtechnique == 1:
+        if technique1 == False:
+            call technique_religion 
+        else:
+            while randtechnique == 1:
+                jump randomness        
+    elif randtechnique == 2:
+        if technique2 == False:
+            call technique_cozy
+        else:
+            while randtechnique == 2:
+                jump randomness
 
 
 init 5 python:
