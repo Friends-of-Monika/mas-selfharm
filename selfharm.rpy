@@ -112,7 +112,7 @@ label monika_selfharm:
                                                         "Yes, I want to try another one.":
                                                             m "Alright, baby."
                                                             m "I want you to..."
-
+                                                            jump randomness
                                                                         # (calm harm technique here)
        
        # DIALOGUE FOR URGE MEDIUM LEVEL
@@ -165,7 +165,7 @@ label monika_selfharm:
                                         "Yes, I want to try a calming techinque.":
                                             m "Alright, baby."
                                             m "I want you to..."
-                    
+                                            jump randomness
                                             # (calm harm technique here)
 
             pause (3.0)
@@ -254,14 +254,10 @@ label monika_selfharm:
                                         "Yes, I want to try a calming techinque.":
                                             m "Alright, baby."
                                             m "I want you to..."
-                    
+                                            jump randomness
                                             # (calm harm technique here)
 
-            # pause (3.0)
-          #  m ""
-          #  m ""
-          #  m ""
-          #  m ""
+
           
             m "Are you feeling better, [player]?"
             menu:
