@@ -37,4 +37,4 @@ label mas_selfharm5:
     m 1eka "To shield you from these painful thoughts."
     m 5hubsa "I love you, [mas_get_player_nickname()]."
      
-return
+return "love"
