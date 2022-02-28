@@ -1,5 +1,7 @@
 # FIRST RANDOM EVENT ABOUT SELF-HARM.
 
+default persistent._mas_pm_did_selfharm = None
+
 init 5 python:
     addEvent(
         Event(
@@ -20,7 +22,7 @@ label mas_selfharmm:
         m "{fast}D-{w=1.0}Do you self harm?"
 
         "Yes":
-            $ selfharm = True
+            $ persistent._mas_pm_did_selfharm = True
             m "I'm so sorry you're going through this."
             m "You know... It's really sad to see you feel bad in any way."
             m "After all, you're such a wonderful and kind person."
@@ -62,7 +64,7 @@ label mas_selfharmm:
 
                     return
         "No":
-            $ selfharm = False
+            $ persistent._mas_pm_did_selfharm = False
             m "Thank goodness!"
             m "I'm so glad to hear this!"
             m "It's so good to know that you are safe, [player]."
@@ -398,7 +400,7 @@ init 5 python:
             eventlabel="mas_selfharm5",
             conditional=(
                 "seen_event('mas_selfharm1')",
-                "selfharm = True"
+                "persistent._mas_pm_did_selfharm = True"
             ),
             action=EV_ACT_QUEUE
         )
@@ -467,7 +469,7 @@ label mas_selfharm4:
     m "D-{w=1.0}Do you self harm?"
     menu:
         "Yes":
-            $ selfharm = True
+            $ persistent._mas_pm_did_selfharm = True
             m "I'm so sorry you're going through this."
             m "You know... It's really sad to see you feel bad in any way."
             m "After all, you wanted to be with me at some point..."
