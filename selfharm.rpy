@@ -90,16 +90,6 @@ label mas_selfharmm:
                     m "I'll be glad to tell you all I know about the subject."
 
 init 5 python:
-    addEvent(Event(persistent.event_database,eventlabel="diary2",category=["you", "monika"],prompt="What do you think about writing a diary?",pool=True,unlocked=True))
-
-label diary:
-    if not renpy.seen_label("diary2"):
-        call diary2
-    else:
-        call diary3
-    return
-
-init 5 python:
     addEvent(
         Event(
             persistent.event_database,
@@ -484,8 +474,17 @@ label mas_selfharm4:
 
     return
 
-label diary2:
+init 5 python:
+    addEvent(Event(persistent.event_database,eventlabel="diary2",category=["you", "monika"],prompt="What do you think about writing a diary?",pool=True,unlocked=True))
 
+label diary:
+    if not renpy.seen_label("diary2"):
+        call diary2
+    else:
+        call diary3
+    return
+
+label diary2:
     m 1lta "A diary, huh?"
     m 3eua "I've honestly been thinking about this for a bit."
     m 1huu "It can really be a great outlet for anyone's emotions!"
@@ -519,7 +518,6 @@ label diary2:
             return "love"
 
 label diary3:
-    
     m 1eta "Have you been writing in your diary?"
     m 2eku "I know it could be pretty personal stuff, so I haven't been looking."
     menu:
