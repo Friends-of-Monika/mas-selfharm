@@ -30,14 +30,14 @@ init 5 python:
 label technique_religion:
     $ technique1 = True
     if $ persistent._mas_pm_religious == True:
-        m "I remember you mentioned having a religion before."
-        m "Could you please say a little prayer?"
-        m "It can be silent, you don't need to say anything out loud."
-        m "You can pray to whatever, or even just think of how big and amazing our universe is."
-        m "Try to think about the good things, your favorite things..."
-        m "How little they may be. Think about the bigger picture."
-        m "If you believe in an actual god or deity, you can imagine them out there, looking out and caring for you."
-        m "You are needed, [player]. And you are part of something much bigger than your bad thoughts or bad feelings!"
+        m 5eka "I remember you mentioned being religious before..."
+        m 3ett "Maybe you could say a little prayer?"
+        m 4eud "It can be silent, you don't need to say anything out loud."
+        m 1fua "You can pray about anything you want, or even just think of how vast and amazing your universe is."
+        m 1dsu "Try to think about the good things, like animals or laughter, your favorite things..."
+        m "No matter how little they may be, take some time to think about the bigger picture."
+        m "If you believe in gods or deities, you can imagine them out there, looking out and caring for you."
+        m "You are needed, [player]. You are part of something much bigger than your bad thoughts or bad feelings!"
     else:
         jump technique_cozy
 
