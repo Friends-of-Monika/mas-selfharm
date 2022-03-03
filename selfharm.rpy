@@ -2,7 +2,7 @@
 
 "[m_name], I relapsed..."
 
-    m 2eka "[Player], I couldn't be more proud of you for telling me this."
+    m 2eka "[player], I couldn't be more proud of you for telling me this."
     m 2ekd "I know this might be hard- you might feel as if you've failed..."
     m 4ekd "But that's not true at all! This is just another step in your journey."
     m 2ekd "Habits are almost always difficult to kick, and this is no ordinary habit."
