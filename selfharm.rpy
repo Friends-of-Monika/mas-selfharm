@@ -60,6 +60,10 @@ label technique_cozy:
     m "Try wrapping up in something suuuper cozy!"
     m "A sheet, a blanket or a favorite jumper for example."
     m "Anything works, really."
+    m "You can also cocoon yourself in blankets on the floor..."
+    m "And roll around!"
+    m "Making a comfort corner using pillows is also a good idea."
+    m "Snuggle against them and relax..."
     m "As long as you get that calming sensation!"
     m "There's nothing like it!"
 
@@ -154,6 +158,7 @@ label technique_talking:
     m "Or just talking to distract yourself."
     m "You should call or text a friend!"
     m "Maybe send some long distance friends a surprise message?"
+    m "Or maybe arrange to meet up."
     m "I know you're here with me, but it's not {i}exactly{/i} the same as having a real-time conversation with someone!"
     m "I wish I could hear your voice..."
     m "We could talk for hours!"
@@ -226,6 +231,8 @@ label technique_butterfly:
     m "Whenever you look at it and think of harming yourself, do something comforting instead!"
     m "Sing along to a tune, watch your favorite film, go out on a walk..."
     m "You can also draw or write some positive things on your arm."
+    m "Or maybe some beautiful flowers!"
+    m "Don't hurt yourself until the drawings wash off."
 
     return
     
@@ -444,6 +451,8 @@ label Moni_3:
     m "I have another one! Do you have any baloons at home?"
     m "You can blow one baloon for each emotion you feel."
     m "After that, pop each one of them!"
+    m "Another option is a fidget toy."
+    m "Spinning them is always so fun!"
     
 #16
 
@@ -486,7 +495,8 @@ label Moni_3:
     m "It can be VERY loudly if you want."
     m "You can use your headphones to blast some songs, or even use no headphones at all."
     m "Screaming with the lyrics might be therapeutic too!"
-    m "Or even walking fast along the song."
+    m "Or even walking fast along the song, or tapping your foot to the beat."
+    m "Concentrate on the rhythm!"
     m "Oh, i thought of something nice to do also."
     m "Dance to the music!"
     m "Dance or move in a way that makes you express a feeling."
@@ -538,6 +548,7 @@ label Moni_3:
     m "Write down as many positive things as you can about yourself."
     m "You can put each one of them in a jar..."
     m "And read them when you feel down!"
+    m "You can also record yourself saying those positive things and listen to them as many times as you like."
     m "I want you to realize how amazing you are, [player]."
     
 #25 
@@ -643,6 +654,10 @@ label Moni_3:
     m "First of all, please straighten your back."
     m "Once you become familiar with this breathing exercise, you can perform it while lying in bed too!"
     m "Place and keep the tip of your tongue against the ridge of tissue behind your upper front teeth for the duration of the exercise."
+    m "Remember! Try and focus on your breath, in through your nose..."
+    m "And out through your mouth."
+    m "And let go of your thought with every out breath."
+    m "Now, let's start!"
     m "Completely exhale through your mouth, making a {i}woosh{/i} sound."
     m "Close your mouth and inhale quietly through your nose to a mental count of four."
     m "{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}."
@@ -660,3 +675,244 @@ label Moni_3:
     m "I promise it's very satisfying!"
     
 #40
+    m "[player], you know how much i like the color emerald green, right?"
+    m "Why don't you think of your favorite color right now?"
+    m "And try count all the things you can think of in your room that are that color."
+    m "Quietly describe to yourself what the things look like, and what your favorite color makes you feel."
+    
+#41
+    m "What about counting patterns?"
+    m "Count as many as you can in your favourite room of the house."
+    
+#42 
+    m "Now, for some word play!"
+    m "How many four letter words can you make up from the statement..."
+    m ""You learn more from failure than from success. Don't let it stop you"?"
+            
+#43
+    m "Think of the lyrics of a song you know really well!"
+    m "Now... Try reciting it from back to front!"
+    m "Hard, huh?"
+    m "But it will surely distract you! Ahahaha~"
+    m "If that's too complicated, you can try saying the alphabet backwards."
+
+#44
+    m "Let's think of one animal for every letter of the alphabet."
+    m "Or a song or artist for every letter of the alphabet!"
+
+#45
+    m "Let's carry out some research!"
+    m "What about searching for the meaning of your friend's names?"
+    m "Or maybe characters' names."
+    m "You could also research for some jokes you enjoy!"
+    m "Or maybe some places to volunteer at?"
+    m "Helping others can help us too." 
+    
+#46
+    m "How about making a list of your favorite things?"
+    m "You can pick the category!"
+    m "You can name at least ten of your favorite tv shows, for example."
+    m "Or fifteen favorite videogame titles!"
+    m "Maybe movies, or books?"
+    m "It's up to you, [player]...!"
+
+#47
+    m "How many superheroes can you name?"
+    m "What about villains?"
+    m "How many, and which of them would you like to have as your friends?"
+    m "And why is that?"
+    
+#48 
+    m "Choose an artist! Any artist."
+    m "Now name all the songs from them that you can remember."
+    m "Or maybe, an author!"
+    m "And do the same, name all the books/works written by them, that you can remember."
+    
+#49
+    m "Can you name the songs that were mostly played on your playlist this week?"
+    m "Or this month?"
+    
+#50
+    m "Notice all the things that you can see around you."
+    m "Observe things carefully... and slowly."
+    m "You can also notice all the things you can smell where you are."
+    m "If you'd like, also notice all the things you can hear around you, or in an imaginary place."
+    m "Don't label or categorise."
+    m "Just notice the things you can see, smell and hear."
+    m "And accept them."
+    
+#51
+    m "Is any of the rooms in your house messy?"
+    m "Maybe you could organize one of them."
+    m "Picking clothing or trash off the floor..."
+    m "In a slow and methodical way!"
+    m "If your house is completely organized, maybe organize the apps on your phone or computer?"
+    m "You can delete any you haven't used in a few months."
+    m "Or organize them by colour order!"
+    m "You could also search for a new screensaver for your computer!"
+    m "Maybe sort out your photos into file sor categories?"
+    
+#52
+    m #play brain game, research some that are text-based
+    
+#53
+    m "Hey, [player]! When is your next holiday?"
+    m "Why not research for the places you can go when that time comes?"
+    # talk about places
+    
+#54
+    m "How about making a list of your favorite things to do?"
+    m "Hobbies, activities... even chores!"
+    m "Put them in a favourite to least favourite order."
+
+#55
+    m "Can you play shiritori?"
+    #explain shiritori rules
+    m "Well... at least an simpler version of it."
+    m "Pick a famous person or character and then choose another person starting with the last letter of the first person's name."
+    m "For example! #give example
+    
+#56
+    m "Find five objects."
+    m "Focus on these five objects and describe them taking deep breaths between each description."
+    
+#57     
+    m "Close your eyes..."
+    m "And imagine something beautiful."
+    m "You can think of a relaxing place and in your mind, run through all the comforting things you do when you are there."
+    m "Your happy place."
+    m "Visualise a comforting image."
+    m "Think of all the different things in that scene that make you feel comforted and cared for."
+    m "Think about it with as much detail as you can."
+
+#58
+    m "Think of your favourite book, movie, videogame or tv show."
+    m "Can you name as many characters as you can from that media?"
+    
+#59
+    m "Draw any type of line on a piece of paper..."
+    m "Then make something out of it."
+    m "Or draw lots of shapes!"
+    
+#60
+    m "How about creating a playlist?"
+    m "You can go to Youtube, and create a list of videos that make you happy."
+    m "Or that make you laugh!"
+    m "Or create a playlist on spotify of your favourite songs."
+    m "Or comforting songs! Listen to these."
+    
+#61
+    m #math puzzles, put one or two here
+    
+#62
+    m "Do one self-care activity."
+    m "For example, making your bed!"
+    m "Or brushing your hair, your teeth."
+    m "Or taking a shower!"
+    #talk about some people w depression struggle w hygiene and encourage the player to take care of themselves
+    
+#63
+    m #musical instrument, if the player plays, create your own piece or learn a new song or play your favorite song on the instrument
+    
+#64
+    m "Go outside if possible..."
+    m "Or imagine yourself outside."
+    m "How many shapes can you see around you?"
+    
+#65 
+    m "Attempt to draw four things around you."
+    m "It doesnt have to be good though!"
+    
+#66
+    m "Name as many types of food as you can!"
+    m "What do you like the most?"
+    m "And why?"
+
+#67
+    m "Draw a picture and colour it slowly and mindfully."
+    m "Focus on not going out of the lines!"
+    
+#68
+    m "Picture yourself on a beach."
+    m "Can you focus on all the different things that you might find there?"
+    
+#69
+    m "Eat something you enjoy."
+    m "Make it slow and just notice everything about it."
+    m "Maybe make yourself a cup of tea or warm milk?"
+    m "Drink it slowly, enjoying each sip."
+    m "Enjoy."
+    
+#70
+    m "Look at a book that has pictures and words..."
+    m "And notice all the comforting images and words."
+    m "Children books are great for that!"
+    
+#71
+    m "Pick a comfortable spot and sit down."
+    m "Think of what you can feel, see and hear that's comforting and calm."
+    
+#72
+    m "Ground yourself."
+    m "Plant your feet firmly on the floor and visualise yourself as firmly rooted to the ground."
+    m "Think of yourself as having a firm foundation and hold your head up high."
+    
+#73
+    m "Watch your favourite movie and focus on the most comforting scene."
+    
+#74
+    m "Carry out a "mindful seeing" exercise."
+    m "Look outside a window or imagine looking outside a window."
+    m "Look at everything there is to see."
+    m "Just notice the colours, the patterns or the textures."
+    m "Try to notice the smallest movements such as leaves in the breeze."
+    
+#75
+    m "Make a list of all the things you would like to be accepting of."
+    m "For example, accepting yourself just as you are."
+    m "Create a phrase that is compassionate."
+    m "A mantra, if you'd like!"
+    m "For example..."
+    m "I accept myself just as I am."
+
+#76
+    m "Do you have paint and soft paint brushes at home, [player]?"
+    m "If you do, paint lightly on your skin."
+    m "Especially in the area where you want to do it..."
+    
+#77
+    m "Start a "memory book" of good memories!"
+    m "Read through them as you add new ones."
+    
+#78
+    m "Identify three small things that brought you happiness in the past 24 hours."
+    
+#79
+    m "Imagine yourself floating on the water on an inflatable cushion."
+    
+#80
+    m "Think of three people who give the best hugs and see if you can be with them."
+    m "If that's not the case, think of people who could give you their warmest smiles."
+    
+#81
+    m "Choose three of your most comforting characters from media you enjoy..."
+    m "And imagine you are spending some quality time with them."
+    
+#82
+    m "Download some comforting or meditation podcasts and listen to them."
+    
+#83
+    m "Hold your own hand with the other hand."
+    m "Hold it for at least one minute, like you would hold the hand of someone you care for and trust."
+    m "Slowly caress your hands and arms..."
+    m "Then hug yourself."
+    m "Be gentle and take it slow..."
+    m "Like comforting your favorite person or animal."
+    
+#84
+    m "Touch each finger to your thumbs in a pattern."
+    m "Go faster as you find a rhythm."
+    
+#85
+    m "Cuddle or stroke your pet if you have one."
+
