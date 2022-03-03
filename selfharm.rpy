@@ -11,13 +11,13 @@ init 5 python:
 
 label mas_selfharm3:
 
-    m "Hey... [player]?"
-    m "This may sound a bit random, but..."
-    m "Is it sunny today over there?"
-    m "If it is, I think you should go out and enjoy the sun for a bit."
-    m "Don't worry! I'll wait!"
-    m "Maybe bring a book with you so you can relax even more."
-    m "Enjoying literature in the nature would surely relax me..."
-    m "I hope this works for you, too."
+    m 1esa "Hey... [player]?"
+    m 1rka "This may sound a bit random, but..."
+    m 7eka "Is it sunny today over there?"
+    m 7eub "If it is, I think you should go out and enjoy the sun for a bit."
+    m 1hub "Don't worry! I'll wait!"
+    m 1wub "Maybe bring a book with you so you can relax even more."
+    m 1dua "Enjoying literature in the nature would surely relax me..."
+    m 1eka "I hope this works for you, too."
     
 return
