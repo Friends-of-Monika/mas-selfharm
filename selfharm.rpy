@@ -1,9 +1,16 @@
 # RANDOM TECHNIQUES TO BE PICKED IN THE NON-RANDOM MAIN EVENT.
+# Categories for techniques
+#- breathing
+# - comfort
+# - distracting
+# - release
+# and - express yourself
+
 default persistent._mas_technique_database = {}
 #1  
 
 label randomness:
-    $ randtechnique = renpy.random.randint (1, 2)
+    $ randtechnique = renpy.random.randint (1, 10)
     if randtechnique == 1:
         if technique1 == False:
             call technique_religion 
@@ -19,7 +26,7 @@ label randomness:
 
 
 
-
+#express
 label technique_religion:
     $ technique1 = True
     if $ persistent._mas_pm_religious == True:
