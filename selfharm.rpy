@@ -18,14 +18,7 @@ label randomness:
                 jump randomness
 
 
-init 5 python:
-    addEvent(
-        Event(
-            persistent._mas_technique_database,
-            eventlabel="technique_religion",
-            unlocked=True,
-        ),
-    ) 
+
 
 label technique_religion:
     $ technique1 = True
@@ -44,14 +37,7 @@ label technique_religion:
     return
 
 #2
-init 5 python:
-    addEvent(
-        Event(
-            persistent._mas_technique_database,
-            eventlabel="technique_cozy",
-            unlocked=True,
-        ),
-    ) 
+
 
 label technique_cozy:
     $ technique2 = True
@@ -68,15 +54,7 @@ label technique_cozy:
     m "There's nothing like it!"
 
     return
-#3
-init 5 python:
-    addEvent(
-        Event(
-            persistent._mas_technique_database,
-            eventlabel="technique_photographs",
-            unlocked=True,
-        ),
-    ) 
+
 
 label technique_photographs:
     $ technique3 = True
@@ -95,14 +73,7 @@ label technique_photographs:
     return
 
 #4
-init 5 python:
-    addEvent(
-        Event(
-            persistent._mas_technique_database,
-            eventlabel="technique_quotes",
-            unlocked=True,
-        ),
-    ) 
+
 
 label technique_quotes:
     $ technique4 = True
@@ -115,14 +86,7 @@ label technique_quotes:
 
     return
 #5
-init 5 python:
-    addEvent(
-        Event(
-            persistent._mas_technique_database,
-            eventlabel="technique_singing",
-            unlocked=True,
-        ),
-    ) 
+
 
 label technique_singing:
     $ technique5 = True
@@ -143,14 +107,7 @@ label technique_singing:
     return
 
 #6
-init 5 python:
-    addEvent(
-        Event(
-            persistent._mas_technique_database,
-            eventlabel="technique_talking",
-            unlocked=True,
-        ),
-    ) 
+
 
 label technique_talking:
     $ technique6 = True
@@ -166,14 +123,7 @@ label technique_talking:
 
     return
 #7
-init 5 python:
-    addEvent(
-        Event(
-            persistent._mas_technique_database,
-            eventlabel="technique_hugs",
-            unlocked=True,
-        ),
-    ) 
+
 
 label technique_hugs:
     $ technique7 = True
@@ -192,14 +142,7 @@ label technique_hugs:
     return
 
 #8
-init 5 python:
-    addEvent(
-        Event(
-            persistent._mas_technique_database,
-            eventlabel="technique_listening",
-            unlocked=True,
-        ),
-    ) 
+
 
 label technique_listening:
     $ technique8 = True
@@ -213,14 +156,7 @@ label technique_listening:
     return
     
 #9
-init 5 python:
-    addEvent(
-        Event(
-            persistent._mas_technique_database,
-            eventlabel="technique_butterfly",
-            unlocked=True,
-        ),
-    ) 
+
 
 label technique_butterfly:
     $ technique9 = True
@@ -238,14 +174,7 @@ label technique_butterfly:
     
 #10
 
-init 5 python:
-    addEvent(
-        Event(
-            persistent._mas_technique_database,
-            eventlabel="technique_healing",
-            unlocked=True,
-        ),
-    ) 
+
 
 label technique_healing:
     $ technique10 = True
@@ -261,14 +190,7 @@ label technique_healing:
     return
 
 #11
-init 5 python:
-    addEvent(
-        Event(
-            persistent._mas_technique_database,
-            eventlabel="technique_pong",
-            unlocked=True,
-        ),
-    ) 
+
 
 label technique_pong:
     $ technique11 = True
@@ -292,14 +214,7 @@ label technique_pong:
 
 #12
 
-init 5 python:
-    addEvent(
-        Event(
-            persistent._mas_technique_database,
-            eventlabel="technique_chess",
-            unlocked=True,
-        ),
-    ) 
+
 
 label technique_chess:
     $ technique12 = True
@@ -320,14 +235,6 @@ label technique_chess:
             return
 
 #13
-init 5 python:
-    addEvent(
-        Event(
-            persistent._mas_technique_database,
-            eventlabel="technique_piano",
-            unlocked=True,
-        ),
-    ) 
 
 label technique_piano:
     $ technique13 = True
@@ -350,14 +257,7 @@ label technique_piano:
             return
     
  #14
-    init 5 python:
-    addEvent(
-        Event(
-            persistent._mas_technique_database,
-            eventlabel="technique_videos",
-            unlocked=True,
-        ),
-    ) 
+ 
 
 label technique_videos:
     m "When you told me you were having those kinda thoughts, i did some research."
@@ -440,6 +340,8 @@ label Moni_3:
     return 
             
 #15
+label stressball:
+    $ technique15 = True
     m "Some objects can also help with the desperate feeling."
     m "Check if you have one of them at home, okay?"
     m "Do you have a stress ball?
@@ -455,7 +357,8 @@ label Moni_3:
     m "Spinning them is always so fun!"
     
 #16
-
+label stretching:
+    $ technique16 = True
     m "You know what often helps me calm down?"
     m "Stretching myself!"
     m "You can try stretching your body as much as you can, scrunching up your muscles until they hurt, then release."
@@ -469,6 +372,8 @@ label Moni_3:
     m "After tensing your muscles, you can let go and relax into something comfy."
     
 #17
+label punching:
+    $ technique17 = True
     m "Okay.{w=0.5} I want you to try this."
     m "This one is to let out all of your anger!"
     m "We're going to punch it out!"
@@ -481,6 +386,8 @@ label Moni_3:
     m "And gently letting go."
     
 #18
+label shouting:
+    $ technique18 = True
     m "This one might be... a little loud."
     m "I would like for you to go somewhere private..."
     m "And shout very loudly."
@@ -490,6 +397,8 @@ label Moni_3:
     m "We can take care of your throat later! Ahahaha~!"
    
 #19
+label listening:
+    $ technique19 = True
     m "Let's try to listen to some music?"
     m "Even better if it's music that expresses how you feel."
     m "It can be VERY loudly if you want."
@@ -502,6 +411,8 @@ label Moni_3:
     m "Dance or move in a way that makes you express a feeling."
     
 #20
+label paper:
+    $ technique20 = True
     m "Do you have some paper nearby?"
     m "You could try crumpling it, to get out your anger or sad feelings."
     m "Way better than taking it out on yourself!"
@@ -517,6 +428,8 @@ label Moni_3:
     m "You can even show someone your drawings and writings before ripping it to shreds."
     
 #21
+label otter:
+    $ technique21 = True
     m "Well, this one is a little different."
     m "Basically, it envolves someone else!"
     m "The creator of this mod, u/my-otter-self on Reddit, told me to remind you that she's always available to talk."
@@ -526,6 +439,8 @@ label Moni_3:
     m "Take this opportunity to open youself a little, if you can."
     
 #22
+label coldwater:
+    $ technique22 = True
     m "Sometimes, paying attention to your senses can help."
     m "Could you put your hands in some cold water?"
     m "And remember, breathe a lot!"
@@ -533,6 +448,8 @@ label Moni_3:
     m "Notice the coldness of the water witheach out breathe."
     
 #23
+label bothering:
+    $ technique23 = True
     m "I want you to say out loud what's bothering you."
     m "You can whisper if you don't want anyone to hear you!"
     m "But I want you to pay attention to what you're saying."
@@ -542,7 +459,9 @@ label Moni_3:
     m "Get it all out of your system!"
     
 #24
-    m "You could start making a "positive statements about me" thought box."
+label positive:
+    $ technique24 = True
+    m "You could start making a 'positive statements about me' thought box."
     m "Creating a list of your strenghts, as thought you were compiling a portfolio or a CV..."
     m "That might help!"
     m "Write down as many positive things as you can about yourself."
@@ -552,6 +471,8 @@ label Moni_3:
     m "I want you to realize how amazing you are, [player]."
     
 #25 
+label box:
+    $ technique25 = True
     m "What about putting your upsetting thoughts in a box?"
     m "You can write them in slips of paper throughout the day, storing them in the box."
     m "At the end of the day, you can throw them away!"
@@ -559,29 +480,39 @@ label Moni_3:
     m "I believe in you, [player]."
     
 #26
+label common:
+    $ technique26 = True
     m "Let's do a little mental exercise!"
     m "Think about all the things you can find you share in common with a friend."
     m "That will help you remmember common ground!"
     m "You can write them down too."
     
 #27
+label comfort:
+    $ technique27 = True
     m "Can you think about all the ways in which you can comfort a friend who might be having a bad time?"
     m "Please, note them down."
     m "Now, try to apply some of those strategies to yourself?"
     m "You can also note down how everything about this exercise makes you feel."
     
 #28
+label walk:
+    $ technique28 = True
     m "You can also go for a little walk outside, and connect with nature."
     m "Think about what you might be smelling, hearing and feeling."
     m "Can you put these feelings into words or draw them?"
     
 #29
+label media:
+    $ technique29 = True
     m "Do you have any social media profiles, [player]?"
     m "You can write something positive there if you do."
     m "That way, you can make yourself feel better..."
     m "And spread the feeling to your friends too!"
     
 #30
+label perspective:
+    $ technique30 = True
     m "Let's work on some perspective!"
     m "Can you write down your worries?"
     m "And think, how much will they bother you..."
@@ -591,6 +522,8 @@ label Moni_3:
     m "Working on using perspective helps on letting go of the intensity of the worry."
     
 #31
+label productivity:
+    $ technique31 = True
     m "I know this one might be hard but..."
     m "What about trying to engage in a productive activity?"
     m "It's always nice when we see work getting done."
@@ -599,12 +532,16 @@ label Moni_3:
     m "Even if it's small!"
     
 #32
+label interests:
+    $ technique32 = True
     m "How about making a list of things you find interesting in people?"
     m "You can also list your favorite anime, videogame or other media's characters!"
     m "Think why you like them, and you can even imagine that they're real!"
     m "This can help cope with loneliness."
     
 #33
+label mirror:
+    $ technique33 = True
     m "Do you have a mirror close to you, [player]?"
     m "You could try making faces at yourself in the mirror and laugh."
     m "I know that really cheers people up!"
@@ -613,6 +550,8 @@ label Moni_3:
     m "Look inside your eyes, and know that there's nothing that compares to the beauty in them."
     
 #34
+label creative:
+    $ technique34 = True
     m "Time to get creative!"
     m "Make up a story in your head."
     m "It can be about anything and anyone positive in your life."
@@ -620,6 +559,8 @@ label Moni_3:
     m "You can create two or more characters, and give them depth!"
     
 #35
+label river:
+    $ technique35 = True
     m "Think about what is bothering you."
     m "Now imagine a river."
     m "Box up the thing that is on your mind and watch it float away..."
@@ -632,12 +573,16 @@ label Moni_3:
     m "Because they don't define you."
     
 #36
+label feelings:
+    $ technique36 = True
     m "Make a list of positive feelings you have had in the last week!"
     m "I'm sure there are at least some."
     m "Find out what triggers those emotions..."
     m "And make sure to cherish those situations!"
     
 #37
+label poem:
+    $ technique37 = True
     m "This technique is one of my favorites."
     m "Let's write a poem!"
     m "Don't be alarmed, [player]."
@@ -648,6 +593,8 @@ label Moni_3:
     m "You can always read some from famous poets!"
 
 #38
+label breathing:
+    $ technique38 = True
     m "Alright, baby."
     m "I want you to try the 4-7-8 breathing exercise!..."
     m "You can also develop a personal mantra and repeat it along with the exercise."
@@ -668,6 +615,8 @@ label Moni_3:
     m "Aaaand, you're done!"
     
 #39 
+label pinterest:
+    $ technique39 = True
     m "[player], do you have a Pinterest?"
     m "You can try adding some inspirational quotes to your board!"
     m "Or some pictures you find aesthetically pleasing."
@@ -675,21 +624,29 @@ label Moni_3:
     m "I promise it's very satisfying!"
     
 #40
+label emerald:
+    $ technique40 = True
     m "[player], you know how much i like the color emerald green, right?"
     m "Why don't you think of your favorite color right now?"
     m "And try count all the things you can think of in your room that are that color."
     m "Quietly describe to yourself what the things look like, and what your favorite color makes you feel."
     
 #41
+label patterns:
+    $ technique41 = True
     m "What about counting patterns?"
     m "Count as many as you can in your favourite room of the house."
     
 #42 
+label wordplay:
+    $ technique42 = True
     m "Now, for some word play!"
     m "How many four letter words can you make up from the statement..."
-    m ""You learn more from failure than from success. Don't let it stop you"?"
+    m "'You learn more from failure than from success. Don't let it stop you'?"
             
 #43
+label lyrics:
+    $ technique43 = True
     m "Think of the lyrics of a song you know really well!"
     m "Now... Try reciting it from back to front!"
     m "Hard, huh?"
@@ -697,10 +654,14 @@ label Moni_3:
     m "If that's too complicated, you can try saying the alphabet backwards."
 
 #44
+label animal:
+    $ technique44 = True
     m "Let's think of one animal for every letter of the alphabet."
     m "Or a song or artist for every letter of the alphabet!"
 
 #45
+label research:
+    $ technique45 = True
     m "Let's carry out some research!"
     m "What about searching for the meaning of your friend's names?"
     m "Or maybe characters' names."
@@ -709,6 +670,8 @@ label Moni_3:
     m "Helping others can help us too." 
     
 #46
+label favoritethings:
+    $ technique46 = True
     m "How about making a list of your favorite things?"
     m "You can pick the category!"
     m "You can name at least ten of your favorite tv shows, for example."
@@ -717,22 +680,30 @@ label Moni_3:
     m "It's up to you, [player]...!"
 
 #47
+label superheroes:
+    $ technique47 = True
     m "How many superheroes can you name?"
     m "What about villains?"
     m "How many, and which of them would you like to have as your friends?"
     m "And why is that?"
     
 #48 
+label artist:  
+    $ technique48 = True
     m "Choose an artist! Any artist."
     m "Now name all the songs from them that you can remember."
     m "Or maybe, an author!"
     m "And do the same, name all the books/works written by them, that you can remember."
     
 #49
+label playlist:
+    $ technique49 = True
     m "Can you name the songs that were mostly played on your playlist this week?"
     m "Or this month?"
     
 #50
+label surroundings:
+    $ technique50 = True
     m "Notice all the things that you can see around you."
     m "Observe things carefully... and slowly."
     m "You can also notice all the things you can smell where you are."
@@ -742,6 +713,8 @@ label Moni_3:
     m "And accept them."
     
 #51
+label mess:
+    $ technique51 = True
     m "Is any of the rooms in your house messy?"
     m "Maybe you could organize one of them."
     m "Picking clothing or trash off the floor..."
@@ -756,16 +729,22 @@ label Moni_3:
     m #play brain game, research some that are text-based
     
 #53
+label holiday:
+    $ technique53 = True
     m "Hey, [player]! When is your next holiday?"
     m "Why not research for the places you can go when that time comes?"
     # talk about places
     
 #54
+label hobbies:
+    $ technique54 = True
     m "How about making a list of your favorite things to do?"
     m "Hobbies, activities... even chores!"
     m "Put them in a favourite to least favourite order."
 
 #55
+label shiritori:
+    $ technique55 = True
     m "Can you play shiritori?"
     #explain shiritori rules
     m "Well... at least an simpler version of it."
@@ -773,10 +752,14 @@ label Moni_3:
     m "For example! #give example
     
 #56
+label objects:
+    $ technique56 = True
     m "Find five objects."
     m "Focus on these five objects and describe them taking deep breaths between each description."
     
 #57     
+label imagination:
+    $ technique57 = True
     m "Close your eyes..."
     m "And imagine something beautiful."
     m "You can think of a relaxing place and in your mind, run through all the comforting things you do when you are there."
@@ -786,15 +769,21 @@ label Moni_3:
     m "Think about it with as much detail as you can."
 
 #58
+label characters:
+    $ technique58 = True
     m "Think of your favourite book, movie, videogame or tv show."
     m "Can you name as many characters as you can from that media?"
     
 #59
+label shapes:
+    $ technique59 = True
     m "Draw any type of line on a piece of paper..."
     m "Then make something out of it."
     m "Or draw lots of shapes!"
     
 #60
+label playlist:
+    $ technique60 = True
     m "How about creating a playlist?"
     m "You can go to Youtube, and create a list of videos that make you happy."
     m "Or that make you laugh!"
@@ -805,6 +794,8 @@ label Moni_3:
     m #math puzzles, put one or two here
     
 #62
+label selfcare:
+    $ technique62 = True
     m "Do one self-care activity."
     m "For example, making your bed!"
     m "Or brushing your hair, your teeth."
@@ -815,28 +806,40 @@ label Moni_3:
     m #musical instrument, if the player plays, create your own piece or learn a new song or play your favorite song on the instrument
     
 #64
+label outside:
+    $ technique64 = True
     m "Go outside if possible..."
     m "Or imagine yourself outside."
     m "How many shapes can you see around you?"
     
 #65 
+label draw:
+    $ technique65 = True
     m "Attempt to draw four things around you."
     m "It doesnt have to be good though!"
     
 #66
+label food:
+    $ technique66 = True
     m "Name as many types of food as you can!"
     m "What do you like the most?"
     m "And why?"
 
 #67
+label colour:
+    $ technique67 = True
     m "Draw a picture and colour it slowly and mindfully."
     m "Focus on not going out of the lines!"
     
 #68
+label beach:
+    $ technique68 = True
     m "Picture yourself on a beach."
     m "Can you focus on all the different things that you might find there?"
     
 #69
+label eat:
+    $ technique69 = True
     m "Eat something you enjoy."
     m "Make it slow and just notice everything about it."
     m "Maybe make yourself a cup of tea or warm milk?"
@@ -844,30 +847,42 @@ label Moni_3:
     m "Enjoy."
     
 #70
+label pictures:
+    $ technique70 = True
     m "Look at a book that has pictures and words..."
     m "And notice all the comforting images and words."
     m "Children books are great for that!"
     
 #71
+label sit:
+    $ technique71 = True
     m "Pick a comfortable spot and sit down."
     m "Think of what you can feel, see and hear that's comforting and calm."
     
 #72
+label ground:
+    $ technique72 = True
     m "Ground yourself."
     m "Plant your feet firmly on the floor and visualise yourself as firmly rooted to the ground."
     m "Think of yourself as having a firm foundation and hold your head up high."
     
 #73
+label scene:
+    $ technique73 = True
     m "Watch your favourite movie and focus on the most comforting scene."
     
 #74
-    m "Carry out a "mindful seeing" exercise."
+label mindfulseeing:
+    $ technique74 = True
+    m "Carry out a 'mindful seeing' exercise."
     m "Look outside a window or imagine looking outside a window."
     m "Look at everything there is to see."
     m "Just notice the colours, the patterns or the textures."
     m "Try to notice the smallest movements such as leaves in the breeze."
     
 #75
+label acceptance:
+    $ technique75 = True
     m "Make a list of all the things you would like to be accepting of."
     m "For example, accepting yourself just as you are."
     m "Create a phrase that is compassionate."
@@ -876,32 +891,48 @@ label Moni_3:
     m "I accept myself just as I am."
 
 #76
+label brushes:
+    $ technique76 = True
     m "Do you have paint and soft paint brushes at home, [player]?"
     m "If you do, paint lightly on your skin."
     m "Especially in the area where you want to do it..."
     
 #77
-    m "Start a "memory book" of good memories!"
+label memorybook:
+    $ technique77 = True
+    m "Start a 'memory book' of good memories!"
     m "Read through them as you add new ones."
     
 #78
+label happiness:
+    $ technique78 = True
     m "Identify three small things that brought you happiness in the past 24 hours."
     
 #79
+label cushion:
+    $ technique79 = True
     m "Imagine yourself floating on the water on an inflatable cushion."
     
 #80
+label hugs:
+    $ technique80 = True
     m "Think of three people who give the best hugs and see if you can be with them."
     m "If that's not the case, think of people who could give you their warmest smiles."
     
 #81
+label comforting:
+    $ technique81 = True
     m "Choose three of your most comforting characters from media you enjoy..."
     m "And imagine you are spending some quality time with them."
     
 #82
+label podcasts:
+    $ technique82 = True
     m "Download some comforting or meditation podcasts and listen to them."
     
 #83
+label handholding:
+    $ technique83 = True
     m "Hold your own hand with the other hand."
     m "Hold it for at least one minute, like you would hold the hand of someone you care for and trust."
     m "Slowly caress your hands and arms..."
@@ -910,9 +941,13 @@ label Moni_3:
     m "Like comforting your favorite person or animal."
     
 #84
+label pattern:
+    $ technique84 = True
     m "Touch each finger to your thumbs in a pattern."
     m "Go faster as you find a rhythm."
     
 #85
+label cuddle:
+    $ technique85 = True
     m "Cuddle or stroke your pet if you have one."
 
