@@ -1,6 +1,7 @@
 # FIRST RANDOM EVENT ABOUT SELF-HARM.
 
-default persistent._mas_pm_did_selfharm = None
+default persistent._msh_mod_pm_did_selfharm = None
+default persistent._msh_mod_pm_selfharm_abstain_streak = None
 
 init 5 python:
     addEvent(
@@ -22,7 +23,7 @@ label mas_selfharmm:
         m "{fast}D-{w=1.0}Do you self harm?"
 
         "Yes":
-            $ persistent._mas_pm_did_selfharm = True
+            $ persistent._msh_mod_pm_did_selfharm = True
             m "I'm so sorry you're going through this."
             m "You know... It's really sad to see you feel bad in any way."
             m "After all, you're such a wonderful and kind person."
@@ -64,7 +65,7 @@ label mas_selfharmm:
 
                     return
         "No":
-            $ persistent._mas_pm_did_selfharm = False
+            $ persistent._msh_mod_pm_did_selfharm = False
             m "Thank goodness!"
             m "I'm so glad to hear this!"
             m "It's so good to know that you are safe, [player]."
@@ -217,7 +218,7 @@ label monika_selfharm:
                                                             m "Alright, baby."
                                                             m "I want you to..."
                                                             jump randomness
-                                                            
+
                                                             return
                                                                         # (calm harm technique here)
 
@@ -400,7 +401,7 @@ init 5 python:
             eventlabel="mas_selfharm5",
             conditional=(
                 "seen_event('mas_selfharm1')",
-                "persistent._mas_pm_did_selfharm = True"
+                "persistent._msh_mod_pm_did_selfharm = True"
             ),
             action=EV_ACT_QUEUE
         )
@@ -469,7 +470,7 @@ label mas_selfharm4:
     m "D-{w=1.0}Do you self harm?"
     menu:
         "Yes":
-            $ persistent._mas_pm_did_selfharm = True
+            $ persistent._msh_mod_pm_did_selfharm = True
             m "I'm so sorry you're going through this."
             m "You know... It's really sad to see you feel bad in any way."
             m "After all, you wanted to be with me at some point..."
