@@ -187,7 +187,7 @@ init -10 python:
         days = _mshMod_getMilestoneDays(milestone)
         return (datetime.datetime.now() - persistent._msh_mod_pm_sober_streak).days >= days
 
-    ### Event registration / calendar handing internal routines and variables
+    ### Event registration / calendar handing internal routines and variables ###
 
     _mshMod_milestoneDatabase = (dict(), dict())
     _mshMod_milestoneEventsAdded = False
@@ -218,40 +218,51 @@ init -10 python:
             _mshMod_deferMilestoneAddEvent call.
         """
 
-        if not mshMod_isOnStreak():
-            return
-
-        for _label, data in _mshMod_milestoneDatabase[0].items():
-            ev, milestone = data
-            past_milestone = mshMod_isPastMilestone(milestone)
-
-            if not past_milestone:
+        if _mshMod_milestoneEventsAdded and not mshMod_isOnStreak():
+            # Lock all milestones and remove them from calendar.
+            for _label, data in _mshMod_milestoneDatabase[0].items():
                 mas_lockEVL(_label, "EVE")
-            else:
-                mas_unlockEVL(_label, "EVE")
-                ev.random = False
+                store.mas_calendar.removeEvent(ev)
+        else:
+            for _label, data in _mshMod_milestoneDatabase[0].items():
+                ev, milestone = data
+                past_milestone = mshMod_isPastMilestone(milestone)
+
+                if not past_milestone:
+                    # Lock milestones that are not achieved yet.
+                    mas_lockEVL(_label, "EVE")
+                else:
+                    # Past milestones should unlock, but should not pop up
+                    # randomly.
+                    mas_unlockEVL(_label, "EVE")
+                    ev.random = False
+
+                if not _mshMod_milestoneEventsAdded:
+                    ev.start_date = mshMod_getMilestoneDate(milestone)
+                    ev.end_date = mshMod_getMilestoneDateEnd(milestone)
+
+                    # NOTE: directly updating mas_all_ev_db or else deferred
+                    # addEvent calls cause exceptions on calendar interactions.
+                    addEvent(ev, skipCalendar=not past_milestone)
+                    data[0] = store.evhand.event_database[_label]
+                    mas_all_ev_db[_label] = data[0]
+
+                else:
+                    # If it's a past milestone, we should remove it, modify it
+                    # and then add it to calendar again.
+
+                    if past_milestone:
+                        store.mas_calendar.removeEvent(ev)
+
+                    ev.start_date = mshMod_getMilestoneDate(milestone)
+                    ev.end_date = mshMod_getMilestoneDateEnd(milestone)
+
+                    if past_milestone:
+                        store.mas_calendar.addEvent(ev)
 
             if not _mshMod_milestoneEventsAdded:
-                ev.start_date = mshMod_getMilestoneDate(milestone)
-                ev.end_date = mshMod_getMilestoneDateEnd(milestone)
-
-                addEvent(ev, skipCalendar=not past_milestone)
-                data[0] = store.evhand.event_database[_label]
-                mas_all_ev_db[_label] = data[0]
-
-            else:
-                if past_milestone:
-                    store.mas_calendar.removeEvent(ev)
-
-                ev.start_date = mshMod_getMilestoneDate(milestone)
-                ev.end_date = mshMod_getMilestoneDateEnd(milestone)
-
-                if past_milestone:
-                    store.mas_calendar.addEvent(ev)
-
-        if not _mshMod_milestoneEventsAdded:
-            global _mshMod_milestoneEventsAdded
-            _mshMod_milestoneEventsAdded = True
+                global _mshMod_milestoneEventsAdded
+                _mshMod_milestoneEventsAdded = True
 
 init 6 python:
     _mshMod_resetMilestones()
