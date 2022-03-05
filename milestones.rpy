@@ -96,5 +96,5 @@ init 5 python:
     )
 
 label mshMod_streak_1week:
-    m 1etc "1 week test!"
+    m "Congratulations, player! You are on your 1 week streak now! I'm so proud of you, ehehe~"
     return "unlock"
