@@ -2,20 +2,72 @@ default persistent._msh_mod_pm_sober_streak = None
 
 init -9 python:
     def _mshMod_testSetSoberStreak(milestone):
-        persistent._msh_mod_pm_sober_streak = datetime.datetime.now() - datetime.timedelta(days=_mshMod_milestonesEnum[milestone])
+        """
+        Sets and adjusts sober streak initial date and time so that
+        the specified milestone occurs on the present day (e.g. today)
+        and resets the milestones.
+
+        IN:
+            milestone - milestone code.
+
+        THROWS:
+            ValueError - if unknown milestone code is passed.
+
+        NOTE:
+            This function must not be used in actual submod logic.
+            It is created solely for testing/debugging purposes.
+        """
+
+        days = _mshMod_getMilestoneDays(milestone)
+        persistent._msh_mod_pm_sober_streak = datetime.datetime.now() - datetime.timedelta(days=days)
         _mshMod_resetMilestones()
 
-    def _mshMod_beginStreak():
+    def mshMod_beginStreak():
+        """
+        Sets sober streak initial date and time to current date and time.
+
+        THROWS:
+            ValueError - if player is already on sober streak.
+        """
+
+        if mshMod_isOnStreak():
+            raise ValueError("player is already on sober streak")
+
         persistent._msh_mod_pm_sober_streak = datetime.datetime.now()
 
-    def _mshMod_resetStreak():
+    def mshMod_breakStreak():
+        """
+        Unsets sober streak initial date and time and resets the milestones.
+
+        THROWS:
+            ValueError - if player is not on sober streak.
+        """
+
+        if mshMod_isOnStreak():
+            raise ValueError("player is not on sober streak")
+
         persistent._msh_mod_pm_sober_streak = None
         _mshMod_resetMilestones()
 
 init -10 python:
-    def mshMod_isOnStreak():
-        return persistent._msh_mod_pm_sober_streak is not None
+    ### Assertions ###
 
+    def _mshMod_assertOnStreak():
+        """
+        Assert function to check is player is on sober streak and throw
+        an exception if not.
+
+        THROWS:
+            ValueError if player is not on sober streak.
+        """
+
+        if not mshMod_isOnStreak():
+            raise ValueError("player is not on sober streak")
+
+    # TODO: This is too simple and does not actually reflect definitions
+    # of months and years.
+    # E.g. February has 28/29 days and April has 30 instead of 31,
+    # as well as leap years having 366 days instead of 365.
     _mshMod_milestonesEnum = {
         "1w": 7,
         "1m": 31,
@@ -28,55 +80,144 @@ init -10 python:
         "5y": 5 * 365
     }
 
-    def mshMod_getMilestoneDate(milestone):
-        if not mshMod_isOnStreak():
-            return None
+    def _mshMod_getMilestoneDays(milestone):
+        """
+        Fetches amount of days since the first streak day to the specified
+        milestone.
+
+        IN:
+            milestone - milestone code (i.e. "1w", "1m", "1y" etc.)
+
+        OUT:
+            Days until the milestone as integer number.
+
+        THROWS:
+            ValueError - if unknown milestone code is passed.
+        """
 
         days = _mshMod_milestonesEnum.get(milestone)
         if days is None:
-            return None
+            raise ValueError("unknown milestone code " + milestone)
+        return days
 
-        date = persistent._msh_mod_pm_sober_streak + datetime.timedelta(days=days)
-        date = datetime.datetime(date.year, date.month, date.day)
-        return date
+    def mshMod_isOnStreak():
+        """
+        Performs a check if sober streak initial date and time is set.
+
+        OUT:
+            True if player is on sober streak, False otherwise.
+        """
+
+        return persistent._msh_mod_pm_sober_streak is not None
+
+    def mshMod_getMilestoneDate(milestone):
+        """
+        Computes appropriate start date (datetime.datetime instance with time
+        values set to zero) for the specified milestone.
+
+        IN:
+            milestone - milestone code.
+
+        OUT:
+            An appropriate start date for a milestone.
+
+        THROWS:
+            ValueError - if unknown milestone code is passed or player is not
+                         on sober streak.
+        """
+
+        _mshMod_assertOnStreak()
+        return (persistent._msh_mod_pm_sober_streak + datetime.timedelta(days=_mshMod_getMilestoneDays(milestone))).replace(hour=0, minute=0, second=9)
 
     def mshMod_getMilestoneDateEnd(milestone):
-        date = mshMod_getMilestoneDate(milestone)
-        if date is None:
-            return None
+        """
+        Computes appropriate end date for the specified milestone (effectively,
+        it is a return value of mshMod_getMilestoneDate call with day value
+        increased by 1.)
 
-        date = datetime.datetime(date.year, date.month, date.day) + datetime.timedelta(days=1)
-        return date
+        IN:
+            milestone - milestone code.
+
+        OUT:
+            An appropriate end date for a milestone.
+
+        THROWS:
+            ValueError - if unknown milestone code is passed.
+        """
+
+        return mshMod_getMilestoneDate(milestone) + datetime.timedelta(days=1)
 
     def mshMod_isMilestoneToday(milestone):
-        if not mshMod_isOnStreak():
-            return False
+        """
+        Performs a check if today is the specified milestone. Player must be on
+        a sober streak in order for this function to work.
 
-        days = _mshMod_milestonesEnum.get(milestone)
-        if days is None:
-            return False
+        IN:
+            milestone - milestone code.
 
+        OUT:
+            True if today is a specified milestone, False otherwise.
+
+        THROWS:
+            ValueError - if unknown milestone code is passed or player is not
+                         on sober streak.
+        """
+
+        _mshMod_assertOnStreak()
+        days = _mshMod_getMilestoneDays(milestone)
         return (datetime.datetime.now() - persistent._msh_mod_pm_sober_streak).days == days
 
     def mshMod_isPastMilestone(milestone):
-        if not mshMod_isOnStreak():
-            return False
+        """
+        Performs a check if today is past the specified milestone. Player must be
+        on a sober streak in order for this function to work.
 
-        days = _mshMod_milestonesEnum.get(milestone)
-        if days is None:
-            return False
+        IN:
+            milestone - milestone code.
 
+        OUT:
+            True if today is past the specified milestone, False otherwise.
+
+        THROWS:
+            ValueError - if unknown milestone code is passed or player is not
+                         on sober streak.
+        """
+
+        _mshMod_assertOnStreak()
+        days = _mshMod_getMilestoneDays(milestone)
         return (datetime.datetime.now() - persistent._msh_mod_pm_sober_streak).days >= days
+
+    ### Event registration / calendar handing internal routines and variables
 
     _mshMod_milestoneDatabase = (dict(), dict())
     _mshMod_milestoneEventsAdded = False
 
     def _mshMod_deferMilestoneAddEvent(ev, *args, **kwargs):
+        """
+        Defers milestone addEvent call until _mshMod_resetMilestones call
+        and registers milestone event object internally.
+
+        IN:
+            ev - event object to defer addEvent call for.
+            *args - currently unused.
+            **kwargs - currently only used with "milestone" key which must be
+                       a milestone code.
+        """
+
         data = [ev, kwargs["milestone"]]
         _mshMod_milestoneDatabase[0][ev.eventlabel] = data
         _mshMod_milestoneDatabase[1][kwargs["milestone"]] = data
 
     def _mshMod_resetMilestones():
+        """
+        Resets milestones, possibly removing (and setting up) calendar marks
+        for unachieved/achieved milestones correspondingly.
+
+        NOTE:
+            Only works with events whose addEvent calls were deferred with
+            _mshMod_deferMilestoneAddEvent call.
+        """
+
         if not mshMod_isOnStreak():
             return
 
