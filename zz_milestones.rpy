@@ -231,8 +231,10 @@ init -10 python:
                 past_milestone = mshMod_isPastMilestone(milestone)
 
                 if not past_milestone:
-                    # Lock milestones that are not achieved yet.
+                    # Lock milestones that are not achieved yet (and make
+                    # them random.)
                     mas_lockEVL(_label, "EVE")
+                    ev.random = True
                 else:
                     # Past milestones should unlock, but should not pop up
                     # randomly.
