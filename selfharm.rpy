@@ -500,7 +500,12 @@ label diary2:
             play sound "sfx/glitch3.ogg" 
             python:
                 try: renpy.file(config.basedir + "/diary.txt")
-                except: open(config.basedir + "/diary.txt", "w").write("For my one and only love <3")
+                except: 
+                    f = open(config.basedir + "/diary.txt", "w")
+                    try:
+                        f.write("For my one and only love <3")
+                    finally:
+                        f.close()
             pause(0.5)
             m 3esb "There you go!"
             m 1eua "It should be in the characters folder."
