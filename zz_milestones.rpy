@@ -43,7 +43,7 @@ init -9 python:
             ValueError - if player is not on sober streak.
         """
 
-        if mshMod_isOnStreak():
+        if not mshMod_isOnStreak():
             raise ValueError("player is not on sober streak")
 
         persistent._msh_mod_pm_sober_streak = None
@@ -224,6 +224,7 @@ init -10 python:
             # Lock all milestones and remove them from calendar.
             for _label, data in _mshMod_milestoneDatabase[0].items():
                 mas_lockEVL(_label, "EVE")
+                data[0].random = True
                 store.mas_calendar.removeEvent(data[0])
         else:
             for _label, data in _mshMod_milestoneDatabase[0].items():
