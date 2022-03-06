@@ -220,17 +220,17 @@ init -10 python:
             _mshMod_deferMilestoneAddEvent call.
         """
 
-        if _mshMod_milestoneEventsAdded and not mshMod_isOnStreak():
+        if not mshMod_isOnStreak():
             # Lock all milestones and remove them from calendar.
             for _label, data in _mshMod_milestoneDatabase[0].items():
                 mas_lockEVL(_label, "EVE")
-                store.mas_calendar.removeEvent(ev)
+                store.mas_calendar.removeEvent(data[0])
         else:
             for _label, data in _mshMod_milestoneDatabase[0].items():
                 ev, milestone = data
                 past_milestone = mshMod_isPastMilestone(milestone)
 
-                if not past_milestone:
+                if not past_milestone or mshMod_isMilestoneToday(milestone):
                     # Lock milestones that are not achieved yet (and make
                     # them random.)
                     mas_lockEVL(_label, "EVE")
