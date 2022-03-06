@@ -71,7 +71,6 @@ label mas_selfharmm:
                     jump mas_unlockableharm
                     
                 "No":
-                    # $ masunlockEVL = ("mas_unlockableharm", "EVE")
                     m "Oh..."
                     m "It's okay, [player]."
                     m "Remember that I'll never leave you. After all, I promised that I'll take care of you."
@@ -85,15 +84,14 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_unlockableharm", # event label (MUST BE UNIQUE)
-            category=["you", "monika"], # list of categories this topic belongs in (These are automatically capitalized)
-            prompt="I want to learn more about self harm.", # button text
-            random=False, # True if this topic should appear randomly
-            pool=False, # True if this topic should appear in "Ask a Question"
+            eventlabel="mas_unlockableharm", 
+            category=["you", "monika"],
+            prompt="I want to learn more about self harm.",
+            random=False,
+            conditional="seen_event('mas_selfharmm')",
+            pool=False, 
             unlocked = False,
-            rules = {"no_unlock": None}
         ),
-        code = "EVE"
     )
 
 label mas_unlockableharm:
