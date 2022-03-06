@@ -19,8 +19,7 @@ init -10 python:
 
     def _mshMod_popTriggeredReminder():
         if not persistent._mshMod_reminders:
-            # TODO: throw
-            return None
+            raise ValueError("no active reminders")
 
         items = list(persistent._mshMod_reminders.items())
         items.sort(key=lambda it: it[1].date)
