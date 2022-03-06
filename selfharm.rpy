@@ -1,7 +1,6 @@
 # FIRST RANDOM EVENT ABOUT SELF-HARM.
 
 default persistent._msh_mod_pm_did_selfharm = None
-default persistent._msh_mod_pm_selfharm_abstain_streak = None
 
 init 5 python:
     addEvent(
