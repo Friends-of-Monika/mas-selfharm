@@ -536,7 +536,12 @@ label diary3:
                     play sound "sfx/glitch3.ogg" 
                     python:
                         try: renpy.file(config.basedir + "/diary2.txt")
-                        except: open(config.basedir + "/diary2.txt", "w").write("Don't lose this one, hehe~")
+                        except: 
+                            f = open(config.basedir + "/diary2.txt", "w")
+                            try:
+                                f.write("Don't lose this one, hehe~")
+                            finally:
+                                f.close()
                     pause(0.5)
                     m 3nuu "Don't delete this one [player]!"
 
