@@ -6,6 +6,7 @@ init 5 python:
             prompt="1 Week",
             category=["sober"],
             action=EV_ACT_QUEUE,
+            random=True,
             rules={"force repeat": None}
         ),
         milestone="1w"
