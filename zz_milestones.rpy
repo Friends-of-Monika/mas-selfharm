@@ -268,6 +268,7 @@ init -10 python:
             if not _mshMod_milestoneEventsAdded:
                 global _mshMod_milestoneEventsAdded
                 _mshMod_milestoneEventsAdded = True
+                mas_rebuildEventLists()
 
 init 6 python:
     # Actually call all deferred addEvent's for all milestones.
