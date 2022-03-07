@@ -5,7 +5,6 @@ init 5 python:
             eventlabel="mshMod_streak_1week",
             prompt="1 Week",
             category=["sober"],
-            conditional="not _mshMod_isMilestoneSeen('1w')"
             action=EV_ACT_QUEUE,
             random=True,
             rules={"force repeat": None}
@@ -15,5 +14,4 @@ init 5 python:
 
 label mshMod_streak_1week:
     m "Congratulations, player! You are on your 1 week streak now! I'm so proud of you, ehehe~"
-    $ _mshMod_markMilestoneSeen("1w")
     return "derandom|unlock"
