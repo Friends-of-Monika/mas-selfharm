@@ -280,7 +280,7 @@ init 6 python:
     # Run delayed milestone reset action once per day to ensure
     # current milestone is always visible on the calendar.
     _mshMod_milestoneDailyResetActionId = 237583875
-    mas_delayed_action_map[_id] = store.MASDelayedAction.makeWithLabel(
+    mas_delayed_action_map[_mshMod_milestoneDailyResetActionId] = store.MASDelayedAction.makeWithLabel(
         _mshMod_milestoneDailyResetActionId,
         "mshMod_streak_1week",
         "True",
