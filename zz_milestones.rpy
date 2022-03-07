@@ -72,6 +72,8 @@ init -10 python:
     # as well as leap years having 366 days instead of 365.
     _mshMod_milestonesEnum = {
         "1w": 7,
+        "2w": 14,
+        "3w": 21,
         "1m": 31,
         "3m": 3 * 31,
         "6m": 6 * 31,
