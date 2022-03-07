@@ -274,19 +274,4 @@ init 6 python:
     # Actually call all deferred addEvent's for all milestones.
     _mshMod_resetMilestones()
 
-    # TODO: No idea if this actually works, but it's worth a shot.
-    # Need to test it though.
-
-    # Run delayed milestone reset action once per day to ensure
-    # current milestone is always visible on the calendar.
-    _mshMod_milestoneDailyResetActionId = 237583875
-    mas_delayed_action_map[_mshMod_milestoneDailyResetActionId] = store.MASDelayedAction.makeWithLabel(
-        _mshMod_milestoneDailyResetActionId,
-        "mshMod_streak_1week",
-        "True",
-        _mshMod_resetMilestones,
-        store.MAS_FC_IDLE_DAY
-    )
-
-    if _mshMod_milestoneDailyResetActionId not in persistent._mas_delayed_action_list:
-        persistent._mas_delayed_action_list.append(_mshMod_milestoneDailyResetActionId)
+    # TODO: need to reset milestones once in a while
