@@ -2,7 +2,7 @@
 default persistent._msh_mod_pm_sober_streak = None
 default persistent._mshMod_seen_milestones = set()
 
-init -9 python:
+init -1000 python:
     def _mshMod_testSetSoberStreak(milestone):
         """
         Sets and adjusts sober streak initial date and time so that
@@ -51,7 +51,6 @@ init -9 python:
         persistent._msh_mod_pm_sober_streak = None
         _mshMod_resetMilestones()
 
-init -10 python:
     ### Assertions ###
 
     def _mshMod_assertOnStreak():
@@ -191,7 +190,7 @@ init -10 python:
 
         _mshMod_assertOnStreak()
         days = _mshMod_getMilestoneDays(milestone)
-        return (datetime.date.today()) - persistent._msh_mod_pm_sober_streak).days >= days
+        return (datetime.date.today() - persistent._msh_mod_pm_sober_streak).days >= days
 
     ### Event registration / calendar handing internal routines and variables ###
 
@@ -231,15 +230,25 @@ init -10 python:
             # on streak.
 
             for _label, data in _mshMod_milestoneDatabase[0].items():
+                ev, milestone = data
                 mas_lockEVL(_label, "EVE")
-                data[0].random = False
+                ev.random = False
 
                 # Make sure it doesn't trigger at all.
                 ev.start_date = None
                 ev.end_date = None
 
-                store.mas_calendar.removeEvent(data[0])
-                _mshMod_markMilestoneUnseen(data[1])
+                if _label in persistent._seen_ever:
+                    del persistent._seen_ever[_label]
+
+                # And apply in event database too.
+                ev_p = list(persistent.event_database[_label])
+                ev_p[5] = False
+                ev_p[9] = ev.start_date
+                ev_p[10] = ev.end_date
+                persistent.event_database[_label] = ev_p
+
+                store.mas_calendar.removeEvent(ev)
 
         else:
             # Basically, when player's not on streak there isn't even a point
@@ -254,6 +263,9 @@ init -10 python:
                     # them random.)
                     mas_lockEVL(_label, "EVE")
                     ev.random = True
+
+                    if _label in persistent._seen_ever:
+                        del persistent._seen_ever[_label]
 
                 else:
                     # Past milestones should unlock, but should not pop up
@@ -289,20 +301,35 @@ init -10 python:
                     if past_milestone:
                         store.mas_calendar.addEvent(ev)
 
+                    # Also apply date changes on the event database.
+                    ev_p = list(persistent.event_database[_label])
+                    ev_p[9] = ev.start_date
+                    ev_p[10] = ev.end_date
+                    persistent.event_database[_label] = ev_p
+
+
             if not _mshMod_milestoneEventsAdded:
                 _mshMod_milestoneEventsAdded = True
 
-                # Update event lists just in case.
-                mas_rebuildEventLists()
-
-    def _mshMod_markMilestoneSeen(milestone):
-        persistent._mshMod_seen_milestones.append(milestone)
-
-    def _mshMod_markMilestoneUnseen(milestone):
-        persistent._mshMod_seen_milestones.remove(milestone)
+            # Update event lists just in case.
+            mas_rebuildEventLists()
 
 init 6 python:
     # Actually call all deferred addEvent's for all milestones.
     _mshMod_resetMilestones()
 
     # TODO: need to reset milestones once in a while
+
+init 10 python:
+    _mshMod_milestoneResetRoutineId = "_mshMod_milestoneResetRoutine"
+
+    def _mshMod_milestoneResetRoutine(*args, **kwargs):
+        _mshMod_resetMilestones()
+
+    mas_delayed_action_map[_mshMod_milestoneResetRoutineId] = MASDelayedAction.makeWithLabel(
+        _mshMod_milestoneResetRoutineId,
+        _mshMod_milestoneResetRoutineId,
+        "True",
+        _mshMod_milestoneResetRoutine,
+        MAS_FC_IDLE_DAY
+    )
