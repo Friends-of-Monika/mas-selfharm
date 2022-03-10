@@ -213,6 +213,8 @@ init -1000 python:
             store.mas_calendar.removeEvent(ev)
             ev.start_date, ev.end_date = _mshMod_getPersonalBestDateTuple()
             store.mas_calendar.addEvent(ev)
+        else:
+            store.mas_calendar.removeEvent(_mshMod_personalBestEvent)
 
 
     ### UTILITIES ###
