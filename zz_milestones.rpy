@@ -1,4 +1,5 @@
 default persistent._msh_mod_pm_sober_streak = None
+default persistent._msh_mod_pm_sober_personal_best = None
 
 init -1000 python:
 
@@ -26,11 +27,21 @@ init -1000 python:
 
     def mshMod_endStreak():
         _mshMod_assertOnStreak()
-        persistent._msh_mod_pm_sober_streak = None
 
+        # Update personal best if current streak is longer than the previous.
+        if persistent._msh_mod_pm_sober_personal_best is not None:
+            since, days = persistent._msh_mod_pm_sober_personal_best
+            c_days = (datetime.date.today() - persistent._msh_mod_pm_sober_personal_best).days
+            if c_days > days:
+                persistent._msh_mod_pm_sober_personal_best = (persistent._msh_mod_pm_sober_streak, c_days)
+        else:
+            c_days = (datetime.date.today() - persistent._msh_mod_pm_sober_streak).days
+            persistent._msh_mod_pm_sober_personal_best = (persistent._msh_mod_pm_sober_streak, c_days)
+
+        # Reset streak initial date and rebuild the calendar and events.
+        persistent._msh_mod_pm_sober_streak = None
         _mshMod_rebuildMilestoneDates()
         _mshMod_updateMilestoneEvents()
-        # TODO: hide calendar marks, leave personal best mark
 
 
     ### MILESTONE DATE DEFINITION ###
@@ -89,6 +100,15 @@ init -1000 python:
                 "4y": _mshMod_getYearlyMilestone(4),
                 "5y": _mshMod_getYearlyMilestone(5)}
             )
+
+    def _mshMod_getPersonalBestDateTuple():
+        # TODO: move to assertions
+        if persistent._msh_mod_pm_sober_personal_best is None:
+            raise AssertionError("personal best is not set")
+
+        since, days = persistent._msh_mod_pm_sober_personal_best
+        start = since + datetime.timedelta(days=days)
+        return start, start + datetime.timedelta(days=1)
 
     def _mshMod_getMilestoneDateTuple(code):
         date = _mshMod_milestoneDates.get(code)
@@ -186,8 +206,26 @@ init -1000 python:
                 ev.start_date, ev.end_date = None, None
                 ev.random, ev.unlocked = False, False
 
+        if persistent._msh_mod_pm_sober_personal_best is not None:
+            since, days = persistent._msh_mod_pm_sober_personal_best
+            ev = _mshMod_personalBestEvent
 
-init 1000 python:
+            store.mas_calendar.removeEvent(ev)
+            ev.start_date, ev.end_date = _mshMod_getPersonalBestDateTuple()
+            store.mas_calendar.addEvent(ev)
+
+
+    ### UTILITIES ###
+
+    def _mshMod_seeLabel(label):
+        persistent._ever_seen[label] = True
+
+    def _mshMod_unseeLabel(label):
+        if label in persistent._ever_seen:
+            del persistent._ever_seen[label]
+
+
+init 10 python:
 
     ### MILESTONE EVENT PROPERTIES UNLOCK ###
 
@@ -201,6 +239,7 @@ init 1000 python:
         for prop in _mshMod_lockedProps:
             Event.unlockInit(prop, ev=ev)
 
+
     by_label, by_code = _mshMod_milestoneEvents
     for code, data in by_code.items():
         ev = store.mas_getEV(data[0].eventlabel)
@@ -211,17 +250,9 @@ init 1000 python:
         by_label[ev.eventlabel] = data_pair
         by_code[code] = data_pair
 
-
-init -1000 python:
-
-    ### REN'PY SEEN/UNSEEN FUNCTIONS ###
-
-    def _mshMod_seeLabel(label):
-        persistent._ever_seen[label] = True
-
-    def _mshMod_unseeLabel(label):
-        if label in persistent._ever_seen:
-            del persistent._ever_seen[label]
+    # Make personal best event modifiable.
+    _mshMod_personalBestEvent = mas_getEV(_mshMod_personalBestEventLabel)
+    _mshMod_unlockAllEventProps(_mshMod_personalBestEvent)
 
 
 init 11 python:
@@ -230,3 +261,23 @@ init 11 python:
 
     _mshMod_rebuildMilestoneDates()
     _mshMod_updateMilestoneEvents()
+
+
+init 5 python:
+
+    _mshMod_personalBestEventLabel = "mshMod_milestone_personal_best"
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_milestone_personal_best",
+            prompt="Sober, personal best",
+            conditional="False",
+            action=EV_ACT_QUEUE
+        )
+    )
+
+
+label mshMod_milestone_personal_best:
+    # This exists just for sake of proper rendering of the personal best
+    # event on the calendar. Do not touch this!
+    return
