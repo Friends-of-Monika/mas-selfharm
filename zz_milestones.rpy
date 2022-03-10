@@ -114,7 +114,7 @@ init -1000 python:
                 return code
         return None
 
-    def _mshMod_getPastMilestones():
+    def mshMod_getPastMilestones():
         milestones = list()
 
         for code in _mshMod_milestoneDates.keys():
@@ -150,7 +150,7 @@ init -1000 python:
 
     def _mshMod_updateMilestoneEvents():
         if mshMod_isOnStreak():
-            for milestone in _mshMod_getPastMilestones():
+            for milestone in mshMod_getPastMilestones():
                 ev = _mshMod_getMilestoneEvent(milestone)
 
                 # Past events must have start and end date in order
