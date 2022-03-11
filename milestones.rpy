@@ -12,4 +12,4 @@ init 5 python:
 
 label mshMod_milestone_1w:
     m "1 week milestone test."
-    return "derandom"
+    return "derandom|unlock"
