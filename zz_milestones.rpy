@@ -21,8 +21,8 @@ init -1000 python:
 
     def mshMod_beginStreak():
         _mshMod_assertNotOnStreak()
-        persistent._msh_mod_pm_sober_streak = datetime.date.today()
 
+        persistent._msh_mod_pm_sober_streak = datetime.date.today()
         _mshMod_rebuildMilestoneDates()
 
     def mshMod_endStreak():
@@ -41,6 +41,13 @@ init -1000 python:
         # Reset streak initial date and rebuild the calendar and events.
         persistent._msh_mod_pm_sober_streak = None
         _mshMod_rebuildMilestoneDates()
+        _mshMod_updateMilestoneEvents()
+
+    def mshMod_hasPersonalBest():
+        return persistent._msh_mod_pm_sober_personal_best is not None
+
+    def mshMod_resetPersonalBest():
+        persistent._msh_mod_pm_sober_personal_best = None
         _mshMod_updateMilestoneEvents()
 
 
