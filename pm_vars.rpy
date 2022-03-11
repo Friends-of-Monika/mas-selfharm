@@ -4,7 +4,8 @@ init -810 python:
         datetime.datetime(2019, 1, 1),
         {
             "_msh_mod_pm_did_selfharm": "pm.emotions.did_selfharm",
-            "_msh_mod_pm_sober_streak": "pm.emotions.selfharm_sober_streak"
+            "_msh_mod_pm_sober_streak": "pm.emotions.selfharm_sober_streak",
+            "_msh_mod_pm_sober_personal_best": "pm.emotions.selfharm_sober_personal_best"
         },
         use_year_before=True,
         dont_reset=True
