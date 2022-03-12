@@ -186,6 +186,7 @@ init -1000 python:
 
                 # Derandom and unlock this event so it can be repeated through the menu.
                 ev.random, ev.unlocked = False, True
+                ev.unlock_date, ev.last_seen = None, None
 
                 # Also mark it seen for Ren'Py/MAS.
                 _mshMod_seeLabel(ev.eventlabel)
@@ -200,6 +201,7 @@ init -1000 python:
                 store.mas_calendar.addEvent(ev)
                 if not mas_seenLabels([ev.eventlabel]):
                     ev.random, ev.unlocked = True, False
+                    ev.unlock_date, ev.last_seen = None, None
 
         else:
             for label, data in _mshMod_milestoneEvents[0].items():
