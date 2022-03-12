@@ -31,12 +31,11 @@ init -1000 python:
         # Update personal best if current streak is longer than the previous.
         if persistent._msh_mod_pm_sober_personal_best is not None:
             since, days = persistent._msh_mod_pm_sober_personal_best
-            c_days = (datetime.date.today() - persistent._msh_mod_pm_sober_personal_best).days
+            c_days = (datetime.date.today() - persistent._msh_mod_pm_sober_personal_best[0]).days
             if c_days > days:
                 persistent._msh_mod_pm_sober_personal_best = (persistent._msh_mod_pm_sober_streak, c_days)
         else:
-            c_days = (datetime.date.today() - persistent._msh_mod_pm_sober_streak).days
-            persistent._msh_mod_pm_sober_personal_best = (persistent._msh_mod_pm_sober_streak, c_days)
+            persistent._msh_mod_pm_sober_personal_best = (persistent._msh_mod_pm_sober_streak, (datetime.date.today() - persistent._msh_mod_pm_sober_streak).days)
 
         # Reset streak initial date and rebuild the calendar and events.
         persistent._msh_mod_pm_sober_streak = None
