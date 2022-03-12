@@ -251,7 +251,7 @@ init 10 python:
 
     by_label, by_code = _mshMod_milestoneEvents
     for code, data in by_code.items():
-        ev = store.mas_getEV(data[0].eventlabel)
+        ev = mas_getEV(data[0].eventlabel)
         _mshMod_unlockAllEventProps(ev)
 
         # Also keep a reference to event object saved in events list.
@@ -270,6 +270,27 @@ init 11 python:
 
     _mshMod_rebuildMilestoneDates()
     _mshMod_updateMilestoneEvents()
+
+
+init 7 python in mas_delact:
+
+    _mshMod_dailyMilestoneUpdateActionId = "mshMod_milestoneUpdateDelayedAction"
+
+    def _mshMod_dailyMilestoneUpdateAction(ev=None):
+        _mshMod_updateMilestoneEvents()
+
+    def _mshMod_dailyMilestoneUpdateActionInit():
+        return store.MASDelayedAction.makeWithLabel(
+            _mshMod_dailyMilestoneUpdateActionId,
+            "True",
+            "None",
+            _mshMod_dailyMilestoneUpdateAction,
+            store.MAS_FC_IDLE_DAY
+        )
+
+
+    MAP[_mshMod_dailyMilestoneUpdateActionId] = _mshMod_dailyMilestoneUpdateActionInit
+    store.mas_addDelayedAction(_mshMod_dailyMilestoneUpdateActionId)
 
 
 init 5 python:
