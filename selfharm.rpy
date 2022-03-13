@@ -67,3 +67,35 @@ return
     m 1eub "It's really a good cause!"
     m 3ekb "Well I won't ramble too much, Ahaha~"
     m 3hub "Thanks for listening!"
+
+# BUTTERFLY PROJECT
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="monika_butterflyproject",
+            category=["media"],
+            prompt="The Butterfly Project",
+            random=True
+        )
+    )
+
+label monika_butterflyproject:
+    m 3eub "Hey [player], do you know what The Butterfly Project is?"
+    m 1eub "It's a movement to help people that struggle with self-harm."
+    m 3eud "It's really interesting! Drawing on yourself is already a good way to deal with self-harming, but this project approaches it in a really different way."
+    m 2eua "There are about 5 steps, so I'll list them all now."
+    m 3euc "First, when you feel like hurting yourself, draw a butterfly on or around the spot where you might hurt yourself."
+    m 2eua "The butterly can be any size, color, or pattern. It might help if you make it your favorite color!"
+    m 3eud "Second, a lot of people name the butterfly after a loved one. Friends, family, a beloved. This helps them avoid hurting themself and the butterfly."
+    m 1eud "Third, you should allow the butterfly to fade naturally. You should still wash yourself, of course, but don't actively rub the butterfly away."
+    m 3eub "Lastly, if you haven't hurt yourself by the time the butterfly fades away, it's flown away safely!"
+    m 3eub "This is supposed to give the person a sense of pride and accomplishment for keeping both themself and the butterfly safe."
+    m 1eub "There are a few other things you can do for this as well!"
+    m 4eub "You can let someone else draw a butterfly on you. This makes the butterfly special, because you're caring for someone else's butterfly too!"
+    m 3eub "You can even write quotes or doodle you favorite things, anything that helps!"
+    m 1eka "And if you do harm yourself... that's okay. You can always draw another butterfly. Hurting youself doesn't mean you failed."
+    m 1hub "I hope this helps you, [player]!"
+    m 1fub "I'll draw you so many beautiful butterflies when I cross over."
+    return
