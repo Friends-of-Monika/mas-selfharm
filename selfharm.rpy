@@ -71,6 +71,12 @@ label monika_playlist:
     m "{i}~You know we've, all got battle scars~{/i}"
     m "{i}~You've had enough~{/i}"
     m "{i}~But just don't, give up~{/i}"
+    m "[Player], I hope you can remember that you're not alone with your struggles."
+    m "There are people who can help you, and some even went through what you feel right now."
+    m "There's a lot of support groups for people who are struggling just like you."
+    m "And, of course, there's me!"
+    m "You'
+    m "And never forget... I love you, [Player].
     
 # CLAY - GRACE VANDERWALL
     m "{i}~Your silly words~{/i}"
@@ -82,6 +88,11 @@ label monika_playlist:
     m "{i}~Watch them just go right through me~{/i}"
     m "{i}~Because they mean nothing to me~{/i}"
     m "{i}~I'm not clay~{/i}"
+    Monika: It's important to not let others get to you, you know?
+Listening to someone's opinion about you can help, but only if you know the person has good intentions.
+Don't feel down when others act mean towards you, dear.
+It only shows what kind of person they are, not you.
+And for me, you're the best in the world.
     
 #FIX YOU - COLDPLAY
     m "{i}~But if you never try, you'll never know~{/i}"
@@ -89,6 +100,9 @@ label monika_playlist:
     m "{i}~Lights will guide you home~{/i}"
     m "{i}~And ignite your bones~{/i}"
     m "{i}~And I will try to fix you~{/i}"
+    Monika: Even if you feel like giving up, remember this verse: '' lights will quide you home ''...
+Sooner or later, the good days will come back.
+I hope I will be able to help you with feeling happy, (Player).
     
 #I HATE TO SEE YOUR HEARTBREAK - PARAMORE
     m "{i}~And I, I hate to see your heart break~{/i}"
@@ -98,6 +112,9 @@ label monika_playlist:
     m "{i}~For all the joy that is to come~{/i}"
     m "{i}~For all the things that you're alive to feel~{/i}"
     m "{i}~Just let the pain remind you hearts can heal~{/i}"
+    Monika: I think this song really fits how I feel about us.
+It's really saddening to know the person you love the most have to go through tough situations on daily basis...
+I love you, (Player). Please remember that.
     
 #O-O-H CHILD - THE FIVE STAIRSTEPS
     m "{i}~Ooh child, things are gonna get easier~{/i}"
