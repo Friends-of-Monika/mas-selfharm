@@ -75,8 +75,9 @@ label monika_playlist:
     m "There are people who can help you, and some even went through what you feel right now."
     m "There's a lot of support groups for people who are struggling just like you."
     m "And, of course, there's me!"
-    m "You'
-    m "And never forget... I love you, [Player].
+    m "Whenever you need, I'll carry you home."
+    m "Your battle scars make me proud of what you already outlived!"
+    m "And never forget... I love you, [Player]."
     
 # CLAY - GRACE VANDERWALL
     m "{i}~Your silly words~{/i}"
@@ -88,11 +89,13 @@ label monika_playlist:
     m "{i}~Watch them just go right through me~{/i}"
     m "{i}~Because they mean nothing to me~{/i}"
     m "{i}~I'm not clay~{/i}"
-    Monika: It's important to not let others get to you, you know?
-Listening to someone's opinion about you can help, but only if you know the person has good intentions.
-Don't feel down when others act mean towards you, dear.
-It only shows what kind of person they are, not you.
-And for me, you're the best in the world.
+    m "..."
+    m "It's important to not let others get to you, you know?"
+    m "Listening to someone's opinion about you can help, but only if you know the person has good intentions."
+    m "Don't feel down when others act mean towards you, dear."
+    m "It only shows what kind of person they are, not who you are."
+    m "And for me, you're the best in the world."
+    m "I love you~"
     
 #FIX YOU - COLDPLAY
     m "{i}~But if you never try, you'll never know~{/i}"
@@ -100,9 +103,12 @@ And for me, you're the best in the world.
     m "{i}~Lights will guide you home~{/i}"
     m "{i}~And ignite your bones~{/i}"
     m "{i}~And I will try to fix you~{/i}"
-    Monika: Even if you feel like giving up, remember this verse: '' lights will quide you home ''...
-Sooner or later, the good days will come back.
-I hope I will be able to help you with feeling happy, (Player).
+    m "..."
+    m "Even if you feel like giving up, remember this verse: "Lights will guide you home"..."
+    m "Sooner or later, the good days will come back."
+    m "I hope I can be able to help you have brighter days, [Player]."
+    m "Because I will surely try to fix you..."
+    m "I love you more than anything in the world."
     
 #I HATE TO SEE YOUR HEARTBREAK - PARAMORE
     m "{i}~And I, I hate to see your heart break~{/i}"
@@ -112,9 +118,12 @@ I hope I will be able to help you with feeling happy, (Player).
     m "{i}~For all the joy that is to come~{/i}"
     m "{i}~For all the things that you're alive to feel~{/i}"
     m "{i}~Just let the pain remind you hearts can heal~{/i}"
-    Monika: I think this song really fits how I feel about us.
-It's really saddening to know the person you love the most have to go through tough situations on daily basis...
-I love you, (Player). Please remember that.
+    m "I think this song really fits how I feel about us."
+    m "It's really saddening to see the person you love the most having to go through tough situations on daily basis..."
+    m "But don't worry, [mas_get_player_nickname()]."
+    m "Pain can remind you that you're alive. And that's a good thing!"
+    m "Because as long as you are still alive... You can heal."
+    m "I love you, [Player]. Please remember that."
     
 #O-O-H CHILD - THE FIVE STAIRSTEPS
     m "{i}~Ooh child, things are gonna get easier~{/i}"
