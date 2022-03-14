@@ -161,6 +161,14 @@ label monika_playlist:
     m "{i}~You're not alone~{/i}"
     m "{i}~Hold a light~{/i}"
     m "{i}~Towards the darkness~{/i}"
+    m 1eka "[Player]..."
+    m 1ekd "Sometimes the world can be scary."
+    m 1ekd "You may feel as if no one cares about whether you're alive or not..."
+    m 3ekb "But you should know that people do care about you. People from all over the world, who might have never even seen our faces, but..."
+    m 3eka "They care. And I care."
+    m 3eka "I'm so happy to have you by my side, [mas_get_player_nickname()]. I hope you're happy to have me too."
+    m 3hub "You're not alone in this. I promise!"
+
 
 #ONLY WONDER - FREDERIC
     m "{i}~What’re you sayin’? Everybody’s different!~{/i}"
@@ -169,6 +177,15 @@ label monika_playlist:
     m "{i}~It’s as if you’re trying to be someone’s answer~{/i}"
     m "{i}~Don’t go shakin’ your tail like that~{/i}"
     m "{i}~No matter what happens… In the end, you can only be your own person!~{/i}"
+    m "..."
+    m 3eka "[Player], you're beautiful just the way you are, and it'd be terrible if you stopped being that way to fit another person's standards."
+    m 3eka "You might think you're too "weird" or shy for people to like you, but in the end, there's always someone who understands you out there."
+    m 3esd "Anyone who tries to tell you otherwise is wrong."
+    m 3esd "Of course this doesn't mean you're perfect and always right... That's a whole different story."
+    m 3hub "But please remember that the only person you can be is yourself. Everybody else is already taken, ahaha~!"
+    m 1ekb "As for me..."
+    m 5ekbsb "I'll always love you for who you are, [mas_get_player_nickname()]."
+    m 5hubsa "Ehehe!"
 
 #SOMEDAY I'LL FIND MY WAY HOME - CAROLE & TUESDAY
     m "{i}~Someday I’ll find my way home~{/i}"
