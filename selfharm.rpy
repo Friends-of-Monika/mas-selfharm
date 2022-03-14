@@ -31,13 +31,13 @@ label technique_religion:
     $ technique1 = True
     if $ persistent._mas_pm_religious == True:
         m 5eka "I remember you mentioned being religious before..."
-        m 3ett "Maybe you could say a little prayer?"
+        m 3etd "Maybe you could say a little prayer?"
         m 4eud "It can be silent, you don't need to say anything out loud."
         m 1fua "You can pray about anything you want, or even just think of how vast and amazing your universe is."
         m 1dsu "Try to think about the good things, like animals or laughter, your favorite things..."
-        m "No matter how little they may be, take some time to think about the bigger picture."
-        m "If you believe in gods or deities, you can imagine them out there, looking out and caring for you."
-        m "You are needed, [player]. You are part of something much bigger than your bad thoughts or bad feelings!"
+        m 1esa "No matter how little they may be, take some time to think about the bigger picture."
+        m 3eka "If you believe in gods or deities, you can imagine them out there, looking out and caring for you."
+        m 1ekb "You are needed, [player]. You are part of something much bigger than your bad thoughts or bad feelings!"
     else:
         jump technique_cozy
 
@@ -48,17 +48,17 @@ label technique_religion:
 
 label technique_cozy:
     $ technique2 = True
-    m "You know what often helps me calm down?"
-    m "Staying cozy!"
-    m "Try wrapping up in something suuuper cozy!"
-    m "A sheet, a blanket or a favorite jumper for example."
-    m "Anything works, really."
-    m "You can also cocoon yourself in blankets on the floor..."
-    m "And roll around!"
-    m "Making a comfort corner using pillows is also a good idea."
-    m "Snuggle against them and relax..."
-    m "As long as you get that calming sensation!"
-    m "There's nothing like it!"
+    m 1eub "You know what often helps me calm down?"
+    m 4hub "Staying cozy!"
+    m 4eua "Try wrapping up in something suuuper cozy!"
+    m 3eua "A sheet, a blanket or a favorite jumper for example."
+    m 1eub "Anything works, really."
+    m 3eud "You can also cocoon yourself in blankets on the floor..."
+    m 2hub "And roll around!"
+    m 1euu "Making a comfort corner using pillows is also a good idea."
+    m 3dub "Snuggle against them and relax..."
+    m 3eub "As long as you get that calming sensation!"
+    m 1hua "There's nothing like it!"
 
     return
 
