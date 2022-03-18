@@ -1,7 +1,7 @@
 default persistent._msh_mod_pm_sober_streak = None
 default persistent._msh_mod_pm_sober_personal_best = None
 
-init -1000 python:
+init 4 python:
 
     ### ASSERTIONS ###
 
@@ -177,7 +177,7 @@ init -1000 python:
     def _mshMod_updateMilestoneEvents():
         if mshMod_isOnStreak():
             for milestone in mshMod_getPastMilestones():
-                ev = _mshMod_getMilestoneEvent(milestone)
+                ev, _ = _mshMod_getMilestoneEvent(milestone)
 
                 # Past events must have start and end date in order
                 # to display on calendar.
@@ -202,7 +202,6 @@ init -1000 python:
                 if not mas_seenLabels([ev.eventlabel]):
                     ev.random, ev.unlocked = True, False
                     ev.unlock_date, ev.last_seen = None, None
-
         else:
             for label, data in _mshMod_milestoneEvents[0].items():
                 ev = data[0]
@@ -216,9 +215,10 @@ init -1000 python:
 
         if persistent._msh_mod_pm_sober_personal_best is not None:
             since, days = persistent._msh_mod_pm_sober_personal_best
-            ev = _mshMod_personalBestEvent
 
+            ev = _mshMod_personalBestEvent
             store.mas_calendar.removeEvent(ev)
+
             ev.start_date, ev.end_date = _mshMod_getPersonalBestDateTuple()
             store.mas_calendar.addEvent(ev)
         else:
@@ -228,11 +228,11 @@ init -1000 python:
     ### UTILITIES ###
 
     def _mshMod_seeLabel(label):
-        persistent._ever_seen[label] = True
+        persistent._seen_ever[label] = True
 
     def _mshMod_unseeLabel(label):
         if label in persistent._ever_seen:
-            del persistent._ever_seen[label]
+            del persistent._seen_ever[label]
 
 
 init 10 python:
@@ -255,7 +255,7 @@ init 10 python:
         ev = mas_getEV(data[0].eventlabel)
         _mshMod_unlockAllEventProps(ev)
 
-        # Also keep a reference to event object saved in events list.
+        # Keep a reference to event object saved in events list.
         data_pair = (ev, data[1])
         by_label[ev.eventlabel] = data_pair
         by_code[code] = data_pair
@@ -273,25 +273,21 @@ init 11 python:
     _mshMod_updateMilestoneEvents()
 
 
-init 7 python in mas_delact:
+init 7 python:
+    import time
 
-    _mshMod_dailyMilestoneUpdateActionId = "mshMod_milestoneUpdateDelayedAction"
+    def _mshMod_dailyUpdaterThread():
+        last_checked_day = datetime.date.today().day
 
-    def _mshMod_dailyMilestoneUpdateAction(ev=None):
-        _mshMod_updateMilestoneEvents()
+        while True:
+            time.sleep(5)
 
-    def _mshMod_dailyMilestoneUpdateActionInit():
-        return store.MASDelayedAction.makeWithLabel(
-            _mshMod_dailyMilestoneUpdateActionId,
-            "True",
-            "None",
-            _mshMod_dailyMilestoneUpdateAction,
-            store.MAS_FC_IDLE_DAY
-        )
+            day = datetime.date.today().day
+            if last_checked_day != day:
+                _mshMod_rebuildMilestoneDates()
+                _mshMod_updateMilestoneEvents()
 
-
-    MAP[_mshMod_dailyMilestoneUpdateActionId] = _mshMod_dailyMilestoneUpdateActionInit
-    store.mas_addDelayedAction(_mshMod_dailyMilestoneUpdateActionId)
+    renpy.invoke_in_thread(_mshMod_dailyUpdaterThread)
 
 
 init 5 python:
