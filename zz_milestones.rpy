@@ -147,7 +147,8 @@ init 4 python:
         initial date.
 
         NOTE:
-            An internal function. Should not be used by other submods.
+            An internal function. Should not be used by other submods. Also
+            asserts player is on sober streak.
 
         IN:
             weeks - integer amount of weeks for the milestone.
@@ -155,12 +156,16 @@ init 4 python:
 
         OUT:
             datetime.date of the requested amount weeks milestone.
+
+        RAISES:
+            ValueError if weeks is less than zero.
         """
 
-        # TODO: validate weeks
+        if weeks < 0:
+            raise ValueError("weeks cannot be less than 0")
 
         if since is None:
-            # TODO: assert
+            _mshMod_assertOnStreak()
             since = persistent._msh_mod_pm_sober_streak
 
         return _mshMod_getEndDateTuple(since + datetime.timedelta(days=weeks * 7))
@@ -172,20 +177,25 @@ init 4 python:
         initial date.
 
         NOTE:
-            An internal function. Should not be used by other submods.
+            An internal function. Should not be used by other submods. Also
+            asserts player is on sober streak.
 
         IN:
-            weeks - integer amount of months for the milestone.
+            years - integer amount of months for the milestone.
             since - datetime.date instance to start counting from.
 
         OUT:
             datetime.date of the requested amount months milestone.
+
+        RAISES:
+            ValueError if months is less than zero.
         """
 
-        # TODO: validate months
+        if months < 0:
+            raise ValueError("months cannot be less than 0")
 
         if since is None:
-            # TODO: assert
+            _mshMod_assertOnStreak()
             since = persistent._msh_mod_pm_sober_streak
 
         new_y, new_m = since.year, since.month + months
@@ -206,20 +216,25 @@ init 4 python:
         initial date.
 
         NOTE:
-            An internal function. Should not be used by other submods.
+            An internal function. Should not be used by other submods. Also
+            asserts player is on sober streak.
 
         IN:
-            weeks - integer amount of months for the milestone.
+            years - integer amount of months for the milestone.
             since - datetime.date instance to start counting from.
 
         OUT:
             datetime.date of the requested amount months milestone.
+
+        RAISES:
+            ValueError if years is less than zero.
         """
 
-        # TODO: validate months
+        if years < 0:
+            raise ValueError("years cannot be less than 0")
 
         if since is None:
-            # TODO: assert
+            _mshMod_assertOnStreak()
             since = persistent._msh_mod_pm_sober_streak
 
         return _mshMod_getEndDateTuple(since.replace(year=since.year+years))
@@ -317,10 +332,6 @@ init 4 python:
 
         return _mshMod_getMilestoneDateTuple(code)[0]
 
-    def _get_milestone_date_end(code):
-        # TODO: unused
-        return _mshMod_getMilestoneDateTuple(code)[1]
-
     def mshMod_isMilestoneToday(code):
         """
         Checks if the provided milestone is today.
@@ -407,8 +418,7 @@ init 4 python:
         by_label[event.eventlabel] = data
         by_code[milestone] = data
 
-        # TODO: default store?.. we're not in store :/
-        store.addEvent(event)
+        addEvent(event)
 
     def _mshMod_getMilestoneEvent(code):
         """
@@ -522,7 +532,7 @@ init 4 python:
             del persistent._seen_ever[label]
 
 
-init 10 python:
+init 6 python:
 
     ### MILESTONE EVENT PROPERTIES UNLOCK ###
 
@@ -563,7 +573,7 @@ init 10 python:
     _mshMod_unlockAllEventProps(_mshMod_personalBestEvent)
 
 
-init 11 python:
+init 7 python:
 
     ### INITIAL APPLICATION OF MILESTONE EVENTS ###
 
@@ -571,7 +581,8 @@ init 11 python:
     _mshMod_updateMilestoneEvents()
 
 
-init 7 python:
+    ### DAILY MILESTONES REBUILD/UPDATE ###
+
     import time
 
     def _mshMod_dailyUpdaterThread():
