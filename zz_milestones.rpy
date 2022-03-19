@@ -279,6 +279,10 @@ init 7 python:
     import time
 
     def _mshMod_dailyUpdaterThread():
+        # HACK: Unless we find a better way to run the checker task
+        # in the background, we could stick to *not so cheap* threads.
+        # Ideally it would fit into MASDelayedActions, but alas...
+
         last_checked_day = datetime.date.today().day
 
         while True:
@@ -307,6 +311,6 @@ init 5 python:
 
 
 label mshMod_milestone_personal_best:
-    # This exists just for sake of proper rendering of the personal best
+    # This exists just for sake of rendering of the personal best
     # event on the calendar. Do not touch this!
     return
