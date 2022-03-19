@@ -6,14 +6,46 @@ init 4 python:
     ### ASSERTIONS ###
 
     def _mshMod_assertOnStreak():
+        """
+        Assetion function for checking if player is currently on sober streak.
+
+        NOTE:
+            An internal function. Should not be used by other submods.
+
+        THROWS:
+            AssertionError if player is on sober streak.
+        """
+
         if not mshMod_isOnStreak():
             raise AssertionError("expected player to be on streak")
 
     def _mshMod_assertNotOnStreak():
+        """
+        Assetion function for checking if player is currently not on sober
+        streak.
+
+        NOTE:
+            An internal function. Should not be used by other submods.
+
+        THROWS:
+            AssertionError if player is not on sober streak.
+        """
+
         if mshMod_isOnStreak():
             raise AssertionError("expected player not to be on streak")
 
     def _mshMod_assertHasPersonalBest():
+        """
+        Assetion function for checking if player has personal best in sober
+        streak.
+
+        NOTE:
+            An internal function. Should not be used by other submods.
+
+        THROWS:
+            AssertionError if player is has no personal best set.
+        """
+
         if not mshMod_hasPersonalBest():
             raise AssertionError("personal best is not set")
 
@@ -21,15 +53,34 @@ init 4 python:
     ### STREAK OPERATIONS ###
 
     def mshMod_isOnStreak():
+        """
+        Checks if player is currently on sober streak.
+
+        OUT:
+            Boolean True if player is on sober streak, False otherwise.
+        """
+
         return persistent._msh_mod_pm_sober_streak is not None
 
     def mshMod_beginStreak():
+        """
+        Begins streak if player is not on it already.
+
+        NOTE: This function asserts player is not on sober streak.
+        """
+
         _mshMod_assertNotOnStreak()
 
         persistent._msh_mod_pm_sober_streak = datetime.date.today()
         _mshMod_rebuildMilestoneDates()
 
     def mshMod_endStreak():
+        """
+        Ends streak if player is on it.
+
+        NOTE: This function asserts player is on sober streak.
+        """
+
         _mshMod_assertOnStreak()
 
         # Update personal best if current streak is longer than the previous.
@@ -47,9 +98,24 @@ init 4 python:
         _mshMod_updateMilestoneEvents()
 
     def mshMod_hasPersonalBest():
+        """
+        Checks if player has personal best in sober streak.
+
+        OUT:
+            Boolean True if player has personal best set, False otherwise.
+        """
+
         return persistent._msh_mod_pm_sober_personal_best is not None
 
     def mshMod_resetPersonalBest():
+        """
+        Resets player's personal best in sober streak.
+
+        NOTE: This function asserts player has personal best.
+        """
+
+        _mshMod_assertHasPersonalBest()
+
         persistent._msh_mod_pm_sober_personal_best = None
         _mshMod_updateMilestoneEvents()
 
@@ -57,16 +123,69 @@ init 4 python:
     ### MILESTONE DATE DEFINITION ###
 
     def _mshMod_getEndDateTuple(date):
+        """
+        Produces (datetime.date, datetime.date) tuple of the provided date
+        and the date one day ahead of it.
+
+        NOTE:
+            An internal function. Should not be used by other submods.
+
+        IN:
+            date - datetime.date instance to produce end date tuple for.
+
+        OUT:
+            Tuple (datetime.date, datetime.date) with the provided date
+            and the end date for it.
+        """
+
         return (date, date + datetime.timedelta(days=1))
 
     def _mshMod_getWeeklyMilestone(weeks, since=None):
+        """
+        Produces properly computed weekly milestone for the given amount of
+        weeks since the provided date or (by default) player's sober streak
+        initial date.
+
+        NOTE:
+            An internal function. Should not be used by other submods.
+
+        IN:
+            weeks - integer amount of weeks for the milestone.
+            since - datetime.date instance to start counting from.
+
+        OUT:
+            datetime.date of the requested amount weeks milestone.
+        """
+
+        # TODO: validate weeks
+
         if since is None:
+            # TODO: assert
             since = persistent._msh_mod_pm_sober_streak
 
         return _mshMod_getEndDateTuple(since + datetime.timedelta(days=weeks * 7))
 
     def _mshMod_getMonthlyMilestone(months, since=None):
+        """
+        Produces properly computed monthly milestone for the given amount of
+        months since the provided date or (by default) player's sober streak
+        initial date.
+
+        NOTE:
+            An internal function. Should not be used by other submods.
+
+        IN:
+            weeks - integer amount of months for the milestone.
+            since - datetime.date instance to start counting from.
+
+        OUT:
+            datetime.date of the requested amount months milestone.
+        """
+
+        # TODO: validate months
+
         if since is None:
+            # TODO: assert
             since = persistent._msh_mod_pm_sober_streak
 
         new_y, new_m = since.year, since.month + months
@@ -81,13 +200,40 @@ init 4 python:
         return _mshMod_getEndDateTuple(since.replace(year=new_y, month=new_m, day=new_d))
 
     def _mshMod_getYearlyMilestone(years, since=None):
+        """
+        Produces properly computed yearly milestone for the given amount of
+        years since the provided date or (by default) player's sober streak
+        initial date.
+
+        NOTE:
+            An internal function. Should not be used by other submods.
+
+        IN:
+            weeks - integer amount of months for the milestone.
+            since - datetime.date instance to start counting from.
+
+        OUT:
+            datetime.date of the requested amount months milestone.
+        """
+
+        # TODO: validate months
+
         if since is None:
+            # TODO: assert
             since = persistent._msh_mod_pm_sober_streak
 
         return _mshMod_getEndDateTuple(since.replace(year=since.year+years))
 
     _mshMod_milestoneDates = dict()
     def _mshMod_rebuildMilestoneDates():
+        """
+        Rebuilds _mshMod_milestoneDates dictionary based on current
+        sober streak initial date (if on streak) or empties it.
+
+        NOTE:
+            An internal function. Should not be used by other submods.
+        """
+
         if not mshMod_isOnStreak():
             if _mshMod_milestoneDates:
                 _mshMod_milestoneDates.clear()
@@ -112,6 +258,19 @@ init 4 python:
             )
 
     def _mshMod_getPersonalBestDateTuple():
+        """
+        Produces a convenient (datetime.date, datetime.date) tuple for use
+        in attribute modification of personal best Event.
+
+        NOTE:
+            An internal function. Should not be used by other submods. Also
+            asserts that player has personal best set.
+
+        OUT:
+            Tuple (datetime.date, datetime.date) where first item is Event
+            start date, and the second item is Event end date.
+        """
+
         _mshMod_assertHasPersonalBest()
 
         since, days = persistent._msh_mod_pm_sober_personal_best
@@ -119,30 +278,99 @@ init 4 python:
         return start, start + datetime.timedelta(days=1)
 
     def _mshMod_getMilestoneDateTuple(code):
+        """
+        Produces a convenient (datetime.date, datetime.date) tuple for use
+        in attribute modification of milestone Event.
+
+        NOTE:
+            An internal function. Should not be used by other submods.
+
+        IN:
+            code - Milestone code (1w, 2w, 3w, etc) to get date tuple for.
+
+        OUT:
+            Tuple (datetime.date, datetime.date) where first item is Event
+            start date, and the second item is Event end date.
+
+        RAISES:
+            KeyError if the requested milestone does not exist.
+        """
+
         date = _mshMod_milestoneDates.get(code)
         if date is not None:
             return _mshMod_milestoneDates[code]
         raise KeyError("unknown milestone code " + code)
 
     def mshMod_getMilestoneDate(code):
+        """
+        Produces a milestone date as datetime.date instance.
+
+        IN:
+            code - Milestone code (1w, 2w, 3w, etc) to get date for.
+
+        OUT:
+            datetime.date instance representing milestone date.
+
+        RAISES:
+            KeyError if the requested milestone does not exist.
+        """
+
         return _mshMod_getMilestoneDateTuple(code)[0]
 
     def _get_milestone_date_end(code):
+        # TODO: unused
         return _mshMod_getMilestoneDateTuple(code)[1]
 
     def mshMod_isMilestoneToday(code):
+        """
+        Checks if the provided milestone is today.
+
+        IN:
+            code - Milestone code (1w, 2w, 3w, etc) to check milestone of.
+
+        OUT:
+            Boolean True if the requested milestone is today, False otherwise.
+        """
+
         return mshMod_getMilestoneDate(code) == datetime.date.today()
 
     def mshMod_isMilestonePast(code):
+        """
+        Checks if the provided milestone is in past.
+
+        IN:
+            code - Milestone code (1w, 2w, 3w, etc) to check milestone of.
+
+        OUT:
+            Boolean True if the requested milestone is in past, False otherwise.
+        """
+
         return mshMod_getMilestoneDate(code) < datetime.date.today()
 
     def mshMod_getTodayMilestone():
+        """
+        Finds and returns (if found) milestone that is today.
+
+        OUT:
+            Today's milestone code as string or None if not found.
+        """
+
         for code in _mshMod_milestoneDates.keys():
             if mshMod_isMilestoneToday(code):
                 return code
         return None
 
     def mshMod_getPastMilestones():
+        """
+        Finds milestones that are in past.
+
+        NOTE:
+            Today's milestone is not included.
+
+        OUT:
+            List of past milestone codes as strings.
+        """
+
         milestones = list()
 
         for code in _mshMod_milestoneDates.keys():
@@ -163,20 +391,57 @@ init 4 python:
 
     _mshMod_milestoneEvents = (dict(), dict())
     def mshMod_addMilestoneEvent(event, milestone):
+        """
+        Calls addEvent and binds milestone code to the event.
+
+        NOTE:
+            This function should be invoked in init 5.
+
+        IN:
+            event - Event object to call addEvent on.
+            code - Milestone code (1w, 2w, 3w, etc) to bind milestone of.
+        """
+
         by_label, by_code = _mshMod_milestoneEvents
         data = (event, milestone)
         by_label[event.eventlabel] = data
         by_code[milestone] = data
 
+        # TODO: default store?.. we're not in store :/
         store.addEvent(event)
 
     def _mshMod_getMilestoneEvent(code):
+        """
+        Returns milestone's bound Event object.
+
+        NOTE:
+            An internal function. Should not be used by other submods.
+
+        IN:
+            code - Milestone code (1w, 2w, 3w, etc) to get event of.
+
+        OUT:
+            Event object bound to the milestone wit the provided code.
+
+        RAISES:
+            KeyError if there is no such milestone code.
+        """
+
         ev = _mshMod_milestoneEvents[1].get(code)
         if ev is not None:
             return ev
         raise KeyError("unknown milestone " + code)
 
     def _mshMod_updateMilestoneEvents():
+        """
+        Updates milestone/personal best Event operations in order to
+        render/hide them on calendar depending on current streak length,
+        streak status and personal best status.
+
+        NOTE:
+            An internal function. Should not be used by other submods.
+        """
+
         if mshMod_isOnStreak():
             for milestone in mshMod_getPastMilestones():
                 ev, _ = _mshMod_getMilestoneEvent(milestone)
@@ -230,9 +495,29 @@ init 4 python:
     ### UTILITIES ###
 
     def _mshMod_seeLabel(label):
+        """
+        Marks the provided label as seen for Ren'Py and MAS.
+
+        NOTE:
+            An internal function. Should not be used by other submods.
+
+        IN:
+            label - Ren'Py label to mark seen.
+        """
+
         persistent._seen_ever[label] = True
 
     def _mshMod_unseeLabel(label):
+        """
+        Marks the provided label as unseen for Ren'Py and MAS.
+
+        NOTE:
+            An internal function. Should not be used by other submods.
+
+        IN:
+            label - Ren'Py label to mark unseen.
+        """
+
         if label in persistent._ever_seen:
             del persistent._seen_ever[label]
 
@@ -248,6 +533,17 @@ init 10 python:
     )
 
     def _mshMod_unlockAllEventProps(ev):
+        """
+        Forcibly unlock all attributes of Event. Required for modification
+        of start_date/end_date and almost every other attribute.
+
+        NOTE:
+            An internal function. Should not be used by other submods.
+
+        IN:
+            ev - Event label to unlock attributes of.
+        """
+
         for prop in _mshMod_lockedProps:
             Event.unlockInit(prop, ev=ev)
 
