@@ -13,6 +13,10 @@ init 4 python:
         if mshMod_isOnStreak():
             raise AssertionError("expected player not to be on streak")
 
+    def _mshMod_assertHasPersonalBest():
+        if not mshMod_hasPersonalBest():
+            raise AssertionError("personal best is not set")
+
 
     ### STREAK OPERATIONS ###
 
@@ -108,9 +112,7 @@ init 4 python:
             )
 
     def _mshMod_getPersonalBestDateTuple():
-        # TODO: move to assertions
-        if persistent._msh_mod_pm_sober_personal_best is None:
-            raise AssertionError("personal best is not set")
+        _mshMod_assertHasPersonalBest()
 
         since, days = persistent._msh_mod_pm_sober_personal_best
         start = since + datetime.timedelta(days=days)
