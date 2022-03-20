@@ -61,7 +61,7 @@ init 4 python:
         """
         Checks if player is currently on sober streak.
 
-        OUT:
+        RETURNS:
             Boolean True if player is on sober streak, False otherwise.
         """
 
@@ -106,7 +106,7 @@ init 4 python:
         """
         Checks if player has personal best in sober streak.
 
-        OUT:
+        RETURNS:
             Boolean True if player has personal best set, False otherwise.
         """
 
@@ -138,7 +138,7 @@ init 4 python:
         IN:
             date - datetime.date instance to produce end date tuple for.
 
-        OUT:
+        RETURNS:
             Tuple (datetime.date, datetime.date) with the provided date
             and the end date for it.
         """
@@ -159,7 +159,7 @@ init 4 python:
             weeks - integer amount of weeks for the milestone.
             since - datetime.date instance to start counting from.
 
-        OUT:
+        RETURNS:
             datetime.date of the requested amount weeks milestone.
 
         RAISES:
@@ -189,7 +189,7 @@ init 4 python:
             years - integer amount of months for the milestone.
             since - datetime.date instance to start counting from.
 
-        OUT:
+        RETURNS:
             datetime.date of the requested amount months milestone.
 
         RAISES:
@@ -228,7 +228,7 @@ init 4 python:
             years - integer amount of months for the milestone.
             since - datetime.date instance to start counting from.
 
-        OUT:
+        RETURNS:
             datetime.date of the requested amount months milestone.
 
         RAISES:
@@ -286,7 +286,7 @@ init 4 python:
             An internal function. Should not be used by other submods. Also
             asserts that player has personal best set.
 
-        OUT:
+        RETURNS:
             Tuple (datetime.date, datetime.date) where first item is Event
             start date, and the second item is Event end date.
         """
@@ -308,7 +308,7 @@ init 4 python:
         IN:
             code - Milestone code (1w, 2w, 3w, etc) to get date tuple for.
 
-        OUT:
+        RETURNS:
             Tuple (datetime.date, datetime.date) where first item is Event
             start date, and the second item is Event end date.
 
@@ -328,7 +328,7 @@ init 4 python:
         IN:
             code - Milestone code (1w, 2w, 3w, etc) to get date for.
 
-        OUT:
+        RETURNS:
             datetime.date instance representing milestone date.
 
         RAISES:
@@ -344,7 +344,7 @@ init 4 python:
         IN:
             code - Milestone code (1w, 2w, 3w, etc) to check milestone of.
 
-        OUT:
+        RETURNS:
             Boolean True if the requested milestone is today, False otherwise.
         """
 
@@ -357,7 +357,7 @@ init 4 python:
         IN:
             code - Milestone code (1w, 2w, 3w, etc) to check milestone of.
 
-        OUT:
+        RETURNS:
             Boolean True if the requested milestone is in past, False otherwise.
         """
 
@@ -367,7 +367,7 @@ init 4 python:
         """
         Finds and returns (if found) milestone that is today.
 
-        OUT:
+        RETURNS:
             Today's milestone code as string or None if not found.
         """
 
@@ -383,7 +383,7 @@ init 4 python:
         NOTE:
             Today's milestone is not included.
 
-        OUT:
+        RETURNS:
             List of past milestone codes as strings.
         """
 
@@ -435,7 +435,7 @@ init 4 python:
         IN:
             code - Milestone code (1w, 2w, 3w, etc) to get event of.
 
-        OUT:
+        RETURNS:
             Event object bound to the milestone wit the provided code.
 
         RAISES:
