@@ -5,6 +5,7 @@ default persistent._msh_mod_pm_sober_streak = None
 # the second item is amount of days streak lasted for.
 default persistent._msh_mod_pm_sober_personal_best = None
 
+
 init 4 python:
 
     ### ASSERTIONS ###
