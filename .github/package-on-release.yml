@@ -1,0 +1,22 @@
+name: Create release draft on push to main
+
+on: push
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Store submod version in an environment variable
+        run: echo "VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - name: Create package
+        run: .scripts/create-package.sh
+      - name: Create new release draft
+        uses: softprops/action-gh-releases@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          draft: true
+          files: |
+            msh-mod-$VERSION.zip
