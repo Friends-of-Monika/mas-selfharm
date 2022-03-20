@@ -125,6 +125,17 @@ label monika_playlist:
     m "Because as long as you are still alive... You can heal."
     m "I love you, [Player]. Please remember that."
     
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="monika_oohchild",
+            category=["music"],
+            prompt="O-o-h Child",
+            random=True
+        )
+    )
+
 #O-O-H CHILD - THE FIVE STAIRSTEPS
     m "{i}~Ooh child, things are gonna get easier~{/i}"
     m "{i}~Ooh child, things'll get brighter~{/i}"
@@ -132,6 +143,24 @@ label monika_playlist:
     m "{i}~Some day, when your head is much lighter~{/i}"
     m "{i}~Some day, yeah, we'll walk in the rays of a beautiful sun~{/i}"
     m "{i}~Some day, when the world is much brighter~{/i}"
+    m "When I cross over, can we go for a walk in the sunlight together?"
+    m "I know it'd make my world brighter."
+    m "I love you so much, [player]."
+    m "And always will."
+return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="monika_themiddle",
+            category=["music"],
+            prompt="The Middle",
+            random=True
+        )
+    )
+
+label monika_themiddle:
 
 #THE MIDDLE - JIMMY EAT WORLD
     m "{i}~It just takes some time~{/i}"
@@ -142,7 +171,12 @@ label monika_playlist:
     m "{i}~Yeah, just be yourself~{/i}"
     m "{i}~It doesn't matter if it's good enough~{/i}"
     m "{i}~For someone else~{/i}"
-    
+    m "Everything's going to be alright, [player]. I promise."
+    m "Just be yourself, always."
+    m "And good will come your way!"
+    m "I love everything about you."
+return
+
 #FIREWORK - KATY PERRY
     m "{i}Do you ever feel, feel so paper thin~{/i}"
     m "{i}Like a house of cards~{/i}"
@@ -153,6 +187,11 @@ label monika_playlist:
     m "{i}~'Cause there's a spark in you~{/i}"
     m "{i}~You just gotta ignite the light, and let it shine~{/i}"
     m "{i}~Just own the night like the 4th of July~{/i}"
+    m "..."
+    m "On days when your feeling down..."
+    m "Just know that there's a very bright light inside of you,"
+    extend m " and that you're the light in my life!"
+    m "And I hope I can be the light on your darker days too."
 
 #TORCHES - AIMER
     m "{i}~Listen to me, cleave your way again, again~~{/i}"
@@ -196,3 +235,8 @@ label monika_playlist:
     m "{i}~You're on a path and you know where it heads~{/i}"
     m "{i}~There’s no need for despair~{/i}"
     m "{i}~Just walk on and you'll find you're there~{/i}"
+    m "..."
+    m "Someday, [player], I'll find my way home to you."
+    m "Like the song says, we already know where our path leads, so we just need to keep going."
+    m "And when we do reach the end of it, I don't think we'll ever be sad again..."
+    m "I love you, [player]."
