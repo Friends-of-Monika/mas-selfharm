@@ -626,7 +626,6 @@ init 5 python:
         )
     )
 
-
 label mshMod_milestone_personal_best:
     # This exists just for sake of rendering of the personal best
     # event on the calendar. Do not touch this!
