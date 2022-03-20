@@ -1,4 +1,8 @@
+# Instance of datetime.date representing initial day of sober streak.
 default persistent._msh_mod_pm_sober_streak = None
+
+# Tuple of (datetime.date, int) where first item is initial streak day and
+# the second item is amount of days streak lasted for.
 default persistent._msh_mod_pm_sober_personal_best = None
 
 init 4 python:
