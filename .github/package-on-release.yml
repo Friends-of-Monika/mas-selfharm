@@ -1,4 +1,4 @@
-name: Create release draft on push to main
+name: Create release draft when a new tag is created
 
 on: push
 
