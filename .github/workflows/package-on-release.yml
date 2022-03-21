@@ -25,4 +25,4 @@ jobs:
         with:
           draft: true
           files: |
-            msh-mod-$VERSION.zip
+            msh-mod-${{ env.VERSION }}.zip
