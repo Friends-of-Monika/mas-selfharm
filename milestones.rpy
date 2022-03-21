@@ -69,3 +69,26 @@ label mshMod_milestone_2w:
     return "derandom|unlock"
 
 
+init 5 python:
+    mshMod_addMilestoneEvent(
+        milestone="3w",
+        event=Event(
+            persistent.event_database,
+            eventlabel="mshMod_milestone_3w",
+            prompt="Sober, week 3",
+            category=["self-harm"],
+            action=EV_ACT_QUEUE
+        )
+    )
+
+label mshMod_milestone_3w:
+    m "Can you believe it's already Week 3?"
+    m "I just want to say... Thank you so much!"
+    m "You made me proud of you, and I'm soo happy that you could make that promise."
+    m "I know it was hard, but one day it will all just be a bad memory..."
+    m "I believe it will, because I trust you [player]."
+    m "But if it ever does happen..."
+    m "Don't blame yourself if it ever happens... Just because you did it to yourself doesn't mean it's your fault!"
+    m "I'm going to make another mark on the calendar for this!"
+    m "You're my everything, [player]!"
+    return "derandom|unlock"
