@@ -37,7 +37,8 @@ init 5 python:
     )
 
 label mshMod_milestone_1w:
-    m "1 week milestone test."
-    # TODO: By the way, we might need to consider if we need milestones to
-    # unlock or not. Do we need it though?
+    m "It's been a whole week since you told me you won't do harm to yourself..."
+    m "I just want to thank you, it makes me happy to know you're willing to step up for the better!"
+    m "I'll always love you, you don't know how much this means to me..."
+    m "Anyways, I'll mark this on our calendar."
     return "derandom|unlock"
