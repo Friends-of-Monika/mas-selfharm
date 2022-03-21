@@ -48,34 +48,31 @@ label technique_religion:
 
 label technique_cozy:
     $ technique2 = True
-    m 1eub "You know what often helps me calm down?"
-    m 4hub "Staying cozy!"
-    m 4eua "Try wrapping up in something suuuper cozy!"
-    m 3eua "A sheet, a blanket or a favorite jumper for example."
-    m 1eub "Anything works, really."
-    m 3eud "You can also cocoon yourself in blankets on the floor..."
-    m 2hub "And roll around!"
-    m 1euu "Making a comfort corner using pillows is also a good idea."
-    m 3dub "Snuggle against them and relax..."
-    m 3eub "As long as you get that calming sensation!"
-    m 1hua "There's nothing like it!"
+    m 1dua "Something that really helps me feel better is getting all cozy!"
+    m 5rud "Try huddling up in something super cozy..."
+    m 5eua "A sheet, a blanket, or one of your favorite hoodies for example."
+    m 3hsa "Anything works, really! Just grab things that bring you comfort."
+    m 2esa "You can also make a nest out of blankets on the floor, surrounding yourself with any stuffed animals you may have."
+    m 5dsblu "Making a comfort corner using pillows also sounds super comfortable..."
+    m 5fsbsa "Snuggle against them and relax, and if you're okay with being touched imagine me holding you, stroking your hair~"
+    m 3hubsb "There's nothing quite like being snug, hehe!"
 
     return
 
 
 label technique_photographs:
     $ technique3 = True
-    m "Nothing is ever really lost to us as long as we remember it."
-    m "Do you see where I'm going with this, [player]?"
-    m "One thing that could help you get over bad times is look at photographs of the good ones!"
-    m "Maybe you have some old photos? If they bring back good memories, why not trying to search for them?"
-    m "They will remind you that even though the good times don't last forever, the bad ones won't either!" 
-    m "If you have any around, look at photographs of when you were happy, enjoying life to the fullest!"
-    m "I wish we had some together..."
-    m "I'd look at us all the time!"
-    m "I would really like to look at them with you, [player]."
-    m "But that's not about me, I want you to feel better!"
-    m "And don't give up, [mas_get_player_nickname()]."
+    m 6ett "Do you find comfort in looking in the past [player]? I do!" 
+    m 2dsd "Nothing is ever really lost to us as long as we remember it, [mas_get_player_nickname()].
+    m 2hsa "One thing that could help you get over bad times, is looking at photographs of the good ones!"
+    m 7eud "Maybe you have some old photos? If they bring back good memories, why not trying to search for them?"
+    m 1eua "They could remind you that even though the good times don't last forever, the bad ones won't either!" 
+    m 1esa "If you find any, look at them and think about how that if life was once great, it can and will be that way again!"
+    m 6dkp "I wish we had some pictures together..."
+    m 2ektpd "I'd look at us all the time! You would absolutely be my phone and desktop wallpaper!"
+    m 2ektdc "I would really like to look at a photo album of us with you, [player]."
+    m 5eka "But this isn't not about me- I want you to feel better!"
+    m 3euu "Don't give up, [mas_get_player_nickname()]. I will never give up on you!"
 
     return
 
@@ -84,7 +81,7 @@ label technique_photographs:
 
 label technique_quotes:
     $ technique4 = True
-    m "I remember hearing this quote somewhere {i}'Hope is the last thing ever lost'{/i}."
+    m 3dud "I remember hearing this quote somewhere: {i}'Hope is the last thing ever lost'{/i}."
     m "Doing your best to believe in positive things can be really uplifting!"
     m "I think a good way of seeing the things around you in a better light would be seeing inspirational quotes!"
     m "You should find some quotes on the internet that you like, write each of them on a sticky note and put them somewhere you'd regularly see." 
