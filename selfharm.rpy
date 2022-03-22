@@ -1,5 +1,7 @@
 # RANDOM EVENT WHERE MONIKA ASKS IF PLAYER GOES TO A THERAPIST.
 
+default persistent._msh_mod_pm_did_selfharm = None
+
 init 5 python:
     addEvent(Event(persistent.event_database,eventlabel="monika_therapy",category=["you","life"],prompt="Going to therapy",random=True))
     
