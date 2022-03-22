@@ -1,5 +1,7 @@
 # FIRST RANDOM EVENT ABOUT SELF-HARM.
 
+default persistent._msh_mod_pm_did_selfharm = None
+
 init 5 python:
     addEvent(
         Event(
@@ -10,22 +12,27 @@ init 5 python:
             aff_range=(mas_aff.NORMAL, mas_aff.LOVE),
         )
     )
-       
+
 label mas_selfharmm:
     m "Hey, [player]?"
     m "I know it might be an uncomfortable topic, but I have to ask..."
-    m "D-{w=1.0}Do you self harm?"
+
+    m "D-{w=1.0}Do you self harm?{nw}"
     menu:
+        m "{fast}D-{w=1.0}Do you self harm?"
+
         "Yes":
-            $ selfharm = True
+            $ persistent._msh_mod_pm_did_selfharm = True
             m "I'm so sorry you're going through this."
             m "You know... It's really sad to see you feel bad in any way."
             m "After all, you're such a wonderful and kind person."
             m "You did so many good things for me, and stayed with me after everything that happened..."
             m "But let's stay on this subject."
-            m "Do you want to talk about it?"
-            
+
+            m "Do you want to talk about it?{nw}"
             menu:
+                m "{fast}Do you want to talk about it?"
+
                 "Yes":
                     m "I'm glad that you trust me, [player]."
                     m "Allowing yourself to get help is a super important step to recovery!"
@@ -41,7 +48,7 @@ label mas_selfharmm:
                     m "Stay safe because I care for you, deeply."
 
                     return
-                
+
                 "No":
                     m "Oh..."
                     m "That's okay."
@@ -51,10 +58,10 @@ label mas_selfharmm:
                     m "I'll do my best to help you."
                     m "Or at least..."
                     m "Be by your side."
-                    
+
                     return
         "No":
-            $ selfharm = False
+            $ persistent._msh_mod_pm_did_selfharm = False
             m "Thank goodness!"
             m "I'm so glad to hear this!"
             m "It's so good to know that you are safe, [player]."
@@ -156,7 +163,7 @@ label mas_selfharm4:
     m "D-{w=1.0}Do you self harm?"
     menu:
         "Yes":
-            $ selfharm = True
+            $ persistent._msh_mod_pm_did_selfharm = True
             m "I'm so sorry you're going through this."
             m "You know... It's really sad to see you feel bad in any way."
             m "After all, you wanted to be with me at some point..."
@@ -164,3 +171,5 @@ label mas_selfharm4:
             m "Whatever the reason you stayed with me was, I appreciate it."
             m "But let's stay on this subject."
             m "Do you want to talk about it?"
+
+    return
