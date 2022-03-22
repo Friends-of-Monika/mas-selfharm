@@ -8,7 +8,11 @@ on:
 
 jobs:
   compile-submod:
+<<<<<<< HEAD
     if: github.event.pull_request.merged == 'true'
+=======
+    if: github.event.pull_request.merged == 'true' || github.event_name == 'workflow_dispatch'
+>>>>>>> main
     runs-on: ubuntu-latest
 
     env:
@@ -47,6 +51,8 @@ jobs:
       - name: Create new release draft
         uses: softprops/action-gh-release@v1
         with:
+          name: Release v${{ env.VERSION }}
+          tag_name: v${{ env.VERSION }}
           draft: true
           files: |
             msh-mod-${{ env.VERSION }}.zip
