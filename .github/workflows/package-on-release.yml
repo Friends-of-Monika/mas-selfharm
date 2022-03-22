@@ -8,11 +8,7 @@ on:
 
 jobs:
   compile-submod:
-<<<<<<< HEAD
-    if: github.event.pull_request.merged == 'true'
-=======
     if: github.event.pull_request.merged == 'true' || github.event_name == 'workflow_dispatch'
->>>>>>> main
     runs-on: ubuntu-latest
 
     env:
