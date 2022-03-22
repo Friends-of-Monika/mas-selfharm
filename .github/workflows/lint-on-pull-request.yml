@@ -1,6 +1,11 @@
 name: Lint source tree on pull request on dev branch
 
-on: [pull_request, push]
+on:
+  push:
+    branches: [ dev ]
+  pull_request:
+    types: [ opened ]
+    branched: [ dev ]
 
 jobs:
   compile-submod:
