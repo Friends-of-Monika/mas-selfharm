@@ -1,13 +1,12 @@
-name: Create new release on successful merge into main
+name: Lint source tree on pull request on dev branch
 
 on:
   pull_request:
-    types: [ closed ]
-    branches: [ main ]
+    types: [ opened ]
+    branches: [ dev ]
 
 jobs:
-  release-if-merged:
-    if: github.event.pull_request.merged == true
+  compile-submod:
     runs-on: ubuntu-latest
     steps:
 
@@ -33,13 +32,3 @@ jobs:
 
       - name: Compile submod
         run: .scripts/compile-submod.sh
-
-      - name: Package submod
-        run: find "game" | zip "msh-mod-$VERSION.zip" -9 -@
-
-      - name: Create new release draft
-        uses: softprops/action-gh-release@v1
-        with:
-          draft: true
-          files: |
-            msh-mod-${{ env.VERSION }}.zip
