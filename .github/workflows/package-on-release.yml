@@ -6,8 +6,7 @@ on:
     branches: [ main ]
 
 jobs:
-  release-if-merged:
-    if: github.event.pull_request.merged == true
+  compile-submod:
     runs-on: ubuntu-latest
     steps:
 
@@ -15,6 +14,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Download DDLC/MAS package
+        env:
+          DL_CREDENTIALS: ${{ secrets.DL_CREDENTIALS }}
         run: |
           wget --user "$(printf "%s" "$DL_CREDENTIALS" | cut -f 1 -d ":")" --password "$(printf "%s" "$DL_CREDENTIALS" | cut -f 2 -d ":")" https://dl.mon.icu/stash/ddlc-mas.zip
           unzip ddlc-mas.zip -d ddlc-mas
@@ -26,7 +27,7 @@ jobs:
         run: |
           wget https://www.renpy.org/dl/6.99.12.4/renpy-6.99.12.4-sdk.tar.bz2
           tar xf renpy-6.99.12.4-sdk.tar.bz2
-          mv renpy-6.99.12.4 renpy
+          mv renpy-6.99.12.4-sdk renpy
 
       - name: Store submod version in an environment variable
         run: echo "VERSION=$(.scripts/extract-version.sh)" >> $GITHUB_ENV
