@@ -542,7 +542,7 @@ init 4 python:
             del persistent._seen_ever[label]
 
 
-init 6 python:
+init 7 python:
 
     ### MILESTONE EVENT PROPERTIES UNLOCK ###
 
