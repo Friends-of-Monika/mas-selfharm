@@ -1,5 +1,7 @@
 # RANDOM SAD/WORRIED MONIKA #1.
 
+default persistent._msh_mod_pm_did_selfharm = None
+
 init 5 python:
     addEvent(
         Event(
