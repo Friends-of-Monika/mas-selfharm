@@ -1,0 +1,51 @@
+name: Create new release on successful merge into main
+
+on:
+  pull_request:
+    types: [ closed ]
+    branches: [ main ]
+
+jobs:
+  compile-submod:
+    if: github.event.pull_request.merged == 'true'
+    runs-on: ubuntu-latest
+
+    env:
+      SDL_AUDIODRIVER: dummy
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Download DDLC/MAS package
+        env:
+          DL_CREDENTIALS: ${{ secrets.DL_CREDENTIALS }}
+        run: |
+          wget --user "$(printf "%s" "$DL_CREDENTIALS" | cut -f 1 -d ":")" --password "$(printf "%s" "$DL_CREDENTIALS" | cut -f 2 -d ":")" https://dl.mon.icu/stash/ddlc-mas.zip
+          unzip ddlc-mas.zip -d ddlc-mas
+          mv ddlc-mas/Monika\ After\ Story ddlc-mas-
+          rm -d ddlc-mas
+          mv ddlc-mas- ddlc-mas
+
+      - name: Download Ren'Py SDK
+        run: |
+          wget https://www.renpy.org/dl/6.99.12.4/renpy-6.99.12.4-sdk.tar.bz2
+          tar xf renpy-6.99.12.4-sdk.tar.bz2
+          mv renpy-6.99.12.4-sdk renpy
+
+      - name: Store submod version in an environment variable
+        run: echo "VERSION=$(.scripts/extract-version.sh)" >> $GITHUB_ENV
+
+      - name: Compile submod
+        run: .scripts/compile-submod.sh
+
+      - name: Package submod
+        run: find "game" | zip "msh-mod-$VERSION.zip" -9 -@
+
+      - name: Create new release draft
+        uses: softprops/action-gh-release@v1
+        with:
+          draft: true
+          files: |
+            msh-mod-${{ env.VERSION }}.zip
