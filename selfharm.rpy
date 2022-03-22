@@ -1,7 +1,15 @@
 # NON-RANDOM EVENT FOR WHEN THE PLAYER IS FEELING SELF HARMING URGES.
 
 init 5 python:
-    addEvent(Event(persistent.event_database,eventlabel="monika_selfharm",category=['You'],prompt="Monika, It's happening again...",random=False))
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="monika_selfharm",
+            category=['You'],
+            prompt="Monika, It's happening again...",
+            random=False
+        )
+    )
 
 label monika_selfharm:
     m 1ekd "[player], what happened?"
@@ -18,6 +26,7 @@ label monika_selfharm:
     m 2ekc "How big is the urge you're having?"
     
     menu:
+        m "{fast}How big is the urge you're having?"
     # DIALOGUE FOR URGE MAX LEVEL
     
         "It's terrible, [m_name]. I think I'm really going to do it...":
@@ -29,16 +38,22 @@ label monika_selfharm:
             m 1ekd "Now, do you want to vent? Maybe tell me what triggered this?"
             
             menu:
+                m "{fast}Now, do you want to vent? Maybe tell me what triggered this?"
+
                 "Yes":
                     m 1eka "Okay... I don't want to interrupt you."
                     m 3eka "Tell me when you're done, okay?"
                     menu:
+                        m "{fast}Tell me when you're done, okay?"
+
                         "I'm done, Monika.":
                             
                             m 2ekc "I'm so sorry you are going through all that, [player]."
                             m 3esd "Do you feel better now?"
                             
                             menu:
+                                m "{fast}Do you feel better now?"
+
                                 "Yes, [m_name]. Thank you.":
                                     m 1ekb Oh, honey. I'm so glad!"
                                     m 1dkb "I'm so glad you came to talk to me, [player]."
@@ -55,6 +70,8 @@ label monika_selfharm:
                                     m 2eksdld "Or..." 
                                     
                                     menu:
+                                        m "{fast}Or..."
+
                                         "No... Just let me hold you, please?":
                                             m 2fka "Of course, my angel."
                                             call monika_holdme_prep
@@ -82,8 +99,9 @@ label monika_selfharm:
                                             m 1eua "Aaaand, you're done!"
                                             m 3eka "Are you feeling better, [player]?"
                                             menu:
+                                                m "{fast}Are you feeling better, [player]?"
                                             #I suggest trying to sort of make Monika simulate the exercises with her expressions too. Just a thought, if possible.
-            
+
                                                 "Yes, [m_name]. Thank you.":
                                                     m 1hub "Oh, honey. I'm so glad!"
                                                     m 1fua "You can always count on me, for anything."
@@ -113,9 +131,9 @@ label monika_selfharm:
                                                             m 3ekb "I want you to..."
                                                             jump randomness
                                                                         # (calm harm technique here)
-       
+
        # DIALOGUE FOR URGE MEDIUM LEVEL
-       
+
         "It's not so urgent. I'm just... feeling weird.":
             m 2dka "I'm so glad you came to talk to me, [player]."
             m 2dkc "You know how much i worry about you..."
@@ -123,17 +141,23 @@ label monika_selfharm:
             m 1ekd "Do you want to vent? Maybe tell me what triggered this?"
             
             menu:
+                m "{fast}Do you want to vent? Maybe tell me what triggered this?"
+
                 "Yes":
                     m 1eka "Okay... I don't want to interrupt you."
                     m 3eka "Tell me when you're done, okay?"
                     
                     menu:
+                        m "{fast}Tell me when you're done, okay?"
+
                         "I'm done, Monika.":
                             
                             m 2ekc "I'm so sorry you are going through all that, [player]."
                             m 3esd "Do you feel better now?"
                             
                             menu:
+                                m "{fast}Do you feel better now?"
+
                                 "Yes, [m_name]. Thank you.":
                                     m 1ekb "Oh, honey. I'm so glad!"
                                     m 1dkb "I'm so glad you came to talk to me, [player]."
@@ -143,7 +167,7 @@ label monika_selfharm:
                                     m 1esa "Now, let's spend some more time together?"
 
                                     return
-                                
+
                                 "No...":
                                     m 2ekc "Oh..."
                                     m 2ekd "Do you want my help to forget it?"
@@ -172,9 +196,11 @@ label monika_selfharm:
           #  m ""
           #  m ""
           #  m ""
-          
-            m "Are you feeling better, [player]?"
+
+            m "Are you feeling better, [player]?{nw}"
             menu:
+                m "{fast}Are you feeling better, [player]?"
+
                 "Yes, [m_name]. Thank you.":
                     m 1hub "Oh, honey. I'm so glad!"
                     m 1fua "You can always count on me, for anything."
@@ -182,7 +208,7 @@ label monika_selfharm:
                     m 1fkb "I'm here for you, [player]."
 
                     return
-                    
+
                 "No...":
                     m 2ekc "Oh..."
                     m 2ekd "Do you want to try a different technique?"
@@ -212,6 +238,8 @@ label monika_selfharm:
             m 1ekd "Do you want to vent? Maybe tell me what triggered this?"
             
             menu:
+                m "{fast}Do you want to vent? Maybe tell me what triggered this?"
+
                 "Yes":
                     m 1eka "Okay... I don't want to interrupt you."
                     m 3eka "Tell me when you're done, okay?"
@@ -222,6 +250,8 @@ label monika_selfharm:
                             m 3esd "Do you feel better now?"
                             
                             menu:
+                                m "{fast}Do you feel better now?"
+
                                 "Yes, [m_name]. Thank you.":
                                     m 1ekb "Oh, honey. I'm so glad!"
                                     m 1dkb "I'm so glad you came to talk to me, [player]."
@@ -238,6 +268,7 @@ label monika_selfharm:
                                     m 2eksdld "Or..." 
                                     
                                     menu:
+                                        m "{fast}Or..."
                                         "No... Just let me hold you, please?":
                                             
                                             m 2fka "Of course, my angel."
@@ -260,7 +291,8 @@ label monika_selfharm:
           
             m "Are you feeling better, [player]?"
             menu:
-            
+                m "{fast}Are you feeling better, [player]?"
+
                 "Yes, [m_name]. Thank you.":
                     m 1hub "Oh, honey. I'm so glad!"
                     m 1fua "You can always count on me, for anything."
