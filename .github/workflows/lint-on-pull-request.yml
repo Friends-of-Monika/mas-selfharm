@@ -3,14 +3,16 @@ name: Lint source tree on pull request on dev branch
 on:
   push:
     branches: [ dev ]
+    paths: [ '*.rpy' ]
   pull_request:
     types: [ opened ]
-    branched: [ dev ]
+    paths: [ '*.rpy' ]
+    branches: [ dev ]
 
 jobs:
   compile-submod:
     runs-on: ubuntu-latest
-    
+
     env:
       SDL_AUDIODRIVER: dummy
 
