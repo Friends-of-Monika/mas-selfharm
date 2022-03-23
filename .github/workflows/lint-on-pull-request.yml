@@ -26,7 +26,7 @@ jobs:
           DL_CREDENTIALS: ${{ secrets.DL_CREDENTIALS }}
         run: |
           wget --user "$(printf "%s" "$DL_CREDENTIALS" | cut -f 1 -d ":")" --password "$(printf "%s" "$DL_CREDENTIALS" | cut -f 2 -d ":")" https://dl.mon.icu/stash/ddlc.zip
-          unzip ddlc.zip -d ddlc-mas
+          unzip -q ddlc.zip -d ddlc-mas
           mv ddlc-mas/DDLC-1.1.1-pc ddlc-mas-
           rm -d ddlc-mas ddlc.zip
           mv ddlc-mas- ddlc-mas

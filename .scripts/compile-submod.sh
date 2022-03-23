@@ -1,7 +1,7 @@
 #!/bin/sh
 mkdir -p "ddlc-mas/game/mshMod"
 find -not \( -path "./renpy" -prune -o -path "./ddlc-mas" -prune \) -iname "*.rpy" -exec cp --parents \{\} "ddlc-mas/game/mshMod" \;
-renpy/renpy.sh "ddlc-mas" compile | tee compile.log
+renpy/renpy.sh "ddlc-mas" compile | tee compile.log | perl -ne 'print if /^game\/mshMod\/[^\s]*\s*\w*Warning/ || !/^game\//'
 if grep -Eq "^.*Error:.*$" compile.log; then exit 1; fi
 find "ddlc-mas/game/mshMod" -type f -not -iname "*.rpyc" -delete
 mkdir -p "game/Submods"
