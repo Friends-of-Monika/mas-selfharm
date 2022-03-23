@@ -27,7 +27,7 @@ jobs:
         run: |
           wget --user "$(printf "%s" "$DL_CREDENTIALS" | cut -f 1 -d ":")" --password "$(printf "%s" "$DL_CREDENTIALS" | cut -f 2 -d ":")" https://dl.mon.icu/stash/ddlc.zip
           unzip ddlc.zip -d ddlc-mas
-          mv ddlc-mas/Monika\ After\ Story ddlc-mas-
+          mv ddlc-mas/DDLC-1.1.1-pc ddlc-mas-
           rm -d ddlc-mas ddlc.zip
           mv ddlc-mas- ddlc-mas
           curl -L "$(curl -sL https://api.github.com/repos/monika-after-story/monikamoddev/releases/latest | perl -lne 'print $1 if /"browser_download_url": "(.+?-Mod\.zip)"/')" -o mas.zip
