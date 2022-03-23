@@ -23,11 +23,14 @@ jobs:
         env:
           DL_CREDENTIALS: ${{ secrets.DL_CREDENTIALS }}
         run: |
-          wget --user "$(printf "%s" "$DL_CREDENTIALS" | cut -f 1 -d ":")" --password "$(printf "%s" "$DL_CREDENTIALS" | cut -f 2 -d ":")" https://dl.mon.icu/stash/ddlc-mas.zip
-          unzip ddlc-mas.zip -d ddlc-mas
+          wget --user "$(printf "%s" "$DL_CREDENTIALS" | cut -f 1 -d ":")" --password "$(printf "%s" "$DL_CREDENTIALS" | cut -f 2 -d ":")" https://dl.mon.icu/stash/ddlc.zip
+          unzip ddlc.zip -d ddlc-mas
           mv ddlc-mas/Monika\ After\ Story ddlc-mas-
-          rm -d ddlc-mas
+          rm -d ddlc-mas ddlc.zip
           mv ddlc-mas- ddlc-mas
+          curl -L "$(curl -sL https://api.github.com/repos/monika-after-story/monikamoddev/releases/latest | perl -lne 'print $1 if /"browser_download_url": "(.+?-Mod\.zip)"/')" -o mas.zip
+          unzip -o -q mas.zip -d ddlc-mas/game
+          rm -rf mas.zip
 
       - name: Download Ren'Py SDK
         run: |
