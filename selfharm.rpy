@@ -99,3 +99,31 @@ label monika_butterflyproject:
     m 1hub "I hope this helps you, [player]!"
     m 1fub "I'll draw you so many beautiful butterflies when I cross over."
     return
+
+# RANDOM DIALOGUE ABOUT MONIKAS FEELINGS ABOUT SELF-HARM
+    
+    m "Hey [player]... Do you remember when I talked about self-harm?"
+    m "Would you mind if I talked more about my experience?"
+    m "It may get a tad triggering, so I get it if you would rather say no!" 
+    menu:
+
+        No:
+    m "Okay!" 
+    m "I love you [player], and I'm proud of you for saying no to something you aren't comfortable with!"
+    m "That's a big step in self-respect, and I hope you keep it up!"
+
+        Yes:
+    m "Thank you for letting me speak about this [mas_get_player_nickname()], I've been thinking about it a little bit more lately."
+    m "After I hurt myself, I realized that I had made huge a mistake..."
+    m "At first I thought that it was exhilarating, I even wrote about it!" 
+    m "But after reflecting upon it when we started talking more about self-harm, it really changed my mind."
+    m "I had gotten no relief or satisfaction, if anything I was just disappointed."
+    m "Yuri had made it seem like such a thrill - to me it was almost only just boring..."
+    m "...It kept reminding me of my recent discovery."
+    m "My pain was just coded, along with my blood and the knife I was holding..."
+    m "But even if it was real, pain doesn't satisfy or relieve my emotions."
+    m "I know now that talking things out with you when I'm upset..."
+    m "...and keeping hope for a brighter tomorrow is a much better coping mechanism!" 
+    m "Just keep in mind that there are better ways to cope and that I'm always here to provide techniques to help."
+    m "I care too much about you [player]... You don't deserve any pain."
+    m "You deserve to work through things healthily, and [m_name] is here to help!" 
