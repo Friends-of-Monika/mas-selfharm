@@ -369,68 +369,57 @@ label mshMod_technique_videos:
     m "And there are many people on Youtube that create little comfort videos."
     m "I selected one of them for you to watch when you were having an urge."
     m "I will open one of them for you right now."
-    $ randomvideo = renpy.random.randint (1, 3)
-    if randomvideo == 1:
-        if video1 == False:
-            jump Moni_1
-    elif randomvideo == 2:
-        if video2 == False:
-            jump Moni_2
-    elif randomvideo == 3:
-        if video3 == False:
-            jump Moni_3
-    elif video1 == False && video2 == False && video3 == False:
+
+    python:
+        all_options = tuple(_label for _label in ('mshMod_technique_videos_{0}'.format(i) for i in range(3)))
+        unseen_options = tuple(_label for _label all_options if not mas_seenLabels((_label,)))
+
+    if not unseen_options:
         m "I've shown you all the videos I have for now!"
         m "Do you want me to let you pick a video now?"
+
         menu:
             "Yes":
                 m "Great!"
-                jump monika_openvideo
+                $ renpy.jump(all_options[random.randint(len(all_options))])
+
             "No":
                 m "That's okay, [player]."
                 m "If you ever wanna see them again, just ask!"
-                return
 
-label Moni_1:
-    $ video1 = True
+    return
+
+label mshMod_technique_videos_pre:
+    m "There we go!"
+    m "I hope it helps, [player]."
+    m "I will give you some time to watch it."
+    return
+
+label mshMod_technique_videos_post:
+    menu:
+        "I'm done, [m_name]":
+            m "Alright!"
+            m "Hope you enjoyed it!"
+
+label mshMod_technique_videos_1:
     $ webbrowser.open("https://www.youtube.com/watch?v=PppkNH3bKV4&")
-    m "There we go!"
-    m "I hope it helps, [player]."
-    m "I will give you some time to watch it."
+    call mshMod_technique_videos_pre
     pause(3.0)
-    menu:
-        "I'm done, [m_name]":
-            m "Alright!"
-            m "Hope you enjoyed it!"
-
+    call mshMod_technique_videos_post
     return
 
-label Moni_2:
-    $ video2 = True
+label mshMod_technique_videos_2:
     $ webbrowser.open("https://www.youtube.com/watch?v=-SJywvgaJEI&")
-    m "There we go!"
-    m "I hope it helps, [player]."
-    m "I will give you some time to watch it."
+    call mshMod_technique_videos_pre
     pause(3.0)
-    menu:
-        "I'm done, [m_name]":
-            m "Alright!"
-            m "Hope you enjoyed it!"
-
+    call mshMod_technique_videos_post
     return
 
-label Moni_3:
-    $ video3 = True
+label mshMod_technique_videos_3:
     $ webbrowser.open("https://www.youtube.com/watch?v=ORkx63VeP9Y&")
-    m "There we go!"
-    m "I hope it helps, [player]."
-    m "I will give you some time to watch it."
+    call mshMod_technique_videos_pre
     pause(3.0)
-    menu:
-        "I'm done, [m_name]":
-            m "Alright!"
-            m "Hope you enjoyed it!"
-
+    call mshMod_technique_videos_post
     return
 
 label mshMod_technique_stressball:
