@@ -436,7 +436,7 @@ label Moni_3:
 label mshMod_technique_stressball:
     m "Some objects can also help with the desperate feeling."
     m "Check if you have one of them at home, okay?"
-    m "Do you have a stress ball?
+    m "Do you have a stress ball?"
     m "A stress ball or hand exercise ball is a malleable toy, which is squeezed in the hand and manipulated by the fingers, ostensibly to relieve stress and muscle tension or to exercise the muscles of the hand."
     m "If you do have one, squeeze it really hard. Relive all your tension!"
     m "You can also use a sheet of bubble wrap. So satisfying!"
@@ -469,7 +469,7 @@ label mshMod_technique_stretching:
     m "This relaxes our body so much!"
     m "You can also do an upper back strech."
     m "This one is done sitting, with your feet flat on the floor."
-    m "Interlock your fingers and reach forward, bending from your middle back. Stretch with your hands forward at shoulder level.
+    m "Interlock your fingers and reach forward, bending from your middle back. Stretch with your hands forward at shoulder level."
     m "You should feel the stretch between your shoulder blades."
     m "Ooh, relaxing!"
     m "After tensing your muscles, you can let go and relax into something comfy."
