@@ -400,6 +400,7 @@ label mshMod_technique_videos_post:
         "I'm done, [m_name]":
             m "Alright!"
             m "Hope you enjoyed it!"
+    return
 
 label mshMod_technique_videos_1:
     $ webbrowser.open("https://www.youtube.com/watch?v=PppkNH3bKV4&")
