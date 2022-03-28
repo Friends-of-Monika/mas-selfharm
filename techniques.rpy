@@ -37,24 +37,7 @@ label mshMod_technique_menu:
     pushEvent(_return)
 
     return
-
-
-# init 5 python:
-#     addEvent(
-#         Event(
-#             persistent._msh_mod_technique_database,
-#             eventlabel="mshMod_technique_sample",
-#             prompt="This is a sample technique",
-#             unlocked=False
-#         )
-#     )
-#
-# label mshMod_technique_sample:
-#     m "This is a sample technique dialogue."
-#     return
-
-# NOTE: THE FOLLOWING CODE IS AUTO-GENERATED FROM selfharm.rpy
-# IT MAY BE INCOMPLETE OR HAVE FLOWS, PLEASE REVIEW
+    
 
 init 5 python:
     addEvent(
@@ -423,6 +406,17 @@ label mshMod_technique_videos_3:
     call mshMod_technique_videos_post
     return
 
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._msh_mod_technique_database,
+            eventlabel="mshMod_technique_stressball",
+            prompt="Stressball",
+            unlocked=False
+        )
+    )
+
 label mshMod_technique_stressball:
     m "Some objects can also help with the desperate feeling."
     m "Check if you have one of them at home, okay?"
@@ -438,6 +432,7 @@ label mshMod_technique_stressball:
     m "Another option is a fidget toy."
     m "Spinning them is always so fun!"
     return
+
 
 init 5 python:
     addEvent(
@@ -463,6 +458,7 @@ label mshMod_technique_stretching:
     m "After tensing your muscles, you can let go and relax into something comfy."
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -486,6 +482,7 @@ label mshMod_technique_punching:
     m "And gently letting go."
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -505,6 +502,7 @@ label mshMod_technique_shouting:
     m "Shout until you feel calmer."
     m "We can take care of your throat later! Ahahaha~!"
     return
+
 
 init 5 python:
     addEvent(
@@ -528,6 +526,7 @@ label mshMod_technique_listening:
     m "Dance to the music!"
     m "Dance or move in a way that makes you express a feeling."
     return
+
 
 init 5 python:
     addEvent(
@@ -555,6 +554,7 @@ label mshMod_technique_paper:
     m "You can even show someone your drawings and writings before ripping it to shreds."
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -575,6 +575,7 @@ label mshMod_technique_otter:
     m "Take this opportunity to open youself a little, if you can."
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -592,6 +593,7 @@ label mshMod_technique_coldwater:
     m "In... And out."
     m "Notice the coldness of the water witheach out breathe."
     return
+
 
 init 5 python:
     addEvent(
@@ -612,6 +614,7 @@ label mshMod_technique_bothering:
     m "If you can, write down any thoughts..."
     m "Get it all out of your system!"
     return
+
 
 init 5 python:
     addEvent(
@@ -634,6 +637,7 @@ label mshMod_technique_positive:
     m "I want you to realize how amazing you are, [player]."
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -652,6 +656,7 @@ label mshMod_technique_box:
     m "I believe in you, [player]."
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -668,6 +673,7 @@ label mshMod_technique_common:
     m "That will help you remmember common ground!"
     m "You can write them down too."
     return
+
 
 init 5 python:
     addEvent(
@@ -686,6 +692,7 @@ label mshMod_technique_comfort:
     m "You can also note down how everything about this exercise makes you feel."
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -701,6 +708,7 @@ label mshMod_technique_walk:
     m "Think about what you might be smelling, hearing and feeling."
     m "Can you put these feelings into words or draw them?"
     return
+
 
 init 5 python:
     addEvent(
@@ -718,6 +726,7 @@ label mshMod_technique_media:
     m "That way, you can make yourself feel better..."
     m "And spread the feeling to your friends too!"
     return
+
 
 init 5 python:
     addEvent(
@@ -739,6 +748,7 @@ label mshMod_technique_perspective:
     m "Working on using perspective helps on letting go of the intensity of the worry."
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -758,6 +768,7 @@ label mshMod_technique_productivity:
     m "Even if it's small!"
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -774,6 +785,7 @@ label mshMod_technique_interests:
     m "Think why you like them, and you can even imagine that they're real!"
     m "This can help cope with loneliness."
     return
+
 
 init 5 python:
     addEvent(
@@ -794,6 +806,7 @@ label mshMod_technique_mirror:
     m "Look inside your eyes, and know that there's nothing that compares to the beauty in them."
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -811,6 +824,7 @@ label mshMod_technique_creative:
     m "Now ask yourself... Why are they in your story?"
     m "You can create two or more characters, and give them depth!"
     return
+
 
 init 5 python:
     addEvent(
@@ -835,6 +849,7 @@ label mshMod_technique_river:
     m "Because they don't define you."
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -851,6 +866,7 @@ label mshMod_technique_feelings:
     m "Find out what triggers those emotions..."
     m "And make sure to cherish those situations!"
     return
+
 
 init 5 python:
     addEvent(
@@ -872,6 +888,7 @@ label mshMod_technique_poem:
     m "If you don't feel ready to write a poem of your own..."
     m "You can always read some from famous poets!"
     return
+
 
 init 5 python:
     addEvent(
@@ -904,6 +921,7 @@ label mshMod_technique_breathing:
     m "Aaaand, you're done!"
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -922,6 +940,7 @@ label mshMod_technique_pinterest:
     m "I promise it's very satisfying!"
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -939,6 +958,7 @@ label mshMod_technique_emerald:
     m "Quietly describe to yourself what the things look like, and what your favorite color makes you feel."
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -953,6 +973,7 @@ label mshMod_technique_patterns:
     m "What about counting patterns?"
     m "Count as many as you can in your favourite room of the house."
     return
+
 
 init 5 python:
     addEvent(
@@ -969,6 +990,7 @@ label mshMod_technique_wordplay:
     m "How many four letter words can you make up from the statement..."
     m "'You learn more from failure than from success. Don't let it stop you'?"
     return
+
 
 init 5 python:
     addEvent(
@@ -988,6 +1010,7 @@ label mshMod_technique_lyrics:
     m "If that's too complicated, you can try saying the alphabet backwards."
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -1002,6 +1025,7 @@ label mshMod_technique_animal:
     m "Let's think of one animal for every letter of the alphabet."
     m "Or a song or artist for every letter of the alphabet!"
     return
+
 
 init 5 python:
     addEvent(
@@ -1022,6 +1046,7 @@ label mshMod_technique_research:
     m "Helping others can help us too."
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -1041,6 +1066,7 @@ label mshMod_technique_favoritethings:
     m "It's up to you, [player]...!"
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -1057,6 +1083,7 @@ label mshMod_technique_superheroes:
     m "How many, and which of them would you like to have as your friends?"
     m "And why is that?"
     return
+
 
 init 5 python:
     addEvent(
@@ -1075,6 +1102,7 @@ label mshMod_technique_artist:
     m "And do the same, name all the books/works written by them, that you can remember."
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -1089,6 +1117,7 @@ label mshMod_technique_playlist:
     m "Can you name the songs that were mostly played on your playlist this week?"
     m "Or this month?"
     return
+
 
 init 5 python:
     addEvent(
@@ -1109,6 +1138,7 @@ label mshMod_technique_surroundings:
     m "Just notice the things you can see, smell and hear."
     m "And accept them."
     return
+
 
 init 5 python:
     addEvent(
@@ -1132,6 +1162,7 @@ label mshMod_technique_mess:
     m "Maybe sort out your photos into file sor categories?"
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -1148,6 +1179,7 @@ label mshMod_technique_holiday:
     # talk about places
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -1163,6 +1195,7 @@ label mshMod_technique_hobbies:
     m "Hobbies, activities... even chores!"
     m "Put them in a favourite to least favourite order."
     return
+
 
 init 5 python:
     addEvent(
@@ -1182,6 +1215,7 @@ label mshMod_technique_shiritori:
     m "For example! #give example"
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -1196,6 +1230,7 @@ label mshMod_technique_objects:
     m "Find five objects."
     m "Focus on these five objects and describe them taking deep breaths between each description."
     return
+
 
 init 5 python:
     addEvent(
@@ -1217,6 +1252,7 @@ label mshMod_technique_imagination:
     m "Think about it with as much detail as you can."
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -1231,6 +1267,7 @@ label mshMod_technique_characters:
     m "Think of your favourite book, movie, videogame or tv show."
     m "Can you name as many characters as you can from that media?"
     return
+
 
 init 5 python:
     addEvent(
@@ -1247,6 +1284,7 @@ label mshMod_technique_shapes:
     m "Then make something out of it."
     m "Or draw lots of shapes!"
     return
+
 
 init 5 python:
     addEvent(
@@ -1266,6 +1304,7 @@ label mshMod_technique_playlist:
     m "Or comforting songs! Listen to these."
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -1284,6 +1323,7 @@ label mshMod_technique_selfcare:
     #talk about some people w depression struggle w hygiene and encourage the player to take care of themselves
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -1300,6 +1340,7 @@ label mshMod_technique_outside:
     m "How many shapes can you see around you?"
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -1314,6 +1355,7 @@ label mshMod_technique_draw:
     m "Attempt to draw four things around you."
     m "It doesnt have to be good though!"
     return
+
 
 init 5 python:
     addEvent(
@@ -1331,6 +1373,7 @@ label mshMod_technique_food:
     m "And why?"
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -1346,6 +1389,7 @@ label mshMod_technique_colour:
     m "Focus on not going out of the lines!"
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -1360,6 +1404,7 @@ label mshMod_technique_beach:
     m "Picture yourself on a beach."
     m "Can you focus on all the different things that you might find there?"
     return
+
 
 init 5 python:
     addEvent(
@@ -1379,6 +1424,7 @@ label mshMod_technique_eat:
     m "Enjoy."
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -1395,6 +1441,7 @@ label mshMod_technique_pictures:
     m "Children books are great for that!"
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -1409,6 +1456,7 @@ label mshMod_technique_sit:
     m "Pick a comfortable spot and sit down."
     m "Think of what you can feel, see and hear that's comforting and calm."
     return
+
 
 init 5 python:
     addEvent(
@@ -1426,6 +1474,7 @@ label mshMod_technique_ground:
     m "Think of yourself as having a firm foundation and hold your head up high."
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -1439,6 +1488,7 @@ init 5 python:
 label mshMod_technique_scene:
     m "Watch your favourite movie and focus on the most comforting scene."
     return
+
 
 init 5 python:
     addEvent(
@@ -1457,6 +1507,7 @@ label mshMod_technique_mindfulseeing:
     m "Just notice the colours, the patterns or the textures."
     m "Try to notice the smallest movements such as leaves in the breeze."
     return
+
 
 init 5 python:
     addEvent(
@@ -1477,6 +1528,7 @@ label mshMod_technique_acceptance:
     m "I accept myself just as I am."
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -1493,6 +1545,7 @@ label mshMod_technique_brushes:
     m "Especially in the area where you want to do it..."
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -1508,6 +1561,7 @@ label mshMod_technique_memorybook:
     m "Read through them as you add new ones."
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -1522,6 +1576,7 @@ label mshMod_technique_happiness:
     m "Identify three small things that brought you happiness in the past 24 hours."
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -1535,6 +1590,7 @@ init 5 python:
 label mshMod_technique_cushion:
     m "Imagine yourself floating on the water on an inflatable cushion."
     return
+
 
 init 5 python:
     addEvent(
@@ -1551,6 +1607,7 @@ label mshMod_technique_hugs:
     m "If that's not the case, think of people who could give you their warmest smiles."
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -1566,6 +1623,7 @@ label mshMod_technique_comforting:
     m "And imagine you are spending some quality time with them."
     return
 
+
 init 5 python:
     addEvent(
         Event(
@@ -1579,6 +1637,7 @@ init 5 python:
 label mshMod_technique_podcasts:
     m "Download some comforting or meditation podcasts and listen to them."
     return
+
 
 init 5 python:
     addEvent(
@@ -1598,6 +1657,7 @@ label mshMod_technique_handholding:
     m "Be gentle and take it slow..."
     m "Like comforting your favorite person or animal."
     return
+
 
 init 5 python:
     addEvent(
