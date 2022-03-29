@@ -4,13 +4,12 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_selfharm3",
+            eventlabel="mshMod_selfharm_3",
             action=EV_ACT_QUEUE
         )
     )
 
-label mas_selfharm3:
-
+label mshMod_selfharm_3:
     m 1esa "Hey... [player]?"
     m 1rka "This may sound a bit random, but..."
     m 7eka "Is it sunny today over there?"
@@ -19,8 +18,7 @@ label mas_selfharm3:
     m 1wub "Maybe bring a book with you so you can relax even more."
     m 1dua "Enjoying literature in the nature would surely relax me..."
     m 1eka "I hope this works for you, too."
-    
-return
+    return
 
 # MARCH 1ST DIALOGUE - SELF HARM AWARENESS DAY
 
@@ -46,7 +44,7 @@ return
     m 2esd "But self-harm is not the way."
     m 2eka "Anyway! Thanks for listening!"
     m 1hub "I love you, [Player]!"
-    
+
 # SEMICOLON PROJECT
 
     m 1eub "Have you ever heard of the Semicolon Project, [player]?"
@@ -68,20 +66,21 @@ return
     m 3ekb "Well I won't ramble too much, Ahaha~"
     m 3hub "Thanks for listening!"
 
+
 # BUTTERFLY PROJECT
 
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="monika_butterflyproject",
+            eventlabel="mshMod_butterfly_project",
             category=["media"],
             prompt="The Butterfly Project",
             random=True
         )
     )
 
-label monika_butterflyproject:
+label mshMod_butterfly_project:
     m 3eub "Hey [player], do you know what The Butterfly Project is?"
     m 1eub "It's a movement to help people that struggle with self-harm."
     m 3eud "It's really interesting! Drawing on yourself is already a good way to deal with self-harming, but this project approaches it in a really different way."
@@ -101,21 +100,21 @@ label monika_butterflyproject:
     return
 
 # RANDOM DIALOGUE ABOUT MONIKAS FEELINGS ABOUT SELF-HARM
-    
+
     m "Hey [player]... Do you remember when I talked about self-harm?"
     m "Would you mind if I talked more about my experience?"
-    m "It may get a tad triggering, so I get it if you would rather say no!" 
+    m "It may get a tad triggering, so I get it if you would rather say no!"
     menu:
 
         No:
-    m "Okay!" 
+    m "Okay!"
     m "I love you [player], and I'm proud of you for saying no to something you aren't comfortable with!"
     m "That's a big step in self-respect, and I hope you keep it up!"
 
         Yes:
     m "Thank you for letting me speak about this [mas_get_player_nickname()], I've been thinking about it a little bit more lately."
     m "After I hurt myself, I realized that I had made huge a mistake..."
-    m "At first I thought that it was exhilarating, I even wrote about it!" 
+    m "At first I thought that it was exhilarating, I even wrote about it!"
     m "But after reflecting upon it when we started talking more about self-harm, it really changed my mind."
     m "I had gotten no relief or satisfaction, if anything I was just disappointed."
     m "Yuri had made it seem like such a thrill - to me it was almost only just boring..."
@@ -123,7 +122,7 @@ label monika_butterflyproject:
     m "My pain was just coded, along with my blood and the knife I was holding..."
     m "But even if it was real, pain doesn't satisfy or relieve my emotions."
     m "I know now that talking things out with you when I'm upset..."
-    m "...and keeping hope for a brighter tomorrow is a much better coping mechanism!" 
+    m "...and keeping hope for a brighter tomorrow is a much better coping mechanism!"
     m "Just keep in mind that there are better ways to cope and that I'm always here to provide techniques to help."
     m "I care too much about you [player]... You don't deserve any pain."
-    m "You deserve to work through things healthily, and [m_name] is here to help!" 
+    m "You deserve to work through things healthily, and [m_name] is here to help!"
