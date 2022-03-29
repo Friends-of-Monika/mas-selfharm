@@ -1,7 +1,10 @@
 default persistent._msh_mod_technique_database = dict()
 
 init -100 python:
-    _mshMod_TECHNIQUE_MENU_EXIT_ITEM = ("Nevermind", "exit", False, False)
+    _mshMod_TECHNIQUE_MENU_EXIT_ITEM = ("Nevermind", None, False, False)
+
+
+# When needed, use this code to unlock
 
 
 init 5 python:
@@ -26,19 +29,39 @@ label mshMod_technique_menu:
             Event.filterEvents(
                 persistent._msh_mod_technique_database,
                 unlocked=True
-            )
+            ).values()
         ))
 
         items.sort(key=lambda it: it.replace("'", "").replace('"', ""))
 
     call screen mas_gen_scrollable_menu(items, mas_ui.SCROLLABLE_MENU_TXT_LOW_AREA, mas_ui.SCROLLABLE_MENU_XALIGN, _mshMod_TECHNIQUE_MENU_EXIT_ITEM)
-    if _return == "exit":
+    if not _return:
         m "Oh, okay..."
         return
 
-    pushEvent(_return)
+    pushEvent(_return, skipeval=True)
 
     return
+
+
+# label mshMod_technique_pickRandom:
+#     python:
+#         items = Event.filterEvents(
+#             persistent._msh_mod_technique_database,
+#             unlocked=False
+#         ).values()
+#
+#     if not items:
+#         m "Hmm... Oh. I think I ran out of ideas, [player]..."
+#         m "But I'll let you know once I'll think of something new!"
+#         m "In the meantime, you can always ask me about techniques I told you about earlier~"
+#
+#     else:
+#         ev = items[random.randint(len(items))]
+#         ev.unlocked = True
+#         pushEvent(ev.eventlabel, skipeval=True)
+#
+#     return
 
 
 init 5 python:
