@@ -29,6 +29,8 @@ label mshMod_technique_menu:
             )
         ))
 
+        items.sort(key=lambda it: it.replace("'", "").replace('"', ""))
+
     call screen mas_gen_scrollable_menu(items, mas_ui.SCROLLABLE_MENU_TXT_LOW_AREA, mas_ui.SCROLLABLE_MENU_XALIGN, _mshMod_TECHNIQUE_MENU_EXIT_ITEM)
     if _return == "exit":
         m "Oh, okay..."
