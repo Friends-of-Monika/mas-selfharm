@@ -37,7 +37,7 @@ label mshMod_technique_menu:
     pushEvent(_return)
 
     return
-    
+
 
 init 5 python:
     addEvent(
@@ -411,13 +411,13 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_technique_stressball",
-            prompt="Stressball",
+            eventlabel="mshMod_technique_stress_ball",
+            prompt="Stress ball",
             unlocked=False
         )
     )
 
-label mshMod_technique_stressball:
+label mshMod_technique_stress_ball:
     m "Some objects can also help with the desperate feeling."
     m "Check if you have one of them at home, okay?"
     m "Do you have a stress ball?"
@@ -560,7 +560,7 @@ init 5 python:
         Event(
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_otter",
-            prompt="Otter",
+            prompt="Talking to u/my-otter-self",
             unlocked=False
         )
     )
@@ -580,13 +580,13 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_technique_coldwater",
-            prompt="Coldwater",
+            eventlabel="mshMod_technique_cold_water",
+            prompt="Cold water",
             unlocked=False
         )
     )
 
-label mshMod_technique_coldwater:
+label mshMod_technique_cold_water:
     m "Sometimes, paying attention to your senses can help."
     m "Could you put your hands in some cold water?"
     m "And remember, breathe a lot!"
@@ -811,13 +811,13 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_technique_creative",
-            prompt="Creative",
+            eventlabel="mshMod_technique_creativity",
+            prompt="Creativity",
             unlocked=False
         )
     )
 
-label mshMod_technique_creative:
+label mshMod_technique_creativity:
     m "Time to get creative!"
     m "Make up a story in your head."
     m "It can be about anything and anyone positive in your life."
@@ -979,13 +979,13 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_technique_wordplay",
-            prompt="Wordplay",
+            eventlabel="mshMod_technique_word_play",
+            prompt="Word play",
             unlocked=False
         )
     )
 
-label mshMod_technique_wordplay:
+label mshMod_technique_word_play:
     m "Now, for some word play!"
     m "How many four letter words can you make up from the statement..."
     m "'You learn more from failure than from success. Don't let it stop you'?"
@@ -1051,13 +1051,13 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_technique_favoritethings",
-            prompt="Favoritethings",
+            eventlabel="mshMod_technique_favorite_things",
+            prompt="Favorite things",
             unlocked=False
         )
     )
 
-label mshMod_technique_favoritethings:
+label mshMod_technique_favorite_things:
     m "How about making a list of your favorite things?"
     m "You can pick the category!"
     m "You can name at least ten of your favorite tv shows, for example."
@@ -1309,13 +1309,13 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_technique_selfcare",
-            prompt="Selfcare",
+            eventlabel="mshMod_technique_self_care",
+            prompt="Self-care",
             unlocked=False
         )
     )
 
-label mshMod_technique_selfcare:
+label mshMod_technique_self_care:
     m "Do one self-care activity."
     m "For example, making your bed!"
     m "Or brushing your hair, your teeth."
@@ -1495,12 +1495,12 @@ init 5 python:
         Event(
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_mindfulseeing",
-            prompt="Mindfulseeing",
+            prompt="'Mindful seeing'",
             unlocked=False
         )
     )
 
-label mshMod_technique_mindfulseeing:
+label mshMod_technique_mindful_seeing:
     m "Carry out a 'mindful seeing' exercise."
     m "Look outside a window or imagine looking outside a window."
     m "Look at everything there is to see."
@@ -1551,12 +1551,12 @@ init 5 python:
         Event(
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_memorybook",
-            prompt="Memorybook",
+            prompt="Memory book",
             unlocked=False
         )
     )
 
-label mshMod_technique_memorybook:
+label mshMod_technique_memory_book:
     m "Start a 'memory book' of good memories!"
     m "Read through them as you add new ones."
     return
@@ -1643,13 +1643,13 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_technique_handholding",
-            prompt="Handholding",
+            eventlabel="mshMod_technique_hand_holding",
+            prompt="Hand holding",
             unlocked=False
         )
     )
 
-label mshMod_technique_handholding:
+label mshMod_technique_hand_holding:
     m "Hold your own hand with the other hand."
     m "Hold it for at least one minute, like you would hold the hand of someone you care for and trust."
     m "Slowly caress your hands and arms..."
