@@ -2,7 +2,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_topic_rerandom",
+            eventlabel="mshMod_relapse",
             category=["self-harm"],
             prompt="I relapsed...",
             pool=True,
