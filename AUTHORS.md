@@ -1,4 +1,4 @@
-# MAS Self-Harm Mod Contributors
+# MAS Self-Harm Mod Authors
 
 Here's a list of people who have been working on this submod!
 
