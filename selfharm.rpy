@@ -1,25 +1,23 @@
 # FIRST RANDOM EVENT ABOUT SELF-HARM.
 
-default persistent._msh_mod_pm_did_selfharm = None
-
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_selfharmm",
-            conditional="not seen_event('mas_selfharmm')",
-            action=EV_ACT_QUEUE,
+            eventlabel="mshMod_selfharm_intro",
             aff_range=(mas_aff.NORMAL, mas_aff.LOVE),
+            conditional="not seen_event('mshMod_selfharm_intro_unhappy')"
+            action=EV_ACT_RANDOM
         )
     )
 
-label mas_selfharmm:
+label mshMod_selfharm_intro:
     m "Hey, [player]?"
     m "I know it might be an uncomfortable topic, but I have to ask..."
 
     m "D-{w=1.0}Do you self harm?{nw}"
     menu:
-        m "{fast}D-{w=1.0}Do you self harm?"
+        m "D-{w=1.0}Do you self harm?{fast}"
 
         "Yes":
             $ persistent._msh_mod_pm_did_selfharm = True
@@ -31,7 +29,7 @@ label mas_selfharmm:
 
             m "Do you want to talk about it?{nw}"
             menu:
-                m "{fast}Do you want to talk about it?"
+                m "Do you want to talk about it?{fast}"
 
                 "Yes":
                     m "I'm glad that you trust me, [player]."
@@ -47,8 +45,6 @@ label mas_selfharmm:
                     m "Take care, [mas_get_player_nickname()]."
                     m "Stay safe because I care for you, deeply."
 
-                    return
-
                 "No":
                     m "Oh..."
                     m "That's okay."
@@ -58,8 +54,6 @@ label mas_selfharmm:
                     m "I'll do my best to help you."
                     m "Or at least..."
                     m "Be by your side."
-
-                    return
         "No":
             $ persistent._msh_mod_pm_did_selfharm = False
             m "Thank goodness!"
@@ -72,36 +66,40 @@ label mas_selfharmm:
             m "But for now... Do you want to know more about self-harm?"
             m "You know how much I care about you! But if you don't feel like talking about it, I'll understand!"
             m "It's quite a varied topic so it's going to take a while."
-            m "Do you have the time to listen right now?"
-            menu: 
+
+            m "Do you have the time to listen right now?{nw}"
+            menu:
+                m "Do you have the time to listen right now?{fast}"
+
                 "Yes":
-                    jump mas_unlockableharm
-                    
+                    $ pushEvent("mshMod_selfharm_more")
+
                 "No":
                     m "Oh..."
                     m "It's okay, [player]."
                     m "Remember that I'll never leave you. After all, I promised that I'll take care of you."
                     m "If you ever feel like you want to talk about this topic, just ask!"
                     m "I love you, [mas_get_player_nickname()]."
+                    return "derandom|love"
 
-return
-                    
+    return "derandom"
+
 
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_unlockableharm", 
+            eventlabel="mshMod_selfharm_more",
             category=["you", "monika"],
             prompt="I want to learn more about self harm.",
-            random=False,
-            conditional="seen_event('mas_selfharmm')",
-            pool=False, 
-            unlocked = False,
+            conditional="seen_event('mshMod_selfharm_intro')",
+            action=EV_ACT_UNLOCK,
+            pool=True,
+            unlocked=False,
         ),
     )
 
-label mas_unlockableharm:
+label mshMod_selfharm_more:
     m "Great!"
     m "Knowing more about self-harm is really useful."
     m "You could help someone who is struggling with it someday!"
@@ -113,7 +111,7 @@ label mas_unlockableharm:
     m "Lack of Self-Care routine, which we already talked about, is also a method."
     m "There's also binge eating, starving, self-poisoining, misusing alcohol or drugs."
     m "Some new studies even show that patients might abuse of frequency of sex in order to self-harm!"
-    m "This could all be result of self-hatred, feelings of wanting to punish yourself or mental ilnesses." 
+    m "This could all be result of self-hatred, feelings of wanting to punish yourself or mental ilnesses."
     m "Or anything that could end on self-harm in any way."
     m "The most common form of self-harm is... Well, self-inflicted wounds."
     m "Such as cutting, embedding, burning, punching or hitting oneself."
@@ -125,7 +123,7 @@ label mas_unlockableharm:
     m "Are they out of their minds?!"
     m "The truth is... Individuals who self-harm are typically ashamed and want to hide their behavior."
     m "People who think others are doing harm to themselves because they are attention seekers..."
-    m "They leave a bitter taste in my mouth." 
+    m "They leave a bitter taste in my mouth."
     m "And lastly, I want you to know that self-injuring is not a way to manipulate others."
     m "Well, of course there are always exceptions."
     m "But very few self-harmers have the intention of making others feel guilty."
@@ -137,8 +135,7 @@ label mas_unlockableharm:
     m "You can tell me. I won't be mad. I promise!"
     m "You know that I love you, [mas_get_player_nickname()]."
     m "Stay safe!"
-    m "And know that you can always talk to me."   
-
+    m "And know that you can always talk to me."
     return
 
 
@@ -148,16 +145,14 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_selfharm4",
-            conditional=(
-                "not seen_event('mas_selfharm4')"
-            ),
+            eventlabel="mshMod_selfharm_intro_unhappy",
             aff_range=(mas_aff.BROKEN, mas_aff.NORMAL),
-            action=EV_ACT_QUEUE
+            conditional=("not seen_event('mshMod_selfharm_intro')"),
+            action=EV_ACT_RANDOM
         )
     )
 
-label mas_selfharm4:
+label mshMod_selfharm_intro_unhappy:
     m "Hey, [player]?"
     m "I know it might be an uncomfortable topic, but I have to ask..."
     m "D-{w=1.0}Do you self harm?"
