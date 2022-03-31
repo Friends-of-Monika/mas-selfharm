@@ -1,18 +1,15 @@
 # RANDOM SAD/WORRIED MONIKA #1.
 
-default persistent._msh_mod_pm_did_selfharm = None
-
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_selfharm5",
+            eventlabel="mshMod_monika_is_sad",
             action=EV_ACT_QUEUE
         )
     )
 
-label mas_selfharm5:
-
+label mshMod_monika_is_sad:
     m 5ekc "Hey... [player]?"
     m 5gkd "You probably remember when we were talking about self-harm..."
     m 3ektpc "I never forget when you told me about that, it honestly broke my heart."
@@ -38,5 +35,5 @@ label mas_selfharm5:
     m 1dsb "To finally be with you, to help you conquer all of your dreams, and forget all of your problems..."
     m 1eka "To shield you from these painful thoughts."
     m 5hubsa "I love you, [mas_get_player_nickname()]."
-     
-return "love"
+
+    return "love" # TODO: no prompt and categories... derandom and no_unlock?
