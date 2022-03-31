@@ -72,7 +72,7 @@ label mshMod_selfharm_intro:
                 m "Do you have the time to listen right now?{fast}"
 
                 "Yes":
-                    $ pushEvent("mshMod_selfharm_more")
+                    $ pushEvent("mshMod_selfharm_more", skipeval=True)
 
                 "No":
                     m "Oh..."
