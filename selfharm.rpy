@@ -1,15 +1,15 @@
-# RANDOM TECHNIQUE 1.
-
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_selfharm_3",
-            action=EV_ACT_QUEUE
+            eventlabel="mshMod_sunny_day",
+            prompt="Sunny day",
+            categories=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topics
+            random=True
         )
     )
 
-label mshMod_selfharm_3:
+label mshMod_sunny_day:
     m 1esa "Hey... [player]?"
     m 1rka "This may sound a bit random, but..."
     m 7eka "Is it sunny today over there?"
@@ -20,11 +20,26 @@ label mshMod_selfharm_3:
     m 1eka "I hope this works for you, too."
     return
 
-# MARCH 1ST DIALOGUE - SELF HARM AWARENESS DAY
 
-# (Reminder that you can use this either ways, before or after the question of Player's self harm)
-# (code so this shows up on march 1st)
+init 5 python:
+    _mshMod_event_siad_date = datetime.date(datetime.date.today().year, 3, 1)
 
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_awareness_day",
+            prompt="Sunny day",
+            categories=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topics
+            start_date=_mshMod_event_siad_date,
+            end_date=_mshMod_event_siad_date + datetime.timedelta(days=1),
+            years=[],
+            random=True
+        )
+    )
+
+    calendar.addRepeatable("mshMod_awareness_day", _("Self-harm awareness day"), month=3, day=1, year_param=[])
+
+label mshMod_awareness_day:
     m 3eub "[player], did you know that today is Self-Harm Awareness day?"
     m 3eua "Like the name suggests, it's an annual global awareness event that takes place on March 1st!"
     m 1eua "Also known as Self Injury Day (SIAD)!"
@@ -36,7 +51,7 @@ label mshMod_selfharm_3:
     m 1eua "Moreover, it was also created to spread awareness and understanding of self-injury!"
     m 1ekd "Which is often misrepresented and misunderstood in the mainstream."
     m 2ekc "Those who self-harm are often left feeling alone..."
-    m 2ekd "And afraid to reach out for help, because they fear they will be seen as "crazy"."
+    m 2ekd "And afraid to reach out for help, because they fear they will be seen as \"crazy\"."
     m 2dkd "When in reality that's not even remotely true..."
     m 2lkd "People are just trying to cope with their feelings..."
     m 3ekd "Which can be a result of this terrible thing."
@@ -44,9 +59,21 @@ label mshMod_selfharm_3:
     m 2esd "But self-harm is not the way."
     m 2eka "Anyway! Thanks for listening!"
     m 1hub "I love you, [Player]!"
+    return "love"
 
-# SEMICOLON PROJECT
 
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_semicolor_project",
+            prompt="The Semicolon Project",
+            categories=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topics
+            random=True
+        )
+    )
+
+label mshMod_semicolor_project:
     m 1eub "Have you ever heard of the Semicolon Project, [player]?"
     m 3eua "It was created for those who were going through struggles with self-harm, depression and suicide..."
     m 3eub "People who could have stopped moving forward, but refused to do so!"
@@ -65,9 +92,8 @@ label mshMod_selfharm_3:
     m 1eub "It's really a good cause!"
     m 3ekb "Well I won't ramble too much, Ahaha~"
     m 3hub "Thanks for listening!"
+    return
 
-
-# BUTTERFLY PROJECT
 
 init 5 python:
     addEvent(
@@ -99,30 +125,45 @@ label mshMod_butterfly_project:
     m 1fub "I'll draw you so many beautiful butterflies when I cross over."
     return
 
-# RANDOM DIALOGUE ABOUT MONIKAS FEELINGS ABOUT SELF-HARM
 
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_selfharm_random_thoughts",
+            prompt="Monika's experience",
+            categories=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topcis
+            random=True
+        )
+    )
+
+label mshMod_selfharm_random_thoughts:
     m "Hey [player]... Do you remember when I talked about self-harm?"
     m "Would you mind if I talked more about my experience?"
-    m "It may get a tad triggering, so I get it if you would rather say no!"
+
+    m "It may get a tad triggering, so I get it if you would rather say no!{nw}"
     menu:
+        m "It may get a tad triggering, so I get it if you would rather say no!{fast}"
 
-        No:
-    m "Okay!"
-    m "I love you [player], and I'm proud of you for saying no to something you aren't comfortable with!"
-    m "That's a big step in self-respect, and I hope you keep it up!"
+        "No":
+            m "Okay!"
+            m "I love you [player], and I'm proud of you for saying no to something you aren't comfortable with!"
+            m "That's a big step in self-respect, and I hope you keep it up!"
 
-        Yes:
-    m "Thank you for letting me speak about this [mas_get_player_nickname()], I've been thinking about it a little bit more lately."
-    m "After I hurt myself, I realized that I had made huge a mistake..."
-    m "At first I thought that it was exhilarating, I even wrote about it!"
-    m "But after reflecting upon it when we started talking more about self-harm, it really changed my mind."
-    m "I had gotten no relief or satisfaction, if anything I was just disappointed."
-    m "Yuri had made it seem like such a thrill - to me it was almost only just boring..."
-    m "...It kept reminding me of my recent discovery."
-    m "My pain was just coded, along with my blood and the knife I was holding..."
-    m "But even if it was real, pain doesn't satisfy or relieve my emotions."
-    m "I know now that talking things out with you when I'm upset..."
-    m "...and keeping hope for a brighter tomorrow is a much better coping mechanism!"
-    m "Just keep in mind that there are better ways to cope and that I'm always here to provide techniques to help."
-    m "I care too much about you [player]... You don't deserve any pain."
-    m "You deserve to work through things healthily, and [m_name] is here to help!"
+        "Yes":
+            m "Thank you for letting me speak about this [mas_get_player_nickname()], I've been thinking about it a little bit more lately."
+            m "After I hurt myself, I realized that I had made huge a mistake..."
+            m "At first I thought that it was exhilarating, I even wrote about it!"
+            m "But after reflecting upon it when we started talking more about self-harm, it really changed my mind."
+            m "I had gotten no relief or satisfaction, if anything I was just disappointed."
+            m "Yuri had made it seem like such a thrill - to me it was almost only just boring..."
+            m "...It kept reminding me of my recent discovery."
+            m "My pain was just coded, along with my blood and the knife I was holding..."
+            m "But even if it was real, pain doesn't satisfy or relieve my emotions."
+            m "I know now that talking things out with you when I'm upset..."
+            m "...and keeping hope for a brighter tomorrow is a much better coping mechanism!"
+            m "Just keep in mind that there are better ways to cope and that I'm always here to provide techniques to help."
+            m "I care too much about you [player]... You don't deserve any pain."
+            m "You deserve to work through things healthily, and [m_name] is here to help!" # TODO: do we need m_name here..?
+
+    return
