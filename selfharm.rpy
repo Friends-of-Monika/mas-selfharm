@@ -908,7 +908,7 @@ label mshMod_trying_therapy:
         m 1ekd "When I asked you if you self-harm, and you told me that you do..."
         m 2ekd "Have you thought about going to therapy to help with that?"
 
-    else
+    else:
         m 1ekd "When I asked you if you self-harm, you told me that you didn't..."
         m 2ekd "Well, have you still thought about going to therapy?"
 
