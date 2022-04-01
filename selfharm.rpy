@@ -5,11 +5,11 @@ init 5 python:
             eventlabel="mshMod_promise",
             category=["self-harm"],
             prompt="I promise...",
-            pool=True,
+            conditional="not mshMod_isOnStreak()",
+            action=EV_ACT_POOL
             unlocked=True
         )
     )
-
 
 label mshMod_promise:
     m 2ekb "Oh, [player], you have no idea how happy I am to hear that."
@@ -22,4 +22,9 @@ label mshMod_promise:
     m 2dka "..."
     m 5ekbsb "I love you, [mas_get_player_nickname()]."
     m 5dkbsb "Never forget that!"
-    return
+
+    python:
+        mshMod_beginStreak()
+        mas_lockEVL("mshMod_promise", "EVE")
+
+    return "love"
