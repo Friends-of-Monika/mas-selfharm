@@ -18,7 +18,7 @@ label mshMod_probing_questions_intro:
     m 1ekd "I've been thinking and I am really worried about you."
     m 1eksdld "I want to ask you some things, but..."
 
-    pause (1.0)
+    pause 1.0
 
     m 1dsc "It's hard."
     m 1dkd "For both of us."
@@ -159,7 +159,7 @@ label mshMod_probing_questions:
             m 2ekd "Have you ever made a direct attempt at your own life?"
             menu:
                 "Yes":
-                    pause (2.0)
+                    pause 2.0
                     m 2ektud "I'm so sorry to hear this..."
                     m 2ektsd "I have no idea what had to happen to you to make you go to such extremes."
                     m 2dktsd "You must never forget that suicide is never the way out..."
