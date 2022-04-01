@@ -1519,7 +1519,7 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_technique_mindfulseeing",
+            eventlabel="mshMod_technique_mindful_seeing",
             prompt="'Mindful seeing'",
             unlocked=False
         )
