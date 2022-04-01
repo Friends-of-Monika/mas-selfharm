@@ -4,7 +4,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_selfharm_intro",
             aff_range=(mas_aff.NORMAL, mas_aff.LOVE),
-            conditional="not seen_event('mshMod_selfharm_intro_unhappy')"
+            conditional="not seen_event('mshMod_selfharm_intro_unhappy')",
             action=EV_ACT_RANDOM
         )
     )
