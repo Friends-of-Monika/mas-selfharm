@@ -66,14 +66,14 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_semicolor_project",
+            eventlabel="mshMod_semicolon_project",
             prompt="The Semicolon Project",
             category=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topics
             random=True
         )
     )
 
-label mshMod_semicolor_project:
+label mshMod_semicolon_project:
     m 1eub "Have you ever heard of the Semicolon Project, [player]?"
     m 3eua "It was created for those who were going through struggles with self-harm, depression and suicide..."
     m 3eub "People who could have stopped moving forward, but refused to do so!"
