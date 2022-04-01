@@ -155,8 +155,11 @@ init 5 python:
 label mshMod_selfharm_intro_unhappy:
     m "Hey, [player]?"
     m "I know it might be an uncomfortable topic, but I have to ask..."
-    m "D-{w=1.0}Do you self harm?"
+
+    m "D-{w=1.0}Do you self harm?{nw}"
     menu:
+        m "D-{w=1.0}Do you self harm?{fast}"
+
         "Yes":
             $ persistent._msh_mod_pm_did_selfharm = True
             m "I'm so sorry you're going through this."
