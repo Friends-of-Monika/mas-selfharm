@@ -39,7 +39,7 @@ label mshMod_technique_menu:
         m "Oh, okay..."
         return
 
-    pushEvent(_return, skipeval=True)
+    $ pushEvent(_return, skipeval=True)
 
     return
 
@@ -380,7 +380,7 @@ label mshMod_technique_videos:
 
     python:
         all_options = tuple(_label for _label in ('mshMod_technique_videos_{0}'.format(i) for i in range(3)))
-        unseen_options = tuple(_label for _label all_options if not mas_seenLabels((_label,)))
+        unseen_options = tuple(_label for _label in all_options if not mas_seenLabels((_label,)))
 
     if not unseen_options:
         m "I've shown you all the videos I have for now!"
