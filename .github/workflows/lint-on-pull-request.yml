@@ -2,7 +2,6 @@ name: Lint source tree on pull request on dev branch
 
 on:
   push:
-    branches: [ dev ]
     paths: [ '*.rpy' ]
   pull_request:
     types: [ opened ]
