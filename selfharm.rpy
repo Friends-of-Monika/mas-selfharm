@@ -5,7 +5,8 @@ init 5 python:
             eventlabel="mshMod_relapse",
             category=["self-harm"],
             prompt="I relapsed...",
-            pool=True,
+            conditional="mshMod_isOnStreak()",
+            action=EV_ACT_POOL,
             unlocked=True
         )
     )
@@ -23,4 +24,9 @@ label mshMod_relapse:
     m 1dkb "I'm here to support you and work through anything and everything with you."
     m 1fsa "You're strong. You're worth it, and I couldn't ask for a better [bf]!"
     m 3esa "Whenever and if you feel ready to make the promise again... let me know."
+
+    python:
+        mshMod_endStreak()
+        mshMod_lockEVL("mshMod_relapse", "EVE")
+
     return
