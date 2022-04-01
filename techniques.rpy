@@ -1575,7 +1575,7 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_technique_memorybook",
+            eventlabel="mshMod_technique_memory_book",
             prompt="Memory book",
             unlocked=False
         )
