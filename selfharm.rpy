@@ -668,7 +668,7 @@ label mshMod_probing_questions_intro:
                 "Hitting yourself":
                     pass
 
-                "Other"
+                "Other":
                     $ override = renpy.input("What's the other method?", allow="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz", length=15)
                     pass
 
@@ -749,7 +749,7 @@ label mshMod_probing_questions:
                 "Hitting yourself":
                     pass
 
-                "Other"
+                "Other":
                     $ override = renpy.input("What's the other method?", allow="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz", length=15)
 
                 "All of them":
