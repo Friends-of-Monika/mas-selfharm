@@ -79,7 +79,7 @@ label mshMod_probing_questions_intro:
                             m 2dktda "I love you, [mas_get_player_nickname()]"
                             return "love"
 
-                         "No":
+                        "No":
                             m 1dkb "I'm so happy that as bad as things get, you never resorted to that!"
                             m 1ekb "Always stay strong."
                             m 1eka "For me, okay?"
