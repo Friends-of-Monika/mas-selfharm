@@ -346,7 +346,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_first_aid_intro",
             aff_range=(mas_aff.NORMAL, mas_aff.LOVE),
-            conditional="persistent._msh_mod_pm_did_selfharm"
+            conditional="persistent._msh_mod_pm_did_selfharm",
             action=EV_ACT_RANDOM
         )
     )
@@ -368,7 +368,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_first_aid_guide",
             aff_range=(mas_aff.NORMAL, mas_aff.LOVE),
-            conditional="seen_event('mshMod_first_aid_intro')"
+            conditional="seen_event('mshMod_first_aid_intro')",
             action=EV_ACT_RANDOM
         )
     )
@@ -410,7 +410,7 @@ label mshMod_first_aid_guide:
             menu:
                 m "Just tell me when you're done, okay?{nw}"
 
-                "I'm done, [m_name]."
+                "I'm done, [m_name].":
                     m 7esd "Okay!"
                     m 7esd "Thirdly and lastly, it's really important to apply a dressing."
                     m 1esd "You can use many different types.."
