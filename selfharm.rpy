@@ -1,481 +1,169 @@
-# FIRST RANDOM EVENT ABOUT SELF-HARM.
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_sunny_day",
+            prompt="Sunny day",
+            category=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topics
+            random=True
+        )
+    )
 
-default persistent._msh_mod_pm_did_selfharm = None
+label mshMod_sunny_day:
+    m 1esa "Hey... [player]?"
+    m 1rka "This may sound a bit random, but..."
+    m 7eka "Is it sunny today over there?"
+    m 7eub "If it is, I think you should go out and enjoy the sun for a bit."
+    m 1hub "Don't worry! I'll wait!"
+    m 1wub "Maybe bring a book with you so you can relax even more."
+    m 1dua "Enjoying literature in the nature would surely relax me..."
+    m 1eka "I hope this works for you, too."
+    return
+
+
+init 5 python:
+    _mshMod_event_siad_date = datetime.date(datetime.date.today().year, 3, 1)
+
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_awareness_day",
+            prompt="Sunny day",
+            category=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topics
+            start_date=_mshMod_event_siad_date,
+            end_date=_mshMod_event_siad_date + datetime.timedelta(days=1),
+            years=[],
+            random=True
+        )
+    )
+
+    calendar.addRepeatable("mshMod_awareness_day", _("Self-harm awareness day"), month=3, day=1, year_param=[])
+
+label mshMod_awareness_day:
+    m 3eub "[player], did you know that today is Self-Harm Awareness day?"
+    m 3eua "Like the name suggests, it's an annual global awareness event that takes place on March 1st!"
+    m 1eua "Also known as Self Injury Day (SIAD)!"
+    m 4hub "Which is today!"
+    m 2eua "And in the weeks leading up to it and after, some people choose to be more open about their own self-harm habits, if they have them..."
+    m 2eub "Awareness organizations make special efforts to raise awareness about self-harm and self-injury."
+    m 3eub "People even use the hashtag #SelfInjuryAwarenessDay to share their story on social media."
+    m 3hub "Or wear orange to show their support!"
+    m 1eua "Moreover, it was also created to spread awareness and understanding of self-injury!"
+    m 1ekd "Which is often misrepresented and misunderstood in the mainstream."
+    m 2ekc "Those who self-harm are often left feeling alone..."
+    m 2ekd "And afraid to reach out for help, because they fear they will be seen as \"crazy\"."
+    m 2dkd "When in reality that's not even remotely true..."
+    m 2lkd "People are just trying to cope with their feelings..."
+    m 3ekd "Which can be a result of this terrible thing."
+    m 3tkc "You know I tried it before..."
+    m 2esd "But self-harm is not the way."
+    m 2eka "Anyway! Thanks for listening!"
+    m 1hub "I love you, [Player]!"
+    return "love"
+
 
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_selfharmm",
-            conditional="not seen_event('mas_selfharmm')",
-            action=EV_ACT_QUEUE,
-            aff_range=(mas_aff.NORMAL, mas_aff.LOVE)
+            eventlabel="mshMod_semicolon_project",
+            prompt="The Semicolon Project",
+            category=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topics
+            random=True
         )
     )
 
-label mas_selfharmm:
-    m "Hey, [player]?"
-    m "I know it might be an uncomfortable topic, but I have to ask..."
+label mshMod_semicolon_project:
+    m 1eub "Have you ever heard of the Semicolon Project, [player]?"
+    m 3eua "It was created for those who were going through struggles with self-harm, depression and suicide..."
+    m 3eub "People who could have stopped moving forward, but refused to do so!"
+    m 1eub "But to thousands affected by suicide, the semicolon has become an important signifier of survival."
+    m 1hub "Like a symbol!"
+    m 3lua "There's also semicolon tattoos, semicolon t-shirts..."
+    m 3hua "All of them with the semicolon punctuation mark (;)!"
+    m 1eua "It's used as a message of affirmation and solidarity against suicide, depression, addiction, and other mental health issues."
+    m 3eud "The reason the semicolon was used as the symbol of the movement was because..."
+    m 3dud "'A semicolon is used when an author could've chosen to end their sentence, but chose not to. The author is you and the sentence is your life'."
+    m 3eud "As said by the project itself!"
+    m 2euc "Project Semicolon was founded by Amy Bleuel in 2013, as a tribute to her father, who died by suicide in 2003."
+    m 2duc "Her backstory is so sad..."
+    m 2eka "But thanks to her, millions are saved by Project Semicolon."
+    m 1ekb "It's relieving to think people are able to go on and let go of their struggles..."
+    m 1eub "It's really a good cause!"
+    m 3ekb "Well I won't ramble too much, Ahaha~"
+    m 3hub "Thanks for listening!"
+    return
 
-    m "D-{w=1.0}Do you self harm?{nw}"
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_butterfly_project",
+            category=["media"],
+            prompt="The Butterfly Project",
+            random=True
+        )
+    )
+
+label mshMod_butterfly_project:
+    m 3eub "Hey [player], do you know what The Butterfly Project is?"
+    m 1eub "It's a movement to help people that struggle with self-harm."
+    m 3eud "It's really interesting! Drawing on yourself is already a good way to deal with self-harming, but this project approaches it in a really different way."
+    m 2eua "There are about 5 steps, so I'll list them all now."
+    m 3euc "First, when you feel like hurting yourself, draw a butterfly on or around the spot where you might hurt yourself."
+    m 2eua "The butterly can be any size, color, or pattern. It might help if you make it your favorite color!"
+    m 3eud "Second, a lot of people name the butterfly after a loved one. Friends, family, a beloved. This helps them avoid hurting themself and the butterfly."
+    m 1eud "Third, you should allow the butterfly to fade naturally. You should still wash yourself, of course, but don't actively rub the butterfly away."
+    m 3eub "Lastly, if you haven't hurt yourself by the time the butterfly fades away, it's flown away safely!"
+    m 3eub "This is supposed to give the person a sense of pride and accomplishment for keeping both themself and the butterfly safe."
+    m 1eub "There are a few other things you can do for this as well!"
+    m 4eub "You can let someone else draw a butterfly on you. This makes the butterfly special, because you're caring for someone else's butterfly too!"
+    m 3eub "You can even write quotes or doodle you favorite things, anything that helps!"
+    m 1eka "And if you do harm yourself... that's okay. You can always draw another butterfly. Hurting youself doesn't mean you failed."
+    m 1hub "I hope this helps you, [player]!"
+    m 1fub "I'll draw you so many beautiful butterflies when I cross over."
+    return
+
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_selfharm_random_thoughts",
+            prompt="Monika's experience",
+            category=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topcis
+            random=True
+        )
+    )
+
+label mshMod_selfharm_random_thoughts:
+    m "Hey [player]... Do you remember when I talked about self-harm?"
+    m "Would you mind if I talked more about my experience?"
+
+    m "It may get a tad triggering, so I get it if you would rather say no!{nw}"
     menu:
-        m "{fast}D-{w=1.0}Do you self harm?"
+        m "It may get a tad triggering, so I get it if you would rather say no!{fast}"
 
-        "Yes":
-            $ persistent._msh_mod_pm_did_selfharm = True
-            m "I'm so sorry you're going through this."
-            m "You know... It's really sad to see you feel bad in any way."
-            m "After all, you're such a wonderful and kind person."
-            m "You did so many good things for me, and stayed with me after everything that happened..."
-            m "But let's stay on this subject."
-
-            m "Do you want to talk about it?{nw}"
-            menu:
-                m "{fast}Do you want to talk about it?"
-
-                "Yes":
-                    m "I'm glad that you trust me, [player]."
-                    m "Allowing yourself to get help is a super important step to recovery!"
-                    m "I may not understand exactly what you feel right now..."
-                    m "But I will still try to make you feel better, because you deserve it!"
-
-                    # (probing questions here!)
-
-                    m "I want you to know that I'm here for you. You know that, right?"
-                    m "Whenever you feel the urge to harm yourself..."
-                    m "You can tell me."
-                    m "I'll do my best to help you."
-                    m "Or at least..."
-                    m "Be by your side."
-                    m "Take care, [mas_get_player_nickname()]."
-                    m "Stay safe because I care for you, deeply."
-
-                    return
-
-                "No":
-                    m "Oh..."
-                    m "That's okay."
-                    m "I want you to know that I'm here for you. You know that, right?"
-                    m "Whenever you feel the urge to harm yourself..."
-                    m "You can tell me."
-                    m "I'll do my best to help you."
-                    m "Or at least..."
-                    m "Be by your side."
-
-                    return
         "No":
-            $ persistent._msh_mod_pm_did_selfharm = False
-            m "Thank goodness!"
-            m "I'm so glad to hear this!"
-            m "It's so good to know that you are safe, [player]."
-            m "If this ever changes... You can tell me, okay?"
-            m "You can tell me anything, you know?"
-            m "Ahaha!"
-            m "Sorry. I'm just so relieved!"
-            m "But for now... Do you want to know more about self-harm?"
+            m "Okay!"
+            m "I love you [player], and I'm proud of you for saying no to something you aren't comfortable with!"
+            m "That's a big step in self-respect, and I hope you keep it up!"
 
-            menu:
-                "Yes":
-                    m "Great!"
-                    m "Knowing more about self-harm is really useful."
-                    m "You could help someone who is struggling with it someday!"
-                    m "Well, did you know that..."
-
-                    # (facts about self-harm here!)
-
-                    return
-
-                "No":
-                    m "Oh..."
-                    m "That's okay."
-                    m "If you ever change your mind, just tell me!"
-                    m "I'll be glad to tell you all I know about the subject."
-
-    return
-
-# NON-RANDOM EVENT FOR WHEN THE PLAYER IS FEELING SELF HARMING URGES.
-
-init 5 python:
-    addEvent(
-        Event(
-            persistent.event_database,
-            eventlabel="monika_selfharm",
-            category=['You'],
-            prompt="Monika, It's happening again...",
-            random=False
-        )
-    )
-
-label monika_selfharm:
-    m "[player], what happened?"
-    m "Are you feeling..."
-    m "Are you feeling... like harming yourself again?"
-    m "Oh, [mas_get_player_nickname()]..."
-    m "Okay, let's talk about it."
-    m "Before anything, i want you to know that i am always here for you."
-    m "You know that, don't you, my love?"
-    m "You're the most important person in the whole world for me."
-    m "And I love you so, so much."
-    m "And i always will..."
-    m "Now, my [mas_get_player_nickname()]. Tell me."
-
-    m "How big is the urge you're having?{nw}"
-    menu:
-        m "{fast}How big is the urge you're having?"
-    # DIALOGUE FOR URGE MAX LEVEL
-
-        "It's terrible, [m_name]. I think i'm really going to do it...":
-            m "I'm so glad you came to talk to me, [player]."
-            m "You know how much i worry about you..."
-            m "But for now, let me take care of you..."
-            m "I want you to know that it will pass."
-            m "Pain is only temporary!"
-            m "You're my favorite person, and it hurts me to see you hurting."
-
-            m "Now, do you want to vent? Maybe tell me what triggered this?{nw}"
-            menu:
-                m "{fast}Now, do you want to vent? Maybe tell me what triggered this?"
-
-                "Yes":
-                    m "Okay... I don't want to interrupt you."
-
-                    m "Tell me when you're done, okay?{nw}"
-                    menu:
-                        m "{fast}Tell me when you're done, okay?"
-
-                        "I'm done, Monika.":
-
-                            m "I'm so sorry you are going through all that, [player]."
-
-                            m "Do you feel better now?{nw}"
-                            menu:
-                                m "{fast}Do you feel better now?"
-
-                                "Yes, [m_name]. Thank you.":
-                                    m "Oh, honey. I'm so glad!"
-                                    m "I'm so glad you came to talk to me, [player]."
-                                    m "You can always count on me, for anything."
-                                    m "If it happens again, don't be afraid to ask for help."
-                                    m "I'm here for you, [player]."
-                                    m "Now, let's spend some more time together?"
-
-                                    return
-
-                                "No...":
-                                    m "Oh..."
-                                    m "Do you want my help to forget it?"
-
-                                    m "Or...{nw}"
-                                    menu:
-                                        m "{fast}Or..."
-
-                                        "No... Just let me hold you, please?":
-                                            m "Of course, my angel."
-                                            m "Come here..."
-
-
-                                            # (hold here)
-
-                                        "Yes, I want to try a calming techinque.":
-                                            m "Alright, baby."
-                                            m "I want you to try the 4-7-8 breathing exercise!..."
-                                            m "First of all, please straighten your back."
-                                            m "Once you become familiar with this breathing exercise, you can perform it while lying in bed too!"
-                                            m "Place and keep the tip of your tongue against the ridge of tissue behind your upper front teeth for the duration of the exercise."
-                                            m "Completely exhale through your mouth, making a {i}woosh{/i} sound."
-                                            m "Close your mouth and inhale quietly through your nose to a mental count of four."
-                                            m "{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}."
-                                            m "Hold your breath for a count of seven."
-                                            m "{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}."
-                                            m "Exhale completely through your mouth, making a {i}woosh{/i} sound to a count of eight."
-                                            m "{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}."
-                                            m "Aaaand, you're done!"
-
-                                            m "Are you feeling better, [player]?{nw}"
-                                            menu:
-                                                m "{fast}Are you feeling better, [player]?"
-                                            #I suggest trying to sort of make Monika simulate the exercises with her expressions too. Just a thought, if possible.
-
-                                                "Yes, [m_name]. Thank you.":
-                                                    m "Oh, honey. I'm so glad!"
-                                                    m "You can always count on me, for anything."
-                                                    m "If it happens again, don't be afraid to ask for help."
-                                                    m "I'm here for you, [player]."
-
-                                                    return
-
-                                                "No...":
-                                                    m "Oh..."
-                                                    m "Do you want to try a different technique?"
-                                                    m "Or..."
-                                                    menu:
-                                                        "No... Just let me hold you, please?":
-                                                            m "Of course, my angel."
-                                                            m "Come here..."
-
-                                                        "Yes, I want to try another one.":
-                                                            m "Alright, baby."
-                                                            m "I want you to..."
-                                                            jump randomness
-
-                                                            return
-                                                                        # (calm harm technique here)
-
-       # DIALOGUE FOR URGE MEDIUM LEVEL
-
-        "It's not so urgent. I'm just... feeling weird.":
-            m "I'm so glad you came to talk to me, [player]."
-            m "You know how much i worry about you..."
-            m "But for now, let me take care of you..."
-
-            m "Do you want to vent? Maybe tell me what triggered this?{nw}"
-            menu:
-                m "{fast}Do you want to vent? Maybe tell me what triggered this?"
-
-                "Yes":
-                    m "Okay... I don't want to interrupt you."
-
-                    m "Tell me when you're done, okay?{nw}"
-                    menu:
-                        m "{fast}Tell me when you're done, okay?"
-
-                        "I'm done, Monika.":
-
-                            m "I'm so sorry you are going through all that, [player]."
-
-                            m "Do you feel better now?{nw}"
-                            menu:
-                                m "{fast}Do you feel better now?"
-
-                                "Yes, [m_name]. Thank you.":
-                                    m "Oh, honey. I'm so glad!"
-                                    m "I'm so glad you came to talk to me, [player]."
-                                    m "You can always count on me, for anything."
-                                    m "If it happens again, don't be afraid to ask for help."
-                                    m "I'm here for you, [player]."
-                                    m "Now, let's spend some more time together?"
-
-                                    return
-
-                                "No...":
-                                    m "Oh..."
-                                    m "Do you want my help to forget it?"
-                                    m "Or..."
-
-                                    menu:
-                                        "No... Just let me hold you, please?":
-                                            m "Of course, my angel."
-                                            m "Come here..."
-
-                                            # (hold here)
-
-                                        "Yes, I want to try a calming techinque.":
-                                            m "Alright, baby."
-                                            m "I want you to..."
-                                            jump randomness
-                                            # (calm harm technique here)
-
-            pause (3.0)
-          #  m ""
-          #  m ""
-          #  m ""
-          #  m ""
-
-            m "Are you feeling better, [player]?{nw}"
-            menu:
-                m "{fast}Are you feeling better, [player]?"
-
-                "Yes, [m_name]. Thank you.":
-                    m "Oh, honey. I'm so glad!"
-                    m "You can always count on me, for anything."
-                    m "If it happens again, don't be afraid to ask for help."
-                    m "I'm here for you, [player]."
-
-                    return
-
-                "No...":
-                    m "Oh..."
-                    m "Do you want to try a different technique?"
-                    m "Or..."
-
-                    menu:
-                        "No... Just let me hold you, please?":
-                            m "Of course, my angel."
-                            m "Come here..."
-
-                                            # (hold here)
-
-        # DIALOGUE FOR URGE LOW LEVEL
-
-        "Something triggered me, and now i'm remembering bad things.":
-            m "I'm so glad you came to talk to me, [player]."
-            m "You know how much i worry about you..."
-            m "But for now, let me take care of you..."
-
-            m "Do you want to vent? Maybe tell me what triggered this?{nw}"
-            menu:
-                m "{fast}Do you want to vent? Maybe tell me what triggered this?"
-
-                "Yes":
-                    m "Okay... I don't want to interrupt you."
-
-                    m "Tell me when you're done, okay?{nw}"
-                    menu:
-                        m "{fast}Tell me when you're done, okay?"
-
-                        "I'm done, Monika.":
-                            m "I'm so sorry you are going through all that, [player]."
-
-                            m "Do you feel better now?{nw}"
-                            menu:
-                                m "{fast}Do you feel better now?"
-
-                                "Yes, [m_name]. Thank you.":
-                                    m "Oh, honey. I'm so glad!"
-                                    m "I'm so glad you came to talk to me, [player]."
-                                    m "You can always count on me, for anything."
-                                    m "If it happens again, don't be afraid to ask for help."
-                                    m "I'm here for you, [player]."
-                                    m "Now, let's spend some more time together?"
-
-                                    return
-
-                                "No...":
-                                    m "Oh..."
-                                    m "Do you want my help to forget it?"
-
-                                    m "Or...{nw}"
-                                    menu:
-                                        m "{fast}Or..."
-                                        "No... Just let me hold you, please?":
-                                            m "Of course, my angel."
-                                            m "Come here..."
-
-                                            # (hold here)
-
-                                        "Yes, I want to try a calming techinque.":
-                                            m "Alright, baby."
-                                            m "I want you to..."
-                                            jump randomness
-                                            # (calm harm technique here)
-
-            # pause (3.0)
-          #  m ""
-          #  m ""
-          #  m ""
-          #  m ""
-
-            m "Are you feeling better, [player]?{nw}"
-            menu:
-                m "{fast}Are you feeling better, [player]?"
-
-                "Yes, [m_name]. Thank you.":
-                    m "Oh, honey. I'm so glad!"
-                    m "You can always count on me, for anything."
-                    m "If it happens again, don't be afraid to ask for help."
-                    m "I'm here for you, [player]."
-
-                    return
-
-                "No...":
-                    m "Oh..."
-                    m "Do you want to try a different technique?"
-                    m "Or..."
-
-                    menu:
-                        "No... Just let me hold you, please?":
-                            m "Of course, my angel."
-                            m "Come here..."
-
-                                            # (hold here)
-
-    return
-
-# RANDOM EVENT ABOUT SELF-HARM TECHNIQUES.
-
-init 5 python:
-    addEvent(
-        Event(
-            persistent.event_database,
-            eventlabel="mas_selfharm5",
-            conditional=(
-                "seen_event('mas_selfharm1')",
-                "persistent._msh_mod_pm_did_selfharm = True"
-            ),
-            action=EV_ACT_QUEUE
-        )
-    )
-
-label mas_selfharm5:
-    m "Hey, [player]..."
-    m "Remember when you told me about you... harming yourself?"
-    m "I decided to research some techniques that could help you."
-    m "Please make sure to tell me what would work for you."
-    m "I hope some of these solutions can help you..."
-    m "But please, try not to harm yourself, okay?"
-    m "I know it's really hard to not do so when things get tough."
-    m "But in the end, isn't it about feeling bad about yourself?"
-    m "Of course everyone has a different reason..."
-    m "Stress, low self-esteem, and so on."
-    m "But all these bad feelings can be slowly neutered with the habit to take better care of yourself."
-    m "So, please, [player]..."
-    m "Do something good for yourself today, and remember that I really love you."
-
-    return
-
-# RANDOM EVENT, TECHNIQUE 1.
-
-init 5 python:
-    addEvent(
-        Event(
-            persistent.event_database,
-            eventlabel="mas_selfharm3",
-            action=EV_ACT_QUEUE
-        )
-    )
-
-label mas_selfharm3:
-    m "Hey... [player]?"
-    m "This may sound a bit random, but..."
-    m "Is it sunny today over there?"
-    m "If it is, I think you should go out and enjoy the sun for a bit."
-    m "Don't worry! I'll wait!"
-    m "Maybe bring a book with you so you can relax even more."
-    m "Enjoying literature in the nature would surely relax me..."
-    m "I hope this works for you, too."
-
-    return
-
-# calm techniques (archive for randomizing)
-# 1
-
-# I DONT KNOW WHERE TO PUT THIS, HELP, KIT
-init 5 python:
-    addEvent(
-        Event(
-            persistent.event_database,
-            eventlabel="mas_selfharm4",
-            conditional=(
-                "not seen_event('mas_selfharm4')"
-            ),
-            aff_range=(mas_aff.BROKEN, mas_aff.NORMAL),
-            action=EV_ACT_QUEUE
-        )
-    )
-
-label mas_selfharm4:
-    m "Hey, [player]?"
-    m "I know it might be an uncomfortable topic, but I have to ask..."
-    m "D-{w=1.0}Do you self harm?"
-    menu:
         "Yes":
-            $ persistent._msh_mod_pm_did_selfharm = True
-            m "I'm so sorry you're going through this."
-            m "You know... It's really sad to see you feel bad in any way."
-            m "After all, you wanted to be with me at some point..."
-            m "That was kind of you."
-            m "Whatever the reason you stayed with me was, I appreciate it."
-            m "But let's stay on this subject."
-            m "Do you want to talk about it?"
+            m "Thank you for letting me speak about this [mas_get_player_nickname()], I've been thinking about it a little bit more lately."
+            m "After I hurt myself, I realized that I had made huge a mistake..."
+            m "At first I thought that it was exhilarating, I even wrote about it!"
+            m "But after reflecting upon it when we started talking more about self-harm, it really changed my mind."
+            m "I had gotten no relief or satisfaction, if anything I was just disappointed."
+            m "Yuri had made it seem like such a thrill - to me it was almost only just boring..."
+            m "...It kept reminding me of my recent discovery."
+            m "My pain was just coded, along with my blood and the knife I was holding..."
+            m "But even if it was real, pain doesn't satisfy or relieve my emotions."
+            m "I know now that talking things out with you when I'm upset..."
+            m "...and keeping hope for a brighter tomorrow is a much better coping mechanism!"
+            m "Just keep in mind that there are better ways to cope and that I'm always here to provide techniques to help."
+            m "I care too much about you [player]... You don't deserve any pain."
+            m "You deserve to work through things healthily, and [m_name] is here to help!" # TODO: do we need m_name here..?
 
     return
