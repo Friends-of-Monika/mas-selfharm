@@ -28,8 +28,6 @@ label mshMod_promise:
         mas_lockEVL("mshMod_promise", "EVE")
 
     return "love"
-<<<<<<< HEAD
-=======
 
 
 init 5 python:
@@ -64,4 +62,3 @@ label mshMod_relapse:
         mshMod_lockEVL("mshMod_relapse", "EVE")
 
     return
->>>>>>> relapse-dialogue
