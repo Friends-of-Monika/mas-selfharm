@@ -6,7 +6,7 @@ init 5 python:
             category=["self-harm"],
             prompt="I promise...",
             conditional="not mshMod_isOnStreak() and persistent._msh_mod_pm_did_selfharm",
-            action=EV_ACT_POOL
+            action=EV_ACT_POOL,
             unlocked=True
         )
     )
