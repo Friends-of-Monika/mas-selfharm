@@ -449,7 +449,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_sunny_day",
             prompt="Sunny day",
-            categories=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topics
+            category=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topics
             random=True
         )
     )
@@ -474,7 +474,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_awareness_day",
             prompt="Sunny day",
-            categories=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topics
+            category=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topics
             start_date=_mshMod_event_siad_date,
             end_date=_mshMod_event_siad_date + datetime.timedelta(days=1),
             years=[],
@@ -513,7 +513,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_semicolor_project",
             prompt="The Semicolon Project",
-            categories=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topics
+            category=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topics
             random=True
         )
     )
@@ -577,7 +577,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_selfharm_random_thoughts",
             prompt="Monika's experience",
-            categories=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topcis
+            category=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topcis
             random=True
         )
     )
