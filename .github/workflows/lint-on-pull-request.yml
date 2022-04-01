@@ -4,7 +4,6 @@ on:
   push:
     paths: [ '*.rpy' ]
   pull_request:
-    types: [ opened ]
     paths: [ '*.rpy' ]
     branches: [ dev ]
 
