@@ -17,7 +17,7 @@ Here's a list of people who have been working on this submod!
 * [<img width="16" src=".github/icons/reddit.svg"> u/AmyKawa](https://reddit.com/u/AmyKawa)
   — dialogue writing, programming and sprite coding
 * [<img width="16" src=".github/icons/reddit.svg"> u/mayday-mayjay](https://reddit.com/u/mayday-mayjay)
-  [<img width="16" src=".github/icons/discord.svg"> DJChicken#2001
+  <img width="16" src=".github/icons/discord.svg"> DJChicken#2001
   — dialogue writing, spritepack desigining
 * [<img width="16" src=".github/icons/reddit.svg"> u/charliethecookie](https://reddit.com/u/charliethecookie)
   — dialogue writing
