@@ -4,7 +4,7 @@ init -100 python:
     _mshMod_TECHNIQUE_MENU_EXIT_ITEM = ("Nevermind", None, False, False)
 
 
-# # When needed, use this code to unlock
+# When needed, use this code to unlock
 # label mshMod_technique_pickRandom:
 #     python:
 #         items = Event.filterEvents(
