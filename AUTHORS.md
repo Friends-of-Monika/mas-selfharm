@@ -22,7 +22,8 @@ Here's a list of people who have been working on this submod!
   — dialogue writing, sprite coding
 * <img width="16" src=".github/icons/discord.svg"> Cap'n Crow 🌈#0123
   — dialogue writing
-* Nem <img width="16" src=".github/icons/discord.svg"> WentPostal#3452
+* <img width="16" src=".github/icons/user.svg"> Nem
+  <img width="16" src=".github/icons/discord.svg"> WentPostal#3452
   — dialogue writing
 * <img width="16" src=".github/icons/discord.svg"> lukilak#1046
   — dialogue writing
