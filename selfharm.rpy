@@ -92,19 +92,8 @@ label mshMod_urge_high:
                                     call monika_holdme_end
 
                                 "Yes, I want to try a calming techinque.":
-                                    m 1eka "Alright, baby."
-                                    m 3esa "I want you to try the 4-7-8 breathing exercise!..."
-                                    m 3esd "First of all, please straighten your back."
-                                    m 4esb "Once you become familiar with this breathing exercise, you can perform it while lying in bed too!"
-                                    m 3esa "Place and keep the tip of your tongue against the ridge of tissue behind your upper front teeth for the duration of the exercise."
-                                    m 3esd "Completely exhale through your mouth, making a {i}woosh{/i} sound."
-                                    m 3dsd "Close your mouth and inhale quietly through your nose to a mental count of four."
-                                    m 1dsc "{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}."
-                                    m 1dsd "Hold your breath for a count of seven."
-                                    m 1dsc "{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}."
-                                    m 1dsd "Exhale completely through your mouth, making a {i}woosh{/i} sound to a count of eight."
-                                    m 1duo "{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}."
-                                    m 1eua "Aaaand, you're done!"
+                                    call mshMod_technique_random
+
                                     m 3eka "Are you feeling better, [player]?"
                                     menu:
                                         m "{fast}Are you feeling better, [player]?"
