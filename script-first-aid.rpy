@@ -96,7 +96,7 @@ label mshMod_first_aid_guide:
                     m 2ekd "If it does, just let me know and I'll repeat those steps. Okay?"
                     m "And also, if you asked for this first aid help because you relapsed..."
                     m "And you want me to reset the sober counter for you..."
-                    m "Let me know on the topic "I relapsed...", please."
+                    m "Let me know on the topic \"I relapsed...\", please."
                     m 2eka "Take care, [player]."
                     m 2dka "You know how much I love you!"
                     return "love"
