@@ -24,6 +24,8 @@ Here's a list of people who have been working on this submod!
   — dialogue writing
 * Nem <img width="16" src=".github/icons/discord.svg"> WentPostal#3452
   — dialogue writing
+* <img width="16" src=".github/icons/discord.svg"> lukilak#1046
+  — dialogue writing
 * [<img width="16" src=".github/icons/reddit.svg"> u/History_Variety63](https://reddit.com/u/History_Variety63)
   — insights and ideas
 * <img width="16" src=".github/icons/user.svg"> Feenie
