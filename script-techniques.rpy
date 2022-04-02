@@ -4,8 +4,25 @@ init -100 python:
     _mshMod_TECHNIQUE_MENU_EXIT_ITEM = ("Nevermind", None, False, False)
 
 
-# When needed, use this code to unlock
-
+# # When needed, use this code to unlock
+# label mshMod_technique_pickRandom:
+#     python:
+#         items = Event.filterEvents(
+#             persistent._msh_mod_technique_database,
+#             unlocked=False
+#         ).values()
+#
+#     if not items:
+#         m "Hmm... Oh. I think I ran out of ideas, [player]..."
+#         m "But I'll let you know once I'll think of something new!"
+#         m "In the meantime, you can always ask me about techniques I told you about earlier~"
+#
+#     else:
+#         ev = items[random.randint(len(items))]
+#         ev.unlocked = True
+#         pushEvent(ev.eventlabel, skipeval=True)
+#
+#     return
 
 init 5 python:
     addEvent(
@@ -42,26 +59,6 @@ label mshMod_technique_menu:
     $ pushEvent(_return, skipeval=True)
 
     return
-
-
-# label mshMod_technique_pickRandom:
-#     python:
-#         items = Event.filterEvents(
-#             persistent._msh_mod_technique_database,
-#             unlocked=False
-#         ).values()
-#
-#     if not items:
-#         m "Hmm... Oh. I think I ran out of ideas, [player]..."
-#         m "But I'll let you know once I'll think of something new!"
-#         m "In the meantime, you can always ask me about techniques I told you about earlier~"
-#
-#     else:
-#         ev = items[random.randint(len(items))]
-#         ev.unlocked = True
-#         pushEvent(ev.eventlabel, skipeval=True)
-#
-#     return
 
 
 init 5 python:
