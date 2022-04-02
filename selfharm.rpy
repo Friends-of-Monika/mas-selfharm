@@ -167,3 +167,26 @@ label mshMod_selfharm_random_thoughts:
             m "You deserve to work through things healthily, and [m_name] is here to help!" # TODO: do we need m_name here..?
 
     return
+    
+# DEPRESSION AVOIDING ROUTINE RANDOM EVENTS (1/6)
+
+    m "Hey [player]?" 
+    m "Do you have a morning routine?"
+    m "I notice a lot of people seem not to realize the impact a morning routine can have on your day."
+    m "But really, it can mean a world of difference for some!"
+    m "I think many figure that, 'Well, because I just woke up I'm always going to feel sluggish in the morning, there's nothing I could do about that.'"
+    m "For some, that mindset makes it very hard to want to get up in the morning and face the day..."
+    m "But it doesn't have to be that way, there are ways to make getting up in the morning less harsh, and more energizing!"
+    m "My first tip is going to be the obvious one but..."
+    extend m "start getting into a nice sleeping rhythm! A big reason we can feel so bad in the morning is having an alarm pull you out of a deep sleep, or just not resting enough at all!"
+    m "Find a time to go to sleep that let's you {i}comfortably{/i} wake up around the time you need to be up for the day, and you'll feel a big difference already!"
+    m "Next tip, if you have alarms, set your alarm a little further back then you usually do, or at least make sure you're giving yourself enough time so you aren't rushing out the doors every morning!"
+    m "Now with that extra time, use it to get some quiet time in for yourself and actually {i}wake up{/i} for the day."
+    extend m "Maybe do a little meditation- or pray,if you'religious... Make breakfast, read books, or even write down your plans for day."
+    m "As long as it's something that {i}you{/i} want to do and makes you happy, go for it!"
+    m "Just... try not to go online during your morning time."
+    extend m "With how chaotic the world and internet can be, going online might influence your mood for the day if you see something distressing or weird."
+    m "Instead, let the mornings be {i}you{/i} time, where you get to decide what to do and how to feel, okay?"
+	m "And hey, I wouldn't mind being a part of your morning routine too, if you need some extra motivation, [mas_get_player_nickname()]." 
+	m "Ehehe~"
+    m "I hope these tips are helpful to you, [player]!"
