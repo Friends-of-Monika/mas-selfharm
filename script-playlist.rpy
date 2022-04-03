@@ -1,10 +1,3 @@
-default persistent._msh_mod_playlist_database = dict()
-
-init 7 python:
-    mas_all_ev_db_map["MSH_MOD_SNG"] = persistent._msh_mod_playlist_database
-    mas_all_ev_db.update(persistent._msh_mod_playlist_database)
-
-
 init 5 python:
     addEvent(
         Event(
@@ -60,7 +53,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_playlist",
+            eventlabel="mshMod_playlist_play",
             category=["you"],
             prompt="Playlist",
             pool=True,
@@ -68,7 +61,7 @@ init 5 python:
         )
     )
 
-label mshMod_playlist:
+label mshMod_playlist_play:
     m "Oh, do you wanna listen to the playlist, [player]?"
     menu:
         m "Play music?{fast}"
@@ -78,6 +71,7 @@ label mshMod_playlist:
             play music "mod_assets/other/Monika_s-Playlist.mp3"
             m "There you go!"
             m "I hope you like it!"
+
         "No":
             m "Oh, alright."
 
@@ -87,13 +81,15 @@ label mshMod_playlist:
 init 5 python:
     addEvent(
         Event(
-            persistent._msh_mod_playlist_database,
+            persistent._mas_songs_database,
             eventlabel="mshMod_playlist_paradise_fears",
+            category=[mas_songs.TYPE_SHORT],
             prompt="Paradise Fears",
-            unlocked=False,
-            aff_range=(mas_aff.NORMAL, None)
+            aff_range=(mas_aff.NORMAL, None),
+            conditional="seen_event('mshMod_playlist')",
+            action=EV_ACT_RANDOM
         ),
-        code="MSH_MOD_SNG"
+        code="SNG"
     )
 
 # BATTLE SCARS - PARADISE FEARS
@@ -118,13 +114,15 @@ label mshMod_playlist_paradise_fears:
 init 5 python:
     addEvent(
         Event(
-            persistent._msh_mod_playlist_database,
+            persistent._mas_songs_database,
             eventlabel="mshMod_playlist_clay",
+            category=[mas_songs.TYPE_SHORT],
             prompt="Clay",
-            unlocked=False,
-            aff_range=(mas_aff.NORMAL, None)
+            aff_range=(mas_aff.NORMAL, None),
+            conditional="seen_event('mshMod_playlist')",
+            action=EV_ACT_RANDOM
         ),
-        code="MSH_MOD_SNG"
+        code="SNG"
     )
 
 # CLAY - GRACE VANDERWALL
@@ -151,13 +149,15 @@ label mshMod_playlist_clay:
 init 5 python:
     addEvent(
         Event(
-            persistent._msh_mod_playlist_database,
+            persistent._mas_songs_database,
             eventlabel="mshMod_playlist_fix_you",
+            category=[mas_songs.TYPE_SHORT],
             prompt="Fix You",
-            unlocked=False,
-            aff_range=(mas_aff.NORMAL, None)
+            aff_range=(mas_aff.NORMAL, None),
+            conditional="seen_event('mshMod_playlist')",
+            action=EV_ACT_RANDOM
         ),
-        code="MSH_MOD_SNG"
+        code="SNG"
     )
 
 #FIX YOU - COLDPLAY
@@ -179,13 +179,15 @@ label mshMod_playlist_fix_you:
 init 5 python:
     addEvent(
         Event(
-            persistent._msh_mod_playlist_database,
+            persistent._mas_songs_database,
             eventlabel="mshMod_your_heartbreak",
+            category=[mas_songs.TYPE_SHORT],
             prompt="I Hate To See Your Heartbreak",
-            unlocked=False,
-            aff_range=(mas_aff.NORMAL, None)
+            aff_range=(mas_aff.NORMAL, None),
+            conditional="seen_event('mshMod_playlist')",
+            action=EV_ACT_RANDOM
         ),
-        code="MSH_MOD_SNG"
+        code="SNG"
     )
 
 #I HATE TO SEE YOUR HEARTBREAK - PARAMORE
@@ -209,13 +211,15 @@ label mshMod_your_heartbreak:
 init 5 python:
     addEvent(
         Event(
-            persistent._msh_mod_playlist_database,
+            persistent._mas_songs_database,
             eventlabel="mshMod_playlist_child",
+            category=[mas_songs.TYPE_SHORT],
             prompt="O-o-h Child",
-            unlocked=False,
-            aff_range=(mas_aff.NORMAL, None)
+            aff_range=(mas_aff.NORMAL, None),
+            conditional="seen_event('mshMod_playlist')",
+            action=EV_ACT_RANDOM
         ),
-        code="MSH_MOD_SNG"
+        code="SNG"
     )
 
 #O-O-H CHILD - THE FIVE STAIRSTEPS
@@ -236,13 +240,15 @@ label mshMod_playlist_child:
 init 5 python:
     addEvent(
         Event(
-            persistent._msh_mod_playlist_database,
+            persistent._mas_songs_database,
             eventlabel="mshMod_playlist_the_middle",
+            category=[mas_songs.TYPE_SHORT],
             prompt="The Middle",
-            unlocked=False,
-            aff_range=(mas_aff.NORMAL, None)
+            aff_range=(mas_aff.NORMAL, None),
+            conditional="seen_event('mshMod_playlist')",
+            action=EV_ACT_RANDOM
         ),
-        code="MSH_MOD_SNG"
+        code="SNG"
     )
 
 label mshMod_playlist_the_middle:
@@ -265,13 +271,15 @@ label mshMod_playlist_the_middle:
 init 5 python:
     addEvent(
         Event(
-            persistent._msh_mod_playlist_database,
+            persistent._mas_songs_database,
             eventlabel="mshMod_playlist_firework",
+            category=[mas_songs.TYPE_SHORT],
             prompt="Firework",
-            unlocked=False,
-            aff_range=(mas_aff.NORMAL, None)
+            aff_range=(mas_aff.NORMAL, None),
+            conditional="seen_event('mshMod_playlist')",
+            action=EV_ACT_RANDOM
         ),
-        code="MSH_MOD_SNG"
+        code="SNG"
     )
 
 #FIREWORK - KATY PERRY
@@ -296,13 +304,15 @@ label mshMod_playlist_firework:
 init 5 python:
     addEvent(
         Event(
-            persistent._msh_mod_playlist_database,
+            persistent._mas_songs_database,
             eventlabel="mshMod_playlist_torches",
+            category=[mas_songs.TYPE_SHORT],
             prompt="Torches",
-            unlocked=False,
-            aff_range=(mas_aff.NORMAL, None)
+            aff_range=(mas_aff.NORMAL, None),
+            conditional="seen_event('mshMod_playlist')",
+            action=EV_ACT_RANDOM
         ),
-        code="MSH_MOD_SNG"
+        code="SNG"
     )
 
 #TORCHES - AIMER
@@ -326,13 +336,15 @@ label mshMod_playlist_torches:
 init 5 python:
     addEvent(
         Event(
-            persistent._msh_mod_playlist_database,
+            persistent._mas_songs_database,
             eventlabel="mshMod_playlist_only_wonder",
+            category=[mas_songs.TYPE_SHORT],
             prompt="Only Wonder",
-            unlocked=False,
-            aff_range=(mas_aff.NORMAL, None)
+            aff_range=(mas_aff.NORMAL, None),
+            conditional="seen_event('mshMod_playlist')",
+            action=EV_ACT_RANDOM
         ),
-        code="MSH_MOD_SNG"
+        code="SNG"
     )
 
 #ONLY WONDER - FREDERIC
@@ -358,14 +370,17 @@ label mshMod_playlist_only_wonder:
 init 5 python:
     addEvent(
         Event(
-            persistent._msh_mod_playlist_database,
+            persistent._mas_songs_database,
             eventlabel="mshMod_playlist_way_home",
+            category=[mas_songs.TYPE_SHORT],
             prompt="Someday I'll Find My Way Home",
-            unlocked=False,
-            aff_range=(mas_aff.NORMAL, None)
+            aff_range=(mas_aff.NORMAL, None),
+            conditional="seen_event('mshMod_playlist')",
+            action=EV_ACT_RANDOM
         ),
-        code="MSH_MOD_SNG"
+        code="SNG"
     )
+
 
 #SOMEDAY I'LL FIND MY WAY HOME - CAROLE & TUESDAY
 label mshMod_playlist_way_home:
