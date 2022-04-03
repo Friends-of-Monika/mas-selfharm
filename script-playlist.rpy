@@ -1,3 +1,5 @@
+# PLAYLIST DIALOGUES
+
 init 5 python:
     addEvent(
         Event(
@@ -47,8 +49,6 @@ label mshMod_playlist:
     return "love|derandom"
 
 
-#PLAYLIST DIALOGUES
-
 init 5 python:
     addEvent(
         Event(
@@ -78,6 +78,10 @@ label mshMod_playlist_play:
     return
 
 
+# SONGS
+
+# BATTLE SCARS - PARADISE FEARS
+
 init 5 python:
     addEvent(
         Event(
@@ -92,7 +96,6 @@ init 5 python:
         code="SNG"
     )
 
-# BATTLE SCARS - PARADISE FEARS
 label mshMod_playlist_paradise_fears:
     m "{i}~I'll carry you home~{/i}"
     m "{i}~No, you're not, alone~{/i}"
@@ -111,6 +114,8 @@ label mshMod_playlist_paradise_fears:
     return "love"
 
 
+# CLAY - GRACE VANDERWALL
+
 init 5 python:
     addEvent(
         Event(
@@ -125,7 +130,6 @@ init 5 python:
         code="SNG"
     )
 
-# CLAY - GRACE VANDERWALL
 label mshMod_playlist_clay:
     m "{i}~Your silly words~{/i}"
     m "{i}~I won't live inside your world~{/i}"
@@ -146,6 +150,8 @@ label mshMod_playlist_clay:
     return "love"
 
 
+# FIX YOU - COLDPLAY
+
 init 5 python:
     addEvent(
         Event(
@@ -160,7 +166,6 @@ init 5 python:
         code="SNG"
     )
 
-#FIX YOU - COLDPLAY
 label mshMod_playlist_fix_you:
     m "{i}~But if you never try, you'll never know~{/i}"
     m "{i}~Just what you're worth~{/i}"
@@ -176,6 +181,8 @@ label mshMod_playlist_fix_you:
     return "love"
 
 
+# I HATE TO SEE YOUR HEARTBREAK - PARAMORE
+
 init 5 python:
     addEvent(
         Event(
@@ -190,7 +197,6 @@ init 5 python:
         code="SNG"
     )
 
-#I HATE TO SEE YOUR HEARTBREAK - PARAMORE
 label mshMod_your_heartbreak:
     m "{i}~And I, I hate to see your heart break~{/i}"
     m "{i}~I hate to see your eyes get darker as they close~{/i}"
@@ -208,6 +214,8 @@ label mshMod_your_heartbreak:
     return "love"
 
 
+# O-O-H CHILD - THE FIVE STAIRSTEPS
+
 init 5 python:
     addEvent(
         Event(
@@ -222,7 +230,6 @@ init 5 python:
         code="SNG"
     )
 
-#O-O-H CHILD - THE FIVE STAIRSTEPS
 label mshMod_playlist_child:
     m "{i}~Ooh child, things are gonna get easier~{/i}"
     m "{i}~Ooh child, things'll get brighter~{/i}"
@@ -236,6 +243,8 @@ label mshMod_playlist_child:
     m "And always will."
     return "love"
 
+
+# THE MIDDLE - JIMMY EAT WORLD
 
 init 5 python:
     addEvent(
@@ -252,7 +261,6 @@ init 5 python:
     )
 
 label mshMod_playlist_the_middle:
-#THE MIDDLE - JIMMY EAT WORLD
     m "{i}~It just takes some time~{/i}"
     m "{i}~Little girl, you're in the middle of the ride~{/i}"
     m "{i}~Everything, everything'll be just fine~{/i}"
@@ -268,6 +276,8 @@ label mshMod_playlist_the_middle:
     return "love"
 
 
+# FIREWORK - KATY PERRY
+
 init 5 python:
     addEvent(
         Event(
@@ -282,7 +292,6 @@ init 5 python:
         code="SNG"
     )
 
-#FIREWORK - KATY PERRY
 label mshMod_playlist_firework:
     m "{i}Do you ever feel, feel so paper thin~{/i}"
     m "{i}Like a house of cards~{/i}"
@@ -301,6 +310,8 @@ label mshMod_playlist_firework:
     return
 
 
+# TORCHES - AIMER
+
 init 5 python:
     addEvent(
         Event(
@@ -315,7 +326,6 @@ init 5 python:
         code="SNG"
     )
 
-#TORCHES - AIMER
 label mshMod_playlist_torches:
     m "{i}~Listen to me, cleave your way again, again~~{/i}"
     m "{i}~Wishing to find a way in an unseen ocean~{/i}"
@@ -333,6 +343,8 @@ label mshMod_playlist_torches:
     return
 
 
+# ONLY WONDER - FREDERIC
+
 init 5 python:
     addEvent(
         Event(
@@ -347,7 +359,6 @@ init 5 python:
         code="SNG"
     )
 
-#ONLY WONDER - FREDERIC
 label mshMod_playlist_only_wonder:
     m "{i}~What’re you sayin’? Everybody’s different!~{/i}"
     m "{i}~Stop messin’ with me, I’ll have to shut you out~{/i}"
@@ -367,6 +378,8 @@ label mshMod_playlist_only_wonder:
     return "love"
 
 
+# SOMEDAY I'LL FIND MY WAY HOME - CAROLE & TUESDAY
+
 init 5 python:
     addEvent(
         Event(
@@ -381,8 +394,6 @@ init 5 python:
         code="SNG"
     )
 
-
-#SOMEDAY I'LL FIND MY WAY HOME - CAROLE & TUESDAY
 label mshMod_playlist_way_home:
     m "{i}~Someday I’ll find my way home~{/i}"
     m "{i}~The trees in the wind will lead the way~{/i}"
