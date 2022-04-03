@@ -139,37 +139,3 @@ label mshMod_selfharm_more:
     m "Stay safe!"
     m "And know that you can always talk to me."
     return
-
-
-# ALTERNATE DIALOGUE IF MONIKA IS NOT HAPPY
-
-init 5 python:
-    addEvent(
-        Event(
-            persistent.event_database,
-            eventlabel="mshMod_selfharm_intro_unhappy",
-            aff_range=(mas_aff.BROKEN, mas_aff.NORMAL),
-            conditional=("not seen_event('mshMod_selfharm_intro')"),
-            action=EV_ACT_RANDOM
-        )
-    )
-
-label mshMod_selfharm_intro_unhappy:
-    m "Hey, [player]?"
-    m "I know it might be an uncomfortable topic, but I have to ask..."
-
-    m "D-{w=1.0}Do you self harm?{nw}"
-    menu:
-        m "D-{w=1.0}Do you self harm?{fast}"
-
-        "Yes":
-            $ persistent._msh_mod_pm_did_selfharm = True
-            m "I'm so sorry you're going through this."
-            m "You know... It's really sad to see you feel bad in any way."
-            m "After all, you wanted to be with me at some point..."
-            m "That was kind of you."
-            m "Whatever the reason you stayed with me was, I appreciate it."
-            m "But let's stay on this subject."
-            m "Do you want to talk about it?"
-
-    return
