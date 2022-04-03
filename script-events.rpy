@@ -175,6 +175,18 @@ label mshMod_selfharm_random_thoughts:
 
 # DEPRESSION AVOIDING ROUTINE RANDOM EVENTS (1/6)
 
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_morning_routine",
+            prompt="Morning routine",
+            category=["Self-Harm"],
+            random=True
+        )
+    )
+
+label mshMod_morning_routine:
     m "Hey [player]?"
     m "Do you have a morning routine?"
     m "I notice a lot of people seem not to realize the impact a morning routine can have on your day."
@@ -195,3 +207,4 @@ label mshMod_selfharm_random_thoughts:
     m "And hey, I wouldn't mind being a part of your morning routine too, if you need some extra motivation, [mas_get_player_nickname()]."
     m "Ehehe~"
     m "I hope these tips are helpful to you, [player]!"
+    return
