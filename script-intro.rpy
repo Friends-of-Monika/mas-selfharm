@@ -1,5 +1,3 @@
-# FIRST RANDOM EVENT ABOUT SELF-HARM.
-
 define persistent._msh_mod_pm_did_selfharm = None
 
 init 5 python:
