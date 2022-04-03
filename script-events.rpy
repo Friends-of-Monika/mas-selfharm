@@ -172,10 +172,10 @@ label mshMod_selfharm_random_thoughts:
             m "You deserve to work through things healthily, and [m_name] is here to help!" # TODO: do we need m_name here..?
 
     return
-    
+
 # DEPRESSION AVOIDING ROUTINE RANDOM EVENTS (1/6)
 
-    m "Hey [player]?" 
+    m "Hey [player]?"
     m "Do you have a morning routine?"
     m "I notice a lot of people seem not to realize the impact a morning routine can have on your day."
     m "But really, it can mean a world of difference for some!"
@@ -192,6 +192,6 @@ label mshMod_selfharm_random_thoughts:
     m "Just... try not to go online during your morning time."
     extend m "With how chaotic the world and internet can be, going online might influence your mood for the day if you see something distressing or weird."
     m "Instead, let the mornings be {i}you{/i} time, where you get to decide what to do and how to feel, okay?"
-	m "And hey, I wouldn't mind being a part of your morning routine too, if you need some extra motivation, [mas_get_player_nickname()]." 
-	m "Ehehe~"
+    m "And hey, I wouldn't mind being a part of your morning routine too, if you need some extra motivation, [mas_get_player_nickname()]."
+    m "Ehehe~"
     m "I hope these tips are helpful to you, [player]!"
