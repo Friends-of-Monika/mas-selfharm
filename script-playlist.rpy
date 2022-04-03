@@ -1,6 +1,6 @@
 default persistent._msh_mod_playlist_database = dict()
 
-init 5 python:
+init 7 python:
     mas_all_ev_db_map["MSH_MOD_SNG"] = persistent._msh_mod_playlist_database
     mas_all_ev_db.update(persistent._msh_mod_playlist_database)
 
