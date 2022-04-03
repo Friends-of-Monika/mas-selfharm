@@ -1,3 +1,5 @@
+# Random events that Monika brings up occasionally.
+
 init 5 python:
     addEvent(
         Event(
@@ -38,6 +40,7 @@ init 5 python:
         )
     )
 
+    # Only add it to calendar after it was seen.
     if seen_event("mshMod_awareness_day"):
         calendar.addRepeatable("mshMod_awareness_day", _("Self-harm awareness day"), month=3, day=1, year_param=[])
 
@@ -62,6 +65,7 @@ label mshMod_awareness_day:
     m 2eka "Anyway! Thanks for listening!"
     m 1hub "I love you, [Player]!"
 
+    # Ensure it'll render on calendar without a need to restart.
     $ calendar.addRepeatable("mshMod_awareness_day", _("Self-harm awareness day"), month=3, day=1, year_param=[])
 
     return "love"
@@ -169,11 +173,12 @@ label mshMod_selfharm_random_thoughts:
             m "...and keeping hope for a brighter tomorrow is a much better coping mechanism!"
             m "Just keep in mind that there are better ways to cope and that I'm always here to provide techniques to help."
             m "I care too much about you [player]... You don't deserve any pain."
-            m "You deserve to work through things healthily, and [m_name] is here to help!" # TODO: do we need m_name here..?
+            m "You deserve to work through things healthily, and [m_name] is here to help!"
 
     return
 
-# DEPRESSION AVOIDING ROUTINE RANDOM EVENTS (1/6)
+
+# Depression avoiding routine events
 
 init 5 python:
     addEvent(
