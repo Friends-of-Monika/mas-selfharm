@@ -72,6 +72,20 @@ init 4 python:
 
         return persistent._msh_mod_pm_sober_streak is not None
 
+    def mshMod_getStreakDuration():
+        """
+        Calculates amount of days since the first day of streak.
+
+        NOTE: This function asserts player is on sober streak.
+
+        RETURNS:
+            Integer amount of days since initial sober streak date.
+        """
+
+        _mshMod_assertOnStreak()
+
+        return (datetime.date.today() - persistent._msh_mod_pm_sober_streak).days
+
     def mshMod_beginStreak():
         """
         Begins streak if player is not on it already.
@@ -542,7 +556,7 @@ init 4 python:
             del persistent._seen_ever[label]
 
 
-init 6 python:
+init 7 python:
 
     ### MILESTONE EVENT PROPERTIES UNLOCK ###
 
@@ -625,7 +639,6 @@ init 5 python:
             action=EV_ACT_QUEUE
         )
     )
-
 
 label mshMod_milestone_personal_best:
     # This exists just for sake of rendering of the personal best
