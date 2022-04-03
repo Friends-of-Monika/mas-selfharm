@@ -16,7 +16,7 @@ label mshMod_playlist:
     m 1hub "Well, better show it to you."
     m 1esb  "I... made you a playlist!"
     m 1tkbla "Romantic, isn't it?"
-    m 3hsb "You can access it on "Music"."
+    m 3hsb "You can access it on \"Music\"."
     m "Or I can play it for you!"
     m "Do you want me to?"
         m "Yes"
