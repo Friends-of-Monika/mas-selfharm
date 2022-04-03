@@ -4,7 +4,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_sunny_day",
             prompt="Sunny day",
-            category=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topics
+            category=["weather"],
             random=True
         )
     )
@@ -22,14 +22,15 @@ label mshMod_sunny_day:
 
 
 init 5 python:
+    # P.S. 'SIAD' is 'Self Injury Awareness Day', this is not a typo.
     _mshMod_event_siad_date = datetime.date(datetime.date.today().year, 3, 1)
 
     addEvent(
         Event(
             persistent.event_database,
             eventlabel="mshMod_awareness_day",
-            prompt="Sunny day",
-            category=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topics
+            prompt="Self-Harm Awareness Day",
+            category=["Self-Harm"],
             start_date=_mshMod_event_siad_date,
             end_date=_mshMod_event_siad_date + datetime.timedelta(days=1),
             years=[],
@@ -37,7 +38,8 @@ init 5 python:
         )
     )
 
-    calendar.addRepeatable("mshMod_awareness_day", _("Self-harm awareness day"), month=3, day=1, year_param=[])
+    if seen_event("mshMod_awareness_day"):
+        calendar.addRepeatable("mshMod_awareness_day", _("Self-harm awareness day"), month=3, day=1, year_param=[])
 
 label mshMod_awareness_day:
     m 3eub "[player], did you know that today is Self-Harm Awareness day?"
@@ -59,6 +61,9 @@ label mshMod_awareness_day:
     m 2esd "But self-harm is not the way."
     m 2eka "Anyway! Thanks for listening!"
     m 1hub "I love you, [Player]!"
+
+    $ calendar.addRepeatable("mshMod_awareness_day", _("Self-harm awareness day"), month=3, day=1, year_param=[])
+
     return "love"
 
 
@@ -68,7 +73,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_semicolon_project",
             prompt="The Semicolon Project",
-            category=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topics
+            category=["Self-Harm"],
             random=True
         )
     )
@@ -100,7 +105,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_butterfly_project",
-            category=["media"],
+            category=["media", "Self-Harm"],
             prompt="The Butterfly Project",
             random=True
         )
@@ -131,8 +136,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_selfharm_random_thoughts",
-            prompt="Monika's experience",
-            category=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topcis
+            prompt="Monika's self-harm experience",
+            category=["monika", "Self-Harm"],
             random=True
         )
     )
