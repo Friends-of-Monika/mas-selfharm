@@ -1,9 +1,17 @@
+default persistent._msh_mod_playlist_database = dict()
+
+init 5 python:
+    mas_all_ev_db_map["MSH_MOD_SNG"] = persistent._msh_mod_playlist_database
+    mas_all_ev_db.update(persistent._msh_mod_playlist_database)
+
+
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
             eventlabel="mshMod_playlist",
-            action=EV_ACT_QUEUE
+            conditional="persistent._msh_mod_pm_did_selfharm",
+            action=EV_ACT_RANDOM
         )
     )
 
@@ -43,7 +51,7 @@ label mshMod_playlist:
     m 1kub "And will always be."
     m 2fka "I love you, [mas_get_player_nickname()]."
     m 2esa "Take care."
-    return "love"
+    return "love|derandom"
 
 
 #PLAYLIST DIALOGUES
@@ -64,6 +72,7 @@ label mshMod_playlist:
     m "Oh, do you wanna listen to the playlist, [player]?"
     menu:
         m "Play music?{fast}"
+
         "Yes":
             stop music
             play music "mod_assets/other/Monika_s-Playlist.mp3"
@@ -71,8 +80,21 @@ label mshMod_playlist:
             m "I hope you like it!"
         "No":
             m "Oh, alright."
+
     return
 
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._msh_mod_playlist_database,
+            eventlabel="mshMod_playlist_paradise_fears",
+            prompt="Paradise Fears",
+            unlocked=False,
+            aff_range=(mas_aff.NORMAL, None)
+        ),
+        code="MSH_MOD_SNG"
+    )
 
 # BATTLE SCARS - PARADISE FEARS
 label mshMod_playlist_paradise_fears:
@@ -93,8 +115,20 @@ label mshMod_playlist_paradise_fears:
     return "love"
 
 
+init 5 python:
+    addEvent(
+        Event(
+            persistent._msh_mod_playlist_database,
+            eventlabel="mshMod_playlist_clay",
+            prompt="Clay",
+            unlocked=False,
+            aff_range=(mas_aff.NORMAL, None)
+        ),
+        code="MSH_MOD_SNG"
+    )
+
 # CLAY - GRACE VANDERWALL
-label mshMod_playlist_grace_vanderwall:
+label mshMod_playlist_clay:
     m "{i}~Your silly words~{/i}"
     m "{i}~I won't live inside your world~{/i}"
     m "{i}~'Cause your punches and your names~{/i}"
@@ -114,6 +148,18 @@ label mshMod_playlist_grace_vanderwall:
     return "love"
 
 
+init 5 python:
+    addEvent(
+        Event(
+            persistent._msh_mod_playlist_database,
+            eventlabel="mshMod_playlist_fix_you",
+            prompt="Fix You",
+            unlocked=False,
+            aff_range=(mas_aff.NORMAL, None)
+        ),
+        code="MSH_MOD_SNG"
+    )
+
 #FIX YOU - COLDPLAY
 label mshMod_playlist_fix_you:
     m "{i}~But if you never try, you'll never know~{/i}"
@@ -129,6 +175,18 @@ label mshMod_playlist_fix_you:
     m "I love you more than anything in the world."
     return "love"
 
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._msh_mod_playlist_database,
+            eventlabel="mshMod_your_heartbreak",
+            prompt="I Hate To See Your Heartbreak",
+            unlocked=False,
+            aff_range=(mas_aff.NORMAL, None)
+        ),
+        code="MSH_MOD_SNG"
+    )
 
 #I HATE TO SEE YOUR HEARTBREAK - PARAMORE
 label mshMod_your_heartbreak:
@@ -151,12 +209,13 @@ label mshMod_your_heartbreak:
 init 5 python:
     addEvent(
         Event(
-            persistent.event_database,
+            persistent._msh_mod_playlist_database,
             eventlabel="mshMod_playlist_child",
-            category=["music"],
             prompt="O-o-h Child",
-            random=True
-        )
+            unlocked=False,
+            aff_range=(mas_aff.NORMAL, None)
+        ),
+        code="MSH_MOD_SNG"
     )
 
 #O-O-H CHILD - THE FIVE STAIRSTEPS
@@ -177,12 +236,13 @@ label mshMod_playlist_child:
 init 5 python:
     addEvent(
         Event(
-            persistent.event_database,
+            persistent._msh_mod_playlist_database,
             eventlabel="mshMod_playlist_the_middle",
-            category=["music"],
             prompt="The Middle",
-            random=True
-        )
+            unlocked=False,
+            aff_range=(mas_aff.NORMAL, None)
+        ),
+        code="MSH_MOD_SNG"
     )
 
 label mshMod_playlist_the_middle:
@@ -200,6 +260,19 @@ label mshMod_playlist_the_middle:
     m "And good will come your way!"
     m "I love everything about you."
     return "love"
+
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._msh_mod_playlist_database,
+            eventlabel="mshMod_playlist_firework",
+            prompt="Firework",
+            unlocked=False,
+            aff_range=(mas_aff.NORMAL, None)
+        ),
+        code="MSH_MOD_SNG"
+    )
 
 #FIREWORK - KATY PERRY
 label mshMod_playlist_firework:
@@ -219,6 +292,19 @@ label mshMod_playlist_firework:
     m "And I hope I can be the light on your darker days too."
     return
 
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._msh_mod_playlist_database,
+            eventlabel="mshMod_playlist_torches",
+            prompt="Torches",
+            unlocked=False,
+            aff_range=(mas_aff.NORMAL, None)
+        ),
+        code="MSH_MOD_SNG"
+    )
+
 #TORCHES - AIMER
 label mshMod_playlist_torches:
     m "{i}~Listen to me, cleave your way again, again~~{/i}"
@@ -236,6 +322,18 @@ label mshMod_playlist_torches:
     m 3hub "You're not alone in this. I promise!"
     return
 
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._msh_mod_playlist_database,
+            eventlabel="mshMod_playlist_only_wonder",
+            prompt="Only Wonder",
+            unlocked=False,
+            aff_range=(mas_aff.NORMAL, None)
+        ),
+        code="MSH_MOD_SNG"
+    )
 
 #ONLY WONDER - FREDERIC
 label mshMod_playlist_only_wonder:
@@ -255,6 +353,19 @@ label mshMod_playlist_only_wonder:
     m 5ekbsb "I'll always love you for who you are, [mas_get_player_nickname()]."
     m 5hubsa "Ehehe!"
     return "love"
+
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._msh_mod_playlist_database,
+            eventlabel="mshMod_playlist_way_home",
+            prompt="Someday I'll Find My Way Home",
+            unlocked=False,
+            aff_range=(mas_aff.NORMAL, None)
+        ),
+        code="MSH_MOD_SNG"
+    )
 
 #SOMEDAY I'LL FIND MY WAY HOME - CAROLE & TUESDAY
 label mshMod_playlist_way_home:
