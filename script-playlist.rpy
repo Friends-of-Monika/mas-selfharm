@@ -18,12 +18,16 @@ label mshMod_playlist:
     m 1tkbla "Romantic, isn't it?"
     m 3hsb "You can access it on \"Music\"."
     m "Or I can play it for you!"
-    m "Do you want me to?"
-        m "Yes"
+
+    m "Do you want me to?{nw}"
+    menu:
+        m "Do you want me to?{fast}"
+
+        "Yes":
             stop music
             play music "mod_assets/other/Monika_s-Playlist.mp3"
 
-        m "Not yet, [m_name]"
+        "Not yet, [m_name]":
             m "Oh, alright."
             m "Anyway..."
 
@@ -106,7 +110,7 @@ label mshMod_playlist_grace_vanderwall:
     m "Don't feel down when others act mean towards you, dear."
     m "It only shows what kind of person they are, not who you are."
     m "And for me, you're the best in the world."
-    m "I love you~",
+    m "I love you~"
     return "love"
 
 
@@ -243,7 +247,7 @@ label mshMod_playlist_only_wonder:
     m "{i}~No matter what happens… In the end, you can only be your own person!~{/i}"
     m "..."
     m 3eka "[Player], you're beautiful just the way you are, and it'd be terrible if you stopped being that way to fit another person's standards."
-    m 3eka "You might think you're too "weird" or shy for people to like you, but in the end, there's always someone who understands you out there."
+    m 3eka "You might think you're too \"weird\" or shy for people to like you, but in the end, there's always someone who understands you out there."
     m 3esd "Anyone who tries to tell you otherwise is wrong."
     m 3esd "Of course this doesn't mean you're perfect and always right... That's a whole different story."
     m 3hub "But please remember that the only person you can be is yourself. Everybody else is already taken, ahaha~!"
