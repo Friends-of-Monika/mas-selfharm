@@ -7,7 +7,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_selfharm_intro",
-            aff_range=(mas_aff.NORMAL, mas_aff.LOVE),
+            aff_range=(mas_aff.NORMAL, None),
             conditional="not seen_event('mshMod_selfharm_intro_unhappy')",
             action=EV_ACT_RANDOM
         )
@@ -100,6 +100,7 @@ init 5 python:
             prompt="I want to learn more about self harm.",
             conditional="seen_event('mshMod_selfharm_intro')",
             action=EV_ACT_UNLOCK,
+            aff_range=(mas_aff.NORMAL, None),
             pool=True,
             unlocked=False
         )
