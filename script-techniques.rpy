@@ -1,11 +1,11 @@
 default persistent._msh_mod_technique_database = dict()
 
-init 7 python:
-    mas_all_ev_db_map["MSH_MOD_TCH"] = persistent._msh_mod_technique_database
-    mas_all_ev_db.update(persistent._msh_mod_technique_database)
-
 init -100 python:
     _mshMod_TECHNIQUE_MENU_EXIT_ITEM = ("Nevermind", None, False, False)
+
+
+# When needed, use this code to unlock
+
 
 init 5 python:
     addEvent(
@@ -44,27 +44,48 @@ label mshMod_technique_menu:
     return
 
 
+# label mshMod_technique_pickRandom:
+#     python:
+#         items = Event.filterEvents(
+#             persistent._msh_mod_technique_database,
+#             unlocked=False
+#         ).values()
+#
+#     if not items:
+#         m "Hmm... Oh. I think I ran out of ideas, [player]..."
+#         m "But I'll let you know once I'll think of something new!"
+#         m "In the meantime, you can always ask me about techniques I told you about earlier~"
+#
+#     else:
+#         ev = items[random.randint(len(items))]
+#         ev.unlocked = True
+#         pushEvent(ev.eventlabel, skipeval=True)
+#
+#     return
+
+
 init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_religion",
-            conditional="persistent._mas_pm_religious"
             prompt="Religion",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_religion:
-    m 5eka "I remember you mentioned being religious before..."
-    m 3etd "Maybe you could say a little prayer?"
-    m 4eud "It can be silent, you don't need to say anything out loud."
-    m 1fua "You can pray about anything you want, or even just think of how vast and amazing your universe is."
-    m 1dsu "Try to think about the good things, like animals or laughter, your favorite things..."
-    m 1esa "No matter how little they may be, take some time to think about the bigger picture."
-    m 3eka "If you believe in gods or deities, you can imagine them out there, looking out and caring for you."
-    m 1ekb "You are needed, [player]. You are part of something much bigger than your bad thoughts or bad feelings!"
+    if $ persistent._mas_pm_religious == True:
+        m 5eka "I remember you mentioned being religious before..."
+        m 3etd "Maybe you could say a little prayer?"
+        m 4eud "It can be silent, you don't need to say anything out loud."
+        m 1fua "You can pray about anything you want, or even just think of how vast and amazing your universe is."
+        m 1dsu "Try to think about the good things, like animals or laughter, your favorite things..."
+        m 1esa "No matter how little they may be, take some time to think about the bigger picture."
+        m 3eka "If you believe in gods or deities, you can imagine them out there, looking out and caring for you."
+        m 1ekb "You are needed, [player]. You are part of something much bigger than your bad thoughts or bad feelings!"
+    else:
+        jump technique_cozy
     return
 
 
@@ -75,8 +96,7 @@ init 5 python:
             eventlabel="mshMod_technique_cozy",
             prompt="Cozy",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_cozy:
@@ -98,8 +118,7 @@ init 5 python:
             eventlabel="mshMod_technique_photographs",
             prompt="Photographs",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_photographs:
@@ -124,8 +143,7 @@ init 5 python:
             eventlabel="mshMod_technique_quotes",
             prompt="Quotes",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_quotes:
@@ -145,8 +163,7 @@ init 5 python:
             eventlabel="mshMod_technique_singing",
             prompt="Singing",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_singing:
@@ -173,8 +190,7 @@ init 5 python:
             eventlabel="mshMod_technique_talking",
             prompt="Talking",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_talking:
@@ -197,8 +213,7 @@ init 5 python:
             eventlabel="mshMod_technique_hugs",
             prompt="Hugs",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_hugs:
@@ -223,8 +238,7 @@ init 5 python:
             eventlabel="mshMod_technique_listening",
             prompt="Listening",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_listening:
@@ -244,8 +258,7 @@ init 5 python:
             eventlabel="mshMod_technique_butterfly",
             prompt="Butterfly",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_butterfly:
@@ -268,8 +281,7 @@ init 5 python:
             eventlabel="mshMod_technique_healing",
             prompt="Healing",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_healing:
@@ -291,8 +303,7 @@ init 5 python:
             eventlabel="mshMod_technique_pong",
             prompt="Pong",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_pong:
@@ -314,8 +325,7 @@ init 5 python:
             eventlabel="mshMod_technique_chess",
             prompt="Chess",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_chess:
@@ -336,8 +346,7 @@ init 5 python:
             eventlabel="mshMod_technique_piano",
             prompt="Piano",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_piano:
@@ -348,9 +357,7 @@ label mshMod_technique_piano:
     menu:
         "Sure!":
             m "Alright!"
-
             call mas_piano_start
-
             m "Hope you're feeling better, [player]!"
             return
 
@@ -362,8 +369,7 @@ init 5 python:
             eventlabel="mshMod_technique_videos",
             prompt="Videos",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_videos:
@@ -383,28 +389,12 @@ label mshMod_technique_videos:
         menu:
             "Yes":
                 m "Great!"
-                return
+                $ renpy.jump(all_options[random.randint(len(all_options))])
 
             "No":
                 m "That's okay, [player]."
                 m "If you ever wanna see them again, just ask!"
 
-    $ renpy.jump(all_options[random.randint(len(all_options))])
-
-label mshMod_technique_videos_1:
-    jump mshMod_technique_videos_video("https://www.youtube.com/watch?v=PppkNH3bKV4&")
-
-label mshMod_technique_videos_2:
-    jump mshMod_technique_videos_video("https://www.youtube.com/watch?v=-SJywvgaJEI&")
-
-label mshMod_technique_videos_3:
-    jump mshMod_technique_videos_video("https://www.youtube.com/watch?v=ORkx63VeP9Y&")
-
-label mshMod_technique_videos_video(url):
-    $ webbrowser.open(url)
-    call mshMod_technique_videos_pre
-    pause(3.0)
-    call mshMod_technique_videos_post
     return
 
 label mshMod_technique_videos_pre:
@@ -418,7 +408,27 @@ label mshMod_technique_videos_post:
         "I'm done, [m_name]":
             m "Alright!"
             m "Hope you enjoyed it!"
+    return
 
+label mshMod_technique_videos_1:
+    $ webbrowser.open("https://www.youtube.com/watch?v=PppkNH3bKV4&")
+    call mshMod_technique_videos_pre
+    pause(3.0)
+    call mshMod_technique_videos_post
+    return
+
+label mshMod_technique_videos_2:
+    $ webbrowser.open("https://www.youtube.com/watch?v=-SJywvgaJEI&")
+    call mshMod_technique_videos_pre
+    pause(3.0)
+    call mshMod_technique_videos_post
+    return
+
+label mshMod_technique_videos_3:
+    $ webbrowser.open("https://www.youtube.com/watch?v=ORkx63VeP9Y&")
+    call mshMod_technique_videos_pre
+    pause(3.0)
+    call mshMod_technique_videos_post
     return
 
 
@@ -429,8 +439,7 @@ init 5 python:
             eventlabel="mshMod_technique_stress_ball",
             prompt="Stress ball",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_stress_ball:
@@ -457,8 +466,7 @@ init 5 python:
             eventlabel="mshMod_technique_stretching",
             prompt="Stretching",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_stretching:
@@ -483,8 +491,7 @@ init 5 python:
             eventlabel="mshMod_technique_punching",
             prompt="Punching",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_punching:
@@ -508,8 +515,7 @@ init 5 python:
             eventlabel="mshMod_technique_shouting",
             prompt="Shouting",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_shouting:
@@ -530,8 +536,7 @@ init 5 python:
             eventlabel="mshMod_technique_listening",
             prompt="Listening",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_listening:
@@ -555,8 +560,7 @@ init 5 python:
             eventlabel="mshMod_technique_paper",
             prompt="Paper",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_paper:
@@ -583,8 +587,7 @@ init 5 python:
             eventlabel="mshMod_technique_otter",
             prompt="Talking to u/my-otter-self",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_otter:
@@ -605,8 +608,7 @@ init 5 python:
             eventlabel="mshMod_technique_cold_water",
             prompt="Cold water",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_cold_water:
@@ -625,8 +627,7 @@ init 5 python:
             eventlabel="mshMod_technique_bothering",
             prompt="Bothering",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_bothering:
@@ -647,8 +648,7 @@ init 5 python:
             eventlabel="mshMod_technique_positive",
             prompt="Positive",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_positive:
@@ -670,8 +670,7 @@ init 5 python:
             eventlabel="mshMod_technique_box",
             prompt="Box",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_box:
@@ -690,8 +689,7 @@ init 5 python:
             eventlabel="mshMod_technique_common",
             prompt="Common",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_common:
@@ -709,8 +707,7 @@ init 5 python:
             eventlabel="mshMod_technique_comfort",
             prompt="Comfort",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_comfort:
@@ -728,8 +725,7 @@ init 5 python:
             eventlabel="mshMod_technique_walk",
             prompt="Walk",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_walk:
@@ -746,8 +742,7 @@ init 5 python:
             eventlabel="mshMod_technique_media",
             prompt="Media",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_media:
@@ -765,8 +760,7 @@ init 5 python:
             eventlabel="mshMod_technique_perspective",
             prompt="Perspective",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_perspective:
@@ -787,8 +781,7 @@ init 5 python:
             eventlabel="mshMod_technique_productivity",
             prompt="Productivity",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_productivity:
@@ -808,8 +801,7 @@ init 5 python:
             eventlabel="mshMod_technique_interests",
             prompt="Interests",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_interests:
@@ -827,8 +819,7 @@ init 5 python:
             eventlabel="mshMod_technique_mirror",
             prompt="Mirror",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_mirror:
@@ -848,8 +839,7 @@ init 5 python:
             eventlabel="mshMod_technique_creativity",
             prompt="Creativity",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_creativity:
@@ -868,8 +858,7 @@ init 5 python:
             eventlabel="mshMod_technique_river",
             prompt="River",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_river:
@@ -893,8 +882,7 @@ init 5 python:
             eventlabel="mshMod_technique_feelings",
             prompt="Feelings",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_feelings:
@@ -912,8 +900,7 @@ init 5 python:
             eventlabel="mshMod_technique_poem",
             prompt="Poem",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_poem:
@@ -935,8 +922,7 @@ init 5 python:
             eventlabel="mshMod_technique_breathing",
             prompt="Breathing",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_breathing:
@@ -968,8 +954,7 @@ init 5 python:
             eventlabel="mshMod_technique_pinterest",
             prompt="Pinterest",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_pinterest:
@@ -988,8 +973,7 @@ init 5 python:
             eventlabel="mshMod_technique_emerald",
             prompt="Emerald",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_emerald:
@@ -1007,8 +991,7 @@ init 5 python:
             eventlabel="mshMod_technique_patterns",
             prompt="Patterns",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_patterns:
@@ -1024,8 +1007,7 @@ init 5 python:
             eventlabel="mshMod_technique_word_play",
             prompt="Word play",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_word_play:
@@ -1042,8 +1024,7 @@ init 5 python:
             eventlabel="mshMod_technique_lyrics",
             prompt="Lyrics",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_lyrics:
@@ -1062,8 +1043,7 @@ init 5 python:
             eventlabel="mshMod_technique_animal",
             prompt="Animal",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_animal:
@@ -1079,8 +1059,7 @@ init 5 python:
             eventlabel="mshMod_technique_research",
             prompt="Research",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_research:
@@ -1100,8 +1079,7 @@ init 5 python:
             eventlabel="mshMod_technique_favorite_things",
             prompt="Favorite things",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_favorite_things:
@@ -1121,8 +1099,7 @@ init 5 python:
             eventlabel="mshMod_technique_superheroes",
             prompt="Superheroes",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_superheroes:
@@ -1140,8 +1117,7 @@ init 5 python:
             eventlabel="mshMod_technique_artist",
             prompt="Artist",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_artist:
@@ -1159,8 +1135,7 @@ init 5 python:
             eventlabel="mshMod_technique_playlist",
             prompt="Playlist",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_playlist:
@@ -1176,8 +1151,7 @@ init 5 python:
             eventlabel="mshMod_technique_surroundings",
             prompt="Surroundings",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_surroundings:
@@ -1198,8 +1172,7 @@ init 5 python:
             eventlabel="mshMod_technique_mess",
             prompt="Mess",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_mess:
@@ -1222,8 +1195,7 @@ init 5 python:
             eventlabel="mshMod_technique_holiday",
             prompt="Holiday",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_holiday:
@@ -1240,8 +1212,7 @@ init 5 python:
             eventlabel="mshMod_technique_hobbies",
             prompt="Hobbies",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_hobbies:
@@ -1258,8 +1229,7 @@ init 5 python:
             eventlabel="mshMod_technique_shiritori",
             prompt="Shiritori",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_shiritori:
@@ -1278,8 +1248,7 @@ init 5 python:
             eventlabel="mshMod_technique_objects",
             prompt="Objects",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_objects:
@@ -1295,8 +1264,7 @@ init 5 python:
             eventlabel="mshMod_technique_imagination",
             prompt="Imagination",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_imagination:
@@ -1317,8 +1285,7 @@ init 5 python:
             eventlabel="mshMod_technique_characters",
             prompt="Characters",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_characters:
@@ -1334,8 +1301,7 @@ init 5 python:
             eventlabel="mshMod_technique_shapes",
             prompt="Shapes",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_shapes:
@@ -1352,8 +1318,7 @@ init 5 python:
             eventlabel="mshMod_technique_playlist",
             prompt="Playlist",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_playlist:
@@ -1372,8 +1337,7 @@ init 5 python:
             eventlabel="mshMod_technique_self_care",
             prompt="Self-care",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_self_care:
@@ -1392,8 +1356,7 @@ init 5 python:
             eventlabel="mshMod_technique_outside",
             prompt="Outside",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_outside:
@@ -1410,8 +1373,7 @@ init 5 python:
             eventlabel="mshMod_technique_draw",
             prompt="Draw",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_draw:
@@ -1427,8 +1389,7 @@ init 5 python:
             eventlabel="mshMod_technique_food",
             prompt="Food",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_food:
@@ -1445,8 +1406,7 @@ init 5 python:
             eventlabel="mshMod_technique_colour",
             prompt="Colour",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_colour:
@@ -1462,8 +1422,7 @@ init 5 python:
             eventlabel="mshMod_technique_beach",
             prompt="Beach",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_beach:
@@ -1479,8 +1438,7 @@ init 5 python:
             eventlabel="mshMod_technique_eat",
             prompt="Eat",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_eat:
@@ -1499,8 +1457,7 @@ init 5 python:
             eventlabel="mshMod_technique_pictures",
             prompt="Pictures",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_pictures:
@@ -1517,8 +1474,7 @@ init 5 python:
             eventlabel="mshMod_technique_sit",
             prompt="Sit",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_sit:
@@ -1534,8 +1490,7 @@ init 5 python:
             eventlabel="mshMod_technique_ground",
             prompt="Ground",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_ground:
@@ -1552,8 +1507,7 @@ init 5 python:
             eventlabel="mshMod_technique_scene",
             prompt="Scene",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_scene:
@@ -1568,8 +1522,7 @@ init 5 python:
             eventlabel="mshMod_technique_mindful_seeing",
             prompt="'Mindful seeing'",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_mindful_seeing:
@@ -1588,8 +1541,7 @@ init 5 python:
             eventlabel="mshMod_technique_acceptance",
             prompt="Acceptance",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_acceptance:
@@ -1609,8 +1561,7 @@ init 5 python:
             eventlabel="mshMod_technique_brushes",
             prompt="Brushes",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_brushes:
@@ -1627,8 +1578,7 @@ init 5 python:
             eventlabel="mshMod_technique_memory_book",
             prompt="Memory book",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_memory_book:
@@ -1644,8 +1594,7 @@ init 5 python:
             eventlabel="mshMod_technique_happiness",
             prompt="Happiness",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_happiness:
@@ -1660,8 +1609,7 @@ init 5 python:
             eventlabel="mshMod_technique_cushion",
             prompt="Cushion",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_cushion:
@@ -1676,8 +1624,7 @@ init 5 python:
             eventlabel="mshMod_technique_hugs",
             prompt="Hugs",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_hugs:
@@ -1693,8 +1640,7 @@ init 5 python:
             eventlabel="mshMod_technique_comforting",
             prompt="Comforting",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_comforting:
@@ -1710,8 +1656,7 @@ init 5 python:
             eventlabel="mshMod_technique_podcasts",
             prompt="Podcasts",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_podcasts:
@@ -1726,8 +1671,7 @@ init 5 python:
             eventlabel="mshMod_technique_hand_holding",
             prompt="Hand holding",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_hand_holding:
@@ -1747,8 +1691,7 @@ init 5 python:
             eventlabel="mshMod_technique_pattern",
             prompt="Pattern",
             unlocked=False
-        ),
-        code="MSH_MOD_TCH"
+        )
     )
 
 label mshMod_technique_pattern:
