@@ -17,8 +17,7 @@ label mshMod_first_aid_intro:
     m 2esd "It's a basic first-aid guide. For cuts, specifically."
     m 3esd "If you need it, make sure to let me know, okay?"
     m 1eka "I'll do my best to help."
-    return
-
+    return "derandom|no_unlock"
 
 init 5 python:
     addEvent(
@@ -26,6 +25,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_first_aid_guide",
             aff_range=(mas_aff.NORMAL, mas_aff.LOVE),
+            prompt="I need help with first aid...",
             conditional="seen_event('mshMod_first_aid_intro')",
             action=EV_ACT_RANDOM
         )
@@ -46,10 +46,37 @@ label mshMod_first_aid_guide:
     m 2esd "You should apply constant pressure to the area using a clean and dry absorbent material."
     m 2lsd "A bandage, towel or handkerchief. For approximately 10 minutes."
     m 3esd "It's important to raise the injury above the level of your heart."
-    m 2esa "I can make a timer for you."
-    # TODO: timer here?
-    m 2esb "All done, [player]!"
 
+    m 2esa "I can make a timer for you.{nw}"
+    menu:
+        m 2esa "I can make a timer for you.{fast}"
+
+        "Yes, that'd help":
+            $ timeout = True
+
+            m "Okay! I'll tell you when it's done.{nw}"
+            show screen mas_background_timed_jump(random.randint(580, 620), "mshMod_first_aid_guide_timeout")
+            menu:
+                m "Okay! I'll tell you when it's done.{fast}"
+
+                "Done":
+                    pass
+
+        "No, I'll manage":
+            $ timeout = False
+
+            m "Oh, okay! Let me know when you'll be ready to proceed.{nw}"
+            menu:
+                m "Oh, okay! Let me know when you'll be ready to proceed.{fast}"
+
+                "Done":
+                    pass
+
+label mshMod_first_aid_guide_timeout:
+    if timeout:
+        hide screen mas_background_timed_jump
+
+    m 2esb "All done, [player]!"
     m 2eud "Ready for the next step?{nw}"
     menu:
         m "Ready for the next step?{fast}"
