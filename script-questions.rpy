@@ -41,7 +41,7 @@ init 5 python:
             category=["you"],
             prompt="I'm ready to talk about it...",
             conditional="seen_event('mshMod_probing_questions_intro')",
-            action=EV_ACT_UNLOCK
+            action=EV_ACT_UNLOCK,
             pool=True,
             rules={"no_unlock": None}
         )
