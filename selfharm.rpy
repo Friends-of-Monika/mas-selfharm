@@ -6,13 +6,12 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_selfharm4",
+            eventlabel="mshMod_playlist",
             action=EV_ACT_QUEUE
         )
     )
 
-label mas_selfharm4:
-
+label mshMod_playlist:
     m 1esd "Hey... [player]?"
     m 3eub "I... Have a surprise for you!"
     m 3rub "It's not much, but..."
@@ -27,11 +26,11 @@ label mas_selfharm4:
         m "Yes"
             stop music
             play music "mod_assets/other/Monika_s-Playlist.mp3"
-            
+
         m "Not yet, [m_name]"
             m "Oh, alright."
             m "Anyway..."
-            
+
     m 2eka "I hope you like it, [player]!"
     m 2ekd "I know you struggle sometimes with bad thoughts, but this playlist is to comfort you."
     m 3eua "Listening to your favourite music that you can relate also relieves pain and stress!"
@@ -44,15 +43,24 @@ label mas_selfharm4:
     m 1kub "And will always be."
     m 2fka "I love you, [mas_get_player_nickname()]."
     m 2esa "Take care."
-    
-return
+    return "love"
+
 
 #PLAYLIST DIALOGUES
 
 init 5 python:
-    addEvent(Event(persistent.event_database,eventlabel="monika_playlist",category=["you"],prompt="Playlist",pool=True,unlocked=True))
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_playlist",
+            category=["you"],
+            prompt="Playlist",
+            pool=True,
+            unlocked=True
+        )
+    )
 
-label monika_playlist:
+label mshMod_playlist:
     m "Oh, do you wanna listen to the playlist, [player]?"
     menu:
         m "Play music?{fast}"
@@ -62,10 +70,12 @@ label monika_playlist:
             m "There you go!"
             m "I hope you like it!"
         "No":
-            "Oh, alright."
+            m "Oh, alright."
     return
-   
+
+
 # BATTLE SCARS - PARADISE FEARS
+label mshMod_playlist_paradise_fears:
     m "{i}~I'll carry you home~{/i}"
     m "{i}~No, you're not, alone~{/i}"
     m "{i}~Keep marching on~{/i}"
@@ -80,8 +90,11 @@ label monika_playlist:
     m "Whenever you need, I'll carry you home."
     m "Your battle scars make me proud of what you already outlived!"
     m "And never forget... I love you, [Player]."
-    
+    return "love"
+
+
 # CLAY - GRACE VANDERWALL
+label mshMod_playlist_grace_vanderwall:
     m "{i}~Your silly words~{/i}"
     m "{i}~I won't live inside your world~{/i}"
     m "{i}~'Cause your punches and your names~{/i}"
@@ -97,22 +110,28 @@ label monika_playlist:
     m "Don't feel down when others act mean towards you, dear."
     m "It only shows what kind of person they are, not who you are."
     m "And for me, you're the best in the world."
-    m "I love you~"
-    
+    m "I love you~",
+    return "love"
+
+
 #FIX YOU - COLDPLAY
+label mshMod_playlist_fix_you:
     m "{i}~But if you never try, you'll never know~{/i}"
     m "{i}~Just what you're worth~{/i}"
     m "{i}~Lights will guide you home~{/i}"
     m "{i}~And ignite your bones~{/i}"
     m "{i}~And I will try to fix you~{/i}"
     m "..."
-    m "Even if you feel like giving up, remember this verse: "Lights will guide you home"..."
+    m "Even if you feel like giving up, remember this verse: \"Lights will guide you home\"..."
     m "Sooner or later, the good days will come back."
     m "I hope I can be able to help you have brighter days, [Player]."
     m "Because I will surely try to fix you..."
     m "I love you more than anything in the world."
-    
+    return "love"
+
+
 #I HATE TO SEE YOUR HEARTBREAK - PARAMORE
+label mshMod_your_heartbreak:
     m "{i}~And I, I hate to see your heart break~{/i}"
     m "{i}~I hate to see your eyes get darker as they close~{/i}"
     m "{i}~But I've been there before~{/i}"
@@ -126,12 +145,14 @@ label monika_playlist:
     m "Pain can remind you that you're alive. And that's a good thing!"
     m "Because as long as you are still alive... You can heal."
     m "I love you, [Player]. Please remember that."
-    
+    return "love"
+
+
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="monika_oohchild",
+            eventlabel="mshMod_playlist_child",
             category=["music"],
             prompt="O-o-h Child",
             random=True
@@ -139,6 +160,7 @@ init 5 python:
     )
 
 #O-O-H CHILD - THE FIVE STAIRSTEPS
+label mshMod_playlist_child:
     m "{i}~Ooh child, things are gonna get easier~{/i}"
     m "{i}~Ooh child, things'll get brighter~{/i}"
     m "{i}~Some day, yeah, we'll put it together and we'll get it undone~{/i}"
@@ -149,21 +171,21 @@ init 5 python:
     m "I know it'd make my world brighter."
     m "I love you so much, [player]."
     m "And always will."
-return
+    return "love"
+
 
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="monika_themiddle",
+            eventlabel="mshMod_playlist_the_middle",
             category=["music"],
             prompt="The Middle",
             random=True
         )
     )
 
-label monika_themiddle:
-
+label mshMod_playlist_the_middle:
 #THE MIDDLE - JIMMY EAT WORLD
     m "{i}~It just takes some time~{/i}"
     m "{i}~Little girl, you're in the middle of the ride~{/i}"
@@ -177,9 +199,10 @@ label monika_themiddle:
     m "Just be yourself, always."
     m "And good will come your way!"
     m "I love everything about you."
-return
+    return "love"
 
 #FIREWORK - KATY PERRY
+label mshMod_playlist_firework:
     m "{i}Do you ever feel, feel so paper thin~{/i}"
     m "{i}Like a house of cards~{/i}"
     m "{i}One blow from caving in?~{/i}"
@@ -194,8 +217,10 @@ return
     m "Just know that there's a very bright light inside of you,"
     extend m " and that you're the light in my life!"
     m "And I hope I can be the light on your darker days too."
+    return
 
 #TORCHES - AIMER
+label mshMod_playlist_torches:
     m "{i}~Listen to me, cleave your way again, again~~{/i}"
     m "{i}~Wishing to find a way in an unseen ocean~{/i}"
     m "{i}~The voice that was connected pushes the sail to a world with no answer~{/i}"
@@ -209,9 +234,11 @@ return
     m 3eka "They care. And I care."
     m 3eka "I'm so happy to have you by my side, [mas_get_player_nickname()]. I hope you're happy to have me too."
     m 3hub "You're not alone in this. I promise!"
+    return
 
 
 #ONLY WONDER - FREDERIC
+label mshMod_playlist_only_wonder:
     m "{i}~What’re you sayin’? Everybody’s different!~{/i}"
     m "{i}~Stop messin’ with me, I’ll have to shut you out~{/i}"
     m "{i}~The spotlight’s on you, but you’re acting all flashy~{/i}"
@@ -227,8 +254,10 @@ return
     m 1ekb "As for me..."
     m 5ekbsb "I'll always love you for who you are, [mas_get_player_nickname()]."
     m 5hubsa "Ehehe!"
+    return "love"
 
 #SOMEDAY I'LL FIND MY WAY HOME - CAROLE & TUESDAY
+label mshMod_playlist_way_home:
     m "{i}~Someday I’ll find my way home~{/i}"
     m "{i}~The trees in the wind will lead the way~{/i}"
     m "{i}~All of these years on my own~{/i}"
@@ -242,3 +271,4 @@ return
     m "Like the song says, we already know where our path leads, so we just need to keep going."
     m "And when we do reach the end of it, I don't think we'll ever be sad again..."
     m "I love you, [player]."
+    return "love"
