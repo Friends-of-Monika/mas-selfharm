@@ -120,6 +120,8 @@ label mshMod_urge_care_bad:
 
         "No... Just let me hold you, please?":
             call mshMod_urge_hold
+            m "I hope you're feeling better now, [mas_get_player_nickname()]~"
+            return
 
         "Yes, I want to try a calming technique.":
             m 1eka "Alright, baby."
