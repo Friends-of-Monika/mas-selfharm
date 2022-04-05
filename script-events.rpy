@@ -42,7 +42,7 @@ init 5 python:
 
     # Only add it to calendar after it was seen.
     if seen_event("mshMod_awareness_day"):
-        calendar.addRepeatable("mshMod_awareness_day", _("Self-harm awareness day"), month=3, day=1, year_param=[])
+        calendar.addRepeatable("mshMod_awareness_day", _("Self-Harm Awareness Day"), month=3, day=1, year_param=[])
 
 label mshMod_awareness_day:
     m 3eub "[player], did you know that today is Self-Harm Awareness day?"
