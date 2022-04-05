@@ -65,6 +65,7 @@ label mshMod_technique_random:
 
         renpy.call(items[random.randint(0, len(items) - 1)])
 
+    return
 
 init 5 python:
     addEvent(
