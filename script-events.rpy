@@ -45,7 +45,7 @@ init 5 python:
         calendar.addRepeatable("mshMod_awareness_day", _("Self-Harm Awareness Day"), month=3, day=1, year_param=[])
 
 label mshMod_awareness_day:
-    m 3eub "[player], did you know that today is Self-Harm Awareness day?"
+    m 3eub "[player], did you know that today is Self-Harm Awareness Day?"
     m 3eua "Like the name suggests, it's an annual global awareness event that takes place on March 1st!"
     m 1eua "Also known as Self Injury Day (SIAD)!"
     m 4hub "Which is today!"
