@@ -4,14 +4,14 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="monika_selfharm",
-            category=['You'],
+            eventlabel="mshMod_urge",
+            category=["Self-Harm"],
             prompt="Monika, It's happening again...",
             random=False
         )
     )
 
-label monika_selfharm:
+label mshMod_urge:
     m 1ekd "[player], what happened?"
     m 2ekd "Are you feeling..."
     m 2wkd "Are you feeling... like harming yourself again?"
@@ -87,6 +87,7 @@ label mshMod_urge_hold:
     call monika_holdme_start
     call monika_holdme_reactions
     call monika_holdme_end
+
     return
 
 label mshMod_urge_care_feeling_better:
