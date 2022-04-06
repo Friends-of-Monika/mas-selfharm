@@ -227,7 +227,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_morning_routine",
             prompt="Morning routine",
-            category=["Self-Harm"],
+            category=["Healthy routine"],
             random=True
         )
     )
@@ -254,3 +254,94 @@ label mshMod_morning_routine:
     m "Ehehe~"
     m "I hope these tips are helpful to you, [player]!"
     return
+    
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="",
+            prompt="",
+            category=["Healthy Routine"],
+            random=True
+        )
+    )
+
+    m "Hey, [player], you know what's a good way to start your days off on a high note? Showering and exercise!"
+    m "In fact, those are {i}my{/i} go-to's to start the day!"
+    m "Showering can be a hard step to overcome, and it can take a lot of mental and physical energy out of you if you're not careful..."
+    m "But the pay off of being clean, dressed, and ready for wherever the day may take you, can make it all the more worthwhile!"
+    m "Getting into consistent routine with it can make it less energy-draining too, since then you won't have to do a full scrub down to get clean for the day!"
+    m "Exercise on the other hand, can be a little harder for people to want to get into routine with."
+    extend m " When people think 'exercise', they might think hundreds of pushups, and 5 mile runs. And no one wants to do that right after they've woken up!"
+    m "But a nice, moderate amount of exercise in the morning can help in more ways than one."
+    extend m "It can clear up brain fog, helps you focus, and can help you release some pent up emotions!"
+    m "Some simple exercises I would recommend are yoga stretches, light jogging or walking, or even just doing certain big chores around the house can count as exercise!"
+    m "Then you can kill two birds with one stone, ehehe!"
+    m "You know I looooove me some exercise! Ahaha~"
+
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="",
+            prompt="",
+            category=["Healthy Routine"],
+            random=True
+        )
+    )
+
+*DJS THIRD DIALOGUE
+
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="",
+            prompt="",
+            category=["Healthy Routine"],
+            random=True
+        )
+    )
+
+    m "Hey [player], did you know that there's been some studies about how going outside is good for you?"
+    m "Being out in the sunlight can decrease stress, slow your heart rate, and not to mention it's also good for getting some vitimin D!"
+    m "Sit on your porch or in your yard if you can't go for a walk outside."
+    m "If you can't get out at all, try opening your window or blinds! 
+    m "Even just looking at some photos of those scenarios might help!"
+    m "I know I love to look at photos of places I'd love to travel to with you~"
+
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="",
+            prompt="",
+            category=["Healthy Routine"],
+            random=True
+        )
+    )
+
+    m "Hey [player], what's your nighttime routine like?"
+    m "Mine has definitely changed since I met you! Ehehe~"
+    m "I've always had a fairly regular routine."
+    m "Turn off my electronics, get in my pajamas, have a cup of hot chocolate or tea if I felt like it, brush my teeth, and read or work on homework until I was ready to get in bed."
+    m "I made sure to go to bed pretty close to the same time every night. It's good for your brain and body!"
+    m "Being the student I was, I had to stay well-rested to have enough energy for everything I did."
+    m "My routine hasn't changed much now, I just don't have access to my electronics or books."
+    m "So I mostly sharpen my coding skills or access a book from the internet!"
+    m "I still make a hot cocoa, as well."
+    m "So, if you haven't already, I suggest making a nightly routine!"
+    m "It may sound intimidating at first, but you don't have to follow it exactly every time!"
+    m "There are some things you should really try to do every day, like brushing your teeth and getting to bed on time."
+    m "Aside from those, you can always change it up!"
+    m "Going for a nice walk in the evening to get your energy out and get some fresh air, reading, journaling, some light arts and crafts..."
+    m "There's a lot of things you can do that take little thinking power or energy!"
+    m "I hope this helped you get a few ideas for making your nightly routine a little better, [mas_get_player_nickname()]."
+    m "But if you do shut your electronics off early..."
+    m "Make sure to say goodnight, okay?"
+
+#MAL'S THIRD DIALOGUE
