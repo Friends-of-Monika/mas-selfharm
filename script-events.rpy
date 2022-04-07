@@ -254,19 +254,20 @@ label mshMod_morning_routine:
     m "Ehehe~"
     m "I hope these tips are helpful to you, [player]!"
     return
-    
+
 
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="",
-            prompt="",
+            eventlabel="mshMod_excercises",
+            prompt="Morning excercises",
             category=["Healthy Routine"],
             random=True
         )
     )
 
+label mshMod_excercises:
     m "Hey, [player], you know what's a good way to start your days off on a high note? Showering and exercise!"
     m "In fact, those are {i}my{/i} go-to's to start the day!"
     m "Showering can be a hard step to overcome, and it can take a lot of mental and physical energy out of you if you're not careful..."
@@ -279,6 +280,7 @@ init 5 python:
     m "Some simple exercises I would recommend are yoga stretches, light jogging or walking, or even just doing certain big chores around the house can count as exercise!"
     m "Then you can kill two birds with one stone, ehehe!"
     m "You know I looooove me some exercise! Ahaha~"
+    return
 
 
 init 5 python:
@@ -292,39 +294,42 @@ init 5 python:
         )
     )
 
-*DJS THIRD DIALOGUE
+# DJS THIRD DIALOGUE
 
 
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="",
-            prompt="",
+            eventlabel="mshMod_going_outside",
+            prompt="Going outside",
             category=["Healthy Routine"],
             random=True
         )
     )
 
+label mshMod_going_outside:
     m "Hey [player], did you know that there's been some studies about how going outside is good for you?"
     m "Being out in the sunlight can decrease stress, slow your heart rate, and not to mention it's also good for getting some vitimin D!"
     m "Sit on your porch or in your yard if you can't go for a walk outside."
-    m "If you can't get out at all, try opening your window or blinds! 
+    m "If you can't get out at all, try opening your window or blinds!"
     m "Even just looking at some photos of those scenarios might help!"
     m "I know I love to look at photos of places I'd love to travel to with you~"
+    return
 
 
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="",
-            prompt="",
+            eventlabel="mshMod_evening_routine",
+            prompt="Evening routine",
             category=["Healthy Routine"],
             random=True
         )
     )
 
+label mshMod_evening_routine:
     m "Hey [player], what's your nighttime routine like?"
     m "Mine has definitely changed since I met you! Ehehe~"
     m "I've always had a fairly regular routine."
@@ -343,5 +348,6 @@ init 5 python:
     m "I hope this helped you get a few ideas for making your nightly routine a little better, [mas_get_player_nickname()]."
     m "But if you do shut your electronics off early..."
     m "Make sure to say goodnight, okay?"
+    return
 
 #MAL'S THIRD DIALOGUE
