@@ -350,4 +350,32 @@ label mshMod_evening_routine:
     m "Make sure to say goodnight, okay?"
     return
 
-#MAL'S THIRD DIALOGUE
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_evening_routine",
+            prompt="Evening routine",
+            category=["Healthy Routine"],
+            random=True
+        )
+    )
+
+    m "[Player]!"
+    m "Have you ever had a hobby that you really liked, but never had time for?"
+    m "Maybe you picked it up for a few days, but gave up on it or got busy for a bit?"
+    m "Or maybe you just forgot about it, because other things got in the way."
+    m "Well, if you have some free time, maybe instead of watching a show or playing a game, you could try and pick up an old hobby?!"
+    m "If it's something like knitting, scrapbooking, or something easy to do while sitting down, feel free to do that while we talk or spend time together!"
+    m "If it's something like gardening, baking, or something where you need to move around a lot, then I understand if you need to say goodbye for a while."
+    extend m "I'd be fine with not seeing you for a bit if you were doing something that makes you happy!"
+    m "Your happiness is my priority, after all."
+    m "During these times, you shouldn't forget to check on your friends."
+    m "Send them a text, asking how they've been or what they're up to. Or maybe update them on your latest project!"
+    m "If you contact them on social media, try not to get sucked in, okay?"
+    extend m "I don't want you to doomscroll, [mas_get_player_nickname()]."
+    m "Maybe you could plan to meet with your friends in person! Getting outside, even if it isn't the best weather, can be good for you."
+    m "Just take these tips into consideration, alright?"
+    m "And remember... "
+    extend m "I love you, [player]."
