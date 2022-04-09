@@ -355,13 +355,14 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_evening_routine",
-            prompt="Evening routine",
+            eventlabel="mshMod_untried_hobbies",
+            prompt="Hobbies",
             category=["Healthy Routine"],
             random=True
         )
     )
 
+label mshMod_untried_hobbies:
     m "[Player]!"
     m "Have you ever had a hobby that you really liked, but never had time for?"
     m "Maybe you picked it up for a few days, but gave up on it or got busy for a bit?"
@@ -379,3 +380,4 @@ init 5 python:
     m "Just take these tips into consideration, alright?"
     m "And remember... "
     extend m "I love you, [player]."
+    return "love"
