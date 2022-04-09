@@ -1,6 +1,7 @@
 # CHECKUPS ON PLAYER
     # FIRST RANDOM EVENT NECESSARY SO THE SECOND ONE APPEARS EVERY WEEK
-    
+
+label mshMod_checkup_intro:
     m "Hey, [player]?"
     m "I've been thinking about something."
     m "Sometimes we care deeply about someone, and we're worried about them."
@@ -21,15 +22,22 @@
     m "Meaning, how have you been feeling, this week, in a scale of 1 to 10!"
     m "This will help me be more aware and sensitive of your needs and your feelings."
     m "After all, I care about you so much and I love you sooooo much!"
-    
-    
+
+
     # RANDOM EVENT (ONCE EVERY WEEK) AFTER FIRST ONE HAS ALREADY APPEARED
-    
+
 init 5 python:
     import datetime
-    addEvent(Event(persistent.event_database,eventlabel="monika_rem",random=True,rules={"force repeat": None}))
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_checkup_reminder",
+            random=True,
+            rules={"force repeat": None}
+        )
+    )
 
-label monika_rem:
+label mshMod_checkup_reminder:
     $ persistent._last_topic_run = datetime.datetime.utcnow()
     $ mas_globals.this_ev.action = EV_ACT_PUSH
     $ mas_globals.this_ev.conditional = "datetime.datetime.utcnow() - persistent._last_topic_run > datetime.timedelta(days=7)"
@@ -40,40 +48,40 @@ label monika_rem:
     m "Meaning, on a scale of 1 to 10, how are you feeling?"
     menu:
       "1":
-        m 
+        pass
 
       "2":
-        m 
-        
+        pass
+
       "3":
-        m
-        
+        pass
+
       "4":
-        m 
-        
+        pass
+
       "5":
-        m
-        
+        pass
+
       "6":
-        m 
-        
+        pass
+
       "7":
-        m
-        
+        pass
+
       "8":
-        m
-        
+        pass
+
       "9":
-        m
-        
+        pass
+
       "10":
-        m
-        
+        pass
+
       "I'm not sure...":
-        m
-      
+        pass
+
       # things from the first prototype for reference:
-      
+
     m "Hey, [player]?"
     m "I just wanna check up on you!"
     m "Sometimes I worry about how you have been coping with stuff."
@@ -84,7 +92,7 @@ label monika_rem:
             m "I can't express the happiness hearing this brings me."
             m "This is only the start!"
             m "I love you soooo much!"
-            
+
         "I'm okay, [m_name]. Could be better...":
             m "I'm so sorry to hear that, [player]."
             m "But I'm sure everything will be okay!"
