@@ -22,27 +22,16 @@ jobs:
       - name: Download DDLC/MAS package
         env:
           DL_CREDENTIALS: ${{ secrets.DL_CREDENTIALS }}
-        run: |
-          wget --user "$(printf "%s" "$DL_CREDENTIALS" | cut -f 1 -d ":")" --password "$(printf "%s" "$DL_CREDENTIALS" | cut -f 2 -d ":")" https://dl.mon.icu/stash/ddlc.zip
-          unzip -q ddlc.zip -d ddlc-mas
-          mv ddlc-mas/DDLC-1.1.1-pc ddlc-mas-
-          rm -d ddlc-mas ddlc.zip
-          mv ddlc-mas- ddlc-mas
-          curl -L "$(curl -sL https://api.github.com/repos/monika-after-story/monikamoddev/releases/latest | perl -lne 'print $1 if /"browser_download_url": "(.+?-Mod\.zip)"/')" -o mas.zip
-          unzip -o -q mas.zip -d ddlc-mas/game
-          rm -rf mas.zip
+        run: .github/scripts/fetch-ddlc-mas.sh
 
       - name: Download Ren'Py SDK
-        run: |
-          wget https://www.renpy.org/dl/6.99.12.4/renpy-6.99.12.4-sdk.tar.bz2
-          tar xf renpy-6.99.12.4-sdk.tar.bz2
-          mv renpy-6.99.12.4-sdk renpy
+        run: .github/scripts/fetch-renpy-sdk.sh
 
       - name: Store submod version in an environment variable
-        run: echo "VERSION=$(.scripts/extract-version.sh)" >> $GITHUB_ENV
+        run: echo "VERSION=$(.github/scripts/extract-version.sh)" >> $GITHUB_ENV
 
       - name: Compile submod
-        run: .scripts/compile-submod.sh
+        run: .github/scripts/compile-submod.sh
 
       - name: Package submod
         run: find "game" | zip "msh-mod-$VERSION.zip" -9 -@
@@ -54,4 +43,4 @@ jobs:
           tag_name: v${{ env.VERSION }}
           draft: true
           files: |
-            msh-mod-${{ env.VERSION }}.zip
+            build/out/msh-mod-${{ env.VERSION }}.zip
