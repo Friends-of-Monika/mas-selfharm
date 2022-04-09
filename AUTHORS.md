@@ -21,7 +21,7 @@ Here's a list of people who have been working on this submod!
   — dialogue writing, spritepack desigining
 * [<img width="16" src=".github/icons/reddit.svg"> u/charliethecookie](https://reddit.com/u/charliethecookie)
   — dialogue writing
-* <img width="16" src=".github/icons/discord.svg"> Bunny 🌈#0123
+* <img width="16" src=".github/icons/discord.svg"> Usagi 🌈#0123
   — dialogue writing and sprite coding
 * <img width="16" src=".github/icons/discord.svg"> Cap'n Crow 🌈#0123
   — dialogue writing
