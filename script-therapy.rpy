@@ -48,6 +48,7 @@ label mshMod_ask_about_therapy:
             m 1ekc "That's alright [player]! It's not for everyone."
             m 3eka "Just remember that therapy isn't a bad thing. It's a great place to help regulate your emotions and better yourself."
             m 1lkd "I was actually going to suggest that you please consider it."
+            m 2ekc "I'm just worried about you, and your well-being."
             m 1ekc "Don't be afraid to find a therapist if you think you need one."
 
         "I'm considering it. What do you think?":
@@ -90,31 +91,4 @@ label mshMod_thoughts_about_therapy:
     m 2eka "I just don't have a way of checking on you, so I'm always hoping you're having a good day."
     m 3eua "Anyway, the tips I've learned to help myself stay calm are all tips commonly used among therapists!"
     m 1eua "So even if you don't need a full therapy session, looking up suggestions from licensed therapists can help!"
-    return
-
-
-init 5 python:
-    addEvent(
-        Event(
-            persistent.event_database,
-            eventlabel="mshMod_trying_therapy",
-            category=["you", "life", "self-harm"],
-            prompt="Trying therapy",
-            random=True
-        )
-    )
-
-label mshMod_trying_therapy:
-    m 1esc "Hey, [player]..."
-
-    if persistent._msh_mod_pm_did_selfharm:
-        m 1ekd "When I asked you if you self-harm, and you told me that you do..."
-        m 2ekd "Have you thought about going to therapy to help with that?"
-
-    else:
-        m 1ekd "When I asked you if you self-harm, you told me that you didn't..."
-        m 2ekd "Well, have you still thought about going to therapy?"
-
-    m 2ekc "I'm just worried about you, and your well-being."
-    m 3eka "So... consider it, okay?"
     return
