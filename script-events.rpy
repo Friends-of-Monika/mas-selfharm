@@ -287,13 +287,14 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="",
-            prompt="",
+            eventlabel="mshMod_morning_excercises",
+            prompt="Morning routine",
             category=["Healthy Routine"],
             random=True
         )
     )
 
+label mshMod_morning_excercises:
     m "Hey [player], do you do any exercises in the morning?"
     m "I used to always try and get some working out in my daily routine,"
     extend m " especially in the mornings!"
