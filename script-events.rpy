@@ -294,7 +294,16 @@ init 5 python:
         )
     )
 
-# DJS THIRD DIALOGUE
+    m "Hey [player], do you do any exercises in the morning?"
+    m "I used to always try and get some working out in my daily routine,"
+    extend m " especially in the mornings!"
+    m "Before school I'd do a little quiet time to get into a nice mindset, I'd stetch and think about my plans for the day."
+    m "After that, if I had the time, I'd do some simple workouts like squats, situps, and lunges."
+    m "And finally, when I went on my way to school, I'd do a light jog!"
+    m "All of these were good ways to get some exercise in without having to interupt my schedule!"
+    m "But there are tons of other ways to have exercise be apart of your routine too!"
+    m "Gardening, cleaning, volunteering to help with big jobs, and many more!"
+    m "So try to find something you already do in your day-to-day, and see if you can add a little extra exercise to it!"
 
 
 init 5 python:
