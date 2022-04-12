@@ -13,6 +13,9 @@ jobs:
 
     env:
       SDL_AUDIODRIVER: dummy
+      RENPY_RELEASE: 6.99.12.4
+      MAS_RELEASE: v0.12.8
+      DDLC_RELEASE: 1.1.1
 
     steps:
       - name: Checkout
@@ -22,6 +25,7 @@ jobs:
         id: cache
         uses: actions/cache@v3
         with:
+          key: toolchain-r${{ env.RENPY_RELEASE }}-m${{ env.MAS_RELEASE }}-d${{ env.DDLC_RELEASE }}
           path: |
             build/ddlc
             build/renpy
