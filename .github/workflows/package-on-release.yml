@@ -15,16 +15,25 @@ jobs:
       SDL_AUDIODRIVER: dummy
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Restore DDLC/MAS and Ren'Py SDK cache
+        id: cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            build/ddlc
+            build/renpy
+
       - name: Download DDLC/MAS package
+        if: '!steps.cache.outputs.cache-hit'
         env:
           DL_CREDENTIALS: ${{ secrets.DL_CREDENTIALS }}
         run: .github/scripts/fetch-ddlc-mas.sh
 
       - name: Download Ren'Py SDK
+        if: '!steps.cache.outputs.cache-hit'
         run: .github/scripts/fetch-renpy-sdk.sh
 
       - name: Store submod version in an environment variable
