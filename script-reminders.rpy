@@ -18,11 +18,11 @@ label monika_medicationreminder:
     # You can alter the minutes
 
     m "Hey, [player]!"
-    m "It's your daily reminder to take your medication."
+    m "Guess what time it is?"
+    m "That's right, it's time to take your meds! Don't forget to have lots of water with them~"
     m "You can do it~"
     m "I love you!"
     m "Time since last topic shown: [mas_globals.this_ev.conditional]"
-    # Yeah I'll let someone else write this dialogue lol, but this should work!
     return "no_unlock|love"
 
 #MEDICATION REMINDERS - DREAM
