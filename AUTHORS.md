@@ -3,13 +3,13 @@
 Here's a list of people who have been working on this submod!
 
 * [![reddit](.github/icons/reddit.svg) u/my-otter-self](https://reddit.com/u/my-otter-self)
-  [![github](.github/icons/github-light.svg#gh-dark-mode-only)![github](.github/icons/github-dark.svg#gh-light-mode-only) @my-otter-self](https://github.com/my-otter-self)
+  ![github](.github/icons/github-light.svg#gh-dark-mode-only)![github](.github/icons/github-dark.svg#gh-light-mode-only) [@my-otter-self](https://github.com/my-otter-self)
   — project managing, dialogue writing, insight and ideas
 * ![discord](.github/icons/discord.svg) Kitakus#6452
-   [![github](.github/icons/github-light.svg#gh-dark-mode-only)![github](.github/icons/github-dark.svg#gh-light-mode-only) @Paulius1290](https://github.com/Paulius1290)
+   ![github](.github/icons/github-light.svg#gh-dark-mode-only)![github](.github/icons/github-dark.svg#gh-light-mode-only) [@Paulius1290](https://github.com/Paulius1290)
   — dialogue writing and programming
 * [![reddit](.github/icons/reddit.svg) u/dreamscached](https://reddit.com/u/dreamscached)
-  [![github](.github/icons/github-light.svg#gh-dark-mode-only)![github](.github/icons/github-dark.svg#gh-light-mode-only) @dreamscached](https://github.com/dreamscached)
+  ![github](.github/icons/github-light.svg#gh-dark-mode-only)![github](.github/icons/github-dark.svg#gh-light-mode-only) [@dreamscached](https://github.com/dreamscached)
   — programming and repository maintaining
 * [![reddit](.github/icons/reddit.svg) u/malicioussoftwaree](https://reddit.com/u/malicioussoftwaree)
   [![twitter](.github/icons/twitter.svg) @maliciousSftwre](https://twitter.com/maliciousSftwre)
