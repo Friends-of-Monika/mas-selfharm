@@ -79,6 +79,9 @@ label mshMod_probing_questions_talk:
 
         "Hitting yourself":
             pass
+            
+        "Psychological":
+            pass
 
         "Other":
             $ renpy.input("What's the other method?", allow="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz", length=30)
