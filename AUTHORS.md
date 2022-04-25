@@ -17,7 +17,7 @@ Here's a list of people who have been working on this submod!
 * [![reddit](.github/icons/reddit.svg) u/AmyKawa](https://reddit.com/u/AmyKawa)
   — dialogue writing, programming and sprite coding
 * [![reddit](.github/icons/reddit.svg) u/mayday-mayjay](https://reddit.com/u/mayday-mayjay)
-  ![discord](.github/icons/discord.svg) DJChicken#2001
+  ![discord](.github/icons/discord.svg) DJChicken#2001 /the DreamScape system
   — dialogue writing, spritepack desigining
 * [![reddit](.github/icons/reddit.svg) u/charliethecookie](https://reddit.com/u/charliethecookie)
   — dialogue writing
