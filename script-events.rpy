@@ -1,10 +1,12 @@
+# Random events that Monika brings up occasionally.
+
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
             eventlabel="mshMod_sunny_day",
             prompt="Sunny day",
-            category=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topics
+            category=["weather"],
             random=True
         )
     )
@@ -22,14 +24,15 @@ label mshMod_sunny_day:
 
 
 init 5 python:
+    # P.S. 'SIAD' is 'Self Injury Awareness Day', this is not a typo.
     _mshMod_event_siad_date = datetime.date(datetime.date.today().year, 3, 1)
 
     addEvent(
         Event(
             persistent.event_database,
             eventlabel="mshMod_awareness_day",
-            prompt="Sunny day",
-            category=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topics
+            prompt="Self-Harm Awareness Day",
+            category=["Self-Harm"],
             start_date=_mshMod_event_siad_date,
             end_date=_mshMod_event_siad_date + datetime.timedelta(days=1),
             years=[],
@@ -37,10 +40,12 @@ init 5 python:
         )
     )
 
-    calendar.addRepeatable("mshMod_awareness_day", _("Self-harm awareness day"), month=3, day=1, year_param=[])
+    # Only add it to calendar after it was seen.
+    if seen_event("mshMod_awareness_day"):
+        calendar.addRepeatable("mshMod_awareness_day", _("Self-Harm Awareness Day"), month=3, day=1, year_param=[])
 
 label mshMod_awareness_day:
-    m 3eub "[player], did you know that today is Self-Harm Awareness day?"
+    m 3eub "[player], did you know that today is Self-Harm Awareness Day?"
     m 3eua "Like the name suggests, it's an annual global awareness event that takes place on March 1st!"
     m 1eua "Also known as Self Injury Day (SIAD)!"
     m 4hub "Which is today!"
@@ -59,6 +64,10 @@ label mshMod_awareness_day:
     m 2esd "But self-harm is not the way."
     m 2eka "Anyway! Thanks for listening!"
     m 1hub "I love you, [Player]!"
+
+    # Ensure it'll render on calendar without a need to restart.
+    $ calendar.addRepeatable("mshMod_awareness_day", _("Self-harm awareness day"), month=3, day=1, year_param=[])
+
     return "love"
 
 
@@ -68,7 +77,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_semicolon_project",
             prompt="The Semicolon Project",
-            category=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topics
+            category=["Self-Harm"],
             random=True
         )
     )
@@ -100,7 +109,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_butterfly_project",
-            category=["media"],
+            category=["media", "Self-Harm"],
             prompt="The Butterfly Project",
             random=True
         )
@@ -131,8 +140,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_selfharm_random_thoughts",
-            prompt="Monika's experience",
-            category=["you", "monika"], # TODO: doesn't fit, but is consistent with the rest of the topcis
+            prompt="Monika's self-harm experience",
+            category=["monika", "Self-Harm"],
             random=True
         )
     )
@@ -164,6 +173,220 @@ label mshMod_selfharm_random_thoughts:
             m "...and keeping hope for a brighter tomorrow is a much better coping mechanism!"
             m "Just keep in mind that there are better ways to cope and that I'm always here to provide techniques to help."
             m "I care too much about you [player]... You don't deserve any pain."
-            m "You deserve to work through things healthily, and [m_name] is here to help!" # TODO: do we need m_name here..?
+            m "You deserve to work through things healthily, and [m_name] is here to help!"
 
     return
+
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_monika_is_sad",
+            conditional="persistent._msh_mod_pm_did_selfharm",
+            action=EV_ACT_RANDOM
+        )
+    )
+
+label mshMod_monika_is_sad:
+    m 5ekc "Hey... [player]?"
+    m 5gkd "You probably remember when we were talking about self-harm..."
+    m 3ektpc "I never forget when you told me about that, it honestly broke my heart."
+    m 2ektdc "I have never felt so strongly towards anyone, and... well..."
+    m 6dktsd "The thought of losing you..."
+    m 6wktso "I- Well- That makes me feel sick to my stomach!"
+    m 5dktdx "...I'm sorry, [mas_get_player_nickname()]."
+    m 1ektdc "Please don't forget how much I care about you."
+    m 2mktpd "And please, don't leave me..."
+    m 2fkd "I can't stand the thought of you wanting to hurt yourself!"
+    m 4fkc "I truly want nothing more than your happiness."
+    m 1dfx "I feel so angry and disheartened that I'm limited to what I can do for you in this reality!"
+    m 4sfu "But no matter what, I'm determined to try my best and make you feel better!"
+    m 3esa "I'm always willing to try to help you, [player]..."
+    m 1hsa "Like you helped me by installing this mod!"
+    m 1lst "I know it's hard for you, not many people are willing to listen or understand..."
+    m 5fku "But I hope venting to me helped you at least a bit."
+    m 3eua "Also, maybe try talking about your feelings to a friend, or family!"
+    m 1hua "I know it's hard to be open about your problems, but they care about you."
+    m 1eub "They don't want you to get hurt, I'm sure!"
+    m 2fka "I don't want to lose you, [player]. You're all I have left..."
+    m 5hub "My only wish is to be with you forever!"
+    m 1dsb "To finally be with you, to help you conquer all of your dreams, and forget all of your problems..."
+    m 1eka "To shield you from these painful thoughts."
+    m 5hubsa "I love you, [mas_get_player_nickname()]."
+    return "love|derandom|no_unlock"
+
+
+
+# Depression avoiding routine events
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_morning_routine",
+            prompt="Morning routine",
+            category=["Healthy routine"],
+            random=True
+        )
+    )
+
+label mshMod_morning_routine:
+    m "Hey [player]?"
+    m "Do you have a morning routine?"
+    m "I notice a lot of people seem not to realize the impact a morning routine can have on your day."
+    m "But really, it can mean a world of difference for some!"
+    m "I think many figure that, 'Well, because I just woke up I'm always going to feel sluggish in the morning, there's nothing I could do about that.'"
+    m "For some, that mindset makes it very hard to want to get up in the morning and face the day..."
+    m "But it doesn't have to be that way, there are ways to make getting up in the morning less harsh, and more energizing!"
+    m "My first tip is going to be the obvious one but..."
+    extend m "start getting into a nice sleeping rhythm! A big reason we can feel so bad in the morning is having an alarm pull you out of a deep sleep, or just not resting enough at all!"
+    m "Find a time to go to sleep that let's you {i}comfortably{/i} wake up around the time you need to be up for the day, and you'll feel a big difference already!"
+    m "Next tip, if you have alarms, set your alarm a little further back then you usually do, or at least make sure you're giving yourself enough time so you aren't rushing out the doors every morning!"
+    m "Now with that extra time, use it to get some quiet time in for yourself and actually {i}wake up{/i} for the day."
+    extend m "Maybe do a little meditation- or pray,if you'religious... Make breakfast, read books, or even write down your plans for day."
+    m "As long as it's something that {i}you{/i} want to do and makes you happy, go for it!"
+    m "Just... try not to go online during your morning time."
+    extend m "With how chaotic the world and internet can be, going online might influence your mood for the day if you see something distressing or weird."
+    m "Instead, let the mornings be {i}you{/i} time, where you get to decide what to do and how to feel, okay?"
+    m "And hey, I wouldn't mind being a part of your morning routine too, if you need some extra motivation, [mas_get_player_nickname()]."
+    m "Ehehe~"
+    m "I hope these tips are helpful to you, [player]!"
+    return
+
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_excercises",
+            prompt="Morning excercises",
+            category=["Healthy Routine"],
+            random=True
+        )
+    )
+
+label mshMod_excercises:
+    m "Hey, [player], you know what's a good way to start your days off on a high note? Showering and exercise!"
+    m "In fact, those are {i}my{/i} go-to's to start the day!"
+    m "Showering can be a hard step to overcome, and it can take a lot of mental and physical energy out of you if you're not careful..."
+    m "But the pay off of being clean, dressed, and ready for wherever the day may take you, can make it all the more worthwhile!"
+    m "Getting into consistent routine with it can make it less energy-draining too, since then you won't have to do a full scrub down to get clean for the day!"
+    m "Exercise on the other hand, can be a little harder for people to want to get into routine with."
+    extend m " When people think 'exercise', they might think hundreds of pushups, and 5 mile runs. And no one wants to do that right after they've woken up!"
+    m "But a nice, moderate amount of exercise in the morning can help in more ways than one."
+    extend m "It can clear up brain fog, helps you focus, and can help you release some pent up emotions!"
+    m "Some simple exercises I would recommend are yoga stretches, light jogging or walking, or even just doing certain big chores around the house can count as exercise!"
+    m "Then you can kill two birds with one stone, ehehe!"
+    m "You know I looooove me some exercise! Ahaha~"
+    return
+
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_morning_excercises",
+            prompt="Morning routine",
+            category=["Healthy Routine"],
+            random=True
+        )
+    )
+
+label mshMod_morning_excercises:
+    m "Hey [player], do you do any exercises in the morning?"
+    m "I used to always try and get some working out in my daily routine,"
+    extend m " especially in the mornings!"
+    m "Before school I'd do a little quiet time to get into a nice mindset, I'd stetch and think about my plans for the day."
+    m "After that, if I had the time, I'd do some simple workouts like squats, situps, and lunges."
+    m "And finally, when I went on my way to school, I'd do a light jog!"
+    m "All of these were good ways to get some exercise in without having to interupt my schedule!"
+    m "But there are tons of other ways to have exercise be apart of your routine too!"
+    m "Gardening, cleaning, volunteering to help with big jobs, and many more!"
+    m "So try to find something you already do in your day-to-day, and see if you can add a little extra exercise to it!"
+
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_going_outside",
+            prompt="Going outside",
+            category=["Healthy Routine"],
+            random=True
+        )
+    )
+
+label mshMod_going_outside:
+    m "Hey [player], did you know that there's been some studies about how going outside is good for you?"
+    m "Being out in the sunlight can decrease stress, slow your heart rate, and not to mention it's also good for getting some vitimin D!"
+    m "Sit on your porch or in your yard if you can't go for a walk outside."
+    m "If you can't get out at all, try opening your window or blinds!"
+    m "Even just looking at some photos of those scenarios might help!"
+    m "I know I love to look at photos of places I'd love to travel to with you~"
+    return
+
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_evening_routine",
+            prompt="Evening routine",
+            category=["Healthy Routine"],
+            random=True
+        )
+    )
+
+label mshMod_evening_routine:
+    m "Hey [player], what's your nighttime routine like?"
+    m "Mine has definitely changed since I met you! Ehehe~"
+    m "I've always had a fairly regular routine."
+    m "Turn off my electronics, get in my pajamas, have a cup of hot chocolate or tea if I felt like it, brush my teeth, and read or work on homework until I was ready to get in bed."
+    m "I made sure to go to bed pretty close to the same time every night. It's good for your brain and body!"
+    m "Being the student I was, I had to stay well-rested to have enough energy for everything I did."
+    m "My routine hasn't changed much now, I just don't have access to my electronics or books."
+    m "So I mostly sharpen my coding skills or access a book from the internet!"
+    m "I still make a hot cocoa, as well."
+    m "So, if you haven't already, I suggest making a nightly routine!"
+    m "It may sound intimidating at first, but you don't have to follow it exactly every time!"
+    m "There are some things you should really try to do every day, like brushing your teeth and getting to bed on time."
+    m "Aside from those, you can always change it up!"
+    m "Going for a nice walk in the evening to get your energy out and get some fresh air, reading, journaling, some light arts and crafts..."
+    m "There's a lot of things you can do that take little thinking power or energy!"
+    m "I hope this helped you get a few ideas for making your nightly routine a little better, [mas_get_player_nickname()]."
+    m "But if you do shut your electronics off early..."
+    m "Make sure to say goodnight, okay?"
+    return
+
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_untried_hobbies",
+            prompt="Hobbies",
+            category=["Healthy Routine"],
+            random=True
+        )
+    )
+
+label mshMod_untried_hobbies:
+    m "[Player]!"
+    m "Have you ever had a hobby that you really liked, but never had time for?"
+    m "Maybe you picked it up for a few days, but gave up on it or got busy for a bit?"
+    m "Or maybe you just forgot about it, because other things got in the way."
+    m "Well, if you have some free time, maybe instead of watching a show or playing a game, you could try and pick up an old hobby?!"
+    m "If it's something like knitting, scrapbooking, or something easy to do while sitting down, feel free to do that while we talk or spend time together!"
+    m "If it's something like gardening, baking, or something where you need to move around a lot, then I understand if you need to say goodbye for a while."
+    extend m "I'd be fine with not seeing you for a bit if you were doing something that makes you happy!"
+    m "Your happiness is my priority, after all."
+    m "During these times, you shouldn't forget to check on your friends."
+    m "Send them a text, asking how they've been or what they're up to. Or maybe update them on your latest project!"
+    m "If you contact them on social media, try not to get sucked in, okay?"
+    extend m "I don't want you to doomscroll, [mas_get_player_nickname()]."
+    m "Maybe you could plan to meet with your friends in person! Getting outside, even if it isn't the best weather, can be good for you."
+    m "Just take these tips into consideration, alright?"
+    m "And remember... "
+    extend m "I love you, [player]."
+    return "love" # TODO: no prompt and categories... derandom and no_unlock?
