@@ -121,6 +121,9 @@ init 4 python:
         _mshMod_rebuildMilestoneDates()
         _mshMod_updateMilestoneEvents()
 
+        # Hide streak check event
+        mas_hideEVL("mshMod_sober_check", "EVE")
+
     def mshMod_hasPersonalBest():
         """
         Checks if player has personal best in sober streak.
