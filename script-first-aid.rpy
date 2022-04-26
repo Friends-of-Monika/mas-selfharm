@@ -49,7 +49,7 @@ label mshMod_first_aid_guide:
 
     m 2esa "I can make a timer for you.{nw}"
     menu:
-        m 2esa "I can make a timer for you.{fast}"
+        m "I can make a timer for you.{fast}"
 
         "Yes, that'd help":
             $ timeout = True
