@@ -26,6 +26,23 @@
 
 
 init 5 python:
+    addEvent(
+        Evenet(
+            persistent.event_database,
+            eventlabel="mshMod_sober_check",
+            prompt="How long have I been sober for?",
+            category=["self-harm"],
+            conditional="mshMod_isOnStreak()",
+            action=EV_ACT_POOL
+        )
+    )
+
+label mshMod_sober_check:
+    m "You're being sober for [mshMod_getStreakDuration()] days now."
+    return
+
+
+init 5 python:
     mshMod_addMilestoneEvent(
         milestone="1w",
         event=Event(
