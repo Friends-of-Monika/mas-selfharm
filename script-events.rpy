@@ -214,7 +214,6 @@ label mshMod_monika_is_sad:
     m 1dsb "To finally be with you, to help you conquer all of your dreams, and forget all of your problems..."
     m 1eka "To shield you from these painful thoughts."
     m 5hubsa "I love you, [mas_get_player_nickname()]."
-
     return "love|derandom|no_unlock"
 
 
@@ -390,4 +389,4 @@ label mshMod_untried_hobbies:
     m "Just take these tips into consideration, alright?"
     m "And remember... "
     extend m "I love you, [player]."
-    return "love"
+    return "love" # TODO: no prompt and categories... derandom and no_unlock?
