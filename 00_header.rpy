@@ -1,10 +1,10 @@
 init -990 python in mas_submod_utils:
     Submod(
-        author="MAS Self Harm Mod Contributors",
-        name="MAS Self Harm Mod",
-        description="A whole lot of new things, from techniques "
-                    "and tips to sober streak tracking.",
-        version="0.0.0",
+        author="MAS Self Harm Submod Team",
+        name="MAS Self-harm Submod",
+        description="Awareness about self-harm and support to self-harmers, with different "
+                    "techniques, milestones, checkups and new dialogue and spritepacks.",
+        version="0.0.1",
         dependencies={},
         settings_pane=None,
         version_updates={}

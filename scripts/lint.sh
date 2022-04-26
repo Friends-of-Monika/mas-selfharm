@@ -12,3 +12,5 @@ VERSION="$(.github/scripts/extract-version.sh)"
 
 echo "# Compile submod"
 .github/scripts/compile-submod.sh
+
+rm -rf build/out

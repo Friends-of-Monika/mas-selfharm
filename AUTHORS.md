@@ -2,37 +2,37 @@
 
 Here's a list of people who have been working on this submod!
 
-* [<img width="16" src=".github/icons/reddit.svg"> u/my-otter-self](https://reddit.com/u/my-otter-self)
-  [<img width="16" src=".github/icons/github.svg"> @my-otter-self](https://github.com/my-otter-self)
+* [![reddit](.github/icons/reddit.svg) u/my-otter-self](https://reddit.com/u/my-otter-self)
+  ![github](.github/icons/github-light.svg#gh-dark-mode-only)![github](.github/icons/github-dark.svg#gh-light-mode-only) [@my-otter-self](https://github.com/my-otter-self)
   — project managing, dialogue writing, insight and ideas
-* <img width="16" src=".github/icons/discord.svg"> Kitakus#6452
-   [<img width="16" src=".github/icons/github.svg"> @Paulius1290](https://github.com/Paulius1290)
+* ![discord](.github/icons/discord.svg) Kitakus#6452
+   ![github](.github/icons/github-light.svg#gh-dark-mode-only)![github](.github/icons/github-dark.svg#gh-light-mode-only) [@Paulius1290](https://github.com/Paulius1290)
   — dialogue writing and programming
-* [<img width="16" src=".github/icons/reddit.svg"> u/dreamscached](https://reddit.com/u/dreamscached)
-  [<img width="16" src=".github/icons/github.svg"> @dreamscached](https://github.com/dreamscached)
+* [![reddit](.github/icons/reddit.svg) u/dreamscached](https://reddit.com/u/dreamscached)
+  ![github](.github/icons/github-light.svg#gh-dark-mode-only)![github](.github/icons/github-dark.svg#gh-light-mode-only) [@dreamscached](https://github.com/dreamscached)
   — programming and repository maintaining
-* [<img width="16" src=".github/icons/reddit.svg"> u/malicioussoftwaree](https://reddit.com/u/malicioussoftwaree)
-  [<img width="16" src=".github/icons/twitter.svg"> @maliciousSftwre](https://twitter.com/maliciousSftwre)
+* [![reddit](.github/icons/reddit.svg) u/malicioussoftwaree](https://reddit.com/u/malicioussoftwaree)
+  [![twitter](.github/icons/twitter.svg) @maliciousSftwre](https://twitter.com/maliciousSftwre)
   — programming and dialogue writing
-* [<img width="16" src=".github/icons/reddit.svg"> u/AmyKawa](https://reddit.com/u/AmyKawa)
+* [![reddit](.github/icons/reddit.svg) u/AmyKawa](https://reddit.com/u/AmyKawa)
   — dialogue writing, programming and sprite coding
-* [<img width="16" src=".github/icons/reddit.svg"> u/mayday-mayjay](https://reddit.com/u/mayday-mayjay)
-  <img width="16" src=".github/icons/discord.svg"> DJChicken#2001
+* [![reddit](.github/icons/reddit.svg) u/mayday-mayjay](https://reddit.com/u/mayday-mayjay)
+  ![discord](.github/icons/discord.svg) DJChicken#2001
   — dialogue writing, spritepack desigining
-* [<img width="16" src=".github/icons/reddit.svg"> u/charliethecookie](https://reddit.com/u/charliethecookie)
+* [![reddit](.github/icons/reddit.svg) u/charliethecookie](https://reddit.com/u/charliethecookie)
   — dialogue writing
-* <img width="16" src=".github/icons/discord.svg"> Usagi 🌈#0123
+* ![discord](.github/icons/discord.svg) Usagi 🌈#0123
   — dialogue writing and sprite coding
-* <img width="16" src=".github/icons/discord.svg"> Cap'n Crow 🌈#0123
+* ![discord](.github/icons/discord.svg) Cap'n Crow 🌈#0123
   — dialogue writing
-* <img width="16" src=".github/icons/user.svg"> Nem
-  <img width="16" src=".github/icons/discord.svg"> WentPostal#3452
+* ![user](.github/icons/user-light.svg#gh-dark-mode-only)![user](.github/icons/user-dark.svg#gh-light-mode-only) Nem
+  ![discord](.github/icons/discord.svg) WentPostal#3452
   — dialogue writing
-* <img width="16" src=".github/icons/discord.svg"> lukilak#1046
+* ![discord](.github/icons/discord.svg) lukilak#1046
   — dialogue writing
-* [<img width="16" src=".github/icons/reddit.svg"> u/History_Variety63](https://reddit.com/u/History_Variety63)
+* [![reddit](.github/icons/reddit.svg) u/History_Variety63](https://reddit.com/u/History_Variety63)
   — insights and ideas
-* <img width="16" src=".github/icons/user.svg"> Feenie
+* ![user](.github/icons/user-light.svg#gh-dark-mode-only)![user](.github/icons/user-dark.svg#gh-light-mode-only) Feenie
   — insights and ideas
-* <img width="16" src=".github/icons/user.svg"> Rhea
+* ![user](.github/icons/user-light.svg#gh-dark-mode-only)![user](.github/icons/user-dark.svg#gh-light-mode-only) Rhea
   — insights and ideas
