@@ -27,7 +27,7 @@
 
 init 5 python:
     addEvent(
-        Evenet(
+        Event(
             persistent.event_database,
             eventlabel="mshMod_sober_check",
             prompt="How long have I been sober for?",
