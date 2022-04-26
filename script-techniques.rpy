@@ -1,11 +1,8 @@
 default persistent._msh_mod_technique_database = dict()
 
-init -100 python:
-    _mshMod_TECHNIQUE_MENU_EXIT_ITEM = ("Nevermind", None, False, False)
-
-
-# When needed, use this code to unlock
-
+init 7 python:
+    mas_all_ev_db_map["MSH_MOD_TCH"] = persistent._msh_mod_technique_database
+    mas_all_ev_db.update(persistent._msh_mod_technique_database)
 
 init 5 python:
     addEvent(
@@ -20,15 +17,22 @@ init 5 python:
         )
     )
 
+init -100 python:
+    _mshMod_TECHNIQUE_MENU_EXIT_ITEM = ("Nevermind", None, False, False)
+
 label mshMod_technique_menu:
     m "Sure, [mas_get_player_nickname()]!"
 
     python:
+        # NOTE: Due to nature of certain techniques that might require conditional locking,
+        # we're filtering events by 'seen', not by 'unlocked'.
+        # Unlocked only means it can be picked randomly when needed and then marked as seen and added into this menu.
+
         items = list(map(
             lambda it: (it.prompt, it.eventlabel, False, False),
             Event.filterEvents(
                 persistent._msh_mod_technique_database,
-                unlocked=True
+                seen=True
             ).values()
         ))
 
@@ -44,25 +48,24 @@ label mshMod_technique_menu:
     return
 
 
-# label mshMod_technique_pickRandom:
-#     python:
-#         items = Event.filterEvents(
-#             persistent._msh_mod_technique_database,
-#             unlocked=False
-#         ).values()
-#
-#     if not items:
-#         m "Hmm... Oh. I think I ran out of ideas, [player]..."
-#         m "But I'll let you know once I'll think of something new!"
-#         m "In the meantime, you can always ask me about techniques I told you about earlier~"
-#
-#     else:
-#         ev = items[random.randint(len(items))]
-#         ev.unlocked = True
-#         pushEvent(ev.eventlabel, skipeval=True)
-#
-#     return
+label mshMod_technique_random:
+    python:
+        # Prefer unseen first
+        items = Event.filterEvents(
+            persistent._msh_mod_technique_database,
+            unlocked=True,
+            seen=False
+        )
 
+        if not items:
+            items = Event.filterEvents(
+                persistent._msh_mod_technique_database,
+                unlocked=True
+            )
+
+        renpy.call(items[random.randint(0, len(items) - 1)])
+
+    return
 
 init 5 python:
     addEvent(
@@ -70,22 +73,21 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_religion",
             prompt="Religion",
-            unlocked=False
+            conditional="persistent._mas_pm_religious",
+            action=EV_ACT_UNLOCK,
+            unlocked=False,
         )
     )
 
 label mshMod_technique_religion:
-    if $ persistent._mas_pm_religious == True:
-        m 5eka "I remember you mentioned being religious before..."
-        m 3etd "Maybe you could say a little prayer?"
-        m 4eud "It can be silent, you don't need to say anything out loud."
-        m 1fua "You can pray about anything you want, or even just think of how vast and amazing your universe is."
-        m 1dsu "Try to think about the good things, like animals or laughter, your favorite things..."
-        m 1esa "No matter how little they may be, take some time to think about the bigger picture."
-        m 3eka "If you believe in gods or deities, you can imagine them out there, looking out and caring for you."
-        m 1ekb "You are needed, [player]. You are part of something much bigger than your bad thoughts or bad feelings!"
-    else:
-        jump technique_cozy
+    m 5eka "I remember you mentioned being religious before..."
+    m 3etd "Maybe you could say a little prayer?"
+    m 4eud "It can be silent, you don't need to say anything out loud."
+    m 1fua "You can pray about anything you want, or even just think of how vast and amazing your universe is."
+    m 1dsu "Try to think about the good things, like animals or laughter, your favorite things..."
+    m 1esa "No matter how little they may be, take some time to think about the bigger picture."
+    m 3eka "If you believe in gods or deities, you can imagine them out there, looking out and caring for you."
+    m 1ekb "You are needed, [player]. You are part of something much bigger than your bad thoughts or bad feelings!"
     return
 
 
@@ -228,7 +230,7 @@ label mshMod_technique_hugs:
     m "I bet that's what they would tell you!"
     m "Maybe you can even think of me? Ahahaha~{w=0.5} Sorry to be pretentious, [player.]"
     m "I love you so much!"
-    return
+    return "love"
 
 
 init 5 python:
