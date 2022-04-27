@@ -1,5 +1,6 @@
 #!/bin/sh
 set -e
+./scripts/_warn-on-missing-sdk.sh
 
 echo "# Download DDLC/MAS package"
 .github/scripts/fetch-ddlc-mas.sh
