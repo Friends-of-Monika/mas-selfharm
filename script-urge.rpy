@@ -5,7 +5,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_urge",
-            category=["Self-Harm"],
+            category=["self-Harm"],
             prompt="Monika, It's happening again...",
             random=False
         )
