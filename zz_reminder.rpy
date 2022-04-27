@@ -1,62 +1,63 @@
 default persistent._mshMod_reminders = dict()
 
-init -10 python:
-    class _mshMod_CurrentReminderMeta:
+init -10 python in mshMod_reminder:
+    class _CurrentReminderMeta:
         def __init__(self, date, _label, payload):
             self.date = date
             self.evlabel = _label
             self.payload = payload
             self.delay = 0
 
-    _mshMod_currentReminderMeta = None
+    _currentReminderMeta = None
 
-    def mshMod_createReminder(name, date, _label, payload=None):
-        persistent._mshMod_reminders[name] = _mshMod_CurrentReminderMeta(date, _label, payload)
+    def createReminder(name, date, _label, payload=None):
+        persistent._reminders[name] = _CurrentReminderMeta(date, _label, payload)
 
-    def mshMod_cancelReminder(name):
-        if name in persistent._mshMod_reminders:
-            del persistent._mshMod_reminders[name]
+    def cancelReminder(name):
+        if name in persistent._reminders:
+            del persistent._reminders[name]
 
-    def _mshMod_popTriggeredReminder():
-        if not persistent._mshMod_reminders:
+    def _popTriggeredReminder():
+        if not persistent._reminders:
             raise ValueError("no active reminders")
 
-        items = list(persistent._mshMod_reminders.items())
+        items = list(persistent._reminders.items())
         items.sort(key=lambda it: it[1].date)
 
-        rem = persistent._mshMod_reminders[items[0][0]]
-        del persistent._mshMod_reminders[items[0][0]]
+        rem = persistent._reminders[items[0][0]]
+        del persistent._reminders[items[0][0]]
 
         return rem
 
-    def _mshMod_shouldTriggerEvent():
-        if not persistent._mshMod_reminders:
+    def _shouldTriggerEvent():
+        if not persistent._reminders:
             return False
 
         now = datetime.datetime.now()
-        for name, meta in persistent._mshMod_reminders.items():
+        for name, meta in persistent._reminders.items():
             if meta.date <= now:
                 return True
 
         return False
 
+
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="_mshMod_reminderTriggerHelper",
-            conditional="_mshMod_shouldTriggerEvent()",
+            eventlabel="mshMod_reminderTriggerHelper",
+            conditional="store.mshMod_reminder._shouldTriggerEvent()",
             action=EV_ACT_QUEUE,
             rules={"force repeat": None},
             random=True
         )
     )
 
-label _mshMod_reminderTriggerHelper:
+label mshMod_reminderTriggerHelper:
     python:
-        meta = _mshMod_popTriggeredReminder()
+        meta = _popTriggeredReminder()
         meta.delay = datetime.datetime.now() - meta.date
-        _mshMod_currentReminderMeta = meta
+        _currentReminderMeta = meta
 
         queueEvent(meta.evlabel, notify=True)
     return "no_unlock"
