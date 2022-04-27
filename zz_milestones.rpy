@@ -609,6 +609,7 @@ init 7 python:
 
 
     ### DAILY MILESTONES REBUILD/UPDATE ###
+    # TODO: There is a better approach than this. Remove this.
 
     import time
 
@@ -630,6 +631,8 @@ init 7 python:
     renpy.invoke_in_thread(_mshMod_dailyUpdaterThread)
 
 
+# TODO: There is a better approach than this. Remove this.
+# This exists just for sake of rendering of the personal best event on the calendar. Do not touch this!
 init 5 python:
 
     _mshMod_personalBestEventLabel = "mshMod_milestone_personal_best"
@@ -638,12 +641,9 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_personal_best",
             prompt="Sober, personal best",
-            conditional="False",
             action=EV_ACT_QUEUE
         )
     )
 
 label mshMod_milestone_personal_best:
-    # This exists just for sake of rendering of the personal best
-    # event on the calendar. Do not touch this!
     return
