@@ -13,13 +13,13 @@ jobs:
 
     env:
       SDL_AUDIODRIVER: dummy
-      RENPY_RELEASE: 6.99.12.4
-      MAS_RELEASE: v0.12.8
-      DDLC_RELEASE: 1.1.1
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
+      - name: Load environment variables from file
+        run: cat build.env >> $GITHUB_ENV
 
       - name: Restore DDLC/MAS and Ren'Py SDK cache
         id: cache
