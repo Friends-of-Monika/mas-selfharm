@@ -1,5 +1,3 @@
-# DIARY DIALOGUE
-
 init 5 python:
     addEvent(
         Event(
