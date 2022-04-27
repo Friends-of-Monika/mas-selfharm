@@ -11,6 +11,7 @@ init 5 python:
     )
 
 label mshMod_sober_check:
+    # TODO: PLACEHOLDER LINE! We need to write an actual dialogue for this.
     m "You're being sober for [mshMod_getStreakDuration()] days now."
     return
 
@@ -41,6 +42,8 @@ label mshMod_promise:
     m 5dkbsb "Never forget that!"
 
     python:
+        # Begin streak and hide this event from the pool.
+        # mshMod_relapse will pop up shortly afterwards.
         mshMod_beginStreak()
         mas_lockEVL("mshMod_promise", "EVE")
 
@@ -75,6 +78,8 @@ label mshMod_relapse:
     m 3esa "Whenever and if you feel ready to make the promise again... let me know."
 
     python:
+        # End streak and hide this event from the pool.
+        # mshMod_promise will pop up shortly afterwards.
         mshMod_endStreak()
         mshMod_lockEVL("mshMod_relapse", "EVE")
 
