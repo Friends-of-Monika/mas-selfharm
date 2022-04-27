@@ -11,14 +11,19 @@ init 5 python:
     )
 
 label mshMod_sober_check:
-    #if streakduration is 0-1
-    m "You've been sober for [mshMod_getStreakDuration()] days now, [player]."
-    m "I'm so proud of you for making the promise!"
-    m "This is the start of something really beautiful."
-    #else
-    m "You've been sober for [mshMod_getStreakDuration()] days now, [player]."
-    m "I'm so proud of you! Keep on fighting!"
-    m "I’m so happy to see you taking care of yourself."
+    python:
+        duration = mshMod_getStreakDuration()
+        days = "day" if duration == 1 else "days"
+
+    if duration < 3:
+        m "You've been sober for [duration] [days] now, [player]."
+        m "I'm so proud of you for making the promise!"
+        m "This is the start of something really beautiful."
+    else:
+        m "You've been sober for [duration] [days] now, [player]."
+        m "I'm so proud of you! Keep on fighting!"
+        m "I’m so happy to see you taking care of yourself."
+
     return
 
 
