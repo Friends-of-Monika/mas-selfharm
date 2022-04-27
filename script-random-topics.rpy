@@ -1,5 +1,3 @@
-# Random events that Monika brings up occasionally.
-
 init 5 python:
     addEvent(
         Event(
@@ -32,7 +30,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_awareness_day",
             prompt="Self-Harm Awareness Day",
-            category=["Self-Harm"],
+            category=["self-Harm"],
             start_date=_mshMod_event_siad_date,
             end_date=_mshMod_event_siad_date + datetime.timedelta(days=1),
             years=[],
@@ -77,7 +75,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_semicolon_project",
             prompt="The Semicolon Project",
-            category=["Self-Harm"],
+            category=["self-Harm"],
             random=True
         )
     )
@@ -109,7 +107,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_butterfly_project",
-            category=["media", "Self-Harm"],
+            category=["self-Harm"],
             prompt="The Butterfly Project",
             random=True
         )
@@ -141,7 +139,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_selfharm_random_thoughts",
             prompt="Monika's self-harm experience",
-            category=["monika", "Self-Harm"],
+            category=["self-Harm"],
             random=True
         )
     )

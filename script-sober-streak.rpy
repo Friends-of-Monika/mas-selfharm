@@ -4,7 +4,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_sober_check",
             prompt="How long have I been sober for?",
-            category=["self-harm"],
+            category=["self-Harm"],
             conditional="mshMod_isOnStreak()",
             action=EV_ACT_POOL
         )
@@ -21,7 +21,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_promise",
-            category=["self-harm"],
+            category=["self-Harm"],
             prompt="I promise...",
             conditional="not mshMod_isOnStreak() and persistent._msh_mod_pm_did_selfharm",
             action=EV_ACT_POOL,
@@ -55,7 +55,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_relapse",
-            category=["self-harm"],
+            category=["self-Harm"],
             prompt="I relapsed...",
             conditional="mshMod_isOnStreak()",
             action=EV_ACT_POOL,
@@ -93,7 +93,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_1w",
             prompt="Sober, week 1",
-            category=["self-harm"],
+            category=["self-Harm"],
             action=EV_ACT_QUEUE
         )
     )
@@ -113,7 +113,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_2w",
             prompt="Sober, week 2",
-            category=["self-harm"],
+            category=["self-Harm"],
             action=EV_ACT_QUEUE
         )
     )
@@ -137,7 +137,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_3w",
             prompt="Sober, week 3",
-            category=["self-harm"],
+            category=["self-Harm"],
             action=EV_ACT_QUEUE
         )
     )

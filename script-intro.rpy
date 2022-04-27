@@ -94,7 +94,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_selfharm_more",
-            category=["self-harm"],
+            category=["self-Harm"],
             prompt="I want to learn more about self harm.",
             conditional="seen_event('mshMod_selfharm_intro')",
             action=EV_ACT_UNLOCK,

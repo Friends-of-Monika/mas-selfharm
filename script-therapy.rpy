@@ -68,7 +68,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_thoughts_about_therapy",
-            category=["monika", "life", "self-harm"],
+            category=["monika", "life", "self-Harm"],
             prompt="Thoughts about therapy",
             random=True
         )
