@@ -5,14 +5,14 @@ init 5 python:
             eventlabel="mshMod_sober_check",
             prompt="How long have I been sober for?",
             category=["self-Harm"],
-            conditional="mshMod_isOnStreak()",
+            conditional="store.mshMod_sober_streak.isOnStreak()",
             action=EV_ACT_POOL
         )
     )
 
 label mshMod_sober_check:
     python:
-        duration = mshMod_getStreakDuration()
+        duration = store.mshMod_sober_streak.getStreakDuration()
         days = "day" if duration == 1 else "days"
 
     if duration < 3:
@@ -34,7 +34,7 @@ init 5 python:
             eventlabel="mshMod_promise",
             category=["self-Harm"],
             prompt="I promise...",
-            conditional="not mshMod_isOnStreak() and persistent._msh_mod_pm_did_selfharm",
+            conditional="not store.mshMod_sober_streak.isOnStreak() and persistent._msh_mod_pm_did_selfharm",
             action=EV_ACT_POOL,
             unlocked=True
         )
@@ -68,7 +68,7 @@ init 5 python:
             eventlabel="mshMod_relapse",
             category=["self-Harm"],
             prompt="I relapsed...",
-            conditional="mshMod_isOnStreak()",
+            conditional="store.mshMod_sober_streak.isOnStreak()",
             action=EV_ACT_POOL,
             unlocked=True
         )
@@ -99,7 +99,7 @@ label mshMod_relapse:
 
 
 init 5 python:
-    mshMod_addMilestoneEvent(
+    store.mshMod_sober_streak.addMilestoneEvent(
         milestone="1w",
         event=Event(
             persistent.event_database,
@@ -119,7 +119,7 @@ label mshMod_milestone_1w:
 
 
 init 5 python:
-    mshMod_addMilestoneEvent(
+    store.mshMod_sober_streak.addMilestoneEvent(
         milestone="2w",
         event=Event(
             persistent.event_database,
@@ -143,7 +143,7 @@ label mshMod_milestone_2w:
 
 
 init 5 python:
-    mshMod_addMilestoneEvent(
+    store.mshMod_sober_streak.addMilestoneEvent(
         milestone="3w",
         event=Event(
             persistent.event_database,
