@@ -49,7 +49,7 @@ label mshMod_promise:
 
     python:
         # Begin streak and hide this event from the pool.
-        # mshMod_relapse will pop up shortly afterwards.
+        # mshMod_relapse and mshMod_sober_check will pop up shortly afterwards.
         mshMod_beginStreak()
         mas_lockEVL("mshMod_promise", "EVE")
 
@@ -84,10 +84,11 @@ label mshMod_relapse:
     m 3esa "Whenever and if you feel ready to make the promise again... let me know."
 
     python:
-        # End streak and hide this event from the pool.
+        # End streak and hide this event from the pool. Also hide check topic since we're no longer on streak.
         # mshMod_promise will pop up shortly afterwards.
         mshMod_endStreak()
         mshMod_lockEVL("mshMod_relapse", "EVE")
+        mshMod_lockEVL("mshMod_sober_check", "EVE")
 
     return
 
