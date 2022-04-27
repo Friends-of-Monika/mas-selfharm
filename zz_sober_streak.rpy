@@ -602,33 +602,17 @@ init 7 python:
 
 init 7 python:
 
+    ### DAILY MILESTONES REBUILD/UPDATE ###
+
+    @store.mas_submod_utils.functionplugin("ch30_day")
+    def _mshMod_dailyMilestoneUpdate():
+        _mshMod_rebuildMilestoneDates()
+        _mshMod_updateMilestoneEvents()
+
+
     ### INITIAL APPLICATION OF MILESTONE EVENTS ###
 
-    _mshMod_rebuildMilestoneDates()
-    _mshMod_updateMilestoneEvents()
-
-
-    ### DAILY MILESTONES REBUILD/UPDATE ###
-    # TODO: There is a better approach than this. Remove this.
-
-    import time
-
-    def _mshMod_dailyUpdaterThread():
-        # HACK: Unless we find a better way to run the checker task
-        # in the background, we could stick to *not so cheap* threads.
-        # Ideally it would fit into MASDelayedActions, but alas...
-
-        last_checked_day = datetime.date.today().day
-
-        while True:
-            time.sleep(5)
-
-            day = datetime.date.today().day
-            if last_checked_day != day:
-                _mshMod_rebuildMilestoneDates()
-                _mshMod_updateMilestoneEvents()
-
-    renpy.invoke_in_thread(_mshMod_dailyUpdaterThread)
+    _mshMod_dailyMilestoneUpdate()
 
 
 # TODO: There is a better approach than this. Remove this.
