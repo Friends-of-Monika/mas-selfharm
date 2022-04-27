@@ -420,13 +420,6 @@ init 4 python:
 
     ### EVENT MANAGEMENT ###
 
-    _mshMod_eventProperties = (
-        "eventlabel", "prompt", "label", "category", "unlocked",
-        "random", "pool", "conditional", "action", "start_date",
-        "end_date", "unlock_date", "shown_count", "last_seen",
-        "years", "sensitive", "aff_range", "show_in_idle", "flags"
-    )
-
     _mshMod_milestoneEvents = (dict(), dict())
     def mshMod_addMilestoneEvent(event, milestone):
         """
@@ -520,13 +513,19 @@ init 4 python:
         if persistent._msh_mod_pm_sober_personal_best is not None:
             since, days = persistent._msh_mod_pm_sober_personal_best
 
-            ev = _mshMod_personalBestEvent
-            store.mas_calendar.removeEvent(ev)
+            # NOTE: This is using full scan approach which is inefficient.
+            # TODO: Optimize.
+            store.mas_calendar.removeEvent_el("mshMod_milestone_personal_best")
 
-            ev.start_date, ev.end_date = _mshMod_getPersonalBestDateTuple()
-            store.mas_calendar.addEvent(ev)
+            start_date, _ = _mshMod_getPersonalBestDateTuple()
+            calendar.addRepeatable_dt(
+                "mshMod_milestone_personal_best", _("Sober streak, personal best"),
+                start_date, year_param=[start_date.year]
+            )
         else:
-            store.mas_calendar.removeEvent(_mshMod_personalBestEvent)
+            # NOTE: This is using full scan approach which is inefficient.
+            # TODO: Optimize.
+            store.mas_calendar.removeEvent_el("mshMod_milestone_personal_best")
 
 
     ### UTILITIES ###
@@ -595,12 +594,6 @@ init 7 python:
         by_label[ev.eventlabel] = data_pair
         by_code[code] = data_pair
 
-    # Make personal best event modifiable.
-    _mshMod_personalBestEvent = mas_getEV(_mshMod_personalBestEventLabel)
-    _mshMod_unlockAllEventProps(_mshMod_personalBestEvent)
-
-
-init 7 python:
 
     ### DAILY MILESTONES REBUILD/UPDATE ###
 
@@ -613,21 +606,3 @@ init 7 python:
     ### INITIAL APPLICATION OF MILESTONE EVENTS ###
 
     _mshMod_dailyMilestoneUpdate()
-
-
-# TODO: There is a better approach than this. Remove this.
-# This exists just for sake of rendering of the personal best event on the calendar. Do not touch this!
-init 5 python:
-
-    _mshMod_personalBestEventLabel = "mshMod_milestone_personal_best"
-    addEvent(
-        Event(
-            persistent.event_database,
-            eventlabel="mshMod_milestone_personal_best",
-            prompt="Sober, personal best",
-            action=EV_ACT_QUEUE
-        )
-    )
-
-label mshMod_milestone_personal_best:
-    return
