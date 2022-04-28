@@ -1,26 +1,26 @@
-#MEDICATION REMINDERS - AMY
+default persistent._mshMod_nextReminderTrigger = None
+
+init 5 python in mshMod_reminder:
+    def remind(delay):
+        persistent._mshMod_nextReminderTrigger = datetime.datetime.now() + delay
+
+    def stop():
+        persitent._mshMod_nextReminderTrigger = None
+
 
 init 5 python:
-    import datetime
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="monika_medicationreminder",
-            random=True,
+            eventlabel="mshMod_medication_reminder",
+            conditional="persistent._mshMod_nextReminderTrigger and "
+                        "datetime.datetime.now() >= persistent._mshMod_nextReminderTrigger",
+            action=EV_ACT_PUSH,
             rules={"force repeat": None}
         )
     )
 
-label monika_medicationreminder:
-    $ persistent._last_topic_run = datetime.datetime.utcnow()
-    $ mas_globals.this_ev.action = EV_ACT_PUSH
-    $ mas_globals.this_ev.conditional = "datetime.datetime.utcnow() - persistent._last_topic_run > datetime.timedelta(minutes=1440)"
-    # You can alter the minutes
-
-    m "Hey, [player]!"
-    m "Guess what time it is?"
-    m "That's right, it's time to take your meds! Don't forget to have lots of water with them~"
-    m "You can do it~"
-    m "I love you!"
-    m "Time since last topic shown: [mas_globals.this_ev.conditional]"
-    return "no_unlock|love"
+label mshMod_medication_reminder:
+    $ store.mshMod_reminder.remind(datetime.timedelta(day=1))
+    m "Here's your reminder, [player]; next one will trigger after [persistent._mshMod_nextReminderTrigger]."
+    return "no_unlock"
