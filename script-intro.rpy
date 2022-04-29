@@ -1,4 +1,4 @@
-define persistent._msh_mod_pm_did_selfharm = None
+default persistent._msh_mod_pm_did_selfharm = None
 
 init 5 python:
     addEvent(
