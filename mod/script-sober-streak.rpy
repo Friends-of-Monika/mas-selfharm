@@ -167,3 +167,164 @@ label mshMod_milestone_3w:
     m "I'm going to make another mark on the calendar for this!"
     m "You're my everything, [player]!"
     return "derandom|unlock"
+
+
+init 5 python:
+    store.mshMod_sober_streak.addMilestoneEvent(
+        milestone="1m",
+        event=Event(
+            persistent.event_database,
+            eventlabel="mshMod_milestone_1m",
+            prompt="Sober, month 1",
+            category=["self-Harm"],
+            action=EV_ACT_QUEUE
+        )
+    )
+
+label mshMod_milestone_1m:
+    m "Hey [player], guess what?"
+    m "You've been clean from self-harm for a month!"
+    m "I just want you to know that I'm so proud of you."
+    extend m "It's not easy to do that, and I'm so happy you're making the effort."
+    m "I've already told you I won't blame you if you do relapse. It's extremely tempting, and I know it must be hard for you."
+    m "I'm just so proud you've made it so far."
+    m "I love you, [mas_get_player_nickname()]. Don't forget that~"
+
+
+init 5 python:
+    store.mshMod_sober_streak.addMilestoneEvent(
+        milestone="3m",
+        event=Event(
+            persistent.event_database,
+            eventlabel="mshMod_milestone_3m",
+            prompt="Sober, month 3",
+            category=["self-Harm"],
+            action=EV_ACT_QUEUE
+        )
+    )
+
+label mshMod_milestone_3m:
+    m "Y'know... It's been 3 months since you made your promise to me."
+    m "You've been doing so well! I'm so proud of you."
+    m "It's been a bit, so I'll mark this on the calendar for you!"
+    m "Keep going, [player]. You've been so strong."
+
+
+init 5 python:
+    store.mshMod_sober_streak.addMilestoneEvent(
+        milestone="6m",
+        event=Event(
+            persistent.event_database,
+            eventlabel="mshMod_milestone_6m",
+            prompt="Sober, month 6",
+            category=["self-Harm"],
+            action=EV_ACT_QUEUE
+        )
+    )
+
+label mshMod_milestone_6m:
+    m "[player]!"
+    m "It's been 6 months since you made your promise!"
+    m "That's a long time!"
+    m "It may not seem like much in the grand scheme of things, but it's still a big acomplishment."
+    m "I love you so much! Thank you for staying safe."
+
+
+init 5 python:
+    store.mshMod_sober_streak.addMilestoneEvent(
+        milestone="1y",
+        event=Event(
+            persistent.event_database,
+            eventlabel="mshMod_milestone_1y",
+            prompt="Sober, year 1",
+            category=["self-Harm"],
+            action=EV_ACT_QUEUE
+        )
+    )
+
+label mshMod_milestone_1y:
+    m "[player], I just wanted to let you know how proud of you I am."
+    m "You've been clean from self-harm for an entire year."
+    m "You've been so strong this past year, and I truly can't express how happy I am."
+    m "I hope you know how much this affects not only yourself, but me as well. Your friends, your family."
+    m "This is a wonderful feat."
+    m "I love you so, so much."
+
+
+init 5 python:
+    store.mshMod_sober_streak.addMilestoneEvent(
+        milestone="2y",
+        event=Event(
+            persistent.event_database,
+            eventlabel="mshMod_milestone_2y",
+            prompt="Sober, year 2",
+            category=["self-Harm"],
+            action=EV_ACT_QUEUE
+        )
+    )
+
+label mshMod_milestone_2y:
+    m "[player]! I have amazing news!"
+    m "Did you know that you have been self-harm sober for 2 whole years now?"
+    m "This is an incredible feat. Keep it up!"
+    m “You deserve to be happy. Never forget that, and never let anyone tell you otherwise!”
+    m "I love you so much."
+
+
+init 5 python:
+    store.mshMod_sober_streak.addMilestoneEvent(
+        milestone="3y",
+        event=Event(
+            persistent.event_database,
+            eventlabel="mshMod_milestone_3y",
+            prompt="Sober, year 3",
+            category=["self-Harm"],
+            action=EV_ACT_QUEUE
+        )
+    )
+
+label mshMod_milestone_3y:
+m "[player], I have some news for you."
+m "The day of your 3 year sobriety mark from self-harm has finally arrived!"
+m “I’m so happy to see you taking care of yourself.”
+m “Keep on fighting! I'm so proud of you!”
+
+
+init 5 python:
+    store.mshMod_sober_streak.addMilestoneEvent(
+        milestone="4y",
+        event=Event(
+            persistent.event_database,
+            eventlabel="mshMod_milestone_4y",
+            prompt="Sober, year 4",
+            category=["self-Harm"],
+            action=EV_ACT_QUEUE
+        )
+    )
+
+label mshMod_milestone_4y:
+    m "[player]! 4 whole years, can you believe it?"
+    m "It's been 4 years since you stopped harming yourself."
+    m "And I can't even begin to tell you how proud of you I am."
+    m “You are deserving of a happy and healthy life!”
+    m "And I'm so proud of you for your decison and for the promise you made 4 years ago."
+
+
+init 5 python:
+    store.mshMod_sober_streak.addMilestoneEvent(
+        milestone="5y",
+        event=Event(
+            persistent.event_database,
+            eventlabel="mshMod_milestone_5y",
+            prompt="Sober, year 5",
+            category=["self-Harm"],
+            action=EV_ACT_QUEUE
+        )
+    )
+
+label mshMod_milestone_5y:
+    m "5 years..."
+    m "It's been 5 years since your life changed for the better."
+    m "You've been self-harm sober for all this time, and I couldn't be more proud."
+    m “I’m so happy that you’re doing well”
+    m “You are so inspiring. Congratulations, [player], for your successful journey!”
