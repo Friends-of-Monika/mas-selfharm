@@ -1,4 +1,4 @@
-# NON-RANDOM EVENT FOR WHEN THE PLAYER IS FEELING SELF HARMING URGES.
+# Self-harm urge topics.
 
 init 5 python:
     addEvent(
@@ -6,7 +6,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_urge",
             category=["self-Harm"],
-            prompt="Monika, It's happening again...",
+            prompt="[m_name], it's happening again...", # TODO: update label prompt when Monika changes name
             random=False
         )
     )
@@ -37,23 +37,23 @@ label mshMod_urge:
         "Something triggered me, and now I'm remembering bad things.":
             jump mshMod_urge_low
 
-label mshMod_urge_high:
+label mshMod_urge_prepare:
     m 2dka "I'm so glad you came to talk to me, [player]."
     m 2dkc "You know how much I worry about you..."
     m 2fka "But for now, let me take care of you..."
+    return
+
+label mshMod_urge_high:
+    call mshMod_urge_prepare
     m 2esd "I want you to know that it will pass."
     jump mshMod_urge_care_vent
 
 label mshMod_urge_medium:
-    m 2dka "I'm so glad you came to talk to me, [player]."
-    m 2dkc "You know how much I worry about you..."
-    m 2fka "But for now, let me take care of you..."
+    call mshMod_urge_prepare
     jump mshMod_urge_care_vent
 
 label mshMod_urge_low:
-    m 2dka "I'm so glad you came to talk to me, [player]."
-    m 2dkc "You know how much I worry about you..."
-    m 2fka "But for now, let me take care of you..."
+    call mshMod_urge_prepare
     jump mshMod_urge_care_vent
 
 label mshMod_urge_care_vent:
@@ -119,12 +119,14 @@ label mshMod_urge_care_bad:
     menu:
         m "Or...{fast}"
 
-        "No... Just let me hold you, please?":
-            call mshMod_urge_hold
-            m "I hope you're feeling better now, [mas_get_player_nickname()]~"
-            return
-
         "Yes, I want to try a calming technique.":
             m 1eka "Alright, baby."
             call mshMod_technique_random
             jump mshMod_urge_care_feeling_better
+
+        "No... Just let me hold you, please?":
+            call mshMod_urge_hold
+
+
+    m "I hope you're feeling better now, [mas_get_player_nickname()]~"
+    return

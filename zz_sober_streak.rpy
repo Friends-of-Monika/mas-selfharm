@@ -1,7 +1,4 @@
-# This file contains milestone API/Framework. Hopefully everything here is at
-# least readable and processable by whoever reads this. Feel free to modify,
-# but please stick to the overall code style used in here.
-
+# Sober streak tracking API. Includes milestones, sober streak duration, personal best, etc.
 
 # Instance of datetime.date representing initial day of sober streak.
 default persistent._msh_mod_pm_sober_streak = None
