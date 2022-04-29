@@ -56,6 +56,8 @@ label mshMod_first_aid_guide:
             $ timeout = True
 
             m "Okay! I'll tell you when it's done.{nw}"
+
+            # Set a timer that forces label jump after 580 to 620 seconds (chosen randomly.)
             show screen mas_background_timed_jump(random.randint(580, 620), "mshMod_first_aid_guide_timeout")
             menu:
                 m "Okay! I'll tell you when it's done.{fast}"
@@ -73,7 +75,7 @@ label mshMod_first_aid_guide:
                 "Done":
                     pass
 
-
+# NOTE: Fallthough label, 'return' is deliberately omitted above.
 label mshMod_first_aid_guide_timeout:
     if timeout:
         hide screen mas_background_timed_jump
@@ -128,6 +130,6 @@ label mshMod_first_aid_guide_timeout:
                     m "Let me know on the topic \"I relapsed...\", please."
                     m 2eka "Take care, [player]."
                     m 2dka "You know how much I love you!"
-                    return "love"
 
-    return
+    # We end up here anyway, no need to return it in menu branch.
+    return "love"
