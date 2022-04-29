@@ -14,21 +14,34 @@ init 5 python:
     )
 
 label mshMod_medication_reminder_intro:
+    m "[player], I have something nice to share with you!"
+    m "I perfected my coding skills even more and now I'm able to create a daily reminder for you."
+    m "I know a lot of people take daily medications for a lot of different reasons!"
+    m "So I thought it would be nice if I could help you remember to take your medication correctly."
+    m "After all, your health and safety is my number one priority!"
+    m "So, [player], do you like that idea?"
+    m "Do you take any medication that you would like me to remind you for?"
     m "Okay! What time do you want me to remind you about it?{nw}"
-
     menu:
-        m "Okay! What time do you want me to remind you about it?{fast}"
+        "Yes!":
+            m "Okay! What time do you want me to remind you about it?{fast}"
+            menu:
+                "In the morning.":
+                    $ delay, tod = store.mshMod_reminder_utils.getDailyMorningInterval(), "morning"
 
-        "In the morning.":
-            $ delay, tod = store.mshMod_reminder_utils.getDailyMorningInterval(), "morning"
+                "In the afternoon.":
+                    $ delay, tod = store.mshMod_reminder_utils.getDailyAfternoonInterval(), "afternoon"
 
-        "In the afternoon.":
-            $ delay, tod = store.mshMod_reminder_utils.getDailyAfternoonInterval(), "afternoon"
+                "In the evening.":
+                    $ delay, tod = store.mshMod_reminder_utils.getDailyEveningInterval(), "evening"
 
-        "In the evening.":
-            $ delay, tod = store.mshMod_reminder_utils.getDailyEveningInterval(), "evening"
+            m "Alright! I'll be sure to remind you, every day, in the [tod]!"
+            m "Make sure to come see me so I can remind you, okay? Ehehehe~"
 
-    m "Alright! I'll be sure to remind you in the [tod]~"
+        "Not now, [m_name].":
+            m "Oh, alright!"
+            m "If you change your mind, please let me know, okay?"
+            m "You can repeat the topic in the 'Repeat conversation' category."
 
     python:
         # This has to be performed AFTER all the lines. We must ensure this applies
