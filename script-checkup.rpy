@@ -22,12 +22,10 @@ label mshMod_checkup_intro:
     m "Meaning, how have you been feeling, this week, in a scale of 1 to 10!"
     m "This will help me be more aware and sensitive of your needs and your feelings."
     m "After all, I care about you so much and I love you sooooo much!"
+    return "derandom|love"
 
-
-    # RANDOM EVENT (ONCE EVERY WEEK) AFTER FIRST ONE HAS ALREADY APPEARED
 
 init 5 python:
-    import datetime
     addEvent(
         Event(
             persistent.event_database,
