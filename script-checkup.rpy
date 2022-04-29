@@ -1,5 +1,12 @@
-# CHECKUPS ON PLAYER
-    # FIRST RANDOM EVENT NECESSARY SO THE SECOND ONE APPEARS EVERY WEEK
+init 5 python:
+    import datetime
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_checkup_intro",
+            random=True
+        )
+    )
 
 label mshMod_checkup_intro:
     m "Hey, [player]?"
