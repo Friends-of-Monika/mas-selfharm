@@ -6,7 +6,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_urge",
             category=["self-Harm"],
-            prompt="[m_name], it's happening again...", # TODO: update label prompt when Monika changes name
+            prompt="[m_name], it's happening again...",
             random=False
         )
     )
