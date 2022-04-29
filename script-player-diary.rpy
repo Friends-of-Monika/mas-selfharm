@@ -1,3 +1,5 @@
+# Player diary script.
+
 init 5 python:
     addEvent(
         Event(

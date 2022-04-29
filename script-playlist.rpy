@@ -1,4 +1,4 @@
-# PLAYLIST DIALOGUES
+# Monika's playlist topics and songs.
 
 init 5 python:
     addEvent(

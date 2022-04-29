@@ -1,3 +1,5 @@
+# Topics about therapy, here we set visits_therapist PM variable.
+
 default persistent._msh_mod_pm_visits_therapist = None
 
 init -100 python:
