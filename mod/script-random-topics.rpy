@@ -390,3 +390,30 @@ label mshMod_untried_hobbies:
     m "And remember... "
     extend m "I love you, [player]."
     return "love" # TODO: no prompt and categories... derandom and no_unlock?
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_monarch_butterfly",
+            prompt="Trivia",
+            category=["Monarch Butterflies"],
+            random=True
+        )
+    )
+
+label mshMod_monarch_butterfly:
+    m "[player], have you ever seen a monarch butterfly?"
+    m "They're marvelous creatures!"
+    m "Their wings feature an easily recognizable black, orange, and white pattern."
+    m "In a nod to their life cycle, from egg to caterpillar to butterfly, monarchs can represent transformation and rebirth to some people."
+    m "They might view a monarch sighting as a sign of upcoming change or a new direction in their life."
+    m "Perhaps due to their long migration journey, these butterflies may also be an inspirational sign of strength and endurance."
+    m "Monarchs also face a lot of challenges, including climate change and deforestation." 
+    m "So, some sources indicate the butterflies are a symbol of hope and resilience!"
+    m "In mexican culture, this butterfly species also hold significang meaning..."
+    m "During the Day of the Dead holiday, the Mexican people see the arrival of monarchs as a spiritual symbol."
+    m "Many believe the butterflies represent the souls of their ancestors returning to visit and bring comfort to loved ones."
+    m "Oh, and also! Due to the butterflies’ yearly migration between countries, images of monarchs are also are used to show support for immigrants."
+    m "Aren't they indeed, incredible beings?"
+    m "I hope they can inspire you as they inspire me."
