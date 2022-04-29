@@ -10,7 +10,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_ask_about_therapy",
-            aff_range=(mas_aff.BROKEN, mas_aff.NORMAL), # TODO: are we sure this is the right range?..
+            aff_range=(mas_aff.BROKEN, mas_aff.NORMAL),
             action=EV_ACT_RANDOM
         )
     )
