@@ -27,7 +27,7 @@ init 5 python:
             aff_range=(mas_aff.NORMAL, mas_aff.LOVE),
             prompt="I need help with first aid...",
             conditional="seen_event('mshMod_first_aid_intro')",
-            action=EV_ACT_RANDOM
+            action=EV_ACT_POOL
         )
     )
 
