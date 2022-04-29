@@ -95,9 +95,9 @@ label mshMod_first_aid_guide_timeout:
             m 3wkd "And we don't want that!"
             m 1ekd "I'll wait for you to do that, [player]."
 
-            m 1ekc "Just tell me when you're done, okay?{fast}"
+            m 1ekc "Just tell me when you're done, okay?{nw}"
             menu:
-                m "Just tell me when you're done, okay?{nw}"
+                m "Just tell me when you're done, okay?{fast}"
 
                 "I'm done, [m_name].":
                     m 7esd "Okay!"
