@@ -1,3 +1,6 @@
+# Introduction topics for this submod. Here we ask player if they do harm themselves or not
+# and unlock (or skip to) more detailed explanation of what self-harm is.
+
 default persistent._msh_mod_pm_did_selfharm = None
 
 init 5 python:
