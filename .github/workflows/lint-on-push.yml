@@ -1,7 +1,7 @@
-name: Lint source tree on pull request on dev branch
+name: Lint source tree on push to dev branch
 
 on:
-  pull_request:
+  push:
     branches: [ dev ]
     paths: [ '*.rpy' ]
 
@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Load environment variables from file
-        run: cat build.env >> $GITHUB_ENV
+        run: .github/scripts/load-env.sh
 
       - name: Restore DDLC/MAS and Ren'Py SDK cache
         id: cache
