@@ -6,7 +6,7 @@ init 5 python:
             category=["you", "monika"],
             prompt="What do you think about writing a diary?",
             pool=True,
-            unlocked=True # TODO: do we need it unlocked right away?
+            unlocked=True
         )
     )
 
