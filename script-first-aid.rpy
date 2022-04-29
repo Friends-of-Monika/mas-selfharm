@@ -19,6 +19,7 @@ label mshMod_first_aid_intro:
     m 1eka "I'll do my best to help."
     return "derandom|no_unlock"
 
+
 init 5 python:
     addEvent(
         Event(
@@ -27,7 +28,7 @@ init 5 python:
             aff_range=(mas_aff.NORMAL, mas_aff.LOVE),
             prompt="I need help with first aid...",
             conditional="seen_event('mshMod_first_aid_intro')",
-            action=EV_ACT_RANDOM
+            action=EV_ACT_POOL
         )
     )
 
@@ -55,6 +56,8 @@ label mshMod_first_aid_guide:
             $ timeout = True
 
             m "Okay! I'll tell you when it's done.{nw}"
+
+            # Set a timer that forces label jump after 580 to 620 seconds (chosen randomly.)
             show screen mas_background_timed_jump(random.randint(580, 620), "mshMod_first_aid_guide_timeout")
             menu:
                 m "Okay! I'll tell you when it's done.{fast}"
@@ -72,6 +75,7 @@ label mshMod_first_aid_guide:
                 "Done":
                     pass
 
+# NOTE: Fallthough label, 'return' is deliberately omitted above.
 label mshMod_first_aid_guide_timeout:
     if timeout:
         hide screen mas_background_timed_jump
@@ -91,9 +95,9 @@ label mshMod_first_aid_guide_timeout:
             m 3wkd "And we don't want that!"
             m 1ekd "I'll wait for you to do that, [player]."
 
-            m 1ekc "Just tell me when you're done, okay?{fast}"
+            m 1ekc "Just tell me when you're done, okay?{nw}"
             menu:
-                m "Just tell me when you're done, okay?{nw}"
+                m "Just tell me when you're done, okay?{fast}"
 
                 "I'm done, [m_name].":
                     m 7esd "Okay!"
@@ -126,6 +130,6 @@ label mshMod_first_aid_guide_timeout:
                     m "Let me know on the topic \"I relapsed...\", please."
                     m 2eka "Take care, [player]."
                     m 2dka "You know how much I love you!"
-                    return "love"
 
-    return
+    # We end up here anyway, no need to return it in menu branch.
+    return "love"

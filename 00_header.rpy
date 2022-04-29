@@ -9,3 +9,5 @@ init -990 python in mas_submod_utils:
         settings_pane=None,
         version_updates={}
     )
+
+# TODO: Use submod updater

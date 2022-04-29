@@ -1,5 +1,12 @@
-# CHECKUPS ON PLAYER
-    # FIRST RANDOM EVENT NECESSARY SO THE SECOND ONE APPEARS EVERY WEEK
+init 5 python:
+    import datetime
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_checkup_intro",
+            random=True
+        )
+    )
 
 label mshMod_checkup_intro:
     m "Hey, [player]?"
@@ -22,12 +29,10 @@ label mshMod_checkup_intro:
     m "Meaning, how have you been feeling, this week, in a scale of 1 to 10!"
     m "This will help me be more aware and sensitive of your needs and your feelings."
     m "After all, I care about you so much and I love you sooooo much!"
+    return "derandom|love"
 
-
-    # RANDOM EVENT (ONCE EVERY WEEK) AFTER FIRST ONE HAS ALREADY APPEARED
 
 init 5 python:
-    import datetime
     addEvent(
         Event(
             persistent.event_database,
@@ -47,38 +52,38 @@ label mshMod_checkup_reminder:
     m "What's your number this week?"
     m "Meaning, on a scale of 1 to 10, how are you feeling?"
     menu:
-      "1":
-        pass
+        "1":
+            pass
 
-      "2":
-        pass
+        "2":
+            pass
 
-      "3":
-        pass
+        "3":
+            pass
 
-      "4":
-        pass
+        "4":
+            pass
 
-      "5":
-        pass
+        "5":
+            pass
 
-      "6":
-        pass
+        "6":
+            pass
 
-      "7":
-        pass
+        "7":
+            pass
 
-      "8":
-        pass
+        "8":
+            pass
 
-      "9":
-        pass
+        "9":
+            pass
 
-      "10":
-        pass
+        "10":
+            pass
 
-      "I'm not sure...":
-        pass
+        "I'm not sure...":
+            pass
 
       # things from the first prototype for reference:
 
