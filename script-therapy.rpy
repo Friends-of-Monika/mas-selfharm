@@ -1,6 +1,3 @@
-# RANDOM EVENT WHERE MONIKA ASKS IF PLAYER GOES TO A THERAPIST.
-
-default persistent._msh_mod_pm_did_selfharm = None
 default persistent._msh_mod_pm_visits_therapist = None
 
 init -100 python:
