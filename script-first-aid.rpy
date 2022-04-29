@@ -19,6 +19,7 @@ label mshMod_first_aid_intro:
     m 1eka "I'll do my best to help."
     return "derandom|no_unlock"
 
+
 init 5 python:
     addEvent(
         Event(
@@ -71,6 +72,7 @@ label mshMod_first_aid_guide:
 
                 "Done":
                     pass
+
 
 label mshMod_first_aid_guide_timeout:
     if timeout:
