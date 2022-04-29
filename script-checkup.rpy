@@ -47,38 +47,38 @@ label mshMod_checkup_reminder:
     m "What's your number this week?"
     m "Meaning, on a scale of 1 to 10, how are you feeling?"
     menu:
-      "1":
-        pass
+        "1":
+            pass
 
-      "2":
-        pass
+        "2":
+            pass
 
-      "3":
-        pass
+        "3":
+            pass
 
-      "4":
-        pass
+        "4":
+            pass
 
-      "5":
-        pass
+        "5":
+            pass
 
-      "6":
-        pass
+        "6":
+            pass
 
-      "7":
-        pass
+        "7":
+            pass
 
-      "8":
-        pass
+        "8":
+            pass
 
-      "9":
-        pass
+        "9":
+            pass
 
-      "10":
-        pass
+        "10":
+            pass
 
-      "I'm not sure...":
-        pass
+        "I'm not sure...":
+            pass
 
       # things from the first prototype for reference:
 
