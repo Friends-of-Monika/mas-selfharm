@@ -94,7 +94,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_selfharm_intro_unhappy",
-            aff_range=(mas_aff.BROKEN, mas_aff.NORMAL),
+            aff_range=(mas_aff.BROKEN, mas_aff.UPSET),
             conditional=("not seen_event('mshMod_selfharm_intro')"),
             action=EV_ACT_RANDOM
         )
