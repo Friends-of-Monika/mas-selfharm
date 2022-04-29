@@ -1,6 +1,3 @@
-# RANDOM EVENT WHERE MONIKA ASKS IF PLAYER GOES TO A THERAPIST.
-
-default persistent._msh_mod_pm_did_selfharm = None
 default persistent._msh_mod_pm_visits_therapist = None
 
 init -100 python:
@@ -13,7 +10,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_ask_about_therapy",
-            aff_range=(mas_aff.BROKEN, mas_aff.NORMAL), # TODO: are we sure this is the right range?..
+            aff_range=(mas_aff.BROKEN, mas_aff.NORMAL),
             action=EV_ACT_RANDOM
         )
     )
