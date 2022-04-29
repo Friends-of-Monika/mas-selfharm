@@ -1,3 +1,5 @@
+# Fist aid topics.
+
 init 5 python:
     addEvent(
         Event(

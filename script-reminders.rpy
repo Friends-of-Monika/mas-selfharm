@@ -1,3 +1,5 @@
+# Medication reminders and their API.
+
 default persistent._msh_mod_next_reminder_trigger = None
 
 # init 5 python:

@@ -1,4 +1,4 @@
-# PROBING QUESTIONS
+# Probing question topics.
 
 init 5 python:
     addEvent(
@@ -79,7 +79,7 @@ label mshMod_probing_questions_talk:
 
         "Hitting yourself":
             pass
-            
+
         "Psychological":
             pass
 

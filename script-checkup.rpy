@@ -1,3 +1,5 @@
+# Daily checkup script.
+
 init 5 python:
     import datetime
     addEvent(

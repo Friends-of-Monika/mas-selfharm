@@ -1,3 +1,5 @@
+# Sober check topics, milestones, etc. For API see zz_sober_streak.rpy
+
 init 5 python:
     addEvent(
         Event(
