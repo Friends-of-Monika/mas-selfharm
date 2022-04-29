@@ -50,8 +50,7 @@ init 4 python in mshMod_reminder:
         if not isReminderActive(ev_label):
             return False
 
-        trigger, interval = persistent._mshMod_active_reminders[ev_label]
-        delta, latency = interval
+        trigger, delta, latency = persistent._mshMod_active_reminders[ev_label]
 
         return trigger <= datetime.datetime.now() <= trigger + latency
 
@@ -61,8 +60,7 @@ init 4 python in mshMod_reminder:
     def extendReminder(ev_label):
         _assertReminderActive(ev_label)
 
-        trigger, interval = persistent._mshMod_active_reminders[ev_label]
-        delta, latency = interval
+        trigger, delta, latency = persistent._mshMod_active_reminders[ev_label]
 
         _mshMod_active_reminders[ev_label] = (
             trigger + delta,  # ensure we base new trigger datetime off the initial trigger timedelta
