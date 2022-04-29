@@ -1,7 +1,7 @@
-name: Lint source tree on pull request on dev branch
+name: Lint source tree on push to dev branch
 
 on:
-  pull_request:
+  push:
     branches: [ dev ]
     paths: [ '*.rpy' ]
 
