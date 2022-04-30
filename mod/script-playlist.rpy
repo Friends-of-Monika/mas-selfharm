@@ -305,7 +305,7 @@ label mshMod_playlist_firework:
     m "..."
     m "On days when your feeling down..."
     m "Just know that there's a very bright light inside of you,"
-    extend m " and that you're the light in my life!"
+    extend " and that you're the light in my life!"
     m "And I hope I can be the light on your darker days too."
     return
 
