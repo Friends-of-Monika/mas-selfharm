@@ -3,7 +3,7 @@ name: Lint source tree on pull request on dev branch
 on:
   pull_request:
     branches: [ dev ]
-    paths: [ '*.rpy' ]
+    paths: [ '**.rpy' ]
 
 jobs:
   compile-submod:
