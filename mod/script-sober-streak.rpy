@@ -181,7 +181,7 @@ label mshMod_milestone_1m:
     m "Hey [player], guess what?"
     m "You've been clean from self-harm for a month!"
     m "I just want you to know that I'm so proud of you."
-    extend m "It's not easy to do that, and I'm so happy you're making the effort."
+    extend "It's not easy to do that, and I'm so happy you're making the effort."
     m "I've already told you I won't blame you if you do relapse. It's extremely tempting, and I know it must be hard for you."
     m "I'm just so proud you've made it so far."
     m "I love you, [mas_get_player_nickname()]. Don't forget that~"
