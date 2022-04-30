@@ -1,12 +1,35 @@
 #!/bin/python
+import argparse
 import os
 import tokenize
 
-for file in (file for file in next(os.walk('.'))[2] if file.endswith('.rpy')):
+parser = argparse.ArgumentParser(description='extract strings from all .rpy files')
+parser.add_argument('-e', '--no-expressions', action='store_true', help='only print strings that have no expressions')
+args = parser.parse_args()
+
+for file in (file for file in next(os.walk('mod'))[2] if file.endswith('.rpy')):
     print('File {0}:'.format(file))
-    
-    with open(file, 'rb') as f:
-        for token in (token for token in tokenize.tokenize(f.readline) if token.type == tokenize.STRING):
-            print('\tLine {0}: {1}'.format(token[2][0], token[1]))
+
+    with open(os.path.join('mod', file), 'rb') as f:
+        prev = None
+        exp = None
+        for token in tokenize.tokenize(f.readline):
+            if token.type == tokenize.NAME and token.string in ('m', 'extend'):
+                prev = 'm'
+            elif token.type == tokenize.NUMBER and prev == 'm':
+                prev = 'en'
+                exp = token.string
+            elif token.type == tokenize.NAME and prev == 'en':
+                prev = 'ec'
+                exp += token.string
+            elif token.type == tokenize.STRING:
+                if not args.no_expressions or prev != 'ec':
+                    print('\tLine {0}: {1}'.format(token[2][0], ((exp + ' ') if exp else '') + token[1]))
+
+                prev = None
+                exp = None
+            elif token.type == tokenize.NEWLINE:
+                prev = None
+                exp = None
 
     print()
