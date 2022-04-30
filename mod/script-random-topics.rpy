@@ -414,6 +414,6 @@ label mshMod_monarch_butterfly:
     m "In mexican culture, this butterfly species also hold significang meaning..."
     m "During the Day of the Dead holiday, the Mexican people see the arrival of monarchs as a spiritual symbol."
     m "Many believe the butterflies represent the souls of their ancestors returning to visit and bring comfort to loved ones."
-    m "Oh, and also! Due to the butterflies’ yearly migration between countries, images of monarchs are also are used to show support for immigrants."
+    m "Oh, and also! Due to the butterflies' yearly migration between countries, images of monarchs are also are used to show support for immigrants."
     m "Aren't they indeed, incredible beings?"
     m "I hope they can inspire you as they inspire me."

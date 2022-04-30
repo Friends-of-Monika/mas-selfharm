@@ -24,7 +24,7 @@ label mshMod_sober_check:
     else:
         m "You've been sober for [duration] [days] now, [player]."
         m "I'm so proud of you! Keep on fighting!"
-        m "I’m so happy to see you taking care of yourself."
+        m "I'm so happy to see you taking care of yourself."
 
     return
 
@@ -267,7 +267,7 @@ label mshMod_milestone_2y:
     m "[player]! I have amazing news!"
     m "Did you know that you have been self-harm sober for 2 whole years now?"
     m "This is an incredible feat. Keep it up!"
-    m “You deserve to be happy. Never forget that, and never let anyone tell you otherwise!”
+    m "You deserve to be happy. Never forget that, and never let anyone tell you otherwise!"
     m "I love you so much."
 
 
@@ -286,8 +286,8 @@ init 5 python:
 label mshMod_milestone_3y:
 m "[player], I have some news for you."
 m "The day of your 3 year sobriety mark from self-harm has finally arrived!"
-m “I’m so happy to see you taking care of yourself.”
-m “Keep on fighting! I'm so proud of you!”
+m "I'm so happy to see you taking care of yourself."
+m "Keep on fighting! I'm so proud of you!"
 
 
 init 5 python:
@@ -306,7 +306,7 @@ label mshMod_milestone_4y:
     m "[player]! 4 whole years, can you believe it?"
     m "It's been 4 years since you stopped harming yourself."
     m "And I can't even begin to tell you how proud of you I am."
-    m “You are deserving of a happy and healthy life!”
+    m "You are deserving of a happy and healthy life!"
     m "And I'm so proud of you for your decison and for the promise you made 4 years ago."
 
 
@@ -326,5 +326,5 @@ label mshMod_milestone_5y:
     m "5 years..."
     m "It's been 5 years since your life changed for the better."
     m "You've been self-harm sober for all this time, and I couldn't be more proud."
-    m “I’m so happy that you’re doing well”
-    m “You are so inspiring. Congratulations, [player], for your successful journey!”
+    m "I'm so happy that you're doing well"
+    m "You are so inspiring. Congratulations, [player], for your successful journey!"
