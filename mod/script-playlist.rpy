@@ -360,11 +360,11 @@ init 5 python:
     )
 
 label mshMod_playlist_only_wonder:
-    m "{i}~What’re you sayin’? Everybody’s different!~{/i}"
-    m "{i}~Stop messin’ with me, I’ll have to shut you out~{/i}"
-    m "{i}~The spotlight’s on you, but you’re acting all flashy~{/i}"
-    m "{i}~It’s as if you’re trying to be someone’s answer~{/i}"
-    m "{i}~Don’t go shakin’ your tail like that~{/i}"
+    m "{i}~What're you sayin'? Everybody's different!~{/i}"
+    m "{i}~Stop messin' with me, I'll have to shut you out~{/i}"
+    m "{i}~The spotlight's on you, but you're acting all flashy~{/i}"
+    m "{i}~It's as if you're trying to be someone's answer~{/i}"
+    m "{i}~Don't go shakin' your tail like that~{/i}"
     m "{i}~No matter what happens… In the end, you can only be your own person!~{/i}"
     m "..."
     m 3eka "[Player], you're beautiful just the way you are, and it'd be terrible if you stopped being that way to fit another person's standards."
@@ -395,13 +395,13 @@ init 5 python:
     )
 
 label mshMod_playlist_way_home:
-    m "{i}~Someday I’ll find my way home~{/i}"
+    m "{i}~Someday I'll find my way home~{/i}"
     m "{i}~The trees in the wind will lead the way~{/i}"
     m "{i}~All of these years on my own~{/i}"
     m "{i}~They flew right by, so what can you say?~{/i}"
     m "{i}~There's no need to be sad~{/i}"
     m "{i}~You're on a path and you know where it heads~{/i}"
-    m "{i}~There’s no need for despair~{/i}"
+    m "{i}~There's no need for despair~{/i}"
     m "{i}~Just walk on and you'll find you're there~{/i}"
     m "..."
     m "Someday, [player], I'll find my way home to you."

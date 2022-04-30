@@ -116,7 +116,7 @@ label mshMod_first_aid_guide_timeout:
                     m 3ekd "If you notice any of those..."
                     m 2ekd "You need to get medical attention and soon as possible."
                     m 2ekd "Another reasons of need to go an emergency response unit are the following:"
-                    m 4esd "If the bleeding hasn’t stopped after 10 minutes of continuous pressure."
+                    m 4esd "If the bleeding hasn't stopped after 10 minutes of continuous pressure."
                     m 4esd "If you're bleeding from an artery, you'll notice the blood gushing out at your heartbeat."
                     m 4rsd "Also, if there's something stuck in the wound."
                     m 7rkd "If it's a long or deep wound..."
