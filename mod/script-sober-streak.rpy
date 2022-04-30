@@ -107,8 +107,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_1w",
             prompt="Sober, week 1",
-            category=["self-Harm"],
-            action=EV_ACT_QUEUE
+            category=["self-Harm"]
         )
     )
 
@@ -127,8 +126,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_2w",
             prompt="Sober, week 2",
-            category=["self-Harm"],
-            action=EV_ACT_QUEUE
+            category=["self-Harm"]
         )
     )
 
@@ -151,8 +149,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_3w",
             prompt="Sober, week 3",
-            category=["self-Harm"],
-            action=EV_ACT_QUEUE
+            category=["self-Harm"]
         )
     )
 
@@ -176,8 +173,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_1m",
             prompt="Sober, month 1",
-            category=["self-Harm"],
-            action=EV_ACT_QUEUE
+            category=["self-Harm"]
         )
     )
 
@@ -198,8 +194,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_3m",
             prompt="Sober, month 3",
-            category=["self-Harm"],
-            action=EV_ACT_QUEUE
+            category=["self-Harm"]
         )
     )
 
@@ -217,8 +212,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_6m",
             prompt="Sober, month 6",
-            category=["self-Harm"],
-            action=EV_ACT_QUEUE
+            category=["self-Harm"]
         )
     )
 
@@ -237,8 +231,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_1y",
             prompt="Sober, year 1",
-            category=["self-Harm"],
-            action=EV_ACT_QUEUE
+            category=["self-Harm"]
         )
     )
 
@@ -258,8 +251,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_2y",
             prompt="Sober, year 2",
-            category=["self-Harm"],
-            action=EV_ACT_QUEUE
+            category=["self-Harm"]
         )
     )
 
@@ -278,8 +270,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_3y",
             prompt="Sober, year 3",
-            category=["self-Harm"],
-            action=EV_ACT_QUEUE
+            category=["self-Harm"]
         )
     )
 
@@ -297,8 +288,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_4y",
             prompt="Sober, year 4",
-            category=["self-Harm"],
-            action=EV_ACT_QUEUE
+            category=["self-Harm"]
         )
     )
 
@@ -308,6 +298,7 @@ label mshMod_milestone_4y:
     m "And I can't even begin to tell you how proud of you I am."
     m "You are deserving of a happy and healthy life!"
     m "And I'm so proud of you for your decison and for the promise you made 4 years ago."
+    return
 
 
 init 5 python:
@@ -317,8 +308,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_5y",
             prompt="Sober, year 5",
-            category=["self-Harm"],
-            action=EV_ACT_QUEUE
+            category=["self-Harm"]
         )
     )
 
@@ -328,3 +318,4 @@ label mshMod_milestone_5y:
     m "You've been self-harm sober for all this time, and I couldn't be more proud."
     m "I'm so happy that you're doing well"
     m "You are so inspiring. Congratulations, [player], for your successful journey!"
+    return
