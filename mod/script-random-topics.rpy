@@ -7,7 +7,8 @@ init 5 python:
             eventlabel="mshMod_sunny_day",
             prompt="Sunny day",
             category=["weather"],
-            random=True
+            conditional="mas_globals.time_of_day_3state in ('morning', 'afternoon')",
+            action=EV_ACT_RANDOM
         )
     )
 
@@ -20,7 +21,7 @@ label mshMod_sunny_day:
     m 1wub "Maybe bring a book with you so you can relax even more."
     m 1dua "Enjoying literature in the nature would surely relax me..."
     m 1eka "I hope this works for you, too."
-    return
+    return "derandom"
 
 
 init 5 python:
