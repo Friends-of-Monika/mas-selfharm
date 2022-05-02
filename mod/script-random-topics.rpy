@@ -418,3 +418,95 @@ label mshMod_monarch_butterfly:
     m "Oh, and also! Due to the butterflies' yearly migration between countries, images of monarchs are also are used to show support for immigrants."
     m "Aren't they indeed, incredible beings?"
     m "I hope they can inspire you as they inspire me."
+
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_mhflowers_sunflowers",
+            prompt="Sunflowers",
+            category=["Mental health flowers"],
+            random=True
+        )
+    )
+
+label mshMod_mshMod_mhflowers_sunflowers:
+    m "[Player], today I want to talk to you about a flower."
+    m "Sunflowers, specifically!"
+    m "They always make me think of Sayori..."
+    m "Sunflowers' meanings vary a lot depending on the countries and cultures."
+    m "But most of them relate those flowers to positivity and strength to admiration and loyalty."
+    m "It's funny, most people think that a flowering sunflower heads track of the sun across the sky."
+    m "But that's a misconception! Only immature flower buds do so - a fenomenon called heliotropism."
+    m "Another misconception is that when there's no sun in the sky, sunflowers face each other."
+    m "I've seen people make analogies relating that to..."
+    m "'When you can't find sunshine, become someone else's sunshine. Be someone else's sunflower.'"
+    m "What do you think, [player]? I personally think that's a cute way of thinking..."
+    m "Even though is based on a misconception."
+    m "Sunflowers are also used a lot by mental health foundations."
+    m "Sunflowers are yellow; the color of joy, happiness and hope..."
+    extend "Which is a color used a lot on mental health awareness programs!"
+    m "Also, it has been proved by studies that sunflower planting and gardening is actually good for the brain and helps fight depression."
+    m "And one more fact, those flowers also symbolize a bright future for anyone who envisions it."
+    m "Many people give sunflower bouquets to their loved ones, when they are in need of a little encouragement!"
+    m "Am I your sunflower, [player]?"
+    extend Ahaha~"
+    m "Thanks for listening, [mas_get_player_nickname()]!"
+
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_mhflowers_acacias",
+            prompt="Acacias",
+            category=["Mental health flowers"],
+            random=True
+        )
+    )
+
+label mshMod_mshMod_mhflowers_acacias:
+
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_mhflowers_hyacinths",
+            prompt="Hyacinths",
+            category=["Mental health flowers"],
+            random=True
+        )
+    )
+
+label mshMod_mshMod_mhflowers_hyacinths:
+
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_mhflowers_whitedahlias",
+            prompt="White Dahlias",
+            category=["Mental health flowers"],
+            random=True
+        )
+    )
+
+label mshMod_mshMod_mhflowers_whitedahlias:
+
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_mhflowers_flannelflowers",
+            prompt="Flannel Flowers",
+            category=["Mental health flowers"],
+            random=True
+        )
+    )
+
+label mshMod_mshMod_mhflowers_flannelflowers:
+
