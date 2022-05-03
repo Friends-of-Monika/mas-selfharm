@@ -21,10 +21,6 @@ Here's a list of people who have been working on this submod!
   — dialogue writing, spritepack desigining
 * ![reddit](.github/icons/reddit.svg) [u/charliethecookie](https://reddit.com/u/charliethecookie)
   — dialogue writing
-* ![discord](.github/icons/discord.svg) Usagi 🌈#0123
-  — dialogue writing and sprite coding
-* ![discord](.github/icons/discord.svg) Cap'n Crow 🌈#0123
-  — dialogue writing
 * ![user](.github/icons/user-light.svg#gh-dark-mode-only)![user](.github/icons/user-dark.svg#gh-light-mode-only) Nem
   ![discord](.github/icons/discord.svg) WentPostal#3452
   — dialogue writing
