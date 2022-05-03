@@ -451,7 +451,7 @@ label mshMod_mshMod_mhflowers_sunflowers:
     m "And one more fact, those flowers also symbolize a bright future for anyone who envisions it."
     m "Many people give sunflower bouquets to their loved ones, when they are in need of a little encouragement!"
     m "Am I your sunflower, [player]?"
-    extend Ahaha~"
+    extend "Ahaha~"
     m "Thanks for listening, [mas_get_player_nickname()]!"
 
 
@@ -509,4 +509,3 @@ init 5 python:
     )
 
 label mshMod_mshMod_mhflowers_flannelflowers:
-
