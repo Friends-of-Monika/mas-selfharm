@@ -82,7 +82,13 @@ label mshMod_checkup_reminder:
             pass
 
         "10":
-            pass
+            m "Aww, really, [player]?"
+            extend "That's wonderful!"
+            m "I'm so glad your week has been good."
+            extend "I must say the same - every day that you are with me feels like heaven!"
+            m "Let's make the next week as awesome, alright?"
+            m "Even if something bad happens, remember that things will get better."
+            extend "I believe in you, [mas_get_player_nickname()]."
 
         "I'm not sure...":
             pass
