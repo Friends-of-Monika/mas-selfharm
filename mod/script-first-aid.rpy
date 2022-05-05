@@ -1,3 +1,5 @@
+# Fist aid topics.
+
 init 5 python:
     addEvent(
         Event(
@@ -17,7 +19,7 @@ label mshMod_first_aid_intro:
     m 2esd "It's a basic first-aid guide. For cuts, specifically."
     m 3esd "If you need it, make sure to let me know, okay?"
     m 1eka "I'll do my best to help."
-    return
+    return "derandom|no_unlock"
 
 
 init 5 python:
@@ -26,8 +28,9 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_first_aid_guide",
             aff_range=(mas_aff.NORMAL, mas_aff.LOVE),
+            prompt="I need help with first aid...",
             conditional="seen_event('mshMod_first_aid_intro')",
-            action=EV_ACT_RANDOM
+            action=EV_ACT_POOL
         )
     )
 
@@ -46,11 +49,45 @@ label mshMod_first_aid_guide:
     m 2esd "You should apply constant pressure to the area using a clean and dry absorbent material."
     m 2lsd "A bandage, towel or handkerchief. For approximately 10 minutes."
     m 3esd "It's important to raise the injury above the level of your heart."
-    m 2esa "I can make a timer for you."
-    # TODO: timer here?
-    m 2esb "All done, [player]!"
 
+    m 2esa "I can make a timer for you.{nw}"
+    $ _history_list.pop()
+    menu:
+        m "I can make a timer for you.{fast}"
+
+        "Yes, that'd help":
+            $ timeout = True
+
+            m "Okay! I'll tell you when it's done.{nw}"
+            $ _history_list.pop()
+
+            # Set a timer that forces label jump after 580 to 620 seconds (chosen randomly.)
+            show screen mas_background_timed_jump(random.randint(580, 620), "mshMod_first_aid_guide_timeout")
+            menu:
+                m "Okay! I'll tell you when it's done.{fast}"
+
+                "Done":
+                    pass
+
+        "No, I'll manage":
+            $ timeout = False
+
+            m "Oh, okay! Let me know when you'll be ready to proceed.{nw}"
+            $ _history_list.pop()
+            menu:
+                m "Oh, okay! Let me know when you'll be ready to proceed.{fast}"
+
+                "Done":
+                    pass
+
+# NOTE: Fallthough label, 'return' is deliberately omitted above.
+label mshMod_first_aid_guide_timeout:
+    if timeout:
+        hide screen mas_background_timed_jump
+
+    m 2esb "All done, [player]!"
     m 2eud "Ready for the next step?{nw}"
+    $ _history_list.pop()
     menu:
         m "Ready for the next step?{fast}"
 
@@ -64,9 +101,10 @@ label mshMod_first_aid_guide:
             m 3wkd "And we don't want that!"
             m 1ekd "I'll wait for you to do that, [player]."
 
-            m 1ekc "Just tell me when you're done, okay?{fast}"
+            m 1ekc "Just tell me when you're done, okay?{nw}"
+            $ _history_list.pop()
             menu:
-                m "Just tell me when you're done, okay?{nw}"
+                m "Just tell me when you're done, okay?{fast}"
 
                 "I'm done, [m_name].":
                     m 7esd "Okay!"
@@ -83,7 +121,7 @@ label mshMod_first_aid_guide:
                     m 3ekd "If you notice any of those..."
                     m 2ekd "You need to get medical attention and soon as possible."
                     m 2ekd "Another reasons of need to go an emergency response unit are the following:"
-                    m 4esd "If the bleeding hasn’t stopped after 10 minutes of continuous pressure."
+                    m 4esd "If the bleeding hasn't stopped after 10 minutes of continuous pressure."
                     m 4esd "If you're bleeding from an artery, you'll notice the blood gushing out at your heartbeat."
                     m 4rsd "Also, if there's something stuck in the wound."
                     m 7rkd "If it's a long or deep wound..."
@@ -99,6 +137,6 @@ label mshMod_first_aid_guide:
                     m "Let me know on the topic \"I relapsed...\", please."
                     m 2eka "Take care, [player]."
                     m 2dka "You know how much I love you!"
-                    return "love"
 
-    return
+    # We end up here anyway, no need to return it in menu branch.
+    return "love"

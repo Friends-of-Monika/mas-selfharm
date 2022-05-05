@@ -5,4 +5,4 @@ build/renpy/renpy.sh "build/ddlc" compile 2>&1 | tee build/compile.log | perl -n
 if grep -Eq '^.*Error:.*$|^File ".*", line .*:.*$' build/compile.log; then exit 1; fi
 find "build/ddlc/game/mshMod" -type f -not -iname "*.rpyc" -delete
 mkdir -p "build/out/game/Submods"
-mv "build/ddlc/game/mshMod" "build/out/game/Submods/$(perl -ne 'printf $1 if /name="([^"]*)"/' "00_header.rpy")"
+mv "build/ddlc/game/mshMod" "build/out/game/Submods/$(perl -ne 'printf $1 if /name="([^"]*)"/' "mod/00_header.rpy")"

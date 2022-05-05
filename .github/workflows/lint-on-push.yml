@@ -3,7 +3,7 @@ name: Lint source tree on push to dev branch
 on:
   push:
     branches: [ dev ]
-    paths: [ '*.rpy' ]
+    paths: [ '**.rpy' ]
 
 jobs:
   compile-submod:

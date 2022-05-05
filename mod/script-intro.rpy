@@ -1,11 +1,14 @@
-# FIRST RANDOM EVENT ABOUT SELF-HARM.
+# Introduction topics for this submod. Here we ask player if they do harm themselves or not
+# and unlock (or skip to) more detailed explanation of what self-harm is.
+
+default persistent._msh_mod_pm_did_selfharm = None
 
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
             eventlabel="mshMod_selfharm_intro",
-            aff_range=(mas_aff.NORMAL, mas_aff.LOVE),
+            aff_range=(mas_aff.NORMAL, None),
             conditional="not seen_event('mshMod_selfharm_intro_unhappy')",
             action=EV_ACT_RANDOM
         )
@@ -16,11 +19,13 @@ label mshMod_selfharm_intro:
     m "I know it might be an uncomfortable topic, but I have to ask..."
 
     m "D-{w=1.0}Do you self harm?{nw}"
+    $ _history_list.pop()
     menu:
         m "D-{w=1.0}Do you self harm?{fast}"
 
         "Yes":
             $ persistent._msh_mod_pm_did_selfharm = True
+
             m "I'm so sorry you're going through this."
             m "You know... It's really sad to see you feel bad in any way."
             m "After all, you're such a wonderful and kind person."
@@ -28,6 +33,7 @@ label mshMod_selfharm_intro:
             m "But let's stay on this subject."
 
             m "Do you want to talk about it?{nw}"
+            $ _history_list.pop()
             menu:
                 m "Do you want to talk about it?{fast}"
 
@@ -54,8 +60,10 @@ label mshMod_selfharm_intro:
                     m "I'll do my best to help you."
                     m "Or at least..."
                     m "Be by your side."
+
         "No":
             $ persistent._msh_mod_pm_did_selfharm = False
+
             m "Thank goodness!"
             m "I'm so glad to hear this!"
             m "It's so good to know that you are safe, [player]."
@@ -68,10 +76,12 @@ label mshMod_selfharm_intro:
             m "It's quite a varied topic so it's going to take a while."
 
             m "Do you have the time to listen right now?{nw}"
+            $ _history_list.pop()
             menu:
                 m "Do you have the time to listen right now?{fast}"
 
                 "Yes":
+                    $ mas_unlockEVL("mshMod_selfharm_more", "EVE")
                     $ pushEvent("mshMod_selfharm_more", skipeval=True)
 
                 "No":
@@ -90,13 +100,14 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_selfharm_more",
-            category=["you", "monika"],
+            category=["self-Harm"],
             prompt="I want to learn more about self harm.",
             conditional="seen_event('mshMod_selfharm_intro')",
             action=EV_ACT_UNLOCK,
+            aff_range=(mas_aff.NORMAL, None),
             pool=True,
-            unlocked=False,
-        ),
+            unlocked=False
+        )
     )
 
 label mshMod_selfharm_more:
@@ -136,4 +147,4 @@ label mshMod_selfharm_more:
     m "You know that I love you, [mas_get_player_nickname()]."
     m "Stay safe!"
     m "And know that you can always talk to me."
-    return
+    return "love"

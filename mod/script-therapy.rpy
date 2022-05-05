@@ -1,6 +1,5 @@
-# RANDOM EVENT WHERE MONIKA ASKS IF PLAYER GOES TO A THERAPIST.
+# Topics about therapy, here we set visits_therapist PM variable.
 
-default persistent._msh_mod_pm_did_selfharm = None
 default persistent._msh_mod_pm_visits_therapist = None
 
 init -100 python:
@@ -13,7 +12,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_ask_about_therapy",
-            aff_range=(mas_aff.BROKEN, mas_aff.NORMAL), # TODO: are we sure this is the right range?..
+            aff_range=(mas_aff.BROKEN, mas_aff.NORMAL),
             action=EV_ACT_RANDOM
         )
     )
@@ -26,8 +25,8 @@ label mshMod_ask_about_therapy:
     m 1hub "Ahaha~!"
     m 1hkb "Sorry, I changed the subject."
     m 3eub "Anyway! I wanted to ask if you go to a therapist?"
+    
     m 3rka "You know, to talk about your struggles and stuff.{nw}"
-
     $_history_list.pop()
     menu:
         m "You know, to talk about your struggles and stuff.{fast}"
@@ -68,7 +67,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_thoughts_about_therapy",
-            category=["monika", "life", "self-harm"],
+            category=["monika", "life", "self-Harm"],
             prompt="Thoughts about therapy",
             random=True
         )
