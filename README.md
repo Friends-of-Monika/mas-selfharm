@@ -3,7 +3,7 @@
 techniques, milestones, checkups and new dialogue and spritepacks</h3>
 <p align="center">
   <a href="https://github.com/my-otter-self/monika_selfharm/actions/workflows/lint-on-push.yml">
-    <img alt="Build status" src="https://img.shields.io/github/workflow/status/my-otter-self/monika_selfharm/Lint%20source%20tree%20on%20push%20to%20dev%20branch/master">
+    <img alt="Build status" src="https://img.shields.io/github/workflow/status/my-otter-self/monika_selfharm/Lint%20source%20tree%20on%20push%20to%20dev%20branch/main">
   </a>
   <a href="https://github.com/my-otter-self/monika_selfharm/releases/latest">
     <img alt="Latest release" src="https://img.shields.io/github/v/release/my-otter-self/monika_selfharm">
