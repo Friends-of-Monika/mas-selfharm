@@ -51,6 +51,7 @@ label mshMod_first_aid_guide:
     m 3esd "It's important to raise the injury above the level of your heart."
 
     m 2esa "I can make a timer for you.{nw}"
+    $ _history_list.pop()
     menu:
         m "I can make a timer for you.{fast}"
 
@@ -58,6 +59,7 @@ label mshMod_first_aid_guide:
             $ timeout = True
 
             m "Okay! I'll tell you when it's done.{nw}"
+            $ _history_list.pop()
 
             # Set a timer that forces label jump after 580 to 620 seconds (chosen randomly.)
             show screen mas_background_timed_jump(random.randint(580, 620), "mshMod_first_aid_guide_timeout")
@@ -71,6 +73,7 @@ label mshMod_first_aid_guide:
             $ timeout = False
 
             m "Oh, okay! Let me know when you'll be ready to proceed.{nw}"
+            $ _history_list.pop()
             menu:
                 m "Oh, okay! Let me know when you'll be ready to proceed.{fast}"
 
@@ -84,6 +87,7 @@ label mshMod_first_aid_guide_timeout:
 
     m 2esb "All done, [player]!"
     m 2eud "Ready for the next step?{nw}"
+    $ _history_list.pop()
     menu:
         m "Ready for the next step?{fast}"
 
@@ -98,6 +102,7 @@ label mshMod_first_aid_guide_timeout:
             m 1ekd "I'll wait for you to do that, [player]."
 
             m 1ekc "Just tell me when you're done, okay?{nw}"
+            $ _history_list.pop()
             menu:
                 m "Just tell me when you're done, okay?{fast}"
 

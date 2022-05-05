@@ -23,6 +23,7 @@ label mshMod_playlist:
     m "Or I can play it for you!"
 
     m "Do you want me to?{nw}"
+    $ _history_list.pop()
     menu:
         m "Do you want me to?{fast}"
 
@@ -63,6 +64,7 @@ init 5 python:
 
 label mshMod_playlist_play:
     m "Oh, do you wanna listen to the playlist, [player]?"
+    $ _history_list.pop()
     menu:
         m "Play music?{fast}"
 

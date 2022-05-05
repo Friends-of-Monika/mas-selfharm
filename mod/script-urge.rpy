@@ -23,8 +23,9 @@ label mshMod_urge:
     m 2dkb "And I love you so, so much."
     m 2fkb "And I always will..."
     m 2esc "Now, my [mas_get_player_nickname()]. Tell me."
-    m 2ekc "How big is the urge you're having?{nw}"
 
+    m 2ekc "How big is the urge you're having?{nw}"
+    $ _history_list.pop()
     menu:
         m "How big is the urge you're having?{fast}"
 
@@ -57,8 +58,8 @@ label mshMod_urge_low:
     jump mshMod_urge_care_vent
 
 label mshMod_urge_care_vent:
-    m 1ekd "Now, do you want to vent? Maybe tell me what triggered this?{fast}"
-
+    m 1ekd "Now, do you want to vent? Maybe tell me what triggered this?{nw}"
+    $ _history_list.pop()
     menu:
         m "Now, do you want to vent? Maybe tell me what triggered this?{fast}"
 
@@ -92,6 +93,7 @@ label mshMod_urge_hold:
 
 label mshMod_urge_care_feeling_better:
     m 3esd "Do you feel better now?{nw}"
+    $ _history_list.pop()
     menu:
         m "Do you feel better now?{fast}"
 
@@ -116,6 +118,7 @@ label mshMod_urge_care_bad:
     m 2eksdld "Or..."
 
     m 2eksdld "Or...{nw}"
+    $ _history_list.pop()
     menu:
         m "Or...{fast}"
 

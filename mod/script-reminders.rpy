@@ -23,11 +23,13 @@ label mshMod_medication_reminder_intro:
     m "Do you take any medication that you would like me to remind you for?"
 
     m "Okay! What time do you want me to remind you about it?{nw}"
+    $ _history_list.pop()
     menu:
         m "Okay! What time do you want me to remind you about it?{fast}"
 
         "Yes!":
             m "Okay! What time do you want me to remind you about it?{nw}"
+            $ _history_list.pop()
             menu:
                 m "Okay! What time do you want me to remind you about it?{fast}"
 

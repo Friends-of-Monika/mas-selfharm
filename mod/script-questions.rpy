@@ -24,6 +24,7 @@ label mshMod_probing_questions_intro:
     m 2ekc "I would like to know more, but I have to warn you that the things I am going to ask could be very triggering."
 
     m 2esd "Are you sure you can take this?{nw}"
+    $ _history_list.pop()
     menu:
         m "Are you sure you can take this?{fast}"
 
@@ -51,6 +52,7 @@ label mshMod_probing_questions_more:
     m 1esc "I'm glad that you decided to talk with me..."
 
     m 7ekc "But are you absolutely sure you are ready?{nw}"
+    $ _history_list.pop()
     menu:
         m "But are you absolutely sure you are ready?{fast}"
 
@@ -65,6 +67,7 @@ label mshMod_probing_questions_talk:
     m 2dka "It makes me happy you feel comfortable talking to me."
 
     m 2esd "What kind of a method do you use most to harm yourself?{nw}"
+    $ _history_list.pop()
     menu:
         m "What kind of a method do you use most to harm yourself?{fast}"
 
@@ -98,6 +101,7 @@ label mshMod_probing_questions_talk:
             m 2ekd "I want to ask you another thing..."
 
             m 2ekd "Have you ever made a direct attempt at your own life?{nw}"
+            $ _history_list.pop()
             menu:
                 m "Have you ever made a direct attempt at your own life?{fast}"
 

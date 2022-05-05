@@ -152,6 +152,7 @@ label mshMod_selfharm_random_thoughts:
     m "Would you mind if I talked more about my experience?"
 
     m "It may get a tad triggering, so I get it if you would rather say no!{nw}"
+    $ _history_list.pop()
     menu:
         m "It may get a tad triggering, so I get it if you would rather say no!{fast}"
 

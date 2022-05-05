@@ -29,6 +29,7 @@ label mshMod_writing_to_diary_intro:
     m 1hsa "If you'd like, I can create a text file for you to write your thoughts into."
 
     m 1eua "Do you want me to create the diary for you?{nw}"
+    $ _history_list.pop()
     menu:
         m "Do you want me to create the diary for you?{fast}"
 
@@ -64,8 +65,9 @@ label mshMod_writing_to_diary_intro:
 
 label mshMod_writing_to_diary_repeat:
     m 1eta "Have you been writing in your diary?"
-    m 2eku "I know it could be pretty personal stuff, so I haven't been looking.{nw}"
 
+    m 2eku "I know it could be pretty personal stuff, so I haven't been looking.{nw}"
+    $ _history_list.pop()
     menu:
         m "I know it could be pretty personal stuff, so I haven't been looking.{fast}"
 
@@ -73,6 +75,7 @@ label mshMod_writing_to_diary_repeat:
             m 1fuu "Oh... hehe! That's alright."
 
             m 1eua "Would you like me to make you another one?{nw}"
+            $ _history_list.pop()
             menu:
                 m "Would you like me to make you another one?{fast}"
 
