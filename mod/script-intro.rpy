@@ -19,6 +19,7 @@ label mshMod_selfharm_intro:
     m "I know it might be an uncomfortable topic, but I have to ask..."
 
     m "D-{w=1.0}Do you self harm?{nw}"
+    $ _history_list.pop()
     menu:
         m "D-{w=1.0}Do you self harm?{fast}"
 
@@ -32,6 +33,7 @@ label mshMod_selfharm_intro:
             m "But let's stay on this subject."
 
             m "Do you want to talk about it?{nw}"
+            $ _history_list.pop()
             menu:
                 m "Do you want to talk about it?{fast}"
 
@@ -74,6 +76,7 @@ label mshMod_selfharm_intro:
             m "It's quite a varied topic so it's going to take a while."
 
             m "Do you have the time to listen right now?{nw}"
+            $ _history_list.pop()
             menu:
                 m "Do you have the time to listen right now?{fast}"
 

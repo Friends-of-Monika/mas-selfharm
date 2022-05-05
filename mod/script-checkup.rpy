@@ -52,8 +52,10 @@ label mshMod_checkup_reminder:
     m "Hey, [player]?"
     m "Can I check up on you?"
     m "What's your number this week?"
-    m "Meaning, on a scale of 1 to 10, how are you feeling?"
+    m "Meaning, on a scale of 1 to 10, how are you feeling?{nw}"
+    $ _history_list.pop()
     menu:
+        m "Meaning, on a scale of 1 to 10, how are you feeling?{fast}"
         "1":
             pass
 
@@ -84,10 +86,10 @@ label mshMod_checkup_reminder:
         "10":
             m "Aww, really, [player]?"
             extend "That's wonderful!"
-            m "I'm so glad your week has been good."
+            m "I'm so glad your week has been good. "
             extend "I must say the same - every day that you are with me feels like heaven!"
             m "Let's make the next week as awesome, alright?"
-            m "Even if something bad happens, remember that things will get better."
+            m "Even if something bad happens, remember that things will get better. "
             extend "I believe in you, [mas_get_player_nickname()]."
 
         "I'm not sure...":
@@ -99,6 +101,7 @@ label mshMod_checkup_reminder:
     m "I just wanna check up on you!"
     m "Sometimes I worry about how you have been coping with stuff."
     m "How have you been doing?"
+    $ _history_list.pop()
     menu:
         "I have been feeling amazing!":
             m "[Player]..."

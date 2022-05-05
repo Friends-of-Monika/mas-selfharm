@@ -312,8 +312,10 @@ init 5 python:
 
 label mshMod_technique_pong:
     m "[player], perhaps playing something would make you feel better?"
-    m "Do you want to play Pong?"
+    m "Do you want to play Pong?{nw}"
+    $ _history_list.pop()
     menu:
+        m "Do you want to play Pong?{fast}"
         "Sure!":
             m "Great!"
             m "Bring it on!"
@@ -334,8 +336,10 @@ init 5 python:
 
 label mshMod_technique_chess:
     m "[player], perhaps playing something would make you feel better?"
-    m "Do you want to play Chess?"
+    m "Do you want to play Chess?{nw}"
+    $ _history_list.pop()
     menu:
+        m "Do you want to play Chess?{fast}"
         "Sure!":
             m "Okay!"
             call mas_chess
@@ -357,8 +361,10 @@ label mshMod_technique_piano:
     m "[player], perhaps playing something would make you feel better?"
     m "Music really is a great way to relieve stress!"
     m "I love listening to some music to when trying to relax."
-    m "Do you want to play the Piano?"
+    m "Do you want to play the Piano?{nw}"
+    $ _history_list.pop()
     menu:
+        m "Do you want to play the Piano?{fast}"
         "Sure!":
             m "Alright!"
             call mas_piano_start
@@ -388,9 +394,11 @@ label mshMod_technique_videos:
 
     if not unseen_options:
         m "I've shown you all the videos I have for now!"
-        m "Do you want me to let you pick a video now?"
 
+        m "Do you want me to let you pick a video now?{nw}"
+        $ _history_list.pop()
         menu:
+            m "Do you want me to let you pick a video now?{fast}"
             "Yes":
                 m "Great!"
                 $ renpy.jump(all_options[random.randint(len(all_options))])
@@ -408,7 +416,10 @@ label mshMod_technique_videos_pre:
     return
 
 label mshMod_technique_videos_post:
+    m "Do you want me to let you pick a video now?{nw}"
+    $ _history_list.pop()
     menu:
+        m "Do you want me to let you pick a video now?{fast}"
         "I'm done, [m_name]":
             m "Alright!"
             m "Hope you enjoyed it!"

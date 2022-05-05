@@ -25,8 +25,8 @@ label mshMod_ask_about_therapy:
     m 1hub "Ahaha~!"
     m 1hkb "Sorry, I changed the subject."
     m 3eub "Anyway! I wanted to ask if you go to a therapist?"
+    
     m 3rka "You know, to talk about your struggles and stuff.{nw}"
-
     $_history_list.pop()
     menu:
         m "You know, to talk about your struggles and stuff.{fast}"
