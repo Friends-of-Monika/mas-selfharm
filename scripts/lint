@@ -1,11 +1,7 @@
 #!/bin/sh
 set -e
 
-echo "# Download DDLC/MAS package"
-.github/scripts/fetch-ddlc-mas.sh
-
-echo "# Download Ren'Py SDK"
-.github/scripts/fetch-renpy-sdk.sh
+scripts/_util/try-install-env.sh
 
 echo "# Store submod version in an environment variable"
 VERSION="$(.github/scripts/extract-version.sh)"
