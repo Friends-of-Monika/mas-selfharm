@@ -9,7 +9,7 @@ init 5 python:
         )
     )
 
-label mshMod_mshMod_mhflowers_sunflowers:
+label mshMod_mhflowers_sunflowers:
     m "[player], today I want to talk to you about a flower."
     m "Sunflowers, specifically!"
     m "They always make me think of Sayori..."
@@ -31,6 +31,7 @@ label mshMod_mshMod_mhflowers_sunflowers:
     m "Am I your sunflower, [player]?"
     extend "Ahaha~"
     m "Thanks for listening, [mas_get_player_nickname()]!"
+    return
 
 
 init 5 python:
@@ -44,7 +45,7 @@ init 5 python:
         )
     )
 
-label mshMod_mshMod_mhflowers_acacias:
+label mshMod_mhflowers_acacias:
     m "[player], can I tell you some facts about a flower?"
     m "Today we'll talk about the acacia."
     m "Acacias are also known as wattles, wattleseed, and embers, and can represent the immortality of the human soul."
@@ -61,6 +62,8 @@ label mshMod_mshMod_mhflowers_acacias:
     m "Am I your secret love, [player]?"
     extend "Ehehe~"
     m "Thanks for listening, [mas_get_player_nickname()]!"
+    return
+
 
 init 5 python:
     addEvent(
@@ -73,7 +76,7 @@ init 5 python:
         )
     )
 
-label mshMod_mshMod_mhflowers_hyacinths:
+label mshMod_mhflowers_hyacinths:
     m "[player], let's talk about a flower today?"
     m "Hyacinths! The optimistic flower."
     m "They are even mentioned my T.S Elliot in a poem called 'The Waste Land'."
@@ -87,16 +90,18 @@ label mshMod_mshMod_mhflowers_hyacinths:
     m "{i}Living nor dead, and I knew nothing,{/i}"
     m "{i}Looking into the heart of light, the silence.{/i}"
     m "'{i}Oed’ und leer das Meer.{/i}', which translates to:"
-    m "'Empty and desolate is the sea.'" 
+    m "'Empty and desolate is the sea.'"
     m "..."
     m "Isn't it a mesmerazing poem, [player]?"
-    m "The hyacinth is the flower of the sun god Apollo and is a symbol of peace, commitment and beauty, but also of power and pride." 
+    m "The hyacinth is the flower of the sun god Apollo and is a symbol of peace, commitment and beauty, but also of power and pride."
     m "Giving a hyacinth to someone may also indicate jealousy - especially if its yellow -, so be careful, [player]!"
     m "But white hyacinths symbolize a wish for healing, and thats what I wanted to emphasize."
     m "Dark blue hyacinths represent good wishes, too."
     m "If you were looking for a reminder that all wounds heal, [player], this is it."
     m "I believe in you, and I love you."
     m "Thanks for listening, [mas_get_player_nickname()]!"
+    return
+
 
 init 5 python:
     addEvent(
@@ -109,8 +114,10 @@ init 5 python:
         )
     )
 
-label mshMod_mshMod_mhflowers_whitedahlias:
+label mshMod_mhflowers_whitedahlias:
   m "Thanks for listening, [mas_get_player_nickname()]!"
+  return
+
 
 init 5 python:
     addEvent(
@@ -123,5 +130,6 @@ init 5 python:
         )
     )
 
-label mshMod_mshMod_mhflowers_flannelflowers:
+label mshMod_mhflowers_flannelflowers:
   m "Thanks for listening, [mas_get_player_nickname()]!"
+  return
