@@ -19,6 +19,11 @@ Contains checkups script.
 Contains introduction script (question about self-harm and detailed explanation of it.)
 
 
+## script-mh-flowers.rpy
+
+Contains flower-related mental health topics.
+
+
 ### script-player-diary.rpy
 
 Contains player diary script.
