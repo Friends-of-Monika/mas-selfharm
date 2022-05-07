@@ -134,7 +134,7 @@ label mshMod_checkup_reminder:
             m "I love you, [player]."
 
         "8":
-            m "[Player]..."
+            m "[player]..."
             m "I can't express the happiness hearing this brings me."
             m "This is only the start!"
             m "Soon you'll be having 9's and even 10's."
