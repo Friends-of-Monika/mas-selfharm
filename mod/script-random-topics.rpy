@@ -64,7 +64,7 @@ label mshMod_awareness_day:
     m 3tkc "You know I tried it before..."
     m 2esd "But self-harm is not the way."
     m 2eka "Anyway! Thanks for listening!"
-    m 1hub "I love you, [Player]!"
+    m 1hub "I love you, [player]!"
 
     # Ensure it'll render on calendar without a need to restart.
     $ calendar.addRepeatable("mshMod_awareness_day", _("Self-harm awareness day"), month=3, day=1, year_param=[])
@@ -374,7 +374,7 @@ init 5 python:
     )
 
 label mshMod_untried_hobbies:
-    m "[Player]!"
+    m "[player]!"
     m "Have you ever had a hobby that you really liked, but never had time for?"
     m "Maybe you picked it up for a few days, but gave up on it or got busy for a bit?"
     m "Or maybe you just forgot about it, because other things got in the way."
