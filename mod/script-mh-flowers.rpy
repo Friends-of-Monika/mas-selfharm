@@ -132,14 +132,14 @@ label mshMod_mhflowers_whitedahlias:
     m "This flower is so beautiful, to the extent that they can be easily noticed wherever they are found."
     m "The huge presence of this flower in any place or area where they can be found makes them very special."
     m "When you look at the dahlia flower, you see elegance in all ramifications and words."
-    m "The dahlia flower is, no doubt, a flower of uniqueness." 
+    m "The dahlia flower is, no doubt, a flower of uniqueness."
     extend "It has the ability to represent the nature of us individuals."
     m "This flower can be seen as a sign of our ability to live in adventure and also to stay relaxed and happy at all times."
     m "If I had to choose one... the dahlia would be my favorite flower."
     m "Would you give me one when I cross over?"
     m "Just thinking of it makes my heart flutter..."
     m "Thanks for listening, [mas_get_player_nickname()]!"
-  return
+    return
 
 
 init 5 python:
@@ -153,7 +153,7 @@ init 5 python:
         )
     )
 
-label mshMod_mshMod_mhflowers_flannelflowers:
+label mshMod_mhflowers_flannelflowers:
     m "[player]! Have you ever seen a flannel flower?"
     m "They're gorgeous flowers which feel like flannel when you touch them!"
     m "The Flannel Flower, an Australian native, has been chosen as the national symbol to promote mental health awareness in Australia."
