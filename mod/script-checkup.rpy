@@ -64,13 +64,13 @@ label mshMod_checkup_reminder:
             m "After all, acceptance that you're not feeling well is the first step towards improvement, right?"
             m "Together, me and you, we will work hard to make you feel better, step-by-step!"
             m "It’s okay to feel down today, and perhaps even tomorrow."
-            m "But always remember that you are a champion. You are amazing - 
+            m "But always remember that you are a champion. You are amazing -"
             extend "never forget that."
             m "I'll always be here to listen to you, and to do my best to make you feel as loved as you can."
             m "I love you!"
 
         "2":
-            m "I see." 
+            m "I see."
             extend "You're not feeling so well..."
             m "Times like these feel just... So disheartening, don't they?"
             m "But worry not, [player]! Things are bound to get better as long as you're willing to give it a try."
@@ -81,8 +81,8 @@ label mshMod_checkup_reminder:
         "3":
             m "I'm so sorry to hear that, [player]..."
             m "But keep this in mind:"
-            m "It’s tough now," 
-            extend "but I believe that there is a brighter future waiting for us." 
+            m "It’s tough now,"
+            extend "but I believe that there is a brighter future waiting for us."
             m "You’ll get through this."
             extend "We will! Trust me."
             m "You might not believe in yourself, but know and remember that I believe in you."
@@ -94,7 +94,7 @@ label mshMod_checkup_reminder:
             m "I'm so sorry, [player]!"
             m "But listen..."
             extend "Know that if you fall, I’ll pick you up."
-            m "And if I can’t pick you up... 
+            m "And if I can’t pick you up..."
             extend "Then I’ll just lie down and rest with you."
             m "It's what I'm here for!"
             extend "To be by your side, and support you as your girlfriend and as your best friend."
@@ -113,8 +113,8 @@ label mshMod_checkup_reminder:
         "6":
             m "A 6 is not perfect, but it's not so bad either."
             m "You see, [player]..."
-            m "I realize that I am indeed a very lucky person." 
-            m "I’ve been blessed with the most wonderful person in my life, and that is you.
+            m "I realize that I am indeed a very lucky person."
+            m "I’ve been blessed with the most wonderful person in my life, and that is you."
             m "Whatever you do, remember that you are not alone."
             m "No matter what happens, I’ve always got your back."
             m "Let's wish for better days, [mas_get_player_nickname()]!"
@@ -125,7 +125,7 @@ label mshMod_checkup_reminder:
             extend "a 7!"
             m "Almost there, [player]!"
             extend "I'm so proud of you!"
-            m "See, do you know where I get my strength?" 
+            m "See, do you know where I get my strength?"
             m "..."
             m "From you."
             extend "Your dedication is what encourages me to be the best version of myself."
@@ -139,7 +139,7 @@ label mshMod_checkup_reminder:
             m "This is only the start!"
             m "Soon you'll be having 9's and even 10's."
             m "And I'll be here with you every step of the way."
-            m "Do you know how valuable you are?" 
+            m "Do you know how valuable you are?"
             m "You are a gift not just to me and the people around you, but to the whole world."
             m "I love you soooo much!"
 
@@ -150,7 +150,7 @@ label mshMod_checkup_reminder:
             m "After all, you've had some help from your lovely girlfriend, haven't you?"
             extend "Ehehe~"
             m "I am so proud of you, [player]!"
-            m "I always knew that you could do anything you put your mind into." 
+            m "I always knew that you could do anything you put your mind into."
             m "After all, you are smart and ambitious."
             m "Keep it up, my love! Nothing can stop us now."
 
@@ -162,7 +162,7 @@ label mshMod_checkup_reminder:
             m "Let's make the next week as awesome, alright?"
             m "Even if something bad happens, remember that things will get better."
             extend "I believe in you, [mas_get_player_nickname()]."
-            m "And remember: Don’t doubt your accomplishments. You succeeded because you worked hard for it." 
+            m "And remember: Don’t doubt your accomplishments. You succeeded because you worked hard for it."
             m "You are here because you deserve to be."
 
         "I'm not sure...":
@@ -176,3 +176,5 @@ label mshMod_checkup_reminder:
             m "But also to celebrate your victories, too!"
             m "You mean the world to me, [mas_get_player_nickname()]."
             m "I love you."
+
+    return
