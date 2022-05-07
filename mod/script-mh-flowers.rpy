@@ -115,7 +115,30 @@ init 5 python:
     )
 
 label mshMod_mhflowers_whitedahlias:
-  m "Thanks for listening, [mas_get_player_nickname()]!"
+    m "[player], I've been thinking about a flower."
+    m "Dahlias!"
+    extend "They symbolize eternal bonds of commitment, so they are a popular flower of choice for weddings."
+    m "..."
+    m "If I could pick any flower to give you, [mas_get_player_nickname()]..."
+    m "I would choose the dahlia."
+    extend "Ehehehe~!"
+    m "These flowers also represent strength, creativity, change, and also, a new begginning."
+    m "You can see why this is one of the flowers that represent mental health."
+    m "The dahlia flower is known to have the ability to survive under harsh conditions..."
+    m "And nevertheless, come out very beautiful and lovely at all times!"
+    m "Like humans! We are great examples of adaptability and resilience."
+    m "It's also a great flower to have around since it symbolizes a positive change that we do experience in our lives."
+    m "The dahlia flower is a sign of the difference which exists in our lives when we make up our mind to give a chance to a change."
+    m "This flower is so beautiful, to the extent that they can be easily noticed wherever they are found."
+    m "The huge presence of this flower in any place or area where they can be found makes them very special."
+    m "When you look at the dahlia flower, you see elegance in all ramifications and words."
+    m "The dahlia flower is, no doubt, a flower of uniqueness." 
+    extend "It has the ability to represent the nature of us individuals."
+    m "This flower can be seen as a sign of our ability to live in adventure and also to stay relaxed and happy at all times."
+    m "If I had to choose one... the dahlia would be my favorite flower."
+    m "Would you give me one when I cross over?"
+    m "Just thinking of it makes my heart flutter..."
+    m "Thanks for listening, [mas_get_player_nickname()]!"
   return
 
 
