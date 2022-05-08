@@ -167,3 +167,45 @@ label mshMod_mhflowers_flannelflowers:
     m "All of us can learn to be a little more empathetic."
     m "Thanks for listening, [mas_get_player_nickname()]!"
     return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_mhflowers_lotusflower",
+            prompt="Lotus Flowers",
+            category=["Mental health flowers"],
+            random=True
+        )
+    )
+
+label mshMod_mhflowers_lotusflower:
+    m "[player], do you like lotus flowers?"
+    m "I think they're so beautiful!"
+    extend "And also so full of symbolism."
+    m "Generally speaking, the flower is a symbol of rebirth..." 
+    m "Because it blooms in darkness and becomes a beautiful flower with delicate white and pink petals."
+    m "In much the same way, humans are born from nothingness and grow into something beautiful and delicate!"
+    m "The Lotus flower is a very resilient species!"
+    extend "Especially considering that it is such a delicate looking flower."
+    m "Scientists once found a seed that was 1300 years old..."
+    m "They germinated it, and the flower bloomed as beautifully as any other!"
+    m "But that's not all!"
+    extend "Lotus flowers are even seen as a mental health symbol."
+    m "The reason for that is because it's the kind of flower that can only grow in muddy, murky water."
+    m "But when it gets its chance to bloom, it comes out as one of the most beautiful flowers ever."
+    m "This can be a metaphor for how difficult it is to struggle with a mental illness."
+    m "Sometimes, it can seem like running a race you can’t win."
+    m "However, giving up is the worst possible option because it doesn’t allow you to grow."
+    m "If mud didn’t exist, neither would the lotus." 
+    extend "Likewise, if bad situations didn’t exist, resilient people wouldn’t either."
+    m "No mud, no lotus,"
+    extend "you see?"
+    m "Our struggles enhance our natural inner strength, and that is surely something to be proud of."
+    m "Like the lotus, if you can try your hardest to see the faint light and beauty of day through murky waters..." 
+    m "Then you will soon rise above your circumstances and bask in the sun."
+    m "Your struggles will transform you into a unwavering flower, [player]."
+    m "Believe your girlfriend's words!"
+    extend "Ahahaha~"
+    m "Thanks for listening, [mas_get_player_nickname()]!"
+    return
