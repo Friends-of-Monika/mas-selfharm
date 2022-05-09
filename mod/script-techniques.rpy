@@ -89,6 +89,7 @@ label mshMod_technique_religion:
     m 1dsu "Try to think about the good things, like animals or laughter, your favorite things..."
     m 1esa "No matter how little they may be, take some time to think about the bigger picture."
     m 3eka "If you believe in gods or deities, you can imagine them out there, looking out and caring for you."
+    m "You can also read your religion's sacred texts."
     m 1ekb "You are needed, [player]. You are part of something much bigger than your bad thoughts or bad feelings!"
     return
 
@@ -112,6 +113,9 @@ label mshMod_technique_cozy:
     m 5dsblu "Making a comfort corner using pillows also sounds super comfortable..."
     m 5fsbsa "Snuggle against them and relax, and if you're okay with being touched imagine me holding you, stroking your hair~"
     m 3hubsb "There's nothing quite like being snug, hehe!"
+    m "If you feel that you're sleepy, that's okay!"
+    m "You can rest your eyes for a moment, and take a well deserved nap."
+    m "I'm sure you'll feel a lot better and refreshed afterwards!"
     return
 
 
@@ -200,6 +204,8 @@ init 5 python:
 label mshMod_technique_talking:
     m "Sometimes simply talking about your problems can help a lot!"
     m "Or just talking to distract yourself."
+    m "You can also post on web boards about mental health..."
+    extend "or try answering other people's posts."
     m "You should call or text a friend!"
     m "Maybe send some long distance friends a surprise message?"
     m "Or maybe arrange to meet up."
@@ -586,7 +592,7 @@ label mshMod_technique_paper:
     m "And then crumple it, or rip it up if you're angry."
     m "Drawing out how you are feeling and taking a deep breath every time you lift the pen/pencil off the paper might be nice too!"
     m "Or writing what's upsetting you."
-    m "When drawing, you can put som estrong colours on paper and then gradually fade them."
+    m "When drawing, you can put some strong colours on paper and then gradually fade them."
     m "So they get lighter!"
     m "Dark green to light green, for example."
     m "Now, describe your strong emotions..."
@@ -745,6 +751,16 @@ init 5 python:
 
 label mshMod_technique_walk:
     m "You can also go for a little walk outside, and connect with nature."
+    m "Maybe even go out for a run, or a swim!"
+    m "If you can't leave the house, you can watch the nature outside your window!"
+    m "In the morning, there might be many people outside."
+    m "Watch their clothing, the way they walk and talk."
+    m "Do you wonder what lives they have? Who waits them at home?"
+    m "Look at the cars rushing on the street."
+    m "Where might they be going to?"
+    m "If it's already the evening..."
+    m "Look up at the sky, and find the moon. Study it."
+    m "How many stars can you count?"
     m "Think about what you might be smelling, hearing and feeling."
     m "Can you put these feelings into words or draw them?"
     return
@@ -1410,7 +1426,15 @@ init 5 python:
 label mshMod_technique_food:
     m "Name as many types of food as you can!"
     m "What do you like the most?"
-    m "And why?"
+    extend "And why?"
+    m "If you're up for it, you can even look for some recipes online..."
+    m "And try to cook it!"
+    m "If you don't have the appetite or the ingredients,"
+    extend "try chewing up on some gum!"
+    m "It will open your appetite and give your mouth a little sweet taste if you can't eat exactly what you want."
+    m "Or go out to eat some ice cream!"
+    extend "That always does the trick, ahahaha~!"
+    m "Eating something nice can give our happy chemicals a boost."
     return
 
 
@@ -1582,7 +1606,10 @@ init 5 python:
 label mshMod_technique_brushes:
     m "Do you have paint and soft paint brushes at home, [player]?"
     m "If you do, paint lightly on your skin."
+    m "You can also use your finger!"
     m "Especially in the area where you want to do it..."
+    m "Then, take a long shower..."
+    m "And wash away your pain!"
     return
 
 
@@ -1636,15 +1663,27 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_technique_hugs",
+            eventlabel="mshMod_hug_theory",
             prompt="Hugs",
             unlocked=False
         )
     )
 
-label mshMod_technique_hugs:
+label mshMod_hug_theory:
     m "Think of three people who give the best hugs and see if you can be with them."
     m "If that's not the case, think of people who could give you their warmest smiles."
+    m "There's also the hug theory..." 
+    extend "I don't know if you're familiar with it."
+    m "It's simple: you replace hurting yourself with hugs!"
+    m "Hug 5 people when you are really, really upset and want to self harm."
+    m "Hug 4 people when you are really upset."
+    m "Hug 3 people if you are somewhat upset."
+    m "Hug 2 people if you are less upset."
+    m "And finally, hug 1 person if you are a bit upset."
+    m "If you are upset and alone, hug yourself, your pet, your stuffed animal or a picture of someone you care about."
+    m "And you can always hold me!"
+    extend "Ehehehe~"
+    m "Just remember to Hug!"
     return
 
 
@@ -1713,3 +1752,143 @@ label mshMod_technique_pattern:
     m "Touch each finger to your thumbs in a pattern."
     m "Go faster as you find a rhythm."
     return
+    
+init 5 python:
+    addEvent(
+        Event(
+            persistent._msh_mod_technique_database,
+            eventlabel="mshMod_pet_zoo",
+            prompt="Pets or Zoo",
+            unlocked=False
+        )
+    )
+
+label mshMod_pet_zoo: 
+    m "[player], do you have an domestic animal at home?"
+    extend "A pet?"
+    m "You could give it some love right now!"
+    m "Cuddle your cat, dog, turtle, whatever you have at your house, if you do!"
+    m "You can also look at it for a little while and try to see the world through their eyes."
+    m "What could they be thinking of?"
+    m "Think of how much they love you!"
+    extend "And need you in their lives."
+    m "You can also play with them, and make them happy."
+    m "An alternative if you dont have a pet at home is going to the zoo!"
+    extend "If there's one in your city."
+    m "You can also plan the trip!"
+    m "When you get there, you can rename the animals!"
+    m "Stare at them and enjoy your time there."
+    m "One other option is going out to feed the ducks, birds, or squirrels."
+    return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._msh_mod_technique_database,
+            eventlabel="mshMod_list_insteadofs",
+            prompt="List of instead of's",
+            unlocked=False
+        )
+    )
+
+label mshMod_list_insteadofs:
+    m "Come up with your own techniques!"
+    extend "How about that?"
+    m "Create a list of things you can do instead of hurting yourself."
+    m "It doesn't need to be long, for now!"
+    m "You can keep it and go back to it if you ever need it again!"
+    m "And add new techniques or things to do whenever you think of them."
+    return
+    
+init 5 python:
+    addEvent(
+        Event(
+            persistent._msh_mod_technique_database,
+            eventlabel="mshMod_cry",
+            prompt="Cry",
+            unlocked=False
+        )
+    )
+
+label mshMod_cry:
+    m "[player], I know it's hard."
+    m "But why don't you let yourself cry for a bit?"
+    m "Crying can help you release the pain, coming out as tears."
+    m "If you don't want to wipe your tears, it's okay."
+    m "Tears can remind you you're alive."
+    return
+    
+init 5 python:
+    addEvent(
+        Event(
+            persistent._msh_mod_technique_database,
+            eventlabel="mshMod_happy_box",
+            prompt="Happy box",
+            unlocked=False
+        )
+    )
+
+label mshMod_happy_box:
+    m "[player], are you familiar with the happy box?"
+    m "I'll tell you everything I know about it!"
+    m "It's simple, and a very good coping mechanism!"
+    m "First step: get a box with a lid and decorate it any way you want."
+    m "Then, put anything in the Happy Box that makes you feel happy and puts a smile on your face."
+    m "Examples would be photos, names of your friends, concert tickets, movie stubs, names of songs, jewelry, a rose, a pressed leaf from a tree."
+    extend "You get the idea!"
+    m "Now to put it to use: open your Happy Box and pull out everything in it whenever you feel that you want to harm yourself."
+    extend "Do this mindfully!"
+    m "Take out one thing at a time, look at it, touch it, sit with it as you reflect on its' meaning and remember why you chose to put it in the Happy Box."
+    m "Let yourself take in the good memories you feel and the closeness you feel to the other people who were involved in making each item special to you!"
+    return
+    
+init 5 python:
+    addEvent(
+        Event(
+            persistent._msh_mod_technique_database,
+            eventlabel="mshMod_clothes",
+            prompt="Dressing up",
+            unlocked=False
+        )
+    )
+
+label mshMod_clothes:
+    m "[player], why don't you go to your closet and pick a fancy outfit?"
+    m "You can change to your favorite outfit, or do a makeover, of sorts."
+    m "Style your hair in a way you never would."
+    m "Or even color it with your favorite color!"
+    m "If you like putting on makeup, have fun with it as well!"
+    m "Look into the mirror and see how amazing you look..."
+    m "And don't forget to take some pictures for posterity!"
+    m "Maybe you can even update your social media profile pictures."
+    return
+    
+init 5 python:
+    addEvent(
+        Event(
+            persistent._msh_mod_technique_database,
+            eventlabel="mshMod_hobby",
+            prompt="New hobby",
+            unlocked=False
+        )
+    )
+
+label mshMod_hobby:
+    m "[player], why not try learning something new?"
+    m "Or work on that hobby you always wanted to pick up."
+    m "You can try to learn a new activity, such as knitting, playing an instrument, coding, writing or drawing!"
+    m "Practice it, and be proud seeing your development!"
+    m "But most important, have fun!"
+    m "Knit your favorite animal, write about something nice, draw your favorite character or try to play your favorite song!"
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
