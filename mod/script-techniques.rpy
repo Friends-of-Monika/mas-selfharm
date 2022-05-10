@@ -281,6 +281,8 @@ label mshMod_technique_butterfly:
     m "You can also draw or write some positive things on your arm."
     m "Or maybe some beautiful flowers!"
     m "Don't hurt yourself until the drawings wash off."
+    m "If the butterfly fades without self-harming..."
+    m "It means that the butterfly lived and has flown away, giving you a sense of achievement!"
     return
 
 
@@ -526,6 +528,11 @@ label mshMod_technique_punching:
     m "Scream into the pillow to release your tension!"
     m "Another way out is squashing the pillow hard..."
     m "And gently letting go."
+    m "Or having a pillow fight with the wall!"
+    m "Throw that pillow with all your might."
+    m "Another one that doesn't involve pillows is:"
+    m "Throwing socks against the wall."
+    m "And paying attention to the thudding sound and the strength you put in your arm to throw." 
     return
 
 
@@ -567,10 +574,12 @@ label mshMod_technique_listening:
     m "You can use your headphones to blast some songs, or even use no headphones at all."
     m "Screaming with the lyrics might be therapeutic too!"
     m "Or even walking fast along the song, or tapping your foot to the beat."
+    m "Wearing some boots while doing some stomping really does the trick as well!"
     m "Concentrate on the rhythm!"
     m "Oh, i thought of something nice to do also."
     m "Dance to the music!"
     m "Dance or move in a way that makes you express a feeling."
+    m "If you have the chance, going to a concert to do all those things along with other people might be a great idea as well."
     return
 
 
@@ -616,7 +625,7 @@ label mshMod_technique_otter:
     m "Basically, it envolves someone else!"
     m "The creator of this mod, u/my-otter-self on Reddit, told me to remind you that she's always available to talk."
     m "You can DM her on Reddit, and she'll share her Discord information so you can talk about your feelings."
-    m "She's has experience in psychology and can listen to you."
+    m "She's has professional experience in psychology and can listen to you."
     m "Maybe even give some advice!"
     m "Take this opportunity to open youself a little, if you can."
     return
@@ -752,6 +761,7 @@ init 5 python:
 label mshMod_technique_walk:
     m "You can also go for a little walk outside, and connect with nature."
     m "Maybe even go out for a run, or a swim!"
+    extend "Breathe the fresh air..."
     m "If you can't leave the house, you can watch the nature outside your window!"
     m "In the morning, there might be many people outside."
     m "Watch their clothing, the way they walk and talk."
@@ -1045,6 +1055,7 @@ label mshMod_technique_word_play:
     m "Now, for some word play!"
     m "How many four letter words can you make up from the statement..."
     m "'You learn more from failure than from success. Don't let it stop you'?"
+    m "Or try to make as many words as possible out of your full name."
     return
 
 
@@ -1096,10 +1107,15 @@ init 5 python:
 label mshMod_technique_research:
     m "Let's carry out some research!"
     m "What about searching for the meaning of your friend's names?"
-    m "Or maybe characters' names."
-    m "You could also research for some jokes you enjoy!"
+    extend "Or maybe characters' names."
+    m "You can also google yourself, or have some fun doing some quizzes!"
+    m "Certified personality tests or silly buzzfeed quizzes."
+    m "You could also research for some jokes or stand-up comedies you enjoy!"
+    m "Search for ridiculous things on the web."
     m "Or maybe some places to volunteer at?"
-    m "Helping others can help us too."
+    m "If you can't volunteer in any way, why not go through all your old stuff?"
+    extend "And donate what you don't have use for anymore to those in need?"
+    m "Helping others can help us too!"
     return
 
 
@@ -1358,6 +1374,7 @@ label mshMod_technique_playlist:
     m "Or that make you laugh!"
     m "Or create a playlist on spotify of your favourite songs."
     m "Or comforting songs! Listen to these."
+    m "Reflect on their message."
     return
 
 
@@ -1372,11 +1389,16 @@ init 5 python:
     )
 
 label mshMod_technique_self_care:
-    m "Do one self-care activity."
+    m "Do one self-care activity, or take some "me" time."
     m "For example, making your bed!"
-    m "Or brushing your hair, your teeth."
+    extend "Or brushing your hair, your teeth."
     m "Or taking a shower!"
-    #talk about some people w depression struggle w hygiene and encourage the player to take care of themselves
+    extend "Or even a hot bath and try to "be" in the moment."
+    m "Or give yourself a pedicure and manicure!"
+    m "Just getting into your pajamas and chilling also does the trick."
+    m "Just make sure that this time is yours only."
+    m "Most people with depressive episodes struggle with keeping their hygiene habits on check."
+    m "I want you to take care of yourself, [player]. Enjoy!"
     return
 
 
@@ -1429,6 +1451,7 @@ label mshMod_technique_food:
     extend "And why?"
     m "If you're up for it, you can even look for some recipes online..."
     m "And try to cook it!"
+    m "Maybe even planning a dinner party with menus and a guest list, then carry it out!"
     m "If you don't have the appetite or the ingredients,"
     extend "try chewing up on some gum!"
     m "It will open your appetite and give your mouth a little sweet taste if you can't eat exactly what you want."
@@ -1880,13 +1903,47 @@ label mshMod_hobby:
     m "Practice it, and be proud seeing your development!"
     m "But most important, have fun!"
     m "Knit your favorite animal, write about something nice, draw your favorite character or try to play your favorite song!"
+    return
     
-    
-    
-    
-    
+init 5 python:
+    addEvent(
+        Event(
+            persistent._msh_mod_technique_database,
+            eventlabel="mshMod_shopping",
+            prompt="Shopping",
+            unlocked=False
+        )
+    )
 
+label mshMod_shopping:
+    m "[player], why not do some healthy shopping?"
+    m "Go to a mall, and get yourself something nice."
+    m "You can buy a stuffed animal and give it a name..."
+    m "Or go to the grocery store and buy yourself some flowers!"
+    m "It has been proved that having cute and pretty things surround you improves your mental state."
+    m "But if you don't have the money to spare right now, it's no problem!"
+    m "You can hunt for stuff on Ebay or Amazon!"
+    m "Do a little wishlist of stuff you wanna buy when you get the chance."
+    
+init 5 python:
+    addEvent(
+        Event(
+            persistent._msh_mod_technique_database,
+            eventlabel="mshMod_childplay",
+            prompt="Child play",
+            unlocked=False
+        )
+    )
 
+label mshMod_childplay:
+    m "[player], don't you miss your child days?"
+    m "You could reminisce them while playing like a child for a bit."
+    m "Buy yourself some toys and play like you are 5 years old again!"
+    m "You can also play with clay or play-dough..."
+    extend "Or make slime!"
+    m "Another option is watching the cartoons or movies you loved the most as a child."
+    m "Isn't that fun?"
+    extend "To remember is to relive!"
 
 
 
