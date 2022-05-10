@@ -25,8 +25,10 @@ label mshMod_writing_to_diary_intro:
     m 3eua "I've honestly been thinking about this for a bit."
     m 1huu "It can really be a great outlet for anyone's emotions!"
     m 5rub "You could write your innermost feelings and thoughts..."
+    m "Or even make it a mood journal, and write in it every day."
+    extend "Observing patterns and possible triggers..."
     m 3esb "You can even share it with someone you truly trust!"
-    m 1hsa "If you'd like, I can create a text file for you to write your thoughts into."
+    m 1hsa "If you'd like, I can create a text file for you to write your thoughts and memoirs into."
 
     m 1eua "Do you want me to create the diary for you?{nw}"
     $ _history_list.pop()
