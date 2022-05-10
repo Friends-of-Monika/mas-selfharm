@@ -1231,7 +1231,9 @@ label mshMod_technique_mess:
     m "You can delete any you haven't used in a few months."
     m "Or organize them by colour order!"
     m "You could also search for a new screensaver for your computer!"
-    m "Maybe sort out your photos into file sor categories?"
+    m "Maybe sort out your photos into files or categories?"
+    m "Organize bills, receipts... Polish silver or jewelry, color co-ordinate your wardrobe or alphabetize your books and magazines."
+    m "You can even let your creativity flow out, drawing on the walls or painting with watercolors if you don't want permanence."
     return
 
 
@@ -1839,6 +1841,7 @@ label mshMod_cry:
     m "Crying can help you release the pain, coming out as tears."
     m "If you don't want to wipe your tears, it's okay."
     m "Tears can remind you you're alive."
+    m "Throw a temper tantrum, if you need to."
     return
     
 init 5 python:
@@ -1903,6 +1906,10 @@ label mshMod_hobby:
     m "Practice it, and be proud seeing your development!"
     m "But most important, have fun!"
     m "Knit your favorite animal, write about something nice, draw your favorite character or try to play your favorite song!"
+    m "If you don't feel motivated enough to start a new hobby, don't worry."
+    m "You can try starting a new habit!"
+    m "For example, you can start collecting something you like."
+    m "Seashells, dried flowers, anything goes as long as you're having fun."
     return
     
 init 5 python:
@@ -1924,6 +1931,7 @@ label mshMod_shopping:
     m "But if you don't have the money to spare right now, it's no problem!"
     m "You can hunt for stuff on Ebay or Amazon!"
     m "Do a little wishlist of stuff you wanna buy when you get the chance."
+    return
     
 init 5 python:
     addEvent(
@@ -1944,8 +1952,101 @@ label mshMod_childplay:
     m "Another option is watching the cartoons or movies you loved the most as a child."
     m "Isn't that fun?"
     extend "To remember is to relive!"
+    return
+    
+init 5 python:
+    addEvent(
+        Event(
+            persistent._msh_mod_technique_database,
+            eventlabel="mshMod_therapist",
+            prompt="Therapist",
+            unlocked=False
+        )
+    )
 
+label mshMod_therapist:
+    m "[player], why not call your therapist?"
+    m "Try texting them if you think they might be busy."
+    m "Maybe you can even schedule an emergencial appointment."
+    return
+    
+init 5 python:
+    addEvent(
+        Event(
+            persistent._msh_mod_technique_database,
+            eventlabel="mshMod_endprocrastination",
+            prompt="Complete projects",
+            unlocked=False
+        )
+    )
 
+label mshMod_endprocrastination:
+    m "[player], do you have any incomplete projects you would like to see finished?"
+    m "Have you been procrastinating anything for any reason?"
+    m "Maybe going back to it for a little while might distract you and ease your mind."
+    m "If you have been putting off something, you can try to pick it up right now."
+    m "An old drawing, that old story, a school project that has been on your mind."
+    m "Seeing old projects finally being completed always gives us an extra boost!"
+    return
+    
+init 5 python:
+    addEvent(
+        Event(
+            persistent._msh_mod_technique_database,
+            eventlabel="mshMod_plants",
+            prompt="Plants",
+            unlocked=False
+        )
+    )
 
+label mshMod_plants:
+    m "[player], do you take care of any plants?"
+    m "You should give them a little love right now!"
+    m "Water them and tend the garden."
+    m "Maybe there will even be some flowers there waiting for you!"
+    m "If you don't have a garden yet, why not make one right now and start a new hobby?"
+    return 
+    
+init 5 python:
+    addEvent(
+        Event(
+            persistent._msh_mod_technique_database,
+            eventlabel="mshMod_future",
+            prompt="Future",
+            unlocked=False
+        )
+    )
 
+label mshMod_future:
+    m "[player], I know things might look hopeless now."
+    m "But why not think a little about your bright future?"
+    m "You can think about your ideal life..."
+    extend "What do you have to do to get there?"
+    m "Make some plans for the near or far future."
+    m "Hunt for your perfect home in the paper or online."
+    m "Come up with baby names even if you aren't expecting."
+    m "Think of your future kids, if you want to have any."
+    m "..."
+    m "Plan your someday wedding day! How would it be?"
+    m "What kind of dress will I wear...?"
+    m "Ahahaha~!"
+    m "Thinking about the future always gives us a little perspective, [player]."
+    m "And I'm sure you have a brilliant future ahead of you."
+    m "I'll be there for you every step of the way, for sure."
+    return 
+    
+init 5 python:
+    addEvent(
+        Event(
+            persistent._msh_mod_technique_database,
+            eventlabel="mshMod_create",
+            prompt="Create something",
+            unlocked=False
+        )
+    )
 
+label mshMod_create:
+    m "[player], why not create something of your own?"
+    m "You can build something from scratch, start a new drawing or write a brand new story."
+    m "Even folding a paper and inventing a new origami shape goes!"
+    return
