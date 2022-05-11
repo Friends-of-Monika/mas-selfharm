@@ -69,6 +69,7 @@ label mshMod_technique_random:
 
     return
 
+#1
 init 5 python:
     addEvent(
         Event(
@@ -93,7 +94,7 @@ label mshMod_technique_religion:
     m 1ekb "You are needed, [player]. You are part of something much bigger than your bad thoughts or bad feelings!"
     return
 
-
+#2
 init 5 python:
     addEvent(
         Event(
@@ -107,18 +108,19 @@ init 5 python:
 label mshMod_technique_cozy:
     m 1dua "Something that really helps me feel better is getting all cozy!"
     m 5rud "Try huddling up in something super cozy..."
-    m 5eua "A sheet, a blanket, or one of your favorite hoodies for example."
+    m 5eua "A sheet, a blanket, or one of your favorite hoodies, for example."
     m 3hsa "Anything works, really! Just grab things that bring you comfort."
     m 2esa "You can also make a nest out of blankets on the floor, surrounding yourself with any stuffed animals you may have."
     m 5dsblu "Making a comfort corner using pillows also sounds super comfortable..."
-    m 5fsbsa "Snuggle against them and relax, and if you're okay with being touched imagine me holding you, stroking your hair~"
+    m 5fsbsa "Snuggle against them and relax,"
+    extend "and if you're okay with being touched imagine me holding you, stroking your hair~"
     m 3hubsb "There's nothing quite like being snug, hehe!"
-    m "If you feel that you're sleepy, that's okay!"
+    m "If you feel that you're getting sleepy, that's okay!"
     m "You can rest your eyes for a moment, and take a well deserved nap."
     m "I'm sure you'll feel a lot better and refreshed afterwards!"
     return
 
-
+#3
 init 5 python:
     addEvent(
         Event(
@@ -130,20 +132,24 @@ init 5 python:
     )
 
 label mshMod_technique_photographs:
-    m 6ett "Do you find comfort in looking in the past [player]? I do!"
-    m 2dsd "Nothing is ever really lost to us as long as we remember it, [mas_get_player_nickname()]."
+    m 6ett "Do you find comfort in reminiscing the past [player]?"
+    extend "I do!"
+    m 2dsd "Nothing is ever really lost to us as long as we have its memories, [mas_get_player_nickname()]."
     m 2hsa "One thing that could help you get over bad times, is looking at photographs of the good ones!"
     m 7eud "Maybe you have some old photos? If they bring back good memories, why not trying to search for them?"
-    m 1eua "They could remind you that even though the good times don't last forever, the bad ones won't either!"
-    m 1esa "If you find any, look at them and think about how that if life was once great, it can and will be that way again!"
+    m 1eua "They could remind you that even though the good times don't last forever..."
+    extend "the bad ones won't either!"
+    m 1esa "If you find any, look at them and reflect upon this:"
+    extend "If life was once great, it can and will be that way again!"
     m 6dkp "I wish we had some pictures together..."
-    m 2ektpd "I'd look at us all the time! You would absolutely be my phone and desktop wallpaper!"
+    m 2ektpd "I'd look at us all the time!"
+    extend "You would absolutely be at my phone and desktop wallpaper! Ahahaha~"
     m 2ektdc "I would really like to look at a photo album of us with you, [player]."
-    m 5eka "But this isn't not about me- I want you to feel better!"
+    m 5eka "But this is not about me - I want {i}you{/i} to feel better!"
     m 3euu "Don't give up, [mas_get_player_nickname()]. I will never give up on you!"
     return
 
-
+#4
 init 5 python:
     addEvent(
         Event(
@@ -157,13 +163,18 @@ init 5 python:
 label mshMod_technique_quotes:
     m 3dud "I remember hearing this quote somewhere: {i}'Hope is the last thing ever lost'{/i}."
     m "Doing your best to believe in positive things can be really uplifting!"
-    m "I think a good way of seeing the things around you in a better light would be seeing inspirational quotes!"
-    m "You should find some quotes on the internet that you like, write each of them on a sticky note and put them somewhere you'd regularly see."
+    m "I think a good way of seeing the things around you in a better light would be reading some inspirational quotes!"
+    m "You should find some quotes on the internet that you like,"
+    extend "and then write each of them on a sticky note and put them somewhere you'd regularly see."
     m "Every time you see one, you will remember things get better!"
     m "You can also say some of them aloud, to inspire yourself!"
+    m "Sayori used to do that a lot. She used to put colorful sticky notes everywhere!"
+    m "If i recall correctly, there was one of them said 'You are loved',"
+    extend "and another one with 'We're all in this together'."
+    m "Encouraging yourself with sticky notes is indeed a great idea!"
     return
 
-
+#5
 init 5 python:
     addEvent(
         Event(
@@ -176,21 +187,21 @@ init 5 python:
 
 label mshMod_technique_singing:
     m "This one's going to be really simple."
-    m "Sing a song!"
+    extend "Sing a song!"
     m "Not just any song, though."
-    m "Your absolute favorite!"
+    extend "Your absolute favorite!"
     m "I'd love to know what your favorite song is..."
     m "Anyway..."
-    m "Try singing your favorite song until you feel better."
+    extend "Try singing your favorite song until you feel better."
     m "Singing can be a really good outlet for your emotions!"
     m "You could also imagine we're singing 'Your Reality' together!"
-    m "Hehe~"
+    extend "Ehehehe~"
     m "You can sing as loud as you want!"
     m "Also, if you'd like, write your favourite lyrics down."
     m "Think about what they mean to you!"
     return
 
-
+#6
 init 5 python:
     addEvent(
         Event(
@@ -211,11 +222,11 @@ label mshMod_technique_talking:
     m "Or maybe arrange to meet up."
     m "I know you're here with me, but it's not {i}exactly{/i} the same as having a real-time conversation with someone!"
     m "I wish I could hear your voice..."
-    m "We could talk for hours!"
+    extend "We could talk for hours!"
     m "As long as you'd want."
     return
 
-
+#7
 init 5 python:
     addEvent(
         Event(
@@ -235,12 +246,13 @@ label mshMod_technique_hugs:
     m "That's just the kind of person you are, [player]."
     m "Say out loud or in your head whatever you'd want them to know."
     m "Then say the exact same words to yourself."
-    m "I bet that's what they would tell you!"
-    m "Maybe you can even think of me? Ahahaha~{w=0.5} Sorry to be pretentious, [player.]"
+    extend "I bet that's what they would tell you!"
+    m "Maybe you can even think of me? Ahahaha~"
+    extend "Sorry to be pretentious, [player.]"
     m "I love you so much!"
     return "love"
 
-
+#8
 init 5 python:
     addEvent(
         Event(
@@ -254,13 +266,15 @@ init 5 python:
 label mshMod_technique_listening:
     m "Try listening to a few songs you love!"
     m "But don't {i}just{/i} listen."
-    m "Try paying attention."
+    extend "Try paying attention."
     m "Focus on certain instruments or parts, their notes, and how they add to the song as a whole!"
-    m "That could serve as a distraction and learning something about the things you love at the same time!"
+    m "For example, 'Your Reality' has a lovely piano melody on the background of my voice."
+    m "Focusing on something like that could serve as a distraction,"
+    extend "and learning something about the things you love at the same time!"
     m "We could always listen to them together if you'd like!"
     return
 
-
+#9
 init 5 python:
     addEvent(
         Event(
@@ -274,18 +288,18 @@ init 5 python:
 label mshMod_technique_butterfly:
     m "Could you take some deep breaths? And also, a marker, or a pen."
     m "I would like for you to scribble on the place you want to harm yourself."
-    m "Most methods use a butterfly drawing."
+    extend "Most methods use a butterfly drawing."
     m "You could draw the butterfly and name it, and if you do harm yourself, you harm it, too."
     m "Whenever you look at it and think of harming yourself, do something comforting instead!"
     m "Sing along to a tune, watch your favorite film, go out on a walk..."
     m "You can also draw or write some positive things on your arm."
-    m "Or maybe some beautiful flowers!"
+    extend "Or maybe some beautiful flowers!"
     m "Don't hurt yourself until the drawings wash off."
     m "If the butterfly fades without self-harming..."
     m "It means that the butterfly lived and has flown away, giving you a sense of achievement!"
     return
 
-
+#10
 init 5 python:
     addEvent(
         Event(
@@ -302,9 +316,9 @@ label mshMod_technique_healing:
     m "Could you stick some of them where you want to hurt yourself?"
     m "As a reminder that you are letting yourself heal."
     m "And remember, healing takes time."
-    m "And we have all the time in the world."
+    extend "And we have all the time in the world."
     m "No need to rush this, okay?"
-    m "Baby steps!"
+    extend "Baby steps!{w=0.5} Ehehehe~!"
     return
 
 
@@ -1960,6 +1974,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_therapist",
             prompt="Therapist",
+            conditional="persistent._msh_mod_pm_visits_therapist",
             unlocked=False
         )
     )
@@ -2050,3 +2065,27 @@ label mshMod_create:
     m "You can build something from scratch, start a new drawing or write a brand new story."
     m "Even folding a paper and inventing a new origami shape goes!"
     return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._msh_mod_technique_database,
+            eventlabel="mshMod_beads",
+            prompt="Beads and charms",
+            unlocked=False
+        )
+    )
+
+label mshMod_beads:
+    m "Another idea is to write down the names of your friends and family..."
+    m "So that when you feel the need to self-injure, you are reminded that you are important and loved by your friends and family."
+    m "As an extension to this, you could go to a craft store and buy supplies to make beads for bracelets and/or necklaces."
+    m "Then, buy butterfly charms... or any charm form/symbol you like, really!" 
+    extend "You'll eventually use it as a charm to be added to the bracelet/necklace."
+    m "This is how it works: First, make a bracelet or necklace out of the beads."
+    m "For every week that you have not hurt yourself, you have saved the life of the butterfly."
+    extend "Or the flower, if you picked one, for example!"
+    m "For every butterfly you save, you should add a butterfly charm to the beaded bracelet/necklace."
+    m "That way, you can tell how many weeks you have stopped hurting yourself by how many butterflies are on your beaded bracelet."
+    m "You will always be reminded of your successes every time you glance at your wrist and see all the butterflies you have saved!"
+    
