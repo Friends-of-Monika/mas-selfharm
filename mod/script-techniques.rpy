@@ -546,7 +546,7 @@ label mshMod_technique_punching:
     m "Throw that pillow with all your might."
     m "Another one that doesn't involve pillows is:"
     m "Throwing socks against the wall."
-    m "And paying attention to the thudding sound and the strength you put in your arm to throw." 
+    m "And paying attention to the thudding sound and the strength you put in your arm to throw."
     return
 
 
@@ -1405,11 +1405,11 @@ init 5 python:
     )
 
 label mshMod_technique_self_care:
-    m "Do one self-care activity, or take some "me" time."
+    m "Do one self-care activity, or take some 'me' time."
     m "For example, making your bed!"
     extend "Or brushing your hair, your teeth."
     m "Or taking a shower!"
-    extend "Or even a hot bath and try to "be" in the moment."
+    extend "Or even a hot bath and try to 'be' in the moment."
     m "Or give yourself a pedicure and manicure!"
     m "Just getting into your pajamas and chilling also does the trick."
     m "Just make sure that this time is yours only."
@@ -1711,7 +1711,7 @@ init 5 python:
 label mshMod_hug_theory:
     m "Think of three people who give the best hugs and see if you can be with them."
     m "If that's not the case, think of people who could give you their warmest smiles."
-    m "There's also the hug theory..." 
+    m "There's also the hug theory..."
     extend "I don't know if you're familiar with it."
     m "It's simple: you replace hurting yourself with hugs!"
     m "Hug 5 people when you are really, really upset and want to self harm."
@@ -1791,7 +1791,7 @@ label mshMod_technique_pattern:
     m "Touch each finger to your thumbs in a pattern."
     m "Go faster as you find a rhythm."
     return
-    
+
 init 5 python:
     addEvent(
         Event(
@@ -1802,7 +1802,7 @@ init 5 python:
         )
     )
 
-label mshMod_pet_zoo: 
+label mshMod_pet_zoo:
     m "[player], do you have an domestic animal at home?"
     extend "A pet?"
     m "You could give it some love right now!"
@@ -1838,7 +1838,7 @@ label mshMod_list_insteadofs:
     m "You can keep it and go back to it if you ever need it again!"
     m "And add new techniques or things to do whenever you think of them."
     return
-    
+
 init 5 python:
     addEvent(
         Event(
@@ -1857,7 +1857,7 @@ label mshMod_cry:
     m "Tears can remind you you're alive."
     m "Throw a temper tantrum, if you need to."
     return
-    
+
 init 5 python:
     addEvent(
         Event(
@@ -1881,7 +1881,7 @@ label mshMod_happy_box:
     m "Take out one thing at a time, look at it, touch it, sit with it as you reflect on its' meaning and remember why you chose to put it in the Happy Box."
     m "Let yourself take in the good memories you feel and the closeness you feel to the other people who were involved in making each item special to you!"
     return
-    
+
 init 5 python:
     addEvent(
         Event(
@@ -1902,7 +1902,7 @@ label mshMod_clothes:
     m "And don't forget to take some pictures for posterity!"
     m "Maybe you can even update your social media profile pictures."
     return
-    
+
 init 5 python:
     addEvent(
         Event(
@@ -1925,7 +1925,7 @@ label mshMod_hobby:
     m "For example, you can start collecting something you like."
     m "Seashells, dried flowers, anything goes as long as you're having fun."
     return
-    
+
 init 5 python:
     addEvent(
         Event(
@@ -1946,7 +1946,7 @@ label mshMod_shopping:
     m "You can hunt for stuff on Ebay or Amazon!"
     m "Do a little wishlist of stuff you wanna buy when you get the chance."
     return
-    
+
 init 5 python:
     addEvent(
         Event(
@@ -1967,7 +1967,7 @@ label mshMod_childplay:
     m "Isn't that fun?"
     extend "To remember is to relive!"
     return
-    
+
 init 5 python:
     addEvent(
         Event(
@@ -1984,7 +1984,7 @@ label mshMod_therapist:
     m "Try texting them if you think they might be busy."
     m "Maybe you can even schedule an emergencial appointment."
     return
-    
+
 init 5 python:
     addEvent(
         Event(
@@ -2003,7 +2003,7 @@ label mshMod_endprocrastination:
     m "An old drawing, that old story, a school project that has been on your mind."
     m "Seeing old projects finally being completed always gives us an extra boost!"
     return
-    
+
 init 5 python:
     addEvent(
         Event(
@@ -2020,8 +2020,8 @@ label mshMod_plants:
     m "Water them and tend the garden."
     m "Maybe there will even be some flowers there waiting for you!"
     m "If you don't have a garden yet, why not make one right now and start a new hobby?"
-    return 
-    
+    return
+
 init 5 python:
     addEvent(
         Event(
@@ -2048,8 +2048,8 @@ label mshMod_future:
     m "Thinking about the future always gives us a little perspective, [player]."
     m "And I'm sure you have a brilliant future ahead of you."
     m "I'll be there for you every step of the way, for sure."
-    return 
-    
+    return
+
 init 5 python:
     addEvent(
         Event(
@@ -2080,7 +2080,7 @@ label mshMod_beads:
     m "Another idea is to write down the names of your friends and family..."
     m "So that when you feel the need to self-injure, you are reminded that you are important and loved by your friends and family."
     m "As an extension to this, you could go to a craft store and buy supplies to make beads for bracelets and/or necklaces."
-    m "Then, buy butterfly charms... or any charm form/symbol you like, really!" 
+    m "Then, buy butterfly charms... or any charm form/symbol you like, really!"
     extend "You'll eventually use it as a charm to be added to the bracelet/necklace."
     m "This is how it works: First, make a bracelet or necklace out of the beads."
     m "For every week that you have not hurt yourself, you have saved the life of the butterfly."
@@ -2088,4 +2088,3 @@ label mshMod_beads:
     m "For every butterfly you save, you should add a butterfly charm to the beaded bracelet/necklace."
     m "That way, you can tell how many weeks you have stopped hurting yourself by how many butterflies are on your beaded bracelet."
     m "You will always be reminded of your successes every time you glance at your wrist and see all the butterflies you have saved!"
-    
