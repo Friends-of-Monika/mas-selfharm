@@ -321,7 +321,7 @@ label mshMod_technique_healing:
     extend "Baby steps!{w=0.5} Ehehehe~!"
     return
 
-
+#11
 init 5 python:
     addEvent(
         Event(
@@ -345,7 +345,7 @@ label mshMod_technique_pong:
             m "Hope you're feeling better, [player]!"
             return
 
-
+#12
 init 5 python:
     addEvent(
         Event(
@@ -368,7 +368,7 @@ label mshMod_technique_chess:
             m "Hope you're feeling better, [player]!"
             return
 
-
+#13
 init 5 python:
     addEvent(
         Event(
@@ -380,9 +380,9 @@ init 5 python:
     )
 
 label mshMod_technique_piano:
-    m "[player], perhaps playing something would make you feel better?"
+    m "[player], perhaps playing an musical instrument would make you feel better?"
     m "Music really is a great way to relieve stress!"
-    m "I love listening to some music to when trying to relax."
+    m "I love listening to some music or playing a melody when trying to relax."
     m "Do you want to play the Piano?{nw}"
     $ _history_list.pop()
     menu:
@@ -393,7 +393,7 @@ label mshMod_technique_piano:
             m "Hope you're feeling better, [player]!"
             return
 
-
+#14
 init 5 python:
     addEvent(
         Event(
@@ -405,10 +405,9 @@ init 5 python:
     )
 
 label mshMod_technique_videos:
-    m "When you told me you were having those kinda thoughts, i did some research."
+    m "When you told me you were having those kind of thoughts, I did some research."
     m "And there are many people on Youtube that create little comfort videos."
-    m "I selected one of them for you to watch when you were having an urge."
-    m "I will open one of them for you right now."
+    m "I selected some of them for you to watch when you were having an urge."
 
     python:
         all_options = tuple(_label for _label in ('mshMod_technique_videos_{0}'.format(i) for i in range(3)))
@@ -467,8 +466,8 @@ label mshMod_technique_videos_3:
     pause(3.0)
     call mshMod_technique_videos_post
     return
-
-
+    
+#15
 init 5 python:
     addEvent(
         Event(
@@ -483,19 +482,20 @@ label mshMod_technique_stress_ball:
     m "Some objects can also help with the desperate feeling."
     m "Check if you have one of them at home, okay?"
     m "Do you have a stress ball?"
-    m "A stress ball or hand exercise ball is a malleable toy, which is squeezed in the hand and manipulated by the fingers, ostensibly to relieve stress and muscle tension or to exercise the muscles of the hand."
+    m "A stress ball or hand exercise ball is a malleable toy, which is squeezed in the hand and manipulated by the fingers!"
+    m "With the intention ofto relieving stress and muscle tension or to exercise the muscles of the hand."
     m "If you do have one, squeeze it really hard. Relive all your tension!"
     m "You can also use a sheet of bubble wrap. So satisfying!"
     m "If you do have one at home, burst each bubble as slowly as you can, please."
     m "Or just enjoy yourself! The techniques have no rules, as long as they make you feel better."
     m "I have another one! Do you have any baloons at home?"
     m "You can blow one baloon for each emotion you feel."
-    m "After that, pop each one of them!"
+    extend "After that, pop each one of them!"
     m "Another option is a fidget toy."
     m "Spinning them is always so fun!"
     return
 
-
+#16
 init 5 python:
     addEvent(
         Event(
@@ -514,7 +514,8 @@ label mshMod_technique_stretching:
     m "This relaxes our body so much!"
     m "You can also do an upper back strech."
     m "This one is done sitting, with your feet flat on the floor."
-    m "Interlock your fingers and reach forward, bending from your middle back. Stretch with your hands forward at shoulder level."
+    m "Interlock your fingers and reach forward, bending from your middle back."
+    m "Stretch with your hands forward at shoulder level."
     m "You should feel the stretch between your shoulder blades."
     m "Ooh, relaxing!"
     m "After tensing your muscles, you can let go and relax into something comfy."
