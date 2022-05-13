@@ -623,7 +623,7 @@ label mshMod_technique_paper:
     m "You can even show someone your drawings and writings before ripping it to shreds."
     return
 
-
+#21
 init 5 python:
     addEvent(
         Event(
@@ -644,7 +644,7 @@ label mshMod_technique_otter:
     m "Take this opportunity to open youself a little, if you can."
     return
 
-
+#22
 init 5 python:
     addEvent(
         Event(
@@ -659,11 +659,13 @@ label mshMod_technique_cold_water:
     m "Sometimes, paying attention to your senses can help."
     m "Could you put your hands in some cold water?"
     m "And remember, breathe a lot!"
-    m "In... And out."
+    m "In..."
+    extend "And out."
     m "Notice the coldness of the water witheach out breathe."
+    m "Hyper-focus on the sensation in your hands!"
     return
 
-
+#23
 init 5 python:
     addEvent(
         Event(
@@ -679,12 +681,13 @@ label mshMod_technique_bothering:
     m "You can whisper if you don't want anyone to hear you!"
     m "But I want you to pay attention to what you're saying."
     m "Can you come up with one positive solution?"
-    m "Venting about how you feel always helps."
-    m "If you can, write down any thoughts..."
+    m "Venting about how we feel always helps."
+    m "If you can, write down any thoughts you're having..."
+    extend "Negative or not!"
     m "Get it all out of your system!"
     return
 
-
+#24
 init 5 python:
     addEvent(
         Event(
@@ -697,7 +700,7 @@ init 5 python:
 
 label mshMod_technique_positive:
     m "You could start making a 'positive statements about me' thought box."
-    m "Creating a list of your strenghts, as thought you were compiling a portfolio or a CV..."
+    m "Creating a list of your strenghts, as if you were compiling a portfolio or a CV..."
     m "That might help!"
     m "Write down as many positive things as you can about yourself."
     m "You can put each one of them in a jar..."
@@ -706,7 +709,7 @@ label mshMod_technique_positive:
     m "I want you to realize how amazing you are, [player]."
     return
 
-
+#25
 init 5 python:
     addEvent(
         Event(
