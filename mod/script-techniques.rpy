@@ -521,7 +521,7 @@ label mshMod_technique_stretching:
     m "After tensing your muscles, you can let go and relax into something comfy."
     return
 
-
+#17
 init 5 python:
     addEvent(
         Event(
@@ -533,16 +533,15 @@ init 5 python:
     )
 
 label mshMod_technique_punching:
-    m "Okay.{w=0.5} I want you to try this."
+    m "Okay, [player].{w=0.5} I want you to try this."
     m "This one is to let out all of your anger!"
     m "We're going to punch it out!"
     m "I need you to find a pillow and punch out how you feel."
     m "A pillow is good because it won't hurt your fingers!"
-    m "Punch, punch, punch the pain away!"
+    m "Punch,{w=0.5} punch,{w=0.5} punch the pain away!"
     m "If you don't want to punch, you can scream into it too."
     m "Scream into the pillow to release your tension!"
-    m "Another way out is squashing the pillow hard..."
-    m "And gently letting go."
+    m "Another way out is squashing the pillow hard... {w=0.5}And gently letting go."
     m "Or having a pillow fight with the wall!"
     m "Throw that pillow with all your might."
     m "Another one that doesn't involve pillows is:"
@@ -550,7 +549,7 @@ label mshMod_technique_punching:
     m "And paying attention to the thudding sound and the strength you put in your arm to throw."
     return
 
-
+#18
 init 5 python:
     addEvent(
         Event(
@@ -571,7 +570,7 @@ label mshMod_technique_shouting:
     m "We can take care of your throat later! Ahahaha~!"
     return
 
-
+#19
 init 5 python:
     addEvent(
         Event(
@@ -591,13 +590,13 @@ label mshMod_technique_listening:
     m "Or even walking fast along the song, or tapping your foot to the beat."
     m "Wearing some boots while doing some stomping really does the trick as well!"
     m "Concentrate on the rhythm!"
-    m "Oh, i thought of something nice to do also."
+    m "Oh, I thought of something nice to do also."
     m "Dance to the music!"
     m "Dance or move in a way that makes you express a feeling."
     m "If you have the chance, going to a concert to do all those things along with other people might be a great idea as well."
     return
 
-
+#20
 init 5 python:
     addEvent(
         Event(
