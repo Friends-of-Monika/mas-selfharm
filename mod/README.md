@@ -4,11 +4,6 @@ In this folder there are all the script files of this submod.
 
 ## Dialogues and Ren'Py scripts
 
-### script-extra-songs.rpy
-
-Contains extra songs that are not on the primary playlist.
-
-
 ### script-first-aid.rpy
 
 Contains first aid script.
@@ -34,7 +29,7 @@ Contains flower-related mental health topics.
 Contains player diary script.
 
 
-### script-playlist.rpy
+### script-songs.rpy
 
 Contains playlist and song script.
 
