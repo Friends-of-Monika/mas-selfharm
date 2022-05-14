@@ -2,14 +2,14 @@
 
 default persistent._msh_mod_technique_database = dict()
 
-init 7 python:
+init 5 python:
     mas_all_ev_db_map["MSH_MOD_TCH"] = persistent._msh_mod_technique_database
-    mas_all_ev_db.update(persistent._msh_mod_technique_database)
+
 
 init 5 python:
     addEvent(
         Event(
-            persistent.event_database,
+            persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_menu",
             category=['Self-harm'],
             prompt="Can you tell me about some techniques?",
@@ -466,7 +466,7 @@ label mshMod_technique_videos_3:
     pause(3.0)
     call mshMod_technique_videos_post
     return
-    
+
 #15
 init 5 python:
     addEvent(

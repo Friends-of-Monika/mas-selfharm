@@ -26,6 +26,8 @@ init 4 python in mshMod_reminder_utils:
 
 init 4 python in mshMod_reminder:
 
+    import store
+
     def _assertReminderActive(ev_label):
         if isReminderActive(ev_label):
             raise AssertionError("expected reminder to be active")
@@ -37,20 +39,20 @@ init 4 python in mshMod_reminder:
     def addRecurringReminder(ev_label, delay, delta, latency):
         _assertReminderInactive(ev_label)
 
-        persistent._mshMod_active_reminders[ev_label] = (
+        store.persistent._mshMod_active_reminders[ev_label] = (
             datetime.datetime.now() + delay,  # datetime to trigger after
             delta,  # time between triggers
             latency  # time after which reminder should not trigger
         )
 
     def isReminderActive(ev_label):
-        return ev_label in persistent._mshMod_active_reminders
+        return ev_label in store.persistent._mshMod_active_reminders
 
     def shouldTriggerReminder(ev_label):
         if not isReminderActive(ev_label):
             return False
 
-        trigger, delta, latency = persistent._mshMod_active_reminders[ev_label]
+        trigger, delta, latency = store.persistent._mshMod_active_reminders[ev_label]
 
         return trigger <= datetime.datetime.now() <= trigger + latency
 
@@ -60,7 +62,7 @@ init 4 python in mshMod_reminder:
     def extendReminder(ev_label):
         _assertReminderActive(ev_label)
 
-        trigger, delta, latency = persistent._mshMod_active_reminders[ev_label]
+        trigger, delta, latency = store.persistent._mshMod_active_reminders[ev_label]
 
         _mshMod_active_reminders[ev_label] = (
             trigger + delta,  # ensure we base new trigger datetime off the initial trigger timedelta
@@ -70,4 +72,4 @@ init 4 python in mshMod_reminder:
     def stopReminder(ev_label):
         _assertReminderActive(ev_label)
 
-        del persistent._mshMod_active_reminders[ev_label]
+        del store.persistent._mshMod_active_reminders[ev_label]
