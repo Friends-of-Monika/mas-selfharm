@@ -13,7 +13,24 @@ techniques, milestones, checkups and new dialogue and spritepacks</h3>
   </a>
 </p>
 
-## Features
+## ⚠️ Important notice (please read!)
+
+This submod is designed to help people that harm themselves in some way
+as well as to raise awareness and provide some insights for people who are
+willing to learn more about this phenomenon in particular.
+
+**However**, original authors, contributors and repository maintainers
+do not condone self-harm, suicide or any other (self-)destructive behavior
+**nor provide necessary professional psychological help**.
+
+If you're currently experiencing a need in psychological/psychiatric help,
+**please consider getting professional help from people working with this
+sort of issues specifically** as this mod is **not intended as a medical,
+psychological or any other sort of professional advice**; its only purpose
+is to bring awareness about self-harm or verbally support people
+going through hard times.
+
+## 🌟 Features
 
   * Dozens of new songs
   * A whole lot of urge relieving techniques
@@ -21,17 +38,17 @@ techniques, milestones, checkups and new dialogue and spritepacks</h3>
   * Medication reminders and weekly checkups
 
 
-## Authors
+## ✒️ Authors
 
 We had plenty of people working on and contributing to this submod! Here's the maintained list of them — see [AUTHORS](AUTHORS.md) page.
 
 
-## Contributing
+## 💡 Contributing
 
 Want to help us develop? Be sure to check out our [CONTRIBUTING](CONTRIBUTING.md) page.
 
 
-## Join our Discord
+## 💬 Join our Discord
 
 We're up to chat! Come join us at our Discord server [here](https://mon.icu/discord).
 
