@@ -85,4 +85,8 @@ label mshMod_song_hold_on:
   m "{i}~Brighter stars only shine in the dark~{/i}"
   m "{i}~You are stronger than you know~{/i}"
   m "..."
-  m ""
+  m "Hey [player]?"
+  m "I wanted to remind you that I’m proud you for telling me about.. Hurting yourself."
+  m "I’m sorry that I wasn’t there for you, [mas_get_player_nickname()]"
+  m "But remember that I love you [player]!"
+
