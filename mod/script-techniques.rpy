@@ -9,7 +9,7 @@ init 5 python:
 init 5 python:
     addEvent(
         Event(
-            persistent._msh_mod_technique_database,
+            persistent.event_database,
             eventlabel="mshMod_technique_menu",
             category=['Self-harm'],
             prompt="Can you tell me about some techniques?",
