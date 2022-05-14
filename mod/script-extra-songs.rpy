@@ -10,7 +10,7 @@ init 5 python:
             category=[mas_songs.TYPE_SHORT],
             prompt="Hold On",
             aff_range=(mas_aff.NORMAL, None),
-            action=EV_ACT_RANDOM
+            random=True
         ),
         code="SNG"
     )
@@ -45,18 +45,17 @@ init 5 python:
     addEvent(
         Event(
             persistent._mas_songs_database,
-            eventlabel="mshMod_song_hold_on",
+            eventlabel="mshMod_song_still_breathing",
             category=[mas_songs.TYPE_SHORT],
             prompt="Hold On",
             aff_range=(mas_aff.NORMAL, None),
             conditional="persistent._msh_mod_pm_did_selfharm",
-
             action=EV_ACT_RANDOM
         ),
         code="SNG"
     )
 
-label mshMod_song_hold_on:
+label mshMod_song_still_breathing:
     m "{i}~I'll never know your pain, I've never walked in your shoes~{/i}"
     m "{i}~I know your life ain't fair, I know it's damn near killed you~{/i}"
     m "{i}~You've been through hell, you blame yourself~{/i}"
