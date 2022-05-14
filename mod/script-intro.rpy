@@ -9,7 +9,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_selfharm_intro",
             aff_range=(mas_aff.NORMAL, None),
-            conditional="not seen_event('mshMod_selfharm_intro_unhappy')",
+            conditional="not seen_event('mshMod_selfharm_intro')",
             action=EV_ACT_RANDOM
         )
     )
