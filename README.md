@@ -21,7 +21,7 @@ willing to learn more about this phenomenon in particular.
 
 **However**, original authors, contributors and repository maintainers
 do not condone self-harm, suicide or any other (self-)destructive behavior
-**nor provide necessary professional psychological help**.
+**nor provide the ideal professional psychological help**.
 
 If you're currently experiencing a need in psychological/psychiatric help,
 **please consider getting professional help from people working with this
@@ -32,15 +32,19 @@ going through hard times.
 
 ## 🌟 Features
 
-  * Dozens of new songs
+  * Dozens of new songs (and dialogues!)
   * A whole lot of urge relieving techniques
   * Sober streak tracking
-  * Medication reminders and weekly checkups
-
+  * Medication reminders
+  * Weekly checkups
+  * Self-harm information and awareness
+  * Diary/mood tracker feature
+  * Lots of new spritepacks and acs
+  * First-aid notions and guiding
 
 ## ✒️ Authors
 
-We had plenty of people working on and contributing to this submod! Here's the maintained list of them — see [AUTHORS](AUTHORS.md) page.
+We've had plenty of people working on and contributing to this submod! Here's the maintained list of them — see [AUTHORS](AUTHORS.md) page.
 
 
 ## 💡 Contributing
