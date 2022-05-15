@@ -728,7 +728,7 @@ label mshMod_technique_box:
     m "I believe in you, [player]."
     return
 
-
+#26
 init 5 python:
     addEvent(
         Event(
@@ -740,13 +740,15 @@ init 5 python:
     )
 
 label mshMod_technique_common:
-    m "Let's do a little mental exercise!"
+    m "Let's do a little mental exercise, [player]!"
     m "Think about all the things you can find you share in common with a friend."
     m "That will help you remmember common ground!"
+    m "You can even discuss those things with them."
+    extend "It will be a fun topic to chat about!"
     m "You can write them down too."
     return
 
-
+#27
 init 5 python:
     addEvent(
         Event(
@@ -758,13 +760,16 @@ init 5 python:
     )
 
 label mshMod_technique_comfort:
-    m "Can you think about all the ways in which you can comfort a friend who might be having a bad time?"
-    m "Please, note them down."
-    m "Now, try to apply some of those strategies to yourself?"
+    m "[player], imagine someone you love was feeling sad..."
+    m "You'd obviously want to help them out, right?"
+    m "That's just the kind of person you are, [player]."
+    m "Try to think about all the ways in which you can comfort a friend who might be having a bad time."
+    m "Please, note them down, if you feel like it."
+    m "Now, try to apply some of those strategies to yourself."
     m "You can also note down how everything about this exercise makes you feel."
     return
 
-
+#28
 init 5 python:
     addEvent(
         Event(
@@ -792,7 +797,7 @@ label mshMod_technique_walk:
     m "Can you put these feelings into words or draw them?"
     return
 
-
+#29
 init 5 python:
     addEvent(
         Event(
@@ -808,9 +813,12 @@ label mshMod_technique_media:
     m "You can write something positive there if you do."
     m "That way, you can make yourself feel better..."
     m "And spread the feeling to your friends too!"
+    m "And remember..."
+    extend "Make someone smile everyday, but don't forget you're someone too!"
+    m "I love you, [player]~"
     return
 
-
+#30
 init 5 python:
     addEvent(
         Event(
@@ -824,14 +832,16 @@ init 5 python:
 label mshMod_technique_perspective:
     m "Let's work on some perspective!"
     m "Can you write down your worries?"
-    m "And think, how much will they bother you..."
+    m "And think... how much will they bother you..."
     m "Tomorrow?"
-    m "What about in a week's time?"
-    m "Maybe a month or a year?"
+    extend "What about in a week's time?"
+    extend "Maybe a month or a year?"
     m "Working on using perspective helps on letting go of the intensity of the worry."
+    m "But never forget, [player], it doesn't matter how long the bad times last."
+    m "I'll always be right here with you."
     return
 
-
+#31
 init 5 python:
     addEvent(
         Event(
@@ -843,15 +853,21 @@ init 5 python:
     )
 
 label mshMod_technique_productivity:
+    m "[player], do you have any incomplete projects you would like to see finished?"
+    m "Have you been procrastinating anything for any reason?"
     m "I know this one might be hard but..."
     m "What about trying to engage in a productive activity?"
+    m "Maybe going back to it for a little while might distract you and ease your mind."
+    m "If you have been putting off something, you can try to pick it up right now."
+    m "An old drawing, that old story, a school project that has been on your mind."
+    m "Seeing old projects finally being completed always gives us an extra boost!"
     m "It's always nice when we see work getting done."
     m "Can be school stuff, a personal project... You name it!"
     m "Just try to do something that makes you proud for yourself today."
     m "Even if it's small!"
     return
 
-
+#32
 init 5 python:
     addEvent(
         Event(
@@ -865,11 +881,13 @@ init 5 python:
 label mshMod_technique_interests:
     m "How about making a list of things you find interesting in people?"
     m "You can also list your favorite anime, videogame or other media's characters!"
-    m "Think why you like them, and you can even imagine that they're real!"
-    m "This can help cope with loneliness."
+    m "Think of why you like them, and you can even imagine that they're real!"
+    m "This can help cope with loneliness, and also distract you."
+    m "I'm always with you, [player]."
+    extend "We'll get through this together!"
     return
 
-
+#33
 init 5 python:
     addEvent(
         Event(
@@ -889,7 +907,7 @@ label mshMod_technique_mirror:
     m "Look inside your eyes, and know that there's nothing that compares to the beauty in them."
     return
 
-
+#34
 init 5 python:
     addEvent(
         Event(
@@ -906,9 +924,12 @@ label mshMod_technique_creativity:
     m "It can be about anything and anyone positive in your life."
     m "Now ask yourself... Why are they in your story?"
     m "You can create two or more characters, and give them depth!"
+    m "Drawing the scenarios and characters might be nice too."
+    m "Who knows, maybe a wonderful plot will blossom from this?"
+    m "You always make me so proud, [player]."
     return
 
-
+#35
 init 5 python:
     addEvent(
         Event(
@@ -920,13 +941,13 @@ init 5 python:
     )
 
 label mshMod_technique_river:
-    m "Think about what is bothering you."
-    m "Now imagine a river."
-    m "Box up the thing that is on your mind and watch it float away..."
-    m "Another great exercise is imagining a box... A big one!"
+    m "[player], think about what is bothering you."
+    m "Now imagine a box... A big one!"
     m "You can imagine yourself putting all of your worries and problems inside it."
     m "After that, you can imagine yourself doing anything you want to the box."
     m "You can lock it, throw it away, throw it into the bottom of the sea..."
+    m "Maybe imagine a river."
+    m "Box up the thing that is on your mind and watch it float away..."
     m "You choose!"
     m "Just don't keep these feelings in an important place."
     m "Because they don't define you."
@@ -1986,25 +2007,6 @@ label mshMod_therapist:
     m "[player], why not call your therapist?"
     m "Try texting them if you think they might be busy."
     m "Maybe you can even schedule an emergencial appointment."
-    return
-
-init 5 python:
-    addEvent(
-        Event(
-            persistent._msh_mod_technique_database,
-            eventlabel="mshMod_endprocrastination",
-            prompt="Complete projects",
-            unlocked=False
-        )
-    )
-
-label mshMod_endprocrastination:
-    m "[player], do you have any incomplete projects you would like to see finished?"
-    m "Have you been procrastinating anything for any reason?"
-    m "Maybe going back to it for a little while might distract you and ease your mind."
-    m "If you have been putting off something, you can try to pick it up right now."
-    m "An old drawing, that old story, a school project that has been on your mind."
-    m "Seeing old projects finally being completed always gives us an extra boost!"
     return
 
 init 5 python:
