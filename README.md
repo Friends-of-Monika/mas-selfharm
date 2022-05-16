@@ -31,7 +31,7 @@ is to bring awareness about self-harm or verbally support people
 going through hard times.
 
 <details>
-  <summary>Click here to see all the International Suicide Hotlines. </summary>
+  <summary>Click here to see all the International Suicide Hotlines. (WIP) </summary>
   
   
    Algeria: Emergency: 34342 and 43 
