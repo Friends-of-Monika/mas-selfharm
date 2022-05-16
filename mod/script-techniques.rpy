@@ -953,7 +953,7 @@ label mshMod_technique_river:
     m "Because they don't define you."
     return
 
-
+#36
 init 5 python:
     addEvent(
         Event(
@@ -965,13 +965,17 @@ init 5 python:
     )
 
 label mshMod_technique_feelings:
-    m "Make a list of positive feelings you have had in the last week!"
+    m "How about making a list of positive feelings you have had in the last week?"
     m "I'm sure there are at least some."
-    m "Find out what triggers those emotions..."
-    m "And make sure to cherish those situations!"
+    m "Find out what or who triggers those emotions..."
+    m "And make sure to cherish those situations and people!"
+    m "If it was someone who made you feel those positive feelings,"
+    extend "make sure to thank them if you can!"
+    m "Express your gratitude for having that person in your life."
+    m "I'm sure they are just as grateful for being in yours!"
     return
 
-
+#37
 init 5 python:
     addEvent(
         Event(
@@ -986,14 +990,17 @@ label mshMod_technique_poem:
     m "This technique is one of my favorites."
     m "Let's write a poem!"
     m "Don't be alarmed, [player]."
-    m "It doesn't have to rhyme!"
+    m "It doesn't have to rhyme or even be perfect!"
     m "It can be a short poem about how you feel."
     m "I'm sure it will be sincere!"
+    m "Like Ernest Hemingway said,"
+    extend "'Write hard and clear about what hurts!'"
+    m "Ahahaha~"
     m "If you don't feel ready to write a poem of your own..."
     m "You can always read some from famous poets!"
     return
 
-
+#38
 init 5 python:
     addEvent(
         Event(
@@ -1025,7 +1032,7 @@ label mshMod_technique_breathing:
     m "Aaaand, you're done!"
     return
 
-
+#39
 init 5 python:
     addEvent(
         Event(
@@ -1037,14 +1044,17 @@ init 5 python:
     )
 
 label mshMod_technique_pinterest:
-    m "[player], do you have a Pinterest?"
+    m "[player], do you have a Pinterest account?"
     m "You can try adding some inspirational quotes to your board!"
     m "Or some pictures you find aesthetically pleasing."
+    m "You can try to look at pictures with the same color pallete,"
+    extend "and gather them somewhere!"
+    m "That always makes our brain feel so nice."
     m "If you don't have an account, maybe you can try creating one?"
     m "I promise it's very satisfying!"
     return
 
-
+#40
 init 5 python:
     addEvent(
         Event(
@@ -1056,13 +1066,18 @@ init 5 python:
     )
 
 label mshMod_technique_emerald:
-    m "[player], you know how much i like the color emerald green, right?"
+    m "[player], you know how much I like the color emerald green, right?"
     m "Why don't you think of your favorite color right now?"
-    m "And try count all the things you can think of in your room that are that color."
-    m "Quietly describe to yourself what the things look like, and what your favorite color makes you feel."
+    m "And try to count all the things of that color that you can see in your room."
+    m "Quietly describe to yourself what the things look like,"
+    extend "and what your favorite color makes you feel."
+    m "Personally, emerald green brings me back to myself."
+    m "Makes me think of my individuality and personality."
+    m "That's why I love it so much!"
+    m "What about you? What do you love about your favorite color?"
     return
 
-
+#41
 init 5 python:
     addEvent(
         Event(
@@ -1074,11 +1089,17 @@ init 5 python:
     )
 
 label mshMod_technique_patterns:
-    m "What about counting patterns?"
+    m "What about counting patterns, [player]?"
     m "Count as many as you can in your favourite room of the house."
+    m "Hyper-focus on them and breathe deeply,"
+    extend "in and out..."
+    m "Every time you find a certain amount of patterns."
+    m "Think about what is your favorite pattern too."
+    m "Is it checkered? Striped? A certain print?"
+    m "Have fun thinking of that, [player]."
     return
 
-
+#42
 init 5 python:
     addEvent(
         Event(
@@ -1093,10 +1114,15 @@ label mshMod_technique_word_play:
     m "Now, for some word play!"
     m "How many four letter words can you make up from the statement..."
     m "'You learn more from failure than from success. Don't let it stop you'?"
-    m "Or try to make as many words as possible out of your full name."
+    m "I can think of one already..."
+    extend "{i}Lean{/i}!"
+    m "Or you can also try to make as many words as possible out of your full name."
+    m "One word I can make out of the name Monika is {i}moka{/i}!"
+    m "A moka is a type of a coffee maker."
+    extend "Ehehehe~!"
     return
 
-
+#43
 init 5 python:
     addEvent(
         Event(
@@ -1113,9 +1139,11 @@ label mshMod_technique_lyrics:
     m "Hard, huh?"
     m "But it will surely distract you! Ahahaha~"
     m "If that's too complicated, you can try saying the alphabet backwards."
+    m "Z, Y, X, W..."
+    extend "Oops! Brain fart!"
     return
 
-
+#44
 init 5 python:
     addEvent(
         Event(
@@ -1129,9 +1157,14 @@ init 5 python:
 label mshMod_technique_animal:
     m "Let's think of one animal for every letter of the alphabet."
     m "Or a song or artist for every letter of the alphabet!"
+    m "An animal that starts with A is..."
+    m "An alligator!"
+    extend "Or an ant!"
+    m "Can you continue?"
+    extend "Let's do this, [player]!"
     return
 
-
+#45
 init 5 python:
     addEvent(
         Event(
@@ -1150,13 +1183,14 @@ label mshMod_technique_research:
     m "Certified personality tests or silly buzzfeed quizzes."
     m "You could also research for some jokes or stand-up comedies you enjoy!"
     m "Search for ridiculous things on the web."
+    m "Like {a=https://theuselessweb.com/}this site{/a}, which takes you to a random useless site on the internet!"
     m "Or maybe some places to volunteer at?"
     m "If you can't volunteer in any way, why not go through all your old stuff?"
     extend "And donate what you don't have use for anymore to those in need?"
     m "Helping others can help us too!"
     return
 
-
+#46
 init 5 python:
     addEvent(
         Event(
@@ -1174,9 +1208,11 @@ label mshMod_technique_favorite_things:
     m "Or fifteen favorite videogame titles!"
     m "Maybe movies, or books?"
     m "It's up to you, [player]...!"
+    m "You can also share your list with someone and see if you two have any in common."
+    m "That could be so fun!"
     return
 
-
+#47
 init 5 python:
     addEvent(
         Event(
@@ -1189,12 +1225,17 @@ init 5 python:
 
 label mshMod_technique_superheroes:
     m "How many superheroes can you name?"
-    m "What about villains?"
+    extend "What about villains?"
     m "How many, and which of them would you like to have as your friends?"
     m "And why is that?"
+    m "You can try organizing them by color scheme, since many of them tend to follow the same color palletes."
+    m "Have you noticed we have many red or blue based superheroes and many purple or black?"
+    m "Wonder why that is?"
+    extend "Hmmmmmm..." 
+    m "Anyway!"
     return
 
-
+#48
 init 5 python:
     addEvent(
         Event(
@@ -1210,9 +1251,11 @@ label mshMod_technique_artist:
     m "Now name all the songs from them that you can remember."
     m "Or maybe, an author!"
     m "And do the same, name all the books/works written by them, that you can remember."
+    m "Can you remmeber the name of all my poems, [player]?"
+    m "Ehehehe~!"
     return
 
-
+#49
 init 5 python:
     addEvent(
         Event(
@@ -1224,11 +1267,15 @@ init 5 python:
     )
 
 label mshMod_technique_playlist:
-    m "Can you name the songs that were mostly played on your playlist this week?"
+    m "Can you name the songs that you listened to the most this week?" 
     m "Or this month?"
+    m "Is there a specific artist or band that made an special appearance on your playlist?"
+    m "By the way, what's your favorite song at the moment?"
+    m "The one you are listening to the most lately?"
+    m "You can give it a listen right now, and just enjoy the tune."
     return
 
-
+#50
 init 5 python:
     addEvent(
         Event(
@@ -1244,12 +1291,12 @@ label mshMod_technique_surroundings:
     m "Observe things carefully... and slowly."
     m "You can also notice all the things you can smell where you are."
     m "If you'd like, also notice all the things you can hear around you, or in an imaginary place."
-    m "Don't label or categorise."
+    m "Don't label or categorize."
     m "Just notice the things you can see, smell and hear."
     m "And accept them."
     return
 
-
+#51
 init 5 python:
     addEvent(
         Event(
@@ -1274,7 +1321,7 @@ label mshMod_technique_mess:
     m "You can even let your creativity flow out, drawing on the walls or painting with watercolors if you don't want permanence."
     return
 
-
+#52
 init 5 python:
     addEvent(
         Event(
@@ -1288,10 +1335,15 @@ init 5 python:
 label mshMod_technique_holiday:
     m "Hey, [player]! When is your next holiday?"
     m "Why not research for the places you can go when that time comes?"
-    # talk about places
+    m "Maybe something small like visiting a park, or a local mall!"
+    m "Or something bigger, like going sightseeing in a different city!"
+    m "Going to a beach, some nice restaurant or just your favorite place in the city!"
+    m "Wouldn't that be amazing?"
+    extend "If it's not within your reach right now, you can always make plans."
+    m "That's part of the fun!"
     return
 
-
+#53
 init 5 python:
     addEvent(
         Event(
@@ -1306,9 +1358,12 @@ label mshMod_technique_hobbies:
     m "How about making a list of your favorite things to do?"
     m "Hobbies, activities... even chores!"
     m "Put them in a favourite to least favourite order."
+    m "Which of them can you do right now?"
+    m "Pick one, and go have fun!"
+    extend "Ahahaha~"
     return
 
-
+#54
 init 5 python:
     addEvent(
         Event(
@@ -1321,13 +1376,20 @@ init 5 python:
 
 label mshMod_technique_shiritori:
     m "Can you play shiritori?"
-    #explain shiritori rules
     m "Well... at least an simpler version of it."
+    m "The japanese game is played like this:"
+    m "You start with a word from a specific category."
+    m "After that, you take the last letter or syllable (for an extra challenge) from that word, using it to start the next word."
+    m "Then you goes on and on and on until you get bored!"
+    m "For example, let's imagine you picked the famous person category."
     m "Pick a famous person or character and then choose another person starting with the last letter of the first person's name."
-    m "For example! #give example"
+    m "For example! If I start with {i}E. E. Cummings {/i}..."
+    m "Next, I can pick Sade, from Marquis de Sade!"
+    m "And so on!"
+    extend "Have fun, [player]!"
     return
 
-
+#55
 init 5 python:
     addEvent(
         Event(
@@ -1339,8 +1401,12 @@ init 5 python:
     )
 
 label mshMod_technique_objects:
-    m "Find five objects."
-    m "Focus on these five objects and describe them taking deep breaths between each description."
+    m "Find five objects, [player]."
+    m "Hyper-focus on these five objects and describe them taking deep breaths between each description."
+    m "What color are they?"
+    extend "Their shape?"
+    m "How do they feel in your hand?"
+    m "Take your time exploring those objects."
     return
 
 
