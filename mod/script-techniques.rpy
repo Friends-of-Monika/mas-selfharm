@@ -107,6 +107,7 @@ init 5 python:
 
 label mshMod_technique_cozy:
     m 1dua "Something that really helps me feel better is getting all cozy!"
+    m "Pick a comfortable spot and sit down."
     m 5rud "Try huddling up in something super cozy..."
     m 5eua "A sheet, a blanket, or one of your favorite hoodies, for example."
     m 3hsa "Anything works, really! Just grab things that bring you comfort."
@@ -117,6 +118,7 @@ label mshMod_technique_cozy:
     m 3hubsb "There's nothing quite like being snug, hehe!"
     m "If you feel that you're getting sleepy, that's okay!"
     m "You can rest your eyes for a moment, and take a well deserved nap."
+    m "Think of what you can feel, see and hear that's comforting and calm."
     m "I'm sure you'll feel a lot better and refreshed afterwards!"
     return
 
@@ -1631,7 +1633,7 @@ label mshMod_technique_beach:
     m "I wish I could go on a romantic beach walk with you, [player]."
     return
 
-
+#66
 init 5 python:
     addEvent(
         Event(
@@ -1646,11 +1648,12 @@ label mshMod_technique_eat:
     m "Eat something you enjoy."
     m "Make it slow and just notice everything about it."
     m "Maybe make yourself a cup of tea or warm milk?"
+    m "Something relaxing."
     m "Drink it slowly, enjoying each sip."
     m "Enjoy."
     return
 
-
+#67
 init 5 python:
     addEvent(
         Event(
@@ -1663,27 +1666,13 @@ init 5 python:
 
 label mshMod_technique_pictures:
     m "Look at a book that has pictures and words..."
-    m "And notice all the comforting images and words."
+    m "And notice all the comforting parts of it."
     m "Children books are great for that!"
+    m "Focus on the story that's being told, and don't think about anything else for a while."
+    m "Just stay in the moment."
     return
 
-
-init 5 python:
-    addEvent(
-        Event(
-            persistent._msh_mod_technique_database,
-            eventlabel="mshMod_technique_sit",
-            prompt="Sit",
-            unlocked=False
-        )
-    )
-
-label mshMod_technique_sit:
-    m "Pick a comfortable spot and sit down."
-    m "Think of what you can feel, see and hear that's comforting and calm."
-    return
-
-
+#68
 init 5 python:
     addEvent(
         Event(
@@ -1698,9 +1687,12 @@ label mshMod_technique_ground:
     m "Ground yourself."
     m "Plant your feet firmly on the floor and visualise yourself as firmly rooted to the ground."
     m "Think of yourself as having a firm foundation and hold your head up high."
+    m "Imagine yourself looking the world in the eyes,"
+    extend "and telling it you'll make through it."
+    m "That you are good enough."
     return
 
-
+#69
 init 5 python:
     addEvent(
         Event(
@@ -1713,9 +1705,13 @@ init 5 python:
 
 label mshMod_technique_scene:
     m "Watch your favourite movie and focus on the most comforting scene."
+    m "Who are your favorite characters?"
+    m "Why do you love this movie and what does it make you feel?"
+    m "Can you memorize the lines of your favorite scene?"
+    m "You can even show the scene to someone and rant about how much you love it!"
     return
 
-
+#70
 init 5 python:
     addEvent(
         Event(
@@ -1728,13 +1724,16 @@ init 5 python:
 
 label mshMod_technique_mindful_seeing:
     m "Carry out a 'mindful seeing' exercise."
+    m "Mindful seeing is the practice of consciously noticing everything within your visual field!"
+    m "You do this to focus completely on one thing as much as you are able."
+    m "It takes your mind from a place of thinking and doing to a place of noticing."
     m "Look outside a window or imagine looking outside a window."
     m "Look at everything there is to see."
     m "Just notice the colours, the patterns or the textures."
     m "Try to notice the smallest movements such as leaves in the breeze."
     return
 
-
+#71
 init 5 python:
     addEvent(
         Event(
@@ -1751,10 +1750,11 @@ label mshMod_technique_acceptance:
     m "Create a phrase that is compassionate."
     m "A mantra, if you'd like!"
     m "For example..."
-    m "I accept myself just as I am."
+    extend "'I accept myself just as I am.'"
+    m "If you feel the need, repeat it as many times as you want."
     return
 
-
+#72
 init 5 python:
     addEvent(
         Event(
@@ -1774,7 +1774,7 @@ label mshMod_technique_brushes:
     m "And wash away your pain!"
     return
 
-
+#73 
 init 5 python:
     addEvent(
         Event(
@@ -1788,9 +1788,12 @@ init 5 python:
 label mshMod_technique_memory_book:
     m "Start a 'memory book' of good memories!"
     m "Read through them as you add new ones."
+    m "Add the details, and put in pictures if you want!"
+    m "You can make it as it were a diary, if you want."
+    m "I'm sure there are many more good memories yet to come, [player]!"
     return
 
-
+#74
 init 5 python:
     addEvent(
         Event(
@@ -1803,24 +1806,13 @@ init 5 python:
 
 label mshMod_technique_happiness:
     m "Identify three small things that brought you happiness in the past 24 hours."
+    m "What were they and how did they make you happy?"
+    m "Can you do any of them again?"
+    m "Cherish those moments, and cherish your happiness."
+    m "You deserve to be happy and to be loved!"
     return
 
-
-init 5 python:
-    addEvent(
-        Event(
-            persistent._msh_mod_technique_database,
-            eventlabel="mshMod_technique_cushion",
-            prompt="Cushion",
-            unlocked=False
-        )
-    )
-
-label mshMod_technique_cushion:
-    m "Imagine yourself floating on the water on an inflatable cushion."
-    return
-
-
+#75
 init 5 python:
     addEvent(
         Event(
@@ -1848,7 +1840,7 @@ label mshMod_hug_theory:
     m "Just remember to Hug!"
     return
 
-
+#76
 init 5 python:
     addEvent(
         Event(
@@ -1862,9 +1854,14 @@ init 5 python:
 label mshMod_technique_comforting:
     m "Choose three of your most comforting characters from media you enjoy..."
     m "And imagine you are spending some quality time with them."
+    m "What would you do together?"
+    m "Would you introduce them to anyone you know?"
+    m "What would it be like if they were in your life?"
+    m "If they have any superpower or quirk, imagine yourself in their world."
+    m "What would be your superpower if you were to fight alongside them?"
     return
 
-
+#77
 init 5 python:
     addEvent(
         Event(
