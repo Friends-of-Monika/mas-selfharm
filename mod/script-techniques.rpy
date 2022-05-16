@@ -1409,7 +1409,7 @@ label mshMod_technique_objects:
     m "Take your time exploring those objects."
     return
 
-
+#56
 init 5 python:
     addEvent(
         Event(
@@ -1430,7 +1430,7 @@ label mshMod_technique_imagination:
     m "Think about it with as much detail as you can."
     return
 
-
+#57
 init 5 python:
     addEvent(
         Event(
@@ -1444,9 +1444,14 @@ init 5 python:
 label mshMod_technique_characters:
     m "Think of your favourite book, movie, videogame or tv show."
     m "Can you name as many characters as you can from that media?"
+    m "And what are your favorites from that list?"
+    extend "Why?"
+    m "Can you relate to any of them?"
+    m "I'm sure you feel similarities with yourself and the best characters ever."
+    m "Ehehehe~!"
     return
 
-
+#58
 init 5 python:
     addEvent(
         Event(
@@ -1461,29 +1466,35 @@ label mshMod_technique_shapes:
     m "Draw any type of line on a piece of paper..."
     m "Then make something out of it."
     m "Or draw lots of shapes!"
+    m "Whatever comes in your mind is valid to be on the paper."
+    m "If you feel yourself drawing negative things..."
+    extend "It's okay! You'll relieve all the tension you've been holding inside."
+    m "If positivity comes out in the paper, even better!"
+    m "Enjoy yourself, [player]!"
+    extend "And take your time."
     return
 
-
+#59
 init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_technique_playlist",
-            prompt="Playlist",
+            eventlabel="mshMod_technique_playlists",
+            prompt="Playlists",
             unlocked=False
         )
     )
 
-label mshMod_technique_playlist:
+label mshMod_technique_playlists:
     m "How about creating a playlist?"
     m "You can go to Youtube, and create a list of videos that make you happy."
     m "Or that make you laugh!"
-    m "Or create a playlist on spotify of your favourite songs."
+    m "Or create a playlist on Spotify, for example, of your favourite songs."
     m "Or comforting songs! Listen to these."
     m "Reflect on their message."
     return
 
-
+#60
 init 5 python:
     addEvent(
         Event(
@@ -1507,7 +1518,7 @@ label mshMod_technique_self_care:
     m "I want you to take care of yourself, [player]. Enjoy!"
     return
 
-
+#61
 init 5 python:
     addEvent(
         Event(
@@ -1522,9 +1533,16 @@ label mshMod_technique_outside:
     m "Go outside if possible..."
     m "Or imagine yourself outside."
     m "How many shapes can you see around you?"
+    m "Notice all the things that you can see or feel."
+    m "Observe things carefully... and slowly."
+    m "You can also notice all the things you can smell where you are."
+    m "If you'd like, also notice all the things you can hear around you, or in an imaginary place."
+    m "Don't label or categorize."
+    m "Just notice the things you can see, smell and hear."
+    m "And accept them."
     return
 
-
+#62
 init 5 python:
     addEvent(
         Event(
@@ -1538,9 +1556,13 @@ init 5 python:
 label mshMod_technique_draw:
     m "Attempt to draw four things around you."
     m "It doesnt have to be good though!"
+    m "Just enjoy yourself and let your hands trace on paper whatever they want."
+    m "What is your perception in things you can see?"
+    m "Everyone sees things differently, and you are no exception!"
+    m "You can show your drawings to someone and talk about them."
     return
 
-
+#63
 init 5 python:
     addEvent(
         Event(
@@ -1553,10 +1575,10 @@ init 5 python:
 
 label mshMod_technique_food:
     m "Name as many types of food as you can!"
-    m "What do you like the most?"
+    m "Which do you like the most?"
     extend "And why?"
     m "If you're up for it, you can even look for some recipes online..."
-    m "And try to cook it!"
+    m "And try to cook them!"
     m "Maybe even planning a dinner party with menus and a guest list, then carry it out!"
     m "If you don't have the appetite or the ingredients,"
     extend "try chewing up on some gum!"
@@ -1566,7 +1588,7 @@ label mshMod_technique_food:
     m "Eating something nice can give our happy chemicals a boost."
     return
 
-
+#64
 init 5 python:
     addEvent(
         Event(
@@ -1580,9 +1602,13 @@ init 5 python:
 label mshMod_technique_colour:
     m "Draw a picture and colour it slowly and mindfully."
     m "Focus on not going out of the lines!"
+    m "There are also books, websites, and apps online that provide that."
+    m "If you can, pick the colours you like the most!"
+    m "Or the ones you feel would suit the picture better."
+    m "Anything goes! Just have fun and take your time."
     return
 
-
+#65
 init 5 python:
     addEvent(
         Event(
@@ -1596,6 +1622,13 @@ init 5 python:
 label mshMod_technique_beach:
     m "Picture yourself on a beach."
     m "Can you focus on all the different things that you might find there?"
+    m "If you were with your toes buried in the sand right now..."
+    m "What would you do first?"
+    m "Collect some seashells?"
+    extend "Enjoy the sea?"
+    m "Or maybe lay very still in the sand, feeling the sun rays on your body?"
+    m "..."
+    m "I wish I could go on a romantic beach walk with you, [player]."
     return
 
 
