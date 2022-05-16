@@ -1874,9 +1874,14 @@ init 5 python:
 
 label mshMod_technique_podcasts:
     m "Download some comforting or meditation podcasts and listen to them."
+    m "There are some pretty good ASMR ones and meditation ones, that allow you to relax!"
+    m "You can also distract yourself with a informational or funny podcast."
+    m "Sit or lay down somewhere comfortable and allow yourself to fully pay attention to what the people are saying."
+    m "I know so many people listen to podcasts while doing other stuff, but maybe you could rest for a bit while listening to one right now."
+    m "Breathe in and out as many times as you need, and allow your body and mind to rest."
     return
 
-
+#78
 init 5 python:
     addEvent(
         Event(
@@ -1894,9 +1899,12 @@ label mshMod_technique_hand_holding:
     m "Then hug yourself."
     m "Be gentle and take it slow..."
     m "Like comforting your favorite person or animal."
+    m "I would touch you like this, [player]."
+    m "Slowly, and taking care of you the most I could."
+    m "I love you~"
     return
 
-
+#79
 init 5 python:
     addEvent(
         Event(
@@ -1910,8 +1918,13 @@ init 5 python:
 label mshMod_technique_pattern:
     m "Touch each finger to your thumbs in a pattern."
     m "Go faster as you find a rhythm."
+    m "You can even follow the rhythm of a song, or do morse code with your fingers."
+    m "Tapping would also relax you and keep you focused in the moment."
+    m "Feel your fingers..."
+    extend "and follow the beat."
     return
 
+#80
 init 5 python:
     addEvent(
         Event(
@@ -1940,17 +1953,18 @@ label mshMod_pet_zoo:
     m "One other option is going out to feed the ducks, birds, or squirrels."
     return
 
+#81
 init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_list_insteadofs",
+            eventlabel="mshMod_insteadofs",
             prompt="List of instead of's",
             unlocked=False
         )
     )
 
-label mshMod_list_insteadofs:
+label mshMod_insteadofs:
     m "Come up with your own techniques!"
     extend "How about that?"
     m "Create a list of things you can do instead of hurting yourself."
@@ -1959,6 +1973,7 @@ label mshMod_list_insteadofs:
     m "And add new techniques or things to do whenever you think of them."
     return
 
+#82
 init 5 python:
     addEvent(
         Event(
@@ -1978,6 +1993,7 @@ label mshMod_cry:
     m "Throw a temper tantrum, if you need to."
     return
 
+#83
 init 5 python:
     addEvent(
         Event(
@@ -2002,6 +2018,7 @@ label mshMod_happy_box:
     m "Let yourself take in the good memories you feel and the closeness you feel to the other people who were involved in making each item special to you!"
     return
 
+#84 
 init 5 python:
     addEvent(
         Event(
@@ -2023,6 +2040,7 @@ label mshMod_clothes:
     m "Maybe you can even update your social media profile pictures."
     return
 
+#85 
 init 5 python:
     addEvent(
         Event(
@@ -2046,6 +2064,7 @@ label mshMod_hobby:
     m "Seashells, dried flowers, anything goes as long as you're having fun."
     return
 
+#86
 init 5 python:
     addEvent(
         Event(
@@ -2067,6 +2086,7 @@ label mshMod_shopping:
     m "Do a little wishlist of stuff you wanna buy when you get the chance."
     return
 
+#87
 init 5 python:
     addEvent(
         Event(
@@ -2088,6 +2108,7 @@ label mshMod_childplay:
     extend "To remember is to relive!"
     return
 
+#88
 init 5 python:
     addEvent(
         Event(
@@ -2103,8 +2124,11 @@ label mshMod_therapist:
     m "[player], why not call your therapist?"
     m "Try texting them if you think they might be busy."
     m "Maybe you can even schedule an emergencial appointment."
+    m "Talking about your feelings or seeking for professional help is never too much."
+    m "I believe in you, [player]!"
     return
 
+#89
 init 5 python:
     addEvent(
         Event(
@@ -2121,8 +2145,10 @@ label mshMod_plants:
     m "Water them and tend the garden."
     m "Maybe there will even be some flowers there waiting for you!"
     m "If you don't have a garden yet, why not make one right now and start a new hobby?"
+    m "And don't forget, plants are friends!"
     return
 
+#90
 init 5 python:
     addEvent(
         Event(
@@ -2151,6 +2177,7 @@ label mshMod_future:
     m "I'll be there for you every step of the way, for sure."
     return
 
+#91
 init 5 python:
     addEvent(
         Event(
@@ -2165,8 +2192,12 @@ label mshMod_create:
     m "[player], why not create something of your own?"
     m "You can build something from scratch, start a new drawing or write a brand new story."
     m "Even folding a paper and inventing a new origami shape goes!"
+    m "Don't you feel so proud when you create something entirely new,"
+    extend "that is only yours?"
+    m "I feel proud of you nevertheless, [player]."
     return
 
+#92
 init 5 python:
     addEvent(
         Event(
