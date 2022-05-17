@@ -33,6 +33,7 @@ init 5 python:
 
 label mas_comp:
     m ""
+    return
 
 
 #Thank you for being patient with me.
@@ -50,6 +51,7 @@ init 5 python:
 
 label mas_comp:
     m ""
+    return
 
 
 #Thanks to you, I'm still here
@@ -67,6 +69,8 @@ init 5 python:
 
 label mas_comp:
     m ""
+    return
+
 
 #You are my sunflower!
 init 5 python:
@@ -83,6 +87,7 @@ init 5 python:
 
 label mas_comp:
     m ""
+    return
 
 
 #You are my sunshine!
@@ -100,6 +105,7 @@ init 5 python:
 
 label mas_comp:
     m ""
+    return
 
 
 #Thank you for always being kind to me.
@@ -117,6 +123,7 @@ init 5 python:
 
 label mas_comp:
     m ""
+    return
 
 
 #Thanks for taking such good care of me.
@@ -134,6 +141,7 @@ init 5 python:
 
 label mas_comp:
     m ""
+    return
 
 
 #Thank you for always thinking of me.
@@ -151,6 +159,7 @@ init 5 python:
 
 label mas_comp:
     m ""
+    return
 
 
 #Thank you for always helping me out.
@@ -168,6 +177,7 @@ init 5 python:
 
 label mas_comp:
     m ""
+    return
 
 
 #Thanks for being so understanding with me.
@@ -185,6 +195,7 @@ init 5 python:
 
 label mas_comp:
     m ""
+    return
 
 
 #Thank you for understanding me.
@@ -210,3 +221,4 @@ label mas_comp:
     m "I love you [player]."
     m "Remember you can always come to this room when you need reassurance."
     m "I'm here for you!"
+    return
