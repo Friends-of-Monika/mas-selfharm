@@ -5,7 +5,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_comp",
+            eventlabel="mshMod_compliment_saved_me",
             category=['mas_compliment'],
             prompt="You saved me, [m_name].",
             unlocked=True
@@ -13,7 +13,7 @@ init 5 python:
         code="CMP"
     )
 
-label mas_comp:
+label mshMod_compliment_saved_me:
     m ""
     return
 
@@ -23,7 +23,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_comp",
+            eventlabel="mshMod_compliment_everything",
             category=['mas_compliment'],
             prompt="You're my everything, [m_name].",
             unlocked=True
@@ -31,7 +31,7 @@ init 5 python:
         code="CMP"
     )
 
-label mas_comp:
+label mshMod_compliment_everything:
     m ""
     return
 
@@ -41,7 +41,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_comp",
+            eventlabel="mshMod_compliment_patient",
             category=['mas_compliment'],
             prompt="Thank you for being patient with me.",
             unlocked=True
@@ -49,7 +49,7 @@ init 5 python:
         code="CMP"
     )
 
-label mas_comp:
+label mshMod_compliment_patient:
     m ""
     return
 
@@ -60,14 +60,14 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mas_comp",
-            category=['mas_compliment'],
+            category=['mshMod_compliment_still_here'],
             prompt="Thanks to you, I'm still here.",
             unlocked=True
         ),
         code="CMP"
     )
 
-label mas_comp:
+label mshMod_compliment_still_here:
     m ""
     return
 
@@ -77,7 +77,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_comp",
+            eventlabel="mshMod_compliment_sunflower",
             category=['mas_compliment'],
             prompt="You are my sunflower!",
             unlocked=True
@@ -85,7 +85,7 @@ init 5 python:
         code="CMP"
     )
 
-label mas_comp:
+label mshMod_compliment_sunflower:
     m ""
     return
 
@@ -95,7 +95,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_comp",
+            eventlabel="mshMod_compliment_sunshine",
             category=['mas_compliment'],
             prompt="You are my sunshine!",
             unlocked=True
@@ -103,7 +103,7 @@ init 5 python:
         code="CMP"
     )
 
-label mas_comp:
+label mshMod_compliment_sunshine:
     m ""
     return
 
@@ -113,7 +113,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_comp",
+            eventlabel="mshMod_compliment_being_kind",
             category=['mas_compliment'],
             prompt="Thank you for always being kind to me.",
             unlocked=True
@@ -121,7 +121,7 @@ init 5 python:
         code="CMP"
     )
 
-label mas_comp:
+label mshMod_compliment_being_kind:
     m ""
     return
 
@@ -131,7 +131,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_comp",
+            eventlabel="mshMod_compliment_caring",
             category=['mas_compliment'],
             prompt="Thanks for taking such good care of me.",
             unlocked=True
@@ -139,7 +139,7 @@ init 5 python:
         code="CMP"
     )
 
-label mas_comp:
+label mshMod_compliment_caring:
     m ""
     return
 
@@ -149,7 +149,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_comp",
+            eventlabel="mshMod_compliment_thinking_of_me",
             category=['mas_compliment'],
             prompt="Thank you for always thinking of me.",
             unlocked=True
@@ -157,7 +157,7 @@ init 5 python:
         code="CMP"
     )
 
-label mas_comp:
+label mshMod_compliment_thinking_of_me:
     m ""
     return
 
@@ -167,7 +167,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_comp",
+            eventlabel="mshMod_compliment_helping_out",
             category=['mas_compliment'],
             prompt="Thank you for always helping me out.",
             unlocked=True
@@ -175,7 +175,7 @@ init 5 python:
         code="CMP"
     )
 
-label mas_comp:
+label mshMod_compliment_helping_out:
     m ""
     return
 
@@ -185,7 +185,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_comp",
+            eventlabel="mshMod_compliment_being_understanding",
             category=['mas_compliment'],
             prompt="Thanks for being so understanding with me.",
             unlocked=True
@@ -193,7 +193,7 @@ init 5 python:
         code="CMP"
     )
 
-label mas_comp:
+label mshMod_compliment_being_understanding:
     m ""
     return
 
@@ -203,7 +203,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_comp",
+            eventlabel="mshMod_compliment_understanding_me",
             category=['mas_compliment'],
             prompt="Thank you for understanding me.",
             unlocked=True
@@ -211,7 +211,7 @@ init 5 python:
         code="CMP"
     )
 
-label mas_comp:
+label mshMod_compliment_understanding_me:
     m "[Player]...!"
     m "Of course."
     extend "Why wouldn’t I?"
