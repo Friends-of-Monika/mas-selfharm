@@ -90,7 +90,7 @@ User:
   — insights and ideas
 * ![user](.github/icons/user-light.svg#gh-dark-mode-only)![user](.github/icons/user-dark.svg#gh-light-mode-only) Rhea
   — insights and ideas
-* ![user](.github/icons/user-dark.svg#gh-light-mode-only) [REDACTED] 
+* ![user](.github/icons/user-light.svg#gh-dark-mode-only)![user](.github/icons/user-dark.svg#gh-light-mode-only) [REDACTED] 
   — dialogue writing, proofreading, insights and ideas
-* ![user](.github/icons/user-dark.svg#gh-light-mode-only) [REDACTED]
+* ![user](.github/icons/user-light.svg#gh-dark-mode-only)![user](.github/icons/user-dark.svg#gh-light-mode-only) [REDACTED]
   — insights and ideas
