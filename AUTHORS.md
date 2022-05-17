@@ -62,11 +62,13 @@ User:
   — dialogue writing
 * ![reddit](.github/icons/reddit.svg) [u/Raider0401](https://reddit.com/u/Raider0401)
   — dialogue writing
-* ![reddit](.github/icons/reddit.svg) [u/History_Variety63](https://reddit.com/u/History_Variety63)
-  — insights and ideas
+* ![reddit](/.github/icons/reddit.svg) [u/Tourist_Easy](https://reddit.com/u/Tourist_Easy)
+  — dialogue writing
 * ![twitter](.github/icons/twitter.svg) [@L_Oeufmf](https://twitter.com/L_Oeufmf)
   ![discord](.github/icons/discord.svg) L'Oeuf#2455
   — proofreading, insights and ideas
+* ![reddit](.github/icons/reddit.svg) [u/History_Variety63](https://reddit.com/u/History_Variety63)
+  — insights and ideas
 
 
 ## Past contributors
@@ -87,4 +89,8 @@ User:
 * ![user](.github/icons/user-light.svg#gh-dark-mode-only)![user](.github/icons/user-dark.svg#gh-light-mode-only) Feenie
   — insights and ideas
 * ![user](.github/icons/user-light.svg#gh-dark-mode-only)![user](.github/icons/user-dark.svg#gh-light-mode-only) Rhea
+  — insights and ideas
+* ![user](.github/icons/user-dark.svg#gh-light-mode-only) [REDACTED] 
+  — dialogue writing, proofreading, insights and ideas
+* ![user](.github/icons/user-dark.svg#gh-light-mode-only) [REDACTED]
   — insights and ideas
