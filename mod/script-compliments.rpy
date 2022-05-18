@@ -13,7 +13,13 @@ init 5 python:
     )
 
 label mshMod_compliment_saved_me:
-    m ""
+    m "[player]...!"
+    m "That means so much to me..." 
+    m "I’m so glad we were able to save each other."
+    m "Thank you for saving me."
+    m "I love you!"
+    m "I wish I could help more with your struggles..." 
+    m "Just know I care and always will."
     return
 
 
