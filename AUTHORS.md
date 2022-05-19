@@ -58,17 +58,22 @@ User:
 * ![reddit](.github/icons/reddit.svg) [u/mayday-mayjay](https://reddit.com/u/mayday-mayjay)
   ![discord](.github/icons/discord.svg) DJChicken#2001 /the DreamScape system
   — dialogue writing, spritepack desigining
+* ![reddit](.github/icons/reddit.svg) [u/History_Variety63](https://reddit.com/u/History_Variety63)
+  — spritepack desigining, insights and ideas
+* ![reddit](/.github/icons/reddit.svg) [u/Fellthesimp](https://reddit.com/u/Fellthesimp)
+  — spritepack desigining, insights and ideas
 * ![discord](.github/icons/discord.svg) lukilak#1046
   — dialogue writing
 * ![reddit](.github/icons/reddit.svg) [u/Raider0401](https://reddit.com/u/Raider0401)
   — dialogue writing
 * ![reddit](/.github/icons/reddit.svg) [u/Tourist_Easy](https://reddit.com/u/Tourist_Easy)
   — dialogue writing
+* ![reddit](/.github/icons/reddit.svg) [u/plushika_2137](https://reddit.com/u/plushika_2137)
+  — dialogue writing
 * ![twitter](.github/icons/twitter.svg) [@L_Oeufmf](https://twitter.com/L_Oeufmf)
   ![discord](.github/icons/discord.svg) L'Oeuf#2455
   — proofreading, insights and ideas
-* ![reddit](.github/icons/reddit.svg) [u/History_Variety63](https://reddit.com/u/History_Variety63)
-  — insights and ideas
+
 
 
 ## Past contributors
