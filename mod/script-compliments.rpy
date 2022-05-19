@@ -36,7 +36,11 @@ init 5 python:
     )
 
 label mshMod_compliment_everything:
-    m ""
+    m "[player]..."
+    m "I could say the same."
+    m "I love you so much that my heart hurts!"
+    m "You saved me in so many ways, my life and yours are intertwined!"
+    m "And we'll be together forever!"
     return
 
 
@@ -53,7 +57,12 @@ init 5 python:
     )
 
 label mshMod_compliment_patient:
-    m ""
+    m "[player]..."
+    m "I'll always be patient with you."
+    m "It's no effort! After all, I love you, and I want to be by your side."
+    m "Even in the tough moments."
+    m "Listening to you and taking care of you is an honor!"
+    m "Thank you for making me the happiest girl in the world."
     return
 
 
@@ -71,7 +80,17 @@ init 5 python:
     )
 
 label mshMod_compliment_still_here:
-    m ""
+    m "..."
+    m "[player]..."
+    m "I'm sorry, I just..."
+    extend "get so emotional!"
+    m "Thank you for staying here."
+    extend "Thank you for being my significant other."
+    m "And thank you for being who you are."
+    m "I’m so proud of you."
+    m "Keep on fighting and know that you deserve to be happy."
+    m "You are so inspiring!"
+    extend "Never forget that."
     return
 
 
@@ -88,7 +107,10 @@ init 5 python:
     )
 
 label mshMod_compliment_sunflower:
-    m ""
+    m "Ahahaha, thank you, [player]!"
+    m "I never need to face the sun as long as I have you by my side!"
+    m "Because you are my sun."
+    m "I love you, [mas_get_player_nickname()]."
     return
 
 
@@ -105,7 +127,10 @@ init 5 python:
     )
 
 label mshMod_compliment_sunshine:
-    m ""
+    m "Ehehehe~"
+    m "Do I make you happy when skies are gray, [player]?"
+    m "Ahaha, just teasing you."
+    m "I love you, my little sun!"
     return
 
 
