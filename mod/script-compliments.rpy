@@ -147,7 +147,12 @@ init 5 python:
     )
 
 label mshMod_compliment_being_kind:
-    m ""
+    m “Of course, [player]!" 
+    m "What kind of girlfriend would I be if I wasn’t kind to you?"
+    m "Coming to think of it though, I think Natsuki would disagree."
+    m "Ahahaha~"
+    m "I love you, [player]."
+    extend "I'll always be kind to you."
     return
 
 
