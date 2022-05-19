@@ -50,10 +50,18 @@ User:
 ## Active contributors
 
 * ![reddit](.github/icons/reddit.svg) [u/my-otter-self](https://reddit.com/u/my-otter-self)
-  ![github](.github/icons/github-light.svg#gh-dark-mode-only)![github](.github/icons/github-dark.svg#gh-light-mode-only) [@my-otter-self](https://github.com/my-otter-self)
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/github-light.svg">
+    <img alt="github" src="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/github-dark.svg">
+  </picture>
+  [@my-otter-self](https://github.com/my-otter-self)
   — project managing, dialogue writing, insight and ideas
 * ![reddit](.github/icons/reddit.svg) [u/dreamscached](https://reddit.com/u/dreamscached)
-  ![github](.github/icons/github-light.svg#gh-dark-mode-only)![github](.github/icons/github-dark.svg#gh-light-mode-only) [@dreamscached](https://github.com/dreamscached)
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/github-light.svg">
+    <img alt="github" src="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/github-dark.svg">
+  </picture>
+  [@dreamscached](https://github.com/dreamscached)
   — programming and repository maintaining
 * ![reddit](.github/icons/reddit.svg) [u/mayday-mayjay](https://reddit.com/u/mayday-mayjay)
   ![discord](.github/icons/discord.svg) [DJChicken#2001](https://discordapp.com/users/270333416346484737) / the DreamScape system
@@ -78,7 +86,11 @@ User:
 
 ## Past contributors
 
-* ![github](.github/icons/github-light.svg#gh-dark-mode-only)![github](.github/icons/github-dark.svg#gh-light-mode-only) [@Paulius1290](https://github.com/Paulius1290)
+* <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/github-light.svg">
+    <img alt="github" src="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/github-dark.svg">
+  </picture>
+  [@Paulius1290](https://github.com/Paulius1290)
   ![discord](.github/icons/discord.svg) [Kitakus#6452](https://discordapp.com/users/360806535196049420)
   — dialogue writing and programming
 * ![reddit](.github/icons/reddit.svg) [u/malicioussoftwaree](https://reddit.com/u/malicioussoftwaree)
@@ -89,13 +101,33 @@ User:
 * ![reddit](.github/icons/reddit.svg) [u/charliethecookie](https://reddit.com/u/charliethecookie)
   — dialogue writing
 * ![discord](.github/icons/discord.svg) [WentPostal#3452](https://discordapp.com/users/659124262115999779)
-  ![user](.github/icons/user-light.svg#gh-dark-mode-only)![user](.github/icons/user-dark.svg#gh-light-mode-only) Nem
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/user-light.svg">
+    <img alt="github" src="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/user-dark.svg">
+  </picture>
+  Nem
   — dialogue writing
-* ![user](.github/icons/user-light.svg#gh-dark-mode-only)![user](.github/icons/user-dark.svg#gh-light-mode-only) Feenie
+* <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/user-light.svg">
+    <img alt="github" src="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/user-dark.svg">
+  </picture>
+  Feenie
   — insights and ideas
-* ![user](.github/icons/user-light.svg#gh-dark-mode-only)![user](.github/icons/user-dark.svg#gh-light-mode-only) Rhea
+* <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/user-light.svg">
+    <img alt="github" src="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/user-dark.svg">
+  </picture>
+  Rhea
   — insights and ideas
-* ![user](.github/icons/user-light.svg#gh-dark-mode-only)![user](.github/icons/user-dark.svg#gh-light-mode-only) [REDACTED]
+* <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/user-light.svg">
+    <img alt="github" src="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/user-dark.svg">
+  </picture>
+  [REDACTED]
   — dialogue writing, proofreading, insights and ideas
-* ![user](.github/icons/user-light.svg#gh-dark-mode-only)![user](.github/icons/user-dark.svg#gh-light-mode-only) [REDACTED]
+* <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/user-light.svg">
+    <img alt="github" src="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/user-dark.svg">
+  </picture>
+  [REDACTED]
   — insights and ideas
