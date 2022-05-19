@@ -40,7 +40,7 @@ Twitter:
 
 Discord:
 
-    ![discord](.github/icons/discord.svg) USERNAME
+    ![discord](.github/icons/discord.svg) [USERNAME](https://discordapp.com/users/ID)
 
 User:
 
@@ -56,7 +56,7 @@ User:
   ![github](.github/icons/github-light.svg#gh-dark-mode-only)![github](.github/icons/github-dark.svg#gh-light-mode-only) [@dreamscached](https://github.com/dreamscached)
   — programming and repository maintaining
 * ![reddit](.github/icons/reddit.svg) [u/mayday-mayjay](https://reddit.com/u/mayday-mayjay)
-  ![discord](.github/icons/discord.svg) [DJChicken#2001](https://discordapp.com/users/270333416346484737) / the DreamScape system 
+  ![discord](.github/icons/discord.svg) [DJChicken#2001](https://discordapp.com/users/270333416346484737) / the DreamScape system
   — dialogue writing, spritepack desigining
 * ![reddit](.github/icons/reddit.svg) [u/History_Variety63](https://reddit.com/u/History_Variety63)
   — spritepack desigining, insights and ideas
@@ -95,7 +95,7 @@ User:
   — insights and ideas
 * ![user](.github/icons/user-light.svg#gh-dark-mode-only)![user](.github/icons/user-dark.svg#gh-light-mode-only) Rhea
   — insights and ideas
-* ![user](.github/icons/user-light.svg#gh-dark-mode-only)![user](.github/icons/user-dark.svg#gh-light-mode-only) [REDACTED] 
+* ![user](.github/icons/user-light.svg#gh-dark-mode-only)![user](.github/icons/user-dark.svg#gh-light-mode-only) [REDACTED]
   — dialogue writing, proofreading, insights and ideas
 * ![user](.github/icons/user-light.svg#gh-dark-mode-only)![user](.github/icons/user-dark.svg#gh-light-mode-only) [REDACTED]
   — insights and ideas
