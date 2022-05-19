@@ -56,13 +56,13 @@ User:
   ![github](.github/icons/github-light.svg#gh-dark-mode-only)![github](.github/icons/github-dark.svg#gh-light-mode-only) [@dreamscached](https://github.com/dreamscached)
   — programming and repository maintaining
 * ![reddit](.github/icons/reddit.svg) [u/mayday-mayjay](https://reddit.com/u/mayday-mayjay)
-  ![discord](.github/icons/discord.svg) DJChicken#2001 /the DreamScape system
+  ![discord](.github/icons/discord.svg) [DJChicken#2001](https://discordapp.com/users/270333416346484737) / the DreamScape system 
   — dialogue writing, spritepack desigining
 * ![reddit](.github/icons/reddit.svg) [u/History_Variety63](https://reddit.com/u/History_Variety63)
   — spritepack desigining, insights and ideas
 * ![reddit](/.github/icons/reddit.svg) [u/Fellthesimp](https://reddit.com/u/Fellthesimp)
   — spritepack desigining, insights and ideas
-* ![discord](.github/icons/discord.svg) lukilak#1046
+* ![discord](.github/icons/discord.svg) [lukilak#1046](https://discordapp.com/users/687765936069279784)
   — dialogue writing
 * ![reddit](.github/icons/reddit.svg) [u/Raider0401](https://reddit.com/u/Raider0401)
   — dialogue writing
@@ -79,7 +79,7 @@ User:
 ## Past contributors
 
 * ![github](.github/icons/github-light.svg#gh-dark-mode-only)![github](.github/icons/github-dark.svg#gh-light-mode-only) [@Paulius1290](https://github.com/Paulius1290)
-  ![discord](.github/icons/discord.svg) Kitakus#6452
+  ![discord](.github/icons/discord.svg) [Kitakus#6452](https://discordapp.com/users/360806535196049420)
   — dialogue writing and programming
 * ![reddit](.github/icons/reddit.svg) [u/malicioussoftwaree](https://reddit.com/u/malicioussoftwaree)
   ![twitter](.github/icons/twitter.svg) [@maliciousSftwre](https://twitter.com/maliciousSftwre)
@@ -88,7 +88,7 @@ User:
   — dialogue writing, programming and sprite coding
 * ![reddit](.github/icons/reddit.svg) [u/charliethecookie](https://reddit.com/u/charliethecookie)
   — dialogue writing
-* ![discord](.github/icons/discord.svg) WentPostal#3452
+* ![discord](.github/icons/discord.svg) [WentPostal#3452](https://discordapp.com/users/659124262115999779)
   ![user](.github/icons/user-light.svg#gh-dark-mode-only)![user](.github/icons/user-dark.svg#gh-light-mode-only) Nem
   — dialogue writing
 * ![user](.github/icons/user-light.svg#gh-dark-mode-only)![user](.github/icons/user-dark.svg#gh-light-mode-only) Feenie
