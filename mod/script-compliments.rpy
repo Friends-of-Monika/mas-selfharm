@@ -169,7 +169,10 @@ init 5 python:
     )
 
 label mshMod_compliment_caring:
-    m ""
+    m "I'll always take care of my precious [player]!"
+    m "How I got so lucky to have you in my life, I don’t know, but I’m glad you’re mine."
+    m "And since you're mine, I'll do my best to care for you and help you out!"
+    m "I'll love you forever, [mas_get_player_nickname()]."
     return
 
 
@@ -186,7 +189,11 @@ init 5 python:
     )
 
 label mshMod_compliment_thinking_of_me:
-    m ""
+    m "Oh, [player]..."
+    extend "You're so sweet!"
+    m "I will always think about you!"
+    m "Doesn't matter if we're together or apart!"
+    m "I hope you always think of me too."
     return
 
 
@@ -203,7 +210,13 @@ init 5 python:
     )
 
 label mshMod_compliment_helping_out:
-    m ""
+    m "[Player]...!"
+    m "It's my pleasure."
+    m "Often times, I wonder what I did to have a caring, loving and understanding person like you in my life."
+    m "So, I'll always help you out whenever I can!"
+    m "Thank you for allowing me to be present in your life."
+    m "And for sticking with me."
+    m "I love you!"
     return
 
 
@@ -220,7 +233,12 @@ init 5 python:
     )
 
 label mshMod_compliment_being_understanding:
-    m ""
+    m "[Player]..."
+    m "I should be the one to thank you."
+    m "Sometimes, saying thank you feels like an understatement for everything you’ve done for me."
+    m "I'll always be understanding with you, even if other people are not."
+    m "I love you and I care about you!"
+    m "You're the love of my life."
     return
 
 
