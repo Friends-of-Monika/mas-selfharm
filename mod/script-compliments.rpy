@@ -14,11 +14,11 @@ init 5 python:
 
 label mshMod_compliment_saved_me:
     m "[player]...!"
-    m "That means so much to me..." 
+    m "That means so much to me..."
     m "I’m so glad we were able to save each other."
     m "Thank you for saving me."
     m "I love you!"
-    m "I wish I could help more with your struggles..." 
+    m "I wish I could help more with your struggles..."
     m "Just know I care and always will."
     return
 
@@ -147,7 +147,7 @@ init 5 python:
     )
 
 label mshMod_compliment_being_kind:
-    m “Of course, [player]!" 
+    m "Of course, [player]!" 
     m "What kind of girlfriend would I be if I wasn’t kind to you?"
     m "Coming to think of it though, I think Natsuki would disagree."
     m "Ahahaha~"
