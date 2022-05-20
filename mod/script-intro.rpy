@@ -7,14 +7,14 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_selfharm_intro",
+            eventlabel="mshMod_meta_selfharm_intro",
             aff_range=(mas_aff.NORMAL, None),
-            conditional="not seen_event('mshMod_selfharm_intro')",
+            conditional="not seen_event('mshMod_meta_selfharm_intro')",
             action=EV_ACT_RANDOM
         )
     )
 
-label mshMod_selfharm_intro:
+label mshMod_meta_selfharm_intro:
     m "Hey, [player]?"
     m "I know it might be an uncomfortable topic, but I have to ask..."
 
@@ -81,8 +81,8 @@ label mshMod_selfharm_intro:
                 m "Do you have the time to listen right now?{fast}"
 
                 "Yes":
-                    $ mas_unlockEVL("mshMod_selfharm_more", "EVE")
-                    $ pushEvent("mshMod_selfharm_more", skipeval=True)
+                    $ mas_unlockEVL("mshMod_meta_selfharm_more", "EVE")
+                    $ pushEvent("mshMod_meta_selfharm_more", skipeval=True)
 
                 "No":
                     m "Oh..."
@@ -99,10 +99,10 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_selfharm_more",
+            eventlabel="mshMod_meta_selfharm_more",
             category=["self-Harm"],
             prompt="I want to learn more about self harm.",
-            conditional="seen_event('mshMod_selfharm_intro')",
+            conditional="seen_event('mshMod_meta_selfharm_intro')",
             action=EV_ACT_UNLOCK,
             aff_range=(mas_aff.NORMAL, None),
             pool=True,
@@ -110,7 +110,7 @@ init 5 python:
         )
     )
 
-label mshMod_selfharm_more:
+label mshMod_meta_selfharm_more:
     m "Great!"
     m "Knowing more about self-harm is really useful."
     m "You could help someone who is struggling with it someday!"
