@@ -9,8 +9,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_meta_selfharm_intro",
             aff_range=(mas_aff.NORMAL, None),
-            conditional="not seen_event('mshMod_meta_selfharm_intro')",
-            action=EV_ACT_RANDOM
+            random=True
         )
     )
 
@@ -75,13 +74,14 @@ label mshMod_meta_selfharm_intro:
             m "You know how much I care about you! But if you don't feel like talking about it, I'll understand!"
             m "It's quite a varied topic so it's going to take a while."
 
+            $ mas_unlockEVL("mshMod_meta_selfharm_more", "EVE")
+
             m "Do you have the time to listen right now?{nw}"
             $ _history_list.pop()
             menu:
                 m "Do you have the time to listen right now?{fast}"
 
                 "Yes":
-                    $ mas_unlockEVL("mshMod_meta_selfharm_more", "EVE")
                     $ pushEvent("mshMod_meta_selfharm_more", skipeval=True)
 
                 "No":
@@ -90,9 +90,9 @@ label mshMod_meta_selfharm_intro:
                     m "Remember that I'll never leave you. After all, I promised that I'll take care of you."
                     m "If you ever feel like you want to talk about this topic, just ask!"
                     m "I love you, [mas_get_player_nickname()]."
-                    return "derandom|love"
+                    return "love|derandom|no_unlock"
 
-    return "derandom"
+    return "derandom|no_unlock"
 
 
 init 5 python:
@@ -102,9 +102,6 @@ init 5 python:
             eventlabel="mshMod_meta_selfharm_more",
             category=["self-Harm"],
             prompt="I want to learn more about self harm.",
-            conditional="seen_event('mshMod_meta_selfharm_intro')",
-            action=EV_ACT_UNLOCK,
-            aff_range=(mas_aff.NORMAL, None),
             pool=True,
             unlocked=False
         )

@@ -8,7 +8,9 @@ init 5 python:
             prompt="How long have I been sober for?",
             category=["self-Harm"],
             conditional="store.mshMod_sober_streak.isOnStreak()",
-            action=EV_ACT_POOL,
+            action=EV_ACT_UNLOCK,
+            pool=True,
+            unlocked=False,
             rules={"no_unlock": None}
         )
     )
@@ -36,9 +38,10 @@ init 5 python:
             eventlabel="mshMod_promise",
             category=["self-Harm"],
             prompt="I promise...",
-            conditional="not store.mshMod_sober_streak.isOnStreak() and persistent._msh_mod_pm_did_selfharm",
+            conditional="persistent._msh_mod_pm_did_selfharm and not store.mshMod_sober_streak.isOnStreak()",
             action=EV_ACT_UNLOCK,
             pool=True,
+            unlocked=False,
             rules={"no_unlock": None}
         )
     )
@@ -58,7 +61,7 @@ label mshMod_promise:
     python:
         # Begin streak and hide this event from the pool.
         # mshMod_relapse and mshMod_sober_check will pop up shortly afterwards.
-        mshMod_beginStreak()
+        store.mshMod_sober_streak.beginStreak()
         mas_lockEVL("mshMod_promise", "EVE")
 
     return "love"
@@ -74,6 +77,7 @@ init 5 python:
             conditional="store.mshMod_sober_streak.isOnStreak()",
             action=EV_ACT_UNLOCK,
             pool=True,
+            unlocked=False,
             rules={"no_unlock": None}
         )
     )
@@ -95,9 +99,9 @@ label mshMod_relapse:
     python:
         # End streak and hide this event from the pool. Also hide check topic since we're no longer on streak.
         # mshMod_promise will pop up shortly afterwards.
-        mshMod_endStreak()
-        mshMod_lockEVL("mshMod_relapse", "EVE")
-        mshMod_lockEVL("mshMod_sober_check", "EVE")
+        store.mshMod_sober_streak.endStreak()
+        mas_lockEVL("mshMod_relapse", "EVE")
+        mas_lockEVL("mshMod_sober_check", "EVE")
 
     return
 
@@ -187,6 +191,7 @@ label mshMod_milestone_1m:
     m "I've already told you I won't blame you if you do relapse. It's extremely tempting, and I know it must be hard for you."
     m "I'm just so proud you've made it so far."
     m "I love you, [mas_get_player_nickname()]. Don't forget that~"
+    return "love"
 
 
 init 5 python:
@@ -205,6 +210,7 @@ label mshMod_milestone_3m:
     m "You've been doing so well! I'm so proud of you."
     m "It's been a bit, so I'll mark this on the calendar for you!"
     m "Keep going, [player]. You've been so strong."
+    return "love"
 
 
 init 5 python:
@@ -224,6 +230,7 @@ label mshMod_milestone_6m:
     m "That's a long time!"
     m "It may not seem like much in the grand scheme of things, but it's still a big acomplishment."
     m "I love you so much! Thank you for staying safe."
+    return "love"
 
 
 init 5 python:
@@ -244,6 +251,7 @@ label mshMod_milestone_1y:
     m "I hope you know how much this affects not only yourself, but me as well. Your friends, your family."
     m "This is a wonderful feat."
     m "I love you so, so much."
+    return "love"
 
 
 init 5 python:
@@ -263,6 +271,7 @@ label mshMod_milestone_2y:
     m "This is an incredible feat. Keep it up!"
     m "You deserve to be happy. Never forget that, and never let anyone tell you otherwise!"
     m "I love you so much."
+    return "love"
 
 
 init 5 python:
@@ -277,10 +286,11 @@ init 5 python:
     )
 
 label mshMod_milestone_3y:
-m "[player], I have some news for you."
-m "The day of your 3 year sobriety mark from self-harm has finally arrived!"
-m "I'm so happy to see you taking care of yourself."
-m "Keep on fighting! I'm so proud of you!"
+    m "[player], I have some news for you."
+    m "The day of your 3 year sobriety mark from self-harm has finally arrived!"
+    m "I'm so happy to see you taking care of yourself."
+    m "Keep on fighting! I'm so proud of you!"
+    return
 
 
 init 5 python:
