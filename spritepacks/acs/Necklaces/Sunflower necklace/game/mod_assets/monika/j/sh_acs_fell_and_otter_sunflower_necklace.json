@@ -1,0 +1,30 @@
+{
+    "__author": "MAS SH submod team // fell and otter",
+    "version": 3,
+    "type": 0,
+    "name": "sh_acs_fell_and_otter_sunflower_necklace",
+    "img_sit": "sh_mysticcg_sunflower_necklace",
+    "pose_map": {
+        "default": "0",
+        "l_default": "5"
+    },
+    "rec_layer": 8,
+    "acs_type": "necklace",
+    "stay_on_start": true,
+    "priority": 8,
+    "dlg_desc": "necklace",
+    "dlg_plural": false,
+    "select_info": {
+        "display_name": "Sunflower Necklace",
+        "thumb": "sh_sunflower_necklace",
+        "group": "necklace",
+        "select_dlg": [
+            "You're my sunflower, [player]!"
+        ]
+    },
+    "giftname": "sh_sunflowernecklace",
+    "arm_split": {
+        "default": "0",
+        "use_reg_for_l": true
+    }
+}
