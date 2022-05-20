@@ -5,6 +5,7 @@ init 5 python in mas_bookmarks_derand:
     label_prefix_map["mshMod_topic_"] = label_prefix_map["monika_"]
 
 
+#sunny day
 init 5 python:
     addEvent(
         Event(
@@ -26,9 +27,10 @@ label mshMod_topic_sunny_day:
     m 1wub "Maybe bring a book with you so you can relax even more."
     m 1dua "Enjoying literature in the nature would surely relax me..."
     m 1eka "I hope this works for you, too."
-    return "derandom"
+    return
 
 
+#self harm awareness day
 init 5 python:
     # P.S. 'SIAD' is 'Self Injury Awareness Day', this is not a typo.
     _mshMod_event_siad_date = datetime.date(datetime.date.today().year, 3, 1)
@@ -77,6 +79,7 @@ label mshMod_topic_awareness_day:
     return "love"
 
 
+#semicolon project
 init 5 python:
     addEvent(
         Event(
@@ -110,6 +113,7 @@ label mshMod_topic_semicolon_project:
     return
 
 
+#butterfly project
 init 5 python:
     addEvent(
         Event(
@@ -141,6 +145,7 @@ label mshMod_topic_butterfly_project:
     return
 
 
+#self harm experience
 init 5 python:
     addEvent(
         Event(
@@ -185,6 +190,7 @@ label mshMod_topic_selfharm_random_thoughts:
     return
 
 
+#monika sad reminiscing players self harm
 init 5 python:
     addEvent(
         Event(
@@ -224,9 +230,8 @@ label mshMod_topic_monika_is_sad:
     return "love|derandom|no_unlock"
 
 
-
 # Depression avoiding routine events
-
+#1
 init 5 python:
     addEvent(
         Event(
@@ -246,14 +251,14 @@ label mshMod_topic_morning_routine:
     m "I think many figure that, 'Well, because I just woke up I'm always going to feel sluggish in the morning, there's nothing I could do about that.'"
     m "For some, that mindset makes it very hard to want to get up in the morning and face the day..."
     m "But it doesn't have to be that way, there are ways to make getting up in the morning less harsh, and more energizing!"
-    m "My first tip is going to be the obvious one but..."
+    m "My first tip is going to be the obvious one but... "
     extend "start getting into a nice sleeping rhythm! A big reason we can feel so bad in the morning is having an alarm pull you out of a deep sleep, or just not resting enough at all!"
     m "Find a time to go to sleep that let's you {i}comfortably{/i} wake up around the time you need to be up for the day, and you'll feel a big difference already!"
     m "Next tip, if you have alarms, set your alarm a little further back then you usually do, or at least make sure you're giving yourself enough time so you aren't rushing out the doors every morning!"
-    m "Now with that extra time, use it to get some quiet time in for yourself and actually {i}wake up{/i} for the day."
+    m "Now with that extra time, use it to get some quiet time in for yourself and actually {i}wake up{/i} for the day. "
     extend "Maybe do a little meditation- or pray,if you'religious... Make breakfast, read books, or even write down your plans for day."
     m "As long as it's something that {i}you{/i} want to do and makes you happy, go for it!"
-    m "Just... try not to go online during your morning time."
+    m "Just... try not to go online during your morning time. "
     extend "With how chaotic the world and internet can be, going online might influence your mood for the day if you see something distressing or weird."
     m "Instead, let the mornings be {i}you{/i} time, where you get to decide what to do and how to feel, okay?"
     m "And hey, I wouldn't mind being a part of your morning routine too, if you need some extra motivation, [mas_get_player_nickname()]."
@@ -261,7 +266,7 @@ label mshMod_topic_morning_routine:
     m "I hope these tips are helpful to you, [player]!"
     return
 
-
+#2
 init 5 python:
     addEvent(
         Event(
@@ -280,15 +285,15 @@ label mshMod_topic_excercises:
     m "But the pay off of being clean, dressed, and ready for wherever the day may take you, can make it all the more worthwhile!"
     m "Getting into consistent routine with it can make it less energy-draining too, since then you won't have to do a full scrub down to get clean for the day!"
     m "Exercise on the other hand, can be a little harder for people to want to get into routine with."
-    extend " When people think 'exercise', they might think hundreds of pushups, and 5 mile runs. And no one wants to do that right after they've woken up!"
-    m "But a nice, moderate amount of exercise in the morning can help in more ways than one."
+    m "When people think 'exercise', they might think hundreds of pushups, and 5 mile runs. And no one wants to do that right after they've woken up!"
+    m "But a nice, moderate amount of exercise in the morning can help in more ways than one. "
     extend "It can clear up brain fog, helps you focus, and can help you release some pent up emotions!"
     m "Some simple exercises I would recommend are yoga stretches, light jogging or walking, or even just doing certain big chores around the house can count as exercise!"
     m "Then you can kill two birds with one stone, ehehe!"
     m "You know I looooove me some exercise! Ahaha~"
     return
 
-
+#3
 init 5 python:
     addEvent(
         Event(
@@ -311,8 +316,9 @@ label mshMod_topic_morning_excercises:
     m "But there are tons of other ways to have exercise be apart of your routine too!"
     m "Gardening, cleaning, volunteering to help with big jobs, and many more!"
     m "So try to find something you already do in your day-to-day, and see if you can add a little extra exercise to it!"
+    return
 
-
+#4
 init 5 python:
     addEvent(
         Event(
@@ -333,7 +339,7 @@ label mshMod_topic_going_outside:
     m "I know I love to look at photos of places I'd love to travel to with you~"
     return
 
-
+#5
 init 5 python:
     addEvent(
         Event(
@@ -366,7 +372,7 @@ label mshMod_topic_evening_routine:
     m "Make sure to say goodnight, okay?"
     return
 
-
+#6
 init 5 python:
     addEvent(
         Event(
@@ -386,18 +392,20 @@ label mshMod_topic_untried_hobbies:
     m "Well, if you have some free time, maybe instead of watching a show or playing a game, you could try and pick up an old hobby?!"
     m "If it's something like knitting, scrapbooking, or something easy to do while sitting down, feel free to do that while we talk or spend time together!"
     m "If it's something like gardening, baking, or something where you need to move around a lot, then I understand if you need to say goodbye for a while."
-    extend "I'd be fine with not seeing you for a bit if you were doing something that makes you happy!"
+    m "I'd be fine with not seeing you for a bit if you were doing something that makes you happy!"
     m "Your happiness is my priority, after all."
     m "During these times, you shouldn't forget to check on your friends."
     m "Send them a text, asking how they've been or what they're up to. Or maybe update them on your latest project!"
-    m "If you contact them on social media, try not to get sucked in, okay?"
+    m "If you contact them on social media, try not to get sucked in, okay? "
     extend "I don't want you to doomscroll, [mas_get_player_nickname()]."
     m "Maybe you could plan to meet with your friends in person! Getting outside, even if it isn't the best weather, can be good for you."
     m "Just take these tips into consideration, alright?"
     m "And remember... "
     extend "I love you, [player]."
-    return "love" # TODO: no prompt and categories... derandom and no_unlock?
+    return "love"
 
+
+#monarch butterfly
 init 5 python:
     addEvent(
         Event(
