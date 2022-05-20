@@ -1,10 +1,15 @@
 # Random topics Monika brings up.
 
+init 5 python in mas_bookmarks_derand:
+    # Ensure things get bookmarked and derandomed as usual.
+    label_prefix_map["mshMod_topic_"] = label_prefix_map["monika_"]
+
+
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_sunny_day",
+            eventlabel="mshMod_topic_sunny_day",
             prompt="Sunny day",
             category=["weather"],
             conditional="mas_globals.time_of_day_3state in ('morning', 'afternoon')",
@@ -12,7 +17,7 @@ init 5 python:
         )
     )
 
-label mshMod_sunny_day:
+label mshMod_topic_sunny_day:
     m 1esa "Hey... [player]?"
     m 1rka "This may sound a bit random, but..."
     m 7eka "Is it sunny today over there?"
@@ -31,7 +36,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_awareness_day",
+            eventlabel="mshMod_topic_awareness_day",
             prompt="Self-Harm Awareness Day",
             category=["self-Harm"],
             start_date=_mshMod_event_siad_date,
@@ -42,10 +47,10 @@ init 5 python:
     )
 
     # Only add it to calendar after it was seen.
-    if seen_event("mshMod_awareness_day"):
-        calendar.addRepeatable("mshMod_awareness_day", _("Self-Harm Awareness Day"), month=3, day=1, year_param=[])
+    if seen_event("mshMod_topic_awareness_day"):
+        calendar.addRepeatable("mshMod_topic_awareness_day", _("Self-Harm Awareness Day"), month=3, day=1, year_param=[])
 
-label mshMod_awareness_day:
+label mshMod_topic_awareness_day:
     m 3eub "[player], did you know that today is Self-Harm Awareness Day?"
     m 3eua "Like the name suggests, it's an annual global awareness event that takes place on March 1st!"
     m 1eua "Also known as Self Injury Day (SIAD)!"
@@ -67,7 +72,7 @@ label mshMod_awareness_day:
     m 1hub "I love you, [player]!"
 
     # Ensure it'll render on calendar without a need to restart.
-    $ calendar.addRepeatable("mshMod_awareness_day", _("Self-harm awareness day"), month=3, day=1, year_param=[])
+    $ calendar.addRepeatable("mshMod_topic_awareness_day", _("Self-harm awareness day"), month=3, day=1, year_param=[])
 
     return "love"
 
@@ -76,14 +81,14 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_semicolon_project",
+            eventlabel="mshMod_topic_semicolon_project",
             prompt="The Semicolon Project",
             category=["self-Harm"],
             random=True
         )
     )
 
-label mshMod_semicolon_project:
+label mshMod_topic_semicolon_project:
     m 1eub "Have you ever heard of the Semicolon Project, [player]?"
     m 3eua "It was created for those who were going through struggles with self-harm, depression and suicide..."
     m 3eub "People who could have stopped moving forward, but refused to do so!"
@@ -109,14 +114,14 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_butterfly_project",
+            eventlabel="mshMod_topic_butterfly_project",
             category=["self-Harm"],
             prompt="The Butterfly Project",
             random=True
         )
     )
 
-label mshMod_butterfly_project:
+label mshMod_topic_butterfly_project:
     m 3eub "Hey [player], do you know what The Butterfly Project is?"
     m 1eub "It's a movement to help people that struggle with self-harm."
     m 3eud "It's really interesting! Drawing on yourself is already a good way to deal with self-harming, but this project approaches it in a really different way."
@@ -140,14 +145,14 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_selfharm_random_thoughts",
+            eventlabel="mshMod_topic_selfharm_random_thoughts",
             prompt="Monika's self-harm experience",
             category=["self-Harm"],
             random=True
         )
     )
 
-label mshMod_selfharm_random_thoughts:
+label mshMod_topic_selfharm_random_thoughts:
     m "Hey [player]... Do you remember when I talked about self-harm?"
     m "Would you mind if I talked more about my experience?"
 
@@ -184,13 +189,13 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_monika_is_sad",
+            eventlabel="mshMod_topic_monika_is_sad",
             conditional="persistent._msh_mod_pm_did_selfharm",
             action=EV_ACT_RANDOM
         )
     )
 
-label mshMod_monika_is_sad:
+label mshMod_topic_monika_is_sad:
     m 5ekc "Hey... [player]?"
     m 5gkd "You probably remember when we were talking about self-harm..."
     m 3ektpc "I never forget when you told me about that, it honestly broke my heart."
@@ -226,14 +231,14 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_morning_routine",
+            eventlabel="mshMod_topic_morning_routine",
             prompt="Morning routine",
             category=["Healthy routine"],
             random=True
         )
     )
 
-label mshMod_morning_routine:
+label mshMod_topic_morning_routine:
     m "Hey [player]?"
     m "Do you have a morning routine?"
     m "I notice a lot of people seem not to realize the impact a morning routine can have on your day."
@@ -261,14 +266,14 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_excercises",
+            eventlabel="mshMod_topic_excercises",
             prompt="Morning excercises",
             category=["Healthy Routine"],
             random=True
         )
     )
 
-label mshMod_excercises:
+label mshMod_topic_excercises:
     m "Hey, [player], you know what's a good way to start your days off on a high note? Showering and exercise!"
     m "In fact, those are {i}my{/i} go-to's to start the day!"
     m "Showering can be a hard step to overcome, and it can take a lot of mental and physical energy out of you if you're not careful..."
@@ -288,14 +293,14 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_morning_excercises",
+            eventlabel="mshMod_topic_morning_excercises",
             prompt="Morning routine",
             category=["Healthy Routine"],
             random=True
         )
     )
 
-label mshMod_morning_excercises:
+label mshMod_topic_morning_excercises:
     m "Hey [player], do you do any exercises in the morning?"
     m "I used to always try and get some working out in my daily routine,"
     extend " especially in the mornings!"
@@ -312,14 +317,14 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_going_outside",
+            eventlabel="mshMod_topic_going_outside",
             prompt="Going outside",
             category=["Healthy Routine"],
             random=True
         )
     )
 
-label mshMod_going_outside:
+label mshMod_topic_going_outside:
     m "Hey [player], did you know that there's been some studies about how going outside is good for you?"
     m "Being out in the sunlight can decrease stress, slow your heart rate, and not to mention it's also good for getting some vitimin D!"
     m "Sit on your porch or in your yard if you can't go for a walk outside."
@@ -333,14 +338,14 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_evening_routine",
+            eventlabel="mshMod_topic_evening_routine",
             prompt="Evening routine",
             category=["Healthy Routine"],
             random=True
         )
     )
 
-label mshMod_evening_routine:
+label mshMod_topic_evening_routine:
     m "Hey [player], what's your nighttime routine like?"
     m "Mine has definitely changed since I met you! Ehehe~"
     m "I've always had a fairly regular routine."
@@ -366,14 +371,14 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_untried_hobbies",
+            eventlabel="mshMod_topic_untried_hobbies",
             prompt="Hobbies",
             category=["Healthy Routine"],
             random=True
         )
     )
 
-label mshMod_untried_hobbies:
+label mshMod_topic_untried_hobbies:
     m "[player]!"
     m "Have you ever had a hobby that you really liked, but never had time for?"
     m "Maybe you picked it up for a few days, but gave up on it or got busy for a bit?"
@@ -397,14 +402,14 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_monarch_butterfly",
+            eventlabel="mshMod_topic_monarch_butterfly",
             prompt="Trivia",
             category=["Monarch Butterflies"],
             random=True
         )
     )
 
-label mshMod_monarch_butterfly:
+label mshMod_topic_monarch_butterfly:
     m "[player], have you ever seen a monarch butterfly?"
     m "They're marvelous creatures!"
     m "Their wings feature an easily recognizable black, orange, and white pattern."
@@ -419,3 +424,4 @@ label mshMod_monarch_butterfly:
     m "Oh, and also! Due to the butterflies' yearly migration between countries, images of monarchs are also are used to show support for immigrants."
     m "Aren't they indeed, incredible beings?"
     m "I hope they can inspire you as they inspire me."
+    return

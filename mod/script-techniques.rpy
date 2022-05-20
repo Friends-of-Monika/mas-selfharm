@@ -1233,7 +1233,7 @@ label mshMod_technique_superheroes:
     m "You can try organizing them by color scheme, since many of them tend to follow the same color palletes."
     m "Have you noticed we have many red or blue based superheroes and many purple or black?"
     m "Wonder why that is?"
-    extend "Hmmmmmm..." 
+    extend "Hmmmmmm..."
     m "Anyway!"
     return
 
@@ -1269,7 +1269,7 @@ init 5 python:
     )
 
 label mshMod_technique_playlist:
-    m "Can you name the songs that you listened to the most this week?" 
+    m "Can you name the songs that you listened to the most this week?"
     m "Or this month?"
     m "Is there a specific artist or band that made an special appearance on your playlist?"
     m "By the way, what's your favorite song at the moment?"
@@ -1774,7 +1774,7 @@ label mshMod_technique_brushes:
     m "And wash away your pain!"
     return
 
-#73 
+#73
 init 5 python:
     addEvent(
         Event(
@@ -1817,13 +1817,13 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_hug_theory",
+            eventlabel="mshMod_technique_hug_theory",
             prompt="Hugs",
             unlocked=False
         )
     )
 
-label mshMod_hug_theory:
+label mshMod_technique_hug_theory:
     m "Think of three people who give the best hugs and see if you can be with them."
     m "If that's not the case, think of people who could give you their warmest smiles."
     m "There's also the hug theory..."
@@ -2018,7 +2018,7 @@ label mshMod_happy_box:
     m "Let yourself take in the good memories you feel and the closeness you feel to the other people who were involved in making each item special to you!"
     return
 
-#84 
+#84
 init 5 python:
     addEvent(
         Event(
@@ -2040,7 +2040,7 @@ label mshMod_clothes:
     m "Maybe you can even update your social media profile pictures."
     return
 
-#85 
+#85
 init 5 python:
     addEvent(
         Event(

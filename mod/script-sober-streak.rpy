@@ -8,7 +8,8 @@ init 5 python:
             prompt="How long have I been sober for?",
             category=["self-Harm"],
             conditional="store.mshMod_sober_streak.isOnStreak()",
-            action=EV_ACT_POOL
+            action=EV_ACT_POOL,
+            rules={"no_unlock": None}
         )
     )
 
@@ -17,12 +18,11 @@ label mshMod_sober_check:
         duration = store.mshMod_sober_streak.getStreakDuration()
         days = "day" if duration == 1 else "days"
 
+    m "You've been sober for [duration] [days] now, [player]."
     if duration < 3:
-        m "You've been sober for [duration] [days] now, [player]."
         m "I'm so proud of you for making the promise!"
         m "This is the start of something really beautiful."
     else:
-        m "You've been sober for [duration] [days] now, [player]."
         m "I'm so proud of you! Keep on fighting!"
         m "I'm so happy to see you taking care of yourself."
 
@@ -37,8 +37,9 @@ init 5 python:
             category=["self-Harm"],
             prompt="I promise...",
             conditional="not store.mshMod_sober_streak.isOnStreak() and persistent._msh_mod_pm_did_selfharm",
-            action=EV_ACT_POOL,
-            unlocked=True
+            action=EV_ACT_UNLOCK,
+            pool=True,
+            rules={"no_unlock": None}
         )
     )
 
@@ -71,8 +72,9 @@ init 5 python:
             category=["self-Harm"],
             prompt="I relapsed...",
             conditional="store.mshMod_sober_streak.isOnStreak()",
-            action=EV_ACT_POOL,
-            unlocked=True
+            action=EV_ACT_UNLOCK,
+            pool=True,
+            rules={"no_unlock": None}
         )
     )
 
