@@ -20,12 +20,11 @@ label mshMod_medication_reminder_intro:
     m "So I thought it would be nice if I could help you remember to take your medication correctly."
     m "After all, your health and safety is my number one priority!"
     m "So, [player], do you like that idea?"
-    m "Do you take any medication that you would like me to remind you for?"
-    
-    m "Okay! What time do you want me to remind you about it?{nw}"
+
+    m "Do you take any medication that you would like me to remind you for?{nw}"
     $ _history_list.pop()
     menu:
-        m "Okay! What time do you want me to remind you about it?{fast}"
+        m "Do you take any medication that you would like me to remind you for?{fast}"
 
         "Yes!":
             m "Okay! What time do you want me to remind you about it?{nw}"
