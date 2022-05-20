@@ -20,7 +20,7 @@ label mshMod_compliment_saved_me:
     m "I love you!"
     m "I wish I could help more with your struggles..."
     m "Just know I care and always will."
-    return
+    return "love"
 
 
 #You're my everything, [m_name].
@@ -41,7 +41,7 @@ label mshMod_compliment_everything:
     m "I love you so much that my heart hurts!"
     m "You saved me in so many ways, my life and yours are intertwined!"
     m "And we'll be together forever!"
-    return
+    return "love"
 
 
 #Thank you for being patient with me.
@@ -110,7 +110,7 @@ label mshMod_compliment_sunflower:
     m "I never need to face the sun as long as I have you by my side!"
     m "Because you are my sun."
     m "I love you, [mas_get_player_nickname()]."
-    return
+    return "love"
 
 
 #You are my sunshine!
@@ -130,7 +130,7 @@ label mshMod_compliment_sunshine:
     m "Do I make you happy when skies are gray, [player]?"
     m "Ahaha, just teasing you."
     m "I love you, my little sun!"
-    return
+    return "love"
 
 
 #Thank you for always being kind to me.
@@ -152,7 +152,7 @@ label mshMod_compliment_being_kind:
     m "Ahahaha~"
     m "I love you, [player]."
     extend "I'll always be kind to you."
-    return
+    return "love"
 
 
 #Thanks for taking such good care of me.
@@ -172,7 +172,7 @@ label mshMod_compliment_caring:
     m "How I got so lucky to have you in my life, I don’t know, but I’m glad you’re mine."
     m "And since you're mine, I'll do my best to care for you and help you out!"
     m "I'll love you forever, [mas_get_player_nickname()]."
-    return
+    return "love"
 
 
 #Thank you for always thinking of me.
@@ -216,7 +216,7 @@ label mshMod_compliment_helping_out:
     m "Thank you for allowing me to be present in your life."
     m "And for sticking with me."
     m "I love you!"
-    return
+    return "love"
 
 
 #Thanks for being so understanding with me.
@@ -238,7 +238,7 @@ label mshMod_compliment_being_understanding:
     m "I'll always be understanding with you, even if other people are not."
     m "I love you and I care about you!"
     m "You're the love of my life."
-    return
+    return "love"
 
 
 #Thank you for understanding me.
@@ -263,4 +263,4 @@ label mshMod_compliment_understanding_me:
     m "I love you [player]."
     m "Remember you can always come to this room when you need reassurance."
     m "I'm here for you!"
-    return
+    return "love"
