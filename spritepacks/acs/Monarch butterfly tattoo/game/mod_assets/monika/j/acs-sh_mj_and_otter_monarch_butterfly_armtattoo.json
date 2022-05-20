@@ -1,0 +1,45 @@
+{
+    "__author": "MAS SH submod team // MayJay and otter",
+    "version": 3,
+    "type": 0,
+    "name": "sh_mj_and_otter_monarch_butterfly_armtattoo",
+    "img_sit": "sh_mj_and_otter_monarch_butterfly_armtattoo",
+    "pose_map": {
+        "p1": "1",
+        "p2": "2",
+        "p3": "3",
+        "p4": "4",
+        "p5": "5",
+        "p6": "6",
+        "p7": "7"
+    },
+    "stay_on_start": true,
+    "select_info": {
+        "display_name": "Monarch Butterfly Arm Tattoo",
+        "thumb": "sh_monarch_butterfly_armtattoo",
+        "group": "larmtattoo_acs",
+        "visible_when_locked": false,
+        "select_dlg": [
+            "If nothing ever changed, there would be no butterflies!"
+        ]
+    },
+    "giftname": "sh_monarchbutterflyarmtattoo",
+    "rec_layer": 9,
+    "priority": 1,
+    "acs_type": "larmtattoo_acs",
+    "arm_split": {
+         "default": "0",
+         "l_default": "5",
+         "use_reg_for_l": true,
+         "p1": "10",
+         "p2": "5",
+         "p3": "10",
+         "p4": "0",
+         "p5": "10",
+         "p6": "0",
+         "p7": "0"
+    },
+    "dlg_desc": "tattoo",
+    "dlg_plural": false,
+    "keep_on_desk": false
+}
