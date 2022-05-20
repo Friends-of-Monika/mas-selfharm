@@ -71,8 +71,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_comp",
-            category=['mshMod_compliment_still_here'],
+            eventlabel="mshMod_compliment_still_here",
             prompt="Thanks to you, I'm still here.",
             unlocked=True
         ),
@@ -147,7 +146,7 @@ init 5 python:
     )
 
 label mshMod_compliment_being_kind:
-    m "Of course, [player]!" 
+    m "Of course, [player]!"
     m "What kind of girlfriend would I be if I wasn’t kind to you?"
     m "Coming to think of it though, I think Natsuki would disagree."
     m "Ahahaha~"
