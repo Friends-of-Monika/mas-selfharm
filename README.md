@@ -18,7 +18,7 @@ techniques, milestones, checkups and new dialogue and spritepacks</h3>
 This submod is still in active development and is approaching stable
 release stage. Please do not install it from source code until it is
 released. Instead, you can *watch* our repository and get notified
-when a release and created, and this mode is good to use!
+when a release is created, and this mode is good to use!
 
 
 ## ⚠️ Important notice (please read!)
