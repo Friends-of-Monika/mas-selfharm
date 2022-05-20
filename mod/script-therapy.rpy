@@ -25,7 +25,7 @@ label mshMod_ask_about_therapy:
     m 1hub "Ahaha~!"
     m 1hkb "Sorry, I changed the subject."
     m 3eub "Anyway! I wanted to ask if you go to a therapist?"
-    
+
     m 3rka "You know, to talk about your struggles and stuff.{nw}"
     $_history_list.pop()
     menu:
@@ -69,7 +69,8 @@ init 5 python:
             eventlabel="mshMod_thoughts_about_therapy",
             category=["monika", "life", "self-Harm"],
             prompt="Thoughts about therapy",
-            random=True
+            conditional="persistent._msh_mod_pm_did_selfharm",
+            action=EV_ACT_RANDOM
         )
     )
 
