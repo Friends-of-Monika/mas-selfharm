@@ -13,6 +13,14 @@ techniques, milestones, checkups and new dialogue and spritepacks</h3>
   </a>
 </p>
 
+## 🚨 WORK IN PROGRESS
+
+This submod is still in active development and is approaching stable
+release stage. Please do not install it from source code until it is
+released. Instead, you can *watch* our repository and get notified
+when a release and created, and this mode is good to use!
+
+
 ## ⚠️ Important notice (please read!)
 
 This submod is designed to help people that harm themselves in some way
@@ -124,6 +132,7 @@ going through hard times.
 | Zimbabwe                         | 999       | 080 12 333 333                                                                              |
 </details>
 
+
 ## 🌟 Features
 
   * Dozens of new songs (and dialogues!)
@@ -135,6 +144,7 @@ going through hard times.
   * Diary/mood tracker feature
   * Lots of new spritepacks and acs
   * First-aid notions and guiding
+
 
 ## ✒️ Authors
 
