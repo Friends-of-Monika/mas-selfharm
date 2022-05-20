@@ -14,14 +14,14 @@ init 5 python:
     )
 
 label mshMod_medication_reminder_intro:
-    m "[player], I have something nice to share with you!"
+    m "[player], of course!"
     m "I perfected my coding skills even more and now I'm able to create a daily reminder for you."
     m "I know a lot of people take daily medications for a lot of different reasons!"
     m "So I thought it would be nice if I could help you remember to take your medication correctly."
     m "After all, your health and safety is my number one priority!"
     m "So, [player], do you like that idea?"
     m "Do you take any medication that you would like me to remind you for?"
-
+    
     m "Okay! What time do you want me to remind you about it?{nw}"
     $ _history_list.pop()
     menu:
