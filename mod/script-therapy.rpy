@@ -1,5 +1,6 @@
 # Topics about therapy, here we set visits_therapist PM variable.
 
+#question about therapy
 default persistent._msh_mod_pm_visits_therapist = None
 
 init -100 python:
@@ -61,7 +62,7 @@ label mshMod_ask_about_therapy:
 
     return "no_unlock|derandom"
 
-
+#random dialogue about therapy
 init 5 python:
     addEvent(
         Event(
