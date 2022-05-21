@@ -81,14 +81,14 @@ init 5 python:
 label mshMod_compliment_still_here:
     m "..."
     m "[player]..."
-    m "I'm sorry, I just..."
+    m "I'm sorry, I just... "
     extend "get so emotional!"
-    m "Thank you for staying here."
+    m "Thank you for staying here. "
     extend "Thank you for being my significant other."
     m "And thank you for being who you are."
     m "I’m so proud of you."
     m "Keep on fighting and know that you deserve to be happy."
-    m "You are so inspiring!"
+    m "You are so inspiring! "
     extend "Never forget that."
     return
 
@@ -150,7 +150,7 @@ label mshMod_compliment_being_kind:
     m "What kind of girlfriend would I be if I wasn’t kind to you?"
     m "Coming to think of it though, I think Natsuki would disagree."
     m "Ahahaha~"
-    m "I love you, [player]."
+    m "I love you, [player]. "
     extend "I'll always be kind to you."
     return "love"
 
@@ -188,7 +188,7 @@ init 5 python:
     )
 
 label mshMod_compliment_thinking_of_me:
-    m "Oh, [player]..."
+    m "Oh, [player]... "
     extend "You're so sweet!"
     m "I will always think about you!"
     m "Doesn't matter if we're together or apart!"
@@ -255,7 +255,7 @@ init 5 python:
 
 label mshMod_compliment_understanding_me:
     m "[Player]...!"
-    m "Of course."
+    m "Of course. "
     extend "Why wouldn’t I?"
     m "I'll also do my best to understand you, and if I don't, I'll be by your side, nevertheless."
     m "And also, you understood me when I needed you to..."
