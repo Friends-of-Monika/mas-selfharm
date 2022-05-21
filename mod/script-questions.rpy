@@ -94,7 +94,8 @@ label mshMod_probing_questions_talk:
                     m 1eka "For me, okay?"
                     m 1hub "I love you!"
                     return "love"
-        return
+
+    return
 
 label mshMod_probing_questions_refuse:
     m 2eka "It's okay, [player]."
