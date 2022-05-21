@@ -1,5 +1,6 @@
 # Player diary script.
 
+#intro
 init 5 python:
     addEvent(
         Event(
@@ -25,7 +26,7 @@ label mshMod_writing_to_diary_intro:
     m 3eua "I've honestly been thinking about this for a bit."
     m 1huu "It can really be a great outlet for anyone's emotions!"
     m 5rub "You could write your innermost feelings and thoughts..."
-    m "Or even make it a mood journal, and write in it every day."
+    m "Or even make it a mood journal, and write in it every day. "
     extend "Observing patterns and possible triggers..."
     m 3esb "You can even share it with someone you truly trust!"
     m 1hsa "If you'd like, I can create a text file for you to write your thoughts and memoirs into."
@@ -65,13 +66,17 @@ label mshMod_writing_to_diary_intro:
 
     return
 
+#diary reminder
 label mshMod_writing_to_diary_repeat:
-    m 1eta "Have you been writing in your diary?"
+    m "[player]! "
+    extend "I just remembered something."
+    m 2eku "I know it could be pretty personal stuff, so I haven't been looking..."
+    
 
-    m 2eku "I know it could be pretty personal stuff, so I haven't been looking.{nw}"
+    m 1eta "But have you been writing in your diary?"{nw}"
     $ _history_list.pop()
     menu:
-        m "I know it could be pretty personal stuff, so I haven't been looking.{fast}"
+        m 1eta "But have you been writing in your diary?{fast}"
 
         "I accidentally deleted it.":
             m 1fuu "Oh... hehe! That's alright."
