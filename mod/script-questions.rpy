@@ -34,34 +34,6 @@ label mshMod_probing_questions_intro:
         "No, I'm sorry.":
             jump mshMod_probing_questions_refuse
 
-init 5 python:
-    addEvent(
-        Event(
-            persistent.event_database,
-            eventlabel="mshMod_probing_questions_more",
-            category=["you"],
-            prompt="I'm ready to talk about it...",
-            conditional="seen_event('mshMod_probing_questions_intro')",
-            action=EV_ACT_UNLOCK,
-            pool=True,
-            rules={"no_unlock": None}
-        )
-    )
-
-label mshMod_probing_questions_more:
-    m 1esc "I'm glad that you decided to talk with me..."
-
-    m 7ekc "But are you absolutely sure you are ready?{nw}"
-    $ _history_list.pop()
-    menu:
-        m "But are you absolutely sure you are ready?{fast}"
-
-        "Yes, ask me whatever you want.":
-            jump mshMod_probing_questions_talk
-
-        "No, I'm sorry, I can't do it after all.":
-            jump mshMod_probing_questions_refuse
-
 label mshMod_probing_questions_talk:
     m 2eka "Okay, thanks for trusting me with something as difficult as this."
     m 2dka "It makes me happy you feel comfortable talking to me."
@@ -122,6 +94,7 @@ label mshMod_probing_questions_talk:
                     m 1eka "For me, okay?"
                     m 1hub "I love you!"
                     return "love"
+        return
 
 label mshMod_probing_questions_refuse:
     m 2eka "It's okay, [player]."
@@ -132,3 +105,32 @@ label mshMod_probing_questions_refuse:
     m 2fkb "I will always be here."
     m 2dkb "I love you."
     return "love"
+
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_probing_questions_more",
+            category=["you"],
+            prompt="I'm ready to talk about it...",
+            conditional="seen_event('mshMod_probing_questions_intro')",
+            action=EV_ACT_UNLOCK,
+            pool=True,
+            rules={"no_unlock": None}
+        )
+    )
+
+label mshMod_probing_questions_more:
+    m 1esc "I'm glad that you decided to talk with me..."
+
+    m 7ekc "But are you absolutely sure you are ready?{nw}"
+    $ _history_list.pop()
+    menu:
+        m "But are you absolutely sure you are ready?{fast}"
+
+        "Yes, ask me whatever you want.":
+            jump mshMod_probing_questions_talk
+
+        "No, I'm sorry, I can't do it after all.":
+            jump mshMod_probing_questions_refuse
