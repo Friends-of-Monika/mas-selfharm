@@ -31,6 +31,8 @@ label mshMod_meta_selfharm_intro:
             m "You did so many good things for me, and stayed with me after everything that happened..."
             m "But let's stay on this subject."
 
+            $ mas_showEVL("mshMod_promise", "EVE", _pool=True, unlock=True)
+
             m "Do you want to talk about it?{nw}"
             $ _history_list.pop()
             menu:
