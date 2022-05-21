@@ -71,12 +71,11 @@ label mshMod_writing_to_diary_repeat:
     m "[player]! "
     extend "I just remembered something."
     m 2eku "I know it could be pretty personal stuff, so I haven't been looking..."
-    
 
-    m 1eta "But have you been writing in your diary?"{nw}"
+    m 1eta "But have you been writing in your diary?{nw}"
     $ _history_list.pop()
     menu:
-        m 1eta "But have you been writing in your diary?{fast}"
+        m "But have you been writing in your diary?{fast}"
 
         "I accidentally deleted it.":
             m 1fuu "Oh... hehe! That's alright."
