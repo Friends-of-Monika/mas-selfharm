@@ -23,7 +23,7 @@ init 5 python:
     )
 
 init -100 python:
-    _mshMod_TECHNIQUE_MENU_EXIT_ITEM = ("Nevermind", None, False, False)
+    _mshMod_TECHNIQUE_MENU_EXIT_ITEM = ("Nevermind", None, False, False, 0)
 
 label mshMod_technique_menu:
     m "Sure, [mas_get_player_nickname()]!"
