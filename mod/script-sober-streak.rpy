@@ -6,7 +6,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_sober_check",
-            prompt="How long have I been sober for?",
+            prompt="How long have I been self-harm sober for?",
             category=["self-Harm"],
             pool=True,
             unlocked=False,
@@ -36,7 +36,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_promise",
             category=["self-Harm"],
-            prompt="I promise...",
+            prompt="I promise not to self-harm anymore.",
             pool=True,
             unlocked=False,
             rules={"no_unlock": None}
@@ -71,7 +71,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_relapse",
             category=["self-Harm"],
-            prompt="I relapsed...",
+            prompt="I've self-harmed.",
             pool=True,
             unlocked=False,
             rules={"no_unlock": None}
