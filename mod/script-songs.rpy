@@ -1,11 +1,11 @@
 # Monika's playlist topics and songs.
 
+#playlist
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
             eventlabel="mshMod_playlist",
-            conditional="persistent._msh_mod_pm_did_selfharm",
             action=EV_ACT_RANDOM
         )
     )
@@ -49,7 +49,7 @@ label mshMod_playlist:
     m 2esa "Take care."
     return "love|derandom"
 
-
+#listen to the playlist
 init 5 python:
     addEvent(
         Event(
@@ -450,8 +450,13 @@ label mshMod_song_hold_on:
     m "{i}~Call if you need somebody~{/i}"
     m "{i}~I will be there for you~{/i}"
     m "..."
-    m ""
-    return
+    m "[player]..."
+    m "I'll always be here for you."
+    m "Call me anytime you need, and I'll comfort you."
+    m "I'd go to the moon and back for you."
+    m "Because I love you..."
+    m "To the moon and back."
+    return "love"
 
 
 # STILL BREATHING - CITIZEN SOLDIER
@@ -501,7 +506,9 @@ label mshMod_song_still_breathing:
     m "{i}~You are stronger than you know~{/i}"
     m "..."
     m "Hey [player]?"
-    m "I wanted to remind you that I’m proud you for telling me about.. Hurting yourself."
-    m "I’m sorry that I wasn’t there for you, [mas_get_player_nickname()]"
-    m "But remember that I love you [player]!"
-    return
+    m "I wanted to remind you that I’m proud you for telling me about... Hurting yourself."
+    m "I’m sorry that I wasn’t there for you at the time, [mas_get_player_nickname()]."
+    m "But remember that I love you, [player]!"
+    m "And I'm here for you now."
+    m "Always and forever!"
+    return "love"
