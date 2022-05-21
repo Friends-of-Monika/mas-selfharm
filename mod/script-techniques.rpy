@@ -850,7 +850,7 @@ label mshMod_technique_media:
     m "And remember... "
     extend "Make someone smile everyday, but don't forget you're someone too!"
     m "I love you, [player]~"
-    return
+    return "love"
 
 #30
 init 5 python:
@@ -1983,7 +1983,7 @@ label mshMod_technique_hand_holding:
     m "I would touch you like this, [player]."
     m "Slowly, and taking care of you the most I could."
     m "I love you~"
-    return
+    return "love"
 
 #79
 init 5 python:
