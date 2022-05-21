@@ -103,7 +103,8 @@ init 5 python:
             category=["self-Harm"],
             prompt="I want to learn more about self harm.",
             pool=True,
-            unlocked=False
+            unlocked=False,
+            rules={"no_unlock": None}
         )
     )
 
