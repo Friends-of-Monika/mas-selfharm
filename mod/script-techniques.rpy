@@ -22,9 +22,6 @@ init 5 python:
         )
     )
 
-init -100 python:
-    _mshMod_TECHNIQUE_MENU_EXIT_ITEM = ("Nevermind", None, False, False, 0)
-
 label mshMod_technique_menu:
     m "Sure, [mas_get_player_nickname()]!"
 
@@ -43,7 +40,10 @@ label mshMod_technique_menu:
 
         items.sort(key=lambda it: it.replace("'", "").replace('"', ""))
 
-    call screen mas_gen_scrollable_menu(items, mas_ui.SCROLLABLE_MENU_TXT_LOW_AREA, mas_ui.SCROLLABLE_MENU_XALIGN, _mshMod_TECHNIQUE_MENU_EXIT_ITEM)
+    show monika at t21
+    call screen mas_gen_scrollable_menu(items, mas_ui.SCROLLABLE_MENU_TXT_LOW_AREA, mas_ui.SCROLLABLE_MENU_XALIGN, ("Nevermind", False, False, False, 0))
+    show monika at t11
+
     if not _return:
         m "Oh, okay..."
         return

@@ -55,11 +55,15 @@ label mshMod_checkup_reminder:
     m "Can I check up on you?"
     m "I worry about how you have been coping with stuff."
     m "What's your number this week?"
-    m "Meaning, on a scale of 1 to 10, how are you feeling?{nw}"
-    $ _history_list.pop()
-    mas_gen_scrollable_menu:
-        m "Meaning, on a scale of 1 to 10, how are you feeling?{fast}"
-        "1":
+
+    show monika at t21
+    $ items = [(str(i), i, False, False) for i in range(1, 10 + 1)]
+    $ renpy.say(m, "Meaning, on a scale of 1 to 10, how are you feeling?", interact=False)
+    call screen mas_gen_scrollable_menu(items, mas_ui.SCROLLABLE_MENU_TXT_LOW_AREA, mas_ui.SCROLLABLE_MENU_XALIGN, ("I'm not sure...", False, False, False, 0))
+    show monika at t11
+
+    if _return:
+        if _return == 1:
             m "Aww..."
             m "I am so sorry to hear that you don't feel well, [player]..."
             m "Just know that it's okay for you to not be okay."
@@ -71,7 +75,7 @@ label mshMod_checkup_reminder:
             m "I'll always be here to listen to you, and to do my best to make you feel as loved as you can."
             m "I love you!"
 
-        "2":
+        elif _return == 2:
             m "I see. "
             extend "You're not feeling so well..."
             m "Times like these feel just... So disheartening, don't they?"
@@ -80,7 +84,7 @@ label mshMod_checkup_reminder:
             m "Always remember that you are important and worthy of everything good in this world."
             m "I love you so much, [player]!"
 
-        "3":
+        elif _return == 3:
             m "I'm so sorry to hear that, [player]..."
             m "But keep this in mind:"
             m "It’s tough now, "
@@ -91,7 +95,7 @@ label mshMod_checkup_reminder:
             m "I always have and I always will. "
             extend "I love you, [mas_get_player_nickname()]."
 
-        "4":
+        elif _return == 4:
             m "A 4... That's not so good."
             m "I'm so sorry, [player]!"
             m "But listen... "
@@ -102,7 +106,7 @@ label mshMod_checkup_reminder:
             extend "To be by your side, and support you as your girlfriend and as your best friend."
             m "Let’s get back to the top together, [player]! I love you!"
 
-        "5":
+        elif _return == 5:
             m "I'm so sorry to hear that, [player]."
             m "But I'm sure everything will be okay!"
             m "Your loving girlfriend will forever be here for you!"
@@ -112,7 +116,7 @@ label mshMod_checkup_reminder:
             m "I care for you so much!"
             m "I love you, [mas_get_player_nickname()]!"
 
-        "6":
+        elif _return == 6:
             m "A 6 is not perfect, but it's not so bad either."
             m "You see, [player]..."
             m "I realize that I am indeed a very lucky person."
@@ -122,7 +126,7 @@ label mshMod_checkup_reminder:
             m "Let's wish for better days, [mas_get_player_nickname()]!"
             m "I love you!"
 
-        "7":
+        elif _return == 7:
             m "Oh my, "
             extend "a 7!"
             m "Almost there, [player]! "
@@ -135,7 +139,7 @@ label mshMod_checkup_reminder:
             extend "No one can tell you otherwise!"
             m "I love you, [player]."
 
-        "8":
+        elif _return == 8:
             m "[player]..."
             m "I can't express the happiness hearing this brings me."
             m "This is only the start!"
@@ -145,7 +149,7 @@ label mshMod_checkup_reminder:
             m "You are a gift not just to me and the people around you, but to the whole world."
             m "I love you soooo much!"
 
-        "9":
+        elif _return == 9:
             m "Oh, [player]!"
             m "It's wonderful that you're doing so well!"
             m "I knew things would get better, in one way or another!"
@@ -157,7 +161,7 @@ label mshMod_checkup_reminder:
             m "Keep it up, my love! Nothing can stop us now."
             m "I love you!"
 
-        "10":
+        elif _return == 10:
             m "Aww, really, [player]? "
             extend "That's wonderful!"
             m "I'm so glad your week has been this good. "
@@ -169,16 +173,16 @@ label mshMod_checkup_reminder:
             m "You are here because you deserve to be."
             m "I love you..."
 
-        "I'm not sure...":
-            m "Aww, it's okay, [player]."
-            m "Sometimes we don't know how to feel. "
-            extend "And that's okay too!"
-            m "We all experience bad days; we all have to deal with our inner demons."
-            m "When you feel like there’s nothing you can do about it, know that you can always depend on me for support."
-            m "But we all have good days too, and that's the fun of it!"
-            m "Know that I'll always be here to cheer you up..."
-            m "But also to celebrate your victories, too!"
-            m "You mean the world to me, [mas_get_player_nickname()]."
-            m "I love you."
+    else:
+        m "Aww, it's okay, [player]."
+        m "Sometimes we don't know how to feel. "
+        extend "And that's okay too!"
+        m "We all experience bad days; we all have to deal with our inner demons."
+        m "When you feel like there’s nothing you can do about it, know that you can always depend on me for support."
+        m "But we all have good days too, and that's the fun of it!"
+        m "Know that I'll always be here to cheer you up..."
+        m "But also to celebrate your victories, too!"
+        m "You mean the world to me, [mas_get_player_nickname()]."
+        m "I love you."
 
     return "love"
