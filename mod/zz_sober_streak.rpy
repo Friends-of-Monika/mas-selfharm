@@ -11,6 +11,7 @@ default persistent._msh_mod_pm_sober_personal_best = None
 init 4 python in mshMod_sober_streak:
 
     import store
+    import datetime
 
     ### ASSERTIONS ###
 
@@ -83,7 +84,7 @@ init 4 python in mshMod_sober_streak:
 
         _assertOnStreak()
 
-        return (datetime.date.today() - persistent._msh_mod_pm_sober_streak).days
+        return (datetime.date.today() - store.persistent._msh_mod_pm_sober_streak).days
 
     def beginStreak():
         """
@@ -94,7 +95,7 @@ init 4 python in mshMod_sober_streak:
 
         _assertNotOnStreak()
 
-        persistent._msh_mod_pm_sober_streak = datetime.date.today()
+        store.persistent._msh_mod_pm_sober_streak = datetime.date.today()
         _rebuildMilestoneDates()
 
     def endStreak():
@@ -107,16 +108,16 @@ init 4 python in mshMod_sober_streak:
         _assertOnStreak()
 
         # Update personal best if current streak is longer than the previous.
-        if persistent._msh_mod_pm_sober_personal_best is not None:
-            since, days = persistent._msh_mod_pm_sober_personal_best
-            c_days = (datetime.date.today() - persistent._msh_mod_pm_sober_personal_best[0]).days
+        if store.persistent._msh_mod_pm_sober_personal_best is not None:
+            since, days = store.persistent._msh_mod_pm_sober_personal_best
+            c_days = (datetime.date.today() - store.persistent._msh_mod_pm_sober_personal_best[0]).days
             if c_days > days:
-                persistent._msh_mod_pm_sober_personal_best = (persistent._msh_mod_pm_sober_streak, c_days)
+                store.persistent._msh_mod_pm_sober_personal_best = (store.persistent._msh_mod_pm_sober_streak, c_days)
         else:
-            persistent._msh_mod_pm_sober_personal_best = (persistent._msh_mod_pm_sober_streak, (datetime.date.today() - persistent._msh_mod_pm_sober_streak).days)
+            store.persistent._msh_mod_pm_sober_personal_best = (store.persistent._msh_mod_pm_sober_streak, (datetime.date.today() - store.persistent._msh_mod_pm_sober_streak).days)
 
         # Reset streak initial date and rebuild the calendar and events.
-        persistent._msh_mod_pm_sober_streak = None
+        store.persistent._msh_mod_pm_sober_streak = None
         _rebuildMilestoneDates()
         _updateMilestoneEvents()
 
@@ -131,7 +132,7 @@ init 4 python in mshMod_sober_streak:
             Boolean True if player has personal best set, False otherwise.
         """
 
-        return persistent._msh_mod_pm_sober_personal_best is not None
+        return store.persistent._msh_mod_pm_sober_personal_best is not None
 
     def resetPersonalBest():
         """
@@ -142,7 +143,7 @@ init 4 python in mshMod_sober_streak:
 
         _assertHasPersonalBest()
 
-        persistent._msh_mod_pm_sober_personal_best = None
+        store.persistent._msh_mod_pm_sober_personal_best = None
         _updateMilestoneEvents()
 
 
@@ -192,7 +193,7 @@ init 4 python in mshMod_sober_streak:
 
         if since is None:
             _assertOnStreak()
-            since = persistent._msh_mod_pm_sober_streak
+            since = store.persistent._msh_mod_pm_sober_streak
 
         return _getEndDateTuple(since + datetime.timedelta(days=weeks * 7))
 
@@ -222,7 +223,7 @@ init 4 python in mshMod_sober_streak:
 
         if since is None:
             _assertOnStreak()
-            since = persistent._msh_mod_pm_sober_streak
+            since = store.persistent._msh_mod_pm_sober_streak
 
         new_y, new_m = since.year, since.month + months
         new_y, new_m = new_y + new_m // 12, new_m % 12
@@ -261,7 +262,7 @@ init 4 python in mshMod_sober_streak:
 
         if since is None:
             _assertOnStreak()
-            since = persistent._msh_mod_pm_sober_streak
+            since = store.persistent._msh_mod_pm_sober_streak
 
         return _getEndDateTuple(since.replace(year=since.year+years))
 
@@ -314,7 +315,7 @@ init 4 python in mshMod_sober_streak:
 
         _assertHasPersonalBest()
 
-        since, days = persistent._msh_mod_pm_sober_personal_best
+        since, days = store.persistent._msh_mod_pm_sober_personal_best
         start = since + datetime.timedelta(days=days)
         return start, start + datetime.timedelta(days=1)
 
@@ -540,7 +541,7 @@ init 4 python in mshMod_sober_streak:
             label - Ren'Py label to mark seen.
         """
 
-        persistent._seen_ever[label] = True
+        store.persistent._seen_ever[label] = True
 
     def _unseeLabel(label):
         """
@@ -553,8 +554,8 @@ init 4 python in mshMod_sober_streak:
             label - Ren'Py label to mark unseen.
         """
 
-        if label in persistent._ever_seen:
-            del persistent._seen_ever[label]
+        if label in store.persistent._ever_seen:
+            del store.persistent._seen_ever[label]
 
 
 init 7 python in mshMod_sober_streak:
