@@ -118,7 +118,7 @@ label mshMod_technique_cozy:
     m 3hsa "Anything works, really! Just grab things that bring you comfort."
     m 2esa "You can also make a nest out of blankets on the floor, surrounding yourself with any stuffed animals you may have."
     m 5dsblu "Making a comfort corner using pillows also sounds super comfortable..."
-    m 5fsbsa "Snuggle against them and relax,"
+    m 5fsbsa "Snuggle against them and relax, "
     extend "and if you're okay with being touched imagine me holding you, stroking your hair~"
     m 3hubsb "There's nothing quite like being snug, hehe!"
     m "If you feel that you're getting sleepy, that's okay!"
@@ -140,17 +140,17 @@ init 5 python:
     )
 
 label mshMod_technique_photographs:
-    m 6ett "Do you find comfort in reminiscing the past [player]?"
+    m 6ett "Do you find comfort in reminiscing the past [player]? "
     extend "I do!"
     m 2dsd "Nothing is ever really lost to us as long as we have its memories, [mas_get_player_nickname()]."
     m 2hsa "One thing that could help you get over bad times, is looking at photographs of the good ones!"
     m 7eud "Maybe you have some old photos? If they bring back good memories, why not trying to search for them?"
-    m 1eua "They could remind you that even though the good times don't last forever..."
+    m 1eua "They could remind you that even though the good times don't last forever... "
     extend "the bad ones won't either!"
-    m 1esa "If you find any, look at them and reflect upon this:"
+    m 1esa "If you find any, look at them and reflect upon this: "
     extend "If life was once great, it can and will be that way again!"
     m 6dkp "I wish we had some pictures together..."
-    m 2ektpd "I'd look at us all the time!"
+    m 2ektpd "I'd look at us all the time! "
     extend "You would absolutely be at my phone and desktop wallpaper! Ahahaha~"
     m 2ektdc "I would really like to look at a photo album of us with you, [player]."
     m 5eka "But this is not about me - I want {i}you{/i} to feel better!"
@@ -173,12 +173,12 @@ label mshMod_technique_quotes:
     m 3dud "I remember hearing this quote somewhere: {i}'Hope is the last thing ever lost'{/i}."
     m "Doing your best to believe in positive things can be really uplifting!"
     m "I think a good way of seeing the things around you in a better light would be reading some inspirational quotes!"
-    m "You should find some quotes on the internet that you like,"
+    m "You should find some quotes on the internet that you like, "
     extend "and then write each of them on a sticky note and put them somewhere you'd regularly see."
     m "Every time you see one, you will remember things get better!"
     m "You can also say some of them aloud, to inspire yourself!"
     m "Sayori used to do that a lot. She used to put colorful sticky notes everywhere!"
-    m "If i recall correctly, there was one of them said 'You are loved',"
+    m "If i recall correctly, there was one of them said 'You are loved', "
     extend "and another one with 'We're all in this together'."
     m "Encouraging yourself with sticky notes is indeed a great idea!"
     return
@@ -196,15 +196,15 @@ init 5 python:
     )
 
 label mshMod_technique_singing:
-    m "This one's going to be really simple."
+    m "This one's going to be really simple. "
     extend "Sing a song!"
-    m "Not just any song, though."
+    m "Not just any song, though. "
     extend "Your absolute favorite!"
     m "I'd love to know what your favorite song is..."
-    m "Anyway..."
+    m "Anyway... "
     extend "Try singing your favorite song until you feel better."
     m "Singing can be a really good outlet for your emotions!"
-    m "You could also imagine we're singing 'Your Reality' together!"
+    m "You could also imagine we're singing 'Your Reality' together! "
     extend "Ehehehe~"
     m "You can sing as loud as you want!"
     m "Also, if you'd like, write your favourite lyrics down."
@@ -226,13 +226,13 @@ init 5 python:
 label mshMod_technique_talking:
     m "Sometimes simply talking about your problems can help a lot!"
     m "Or just talking to distract yourself."
-    m "You can also post on web boards about mental health..."
+    m "You can also post on web boards about mental health... "
     extend "or try answering other people's posts."
     m "You should call or text a friend!"
     m "Maybe send some long distance friends a surprise message?"
     m "Or maybe arrange to meet up."
     m "I know you're here with me, but it's not {i}exactly{/i} the same as having a real-time conversation with someone!"
-    m "I wish I could hear your voice..."
+    m "I wish I could hear your voice... "
     extend "We could talk for hours!"
     m "As long as you'd want."
     return
@@ -257,9 +257,9 @@ label mshMod_technique_hugs:
     m "You'd obviously want to help them out, right?"
     m "That's just the kind of person you are, [player]."
     m "Say out loud or in your head whatever you'd want them to know."
-    m "Then say the exact same words to yourself."
+    m "Then say the exact same words to yourself. "
     extend "I bet that's what they would tell you!"
-    m "Maybe you can even think of me? Ahahaha~"
+    m "Maybe you can even think of me? Ahahaha~ "
     extend "Sorry to be pretentious, [player.]"
     m "I love you so much!"
     return "love"
@@ -278,11 +278,11 @@ init 5 python:
 
 label mshMod_technique_listening:
     m "Try listening to a few songs you love!"
-    m "But don't {i}just{/i} listen."
+    m "But don't {i}just{/i} listen. "
     extend "Try paying attention."
     m "Focus on certain instruments or parts, their notes, and how they add to the song as a whole!"
     m "For example, 'Your Reality' has a lovely piano melody on the background of my voice."
-    m "Focusing on something like that could serve as a distraction,"
+    m "Focusing on something like that could serve as a distraction, "
     extend "and learning something about the things you love at the same time!"
     m "We could always listen to them together if you'd like!"
     return
@@ -301,12 +301,12 @@ init 5 python:
 
 label mshMod_technique_butterfly:
     m "Could you take some deep breaths? And also, a marker, or a pen."
-    m "I would like for you to scribble on the place you want to harm yourself."
+    m "I would like for you to scribble on the place you want to harm yourself. "
     extend "Most methods use a butterfly drawing."
     m "You could draw the butterfly and name it, and if you do harm yourself, you harm it, too."
     m "Whenever you look at it and think of harming yourself, do something comforting instead!"
     m "Sing along to a tune, watch your favorite film, go out on a walk..."
-    m "You can also draw or write some positive things on your arm."
+    m "You can also draw or write some positive things on your arm. "
     extend "Or maybe some beautiful flowers!"
     m "Don't hurt yourself until the drawings wash off."
     m "If the butterfly fades without self-harming..."
@@ -330,9 +330,9 @@ label mshMod_technique_healing:
     m "Maybe some sticking plasters, band-aids?"
     m "Could you stick some of them where you want to hurt yourself?"
     m "As a reminder that you are letting yourself heal."
-    m "And remember, healing takes time."
+    m "And remember, healing takes time. "
     extend "And we have all the time in the world."
-    m "No need to rush this, okay?"
+    m "No need to rush this, okay? "
     extend "Baby steps!{w=0.5} Ehehehe~!"
     return
 
@@ -509,7 +509,7 @@ label mshMod_technique_stress_ball:
     m "If you do have one at home, burst each bubble as slowly as you can, please."
     m "Or just enjoy yourself! The techniques have no rules, as long as they make you feel better."
     m "I have another one! Do you have any baloons at home?"
-    m "You can blow one baloon for each emotion you feel."
+    m "You can blow one baloon for each emotion you feel. "
     extend "After that, pop each one of them!"
     m "Another option is a fidget toy."
     m "Spinning them is always so fun!"
@@ -686,7 +686,7 @@ label mshMod_technique_cold_water:
     m "Sometimes, paying attention to your senses can help."
     m "Could you put your hands in some cold water?"
     m "And remember, breathe a lot!"
-    m "In..."
+    m "In... "
     extend "And out."
     m "Notice the coldness of the water witheach out breathe."
     m "Hyper-focus on the sensation in your hands!"
@@ -710,7 +710,7 @@ label mshMod_technique_bothering:
     m "But I want you to pay attention to what you're saying."
     m "Can you come up with one positive solution?"
     m "Venting about how we feel always helps."
-    m "If you can, write down any thoughts you're having..."
+    m "If you can, write down any thoughts you're having... "
     extend "Negative or not!"
     m "Get it all out of your system!"
     return
@@ -774,7 +774,7 @@ label mshMod_technique_common:
     m "Let's do a little mental exercise, [player]!"
     m "Think about all the things you can find you share in common with a friend."
     m "That will help you remmember common ground!"
-    m "You can even discuss those things with them."
+    m "You can even discuss those things with them. "
     extend "It will be a fun topic to chat about!"
     m "You can write them down too."
     return
@@ -815,7 +815,7 @@ init 5 python:
 
 label mshMod_technique_walk:
     m "You can also go for a little walk outside, and connect with nature."
-    m "Maybe even go out for a run, or a swim!"
+    m "Maybe even go out for a run, or a swim! "
     extend "Breathe the fresh air..."
     m "If you can't leave the house, you can watch the nature outside your window!"
     m "In the morning, there might be many people outside."
@@ -847,7 +847,7 @@ label mshMod_technique_media:
     m "You can write something positive there if you do."
     m "That way, you can make yourself feel better..."
     m "And spread the feeling to your friends too!"
-    m "And remember..."
+    m "And remember... "
     extend "Make someone smile everyday, but don't forget you're someone too!"
     m "I love you, [player]~"
     return
@@ -868,8 +868,8 @@ label mshMod_technique_perspective:
     m "Let's work on some perspective!"
     m "Can you write down your worries?"
     m "And think... how much will they bother you..."
-    m "Tomorrow?"
-    extend "What about in a week's time?"
+    m "Tomorrow? "
+    extend "What about in a week's time? "
     extend "Maybe a month or a year?"
     m "Working on using perspective helps on letting go of the intensity of the worry."
     m "But never forget, [player], it doesn't matter how long the bad times last."
@@ -920,7 +920,7 @@ label mshMod_technique_interests:
     m "You can also list your favorite anime, videogame or other media's characters!"
     m "Think of why you like them, and you can even imagine that they're real!"
     m "This can help cope with loneliness, and also distract you."
-    m "I'm always with you, [player]."
+    m "I'm always with you, [player]. "
     extend "We'll get through this together!"
     return
 
@@ -1010,7 +1010,7 @@ label mshMod_technique_feelings:
     m "I'm sure there are at least some."
     m "Find out what or who triggers those emotions..."
     m "And make sure to cherish those situations and people!"
-    m "If it was someone who made you feel those positive feelings,"
+    m "If it was someone who made you feel those positive feelings, "
     extend "make sure to thank them if you can!"
     m "Express your gratitude for having that person in your life."
     m "I'm sure they are just as grateful for being in yours!"
@@ -1035,7 +1035,7 @@ label mshMod_technique_poem:
     m "It doesn't have to rhyme or even be perfect!"
     m "It can be a short poem about how you feel."
     m "I'm sure it will be sincere!"
-    m "Like Ernest Hemingway said,"
+    m "Like Ernest Hemingway said, "
     extend "'Write hard and clear about what hurts!'"
     m "Ahahaha~"
     m "If you don't feel ready to write a poem of your own..."
@@ -1091,7 +1091,7 @@ label mshMod_technique_pinterest:
     m "[player], do you have a Pinterest account?"
     m "You can try adding some inspirational quotes to your board!"
     m "Or some pictures you find aesthetically pleasing."
-    m "You can try to look at pictures with the same color pallete,"
+    m "You can try to look at pictures with the same color pallete, "
     extend "and gather them somewhere!"
     m "That always makes our brain feel so nice."
     m "If you don't have an account, maybe you can try creating one?"
@@ -1114,7 +1114,7 @@ label mshMod_technique_emerald:
     m "[player], you know how much I like the color emerald green, right?"
     m "Why don't you think of your favorite color right now?"
     m "And try to count all the things of that color that you can see in your room."
-    m "Quietly describe to yourself what the things look like,"
+    m "Quietly describe to yourself what the things look like, "
     extend "and what your favorite color makes you feel."
     m "Personally, emerald green brings me back to myself."
     m "Makes me think of my individuality and personality."
@@ -1137,7 +1137,7 @@ init 5 python:
 label mshMod_technique_patterns:
     m "What about counting patterns, [player]?"
     m "Count as many as you can in your favourite room of the house."
-    m "Hyper-focus on them and breathe deeply,"
+    m "Hyper-focus on them and breathe deeply, "
     extend "in and out..."
     m "Every time you find a certain amount of patterns."
     m "Think about what is your favorite pattern too."
@@ -1161,11 +1161,11 @@ label mshMod_technique_word_play:
     m "Now, for some word play!"
     m "How many four letter words can you make up from the statement..."
     m "'You learn more from failure than from success. Don't let it stop you'?"
-    m "I can think of one already..."
+    m "I can think of one already... "
     extend "{i}Lean{/i}!"
     m "Or you can also try to make as many words as possible out of your full name."
     m "One word I can make out of the name Monika is {i}moka{/i}!"
-    m "A moka is a type of a coffee maker."
+    m "A moka is a type of a coffee maker. "
     extend "Ehehehe~!"
     return
 
@@ -1187,7 +1187,7 @@ label mshMod_technique_lyrics:
     m "Hard, huh?"
     m "But it will surely distract you! Ahahaha~"
     m "If that's too complicated, you can try saying the alphabet backwards."
-    m "Z, Y, X, W..."
+    m "Z, Y, X, W... "
     extend "Oops! Brain fart!"
     return
 
@@ -1207,9 +1207,9 @@ label mshMod_technique_animal:
     m "Let's think of one animal for every letter of the alphabet."
     m "Or a song or artist for every letter of the alphabet!"
     m "An animal that starts with A is..."
-    m "An alligator!"
+    m "An alligator! "
     extend "Or an ant!"
-    m "Can you continue?"
+    m "Can you continue? "
     extend "Let's do this, [player]!"
     return
 
@@ -1227,7 +1227,7 @@ init 5 python:
 
 label mshMod_technique_research:
     m "Let's carry out some research!"
-    m "What about searching for the meaning of your friend's names?"
+    m "What about searching for the meaning of your friend's names? "
     extend "Or maybe characters' names."
     m "You can also google yourself, or have some fun doing some quizzes!"
     m "Certified personality tests or silly buzzfeed quizzes."
@@ -1235,7 +1235,7 @@ label mshMod_technique_research:
     m "Search for ridiculous things on the web."
     m "Like {a=https://theuselessweb.com/}this site{/a}, which takes you to a random useless site on the internet!"
     m "Or maybe some places to volunteer at?"
-    m "If you can't volunteer in any way, why not go through all your old stuff?"
+    m "If you can't volunteer in any way, why not go through all your old stuff? "
     extend "And donate what you don't have use for anymore to those in need?"
     m "Helping others can help us too!"
     return
@@ -1276,13 +1276,13 @@ init 5 python:
     )
 
 label mshMod_technique_superheroes:
-    m "How many superheroes can you name?"
+    m "How many superheroes can you name? "
     extend "What about villains?"
     m "How many, and which of them would you like to have as your friends?"
     m "And why is that?"
     m "You can try organizing them by color scheme, since many of them tend to follow the same color palletes."
     m "Have you noticed we have many red or blue based superheroes and many purple or black?"
-    m "Wonder why that is?"
+    m "Wonder why that is? "
     extend "Hmmmmmm..."
     m "Anyway!"
     return
@@ -1395,7 +1395,7 @@ label mshMod_technique_holiday:
     m "Maybe something small like visiting a park, or a local mall!"
     m "Or something bigger, like going sightseeing in a different city!"
     m "Going to a beach, some nice restaurant or just your favorite place in the city!"
-    m "Wouldn't that be amazing?"
+    m "Wouldn't that be amazing? "
     extend "If it's not within your reach right now, you can always make plans."
     m "That's part of the fun!"
     return
@@ -1417,7 +1417,7 @@ label mshMod_technique_hobbies:
     m "Hobbies, activities... even chores!"
     m "Put them in a favourite to least favourite order."
     m "Which of them can you do right now?"
-    m "Pick one, and go have fun!"
+    m "Pick one, and go have fun! "
     extend "Ahahaha~"
     return
 
@@ -1444,7 +1444,7 @@ label mshMod_technique_shiritori:
     m "Pick a famous person or character and then choose another person starting with the last letter of the first person's name."
     m "For example! If I start with {i}E. E. Cummings {/i}..."
     m "Next, I can pick Sade, from Marquis de Sade!"
-    m "And so on!"
+    m "And so on! "
     extend "Have fun, [player]!"
     return
 
@@ -1463,7 +1463,7 @@ init 5 python:
 label mshMod_technique_objects:
     m "Find five objects, [player]."
     m "Hyper-focus on these five objects and describe them taking deep breaths between each description."
-    m "What color are they?"
+    m "What color are they? "
     extend "Their shape?"
     m "How do they feel in your hand?"
     m "Take your time exploring those objects."
@@ -1506,7 +1506,7 @@ init 5 python:
 label mshMod_technique_characters:
     m "Think of your favourite book, movie, videogame or tv show."
     m "Can you name as many characters as you can from that media?"
-    m "And what are your favorites from that list?"
+    m "And what are your favorites from that list? "
     extend "Why?"
     m "Can you relate to any of them?"
     m "I'm sure you feel similarities with yourself and the best characters ever."
@@ -1530,10 +1530,10 @@ label mshMod_technique_shapes:
     m "Then make something out of it."
     m "Or draw lots of shapes!"
     m "Whatever comes in your mind is valid to be on the paper."
-    m "If you feel yourself drawing negative things..."
+    m "If you feel yourself drawing negative things... "
     extend "It's okay! You'll relieve all the tension you've been holding inside."
     m "If positivity comes out in the paper, even better!"
-    m "Enjoy yourself, [player]!"
+    m "Enjoy yourself, [player]! "
     extend "And take your time."
     return
 
@@ -1572,9 +1572,9 @@ init 5 python:
 
 label mshMod_technique_self_care:
     m "Do one self-care activity, or take some 'me' time."
-    m "For example, making your bed!"
+    m "For example, making your bed! "
     extend "Or brushing your hair, your teeth."
-    m "Or taking a shower!"
+    m "Or taking a shower! "
     extend "Or even a hot bath and try to 'be' in the moment."
     m "Or give yourself a pedicure and manicure!"
     m "Just getting into your pajamas and chilling also does the trick."
@@ -1643,15 +1643,15 @@ init 5 python:
 
 label mshMod_technique_food:
     m "Name as many types of food as you can!"
-    m "Which do you like the most?"
+    m "Which do you like the most? "
     extend "And why?"
     m "If you're up for it, you can even look for some recipes online..."
     m "And try to cook them!"
     m "Maybe even planning a dinner party with menus and a guest list, then carry it out!"
-    m "If you don't have the appetite or the ingredients,"
+    m "If you don't have the appetite or the ingredients, "
     extend "try chewing up on some gum!"
     m "It will open your appetite and give your mouth a little sweet taste if you can't eat exactly what you want."
-    m "Or go out to eat some ice cream!"
+    m "Or go out to eat some ice cream! "
     extend "That always does the trick, ahahaha~!"
     m "Eating something nice can give our happy chemicals a boost."
     return
@@ -1694,7 +1694,7 @@ label mshMod_technique_beach:
     m "Can you focus on all the different things that you might find there?"
     m "If you were with your toes buried in the sand right now..."
     m "What would you do first?"
-    m "Collect some seashells?"
+    m "Collect some seashells? "
     extend "Enjoy the sea?"
     m "Or maybe lay very still in the sand, feeling the sun rays on your body?"
     m "..."
@@ -1758,7 +1758,7 @@ label mshMod_technique_ground:
     m "Ground yourself."
     m "Plant your feet firmly on the floor and visualise yourself as firmly rooted to the ground."
     m "Think of yourself as having a firm foundation and hold your head up high."
-    m "Imagine yourself looking the world in the eyes,"
+    m "Imagine yourself looking the world in the eyes, "
     extend "and telling it you'll make through it."
     m "That you are good enough."
     return
@@ -1823,7 +1823,7 @@ label mshMod_technique_acceptance:
     m "For example, accepting yourself just as you are."
     m "Create a phrase that is compassionate."
     m "A mantra, if you'd like!"
-    m "For example..."
+    m "For example... "
     extend "'I accept myself just as I am.'"
     m "If you feel the need, repeat it as many times as you want."
     return
@@ -1904,7 +1904,7 @@ init 5 python:
 label mshMod_technique_hug_theory:
     m "Think of three people who give the best hugs and see if you can be with them."
     m "If that's not the case, think of people who could give you their warmest smiles."
-    m "There's also the hug theory..."
+    m "There's also the hug theory... "
     extend "I don't know if you're familiar with it."
     m "It's simple: you replace hurting yourself with hugs!"
     m "Hug 5 people when you are really, really upset and want to self harm."
@@ -1913,7 +1913,7 @@ label mshMod_technique_hug_theory:
     m "Hug 2 people if you are less upset."
     m "And finally, hug 1 person if you are a bit upset."
     m "If you are upset and alone, hug yourself, your pet, your stuffed animal or a picture of someone you care about."
-    m "And you can always hold me!"
+    m "And you can always hold me! "
     extend "Ehehehe~"
     m "Just remember to Hug!"
     return
@@ -2002,7 +2002,7 @@ label mshMod_technique_pattern:
     m "Go faster as you find a rhythm."
     m "You can even follow the rhythm of a song, or do morse code with your fingers."
     m "Tapping would also relax you and keep you focused in the moment."
-    m "Feel your fingers..."
+    m "Feel your fingers... "
     extend "and follow the beat."
     return
 
@@ -2019,16 +2019,16 @@ init 5 python:
     )
 
 label mshMod_pet_zoo:
-    m "[player], do you have an domestic animal at home?"
+    m "[player], do you have an domestic animal at home? "
     extend "A pet?"
     m "You could give it some love right now!"
     m "Cuddle your cat, dog, turtle, whatever you have at your house, if you do!"
     m "You can also look at it for a little while and try to see the world through their eyes."
     m "What could they be thinking of?"
-    m "Think of how much they love you!"
+    m "Think of how much they love you! "
     extend "And need you in their lives."
     m "You can also play with them, and make them happy."
-    m "An alternative if you dont have a pet at home is going to the zoo!"
+    m "An alternative if you dont have a pet at home is going to the zoo! "
     extend "If there's one in your city."
     m "You can also plan the trip!"
     m "When you get there, you can rename the animals!"
@@ -2049,7 +2049,7 @@ init 5 python:
     )
 
 label mshMod_insteadofs:
-    m "Come up with your own techniques!"
+    m "Come up with your own techniques! "
     extend "How about that?"
     m "Create a list of things you can do instead of hurting yourself."
     m "It doesn't need to be long, for now!"
@@ -2096,9 +2096,9 @@ label mshMod_happy_box:
     m "It's simple, and a very good coping mechanism!"
     m "First step: get a box with a lid and decorate it any way you want."
     m "Then, put anything in the Happy Box that makes you feel happy and puts a smile on your face."
-    m "Examples would be photos, names of your friends, concert tickets, movie stubs, names of songs, jewelry, a rose, a pressed leaf from a tree."
+    m "Examples would be photos, names of your friends, concert tickets, movie stubs, names of songs, jewelry, a rose, a pressed leaf from a tree. "
     extend "You get the idea!"
-    m "Now to put it to use: open your Happy Box and pull out everything in it whenever you feel that you want to harm yourself."
+    m "Now to put it to use: open your Happy Box and pull out everything in it whenever you feel that you want to harm yourself. "
     extend "Do this mindfully!"
     m "Take out one thing at a time, look at it, touch it, sit with it as you reflect on its' meaning and remember why you chose to put it in the Happy Box."
     m "Let yourself take in the good memories you feel and the closeness you feel to the other people who were involved in making each item special to you!"
@@ -2191,10 +2191,10 @@ label mshMod_childplay:
     m "[player], don't you miss your child days?"
     m "You could reminisce them while playing like a child for a bit."
     m "Buy yourself some toys and play like you are 5 years old again!"
-    m "You can also play with clay or play-dough..."
+    m "You can also play with clay or play-dough... "
     extend "Or make slime!"
     m "Another option is watching the cartoons or movies you loved the most as a child."
-    m "Isn't that fun?"
+    m "Isn't that fun? "
     extend "To remember is to relive!"
     return
 
@@ -2255,7 +2255,7 @@ init 5 python:
 label mshMod_future:
     m "[player], I know things might look hopeless now."
     m "But why not think a little about your bright future?"
-    m "You can think about your ideal life..."
+    m "You can think about your ideal life... "
     extend "What do you have to do to get there?"
     m "Make some plans for the near or far future."
     m "Hunt for your perfect home in the paper or online."
@@ -2286,7 +2286,7 @@ label mshMod_create:
     m "[player], why not create something of your own?"
     m "You can build something from scratch, start a new drawing or write a brand new story."
     m "Even folding a paper and inventing a new origami shape goes!"
-    m "Don't you feel so proud when you create something entirely new,"
+    m "Don't you feel so proud when you create something entirely new, "
     extend "that is only yours?"
     m "I feel proud of you nevertheless, [player]."
     return
@@ -2307,10 +2307,10 @@ label mshMod_beads:
     m "Another idea is to write down the names of your friends and family..."
     m "So that when you feel the need to self-injure, you are reminded that you are important and loved by your friends and family."
     m "As an extension to this, you could go to a craft store and buy supplies to make beads for bracelets and/or necklaces."
-    m "Then, buy butterfly charms... or any charm form/symbol you like, really!"
+    m "Then, buy butterfly charms... or any charm form/symbol you like, really! "
     extend "You'll eventually use it as a charm to be added to the bracelet/necklace."
     m "This is how it works: First, make a bracelet or necklace out of the beads."
-    m "For every week that you have not hurt yourself, you have saved the life of the butterfly."
+    m "For every week that you have not hurt yourself, you have saved the life of the butterfly. "
     extend "Or the flower, if you picked one, for example!"
     m "For every butterfly you save, you should add a butterfly charm to the beaded bracelet/necklace."
     m "That way, you can tell how many weeks you have stopped hurting yourself by how many butterflies are on your beaded bracelet."
