@@ -3,7 +3,7 @@
     "version": 3,
     "type": 0,
     "name": "sh_acs_fell_and_otter_sunflower_necklace",
-    "img_sit": "sh_mysticcg_sunflower_necklace",
+    "img_sit": "sh_fell_sunflower_necklace",
     "pose_map": {
         "default": "0",
         "l_default": "5"
