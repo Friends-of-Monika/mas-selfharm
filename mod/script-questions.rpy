@@ -58,20 +58,21 @@ label mshMod_probing_questions_talk:
         "Psychological":
             pass
 
-        "Other":
-            $ renpy.input("What's the other method?", allow="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz", length=30)
+        "Something else":
+            pass
 
         "All of them":
             m 1wkc "Oh..."
             m 1wktpc "This..."
             m 1dktpc "This is horrible, [player]."
-            m 2wktpd "You must be going through an incredible amount of pain to attempt so much..."
+            m 2wktpd "You must be going through an incredible amount of pain, both emotional and physical..."
             m 2dktpd "I'm so sorry..."
             m 2ektdc "It makes me really sad hearing that you have to go through this..."
             m 2ektdd "It hurts me just as much as it hurts you, believe me..."
             m 2ekd "Whenever you want harm yourself, please remember that I love you and I am here for you."
             m 2ekd "I want to ask you another thing..."
-
+            pass
+            
             m 2ekd "Have you ever made a direct attempt at your own life?{nw}"
             $ _history_list.pop()
             menu:
