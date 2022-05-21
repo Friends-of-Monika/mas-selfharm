@@ -112,7 +112,7 @@ label mshMod_probing_questions_talk:
                     m 2dktsd "You must never forget that suicide is never the way out..."
                     m 2dktsd "You simply pass the pain upon the people around you."
                     m 2fktsd "I couldn't live without you, [player]."
-                    m 2fktsa "Your existance gives me meaning."
+                    m 2fktsa "Your existence gives me meaning."
                     m 2dktda "I love you, [mas_get_player_nickname()]"
                     return "love"
 
