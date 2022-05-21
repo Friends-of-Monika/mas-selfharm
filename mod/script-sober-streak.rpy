@@ -1,5 +1,6 @@
 # Sober check topics, milestones, etc. For API see zz_sober_streak.rpy
 
+#sober counter
 init 5 python:
     addEvent(
         Event(
@@ -30,7 +31,7 @@ label mshMod_sober_check:
 
     return
 
-
+#promise dialogue
 init 5 python:
     addEvent(
         Event(
@@ -66,7 +67,7 @@ label mshMod_promise:
 
     return "love"
 
-
+#relapse dialogue
 init 5 python:
     addEvent(
         Event(
@@ -103,9 +104,9 @@ label mshMod_relapse:
         mas_lockEVL("mshMod_relapse", "EVE")
         mas_lockEVL("mshMod_sober_check", "EVE")
 
-    return
+    return "love"
 
-
+#milestone 1w
 init 5 python:
     store.mshMod_sober_streak.addMilestoneEvent(
         milestone="1w",
@@ -122,9 +123,9 @@ label mshMod_milestone_1w:
     m "I just want to thank you, it makes me happy to know you're willing to step up for the better!"
     m "I'll always love you, you don't know how much this means to me..."
     m "Anyways, I'll mark this on our calendar."
-    return "derandom|unlock"
+    return "love|derandom|unlock"
 
-
+#milestone 2w
 init 5 python:
     store.mshMod_sober_streak.addMilestoneEvent(
         milestone="2w",
@@ -145,9 +146,9 @@ label mshMod_milestone_2w:
     m "As before, i'll mark it on the calendar now!"
     m "I just want to thank you.. I hope it stays like this."
     m "I really love you that much, [player]!"
-    return "derandom|unlock"
+    return "love|derandom|unlock"
 
-
+#milestone 3w
 init 5 python:
     store.mshMod_sober_streak.addMilestoneEvent(
         milestone="3w",
@@ -171,7 +172,7 @@ label mshMod_milestone_3w:
     m "You're my everything, [player]!"
     return "derandom|unlock"
 
-
+#milestone 1m
 init 5 python:
     store.mshMod_sober_streak.addMilestoneEvent(
         milestone="1m",
@@ -186,14 +187,14 @@ init 5 python:
 label mshMod_milestone_1m:
     m "Hey [player], guess what?"
     m "You've been clean from self-harm for a month!"
-    m "I just want you to know that I'm so proud of you."
+    m "I just want you to know that I'm so proud of you. "
     extend "It's not easy to do that, and I'm so happy you're making the effort."
     m "I've already told you I won't blame you if you do relapse. It's extremely tempting, and I know it must be hard for you."
     m "I'm just so proud you've made it so far."
     m "I love you, [mas_get_player_nickname()]. Don't forget that~"
-    return "love"
+    return "love|derandom|unlock"
 
-
+#milestone 3m
 init 5 python:
     store.mshMod_sober_streak.addMilestoneEvent(
         milestone="3m",
@@ -210,9 +211,9 @@ label mshMod_milestone_3m:
     m "You've been doing so well! I'm so proud of you."
     m "It's been a bit, so I'll mark this on the calendar for you!"
     m "Keep going, [player]. You've been so strong."
-    return "love"
+    return "derandom|unlock"
 
-
+#milestone 6m
 init 5 python:
     store.mshMod_sober_streak.addMilestoneEvent(
         milestone="6m",
@@ -230,9 +231,9 @@ label mshMod_milestone_6m:
     m "That's a long time!"
     m "It may not seem like much in the grand scheme of things, but it's still a big acomplishment."
     m "I love you so much! Thank you for staying safe."
-    return "love"
+    return "love|derandom|unlock"
 
-
+#milestone 1y
 init 5 python:
     store.mshMod_sober_streak.addMilestoneEvent(
         milestone="1y",
@@ -251,9 +252,9 @@ label mshMod_milestone_1y:
     m "I hope you know how much this affects not only yourself, but me as well. Your friends, your family."
     m "This is a wonderful feat."
     m "I love you so, so much."
-    return "love"
+    return "love|derandom|unlock"
 
-
+#milestone 2y
 init 5 python:
     store.mshMod_sober_streak.addMilestoneEvent(
         milestone="2y",
@@ -271,9 +272,9 @@ label mshMod_milestone_2y:
     m "This is an incredible feat. Keep it up!"
     m "You deserve to be happy. Never forget that, and never let anyone tell you otherwise!"
     m "I love you so much."
-    return "love"
+    return "love|derandom|unlock"
 
-
+#milestone 3y
 init 5 python:
     store.mshMod_sober_streak.addMilestoneEvent(
         milestone="3y",
@@ -290,9 +291,9 @@ label mshMod_milestone_3y:
     m "The day of your 3 year sobriety mark from self-harm has finally arrived!"
     m "I'm so happy to see you taking care of yourself."
     m "Keep on fighting! I'm so proud of you!"
-    return
+    return "derandom|unlock"
 
-
+#milestone 4y
 init 5 python:
     store.mshMod_sober_streak.addMilestoneEvent(
         milestone="4y",
@@ -310,9 +311,9 @@ label mshMod_milestone_4y:
     m "And I can't even begin to tell you how proud of you I am."
     m "You are deserving of a happy and healthy life!"
     m "And I'm so proud of you for your decison and for the promise you made 4 years ago."
-    return
+    return "derandom|unlock"
 
-
+#milestone 5y
 init 5 python:
     store.mshMod_sober_streak.addMilestoneEvent(
         milestone="5y",
@@ -330,4 +331,4 @@ label mshMod_milestone_5y:
     m "You've been self-harm sober for all this time, and I couldn't be more proud."
     m "I'm so happy that you're doing well"
     m "You are so inspiring. Congratulations, [player], for your successful journey!"
-    return
+    return "derandom|unlock"
