@@ -3,14 +3,14 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_mhflowers_sunflowers",
+            eventlabel="mshMod_topic_sunflowers",
             prompt="Sunflowers",
             category=["Mental health flowers"],
             random=True
         )
     )
 
-label mshMod_mhflowers_sunflowers:
+label mshMod_topic_sunflowers:
     m "[player], today I want to talk to you about a flower."
     m "Sunflowers, specifically!"
     m "They always make me think of Sayori..."
@@ -34,19 +34,20 @@ label mshMod_mhflowers_sunflowers:
     m "Thanks for listening, [mas_get_player_nickname()]!"
     return
 
+
 #acacias
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_mhflowers_acacias",
+            eventlabel="mshMod_topic_acacias",
             prompt="Acacias",
             category=["Mental health flowers"],
             random=True
         )
     )
 
-label mshMod_mhflowers_acacias:
+label mshMod_topic_acacias:
     m "[player], can I tell you some facts about a flower?"
     m "Today we'll talk about the acacia."
     m "Acacias are also known as wattles, wattleseed, and embers, and can represent the immortality of the human soul."
@@ -65,19 +66,20 @@ label mshMod_mhflowers_acacias:
     m "Thanks for listening, [mas_get_player_nickname()]!"
     return
 
+
 #hyacinths
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_mhflowers_hyacinths",
+            eventlabel="mshMod_topic_hyacinths",
             prompt="Hyacinths",
             category=["Mental health flowers"],
             random=True
         )
     )
 
-label mshMod_mhflowers_hyacinths:
+label mshMod_topic_hyacinths:
     m "[player], let's talk about a flower today?"
     m "Hyacinths! The optimistic flower."
     m "They are even mentioned my T.S Elliot in a poem called 'The Waste Land'."
@@ -103,19 +105,20 @@ label mshMod_mhflowers_hyacinths:
     m "Thanks for listening, [mas_get_player_nickname()]!"
     return "love"
 
+
 #white dahlias
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_mhflowers_whitedahlias",
+            eventlabel="mshMod_topic_whitedahlias",
             prompt="White Dahlias",
             category=["Mental health flowers"],
             random=True
         )
     )
 
-label mshMod_mhflowers_whitedahlias:
+label mshMod_topic_whitedahlias:
     m "[player], I've been thinking about a flower."
     m "Dahlias! "
     extend "They symbolize eternal bonds of commitment, so they are a popular flower of choice for weddings."
@@ -142,19 +145,20 @@ label mshMod_mhflowers_whitedahlias:
     m "Thanks for listening, [mas_get_player_nickname()]!"
     return
 
+
 #flannel flowers
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_mhflowers_flannelflowers",
+            eventlabel="mshMod_topic_flannelflowers",
             prompt="Flannel Flowers",
             category=["Mental health flowers"],
             random=True
         )
     )
 
-label mshMod_mhflowers_flannelflowers:
+label mshMod_topic_flannelflowers:
     m "[player]! Have you ever seen a flannel flower?"
     m "They're gorgeous flowers which feel like flannel when you touch them!"
     m "The Flannel Flower, an Australian native, has been chosen as the national symbol to promote mental health awareness in Australia."
@@ -169,23 +173,24 @@ label mshMod_mhflowers_flannelflowers:
     m "Thanks for listening, [mas_get_player_nickname()]!"
     return
 
+
 #lotus flowers
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_mhflowers_lotusflower",
+            eventlabel="mshMod_topic_lotusflower",
             prompt="Lotus Flowers",
             category=["Mental health flowers"],
             random=True
         )
     )
 
-label mshMod_mhflowers_lotusflower:
+label mshMod_topic_lotusflower:
     m "[player], do you like lotus flowers?"
     m "I think they're so beautiful! "
     extend "And also so full of symbolism."
-    m "Generally speaking, the flower is a symbol of rebirth..." 
+    m "Generally speaking, the flower is a symbol of rebirth..."
     m "Because it blooms in darkness and becomes a beautiful flower with delicate white and pink petals."
     m "In much the same way, humans are born from nothingness and grow into something beautiful and delicate!"
     m "The Lotus flower is a very resilient species! "
@@ -199,12 +204,12 @@ label mshMod_mhflowers_lotusflower:
     m "This can be a metaphor for how difficult it is to struggle with a mental illness."
     m "Sometimes, it can seem like running a race you can’t win."
     m "However, giving up is the worst possible option because it doesn’t allow you to grow."
-    m "If mud didn’t exist, neither would the lotus. " 
+    m "If mud didn’t exist, neither would the lotus. "
     extend "Likewise, if bad situations didn’t exist, resilient people wouldn’t either."
-    m "No mud, no lotus,"
+    m "No mud, no lotus, "
     extend "you see?"
     m "Our struggles enhance our natural inner strength, and that is surely something to be proud of."
-    m "Like the lotus, if you can try your hardest to see the faint light and beauty of day through murky waters..." 
+    m "Like the lotus, if you can try your hardest to see the faint light and beauty of day through murky waters..."
     m "Then you will soon rise above your circumstances and bask in the sun."
     m "Your struggles will transform you into a unwavering flower, [player]."
     m "Believe your girlfriend's words! "
