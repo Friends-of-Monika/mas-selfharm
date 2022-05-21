@@ -32,6 +32,9 @@ label mshMod_checkup_intro:
     m "Meaning, how have you been feeling, this week, in a scale of 1 to 10!"
     m "This will help me be more aware and sensitive of your needs and your feelings."
     m "After all, I care about you so much and I love you sooooo much!"
+    
+    $ mas_protectedShowEVL("mshMod_checkup_reminder","EVE", _random=True)
+
     return "derandom|love"
 
 
@@ -41,7 +44,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_checkup_reminder",
-            random=True,
+            random=False,
             rules={"force repeat": None}
         )
     )
