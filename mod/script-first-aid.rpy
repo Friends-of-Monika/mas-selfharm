@@ -1,5 +1,6 @@
 # Fist aid topics.
 
+#first aid intro
 init 5 python:
     addEvent(
         Event(
@@ -22,6 +23,7 @@ label mshMod_first_aid_intro:
     return "derandom|no_unlock"
 
 
+#first aid guide
 init 5 python:
     addEvent(
         Event(
