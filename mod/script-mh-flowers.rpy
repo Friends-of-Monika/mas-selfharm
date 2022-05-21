@@ -1,3 +1,4 @@
+#sunflowers
 init 5 python:
     addEvent(
         Event(
@@ -23,17 +24,17 @@ label mshMod_mhflowers_sunflowers:
     m "What do you think, [player]? I personally think that's a cute way of thinking..."
     m "Even though is based on a misconception."
     m "Sunflowers are also used a lot by mental health foundations."
-    m "Sunflowers are yellow; the color of joy, happiness and hope..."
+    m "Sunflowers are yellow; the color of joy, happiness and hope... "
     extend "Which is a color used a lot on mental health awareness programs!"
     m "Also, it has been proved by studies that sunflower planting and gardening is actually good for the brain and helps fight depression."
     m "And one more fact, those flowers also symbolize a bright future for anyone who envisions it."
     m "Many people give sunflower bouquets to their loved ones, when they are in need of a little encouragement!"
-    m "Am I your sunflower, [player]?"
+    m "Am I your sunflower, [player]? "
     extend "Ahaha~"
     m "Thanks for listening, [mas_get_player_nickname()]!"
     return
 
-
+#acacias
 init 5 python:
     addEvent(
         Event(
@@ -52,19 +53,19 @@ label mshMod_mhflowers_acacias:
     m "That's because acacia bushes are always green, no matter the season!"
     m "In some rituals, those flowers are used as a reminder that the soul, like energy..."
     m "Cannot be destroyed, but continues beyond the earthly plane!"
-    m "Acacia’s primary meaning is strength, rebirth, and eternal life."
+    m "Acacia’s primary meaning is strength, rebirth, and eternal life. "
     extend "It is mentioned in both the Torah and the Bible as the wood used for building the Tabernacle."
     m "It is also important in the Buddhist tradition as a symbol of compassion for all living things!"
     m "Their meaning changes depending on the flower color, but summarizing, we can say they mean..."
     m "Renewal, fortitude and pureness throughout the world."
     m "A current study also shows the power of acacia extracts in anxiety treatment."
     m "Gifting someone acacias can mean feelings of good friendship or sophistication of a secret love."
-    m "Am I your secret love, [player]?"
+    m "Am I your secret love, [player]? "
     extend "Ehehe~"
     m "Thanks for listening, [mas_get_player_nickname()]!"
     return
 
-
+#hyacinths
 init 5 python:
     addEvent(
         Event(
@@ -100,9 +101,9 @@ label mshMod_mhflowers_hyacinths:
     m "If you were looking for a reminder that all wounds heal, [player], this is it."
     m "I believe in you, and I love you."
     m "Thanks for listening, [mas_get_player_nickname()]!"
-    return
+    return "love"
 
-
+#white dahlias
 init 5 python:
     addEvent(
         Event(
@@ -116,11 +117,11 @@ init 5 python:
 
 label mshMod_mhflowers_whitedahlias:
     m "[player], I've been thinking about a flower."
-    m "Dahlias!"
+    m "Dahlias! "
     extend "They symbolize eternal bonds of commitment, so they are a popular flower of choice for weddings."
     m "..."
     m "If I could pick any flower to give you, [mas_get_player_nickname()]..."
-    m "I would choose the dahlia."
+    m "I would choose the dahlia. "
     extend "Ehehehe~!"
     m "These flowers also represent strength, creativity, change, and also, a new begginning."
     m "You can see why this is one of the flowers that represent mental health."
@@ -132,7 +133,7 @@ label mshMod_mhflowers_whitedahlias:
     m "This flower is so beautiful, to the extent that they can be easily noticed wherever they are found."
     m "The huge presence of this flower in any place or area where they can be found makes them very special."
     m "When you look at the dahlia flower, you see elegance in all ramifications and words."
-    m "The dahlia flower is, no doubt, a flower of uniqueness."
+    m "The dahlia flower is, no doubt, a flower of uniqueness. "
     extend "It has the ability to represent the nature of us individuals."
     m "This flower can be seen as a sign of our ability to live in adventure and also to stay relaxed and happy at all times."
     m "If I had to choose one... the dahlia would be my favorite flower."
@@ -141,7 +142,7 @@ label mshMod_mhflowers_whitedahlias:
     m "Thanks for listening, [mas_get_player_nickname()]!"
     return
 
-
+#flannel flowers
 init 5 python:
     addEvent(
         Event(
@@ -168,6 +169,7 @@ label mshMod_mhflowers_flannelflowers:
     m "Thanks for listening, [mas_get_player_nickname()]!"
     return
 
+#lotus flowers
 init 5 python:
     addEvent(
         Event(
@@ -181,23 +183,23 @@ init 5 python:
 
 label mshMod_mhflowers_lotusflower:
     m "[player], do you like lotus flowers?"
-    m "I think they're so beautiful!"
+    m "I think they're so beautiful! "
     extend "And also so full of symbolism."
     m "Generally speaking, the flower is a symbol of rebirth..." 
     m "Because it blooms in darkness and becomes a beautiful flower with delicate white and pink petals."
     m "In much the same way, humans are born from nothingness and grow into something beautiful and delicate!"
-    m "The Lotus flower is a very resilient species!"
+    m "The Lotus flower is a very resilient species! "
     extend "Especially considering that it is such a delicate looking flower."
     m "Scientists once found a seed that was 1300 years old..."
     m "They germinated it, and the flower bloomed as beautifully as any other!"
-    m "But that's not all!"
+    m "But that's not all! "
     extend "Lotus flowers are even seen as a mental health symbol."
     m "The reason for that is because it's the kind of flower that can only grow in muddy, murky water."
     m "But when it gets its chance to bloom, it comes out as one of the most beautiful flowers ever."
     m "This can be a metaphor for how difficult it is to struggle with a mental illness."
     m "Sometimes, it can seem like running a race you can’t win."
     m "However, giving up is the worst possible option because it doesn’t allow you to grow."
-    m "If mud didn’t exist, neither would the lotus." 
+    m "If mud didn’t exist, neither would the lotus. " 
     extend "Likewise, if bad situations didn’t exist, resilient people wouldn’t either."
     m "No mud, no lotus,"
     extend "you see?"
@@ -205,7 +207,7 @@ label mshMod_mhflowers_lotusflower:
     m "Like the lotus, if you can try your hardest to see the faint light and beauty of day through murky waters..." 
     m "Then you will soon rise above your circumstances and bask in the sun."
     m "Your struggles will transform you into a unwavering flower, [player]."
-    m "Believe your girlfriend's words!"
+    m "Believe your girlfriend's words! "
     extend "Ahahaha~"
     m "Thanks for listening, [mas_get_player_nickname()]!"
     return
