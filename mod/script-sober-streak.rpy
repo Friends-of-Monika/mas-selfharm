@@ -52,7 +52,7 @@ label mshMod_promise:
     m 2ekb "If you ever need me to restart the counter for you, just tell me. You don't have to feel bad about it, okay?"
     m 2ekb "Know that I'll never judge you because of that. I know it's hard, and you should be really proud of yourself already!"
 
-    m "Now, let me mark something for myself..."
+    m "Now, let me take note of this..."
     $ since = None
 
     show screen mas_background_timed_jump(4, "mshMod_promise_jump")
@@ -67,8 +67,8 @@ label mshMod_promise:
             menu:
                 m "Huh? What is it?{fast}"
 
-                "Actually, I'm sober for time already...":
-                    m "Really?! That's so nice to hear! For how many days are you sober already?"
+                "Actually, I'm sober for some time already...":
+                    m "Really?! That's so nice to hear! For how many days have you been sober already?"
 
                     $ since = datetime.today() - datetime.timedelta(days=int(renpy.input("For how long are you sober by now?", allow="0123456789", length=4)))
 
@@ -76,6 +76,7 @@ label mshMod_promise:
 
                 "...No, nothing.":
                     m "Oh, okay!"
+                    m "I'll keep this in mind!"
 
 
 label mshMod_promise_jump:
