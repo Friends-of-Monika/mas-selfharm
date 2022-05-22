@@ -51,14 +51,41 @@ label mshMod_promise:
     m 1eub "From now on, I'll keep track of how many days you've been sober. You can take a look at the calendar to see how far you've gone!"
     m 2ekb "If you ever need me to restart the counter for you, just tell me. You don't have to feel bad about it, okay?"
     m 2ekb "Know that I'll never judge you because of that. I know it's hard, and you should be really proud of yourself already!"
-    m 2dka "..."
+
+    m "Now, let me mark something for myself..."
+    $ since = None
+
+    show screen mas_background_timed_jump(4, "mshMod_promise_jump")
+    m 2dka "...{nw}"
+    menu:
+        m "...{fast}"
+
+        "Wait, hold up!":
+            hide screen mas_background_timed_jump
+
+            m "Huh? What is it?{nw}"
+            menu:
+                m "Huh? What is it?{fast}"
+
+                "Actually, I'm sober for time already...":
+                    m "Really?! That's so nice to hear! For how many days are you sober already?"
+
+                    $ since = datetime.today() - datetime.timedelta(days=int(renpy.input("For how long are you sober by now?", allow="0123456789", length=4)))
+
+                    m "Okay! I'll keep that in mind~"
+
+                "...No, nothing.":
+                    m "Oh, okay!"
+
+
+label mshMod_promise_jump:
     m 5ekbsb "I love you, [mas_get_player_nickname()]."
     m 5dkbsb "Never forget that!"
 
     python:
         # Begin streak and hide this event from the pool.
         # mshMod_relapse and mshMod_sober_check will pop up shortly afterwards.
-        store.mshMod_sober_streak.beginStreak()
+        store.mshMod_sober_streak.beginStreak(since=since)
         mas_showEVL("mshMod_sober_check", "EVE", _pool=True, unlock=True)
         mas_hideEVL("mshMod_promise", "EVE", depool=True)
 
