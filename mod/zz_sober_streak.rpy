@@ -86,16 +86,20 @@ init 4 python in mshMod_sober_streak:
 
         return (datetime.date.today() - store.persistent._msh_mod_pm_sober_streak).days
 
-    def beginStreak():
+    def beginStreak(begin=None):
         """
         Begins streak if player is not on it already.
 
         NOTE: This function asserts player is not on sober streak.
+
+        IN:
+            begin - date instance to begin streak with. If None,
+                then date.today() is used (default.)
         """
 
         _assertNotOnStreak()
 
-        store.persistent._msh_mod_pm_sober_streak = datetime.date.today()
+        store.persistent._msh_mod_pm_sober_streak = (begin or datetime.date.today())
         _rebuildMilestoneDates()
 
     def endStreak():
