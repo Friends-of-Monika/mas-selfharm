@@ -7,13 +7,14 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_meta_selfharm_intro",
+            eventlabel="mshMod_topic_selfharm_intro",
             aff_range=(mas_aff.NORMAL, None),
-            random=True
+            random=True,
+            rules={"bookmark_rule": mas_bookmarks_derand.BLACKLIST}
         )
     )
 
-label mshMod_meta_selfharm_intro:
+label mshMod_topic_selfharm_intro:
     m "Hey, [player]?"
     m "I know it might be an uncomfortable topic, but I have to ask..."
 
@@ -76,7 +77,7 @@ label mshMod_meta_selfharm_intro:
             m "You know how much I care about you! But if you don't feel like talking about it, I'll understand!"
             m "It's quite a varied topic so it's going to take a while."
 
-            $ mas_unlockEVL("mshMod_meta_selfharm_more", "EVE")
+            $ mas_unlockEVL("mshMod_topic_selfharm_more", "EVE")
 
             m "Do you have the time to listen right now?{nw}"
             $ _history_list.pop()
@@ -84,7 +85,7 @@ label mshMod_meta_selfharm_intro:
                 m "Do you have the time to listen right now?{fast}"
 
                 "Yes":
-                    $ pushEvent("mshMod_meta_selfharm_more", skipeval=True)
+                    $ pushEvent("mshMod_topic_selfharm_more", skipeval=True)
 
                 "No":
                     m "Oh..."
@@ -101,7 +102,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_meta_selfharm_more",
+            eventlabel="mshMod_topic_selfharm_more",
             category=["self-Harm"],
             prompt="I want to learn more about self harm.",
             pool=True,
@@ -110,7 +111,7 @@ init 5 python:
         )
     )
 
-label mshMod_meta_selfharm_more:
+label mshMod_topic_selfharm_more:
     m "Great!"
     m "Knowing more about self-harm is really useful."
     m "You could help someone who is struggling with it someday!"
