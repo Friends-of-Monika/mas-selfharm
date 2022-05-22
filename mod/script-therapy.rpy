@@ -1,12 +1,12 @@
 # Topics about therapy, here we set visits_therapist PM variable.
 
-#question about therapy
+# Question about therapy
 default persistent._msh_mod_pm_visits_therapist = None
 
-init -100 python:
-    mshMod_VISITS_THERAPIST = 0
-    mshMod_DOES_NOT_VISIT_THERAPIST = 1
-    mshMod_CONSIDERING_VISITING_THERAPIST = 2
+init -100 python in mshMod_therapy:
+    VISITS_THERAPIST = 0
+    DOES_NOT_VISIT_THERAPIST = 1
+    CONSIDERING_VISITING_THERAPIST = 2
 
 init 5 python:
     addEvent(
@@ -33,7 +33,7 @@ label mshMod_ask_about_therapy:
         m "You know, to talk about your struggles and stuff.{fast}"
 
         "Yes, I do.":
-            $ persistent._msh_mod_pm_visits_therapist = mshMod_VISITS_THERAPIST
+            $ persistent._msh_mod_pm_visits_therapist = mshMod_therapy.VISITS_THERAPIST
 
             m 1hua "That's great, [player]!"
             m 3eub "Therapy is a great tool, it really helps to have a professional opinion on things."
@@ -42,7 +42,7 @@ label mshMod_ask_about_therapy:
             m 1hua "Maybe you can teach me what you've learned there!"
 
         "No, I don't.":
-            $ persistent._msh_mod_pm_visits_therapist = mshMod_DOES_NOT_VISIT_THERAPIST
+            $ persistent._msh_mod_pm_visits_therapist = mshMod_therapy.DOES_NOT_VISIT_THERAPIST
 
             m 1ekc "Oh..."
             m 1ekc "That's alright [player]! It's not for everyone."
@@ -52,7 +52,7 @@ label mshMod_ask_about_therapy:
             m 1ekc "Don't be afraid to find a therapist if you think you need one."
 
         "I'm considering it. What do you think?":
-            $ persistent._msh_mod_pm_visits_therapist = mshMod_CONSIDERING_VISITING_THERAPIST
+            $ persistent._msh_mod_pm_visits_therapist = mshMod_therapy.CONSIDERING_VISITING_THERAPIST
 
             m 2eua "Well, thanks for asking my opinion!"
             m 3euc "Actually, I think you should."
@@ -62,20 +62,20 @@ label mshMod_ask_about_therapy:
 
     return "no_unlock|derandom"
 
-#random dialogue about therapy
+# Random dialogue about therapy
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_thoughts_about_therapy",
+            eventlabel="mshMod_topic_thoughts_about_therapy",
             category=["monika", "life", "self-Harm"],
-            prompt="Thoughts about therapy",
+            prompt="Therapy",
             conditional="persistent._msh_mod_pm_did_selfharm",
             action=EV_ACT_RANDOM
         )
     )
 
-label mshMod_thoughts_about_therapy:
+label mshMod_topic_thoughts_about_therapy:
     m 1eud "Hey [player], there's something I've been thinking about a lot."
     m 3eub "Therapy!"
     m 2ekc "There's a lot of stigma around therapy in modern society."
