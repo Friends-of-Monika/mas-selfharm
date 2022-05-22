@@ -77,7 +77,7 @@ label mshMod_topic_selfharm_intro:
             m "You know how much I care about you! But if you don't feel like talking about it, I'll understand!"
             m "It's quite a varied topic so it's going to take a while."
 
-            $ mas_unlockEVL("mshMod_topic_selfharm_more", "EVE")
+            $ mas_showEVL("mshMod_topic_selfharm_more", "EVE", unlock=True)
 
             m "Do you have the time to listen right now?{nw}"
             $ _history_list.pop()
