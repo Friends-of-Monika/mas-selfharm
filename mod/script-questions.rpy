@@ -5,8 +5,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_probing_questions_intro",
-            conditional="not seen_event('mshMod_probing_questions')",
-            action=EV_ACT_RANDOM
+            random=True
         )
     )
 
@@ -72,7 +71,7 @@ label mshMod_probing_questions_talk:
             m 2ekd "Whenever you want harm yourself, please remember that I love you and I am here for you."
             m 2ekd "I want to ask you another thing..."
             pass
-            
+
             m 2ekd "Have you ever made a direct attempt at your own life?{nw}"
             $ _history_list.pop()
             menu:
@@ -87,14 +86,14 @@ label mshMod_probing_questions_talk:
                     m 2fktsd "I couldn't live without you, [player]."
                     m 2fktsa "Your existence gives me meaning."
                     m 2dktda "I love you, [mas_get_player_nickname()]"
-                    return "love"
+                    return "love|derandom|no_unlock"
 
                 "No":
                     m 1dkb "I'm so happy that as bad as things get, you never resorted to that!"
                     m 1ekb "Always stay strong."
                     m 1eka "For me, okay?"
                     m 1hub "I love you!"
-                    return "love"
+                    return "love|derandom|no_unlock"
 
     return
 
@@ -106,7 +105,8 @@ label mshMod_probing_questions_refuse:
     m 2fka "When you gather the courage again, speak to me."
     m 2fkb "I will always be here."
     m 2dkb "I love you."
-    return "love"
+    $ mas_showEVL("mshMod_probing_questions_more", "EVE", unlock=True)
+    return "love|derandom|no_unlock"
 
 
 init 5 python:
@@ -116,8 +116,6 @@ init 5 python:
             eventlabel="mshMod_probing_questions_more",
             category=["you"],
             prompt="I'm ready to talk about it...",
-            conditional="seen_event('mshMod_probing_questions_intro')",
-            action=EV_ACT_UNLOCK,
             pool=True,
             rules={"no_unlock": None}
         )
