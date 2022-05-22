@@ -13,5 +13,5 @@ echo "# Package submod"
 (cd build/out; find game | zip "msh-mod-$VERSION.zip" -9 -@)
 rm -r build/out/game
 
-echo "# Package spritepacks"
-.github/scripts/compile-spritepacks.sh
+# echo "# Package spritepacks"
+# .github/scripts/compile-spritepacks.sh
