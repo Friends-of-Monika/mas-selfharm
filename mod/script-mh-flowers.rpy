@@ -5,7 +5,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_topic_sunflowers",
             prompt="Sunflowers",
-            category=["Flowers"],
+            category=["flowers"],
             random=True
         )
     )
@@ -42,7 +42,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_topic_acacias",
             prompt="Acacias",
-            category=["Flowers"],
+            category=["flowers"],
             random=True
         )
     )
@@ -74,7 +74,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_topic_hyacinths",
             prompt="Hyacinths",
-            category=["Flowers"],
+            category=["flowers"],
             random=True
         )
     )
@@ -113,7 +113,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_topic_whitedahlias",
             prompt="White Dahlias",
-            category=["Flowers"],
+            category=["flowers"],
             random=True
         )
     )
@@ -153,7 +153,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_topic_flannelflowers",
             prompt="Flannel Flowers",
-            category=["Flowers"],
+            category=["flowers"],
             random=True
         )
     )
@@ -181,7 +181,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_topic_lotusflower",
             prompt="Lotus Flowers",
-            category=["Flowers"],
+            category=["flowers"],
             random=True
         )
     )
