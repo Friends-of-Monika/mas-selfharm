@@ -102,6 +102,9 @@ init 4 python in mshMod_sober_streak:
         store.persistent._msh_mod_pm_sober_streak = (begin or datetime.date.today())
         _rebuildMilestoneDates()
 
+        # Show streak check event
+        mas_showEVL("mshMod_sober_check", "EVE", unlock=True)
+
     def endStreak():
         """
         Ends streak if player is on it.
@@ -126,7 +129,7 @@ init 4 python in mshMod_sober_streak:
         _updateMilestoneEvents()
 
         # Hide streak check event
-        mas_hideEVL("sober_check", "EVE")
+        mas_hideEVL("mshMod_sober_check", "EVE", lock=True)
 
     def hasPersonalBest():
         """
@@ -146,6 +149,10 @@ init 4 python in mshMod_sober_streak:
         """
 
         _assertHasPersonalBest()
+
+        # NOTE: removing repeatable from calendar HERE and not in _updateMilestoneEvents
+        # for sake of optimization; otherwise we'd have to perform a full scan.
+        store.mas_calendar.removeRepeatable("milestone_personal_best", store.persistent._msh_mod_pm_sober_personal_best[0])
 
         store.persistent._msh_mod_pm_sober_personal_best = None
         _updateMilestoneEvents()
@@ -517,19 +524,13 @@ init 4 python in mshMod_sober_streak:
         if store.persistent._msh_mod_pm_sober_personal_best is not None:
             since, days = persistent._msh_mod_pm_sober_personal_best
 
-            # NOTE: This is using full scan approach which is inefficient.
-            # TODO: Optimize.
-            store.mas_calendar.removeEvent_el("milestone_personal_best")
+            store.mas_calendar.removeRepeatable("milestone_personal_best", since)
 
             start_date, _ = _getPersonalBestDateTuple()
             calendar.addRepeatable_dt(
                 "milestone_personal_best", _("Sober streak, personal best"),
                 start_date, year_param=[start_date.year]
             )
-        else:
-            # NOTE: This is using full scan approach which is inefficient.
-            # TODO: Optimize.
-            store.mas_calendar.removeEvent_el("milestone_personal_best")
 
 
     ### UTILITIES ###
