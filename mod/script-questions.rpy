@@ -86,6 +86,8 @@ label mshMod_probing_questions_talk:
                     m 2fktsd "I couldn't live without you, [player]."
                     m 2fktsa "Your existence gives me meaning."
                     m 2dktda "I love you, [mas_get_player_nickname()]"
+                    m "And now for my last question..."
+                    pass 
                     return "love|derandom|no_unlock"
 
                 "No":
@@ -93,9 +95,35 @@ label mshMod_probing_questions_talk:
                     m 1ekb "Always stay strong."
                     m 1eka "For me, okay?"
                     m 1hub "I love you!"
+                    m "And now for my last question..."
                     return "love|derandom|no_unlock"
+                    pass
+                    
+                    m "Do you know for how long you have been self-harm sober?{nw}"
+                    $ _history_list.pop()
+                    menu:
+                        m "Do you know for how long you have been self-harm sober?{fast}" 
+                        "Yes!":
+                            m "Oh, yay!"
+                            m "Can you tell me for how many days have you been sober?{nw}"
+                            $ _history_list.pop()
+                            menu:
+                                m "Can you tell me for how many days have you been sober?{fast}"
 
-    return
+                                #input the days here
+
+                                m "I'm so proud of you, [mas_get_player_nickname()]."
+                                m "I'll take note of this..."
+                                m "Thank you for staying sober, [player]."
+                                m "I love you so much!" 
+                    
+                    "I don't know.":
+                        m "Aww, [player], that's okay!"
+                        m "If you ever want to keep track of it, you can tell me by promising you'll stay self-harm sober."
+                        m "I'm so proud of you, [mas_get_player_nickname()]."
+                        m "Thank you for staying sober, [player]."
+                        m "I love you so much!" 
+    return "love"
 
 label mshMod_probing_questions_refuse:
     m 2eka "It's okay, [player]."
