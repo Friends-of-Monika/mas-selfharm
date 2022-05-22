@@ -8,7 +8,8 @@ init 5 python:
             prompt="Can you remind me about my medication?",
             category=["self-Harm"],
             pool=True,
-            unlocked=True
+            unlocked=True,
+            rules={"bookmark_rule": mas_bookmarks_derand.WHITELIST}
         )
     )
 
@@ -72,7 +73,7 @@ init 5 python:
             prompt="You no longer need to remind me about medication.",
             category=["self-Harm"],
             pool=True,
-            rules={"no_unlock": None}
+            rules={"no_unlock": None, "bookmark_rule": mas_bookmarks_derand.WHITELIST}
         )
     )
 
