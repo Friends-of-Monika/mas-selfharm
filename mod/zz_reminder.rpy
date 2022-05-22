@@ -15,13 +15,13 @@ init 4 python in mshMod_reminder_utils:
         return (now + datetime.timedelta(days=1)).replace(hour=hours, minute=minutes) - now
 
     def getDailyMorningDelay():
-        return _getDailyDelay((10, 0))
+        return _getDailyDelay((10, 0))  # 10:00, 10am
 
     def getDailyAfternoonDelay():
-        return _getDailyDelay((18, 0))
+        return _getDailyDelay((18, 0))  # 18:00, 6pm
 
     def getDailyEveningDelay():
-        return _getDailyDelay((22, 0))
+        return _getDailyDelay((22, 0))  # 22:00, 10pm
 
 
 init 4 python in mshMod_reminder:
