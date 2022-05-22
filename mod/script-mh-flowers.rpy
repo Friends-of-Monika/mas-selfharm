@@ -1,11 +1,11 @@
-#sunflowers
+# Sunflowers
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
             eventlabel="mshMod_topic_sunflowers",
             prompt="Sunflowers",
-            category=["Mental health flowers"],
+            category=["Flowers"],
             random=True
         )
     )
@@ -35,14 +35,14 @@ label mshMod_topic_sunflowers:
     return
 
 
-#acacias
+# Acacias
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
             eventlabel="mshMod_topic_acacias",
             prompt="Acacias",
-            category=["Mental health flowers"],
+            category=["Flowers"],
             random=True
         )
     )
@@ -67,14 +67,14 @@ label mshMod_topic_acacias:
     return
 
 
-#hyacinths
+# Hyacinths
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
             eventlabel="mshMod_topic_hyacinths",
             prompt="Hyacinths",
-            category=["Mental health flowers"],
+            category=["Flowers"],
             random=True
         )
     )
@@ -106,14 +106,14 @@ label mshMod_topic_hyacinths:
     return "love"
 
 
-#white dahlias
+# White dahlias
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
             eventlabel="mshMod_topic_whitedahlias",
             prompt="White Dahlias",
-            category=["Mental health flowers"],
+            category=["Flowers"],
             random=True
         )
     )
@@ -146,14 +146,14 @@ label mshMod_topic_whitedahlias:
     return
 
 
-#flannel flowers
+# Flannel flowers
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
             eventlabel="mshMod_topic_flannelflowers",
             prompt="Flannel Flowers",
-            category=["Mental health flowers"],
+            category=["Flowers"],
             random=True
         )
     )
@@ -174,14 +174,14 @@ label mshMod_topic_flannelflowers:
     return
 
 
-#lotus flowers
+# Lotus flowers
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
             eventlabel="mshMod_topic_lotusflower",
             prompt="Lotus Flowers",
-            category=["Mental health flowers"],
+            category=["Flowers"],
             random=True
         )
     )
