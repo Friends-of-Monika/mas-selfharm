@@ -7,9 +7,8 @@ init 5 python:
             eventlabel="mshMod_medication_reminder_intro",
             prompt="Can you remind me about my medication?",
             category=["self-Harm"],
-            conditional="not store.mshMod_reminder.isReminderActive('mshMod_medication_reminder')",
-            action=EV_ACT_POOL,
-            pool=True
+            pool=True,
+            unlocked=True
         )
     )
 
@@ -55,6 +54,7 @@ label mshMod_medication_reminder_intro:
                 # Hide this event since we have set a reminder and no longer need
                 # it until player asks not to remind anymore.
                 mas_hideEVL("mshMod_medication_reminder_intro", "EVE", depool=True)
+                mas_showEVL("mshMod_medication_reminder_stop", "EVE", unlock=True)
 
         "Not now, [m_name].":
             m "Oh, alright!"
@@ -71,8 +71,8 @@ init 5 python:
             eventlabel="mshMod_medication_reminder_stop",
             prompt="You no longer need to remind me about medication.",
             category=["self-Harm"],
-            conditional="store.mshMod_reminder.isReminderActive('mshMod_medication_reminder')",
-            action=EV_ACT_POOL
+            pool=True,
+            rules={"no_unlock": None}
         )
     )
 
@@ -84,7 +84,8 @@ label mshMod_medication_reminder_stop:
         store.mshMod_reminder.stopReminder("mshMod_medication_reminder")
 
         # Hide this event as now we need to enable player to ask to remind again.
-        mas_hideEVL("mshMod_medication_reminder_stop", "EVE", depool=True)
+        mas_hideEVL("mshMod_medication_reminder_stop", "EVE", lock=True)
+        mas_showEVL("mshMod_medication_reminder_intro", "EVE", unlock=True)
 
     return
 
@@ -95,7 +96,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_medication_reminder",
             conditional="store.mshMod_reminder.shouldTriggerReminder('mshMod_medication_reminder')",
-            action=EV_ACT_PUSH,
+            action=EV_ACT_QUEUE,
             rules={"force repeat": None}
         )
     )
