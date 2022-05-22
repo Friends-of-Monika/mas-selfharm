@@ -601,7 +601,7 @@ init 7 python in mshMod_sober_streak:
         _rebuildMilestoneDates()
         _updateMilestoneEvents()
 
-    # store.mas_submod_utils.registerFunction("ch30_day", _dailyMilestoneUpdate)
+    store.mas_submod_utils.registerFunction("ch30_day", _dailyMilestoneUpdate)
 
 
     ### INITIAL APPLICATION OF MILESTONE EVENTS ###
