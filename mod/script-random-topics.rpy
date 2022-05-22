@@ -18,6 +18,14 @@ init 5 python:
         )
     )
 
+    # Derandom if time is no longer morning or afternoon
+    def _mshMod_maybe_derandom_sunny_day():
+        if not eval(mas_getEV("mshMod_topic_sunny_day").conditional):
+            mas_hideEVL("mshMod_topic_sunny_day", derandom=True)
+
+    mas_submod_utils.registerFunction("ch30_hour", _mshMod_maybe_derandom_sunny_day)
+    mas_submod_utils.registerFunction("ch30_reset", _mshMod_maybe_derandom_sunny_day)
+
 label mshMod_topic_sunny_day:
     m 1esa "Hey... [player]?"
     m 1rka "This may sound a bit random, but..."
