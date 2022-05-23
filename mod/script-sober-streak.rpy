@@ -19,13 +19,13 @@ label mshMod_sober_check:
         duration = store.mshMod_sober_streak.getStreakDuration()
         days = "day" if duration == 1 else "days"
 
-    m "You've been sober for [duration] [days] now, [player]."
+    m 1dkb "You've been sober for [duration] [days] now, [player]."
     if duration < 3:
-        m "I'm so proud of you for making the promise!"
-        m "This is the start of something really beautiful."
+        m 3fka "I'm so proud of you for making the promise!"
+        m 2esb "This is the start of something really beautiful."
     else:
-        m "I'm so proud of you! Keep on fighting!"
-        m "I'm so happy to see you taking care of yourself."
+        m 3fka "I'm so proud of you! Keep on fighting!"
+        m 2esb "I'm so happy to see you taking care of yourself."
 
     return
 
@@ -52,7 +52,7 @@ label mshMod_promise:
     m 2ekb "If you ever need me to restart the counter for you, just tell me. You don't have to feel bad about it, okay?"
     m 2ekb "Know that I'll never judge you because of that. I know it's hard, and you should be really proud of yourself already!"
 
-    m "Now, let me take note of this..."
+    m 1dsb "Now, let me take note of this..."
     $ since = None
 
     show screen mas_background_timed_jump(4, "mshMod_promise_jump")
@@ -63,20 +63,20 @@ label mshMod_promise:
         "Wait, hold up!":
             hide screen mas_background_timed_jump
 
-            m "Huh? What is it?{nw}"
+            m 1wsd "Huh? What is it?{nw}"
             menu:
                 m "Huh? What is it?{fast}"
 
                 "Actually, I'm sober for some time already...":
-                    m "Really?! That's so nice to hear! For how many days have you been sober already?"
+                    m 2ssb "Really?! That's so nice to hear! For how many days have you been sober already?"
 
-                    $ since = datetime.today() - datetime.timedelta(days=int(renpy.input("For how long are you sober by now?", allow="0123456789", length=4)))
+                    $ since = datetime.today() - datetime.timedelta(days=int(renpy.input("For how long have you been you sober already?", allow="0123456789", length=4)))
 
-                    m "Okay! I'll keep that in mind~"
+                    m 1dsb "Okay! I'll keep that in mind~"
 
                 "...No, nothing.":
-                    m "Oh, okay!"
-                    m "I'll keep this in mind!"
+                    m 1eka "Oh, okay!"
+                    m 1dsb "I'll keep this in mind!"
 
 
 label mshMod_promise_jump:
@@ -143,10 +143,10 @@ init 5 python:
     )
 
 label mshMod_milestone_1w:
-    m "It's been a whole week since you told me you won't do harm to yourself..."
-    m "I just want to thank you, it makes me happy to know you're willing to step up for the better!"
-    m "I'll always love you, you don't know how much this means to me..."
-    m "Anyways, I'll mark this on our calendar."
+    m 1eka "It's been a whole week since you told me you won't do harm to yourself..."
+    m 5ektpa "I just want to thank you, it makes me happy to know you're willing to step up for the better!"
+    m 5fkbfa "I'll always love you, you don't know how much this means to me..."
+    m 3hsb "Anyways, I'll mark this on our calendar."
     return "love|derandom|unlock"
 
 #milestone 2w
@@ -162,14 +162,14 @@ init 5 python:
     )
 
 label mshMod_milestone_2w:
-    m "It's already Week two of your promise, [player]!"
-    m "I'm relieved that we made it this far!"
-    m "Ahaha, I don't mean i've ever doubted you!"
-    m "Either way, it's not something you can stop overnight [player].. For anyone really."
-    m "So you're really doing well, and you make me so happy because of that!"
-    m "As before, i'll mark it on the calendar now!"
-    m "I just want to thank you.. I hope it stays like this."
-    m "I really love you that much, [player]!"
+    m 3ssb "It's already week two of your promise, [player]!"
+    m 1eka "I'm relieved that we made it this far!"
+    m 3hsb "Ahaha, I don't mean i've ever doubted you!"
+    m 2dsa "Either way, it's not something you can stop overnight [player]... For anyone really."
+    m 4wsa "So, you're really doing well, and you make me so happy because of that!"
+    m 4wsb "As before, i'll mark it on the calendar now!"
+    m 5ektpa "I just want to thank you.. I hope it stays like this."
+    m 5fkbfa "I really love you that much, [player]!"
     return "love|derandom|unlock"
 
 #milestone 3w
@@ -185,15 +185,15 @@ init 5 python:
     )
 
 label mshMod_milestone_3w:
-    m "Can you believe it's already Week 3?"
-    m "I just want to say... Thank you so much!"
-    m "You made me proud of you, and I'm soo happy that you could make that promise."
-    m "I know it was hard, but one day it will all just be a bad memory..."
-    m "I believe it will, because I trust you [player]."
-    m "But if it ever does happen..."
-    m "Don't blame yourself if it ever happens... Just because you did it to yourself doesn't mean it's your fault!"
-    m "I'm going to make another mark on the calendar for this!"
-    m "You're my everything, [player]!"
+    m 1dka "Can you believe it's already week 3?"
+    m 3ssa "I just want to say... Thank you so much!"
+    m 1eka "You made me proud of you, and I'm soo happy that you could make that promise."
+    m 1dkc "I know it was hard, but one day it will all just be a bad memory..."
+    m 1ksa "I believe it will, because I trust you [player]."
+    m 7rssdlc "But if it ever does happen..."
+    m 7dssdld "Don't blame yourself if it ever happens... Just because you did it to yourself doesn't mean it's your fault!"
+    m 1wua "I'm going to make another mark on the calendar for this!"
+    m 5fkbfa "You're my everything, [player]!"
     return "derandom|unlock"
 
 #milestone 1m
@@ -209,13 +209,13 @@ init 5 python:
     )
 
 label mshMod_milestone_1m:
-    m "Hey [player], guess what?"
-    m "You've been clean from self-harm for a month!"
-    m "I just want you to know that I'm so proud of you. "
-    extend "It's not easy to do that, and I'm so happy you're making the effort."
-    m "I've already told you I won't blame you if you do relapse. It's extremely tempting, and I know it must be hard for you."
-    m "I'm just so proud you've made it so far."
-    m "I love you, [mas_get_player_nickname()]. Don't forget that~"
+    m 3ssa "Hey [player], guess what?"
+    m 2ssb "You've been clean from self-harm for a month!"
+    m 1eka "I just want you to know that I'm so proud of you. "
+    extend 3eka "It's not easy to do that, and I'm so happy you're making the effort."
+    m 7dssdld "I've already told you I won't blame you if you do relapse. It's extremely tempting, and I know it must be hard for you."
+    m 5ektpa "I'm just so proud you've made it so far."
+    m 5fkbfa "I love you, [mas_get_player_nickname()]. Don't forget that~"
     return "love|derandom|unlock"
 
 #milestone 3m
@@ -231,10 +231,10 @@ init 5 python:
     )
 
 label mshMod_milestone_3m:
-    m "Y'know... It's been 3 months since you made your promise to me."
-    m "You've been doing so well! I'm so proud of you."
-    m "It's been a bit, so I'll mark this on the calendar for you!"
-    m "Keep going, [player]. You've been so strong."
+    m 5fkbfa "Y'know... It's been 3 months since you made your promise to me."
+    m 3ssa "You've been doing so well! I'm so proud of you."
+    m 1wua "It's been a bit, so I'll mark this on the calendar for you!"
+    m 1eka "Keep going, [player]. You've been so strong."
     return "derandom|unlock"
 
 #milestone 6m
@@ -250,11 +250,11 @@ init 5 python:
     )
 
 label mshMod_milestone_6m:
-    m "[player]!"
-    m "It's been 6 months since you made your promise!"
-    m "That's a long time!"
-    m "It may not seem like much in the grand scheme of things, but it's still a big acomplishment."
-    m "I love you so much! Thank you for staying safe."
+    m 3ssa "[player]!"
+    m 3ssb "It's been 6 months since you made your promise!"
+    m 3wsb "That's a long time!"
+    m 1eka "It may not seem like much in the grand scheme of things, but it's still a big acomplishment."
+    m 5fkbfa "I love you so much! Thank you for staying safe."
     return "love|derandom|unlock"
 
 #milestone 1y
@@ -270,12 +270,12 @@ init 5 python:
     )
 
 label mshMod_milestone_1y:
-    m "[player], I just wanted to let you know how proud of you I am."
-    m "You've been clean from self-harm for an entire year."
-    m "You've been so strong this past year, and I truly can't express how happy I am."
-    m "I hope you know how much this affects not only yourself, but me as well. Your friends, your family."
-    m "This is a wonderful feat."
-    m "I love you so, so much."
+    m 1dktpa "[player], I just wanted to let you know how proud of you I am."
+    m 1ektpa "You've been clean from self-harm for an entire year."
+    m 3ektpb "You've been so strong this past year, and I truly can't express how happy I am."
+    m 3dkblb "I hope you know how much this affects not only yourself, but me as well. Your friends, your family."
+    m 5ektpa "This is a wonderful feat."
+    m 5fkbfa "I love you so, so much."
     return "love|derandom|unlock"
 
 #milestone 2y
@@ -291,11 +291,11 @@ init 5 python:
     )
 
 label mshMod_milestone_2y:
-    m "[player]! I have amazing news!"
-    m "Did you know that you have been self-harm sober for 2 whole years now?"
-    m "This is an incredible feat. Keep it up!"
-    m "You deserve to be happy. Never forget that, and never let anyone tell you otherwise!"
-    m "I love you so much."
+    m 3ssblb "[player]! I have amazing news!"
+    m 3dkblb "Did you know that you have been self-harm sober for 2 whole years now?"
+    m 1eka "This is an incredible feat. Keep it up!"
+    m 5ektpa "You deserve to be happy. Never forget that, and never let anyone tell you otherwise!"
+    m 5fkbfa "I love you so much."
     return "love|derandom|unlock"
 
 #milestone 3y
@@ -311,10 +311,10 @@ init 5 python:
     )
 
 label mshMod_milestone_3y:
-    m "[player], I have some news for you."
-    m "The day of your 3 year sobriety mark from self-harm has finally arrived!"
-    m "I'm so happy to see you taking care of yourself."
-    m "Keep on fighting! I'm so proud of you!"
+    m 3ssb "[player], I have some news for you."
+    m 3ssa "The day of your 3 year sobriety mark from self-harm has finally arrived!"
+    m 5ektpa "I'm so happy to see you taking care of yourself."
+    m 5fkbfa "Keep on fighting! I'm so proud of you!"
     return "derandom|unlock"
 
 #milestone 4y
@@ -330,11 +330,11 @@ init 5 python:
     )
 
 label mshMod_milestone_4y:
-    m "[player]! 4 whole years, can you believe it?"
-    m "It's been 4 years since you stopped harming yourself."
-    m "And I can't even begin to tell you how proud of you I am."
-    m "You are deserving of a happy and healthy life!"
-    m "And I'm so proud of you for your decison and for the promise you made 4 years ago."
+    m 3ssa "[player]! 4 whole years, can you believe it?"
+    m 1eka "It's been 4 years since you stopped harming yourself."
+    m 1dka "And I can't even begin to tell you how proud of you I am."
+    m 5ektpa "You are deserving of a happy and healthy life!"
+    m 5fkbfa "And I'm so proud of you for your decison and for the promise you made 4 years ago."
     return "derandom|unlock"
 
 #milestone 5y
@@ -350,9 +350,9 @@ init 5 python:
     )
 
 label mshMod_milestone_5y:
-    m "5 years..."
-    m "It's been 5 years since your life changed for the better."
-    m "You've been self-harm sober for all this time, and I couldn't be more proud."
-    m "I'm so happy that you're doing well"
-    m "You are so inspiring. Congratulations, [player], for your successful journey!"
+    m 1dka "5 years..."
+    m 1ektpa "It's been 5 years since your life changed for the better."
+    m 1ektpb "You've been self-harm sober for all this time, and I couldn't be more proud."
+    m 5ektpa "I'm so happy that you're doing well."
+    m 5fkbfa "You are so inspiring. Congratulations, [player], for your successful journey!"
     return "derandom|unlock"
