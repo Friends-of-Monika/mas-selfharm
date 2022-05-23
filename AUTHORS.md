@@ -41,15 +41,14 @@ Here's a list of people who have been working on this submod!
   — proofreading, insights and ideas
 
 
-
 ## Past contributors
 
 * <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/github-light.svg">
     <img alt="github" src="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/github-dark.svg">
   </picture>
-  [@Paulius1290](https://github.com/Paulius1290)
-  ![discord](.github/icons/discord.svg) [Kitakus#6452](https://discordapp.com/users/360806535196049420)
+  <a href="https://github.com/Paulius1290">@Paulius1290</a>
+  <img alt="discord" src="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/discord.svg"> <a href="https://discordapp.com/users/360806535196049420">Kitakus#6452</a>
   — dialogue writing and programming
 * ![reddit](.github/icons/reddit.svg) [u/malicioussoftwaree](https://reddit.com/u/malicioussoftwaree)
   ![twitter](.github/icons/twitter.svg) [@maliciousSftwre](https://twitter.com/maliciousSftwre)
