@@ -55,7 +55,8 @@ label mshMod_topic_selfharm_intro:
                     m 1ekc "Oh..."
                     m 3eka "That's okay."
 
-            m 1dubsb "I want you to know that I'm here for you. You know that, right?"  # TODO: extend
+            m 1eub "I want you to know that I'm here for you.{w=0.3}{nw}"
+            extend 1eka "You know that, right?"
             m 3euc "Whenever you feel the urge to harm yourself..."
             m 3eud "You can tell me."
             m 1eka "I'll do my best to help you."
@@ -64,38 +65,46 @@ label mshMod_topic_selfharm_intro:
             m 5ekbsa "Be by your side."
             show monika 1dkc at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 1dkc "Take care, [mas_get_player_nickname()]."
-            m 1ekbsd "Stay safe because I care for you, deeply."  # TODO: extend
+            m 1ekbsd "Stay safe because I care for you,{w=0.3}{nw} "
+            extend 1dkbsc "deeply."
 
         "No":
             $ persistent._msh_mod_pm_did_selfharm = False
 
-            m "Thank goodness!"
-            m "I'm so glad to hear this!"
-            m "It's so good to know that you are safe, [player]."
-            m "If this ever changes... You can tell me, okay?"
-            m "You can tell me anything, you know?"
-            m "Ahaha!"
-            m "Sorry. I'm just so relieved!"
-            m "But for now... Do you want to know more about self-harm?"
-            m "You know how much I care about you! But if you don't feel like talking about it, I'll understand!"
-            m "It's quite a varied topic so it's going to take a while."
+            m 1hksdlb "Thank goodness!"
+            m 1eua "I'm so glad to hear this!"
+            m 3hub "It's so good to know that you are safe, [player]."
+            m 1ekd "If this ever changes... You can tell me, okay?"
+            m 1lksdla "You can tell me anything, you know?"
+            m 1hub "Ahaha!"
+            m 3hksdla "Sorry. I'm just so relieved!"
+            show monika 5rtd at t11 zorder MAS_MONIKA_Z with dissolve_monika
+            m 5rtd "But for now...{w=0.3}{nw} "
+            extend 5euc "Do you want to know more about self-harm?"
+            show monika 1lkbsb at t11 zorder MAS_MONIKA_Z with dissolve_monika
+            m 1lkbsb "You know how much I care about you!{w=0.3}{nw} "
+            extend 3eub "But if you don't feel like talking about it, I'll understand!"
+            m 1lsd "It's quite a varied topic so it's going to take a while."
 
             $ mas_showEVL("mshMod_topic_selfharm_more", "EVE", unlock=True)
 
-            m "Do you have the time to listen right now?{nw}"
+            m 1eua "Do you have the time to listen right now?{nw}"
             $ _history_list.pop()
             menu:
                 m "Do you have the time to listen right now?{fast}"
 
                 "Yes":
+                    m "Great!"
                     $ pushEvent("mshMod_topic_selfharm_more", skipeval=True)
 
                 "No":
-                    m "Oh..."
-                    m "It's okay, [player]."
-                    m "Remember that I'll never leave you. After all, I promised that I'll take care of you."
-                    m "If you ever feel like you want to talk about this topic, just ask!"
-                    m "I love you, [mas_get_player_nickname()]."
+                    m 1ekc "Oh..."
+                    m 3hua "It's okay, [player]."
+                    show monika 5eka at t11 zorder MAS_MONIKA_Z with dissolve_monika
+                    m 5eka "Remember that I'll never leave you. After all, I promised that I'll take care of you."
+                    m 5hua "If you ever feel like you want to talk about this topic, just ask!"
+                    show monika 1hubsa at t11 zorder MAS_MONIKA_Z with dissolve_monika
+                    m 1hubsa "I love you, [mas_get_player_nickname()]."
                     return "love|derandom|no_unlock"
 
     return "derandom|no_unlock"
@@ -115,7 +124,6 @@ init 5 python:
     )
 
 label mshMod_topic_selfharm_more:
-    m "Great!"
     m "Knowing more about self-harm is really useful."
     m "You could help someone who is struggling with it someday!"
     m "So, [player]! I want you to know that there's more to self-harm than it meets the eye! Ahaha-"
