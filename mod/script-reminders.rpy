@@ -14,20 +14,20 @@ init 5 python:
     )
 
 label mshMod_medication_reminder_intro:
-    m "[player], of course!"
-    m "I perfected my coding skills even more and now I'm able to create a daily reminder for you."
-    m "I know a lot of people take daily medications for a lot of different reasons!"
-    m "So I thought it would be nice if I could help you remember to take your medication correctly."
-    m "After all, your health and safety is my number one priority!"
-    m "So, [player], do you like that idea?"
+    m 7wub "[player], of course!"
+    m 7wua "I perfected my coding skills even more and now I'm able to create a daily reminder for you."
+    m 2dua "I know a lot of people take daily medications for a lot of different reasons!"
+    m 2eub "So I thought it would be nice if I could help you remember to take your medication correctly."
+    m 3nublb "After all, your health and safety is my number one priority!"
+    m 3wublb "So, [player], do you like that idea?"
 
-    m "Do you want to set a reminder?{nw}"
+    m 3wubla "Do you want to set a reminder?{nw}"
     $ _history_list.pop()
     menu:
         m "Do you want to set a reminder?{fast}"
 
         "Yes!":
-            m "Okay! What time do you want me to remind you about it?{nw}"
+            m 4wub "Okay! What time do you want me to remind you about it?{nw}"
             $ _history_list.pop()
             menu:
                 m "Okay! What time do you want me to remind you about it?{fast}"
@@ -41,8 +41,8 @@ label mshMod_medication_reminder_intro:
                 "In the evening.":
                     $ delay, tod = store.mshMod_reminder_utils.getDailyEveningDelay(), "evening"
 
-            m "Alright! I'll be sure to remind you, every day, in the [tod]!"
-            m "Make sure to come see me so I can remind you, okay? Ehehehe~"
+            m 4hub "Alright! I'll be sure to remind you, every day, in the [tod]!"
+            m 2nua "Make sure to come see me so I can remind you, okay? Ehehehe~"
 
             python:
                 # This has to be performed AFTER all the lines. We must ensure this applies
@@ -58,9 +58,9 @@ label mshMod_medication_reminder_intro:
                 mas_showEVL("mshMod_medication_reminder_stop", "EVE", unlock=True)
 
         "Not now, [m_name].":
-            m "Oh, alright!"
-            m "If you change your mind, please let me know, okay?"
-            m "You can repeat the topic in the 'Repeat conversation' category."
+            m 3eka "Oh, alright!"
+            m 3ekb "If you change your mind, please let me know, okay?"
+            m 2esa "You can repeat the topic in the 'Repeat conversation' category."
 
     return
 
@@ -78,7 +78,7 @@ init 5 python:
     )
 
 label mshMod_medication_reminder_stop:
-    m "Okay! I'll stop~"
+    m 7esb "Okay! I'll stop~"
 
     python:
         # Same here, DO NOT move this anywhere, this has to be right above the return statement.
@@ -103,11 +103,11 @@ init 5 python:
     )
 
 label mshMod_medication_reminder:
-    m "Hey, [player]!"
-    m "Guess what time it is?"
-    m "That's right, it's time to take your meds! Don't forget to have lots of water with them~"
-    m "You can do it~"
-    m "I love you!"
+    m 7esb "Hey, [player]!"
+    m 7wsa "Guess what time it is?"
+    m 1wsb "That's right, it's time to take your meds! Don't forget to have lots of water with them~"
+    m 1ksb "You can do it~"
+    m 1hsbla "I love you!"
 
     # Do not move this anywhere, this must be above the return.
     $ store.mshMod_medication_reminder.extendCurrentReminder()
