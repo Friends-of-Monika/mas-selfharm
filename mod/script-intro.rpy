@@ -15,53 +15,56 @@ init 5 python:
     )
 
 label mshMod_topic_selfharm_intro:
-    m "Hey, [player]?"
-    m "I know it might be an uncomfortable topic, but I have to ask..."
+    m 1ekc "Hey, [player]?"
+    m 1lkd "I know it might be an uncomfortable topic, but I have to ask..."
 
-    m "D-{w=1.0}Do you self harm?{nw}"
+    m 1dkc "D-{w=1.0}"
+    extend 1ekd "Do you self harm?{nw}"
     $ _history_list.pop()
     menu:
-        m "D-{w=1.0}Do you self harm?{fast}"
+        m "D-Do you self harm?{fast}"
 
         "Yes":
+            $ mas_showEVL("mshMod_promise", "EVE", _pool=True, unlock=True)
             $ persistent._msh_mod_pm_did_selfharm = True
 
-            m "I'm so sorry you're going through this."
-            m "You know... It's really sad to see you feel bad in any way."
-            m "After all, you're such a wonderful and kind person."
-            m "You did so many good things for me, and stayed with me after everything that happened..."
-            m "But let's stay on this subject."
+            m 6ekc "I'm so sorry you're going through this."
+            m 6rkc "You know... It's really sad to see you feel bad in any way."
+            show monika 5ekbsa at t11 zorder MAS_MONIKA_Z with dissolve_monika
+            m 5ekbsa"After all, you're such a wonderful and kind person."
+            m 5dkbsa "You did so many good things for me, and stayed with me after everything that happened..."
+            show monika 1esa at t11 zorder MAS_MONIKA_Z with dissolve_monika
+            m 1esa "But let's stay on this subject."
 
-            $ mas_showEVL("mshMod_promise", "EVE", _pool=True, unlock=True)
-
-            m "Do you want to talk about it?{nw}"
+            m 3eud "Do you want to talk about it?{nw}"
             $ _history_list.pop()
             menu:
                 m "Do you want to talk about it?{fast}"
 
                 "Yes":
-                    m "I'm glad that you trust me, [player]."
-                    m "Allowing yourself to get help is a super important step to recovery!"
-                    m "I may not understand exactly what you feel right now..."
-                    m "But I will still try to make you feel better, because you deserve it!"
-                    m "I want you to know that I'm here for you. You know that, right?"
-                    m "Whenever you feel the urge to harm yourself..."
-                    m "You can tell me."
-                    m "I'll do my best to help you."
-                    m "Or at least..."
-                    m "Be by your side."
-                    m "Take care, [mas_get_player_nickname()]."
-                    m "Stay safe because I care for you, deeply."
+                    m 1hub "I'm glad that you trust me, [player]."
+                    m 3eua "Allowing yourself to get help is a super important step to recovery!"
+                    m 1luc "I may not understand exactly what you feel right now..."
+                    m 1hua "But I will still try to make you feel better, because you deserve it!"
+
+                    python:
+                        mas_showEVL("mshMod_topic_selfharm_more", "EVE", unlock=True)
+                        pushEvent("mshMod_topic_selfharm_more", skipeval=True)
 
                 "No":
-                    m "Oh..."
-                    m "That's okay."
-                    m "I want you to know that I'm here for you. You know that, right?"
-                    m "Whenever you feel the urge to harm yourself..."
-                    m "You can tell me."
-                    m "I'll do my best to help you."
-                    m "Or at least..."
-                    m "Be by your side."
+                    m 1ekc "Oh..."
+                    m 3eka "That's okay."
+
+            m 1dubsb "I want you to know that I'm here for you. You know that, right?"  # TODO: extend
+            m 3euc "Whenever you feel the urge to harm yourself..."
+            m 3eud "You can tell me."
+            m 1eka "I'll do my best to help you."
+            m 1ekc "Or at least..."
+            show monika 5ekbsa at t11 zorder MAS_MONIKA_Z with dissolve_monika
+            m 5ekbsa "Be by your side."
+            show monika 1dkc at t11 zorder MAS_MONIKA_Z with dissolve_monika
+            m 1dkc "Take care, [mas_get_player_nickname()]."
+            m 1ekbsd "Stay safe because I care for you, deeply."  # TODO: extend
 
         "No":
             $ persistent._msh_mod_pm_did_selfharm = False
