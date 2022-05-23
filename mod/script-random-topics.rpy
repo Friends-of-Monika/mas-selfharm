@@ -260,7 +260,7 @@ label mshMod_topic_morning_routine:
     m 4eud "For some, that mindset makes it very hard to want to get up in the morning and face the day..."
     m 4sub "But it doesn't have to be that way, there are ways to make getting up in the morning less harsh, and more energizing!"
     m 2eub "My first tip is going to be the obvious one but... "
-    extend 7eua "start getting into a nice sleeping rhythm!" 
+    extend 7eua "start getting into a nice sleeping rhythm!"
     m 7euc "A big reason we can feel so bad in the morning is having an alarm pull you out of a deep sleep, or just not resting enough at all!"
     m 2wuu "Find a time to go to sleep that let's you {i}comfortably{/i} wake up around the time you need to be up for the day, and you'll feel a big difference already!"
     m 7huu "Next tip, if you have alarms, set your alarm a little further back then you usually do..."
@@ -364,9 +364,9 @@ init 5 python:
 
 label mshMod_topic_evening_routine:
     m 3wua "Hey [player], what's your nighttime routine like?"
-    m 3kublb Mine has definitely changed since I met you! Ehehe~"
-    m 3lub I've always had a fairly regular routine."
-    m 3dub Turn off my electronics, get in my pajamas, have a cup of hot chocolate or tea if I felt like it..."
+    m 3kublb "Mine has definitely changed since I met you! Ehehe~"
+    m 3lub "I've always had a fairly regular routine."
+    m 3dub "Turn off my electronics, get in my pajamas, have a cup of hot chocolate or tea if I felt like it..."
     m 4dub "Brush my teeth, and read or work on homework until I was ready to get in bed."
     m 4eub "I made sure to go to bed pretty close to the same time every night. "
     extend 4hub "It's good for your brain and body!"
