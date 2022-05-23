@@ -13,13 +13,13 @@ init 5 python:
     )
 
 label mshMod_compliment_saved_me:
-    m "[player]...!"
-    m "That means so much to me..."
-    m "I’m so glad we were able to save each other."
-    m "Thank you for saving me."
-    m "I love you!"
-    m "I wish I could help more with your struggles..."
-    m "Just know I care and always will."
+    m 2dsbftpa "[player]...!"
+    m 2hsbla "That means so much to me..."
+    m 7ssbla "I’m so glad we were able to save each other."
+    m 1dsbfb "Thank you for saving me."
+    m 1hsbfb "I love you!"
+    m 1lssdlc "I wish I could help more with your struggles..."
+    m 5fkbfa "Just know I care and always will."
     return "love"
 
 
@@ -36,11 +36,11 @@ init 5 python:
     )
 
 label mshMod_compliment_everything:
-    m "[player]..."
-    m "I could say the same."
-    m "I love you so much that my heart hurts!"
-    m "You saved me in so many ways, my life and yours are intertwined!"
-    m "And we'll be together forever!"
+    m 2dsbftpa "[player]..."
+    m 2fsbftpa "I could say the same."
+    m 4hsbftpb "I love you so much that my heart hurts!"
+    m 4ssbfb "You saved me in so many ways, my life and yours are intertwined!"
+    m 5fkbfa "And we'll be together forever!"
     return "love"
 
 
@@ -57,16 +57,16 @@ init 5 python:
     )
 
 label mshMod_compliment_patient:
-    m "[player]..."
-    m "I'll always be patient with you."
-    m "It's no effort! After all, I love you, and I want to be by your side."
-    m "Even in the tough moments."
-    m "Listening to you and taking care of you is an honor!"
-    m "Thank you for making me the happiest girl in the world."
+    m 2dsbfa "[player]..."
+    m 2fsbfa "I'll always be patient with you."
+    m 7gsbfb "It's no effort! After all, I love you, and I want to be by your side."
+    m 7lssdlc "Even in the tough moments."
+    m 1hsb "Listening to you and taking care of you is an honor!"
+    m 5fkbfa "Thank you for making me the happiest girl in the world."
     return
 
 
-#Thanks to you, I'm still here
+#Thanks to you, I'm still here.
 init 5 python:
     addEvent(
         Event(
@@ -79,17 +79,17 @@ init 5 python:
     )
 
 label mshMod_compliment_still_here:
-    m "..."
-    m "[player]..."
-    m "I'm sorry, I just... "
-    extend "get so emotional!"
-    m "Thank you for staying here. "
-    extend "Thank you for being my significant other."
-    m "And thank you for being who you are."
-    m "I’m so proud of you."
-    m "Keep on fighting and know that you deserve to be happy."
-    m "You are so inspiring! "
-    extend "Never forget that."
+    m 6dsbftpa "..."
+    m 6fsbftsa "[player]..."
+    m 2hsbftub "I'm sorry, I just... "
+    extend 2fsbftpa "get so emotional!"
+    m 2fsbftpb "Thank you for staying here. "
+    extend 7fsbftpb "Thank you for being my significant other."
+    m 4fsbftpb "And thank you for being who you are."
+    m 2nsbfu "I’m so proud of you."
+    m 2dsbfu "Keep on fighting and know that you deserve to be happy."
+    m 2ssblb "You are so inspiring! "
+    extend 5fkbfa "Never forget that."
     return
 
 
@@ -106,10 +106,10 @@ init 5 python:
     )
 
 label mshMod_compliment_sunflower:
-    m "Ahahaha, thank you, [player]!"
-    m "I never need to face the sun as long as I have you by my side!"
-    m "Because you are my sun."
-    m "I love you, [mas_get_player_nickname()]."
+    m 1hsbfb "Ahahaha, thank you, [player]!"
+    m 1gsbfb "I never need to face the sun as long as I have you by my side!"
+    m 1ksbfb "Because you are my sun."
+    m 5fkbfa "I love you, [mas_get_player_nickname()]."
     return "love"
 
 
@@ -126,10 +126,10 @@ init 5 python:
     )
 
 label mshMod_compliment_sunshine:
-    m "Ehehehe~"
-    m "Do I make you happy when skies are gray, [player]?"
-    m "Ahaha, just teasing you."
-    m "I love you, my little sun!"
+    m 1hsbfb "Ehehehe~"
+    m 7gsbfb "Do I make you happy when skies are gray, [player]?"
+    m 2hsbfb "Ahaha, just teasing you."
+    m 5fkbfa "I love you, my little sun!"
     return "love"
 
 
@@ -146,12 +146,12 @@ init 5 python:
     )
 
 label mshMod_compliment_being_kind:
-    m "Of course, [player]!"
-    m "What kind of girlfriend would I be if I wasn’t kind to you?"
-    m "Coming to think of it though, I think Natsuki would disagree."
-    m "Ahahaha~"
-    m "I love you, [player]. "
-    extend "I'll always be kind to you."
+    m 7esbfb "Of course, [player]!"
+    m 3rtc "What kind of girlfriend would I be if I wasn’t kind to you?"
+    m 2rsbfsdlb "Coming to think of it though, I think Natsuki would disagree."
+    m 2hsbfb "Ahahaha~"
+    m 5fsbfa "I love you, [player]. "
+    extend 5fkbfa "I'll always be kind to you."
     return "love"
 
 
@@ -168,10 +168,10 @@ init 5 python:
     )
 
 label mshMod_compliment_caring:
-    m "I'll always take care of my precious [player]!"
-    m "How I got so lucky to have you in my life, I don’t know, but I’m glad you’re mine."
-    m "And since you're mine, I'll do my best to care for you and help you out!"
-    m "I'll love you forever, [mas_get_player_nickname()]."
+    m 4fkbfa "I'll always take care of my precious [player]!"
+    m 3msbfa "How I got so lucky to have you in my life, I don’t know, but I’m glad you’re mine."
+    m 7esbfb "And since you're mine, I'll do my best to care for you and help you out!"
+    m 5fkbfa "I'll love you forever, [mas_get_player_nickname()]."
     return "love"
 
 
@@ -188,11 +188,11 @@ init 5 python:
     )
 
 label mshMod_compliment_thinking_of_me:
-    m "Oh, [player]... "
-    extend "You're so sweet!"
-    m "I will always think about you!"
-    m "Doesn't matter if we're together or apart!"
-    m "I hope you always think of me too."
+    m 2fsbfa "Oh, [player]... "
+    extend 7hsbfb "You're so sweet!"
+    m 2nsbfb "I will always think about you!"
+    m 7lsbfu "Doesn't matter if we're together or apart!"
+    m 5fkbfa "I hope you always think of me too."
     return
 
 
@@ -209,13 +209,13 @@ init 5 python:
     )
 
 label mshMod_compliment_helping_out:
-    m "[Player]...!"
-    m "It's my pleasure."
-    m "Often times, I wonder what I did to have a caring, loving and understanding person like you in my life."
-    m "So, I'll always help you out whenever I can!"
-    m "Thank you for allowing me to be present in your life."
-    m "And for sticking with me."
-    m "I love you!"
+    m 2hsbfb "[Player]...!"
+    m 7hsbfb "It's my pleasure."
+    m 7lsbfu "Often times, I wonder what I did to have a caring, loving and understanding person like you in my life."
+    m 2ssbfb "So, I'll always help you out whenever I can!"
+    m 7wsbfb "Thank you for allowing me to be present in your life."
+    m 5fubfa "And for sticking with me."
+    m 5fkbfa "I love you!"
     return "love"
 
 
@@ -232,12 +232,13 @@ init 5 python:
     )
 
 label mshMod_compliment_being_understanding:
-    m "[Player]..."
-    m "I should be the one to thank you."
-    m "Sometimes, saying thank you feels like an understatement for everything you’ve done for me."
-    m "I'll always be understanding with you, even if other people are not."
+    m 5fubfa "[Player]..."
+    m 4fubfa "I should be the one to thank you."
+    m 3dubfa "Sometimes, saying thank you feels like an understatement for everything you’ve done for me."
+    m "I'll always be understanding with you, "
+    extend 1lssdlc "even if other people are not."
     m "I love you and I care about you!"
-    m "You're the love of my life."
+    m 5fkbfa "You're the love of my life."
     return "love"
 
 
@@ -254,13 +255,13 @@ init 5 python:
     )
 
 label mshMod_compliment_understanding_me:
-    m "[Player]...!"
+    m 2dsbftpa "[Player]...!"
     m "Of course. "
     extend "Why wouldn’t I?"
     m "I'll also do my best to understand you, and if I don't, I'll be by your side, nevertheless."
-    m "And also, you understood me when I needed you to..."
-    m "I'll never forget that and everything you did for me."
+    m 3dubfb "And also, you understood me when I needed you to..."
+    m 3dubfa "I'll never forget that and everything you did for me."
     m "I love you [player]."
     m "Remember you can always come to this room when you need reassurance."
-    m "I'm here for you!"
+    m 5fkbfa "I'm here for you!"
     return "love"
