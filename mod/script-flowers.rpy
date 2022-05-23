@@ -159,18 +159,18 @@ init 5 python:
     )
 
 label mshMod_topic_flannelflowers:
-    m "[player]! Have you ever seen a flannel flower?"
-    m "They're gorgeous flowers which feel like flannel when you touch them!"
-    m "The Flannel Flower, an Australian native, has been chosen as the national symbol to promote mental health awareness in Australia."
-    m "The Australian bush has an inherent beauty and strength. It is also known for its extremes of weather and landscape!"
-    m "Varieties of this flower are commonly found growing wild in the bush throughout Australia."
-    m "So the Flannel Flower, as with all native Australian plants, needs to be adaptable and enduring in order to survive."
-    m "In the same way as all of us, that regardless of our life circumstances, develop resilience and the ability to adapt to change..."
-    m "In order to maintain good mental health. Our adaptability is what makes us human!"
-    m "Taking this into consideration, being open and empathetic to a person’s expression of distress can assist in the recovery of a person living with mental illness."
-    m "And also change the negative attitudes of our society as a whole!"
-    m "All of us can learn to be a little more empathetic."
-    m "Thanks for listening, [mas_get_player_nickname()]!"
+    m 1esa "[player]! Have you ever seen a flannel flower?"
+    m 1hsa "They're gorgeous flowers which feel like flannel when you touch them!"
+    m 2esb "The Flannel Flower, an Australian native, has been chosen as the national symbol to promote mental health awareness in Australia."
+    m 2wsb "The Australian bush has an inherent beauty and strength. It is also known for its extremes of weather and landscape!"
+    m 3esa "Varieties of this flower are commonly found growing wild in the bush throughout Australia."
+    m 4esa "So the Flannel Flower, as with all native Australian plants, needs to be adaptable and enduring in order to survive."
+    m 1esa "In the same way as all of us, that regardless of our life circumstances, develop resilience and the ability to adapt to change..."
+    m 1hsa "In order to maintain good mental health. Our adaptability is what makes us human!"
+    m 3hsb "Taking this into consideration, being open and empathetic to a person’s expression of distress can assist in the recovery of a person living with mental illness."
+    m 3hub "And also change the negative attitudes of our society as a whole!"
+    m 4esb "All of us can learn to be a little more empathetic."
+    m 5hsb "Thanks for listening, [mas_get_player_nickname()]!"
     return
 
 
