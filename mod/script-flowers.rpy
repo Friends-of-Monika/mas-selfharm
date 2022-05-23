@@ -48,22 +48,22 @@ init 5 python:
     )
 
 label mshMod_topic_acacias:
-    m "[player], can I tell you some facts about a flower?"
-    m "Today we'll talk about the acacia."
-    m "Acacias are also known as wattles, wattleseed, and embers, and can represent the immortality of the human soul."
-    m "That's because acacia bushes are always green, no matter the season!"
-    m "In some rituals, those flowers are used as a reminder that the soul, like energy..."
-    m "Cannot be destroyed, but continues beyond the earthly plane!"
-    m "Acacia’s primary meaning is strength, rebirth, and eternal life. "
-    extend "It is mentioned in both the Torah and the Bible as the wood used for building the Tabernacle."
-    m "It is also important in the Buddhist tradition as a symbol of compassion for all living things!"
-    m "Their meaning changes depending on the flower color, but summarizing, we can say they mean..."
-    m "Renewal, fortitude and pureness throughout the world."
-    m "A current study also shows the power of acacia extracts in anxiety treatment."
-    m "Gifting someone acacias can mean feelings of good friendship or sophistication of a secret love."
-    m "Am I your secret love, [player]? "
-    extend "Ehehe~"
-    m "Thanks for listening, [mas_get_player_nickname()]!"
+    m 1esb "[player], can I tell you some facts about a flower?"
+    m 1esa "Today we'll talk about the acacia."
+    m 4esa "Acacias are also known as wattles, wattleseed, and embers, and can represent the immortality of the human soul."
+    m 4hsb "That's because acacia bushes are always green, no matter the season!"
+    m 7esb "In some rituals, those flowers are used as a reminder that the soul, like energy..."
+    m 7wsb "Cannot be destroyed, but continues beyond the earthly plane!"
+    m 1esa "Acacia’s primary meaning is strength, rebirth, and eternal life. "
+    extend 1esb "It is mentioned in both the Torah and the Bible as the wood used for building the Tabernacle."
+    m 2hsb "It is also important in the Buddhist tradition as a symbol of compassion for all living things!"
+    m 2lsb "Their meaning changes depending on the flower color, but summarizing, we can say they mean..."
+    m 1esa "Renewal, fortitude and pureness throughout the world."
+    m 2esb "A current study also shows the power of acacia extracts in anxiety treatment."
+    m 4hsb "Gifting someone acacias can mean feelings of good friendship or sophistication of a secret love."
+    m 5ksu "Am I your secret love, [player]? "
+    extend 5hsb "Ehehe~"
+    m 1hsb "Thanks for listening, [mas_get_player_nickname()]!"
     return
 
 
