@@ -34,9 +34,8 @@ Here's a list of people who have been working on this submod!
 * ![reddit](/.github/icons/reddit.svg) [u/plushika_2137](https://reddit.com/u/plushika_2137)
   — dialogue writing
 * ![twitter](.github/icons/twitter.svg) [@L_Oeufmf](https://twitter.com/L_Oeufmf)
-  ![discord](.github/icons/discord.svg) L'Oeuf#2455
+  ![discord](.github/icons/discord.svg) [L'Oeuf#2455](https://discordapp.com/users/862836407806328832)
   — proofreading, insights and ideas
-
 
 
 ## Past contributors
