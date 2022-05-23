@@ -1,5 +1,10 @@
 # Sober check topics, milestones, etc. For API see zz_sober_streak.rpy
 
+label mshMod_sober_ask_since:
+    $ since = datetime.today() - datetime.timedelta(days=int(renpy.input("For how long have you been sober already?", allow="0123456789", length=4)))
+    return since
+
+
 #sober counter
 init 5 python:
     addEvent(
@@ -28,6 +33,7 @@ label mshMod_sober_check:
         m 2esb "I'm so happy to see you taking care of yourself."
 
     return
+
 
 #promise dialogue
 init 5 python:
@@ -70,7 +76,8 @@ label mshMod_promise:
                 "Actually, I'm sober for some time already...":
                     m 2ssb "Really?! That's so nice to hear! For how many days have you been sober already?"
 
-                    $ since = datetime.today() - datetime.timedelta(days=int(renpy.input("For how long have you been you sober already?", allow="0123456789", length=4)))
+                    call mshMod_sober_ask_since
+                    $ since = _return
 
                     m 1dsb "Okay! I'll keep that in mind~"
 
@@ -78,8 +85,11 @@ label mshMod_promise:
                     m 1eka "Oh, okay!"
                     m 1dsb "I'll keep this in mind!"
 
+    # NOTE: Fallthrough to mshMod_promise_jump unless jumped by timed jump.
 
 label mshMod_promise_jump:
+    hide screen mas_background_timed_jump
+
     m 5ekbsb "I love you, [mas_get_player_nickname()]."
     m 5dkbsb "Never forget that!"
 
@@ -91,6 +101,7 @@ label mshMod_promise_jump:
         mas_hideEVL("mshMod_promise", "EVE", depool=True)
 
     return "love"
+
 
 #relapse dialogue
 init 5 python:
@@ -129,6 +140,7 @@ label mshMod_relapse:
         mas_hideEVL("mshMod_sober_check", "EVE", depool=True, _lock=True)
 
     return "love"
+
 
 #milestone 1w
 init 5 python:
