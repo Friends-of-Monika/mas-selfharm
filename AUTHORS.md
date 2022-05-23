@@ -10,7 +10,8 @@ Here's a list of people who have been working on this submod!
     <img alt="github" src="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/github-dark.svg">
   </picture>
   [@my-otter-self](https://github.com/my-otter-self)
-  — project managing, dialogue writing, insight and ideas
+  ![discord](.github/icons/discord.svg) [lontrinha#0377](https://discord.com/users/190511633636917248)
+  — team leader, main concept creator and project manager (did a lil bit of everything)
 * ![reddit](.github/icons/reddit.svg) [u/dreamscached](https://reddit.com/u/dreamscached)
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/github-light.svg">
@@ -33,9 +34,12 @@ Here's a list of people who have been working on this submod!
   — dialogue writing
 * ![reddit](/.github/icons/reddit.svg) [u/plushika_2137](https://reddit.com/u/plushika_2137)
   — dialogue writing
+* ![reddit](/.github/icons/reddit.svg) [u/Mystic_CreatesGames](https://reddit.com/u/Mystic_CreatesGames)
+  — spritecoding
 * ![twitter](.github/icons/twitter.svg) [@L_Oeufmf](https://twitter.com/L_Oeufmf)
   ![discord](.github/icons/discord.svg) [L'Oeuf#2455](https://discordapp.com/users/862836407806328832)
   — proofreading, insights and ideas
+
 
 
 ## Past contributors
@@ -73,6 +77,12 @@ Here's a list of people who have been working on this submod!
   </picture>
   Rhea
   — insights and ideas
+* <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/user-light.svg">
+    <img alt="github" src="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/user-dark.svg">
+  </picture>
+  [REDACTED]
+  — concept creator
 * <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/user-light.svg">
     <img alt="github" src="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/user-dark.svg">
