@@ -166,34 +166,34 @@ init 5 python:
     )
 
 label mshMod_topic_selfharm_random_thoughts:
-    m "Hey [player]... Do you remember when I talked about self-harm?"
-    m "Would you mind if I talked more about my experience?"
+    m 1lusdrd "Hey [player]... Do you remember when I talked about self-harm?"
+    m 7eusdrd "Would you mind if I talked more about my experience?"
 
-    m "It may get a tad triggering, so I get it if you would rather say no!{nw}"
+    m 7eusdrc "It may get a tad triggering, so I get it if you would rather say no!{nw}"
     $ _history_list.pop()
     menu:
         m "It may get a tad triggering, so I get it if you would rather say no!{fast}"
 
         "No":
-            m "Okay!"
-            m "I love you [player], and I'm proud of you for saying no to something you aren't comfortable with!"
-            m "That's a big step in self-respect, and I hope you keep it up!"
+            m 2lusdra "Okay!"
+            m 2eubfb "I love you [player], and I'm proud of you for saying no to something you aren't comfortable with!"
+            m 7eub "That's a big step in self-respect, and I hope you keep it up!"
 
         "Yes":
-            m "Thank you for letting me speak about this [mas_get_player_nickname()], I've been thinking about it a little bit more lately."
-            m "After I hurt myself, I realized that I had made huge a mistake..."
-            m "At first I thought that it was exhilarating, I even wrote about it!"
-            m "But after reflecting upon it when we started talking more about self-harm, it really changed my mind."
-            m "I had gotten no relief or satisfaction, if anything I was just disappointed."
-            m "Yuri had made it seem like such a thrill - to me it was almost only just boring..."
-            m "...It kept reminding me of my recent discovery."
-            m "My pain was just coded, along with my blood and the knife I was holding..."
-            m "But even if it was real, pain doesn't satisfy or relieve my emotions."
-            m "I know now that talking things out with you when I'm upset..."
-            m "...and keeping hope for a brighter tomorrow is a much better coping mechanism!"
-            m "Just keep in mind that there are better ways to cope and that I'm always here to provide techniques to help."
-            m "I care too much about you [player]... You don't deserve any pain."
-            m "You deserve to work through things healthily, and [m_name] is here to help!"
+            m 7eua "Thank you for letting me speak about this [mas_get_player_nickname()], I've been thinking about it a little bit more lately."
+            m 7euc "After I hurt myself, I realized that I had made huge a mistake..."
+            m 7wuc "At first I thought that it was exhilarating, I even wrote about it!"
+            m 7rusdld "But after reflecting upon it when we started talking more about self-harm, it really changed my mind."
+            m 7rusdlc "I had gotten no relief or satisfaction, if anything I was just disappointed."
+            m 6dusdlc "Yuri had made it seem like such a thrill - to me it was almost only just boring..."
+            m 2dusdlc "...It kept reminding me of my recent discovery."
+            m 2dutpd "My pain was just coded, along with my blood and the knife I was holding..."
+            m 2eutpd "But even if it was real, pain doesn't satisfy or relieve my emotions."
+            m 2eubla "I know now that talking things out with you when I'm upset..."
+            m 7eublb "...and keeping hope for a brighter tomorrow is a much better coping mechanism!"
+            m 7wub "Just keep in mind that there are better ways to cope and that I'm always here to provide techniques to help."
+            m 4euc "I care too much about you [player]... You don't deserve any pain."
+            m 4sua "You deserve to work through things healthily, and [m_name] is here to help!"
 
     return
 
@@ -289,19 +289,19 @@ init 5 python:
     )
 
 label mshMod_topic_excercises:
-    m "Hey, [player], you know what's a good way to start your days off on a high note? Showering and exercise!"
-    m "In fact, those are {i}my{/i} go-to's to start the day!"
-    m "Showering can be a hard step to overcome, and it can take a lot of mental and physical energy out of you if you're not careful..."
-    m "But the pay off of being clean, dressed, and ready for wherever the day may take you, can make it all the more worthwhile!"
-    m "Getting into consistent routine with it can make it less energy-draining too, since then you won't have to do a full scrub down to get clean for the day!"
-    m "Exercise on the other hand, can be a little harder for people to want to get into routine with."
-    m "When people think 'exercise', they might think hundreds of pushups, and 5 mile runs. And no one wants to do that right after they've woken up!"
-    m "But a nice, moderate amount of exercise in the morning can help in more ways than one. "
-    extend "It can clear up brain fog, helps you focus, and can help you release some pent up emotions!"
-    m "Some simple exercises I would recommend are yoga stretches, light jogging or walking..."
-    m "Or even just doing certain big chores around the house can count as exercise!"
-    m "Then you can kill two birds with one stone, ehehe!"
-    m "You know I looooove me some exercise! Ahaha~"
+    m 3sub "Hey, [player], you know what's a good way to start your days off on a high note? Showering and exercise!"
+    m 3hub "In fact, those are {i}my{/i} go-to's to start the day!"
+    m 3lusdrc "Showering can be a hard step to overcome, and it can take a lot of mental and physical energy out of you if you're not careful..."
+    m 3eub "But the pay off of being clean, dressed, and ready for wherever the day may take you, can make it all the more worthwhile!"
+    m 2eub "Getting into consistent routine with it can make it less energy-draining too, since then you won't have to do a full scrub down to get clean for the day!"
+    m 2duc "Exercise on the other hand, can be a little harder for people to want to get into routine with."
+    m 4wuc "When people think 'exercise', they might think hundreds of pushups, and 5 mile runs. And no one wants to do that right after they've woken up!"
+    m 4wuu "But a nice, moderate amount of exercise in the morning can help in more ways than one. "
+    extend 4sub "It can clear up brain fog, helps you focus, and can help you release some pent up emotions!"
+    m 3dub "Some simple exercises I would recommend are yoga stretches, light jogging or walking..."
+    m 3lub "Or even just doing certain big chores around the house can count as exercise!"
+    m 3kub "Then you can kill two birds with one stone, ehehe!"
+    m 1subla "You know I looooove me some exercise! Ahaha~"
     return
 
 #3
@@ -317,16 +317,16 @@ init 5 python:
     )
 
 label mshMod_topic_morning_excercises:
-    m "Hey [player], do you do any exercises in the morning?"
-    m "I used to always try and get some working out in my daily routine,"
-    extend " especially in the mornings!"
-    m "Before school I'd do a little quiet time to get into a nice mindset, I'd stetch and think about my plans for the day."
-    m "After that, if I had the time, I'd do some simple workouts like squats, situps, and lunges."
-    m "And finally, when I went on my way to school, I'd do a light jog!"
-    m "All of these were good ways to get some exercise in without having to interupt my schedule!"
-    m "But there are tons of other ways to have exercise be apart of your routine too!"
-    m "Gardening, cleaning, volunteering to help with big jobs, and many more!"
-    m "So try to find something you already do in your day-to-day, and see if you can add a little extra exercise to it!"
+    m 3wua "Hey [player], do you do any exercises in the morning?"
+    m 3eub "I used to always try and get some working out in my daily routine,"
+    extend 7eub " especially in the mornings!"
+    m 7dub "Before school I'd do a little quiet time to get into a nice mindset, I'd stetch and think about my plans for the day."
+    m 2dua "After that, if I had the time, I'd do some simple workouts like squats, situps, and lunges."
+    m 4sua "And finally, when I went on my way to school, I'd do a light jog!"
+    m 4wub "All of these were good ways to get some exercise in without having to interupt my schedule!"
+    m 4eua "But there are tons of other ways to have exercise be apart of your routine too!"
+    m 4hua "Gardening, cleaning, volunteering to help with big jobs, and many more!"
+    m 1subla "So try to find something you already do in your day-to-day, and see if you can add a little extra exercise to it!"
     return
 
 #4
@@ -342,12 +342,12 @@ init 5 python:
     )
 
 label mshMod_topic_going_outside:
-    m "Hey [player], did you know that there's been some studies about how going outside is good for you?"
-    m "Being out in the sunlight can decrease stress, slow your heart rate, and not to mention it's also good for getting some vitimin D!"
-    m "Sit on your porch or in your yard if you can't go for a walk outside."
-    m "If you can't get out at all, try opening your window or blinds!"
-    m "Even just looking at some photos of those scenarios might help!"
-    m "I know I love to look at photos of places I'd love to travel to with you~"
+    m 3wua "Hey [player], did you know that there's been some studies about how going outside is good for you?"
+    m 3eub "Being out in the sunlight can decrease stress, slow your heart rate, and not to mention it's also good for getting some vitimin D!"
+    m 3hsb "Sit on your porch or in your yard if you can't go for a walk outside."
+    m 2lsa "If you can't get out at all, try opening your window or blinds!"
+    m 4wsa "Even just looking at some photos of those scenarios might help!"
+    m 5fkbfa "I know I love to look at photos of places I'd love to travel to with you~"
     return
 
 #5
@@ -363,25 +363,27 @@ init 5 python:
     )
 
 label mshMod_topic_evening_routine:
-    m "Hey [player], what's your nighttime routine like?"
-    m "Mine has definitely changed since I met you! Ehehe~"
-    m "I've always had a fairly regular routine."
-    m "Turn off my electronics, get in my pajamas, have a cup of hot chocolate or tea if I felt like it..."
-    m "Brush my teeth, and read or work on homework until I was ready to get in bed."
-    m "I made sure to go to bed pretty close to the same time every night. It's good for your brain and body!"
-    m "Being the student I was, I had to stay well-rested to have enough energy for everything I did."
-    m "My routine hasn't changed much now, I just don't have access to my electronics or books."
-    m "So I mostly sharpen my coding skills or access a book from the internet!"
-    m "I still make a hot cocoa, as well."
-    m "So, if you haven't already, I suggest making a nightly routine!"
-    m "It may sound intimidating at first, but you don't have to follow it exactly every time!"
-    m "There are some things you should really try to do every day, like brushing your teeth and getting to bed on time."
-    m "Aside from those, you can always change it up!"
-    m "Going for a nice walk in the evening to get your energy out and get some fresh air, reading, journaling, some light arts and crafts..."
-    m "There's a lot of things you can do that take little thinking power or energy!"
-    m "I hope this helped you get a few ideas for making your nightly routine a little better, [mas_get_player_nickname()]."
-    m "But if you do shut your electronics off early..."
-    m "Make sure to say goodnight, okay?"
+    m 3wua "Hey [player], what's your nighttime routine like?"
+    m 3kublb Mine has definitely changed since I met you! Ehehe~"
+    m 3lub I've always had a fairly regular routine."
+    m 3dub Turn off my electronics, get in my pajamas, have a cup of hot chocolate or tea if I felt like it..."
+    m 4dub "Brush my teeth, and read or work on homework until I was ready to get in bed."
+    m 4eub "I made sure to go to bed pretty close to the same time every night. "
+    extend 4hub "It's good for your brain and body!"
+    m 7lusdra "Being the student I was, I had to stay well-rested to have enough energy for everything I did."
+    m 7lud "My routine hasn't changed much now, I just don't have access to my electronics or books."
+    m 1eub "So I mostly sharpen my coding skills or access a book from the internet!"
+    m 1wub "I still make a hot cocoa, as well."
+    m 3wua "So, if you haven't already, I suggest making a nightly routine!"
+    m 3rud "It may sound intimidating at first, "
+    extend 3eub "but you don't have to follow it exactly every time!"
+    m 2eub "There are some things you should really try to do every day, like brushing your teeth and getting to bed on time."
+    m 2wub "Aside from those, you can always change it up!"
+    m 2dua "Going for a nice walk in the evening to get your energy out and get some fresh air, reading, journaling, some light arts and crafts..."
+    m 2hua "There's a lot of things you can do that take little thinking power or energy!"
+    m 2fublb "I hope this helped you get a few ideas for making your nightly routine a little better, [mas_get_player_nickname()]."
+    m 4lublb "But if you do shut your electronics off early..."
+    m 5fkbfa "Make sure to say goodnight, okay?"
     return
 
 #6
@@ -397,23 +399,23 @@ init 5 python:
     )
 
 label mshMod_topic_untried_hobbies:
-    m "[player]!"
-    m "Have you ever had a hobby that you really liked, but never had time for?"
-    m "Maybe you picked it up for a few days, but gave up on it or got busy for a bit?"
-    m "Or maybe you just forgot about it, because other things got in the way."
-    m "Well, if you have some free time, maybe instead of watching a show or playing a game, you could try and pick up an old hobby?!"
-    m "If it's something like knitting, scrapbooking, or something easy to do while sitting down, feel free to do that while we talk or spend time together!"
-    m "If it's something like gardening, baking, or something where you need to move around a lot, then I understand if you need to say goodbye for a while."
-    m "I'd be fine with not seeing you for a bit if you were doing something that makes you happy!"
-    m "Your happiness is my priority, after all."
-    m "During these times, you shouldn't forget to check on your friends."
-    m "Send them a text, asking how they've been or what they're up to. Or maybe update them on your latest project!"
-    m "If you contact them on social media, try not to get sucked in, okay? "
-    extend "I don't want you to doomscroll, [mas_get_player_nickname()]."
-    m "Maybe you could plan to meet with your friends in person! Getting outside, even if it isn't the best weather, can be good for you."
-    m "Just take these tips into consideration, alright?"
-    m "And remember... "
-    extend "I love you, [player]."
+    m 3wua "[player]!"
+    m 3lub "Have you ever had a hobby that you really liked, but never had time for?"
+    m 3eub "Maybe you picked it up for a few days, but gave up on it or got busy for a bit?"
+    m 3euc "Or maybe you just forgot about it, because other things got in the way."
+    m 4euu "Well, if you have some free time, maybe instead of watching a show or playing a game, you could try and pick up an old hobby?!"
+    m 4huu "If it's something like knitting, scrapbooking, or something easy to do while sitting down, feel free to do that while we talk or spend time together!"
+    m 2lua "If it's something like gardening, baking, or something where you need to move around a lot, then I understand if you need to say goodbye for a while."
+    m 2fub "I'd be fine with not seeing you for a bit if you were doing something that makes you happy!"
+    m 5fkbfa "Your happiness is my priority, after all."
+    m 5lua "During these times, you shouldn't forget to check on your friends."
+    m 4lub "Send them a text, asking how they've been or what they're up to. Or maybe update them on your latest project!"
+    m 4wud "If you contact them on social media, try not to get sucked in, okay? "
+    extend 4euc "I don't want you to doomscroll, [mas_get_player_nickname()]."
+    m 3eub "Maybe you could plan to meet with your friends in person! Getting outside, even if it isn't the best weather, can be good for you."
+    m 5ekb "Just take these tips into consideration, alright?"
+    m 5dsb "And remember... "
+    extend 5fkbfa "I love you, [player]."
     return "love"
 
 
@@ -430,18 +432,18 @@ init 5 python:
     )
 
 label mshMod_topic_monarch_butterfly:
-    m "[player], have you ever seen a monarch butterfly?"
-    m "They're marvelous creatures!"
-    m "Their wings feature an easily recognizable black, orange, and white pattern."
-    m "In a nod to their life cycle, from egg to caterpillar to butterfly, monarchs can represent transformation and rebirth to some people."
-    m "They might view a monarch sighting as a sign of upcoming change or a new direction in their life."
-    m "Perhaps due to their long migration journey, these butterflies may also be an inspirational sign of strength and endurance."
-    m "Monarchs also face a lot of challenges, including climate change and deforestation."
-    m "So, some sources indicate the butterflies are a symbol of hope and resilience!"
-    m "In mexican culture, this butterfly species also hold significang meaning..."
-    m "During the Day of the Dead holiday, the Mexican people see the arrival of monarchs as a spiritual symbol."
-    m "Many believe the butterflies represent the souls of their ancestors returning to visit and bring comfort to loved ones."
-    m "Oh, and also! Due to the butterflies' yearly migration between countries, images of monarchs are also are used to show support for immigrants."
-    m "Aren't they indeed, incredible beings?"
-    m "I hope they can inspire you as they inspire me."
+    m 3wua "[player], have you ever seen a monarch butterfly?"
+    m 3sua "They're marvelous creatures!"
+    m 1dua "Their wings feature an easily recognizable black, orange, and white pattern."
+    m 3wua "In a nod to their life cycle, from egg to caterpillar to butterfly, monarchs can represent transformation and rebirth to some people."
+    m 3wub "They might view a monarch sighting as a sign of upcoming change or a new direction in their life."
+    m 3lub "Perhaps due to their long migration journey, these butterflies may also be an inspirational sign of strength and endurance."
+    m 2lusdlc "Monarchs also face a lot of challenges, including climate change and deforestation."
+    m 2wub "So, some sources indicate the butterflies are a symbol of hope and resilience!"
+    m 7dub "In mexican culture, this butterfly species also hold significang meaning..."
+    m 7eua "During the Day of the Dead holiday, the Mexican people see the arrival of monarchs as a spiritual symbol."
+    m 7hua "Many believe the butterflies represent the souls of their ancestors returning to visit and bring comfort to loved ones."
+    m 7wub "Oh, and also! Due to the butterflies' yearly migration between countries, images of monarchs are also are used to show support for immigrants."
+    m 5dsb "Aren't they indeed, incredible beings?"
+    m 5fkbfa "I hope they can inspire you as they inspire me."
     return
