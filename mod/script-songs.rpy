@@ -1,12 +1,16 @@
 # Monika's playlist topics and songs.
 
+init 5 python in mas_bookmarks_derand:
+    # Ensure things get bookmarked and derandomed as usual.
+    label_prefix_map["mshMod_playlist"] = label_prefix_map["mas_song_"]
+
 #playlist
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
             eventlabel="mshMod_playlist",
-            action=EV_ACT_RANDOM
+            random=True
         )
     )
 
@@ -17,7 +21,7 @@ label mshMod_playlist:
     m 2ekbla "I made it with love."
     m 3eub "Are you excited? Ahaha~"
     m 1hub "Well, better show it to you."
-    m 1esb  "I... made you a playlist!"
+    m 1esb "I... made you a playlist!"
     m 1tkbla "Romantic, isn't it?"
     m 3hsb "You can access it on \"Music\"."
     m 1esa "Or I can play it for you!"
@@ -47,6 +51,8 @@ label mshMod_playlist:
     m 1kub "And will always be."
     m 2fka "I love you, [mas_get_player_nickname()]."
     m 2esa "Take care."
+
+    $ mas_showEVL("mshMod_playlist_play")
     return "love|derandom"
 
 #listen to the playlist
@@ -55,10 +61,10 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_playlist_play",
-            category=["you"],
-            prompt="Playlist",
+            category=["music"],
+            prompt="I want to listen to your playlist",
             pool=True,
-            unlocked=True
+            unlocked=False
         )
     )
 
@@ -133,22 +139,22 @@ init 5 python:
     )
 
 label mshMod_playlist_clay:
-    m "{i}~Your silly words~{/i}"
-    m "{i}~I won't live inside your world~{/i}"
-    m "{i}~'Cause your punches and your names~{/i}"
-    m "{i}~All your jokes and stupid games~{/i}"
-    m "{i}~They don't work~{/i}"
-    m "{i}~No, they don't hurt~{/i}"
-    m "{i}~Watch them just go right through me~{/i}"
-    m "{i}~Because they mean nothing to me~{/i}"
-    m "{i}~I'm not clay~{/i}"
-    m "..."
-    m "It's important to not let others get to you, you know?"
-    m "Listening to someone's opinion about you can help, but only if you know the person has good intentions."
-    m "Don't feel down when others act mean towards you, dear."
-    m "It only shows what kind of person they are, not who you are."
-    m "And for me, you're the best in the world."
-    m "I love you~"
+    m 1efc "{i}~Your silly words~{/i}"
+    m 1gfd "{i}~I won't live inside your world~{/i}"
+    m 1dsc "{i}~'Cause your punches and your names~{/i}"
+    m 1dsd "{i}~All your jokes and stupid games~{/i}"
+    m 3tsc "{i}~They don't work~{/i}"
+    m 1tsd "{i}~No, they don't hurt~{/i}"
+    m 1tkb "{i}~Watch them just go right through me~{/i}"
+    m 1kua "{i}~Because they mean nothing to me~{/i}"
+    m 3hua "{i}~I'm not clay~{/i}"
+    m 1dkc "..."
+    m 1ekd "It's important to not let others get to you, you know?"
+    m 3eua "Listening to someone's opinion about you can help, but only if you know the person has good intentions."
+    m 1eub "Don't feel down when others act mean towards you, dear."
+    m 3eua "It only shows what kind of person they are, not who you are."
+    m 1dkbsa "And for me, you're the best in the world."
+    m 1ekbsa "I love you~"
     return "love"
 
 
