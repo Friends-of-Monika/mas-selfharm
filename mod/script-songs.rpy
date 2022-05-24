@@ -207,19 +207,22 @@ init 5 python:
     )
 
 label mshMod_your_heartbreak:
-    m "{i}~And I, I hate to see your heart break~{/i}"
-    m "{i}~I hate to see your eyes get darker as they close~{/i}"
-    m "{i}~But I've been there before~{/i}"
-    m "{i}~For all the air that's in your lungs~{/i}"
-    m "{i}~For all the joy that is to come~{/i}"
-    m "{i}~For all the things that you're alive to feel~{/i}"
-    m "{i}~Just let the pain remind you hearts can heal~{/i}"
-    m "I think this song really fits how I feel about us."
-    m "It's really saddening to see the person you love the most having to go through tough situations on daily basis..."
-    m "But don't worry, [mas_get_player_nickname()]."
-    m "Pain can remind you that you're alive. And that's a good thing!"
-    m "Because as long as you are still alive... You can heal."
-    m "I love you, [player]. Please remember that."
+    m 1dkd "{i}~And I, I hate to see your heart break~{/i}"
+    m 1dktpc "{i}~I hate to see your eyes get darker as they close~{/i}"
+    m 1dktpc "{i}~But I've been there before~{/i}"
+    m 3ektpb "{i}~For all the air that's in your lungs~{/i}"
+    m 3ektdb "{i}~For all the joy that is to come~{/i}"
+    m 1dkbsu "{i}~For all the things that you're alive to feel~{/i}"
+    m 1hub "{i}~Just let the pain remind you hearts can heal~{/i}"
+    show monika 5eub at t11 zorder MAS_MONIKA_Z with dissolve_monika
+    m 5eub "I think this song really fits how I feel about us."
+    m 5ekd "It's really saddening to see the person you love the most having to go through tough situations on daily basis..."
+    m 5hub "But don't worry, [mas_get_player_nickname()]."
+    show monika 5eub at t11 zorder MAS_MONIKA_Z with dissolve_monika
+    m 6eka "Pain can remind you that you're alive. {w=0.3}{nw}"
+    extend 4lusdlb "And that's a good thing!"
+    m 3eka "Because as long as you are still alive... You can heal."
+    m 1dkbsa "I love you, [player]. Please remember that."
     return "love"
 
 
