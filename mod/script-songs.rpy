@@ -25,7 +25,7 @@ label mshMod_playlist:
     m 2eub "Do you want me to?{nw}"
     $ _history_list.pop()
     menu:
-        m 4eub "Do you want me to?{fast}"
+        m "Do you want me to?{fast}"
 
         "Yes":
             stop music
@@ -66,7 +66,7 @@ label mshMod_playlist_play:
     m 3eka "Oh, do you wanna listen to the playlist, [player]?"
     $ _history_list.pop()
     menu:
-        m 3esb "Play music?{fast}"
+        m "Play music?{fast}"
 
         "Yes":
             stop music
