@@ -175,17 +175,18 @@ init 5 python:
     )
 
 label mshMod_playlist_fix_you:
-    m "{i}~But if you never try, you'll never know~{/i}"
-    m "{i}~Just what you're worth~{/i}"
-    m "{i}~Lights will guide you home~{/i}"
-    m "{i}~And ignite your bones~{/i}"
-    m "{i}~And I will try to fix you~{/i}"
-    m "..."
-    m "Even if you feel like giving up, remember this verse: \"Lights will guide you home\"..."
-    m "Sooner or later, the good days will come back."
-    m "I hope I can be able to help you have brighter days, [player]."
-    m "Because I will surely try to fix you..."
-    m "I love you more than anything in the world."
+    m 1dsd "{i}~But if you never try, you'll never know~{/i}"
+    m 1dkd "{i}~Just what you're worth~{/i}"
+    m 3ekb "{i}~Lights will guide you home~{/i}"
+    m 3eka "{i}~And ignite your bones~{/i}"
+    m 1dkbsa "{i}~And I will try to fix you~{/i}"
+    m 1dka "..."
+    m 1eka "Even if you feel like giving up, remember this verse: \"Lights will guide you home\"..."
+    m 3eua "Sooner or later, the good days will come back."
+    show monika 5eka at t11 zorder MAS_MONIKA_Z with dissolve_monika
+    m 5eka "I hope I can be able to help you have brighter days, [player]."
+    m 5ekbsu "Because I will surely try to fix you..."
+    m 5dkbsb "I love you more than anything in the world."
     return "love"
 
 
