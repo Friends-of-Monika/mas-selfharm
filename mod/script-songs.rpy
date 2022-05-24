@@ -20,7 +20,7 @@ label mshMod_playlist:
     m 1esb  "I... made you a playlist!"
     m 1tkbla "Romantic, isn't it?"
     m 3hsb "You can access it on \"Music\"."
-    m "Or I can play it for you!"
+    m 1esa "Or I can play it for you!"
 
     m 2eub "Do you want me to?{nw}"
     $ _history_list.pop()
