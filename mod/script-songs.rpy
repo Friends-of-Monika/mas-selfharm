@@ -22,18 +22,18 @@ label mshMod_playlist:
     m 3hsb "You can access it on \"Music\"."
     m "Or I can play it for you!"
 
-    m "Do you want me to?{nw}"
+    m 2eub "Do you want me to?{nw}"
     $ _history_list.pop()
     menu:
-        m "Do you want me to?{fast}"
+        m 4eub "Do you want me to?{fast}"
 
         "Yes":
             stop music
             play music "mod_assets/other/Monika_s-Playlist.mp3"
 
         "Not yet, [m_name]":
-            m "Oh, alright."
-            m "Anyway..."
+            m 1eka "Oh, alright."
+            m 1eub "Anyway..."
 
     m 2eka "I hope you like it, [player]!"
     m 2ekd "I know you struggle sometimes with bad thoughts, but this playlist is to comfort you."
@@ -63,19 +63,19 @@ init 5 python:
     )
 
 label mshMod_playlist_play:
-    m "Oh, do you wanna listen to the playlist, [player]?"
+    m 3eka "Oh, do you wanna listen to the playlist, [player]?"
     $ _history_list.pop()
     menu:
-        m "Play music?{fast}"
+        m 3esb "Play music?{fast}"
 
         "Yes":
             stop music
             play music "mod_assets/other/Monika_s-Playlist.mp3"
-            m "There you go!"
-            m "I hope you like it!"
+            m 7hsb "There you go!"
+            m 1hsa "I hope you like it!"
 
         "No":
-            m "Oh, alright."
+            m 1eka "Oh, alright."
 
     return
 
@@ -99,20 +99,20 @@ init 5 python:
     )
 
 label mshMod_playlist_paradise_fears:
-    m "{i}~I'll carry you home~{/i}"
-    m "{i}~No, you're not, alone~{/i}"
-    m "{i}~Keep marching on~{/i}"
-    m "{i}~This is worth fighting for~{/i}"
-    m "{i}~You know we've, all got battle scars~{/i}"
-    m "{i}~You've had enough~{/i}"
-    m "{i}~But just don't, give up~{/i}"
-    m "[player], I hope you can remember that you're not alone with your struggles."
-    m "There are people who can help you, and some even went through what you feel right now."
-    m "There's a lot of support groups for people who are struggling just like you."
-    m "And, of course, there's me!"
-    m "Whenever you need, I'll carry you home."
-    m "Your battle scars make me proud of what you already outlived!"
-    m "And never forget... I love you, [player]."
+    m 1dka "{i}~I'll carry you home~{/i}"
+    m 3dsd "{i}~No, you're not, alone~{/i}"
+    m 3hsa "{i}~Keep marching on~{/i}"
+    m 1hfa "{i}~This is worth fighting for~{/i}"
+    m 1hsb "{i}~You know we've, all got battle scars~{/i}"
+    m 1dsb "{i}~You've had enough~{/i}"
+    m 3dsb "{i}~But just don't, give up~{/i}"
+    m 5ekb "[player], I hope you can remember that you're not alone with your struggles."
+    m 5eka "There are people who can help you, and some even went through what you feel right now."
+    m 5esa "There's a lot of support groups for people who are struggling just like you."
+    m 5hssdra "And, of course, there's me!"
+    m 1fkb "Whenever you need, I'll carry you home."
+    m 1ekb "Your battle scars make me proud of what you already outlived!"
+    m 1ekbsb "And never forget... I love you, [player]."
     return "love"
 
 
