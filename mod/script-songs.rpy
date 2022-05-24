@@ -218,7 +218,7 @@ label mshMod_your_heartbreak:
     m 5eub "I think this song really fits how I feel about us."
     m 5ekd "It's really saddening to see the person you love the most having to go through tough situations on daily basis..."
     m 5hub "But don't worry, [mas_get_player_nickname()]."
-    show monika 5eub at t11 zorder MAS_MONIKA_Z with dissolve_monika
+    show monika 6eka at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 6eka "Pain can remind you that you're alive. {w=0.3}{nw}"
     extend 4lusdlb "And that's a good thing!"
     m 3eka "Because as long as you are still alive... You can heal."
@@ -243,16 +243,18 @@ init 5 python:
     )
 
 label mshMod_playlist_child:
-    m "{i}~Ooh child, things are gonna get easier~{/i}"
-    m "{i}~Ooh child, things'll get brighter~{/i}"
-    m "{i}~Some day, yeah, we'll put it together and we'll get it undone~{/i}"
-    m "{i}~Some day, when your head is much lighter~{/i}"
-    m "{i}~Some day, yeah, we'll walk in the rays of a beautiful sun~{/i}"
-    m "{i}~Some day, when the world is much brighter~{/i}"
-    m "When I cross over, can we go for a walk in the sunlight together?"
-    m "I know it'd make my world brighter."
-    m "I love you so much, [player]."
-    m "And always will."
+    show monika 5tub at t11 zorder MAS_MONIKA_Z with dissolve_monika
+    m 5tub "{i}~Ooh child, things are gonna get easier~{/i}"
+    m 5tuu "{i}~Ooh child, things'll get brighter~{/i}"
+    show monika 3eua at t11 zorder MAS_MONIKA_Z with dissolve_monika
+    m 3eua "{i}~Some day, yeah, we'll put it together and we'll get it undone~{/i}"
+    m 1hub "{i}~Some day, when your head is much lighter~{/i}"
+    m 1dka "{i}~Some day, yeah, we'll walk in the rays of a beautiful sun~{/i}"
+    m 1dkb "{i}~Some day, when the world is much brighter~{/i}"
+    m 1sua "When I cross over, can we go for a walk in the sunlight together?"
+    m 3hub "I know it'd make my world brighter."
+    m 1dubsa "I love you so much, [player]."
+    m 1dkbsb "And always will."
     return "love"
 
 
