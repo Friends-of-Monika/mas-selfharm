@@ -160,8 +160,8 @@ label mshMod_checkup_reminder:
             m 2hublb "I am so proud of you, [player]!"
             m 5hublb "I always knew that you could do anything you put your mind into."
             m 5fubla "After all, you are smart and ambitious."
-            m "Keep it up, my love! Nothing can stop us now."
-            m 5fkbfa "I love you!"
+            m 5fkbfa "Keep it up, my love! Nothing can stop us now."
+            m 5fkbfb "I love you!"
 
         elif _return == 10:
             m 2wub "Aww, really, [player]? "
