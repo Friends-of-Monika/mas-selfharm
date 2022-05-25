@@ -81,14 +81,14 @@ init 5 python:
 label mshMod_compliment_still_here:
     m 6dsbftpa "..."
     m 6fsbftsa "[player]..."
-    m 2hsbftub "I'm sorry, I just... "
+    m 2hsbftub "I'm sorry, I just... {w=0.3}{nw}"
     extend 2fsbftpa "get so emotional!"
-    m 2fsbftpb "Thank you for staying here. "
+    m 2fsbftpb "Thank you for staying here. {w=0.3}{nw}"
     extend 7fsbftpb "Thank you for being my significant other."
     m 4fsbftpb "And thank you for being who you are."
     m 2nsbfu "I’m so proud of you."
     m 2dsbfu "Keep on fighting and know that you deserve to be happy."
-    m 2ssblb "You are so inspiring! "
+    m 2ssblb "You are so inspiring! {w=0.3}{nw}"
     extend 5fkbfa "Never forget that."
     return
 
@@ -150,7 +150,7 @@ label mshMod_compliment_being_kind:
     m 3rtc "What kind of girlfriend would I be if I wasn’t kind to you?"
     m 2rsbfsdlb "Coming to think of it though, I think Natsuki would disagree."
     m 2hsbfb "Ahahaha~"
-    m 5fsbfa "I love you, [player]. "
+    m 5fsbfa "I love you, [player]. {w=0.3}{nw}"
     extend 5fkbfa "I'll always be kind to you."
     return "love"
 
@@ -188,7 +188,7 @@ init 5 python:
     )
 
 label mshMod_compliment_thinking_of_me:
-    m 2fsbfa "Oh, [player]... "
+    m 2fsbfa "Oh, [player]... {w=0.3}{nw}"
     extend 7hsbfb "You're so sweet!"
     m 2nsbfb "I will always think about you!"
     m 7lsbfu "Doesn't matter if we're together or apart!"
@@ -256,7 +256,7 @@ init 5 python:
 
 label mshMod_compliment_understanding_me:
     m 2dsbftpa "[Player]...!"
-    m 2dubfb "Of course. "
+    m 2dubfb "Of course. {w=0.3}{nw}"
     extend 7eubfb "Why wouldn’t I?"
     m 2eubfa "I'll also do my best to understand you, and if I don't, I'll be by your side, nevertheless."
     m 3dubfb "And also, you understood me when I needed you to..."

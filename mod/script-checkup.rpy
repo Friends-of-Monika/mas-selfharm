@@ -76,13 +76,13 @@ label mshMod_checkup_reminder:
             m 4eka "After all, acceptance that you're not feeling well is the first step towards improvement, right?"
             m 3eublb "Together - me and you -, we will work hard to make you feel better, step-by-step!"
             m 3dublb "It’s okay to feel down today, and perhaps even tomorrow."
-            m 5fubla "But always remember that you are a champion. You are amazing "
+            m 5fubla "But always remember that you are a champion. You are amazing {w=0.3}{nw}"
             extend 5dublb "- never forget that."
             m 5fublb "I'll always be here to listen to you, and to do my best to make you feel as loved as you can."
             m 5fkbfa "I love you!"
 
         elif _return == 2:
-            m 2ekd "I see. "
+            m 2ekd "I see. {w=0.3}{nw}"
             extend 2dkd "You're not feeling so well..."
             m 2lkc "Times like these feel just... so disheartening, don't they?"
             m 4eka "But worry not, [player]! Things are bound to get better as long as you're willing to give it a try."
@@ -93,9 +93,9 @@ label mshMod_checkup_reminder:
         elif _return == 3:
             m 2ekd "I'm so sorry to hear that, [player]..."
             m 2lkc "But keep this in mind:"
-            m 2dkd "It’s tough now, "
+            m 2dkd "It’s tough now, {w=0.3}{nw}"
             extend 4eka "but I believe that there is a brighter future waiting for us."
-            m 4eub "You’ll get through this. "
+            m 4eub "You’ll get through this. {w=0.3}{nw}"
             extend 5hublb "We will! Trust me."
             m 5fubla "You might not believe in yourself, but know and remember that I believe in you."
             m 5fkbfa "I always have and I always will. I love you, [mas_get_player_nickname()]."
@@ -103,11 +103,11 @@ label mshMod_checkup_reminder:
         elif _return == 4:
             m 2lkc "A 4... That's not so good."
             m 2ekd "I'm so sorry, [player]!"
-            m 2dkc "But listen... "
+            m 2dkc "But listen... {w=0.3}{nw}"
             extend 4eka "Know that if you fall, I’ll pick you up."
-            m 4rka "And if I can’t pick you up... "
+            m 4rka "And if I can’t pick you up... {w=0.3}{nw}"
             extend 2wub "Then I’ll just lie down and rest with you."
-            m 5hublb "It's what I'm here for! "
+            m 5hublb "It's what I'm here for! {w=0.3}{nw}"
             extend 5fubla "To be by your side, and support you as your girlfriend and as your best friend."
             m 5fkbfa "Let’s get back to the top together, [player]! I love you!"
 
@@ -132,15 +132,15 @@ label mshMod_checkup_reminder:
             m 5fkbfa "I love you!"
 
         elif _return == 7:
-            m 2wua "Oh my, "
+            m 2wua "Oh my, {w=0.3}{nw}"
             extend 4sua "a 7!"
-            m 4wub "Almost there, [player]! "
+            m 4wub "Almost there, [player]! {w=0.3}{nw}"
             extend 4hub "I'm so proud of you!"
             m 4sua "See, do you know where I get my strength?"
             m 2dua "..."
-            m 2kua "From you. "
+            m 2kua "From you. {w=0.3}{nw}"
             extend 4sua "Your dedication is what encourages me to be the best version of myself."
-            m 5hublb "You are bold and courageous. You are important. "
+            m 5hublb "You are bold and courageous. You are important. {w=0.3}{nw}"
             extend 5fubla "No one can tell you otherwise!"
             m 5fkbfa "I love you, [player]."
 
@@ -158,7 +158,7 @@ label mshMod_checkup_reminder:
             m 2sublb "Oh, [player]!"
             m 2hublb "It's wonderful that you're doing so well!"
             m 2hua "I knew things would get better, in one way or another!"
-            m 2kub "After all, you've had some help from your lovely girlfriend, haven't you? "
+            m 2kub "After all, you've had some help from your lovely girlfriend, haven't you? {w=0.3}{nw}"
             extend 2hub "Ehehe~"
             m 2hublb "I am so proud of you, [player]!"
             m 5hublb "I always knew that you could do anything you put your mind into."
@@ -167,12 +167,12 @@ label mshMod_checkup_reminder:
             m 5fkbfb "I love you!"
 
         elif _return == 10:
-            m 2wub "Aww, really, [player]? "
+            m 2wub "Aww, really, [player]? {w=0.3}{nw}"
             extend 4sub "That's wonderful!"
-            m 4dub "I'm so glad your week has been this good. "
+            m 4dub "I'm so glad your week has been this good. {w=0.3}{nw}"
             extend 3rublb "I must say the same - every day that you are with me feels like heaven!"
             m 1eublb "Let's make the next week as awesome, alright?"
-            m 1hublb "Even if something bad happens, remember that things will get better. "
+            m 1hublb "Even if something bad happens, remember that things will get better. {w=0.3}{nw}"
             extend 5fubla "I believe in you, [mas_get_player_nickname()]."
             m 5hublb "And remember: Don’t doubt your accomplishments. You succeeded because you worked hard for it."
             m 5fubla "You are here because you deserve to be."
@@ -180,7 +180,7 @@ label mshMod_checkup_reminder:
 
     else:
         m 2hka "Aww, it's okay, [player]."
-        m 2eka "Sometimes we don't know how to feel. "
+        m 2eka "Sometimes we don't know how to feel. {w=0.3}{nw}"
         extend 7eka "And that's okay too!"
         m 7dub "We all experience bad days; we all have to deal with our inner demons."
         m 7hublb "When you feel like there’s nothing you can do about it, know that you can always depend on me for support."

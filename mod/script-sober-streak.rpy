@@ -223,7 +223,7 @@ init 5 python:
 label mshMod_milestone_1m:
     m 3ssa "Hey [player], guess what?"
     m 2ssb "You've been clean from self-harm for a month!"
-    m 1eka "I just want you to know that I'm so proud of you. "
+    m 1eka "I just want you to know that I'm so proud of you. {w=0.3}{nw}"
     extend 3eka "It's not easy to do that, and I'm so happy you're making the effort."
     m 7dssdld "I've already told you I won't blame you if you do relapse. It's extremely tempting, and I know it must be hard for you."
     m 5ektpa "I'm just so proud you've made it so far."
