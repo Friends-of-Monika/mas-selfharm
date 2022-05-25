@@ -5,23 +5,45 @@ init 4 python in mshMod_reminder_utils:
     import datetime
 
     INTERVAL_DAILY = datetime.timedelta(days=1)
+    INTERVAL_WEEKLY = datetime.timedelta(days=7)
 
     LATENCY_HOURLY = datetime.timedelta(seconds=3600)
+    LATENCY_DAILY = datetime.timedelta(days=1)
+
+    TOD_MORNING = (10, 0)  # 10:00, 10am
+    TOD_AFTERNOON = (18, 0)  # 18:00, 6pm
+    TOD_EVENING = (22, 0)  # 22:00, 10pm
+
+    def _getDelay(tod, delta):
+        hours, minutes = tod
+        now = datetime.datetime.utcnow()
+
+        # Ensure we don't skip over today's Time Of Day (e.g.
+        # if requested delay is until 6pm and it's 3am, we shouldn't
+        # blindly add delta; in this case, we should subtract 6pm - 3am
+        # and return that as the delay.)
+        if now.hours <= hours and now.minutes <= minutes:
+            return now.replace(hour=hours, minute=minutes) - now
+
+        return (now + delta).replace(hour=hours, minute=minutes) - now
 
     def _getDailyDelay(tod):
-        hours, minutes = tod
-        now = datetime.datetime.now()
-
-        return (now + datetime.timedelta(days=1)).replace(hour=hours, minute=minutes) - now
+        return _getDelay(tod, INTERVAL_DAILY)
 
     def getDailyMorningDelay():
-        return _getDailyDelay((10, 0))  # 10:00, 10am
+        return _getDailyDelay(TOD_MORNING)
 
     def getDailyAfternoonDelay():
-        return _getDailyDelay((18, 0))  # 18:00, 6pm
+        return _getDailyDelay(TOD_AFTERNOON)
 
     def getDailyEveningDelay():
-        return _getDailyDelay((22, 0))  # 22:00, 10pm
+        return _getDailyDelay(TOD_EVENING)
+
+    def _getWeeklyDelay(tod):
+        return _getDelay(tod, INTERVAL_WEEKLY)
+
+    def getWeeklyEveningDelay():
+        return _getWeeklyDelay(TOD_EVENING)
 
 
 init 4 python in mshMod_reminder:
@@ -40,7 +62,7 @@ init 4 python in mshMod_reminder:
         _assertReminderInactive(ev_label)
 
         store.persistent._mshMod_active_reminders[ev_label] = (
-            datetime.datetime.now() + delay,  # datetime to trigger after
+            datetime.datetime.utcnow() + delay,  # datetime to trigger after
             delta,  # time between triggers
             latency  # time after which reminder should not trigger
         )
@@ -54,7 +76,7 @@ init 4 python in mshMod_reminder:
 
         trigger, delta, latency = store.persistent._mshMod_active_reminders[ev_label]
 
-        return trigger <= datetime.datetime.now() <= trigger + latency
+        return trigger <= datetime.datetime.utcnow() <= trigger + latency
 
     def extendCurrentReminder():
         extendReminder(mas_globals.this_ev.eventlabel)

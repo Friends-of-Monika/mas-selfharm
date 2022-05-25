@@ -32,8 +32,14 @@ label mshMod_checkup_intro:
     m 3hua "Meaning, how have you been feeling, this week, in a scale of 1 to 10!"
     m 1eua "This will help me be more aware and sensitive of your needs and your feelings."
     m 5fkbfa "After all, I care about you so much and I love you sooooo much!"
-    
-    $ mas_protectedShowEVL("mshMod_checkup_reminder","EVE", _random=True)
+
+    # Start running checkups on player, weekly, with a latency of one day.
+    # (Meaning that if player missed exact expected time of checkup, it'll still
+    # trigger within a day; else checkup will be attempted next week.)
+    $ store.mshMod_reminder.addRecurringReminder(
+        "mshMod_checkup_reminder",
+        delay, store.mshMod_reminder_utils.INTERVAL_WEEKLY, store.mshMod_reminder_utils.LATENCY_DAILY
+    )
 
     return "derandom|love"
 
@@ -44,16 +50,13 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_checkup_reminder",
-            random=False,
+            conditional="store.mshMod_reminder.shouldTriggerReminder('mshMod_checkup_reminder')",
+            action=EV_ACT_QUEUE,
             rules={"force repeat": None}
         )
     )
 
 label mshMod_checkup_reminder:
-    $ persistent._last_topic_run = datetime.datetime.utcnow()
-    $ mas_globals.this_ev.action = EV_ACT_PUSH
-    $ mas_globals.this_ev.conditional = "datetime.datetime.utcnow() - persistent._last_topic_run > datetime.timedelta(days=7)"
-
     m 4eua "Hey, [player]?"
     m 4eub "Can I check up on you?"
     m 2euc "I worry about how you have been coping with stuff."
@@ -187,4 +190,6 @@ label mshMod_checkup_reminder:
         m 5hublb "You mean the world to me, [mas_get_player_nickname()]."
         m 5fkbfa "I love you."
 
+    # Do not move this anywhere, this must be above the return.
+    $ store.mshMod_medication_reminder.extendCurrentReminder()
     return "love"
