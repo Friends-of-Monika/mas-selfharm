@@ -128,7 +128,7 @@ label mshMod_topic_selfharm_more:
     m 3euc "You could help someone who is struggling with it someday!"
     m 3hub "So, [player]! I want you to know that there's more to self-harm than it meets the eye! Ahaha-"
     m 2esb "I'll cover some facts and myth I wanna share with you regarding this topic."
-    m 2esc "I want you to know that self-Harm isn't about a single topic or action."
+    m 2esc "I want you to know that self-harm isn't about a single topic or action."
     m 4esd "There are many factors that come into play!"
     m 4lssdld "Yeah, it's not limited to... self inflicted wounds, for example."
     m 2lssdlc "Lack of Self-Care routine, which we already talked about, is also a method."
