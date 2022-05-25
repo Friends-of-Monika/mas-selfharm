@@ -18,7 +18,7 @@ Here's a list of people who have been working on this submod!
     <img alt="github" src="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/github-dark.svg">
   </picture>
   [@dreamscached](https://github.com/dreamscached)
-  — programming and repository maintaining
+  — concept creator, programming and repository maintaining
 * ![reddit](.github/icons/reddit.svg) [u/mayday-mayjay](https://reddit.com/u/mayday-mayjay)
   ![discord](.github/icons/discord.svg) [DJChicken#2001](https://discordapp.com/users/270333416346484737) / the DreamScape system
   — dialogue writing, spritepack desigining
