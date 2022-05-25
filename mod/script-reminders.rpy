@@ -4,7 +4,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_medication_reminder_intro",
+            eventlabel="mshMod_medication_reminder_request",
             prompt="Can you remind me about my medication?",
             category=["self-Harm"],
             pool=True,
@@ -13,7 +13,7 @@ init 5 python:
         )
     )
 
-label mshMod_medication_reminder_intro:
+label mshMod_medication_reminder_request:
     m 7wub "[player], of course!"
     m 7wua "I perfected my coding skills even more and now I'm able to create a daily reminder for you."
     m 2dua "I know a lot of people take daily medications for a lot of different reasons!"
@@ -44,9 +44,12 @@ label mshMod_medication_reminder_intro:
             m 4hub "Alright! I'll be sure to remind you, every day, in the [tod]!"
             m 2nua "Make sure to come see me so I can remind you, okay? Ehehehe~"
 
+            # This has to be performed AFTER all the lines. We must ensure this applies
+            # instantly and is not blocked by user idling at some dialogue line.
             python:
-                # This has to be performed AFTER all the lines. We must ensure this applies
-                # immediately and is not blocked by user idling at some dialogue line.
+                # Start reminding player, daily, with a latency of one hour.
+                # (Meaning that if player missed exact expected time of a reminder, it'll still
+                # trigger within an hour; else a reminder will be attempted next day.)
                 store.mshMod_reminder.addRecurringReminder(
                     "mshMod_medication_reminder",
                     delay, store.mshMod_reminder_utils.INTERVAL_DAILY, store.mshMod_reminder_utils.LATENCY_HOURLY
@@ -54,7 +57,7 @@ label mshMod_medication_reminder_intro:
 
                 # Hide this event since we have set a reminder and no longer need
                 # it until player asks not to remind anymore.
-                mas_hideEVL("mshMod_medication_reminder_intro", "EVE", depool=True)
+                mas_hideEVL("mshMod_medication_reminder_request", "EVE", lock=True)
                 mas_showEVL("mshMod_medication_reminder_stop", "EVE", unlock=True)
 
         "Not now, [m_name].":
@@ -86,7 +89,7 @@ label mshMod_medication_reminder_stop:
 
         # Hide this event as now we need to enable player to ask to remind again.
         mas_hideEVL("mshMod_medication_reminder_stop", "EVE", lock=True)
-        mas_showEVL("mshMod_medication_reminder_intro", "EVE", unlock=True)
+        mas_showEVL("mshMod_medication_reminder_request", "EVE", unlock=True)
 
     return
 
