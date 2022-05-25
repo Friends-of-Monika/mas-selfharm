@@ -3,18 +3,25 @@
 default persistent._msh_mod_technique_database = dict()
 
 init 5 python in mshMod_techniques:
+
     import store
 
     technique_database = dict()
     store.mas_all_ev_db_map["MSH_MOD_TCH"] = technique_database
 
 
+init 5 python in mas_bookmarks_derand:
+    # Ensure things get bookmarked and derandomed as usual.
+    label_prefix_map["mshMod_technique_"] = {
+        "bookmark_text": _("Technique bookmarked.")
+    }
+
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
             eventlabel="mshMod_technique_menu",
-            category=['Self-harm'],
+            category=["self-Harm"],
             prompt="Can you tell me about some techniques?",
             pool=True,
             unlocked=False,
@@ -22,7 +29,7 @@ init 5 python:
         )
     )
 
-label mshMod_technique_menu:
+label mshMod_techniques_menu:
     m "Sure, [mas_get_player_nickname()]!"
 
     python:
@@ -68,7 +75,7 @@ label mshMod_technique_random:
                 unlocked=True
             )
 
-        renpy.call(items[random.randint(0, len(items) - 1)])
+        renpy.jump(items[random.randint(0, len(items) - 1)])
 
     return
 
