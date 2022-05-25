@@ -14,7 +14,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_technique_menu",
+            eventlabel="mshMod_techniques_menu",
             category=["self-Harm"],
             prompt="Can you tell me about some techniques?",
             pool=True,
