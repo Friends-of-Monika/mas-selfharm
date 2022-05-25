@@ -10,12 +10,6 @@ init 5 python in mshMod_techniques:
     store.mas_all_ev_db_map["MSH_MOD_TCH"] = technique_database
 
 
-init 5 python in mas_bookmarks_derand:
-    # Ensure things get bookmarked and derandomed as usual.
-    label_prefix_map["mshMod_technique_"] = {
-        "bookmark_text": _("Technique bookmarked.")
-    }
-
 init 5 python:
     addEvent(
         Event(
