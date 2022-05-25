@@ -58,9 +58,7 @@ label mshMod_first_aid_guide:
         m "I can make a timer for you.{fast}"
 
         "Yes, that'd help":
-            $ timeout = True
-
-            m "Okay! I'll tell you when it's done.{nw}"
+            m 1hub "Okay! I'll tell you when it's done.{nw}"
             $ _history_list.pop()
 
             # Set a timer that forces label jump after 580 to 620 seconds (chosen randomly.)
@@ -72,9 +70,7 @@ label mshMod_first_aid_guide:
                     pass
 
         "No, I'll manage":
-            $ timeout = False
-
-            m "Oh, okay! Let me know when you'll be ready to proceed.{nw}"
+            m 1hksdlb "Oh, okay! Let me know when you'll be ready to proceed.{nw}"
             $ _history_list.pop()
             menu:
                 m "Oh, okay! Let me know when you'll be ready to proceed.{fast}"
@@ -84,8 +80,7 @@ label mshMod_first_aid_guide:
 
 # NOTE: Fallthough label, 'return' is deliberately omitted above.
 label mshMod_first_aid_guide_timeout:
-    if timeout:
-        hide screen mas_background_timed_jump
+    hide screen mas_background_timed_jump
 
     m 2esb "All done, [player]!"
     m 2eud "Ready for the next step?{nw}"

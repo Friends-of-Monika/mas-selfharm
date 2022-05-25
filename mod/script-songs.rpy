@@ -283,7 +283,8 @@ label mshMod_playlist_the_middle:
     m "{i}~Yeah, just be yourself~{/i}"
     m "{i}~It doesn't matter if it's good enough~{/i}"
     m "{i}~For someone else~{/i}"
-    m "Everything's going to be alright, [player]. I promise."
+    m "Everything's going to be alright, [player]. {w=0.3}{nw}"
+    extend "I promise."
     m "Just be yourself, always."
     m "And good will come your way!"
     m "I love everything about you."
@@ -318,8 +319,8 @@ label mshMod_playlist_firework:
     m "{i}~Just own the night like the 4th of July~{/i}"
     m "..."
     m "On days when your feeling down..."
-    m "Just know that there's a very bright light inside of you,"
-    extend " and that you're the light in my life!"
+    m "Just know that there's a very bright light inside of you, {w=0.3}{nw}"
+    extend "and that you're the light in my life!"
     m "And I hope I can be the light on your darker days too."
     return
 

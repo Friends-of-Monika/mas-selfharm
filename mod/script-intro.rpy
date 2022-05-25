@@ -55,7 +55,7 @@ label mshMod_topic_selfharm_intro:
                     m 1ekc "Oh..."
                     m 3eka "That's okay."
 
-            m 1eub "I want you to know that I'm here for you.{w=0.3}{nw}"
+            m 1eub "I want you to know that I'm here for you. {w=0.3}{nw}"
             extend 1eka "You know that, right?"
             m 3euc "Whenever you feel the urge to harm yourself..."
             m 3eud "You can tell me."
@@ -65,7 +65,7 @@ label mshMod_topic_selfharm_intro:
             m 5ekbsa "Be by your side."
             show monika 1dkc at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 1dkc "Take care, [mas_get_player_nickname()]."
-            m 1ekbsd "Stay safe because I care for you,{w=0.3}{nw} "
+            m 1ekbsd "Stay safe because I care for you, {w=0.3}{nw}"
             extend 1dkbsc "deeply."
 
         "No":
@@ -79,10 +79,10 @@ label mshMod_topic_selfharm_intro:
             m 1hub "Ahaha!"
             m 3hksdla "Sorry. I'm just so relieved!"
             show monika 5rtd at t11 zorder MAS_MONIKA_Z with dissolve_monika
-            m 5rtd "But for now...{w=0.3}{nw} "
+            m 5rtd "But for now... {w=0.3}{nw}"
             extend 5euc "Do you want to know more about self-harm?"
             show monika 1lkbsb at t11 zorder MAS_MONIKA_Z with dissolve_monika
-            m 1lkbsb "You know how much I care about you!{w=0.3}{nw} "
+            m 1lkbsb "You know how much I care about you! {w=0.3}{nw}"
             extend 3eub "But if you don't feel like talking about it, I'll understand!"
             m 1lsd "It's quite a varied topic so it's going to take a while."
 
