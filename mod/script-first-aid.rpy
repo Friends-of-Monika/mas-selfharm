@@ -32,7 +32,9 @@ init 5 python:
             aff_range=(mas_aff.NORMAL, mas_aff.LOVE),
             prompt="I need help with first aid...",
             conditional="seen_event('mshMod_first_aid_intro')",
-            action=EV_ACT_POOL
+            action=EV_ACT_UNLOCK,
+            pool=True,
+            rules={"no_unlock": None, "bookmark_rule", mas_bookmark_derand.WHITELIST}
         )
     )
 
