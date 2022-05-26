@@ -25,7 +25,6 @@ label mshMod_topic_selfharm_intro:
         m "D-Do you self harm?{fast}"
 
         "Yes":
-            $ mas_showEVL("mshMod_promise", "EVE", _pool=True, unlock=True)
             $ persistent._msh_mod_pm_did_selfharm = True
 
             m 6ekc "I'm so sorry you're going through this."

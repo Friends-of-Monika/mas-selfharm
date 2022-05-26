@@ -6,8 +6,10 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_urge",
             category=["self-Harm"],
-            prompt="[m_name], it's happening again...",
-            random=False
+            prompt="[m_name], I feel like harming myself right now.",
+            conditional="persistent._msh_mod_pm_did_selfharm",
+            action=EV_ACT_UNLOCK,
+            pool=True
         )
     )
 
