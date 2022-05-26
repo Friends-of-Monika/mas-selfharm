@@ -4,6 +4,9 @@ init 5 python in mas_bookmarks_derand:
     # Ensure things get bookmarked and derandomed as usual.
     label_prefix_map["mshMod_playlist"] = label_prefix_map["mas_song_"]
 
+init python in mshMod_playlist:
+    PLAYLIST_FILE = basedir + "/game/Submods/MAS Self-Harm Mod/res/playlist.mp3"
+
 #playlist
 init 5 python:
     addEvent(
@@ -33,7 +36,7 @@ label mshMod_playlist:
 
         "Yes":
             stop music
-            play music "mod_assets/other/playlist.mp3"
+            play music store.mshMod_playlist.PLAYLIST_FILE
 
         "Not yet, [m_name]":
             m 1eka "Oh, alright."
