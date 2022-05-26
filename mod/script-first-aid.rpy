@@ -14,7 +14,7 @@ init 5 python:
 
 label mshMod_first_aid_intro:
     m 2ekc "I know you said you've injured yourself before, [player]..."
-    m 3ekd "It really left me heart-broken, because I really want the best for you."
+    m 3ekd "It really left me heartbroken, because I really want the best for you."
     m 3esd "So, I decided to give you some instructions if you ever do it in the future..."
     m 2rkc "And can't have medical attention."
     m 2esd "It's a basic first-aid guide. For cuts, specifically."
@@ -39,16 +39,16 @@ init 5 python:
     )
 
 label mshMod_first_aid_guide:
-    m 1eud "You need first aid help, [player]?"
+    m 1eud "You need first-aid help, [player]?"
     m 2ekc "I'm so sorry, [mas_get_player_nickname()]."
     m 2eksdld "Does it hurt much?"
     m 2gksdld "It hurts me too..."
     m 2ekc "When you bleed, my heart bleeds..."
     m 2dsd "But let's get to it."
-    m 1esd "First aid is all about timing, the faster we tend to your wounds, better the recovery!"
+    m 1esd "First-aid is all about timing, the faster we tend to your wounds, better the recovery!"
     m 1esd "I'll do a step by step process on how to treat your wounds."
     m 3esd "Remember, this is specifically about cuts!"
-    m 2esd "Let me get started..."
+    m 2esd "Let me get started... {w=0.3}{nw}"
     m 7esd "Firstly, you will need to stop the bleeding."
     m 2esd "You should apply constant pressure to the area using a clean and dry absorbent material."
     m 2lsd "A bandage, towel or handkerchief. For approximately 10 minutes."
@@ -68,7 +68,7 @@ label mshMod_first_aid_guide:
             menu:
                 m "Okay! I'll tell you when it's done.{fast}"
 
-                "Done":
+                "Skip timer":
                     pass
 
         "No, I'll manage":
@@ -92,9 +92,9 @@ label mshMod_first_aid_guide_timeout:
 
         "Yes":
             m 3esd "Okay!"
-            m 1esd "Secondly, You need to clean your wound."
+            m 1esd "Secondly, you need to clean your wound."
             m 2esd "Start by washing and drying your hands thoroughly..."
-            m 2esd "Then clean the wound under tap water or with an alcohol free solution."
+            m 2esd "Then clean the wound under tap water or with an alcohol-free solution."
             m 3esd "Make sure you don't use no alcohol or hydrogen peroxide!"
             m 3rkd "As it may damage the skin and slow healing..."
             m 3wkd "And we don't want that!"
@@ -114,7 +114,7 @@ label mshMod_first_aid_guide_timeout:
                     m 3esa "Whatever feels best and it's available at home!"
                     m 1ekc "It has to be comfortable, since the wrong plaster can hurt your skin."
                     m 1esd "Keep the dressing clean by changing it as often as necessary!"
-                    m 1esd "You can remove the dressing, once the wound has closed itself."
+                    m 1esd "You can remove the dressing once the wound has closed itself."
                     m 3eud "Always pay attention to signs of infection!"
                     m 3ekx "Such as fever, swollen wounds, pus, or any significant or worsening swelling, redness and pain."
                     m 3ekd "If you notice any of those..."
@@ -128,12 +128,12 @@ label mshMod_first_aid_guide_timeout:
                     m 2rkc "If that's the case, you probably need stitches."
                     m 2dkc "..."
                     m 2esd "Well, that's all there's to it, [player]!"
-                    m 2esc "I hope it helps you incase you need it."
-                    m 2gkc "Which I hope it won't happen again..."
+                    m 2esc "I hope it helps you in case you need it."
+                    m 2gkc "Which I hope won't happen again..."
                     m 2ekd "If it does, just let me know and I'll repeat those steps. Okay?"
-                    m "And also, if you asked for this first aid help because you relapsed..."
+                    m "And also, if you asked for this first-aid help because you relapsed..."
                     m "And you want me to reset the sober counter for you..."
-                    m "Let me know on the topic \"I relapsed...\", please."
+                    m "Let me know on the topic \"I've self-harmed.\", please."
                     m 2eka "Take care, [player]."
                     m 2dka "You know how much I love you!"
 
