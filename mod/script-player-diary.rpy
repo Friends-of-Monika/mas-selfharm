@@ -25,7 +25,9 @@ label mshMod_writing_to_diary_intro:
     m 1lta "A diary, huh?"
     m 3eua "I've honestly been thinking about this for a bit."
     m 1huu "It can really be a great outlet for anyone's emotions!"
+    show monika 5rub at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5rub "You could write your innermost feelings and thoughts..."
+    show monika 4rub at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 4rub "Or even make it a mood journal, and write in it every day. {w=0.3}{nw}"
     extend 4rua "Observing patterns and possible triggers..."
     m 3esb "You can even share it with someone you truly trust!"
@@ -58,7 +60,9 @@ label mshMod_writing_to_diary_intro:
         "No, thanks.":
             m 1eka "Oh, I see..."
             m 1hua "That's okay!"
+            show monika 5eua at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 5eua "I just thought that it could be a neat idea."
+            show monika 3hubsa at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 3hubsa "I always want what's best for you, [player]!"
             m 1fkbsu "I love you."
 
@@ -104,7 +108,9 @@ label mshMod_writing_to_diary_repeat:
 
         "Yeah, I've been working on it!":
             m 1hub "I'm happy to hear that, [player]!"
+            show monika 5sub at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 5sub "It's so nice to hear you're taking my advice."
+            show monika 5hub at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 1hub"I love you!"
 
             return "love"

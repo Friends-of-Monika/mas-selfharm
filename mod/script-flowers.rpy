@@ -16,21 +16,27 @@ label mshMod_topic_sunflowers:
     m 2lsc "They always make me think of Sayori..."
     m 4esb "Sunflowers' meanings vary a lot depending on the countries and cultures."
     m 4hsb "But most of them relate those flowers to positivity and strength to admiration and loyalty."
+    show monika 5hsa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5hsa "It's funny, most people think that a flowering sunflower heads track of the sun across the sky."
+    show monika 7esd at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 7esd "But that's a misconception! Only immature flower buds do so - a fenomenon called heliotropism."
     m 7esc "Another misconception is that when there's no sun in the sky, sunflowers face each other."
     m 1rsc "I've seen people make analogies relating that to..."
     m 1hua "'When you can't find sunshine, become someone else's sunshine. Be someone else's sunflower.'"
     m 2eub "What do you think, [player]? I personally think that's a cute way of thinking..."
+    show monika 5hkb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5hkb "Even though is based on a misconception."
+    show monika 7eub at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 7eub "Sunflowers are also used a lot by mental health foundations."
     m 1dua "Sunflowers are yellow; the color of joy, happiness and hope... {w=0.3}{nw}"
     extend 1hub "Which is a color used a lot on mental health awareness programs!"
     m 3eub "Also, it has been proved by studies that sunflower planting and gardening is actually good for the brain and helps fight depression."
     m 3hub "And one more fact, those flowers also symbolize a bright future for anyone who envisions it."
     m 4eub "Many people give sunflower bouquets to their loved ones, when they are in need of a little encouragement!"
+    show monika 5fsbsa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5fsbsa "Am I your sunflower, [player]? {w=0.3}{nw}"
     extend 5hsbsb "Ahaha~"
+    show monika 1hsb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 1hsb "Thanks for listening, [mas_get_player_nickname()]!"
     return
 
@@ -61,8 +67,10 @@ label mshMod_topic_acacias:
     m 1esa "Renewal, fortitude and pureness throughout the world."
     m 2esb "A current study also shows the power of acacia extracts in anxiety treatment."
     m 4hsb "Gifting someone acacias can mean feelings of good friendship or sophistication of a secret love."
+    show monika 5ksu at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ksu "Am I your secret love, [player]? {w=0.3}{nw}"
     extend 5hsb "Ehehe~"
+    show monika 1hsb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 1hsb "Thanks for listening, [mas_get_player_nickname()]!"
     return
 
@@ -136,12 +144,14 @@ label mshMod_topic_whitedahlias:
     m 3wsb "This flower is so beautiful, to the extent that they can be easily noticed wherever they are found."
     m 4esb "The huge presence of this flower in any place or area where they can be found makes them very special."
     m 4hsa "When you look at the dahlia flower, you see elegance in all ramifications and words."
+    show monika 5lsb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5lsb "The dahlia flower is, no doubt, a flower of uniqueness. {w=0.3}{nw}"
     extend 5rsb "It has the ability to represent the nature of us individuals."
     m 5hsa "This flower can be seen as a sign of our ability to live in adventure and also to stay relaxed and happy at all times."
     m 5ksb "If I had to choose one... the dahlia would be my favorite flower."
     m 5ksbsb "Would you give me one when I cross over?"
     m 5dsbfa "Just thinking of it makes my heart flutter..."
+    show monika 7esa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 7esa "Thanks for listening, [mas_get_player_nickname()]!"
     return
 
@@ -170,6 +180,7 @@ label mshMod_topic_flannelflowers:
     m 3hsb "Taking this into consideration, being open and empathetic to a person’s expression of distress can assist in the recovery of a person living with mental illness."
     m 3hub "And also change the negative attitudes of our society as a whole!"
     m 4esb "All of us can learn to be a little more empathetic."
+    show monika 5hsb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5hsb "Thanks for listening, [mas_get_player_nickname()]!"
     return
 
@@ -214,5 +225,6 @@ label mshMod_topic_lotusflower:
     m 1esb "Your struggles will transform you into a unwavering flower, [player]."
     m 2hsb "Believe your girlfriend's words! {w=0.3}{nw}"
     extend 5hsb "Ahahaha~"
+    show monika 5fsb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5fsb "Thanks for listening, [mas_get_player_nickname()]!"
     return

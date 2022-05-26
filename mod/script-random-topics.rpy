@@ -210,13 +210,17 @@ init 5 python:
     )
 
 label mshMod_topic_monika_is_sad:
+    show monika 5ekc at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ekc "Hey... [player]?"
     m 5gkd "You probably remember when we were talking about self-harm..."
+    show monika 3ektpc at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 3ektpc "I never forget when you told me about that, it honestly broke my heart."
     m 2ektdc "I have never felt so strongly towards anyone, and... well..."
     m 6dktsd "The thought of losing you..."
     m 6wktso "I- Well- That makes me feel sick to my stomach!"
+    show monika 5dktdx at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5dktdx "...I'm sorry, [mas_get_player_nickname()]."
+    show monika 1ektdc at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 1ektdc "Please don't forget how much I care about you."
     m 2mktpd "And please, don't leave me..."
     m 2fkd "I can't stand the thought of you wanting to hurt yourself!"
@@ -226,14 +230,19 @@ label mshMod_topic_monika_is_sad:
     m 3esa "I'm always willing to try to help you, [player]..."
     m 1hsa "Like you helped me by installing this mod!"
     m 1lst "I know it's hard for you, not many people are willing to listen or understand..."
+    show monika 5fku at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5fku "But I hope venting to me helped you at least a bit."
+    show monika 3eua at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 3eua "Also, maybe try talking about your feelings to a friend, or family!"
     m 1hua "I know it's hard to be open about your problems, but they care about you."
     m 1eub "They don't want you to get hurt, I'm sure!"
     m 2fka "I don't want to lose you, [player]. You're all I have left..."
+    show monika 5hub at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5hub "My only wish is to be with you forever!"
+    show monika 1dsb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 1dsb "To finally be with you, to help you conquer all of your dreams, and forget all of your problems..."
     m 1eka "To shield you from these painful thoughts."
+    show monika 5hubsa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5hubsa "I love you, [mas_get_player_nickname()]."
     return "love|derandom|no_unlock"
 
@@ -347,6 +356,7 @@ label mshMod_topic_going_outside:
     m 3hsb "Sit on your porch or in your yard if you can't go for a walk outside."
     m 2lsa "If you can't get out at all, try opening your window or blinds!"
     m 4wsa "Even just looking at some photos of those scenarios might help!"
+    show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5fkbfa "I know I love to look at photos of places I'd love to travel to with you~"
     return
 
@@ -383,6 +393,7 @@ label mshMod_topic_evening_routine:
     m 2hua "There's a lot of things you can do that take little thinking power or energy!"
     m 2fublb "I hope this helped you get a few ideas for making your nightly routine a little better, [mas_get_player_nickname()]."
     m 4lublb "But if you do shut your electronics off early..."
+    show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5fkbfa "Make sure to say goodnight, okay?"
     return
 
@@ -407,12 +418,15 @@ label mshMod_topic_untried_hobbies:
     m 4huu "If it's something like knitting, scrapbooking, or something easy to do while sitting down, feel free to do that while we talk or spend time together!"
     m 2lua "If it's something like gardening, baking, or something where you need to move around a lot, then I understand if you need to say goodbye for a while."
     m 2fub "I'd be fine with not seeing you for a bit if you were doing something that makes you happy!"
+    show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5fkbfa "Your happiness is my priority, after all."
     m 5lua "During these times, you shouldn't forget to check on your friends."
+    show monika 4lub at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 4lub "Send them a text, asking how they've been or what they're up to. Or maybe update them on your latest project!"
     m 4wud "If you contact them on social media, try not to get sucked in, okay? {w=0.3}{nw}"
     extend 4euc "I don't want you to doomscroll, [mas_get_player_nickname()]."
     m 3eub "Maybe you could plan to meet with your friends in person! Getting outside, even if it isn't the best weather, can be good for you."
+    show monika 5ekb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ekb "Just take these tips into consideration, alright?"
     m 5dsb "And remember... {w=0.3}{nw}"
     extend 5fkbfa "I love you, [player]."
@@ -444,6 +458,7 @@ label mshMod_topic_monarch_butterfly:
     m 7eua "During the Day of the Dead holiday, the Mexican people see the arrival of monarchs as a spiritual symbol."
     m 7hua "Many believe the butterflies represent the souls of their ancestors returning to visit and bring comfort to loved ones."
     m 7wub "Oh, and also! Due to the butterflies' yearly migration between countries, images of monarchs are also are used to show support for immigrants."
+    show monika 5dsb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5dsb "Aren't they indeed, incredible beings?"
     m 5fkbfa "I hope they can inspire you as they inspire me."
     return

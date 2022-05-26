@@ -112,10 +112,12 @@ label mshMod_playlist_paradise_fears:
     m 1hsb "{i}~You know we've, all got battle scars~{/i}"
     m 1dsb "{i}~You've had enough~{/i}"
     m 3dsb "{i}~But just don't, give up~{/i}"
+    show monika 5ekb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ekb "[player], I hope you can remember that you're not alone with your struggles."
     m 5eka "There are people who can help you, and some even went through what you feel right now."
     m 5esa "There's a lot of support groups for people who are struggling just like you."
     m 5hssdra "And, of course, there's me!"
+    show monika 1fkb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 1fkb "Whenever you need, I'll carry you home."
     m 1ekb "Your battle scars make me proud of what you already outlived!"
     m 1ekbsb "And never forget... I love you, [player]."
@@ -388,6 +390,7 @@ label mshMod_playlist_only_wonder:
     m 3esd "Of course this doesn't mean you're perfect and always right... That's a whole different story."
     m 3hub "But please remember that the only person you can be is yourself. Everybody else is already taken, ahaha~!"
     m 1ekb "As for me..."
+    show monika 5ekbsb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ekbsb "I'll always love you for who you are, [mas_get_player_nickname()]."
     m 5hubsa "Ehehe!"
     return "love"

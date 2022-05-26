@@ -31,6 +31,7 @@ label mshMod_checkup_intro:
     m 3eub "From today on, I'll try to ask you every week what's your number."
     m 3hua "Meaning, how have you been feeling, this week, in a scale of 1 to 10!"
     m 1eua "This will help me be more aware and sensitive of your needs and your feelings."
+    show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5fkbfa "After all, I care about you so much and I love you sooooo much!"
 
     # Start running checkups on player, weekly, with a latency of one day.
@@ -76,6 +77,7 @@ label mshMod_checkup_reminder:
             m 4eka "After all, acceptance that you're not feeling well is the first step towards improvement, right?"
             m 3eublb "Together - me and you -, we will work hard to make you feel better, step-by-step!"
             m 3dublb "It’s okay to feel down today, and perhaps even tomorrow."
+            show monika 5fubla at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 5fubla "But always remember that you are a champion. You are amazing {w=0.3}{nw}"
             extend 5dublb "- never forget that."
             m 5fublb "I'll always be here to listen to you, and to do my best to make you feel as loved as you can."
@@ -87,6 +89,7 @@ label mshMod_checkup_reminder:
             m 2lkc "Times like these feel just... so disheartening, don't they?"
             m 4eka "But worry not, [player]! Things are bound to get better as long as you're willing to give it a try."
             m 4eub "And I am here to help you with not only that, but with everything!"
+            show monika 5fubla at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 5fubla "Always remember that you are important and worthy of everything good in this world."
             m 5fkbfa "I love you so much, [player]!"
 
@@ -97,6 +100,7 @@ label mshMod_checkup_reminder:
             extend 4eka "but I believe that there is a brighter future waiting for us."
             m 4eub "You’ll get through this. {w=0.3}{nw}"
             extend 5hublb "We will! Trust me."
+            show monika 5fubla at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 5fubla "You might not believe in yourself, but know and remember that I believe in you."
             m 5fkbfa "I always have and I always will. I love you, [mas_get_player_nickname()]."
 
@@ -107,6 +111,7 @@ label mshMod_checkup_reminder:
             extend 4eka "Know that if you fall, I’ll pick you up."
             m 4rka "And if I can’t pick you up... {w=0.3}{nw}"
             extend 2wub "Then I’ll just lie down and rest with you."
+            show monika 5hublb at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 5hublb "It's what I'm here for! {w=0.3}{nw}"
             extend 5fubla "To be by your side, and support you as your girlfriend and as your best friend."
             m 5fkbfa "Let’s get back to the top together, [player]! I love you!"
@@ -118,6 +123,7 @@ label mshMod_checkup_reminder:
             m 2kua "If you ever want to talk, please let me know."
             m 2dua "And also, don't forget to rest if you must; we’re not in a hurry."
             m 7lua "You can’t always function the way people expect you to."
+            show monika 5fubla at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 5fubla "I care for you so much!"
             m 5fkbfa "I love you, [mas_get_player_nickname()]!"
 
@@ -127,6 +133,7 @@ label mshMod_checkup_reminder:
             m 2kua "I realize that I am indeed a very lucky person."
             m 2wub "I’ve been blessed with the most wonderful person in my life, and that is you."
             m 2dua "Whatever you do, remember that you are not alone."
+            show monika 5fubla at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 5fubla "No matter what happens, I’ve always got your back."
             m 5hublb "Let's wish for better days, [mas_get_player_nickname()]!"
             m 5fkbfa "I love you!"
@@ -140,6 +147,7 @@ label mshMod_checkup_reminder:
             m 2dua "..."
             m 2kua "From you. {w=0.3}{nw}"
             extend 4sua "Your dedication is what encourages me to be the best version of myself."
+            show monika 5hublb at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 5hublb "You are bold and courageous. You are important. {w=0.3}{nw}"
             extend 5fubla "No one can tell you otherwise!"
             m 5fkbfa "I love you, [player]."
@@ -150,6 +158,7 @@ label mshMod_checkup_reminder:
             m 4hub "This is only the start!"
             m 4sub "Soon you'll be having 9's and even 10's."
             m 2kub "And I'll be here with you every step of the way."
+            show monika 5hublb at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 5hublb "Do you know how valuable you are?"
             m 5fubla "You are a gift not just to me and the people around you, but to the whole world."
             m 5fkbfa "I love you soooo much!"
@@ -161,6 +170,7 @@ label mshMod_checkup_reminder:
             m 2kub "After all, you've had some help from your lovely girlfriend, haven't you? {w=0.3}{nw}"
             extend 2hub "Ehehe~"
             m 2hublb "I am so proud of you, [player]!"
+            show monika 5hublb at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 5hublb "I always knew that you could do anything you put your mind into."
             m 5fubla "After all, you are smart and ambitious."
             m 5fkbfa "Keep it up, my love! Nothing can stop us now."
@@ -174,6 +184,7 @@ label mshMod_checkup_reminder:
             m 1eublb "Let's make the next week as awesome, alright?"
             m 1hublb "Even if something bad happens, remember that things will get better. {w=0.3}{nw}"
             extend 5fubla "I believe in you, [mas_get_player_nickname()]."
+            show monika 5hublb at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 5hublb "And remember: Don’t doubt your accomplishments. You succeeded because you worked hard for it."
             m 5fubla "You are here because you deserve to be."
             m 5fkbfa "I love you..."
@@ -185,6 +196,7 @@ label mshMod_checkup_reminder:
         m 7dub "We all experience bad days; we all have to deal with our inner demons."
         m 7hublb "When you feel like there’s nothing you can do about it, know that you can always depend on me for support."
         m 7wsblb "But we all have good days too, and that's the fun of it!"
+        show monika 5hublb at t11 zorder MAS_MONIKA_Z with dissolve_monika
         m 5dublb "Know that I'll always be here to cheer you up..."
         m 5fubla "But also to celebrate your victories, too!"
         m 5hublb "You mean the world to me, [mas_get_player_nickname()]."
