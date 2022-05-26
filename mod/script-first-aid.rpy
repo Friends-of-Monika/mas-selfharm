@@ -34,7 +34,7 @@ init 5 python:
             conditional="seen_event('mshMod_first_aid_intro')",
             action=EV_ACT_UNLOCK,
             pool=True,
-            rules={"no_unlock": None, "bookmark_rule": mas_bookmark_derand.WHITELIST}
+            rules={"no_unlock": None, "bookmark_rule": mas_bookmarks_derand.WHITELIST}
         )
     )
 
