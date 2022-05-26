@@ -34,7 +34,7 @@ label mshMod_techniques_menu:
         items = list(map(
             lambda it: (it.prompt, it.eventlabel, False, False),
             Event.filterEvents(
-                persistent._msh_mod_technique_database,
+                store.mshMod_techniques.technique_database,
                 seen=True
             ).values()
         ))
@@ -58,14 +58,14 @@ label mshMod_technique_random:
     python:
         # Prefer unseen first
         items = Event.filterEvents(
-            persistent._msh_mod_technique_database,
+            store.mshMod_techniques.technique_database,
             unlocked=True,
             seen=False
         )
 
         if not items:
             items = Event.filterEvents(
-                persistent._msh_mod_technique_database,
+                store.mshMod_techniques.technique_database,
                 unlocked=True
             )
 
@@ -106,7 +106,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_cozy",
             prompt="Cozy",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -135,7 +135,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_photographs",
             prompt="Photographs",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -165,7 +165,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_quotes",
             prompt="Quotes",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -191,7 +191,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_singing",
             prompt="Singing",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -219,7 +219,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_talking",
             prompt="Talking",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -245,7 +245,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_hugs",
             prompt="Hugs",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -272,7 +272,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_listening",
             prompt="Listening",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -295,7 +295,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_butterfly",
             prompt="Butterfly",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -321,7 +321,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_healing",
             prompt="Healing",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -344,7 +344,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_pong",
             prompt="Pong",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -369,7 +369,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_chess",
             prompt="Chess",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -393,7 +393,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_piano",
             prompt="Piano",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -419,7 +419,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_videos",
             prompt="Videos",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -494,7 +494,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_stress_ball",
             prompt="Stress ball",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -523,7 +523,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_stretching",
             prompt="Stretching",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -550,7 +550,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_punching",
             prompt="Punching",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -579,7 +579,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_shouting",
             prompt="Shouting",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -601,7 +601,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_listening",
             prompt="Listening",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -628,7 +628,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_paper",
             prompt="Paper",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -656,7 +656,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_otter",
             prompt="Talking to u/my-otter-self",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -678,7 +678,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_cold_water",
             prompt="Cold water",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -700,7 +700,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_bothering",
             prompt="Bothering",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -723,7 +723,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_positive",
             prompt="Positive",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -746,7 +746,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_box",
             prompt="Box",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -766,7 +766,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_common",
             prompt="Common",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -787,7 +787,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_comfort",
             prompt="Comfort",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -809,7 +809,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_walk",
             prompt="Walk",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -838,7 +838,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_media",
             prompt="Media",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -860,7 +860,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_perspective",
             prompt="Perspective",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -884,7 +884,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_productivity",
             prompt="Productivity",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -911,7 +911,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_interests",
             prompt="Interests",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -932,7 +932,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_mirror",
             prompt="Mirror",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -953,7 +953,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_creativity",
             prompt="Creativity",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -976,7 +976,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_river",
             prompt="River",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1001,7 +1001,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_feelings",
             prompt="Feelings",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1024,7 +1024,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_poem",
             prompt="Poem",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1050,7 +1050,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_breathing",
             prompt="Breathing",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1083,7 +1083,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_pinterest",
             prompt="Pinterest",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1106,7 +1106,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_emerald",
             prompt="Emerald",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1130,7 +1130,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_patterns",
             prompt="Patterns",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1153,7 +1153,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_word_play",
             prompt="Word play",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1177,7 +1177,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_lyrics",
             prompt="Lyrics",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1199,7 +1199,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_animal",
             prompt="Animal",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1221,7 +1221,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_research",
             prompt="Research",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1248,7 +1248,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_favorite_things",
             prompt="Favorite things",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1271,7 +1271,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_superheroes",
             prompt="Superheroes",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1295,7 +1295,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_artist",
             prompt="Artist",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1316,7 +1316,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_playlist",
             prompt="Playlist",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1337,7 +1337,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_surroundings",
             prompt="Surroundings",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1359,7 +1359,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_mess",
             prompt="Mess",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1385,7 +1385,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_holiday",
             prompt="Holiday",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1408,7 +1408,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_hobbies",
             prompt="Hobbies",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1429,7 +1429,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_shiritori",
             prompt="Shiritori",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1456,7 +1456,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_objects",
             prompt="Objects",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1477,7 +1477,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_imagination",
             prompt="Imagination",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1499,7 +1499,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_characters",
             prompt="Characters",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1521,7 +1521,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_shapes",
             prompt="Shapes",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1545,7 +1545,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_playlists",
             prompt="Playlists",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1566,7 +1566,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_self_care",
             prompt="Self-care",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1591,7 +1591,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_outside",
             prompt="Outside",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1616,7 +1616,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_draw",
             prompt="Draw",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1637,7 +1637,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_food",
             prompt="Food",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1664,7 +1664,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_colour",
             prompt="Colour",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1685,7 +1685,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_beach",
             prompt="Beach",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1709,7 +1709,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_eat",
             prompt="Eat",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1730,7 +1730,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_pictures",
             prompt="Pictures",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -1750,7 +1750,7 @@ init 5 python:
             persistent._msh_mod_technique_database,
             eventlabel="mshMod_technique_ground",
             prompt="Ground",
-            unlocked=False
+            unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
@@ -2042,14 +2042,14 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_insteadofs",
+            eventlabel="mshMod_technique_insteadofs",
             prompt="List of instead of's",
             unlocked=False
         ),
         code="MSH_MOD_TCH"
     )
 
-label mshMod_insteadofs:
+label mshMod_technique_insteadofs:
     m "Come up with your own techniques! {w=0.3}{nw}"
     extend "How about that?"
     m "Create a list of things you can do instead of hurting yourself."
@@ -2063,14 +2063,14 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_cry",
+            eventlabel="mshMod_technique_cry",
             prompt="Cry",
             unlocked=False
         ),
         code="MSH_MOD_TCH"
     )
 
-label mshMod_cry:
+label mshMod_technique_cry:
     m "[player], I know it's hard."
     m "But why don't you let yourself cry for a bit?"
     m "Crying can help you release the pain, coming out as tears."
@@ -2084,14 +2084,14 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_happy_box",
+            eventlabel="mshMod_technique_happy_box",
             prompt="Happy box",
             unlocked=False
         ),
         code="MSH_MOD_TCH"
     )
 
-label mshMod_happy_box:
+label mshMod_technique_happy_box:
     m "[player], are you familiar with the happy box?"
     m "I'll tell you everything I know about it!"
     m "It's simple, and a very good coping mechanism!"
@@ -2110,14 +2110,14 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_clothes",
+            eventlabel="mshMod_technique_clothes",
             prompt="Dressing up",
             unlocked=False
         ),
         code="MSH_MOD_TCH"
     )
 
-label mshMod_clothes:
+label mshMod_technique_clothes:
     m "[player], why don't you go to your closet and pick a fancy outfit?"
     m "You can change to your favorite outfit, or do a makeover, of sorts."
     m "Style your hair in a way you never would."
@@ -2133,14 +2133,14 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_hobby",
+            eventlabel="mshMod_technique_hobby",
             prompt="New hobby",
             unlocked=False
         ),
         code="MSH_MOD_TCH"
     )
 
-label mshMod_hobby:
+label mshMod_technique_hobby:
     m "[player], why not try learning something new?"
     m "Or work on that hobby you always wanted to pick up."
     m "You can try to learn a new activity, such as knitting, playing an instrument, coding, writing or drawing!"
@@ -2158,14 +2158,14 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_shopping",
+            eventlabel="mshMod_technique_shopping",
             prompt="Shopping",
             unlocked=False
         ),
         code="MSH_MOD_TCH"
     )
 
-label mshMod_shopping:
+label mshMod_technique_shopping:
     m "[player], why not do some healthy shopping?"
     m "Go to a mall, and get yourself something nice."
     m "You can buy a stuffed animal and give it a name..."
@@ -2181,14 +2181,14 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_childplay",
+            eventlabel="mshMod_technique_childplay",
             prompt="Child play",
             unlocked=False
         ),
         code="MSH_MOD_TCH"
     )
 
-label mshMod_childplay:
+label mshMod_technique_childplay:
     m "[player], don't you miss your child days?"
     m "You could reminisce them while playing like a child for a bit."
     m "Buy yourself some toys and play like you are 5 years old again!"
@@ -2204,7 +2204,7 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_therapist",
+            eventlabel="mshMod_technique_therapist",
             prompt="Therapist",
             conditional="persistent._msh_mod_pm_visits_therapist",
             unlocked=False
@@ -2212,7 +2212,7 @@ init 5 python:
         code="MSH_MOD_TCH"
     )
 
-label mshMod_therapist:
+label mshMod_technique_therapist:
     m "[player], why not call your therapist?"
     m "Try texting them if you think they might be busy."
     m "Maybe you can even schedule an emergencial appointment."
@@ -2225,14 +2225,14 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_plants",
+            eventlabel="mshMod_technique_plants",
             prompt="Plants",
             unlocked=False
         ),
         code="MSH_MOD_TCH"
     )
 
-label mshMod_plants:
+label mshMod_technique_plants:
     m "[player], do you take care of any plants?"
     m "You should give them a little love right now!"
     m "Water them and tend the garden."
@@ -2246,14 +2246,14 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_future",
+            eventlabel="mshMod_technique_future",
             prompt="Future",
             unlocked=False
         ),
         code="MSH_MOD_TCH"
     )
 
-label mshMod_future:
+label mshMod_technique_future:
     m "[player], I know things might look hopeless now."
     m "But why not think a little about your bright future?"
     m "You can think about your ideal life... {w=0.3}{nw}"
@@ -2276,14 +2276,14 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_create",
+            eventlabel="mshMod_technique_create",
             prompt="Create something",
             unlocked=False
         ),
         code="MSH_MOD_TCH"
     )
 
-label mshMod_create:
+label mshMod_technique_create:
     m "[player], why not create something of your own?"
     m "You can build something from scratch, start a new drawing or write a brand new story."
     m "Even folding a paper and inventing a new origami shape goes!"
@@ -2297,14 +2297,14 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_beads",
+            eventlabel="mshMod_technique_beads",
             prompt="Beads and charms",
             unlocked=False
         ),
         code="MSH_MOD_TCH"
     )
 
-label mshMod_beads:
+label mshMod_technique_beads:
     m "Another idea is to write down the names of your friends and family..."
     m "So that when you feel the need to self-injure, you are reminded that you are important and loved by your friends and family."
     m "As an extension to this, you could go to a craft store and buy supplies to make beads for bracelets and/or necklaces."
