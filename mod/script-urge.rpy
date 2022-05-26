@@ -129,7 +129,11 @@ label mshMod_urge_care_bad:
 
         "Yes, I want to try a calming technique.":
             m 1eka "Alright, baby."
+
+            # Unlock techniques menu and tell about some random one.
+            $ mas_showEVL("mshMod_techniques_menu", "EVE", unlock=True)
             call mshMod_technique_random
+
             jump mshMod_urge_care_feeling_better
 
         "No... Just let me hold you, please?":
