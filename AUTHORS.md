@@ -44,7 +44,7 @@ Here's a list of people who worked on this submod!
   — proofreading, insights and ideas
 
 
-## 👻 Past contributors (disconnected) 
+## 👻 Past contributors (retired) 
 
 * <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/github-light.svg">
