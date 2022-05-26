@@ -10,7 +10,7 @@ init 5 python:
             conditional="persistent._msh_mod_pm_did_selfharm",
             action=EV_ACT_UNLOCK,
             pool=True,
-            rules={"no_unlock": None}
+            rules={"no_unlock": None, "bookmark_rule": mas_bookmarks_derand.WHITELIST}
         )
     )
 
