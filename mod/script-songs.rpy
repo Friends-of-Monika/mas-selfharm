@@ -55,7 +55,6 @@ label mshMod_playlist:
     m 2fka "I love you, [mas_get_player_nickname()]."
     m 2esa "Take care."
 
-    $ mas_showEVL("mshMod_playlist_play")
     return "love|derandom"
 
 #listen to the playlist
@@ -66,8 +65,11 @@ init 5 python:
             eventlabel="mshMod_playlist_play",
             category=["music"],
             prompt="I want to listen to your playlist",
+            conditional="seen_event('mshMod_playlist')",
+            action=EV_ACT_UNLOCK,
             pool=True,
-            unlocked=False
+            unlocked=False,
+            rules={"no_unlock": None}
         )
     )
 
