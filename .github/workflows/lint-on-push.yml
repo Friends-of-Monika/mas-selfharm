@@ -2,7 +2,7 @@ name: Lint source tree on push
 
 on:
   push:
-    paths: [ '**.rpy' ]
+    paths: [ 'mod/**.rpy', 'spritepacks/**' ]
 
 jobs:
   compile-submod:
