@@ -39,7 +39,7 @@ label mshMod_techniques_menu:
             ).values()
         ))
 
-        items.sort(key=lambda it: it.eventlabel.replace("'", "").replace('"', ""))
+        items.sort(key=lambda it: it[0].replace("'", "").replace('"', ""))
 
     show monika at t21
     call screen mas_gen_scrollable_menu(items, mas_ui.SCROLLABLE_MENU_TXT_LOW_AREA, mas_ui.SCROLLABLE_MENU_XALIGN, ("Nevermind", False, False, False, 0))
