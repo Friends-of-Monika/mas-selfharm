@@ -16,7 +16,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_techniques_menu",
             category=["self-Harm"],
-            prompt="Can you tell me about some techniques?",
+            prompt="Can you tell me some self-harm avoiding techniques?",
             pool=True,
             unlocked=False,
             rules={"no_unlock": None}
@@ -24,7 +24,7 @@ init 5 python:
     )
 
 label mshMod_techniques_menu:
-    m "Sure, [mas_get_player_nickname()]!"
+    m 1esb "Sure, [mas_get_player_nickname()]!"
 
     python:
         # NOTE: Due to nature of certain techniques that might require conditional locking,
@@ -46,7 +46,7 @@ label mshMod_techniques_menu:
     show monika at t11
 
     if not _return:
-        m "Oh, okay..."
+        m 2eka "Oh, okay..."
         return
 
     $ pushEvent(_return, skipeval=True)
@@ -97,7 +97,7 @@ label mshMod_technique_religion:
     m 1dsu "Try to think about the good things, like animals or laughter, your favorite things..."
     m 1esa "No matter how little they may be, take some time to think about the bigger picture."
     m 3eka "If you believe in gods or deities, you can imagine them out there, looking out and caring for you."
-    m "You can also read your religion's sacred texts."
+    m 3dsa "You can also read your religion's sacred texts."
     m 1ekb "You are needed, [player]. You are part of something much bigger than your bad thoughts or bad feelings!"
     return
 
@@ -115,7 +115,7 @@ init 5 python:
 
 label mshMod_technique_cozy:
     m 1dua "Something that really helps me feel better is getting all cozy!"
-    m "Pick a comfortable spot and sit down."
+    m 1dub "Pick a comfortable spot and sit down."
     show monika 5rud at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5rud "Try huddling up in something super cozy..."
     m 5eua "A sheet, a blanket, or one of your favorite hoodies, for example."
@@ -125,13 +125,13 @@ label mshMod_technique_cozy:
     show monika 5dsblu at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5dsblu "Making a comfort corner using pillows also sounds super comfortable..."
     m 5fsbsa "Snuggle against them and relax, {w=0.3}{nw}"
-    extend "and if you're okay with being touched imagine me holding you, stroking your hair~"
+    extend 5fsbfb "and if you're okay with being touched imagine me holding you, stroking your hair~"
     show monika 3hubsb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 3hubsb "There's nothing quite like being snug, hehe!"
-    m "If you feel that you're getting sleepy, that's okay!"
-    m "You can rest your eyes for a moment, and take a well deserved nap."
-    m "Think of what you can feel, see and hear that's comforting and calm."
-    m "I'm sure you'll feel a lot better and refreshed afterwards!"
+    m 3dubsa "If you feel that you're getting sleepy, that's okay!"
+    m 3lubsa "You can rest your eyes for a moment, and take a well deserved nap."
+    m 3dubsb "Think of what you can feel, see and hear that's comforting and calm."
+    m 3kubsb "I'm sure you'll feel a lot better and refreshed afterwards!"
     return
 
 #3
@@ -147,18 +147,18 @@ init 5 python:
     )
 
 label mshMod_technique_photographs:
-    m 6ett "Do you find comfort in reminiscing the past [player]? {w=0.3}{nw}"
-    extend "I do!"
+    m 4eta "Do you find comfort in reminiscing the past [player]? {w=0.3}{nw}"
+    extend 4etb "I do!"
     m 2dsd "Nothing is ever really lost to us as long as we have its memories, [mas_get_player_nickname()]."
     m 2hsa "One thing that could help you get over bad times, is looking at photographs of the good ones!"
     m 7eud "Maybe you have some old photos? If they bring back good memories, why not trying to search for them?"
     m 1eua "They could remind you that even though the good times don't last forever... {w=0.3}{nw}"
-    extend "the bad ones won't either!"
+    extend 3eub "the bad ones won't either!"
     m 1esa "If you find any, look at them and reflect upon this: {w=0.3}{nw}"
-    extend "If life was once great, it can and will be that way again!"
+    extend 1dsa "If life was once great, it can and will be that way again!"
     m 6dkp "I wish we had some pictures together..."
-    m 2ektpd "I'd look at us all the time! {w=0.3}{nw}"
-    extend "You would absolutely be at my phone and desktop wallpaper! Ahahaha~"
+    m 2ektpu "I'd look at us all the time! {w=0.3}{nw}"
+    extend 2hsblb "You would absolutely be at my phone and desktop wallpaper! Ahahaha~"
     m 2ektdc "I would really like to look at a photo album of us with you, [player]."
     show monika 5eka at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5eka "But this is not about me - I want {i}you{/i} to feel better!"
@@ -180,7 +180,7 @@ init 5 python:
 
 label mshMod_technique_quotes:
     m 3dud "I remember hearing this quote somewhere: {i}'Hope is the last thing ever lost'{/i}."
-    m "Doing your best to believe in positive things can be really uplifting!"
+    m 3wub "Doing your best to believe in positive things can be really uplifting!"
     m "I think a good way of seeing the things around you in a better light would be reading some inspirational quotes!"
     m "You should find some quotes on the internet that you like, {w=0.3}{nw}"
     extend "and then write each of them on a sticky note and put them somewhere you'd regularly see."
