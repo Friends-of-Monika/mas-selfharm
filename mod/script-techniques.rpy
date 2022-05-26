@@ -19,7 +19,7 @@ init 5 python:
             prompt="Can you tell me some self-harm avoiding techniques?",
             pool=True,
             unlocked=False,
-            rules={"no_unlock": None}
+            rules={"no_unlock": None, "bookmark_rule": mas_bookmarks_derand.WHITELIST}
         )
     )
 
