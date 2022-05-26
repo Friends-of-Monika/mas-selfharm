@@ -9,7 +9,8 @@ init 5 python:
             prompt="[m_name], I feel like harming myself right now.",
             conditional="persistent._msh_mod_pm_did_selfharm",
             action=EV_ACT_UNLOCK,
-            pool=True
+            pool=True,
+            rules={"no_unlock": None}
         )
     )
 
