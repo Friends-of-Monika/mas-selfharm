@@ -181,15 +181,15 @@ init 5 python:
 label mshMod_technique_quotes:
     m 3dud "I remember hearing this quote somewhere: {i}'Hope is the last thing ever lost'{/i}."
     m 3wub "Doing your best to believe in positive things can be really uplifting!"
-    m "I think a good way of seeing the things around you in a better light would be reading some inspirational quotes!"
-    m "You should find some quotes on the internet that you like, {w=0.3}{nw}"
+    m 7wub "I think a good way of seeing the things around you in a better light would be reading some inspirational quotes!"
+    m 2hua "You should find some quotes on the internet that you like, {w=0.3}{nw}"
     extend "and then write each of them on a sticky note and put them somewhere you'd regularly see."
-    m "Every time you see one, you will remember things get better!"
-    m "You can also say some of them aloud, to inspire yourself!"
-    m "Sayori used to do that a lot. She used to put colorful sticky notes everywhere!"
-    m "If i recall correctly, there was one of them said 'You are loved', {w=0.3}{nw}"
+    m 4fub "Every time you see one, you will remember things get better!"
+    m 7kuu "You can also say some of them aloud, to inspire yourself!"
+    m 1rub "Sayori used to do that a lot. She used to put colorful sticky notes everywhere!"
+    m 1fkb "If i recall correctly, there was one of them said 'You are loved', {w=0.3}{nw}"
     extend "and another one with 'We're all in this together'."
-    m "Encouraging yourself with sticky notes is indeed a great idea!"
+    m 1hua "Encouraging yourself with sticky notes is indeed a great idea!"
     return
 
 #5
@@ -205,19 +205,19 @@ init 5 python:
     )
 
 label mshMod_technique_singing:
-    m "This one's going to be really simple. {w=0.3}{nw}"
+    m 4eub "This one's going to be really simple. {w=0.3}{nw}"
     extend "Sing a song!"
-    m "Not just any song, though. {w=0.3}{nw}"
+    m 3gua "Not just any song, though. {w=0.3}{nw}"
     extend "Your absolute favorite!"
-    m "I'd love to know what your favorite song is..."
+    m 2wub "I'd love to know what your favorite song is..."
     m "Anyway... {w=0.3}{nw}"
     extend "Try singing your favorite song until you feel better."
-    m "Singing can be a really good outlet for your emotions!"
-    m "You could also imagine we're singing 'Your Reality' together! {w=0.3}{nw}"
+    m 1eua "Singing can be a really good outlet for your emotions!"
+    m 3hub "You could also imagine we're singing 'Your Reality' together! {w=0.3}{nw}"
     extend "Ehehehe~"
-    m "You can sing as loud as you want!"
-    m "Also, if you'd like, write your favourite lyrics down."
-    m "Think about what they mean to you!"
+    m 3mub "You can sing as loud as you want!"
+    m 1wub "Also, if you'd like, write your favourite lyrics down."
+    m 2dub "Think about what they mean to you!"
     return
 
 #6
