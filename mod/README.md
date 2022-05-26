@@ -1,4 +1,4 @@
-# Script Files
+# 🖥️ Script Files
 
 In this folder there are all the script files of this submod.
 
@@ -19,7 +19,7 @@ Contains checkups script.
 Contains introduction script (question about self-harm and detailed explanation of it.)
 
 
-## script-mh-flowers.rpy
+### script-mh-flowers.rpy
 
 Contains flower-related mental health topics.
 

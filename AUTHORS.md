@@ -1,8 +1,8 @@
-# MAS Self-Harm Mod Authors
+# MAS Self-Harm Mod Team
 
-Here's a list of people who have been working on this submod!
+Here's a list of people who worked on this submod!
 
-## Active contributors
+## 🌟 Active contributors / bug fixers
 
 * ![reddit](.github/icons/reddit.svg) [u/my-otter-self](https://reddit.com/u/my-otter-self)
   <picture>
@@ -19,6 +19,9 @@ Here's a list of people who have been working on this submod!
   </picture>
   [@dreamscached](https://github.com/dreamscached)
   — concept creator, programming and repository maintaining
+  
+## 🌠 Past contributors
+
 * ![reddit](.github/icons/reddit.svg) [u/mayday-mayjay](https://reddit.com/u/mayday-mayjay)
   ![discord](.github/icons/discord.svg) [DJChicken#2001](https://discordapp.com/users/270333416346484737) / the DreamScape system
   — dialogue writing, spritepack desigining
@@ -41,7 +44,7 @@ Here's a list of people who have been working on this submod!
   — proofreading, insights and ideas
 
 
-## Past contributors
+## 👻 Past contributors (ghosts) 
 
 * <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/github-light.svg">

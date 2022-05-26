@@ -1,0 +1,26 @@
+{
+    "__author": "Self-Harm Submod--HistoryVariety",
+    "version": 3,
+    "type": 0,
+    "name": "sh_monarch_butterfly_hairclip",
+    "img_sit": "sh_monarch_butterfly",
+    "pose_map": {
+        "default": "0",
+        "l_default": "5"
+    },
+    "rec_layer": 5,
+    "acs_type": "left-hair-clip",
+    "stay_on_start": true,
+    "ex_props": {
+    },
+    "select_info": {
+        "display_name": "Monarch Butterfly Hairclip",
+        "thumb": "sh_monarch_butterfly_hairclip",
+        "group": "left-hair-clip",
+        "select_dlg": [
+            "Adorable!",
+            "Just when the catepillar thought the world was over, it became a butterfly!"
+        ]
+    },
+    "giftname": "sh_monarchbutterflyhairclip"
+}
