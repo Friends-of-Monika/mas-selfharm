@@ -33,7 +33,7 @@ label mshMod_playlist:
 
         "Yes":
             stop music
-            play music "mod_assets/other/Monika_s-Playlist.mp3"
+            play music "mod_assets/other/playlist.mp3"
 
         "Not yet, [m_name]":
             m 1eka "Oh, alright."
@@ -76,7 +76,7 @@ label mshMod_playlist_play:
 
         "Yes":
             stop music
-            play music "mod_assets/other/Monika_s-Playlist.mp3"
+            play music "mod_assets/other/playlist.mp3"
             m 7hsb "There you go!"
             m 1hsa "I hope you like it!"
 
