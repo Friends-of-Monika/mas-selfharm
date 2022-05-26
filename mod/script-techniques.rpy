@@ -69,7 +69,7 @@ label mshMod_technique_random:
                 unlocked=True
             )
 
-        renpy.jump(items[random.randint(0, len(items) - 1)])
+        renpy.jump(items[items.keys()[random.randint(0, len(items) - 1)]])
 
     return
 
