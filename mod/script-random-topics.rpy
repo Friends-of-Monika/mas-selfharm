@@ -41,7 +41,11 @@ label mshMod_topic_sunny_day:
 #self harm awareness day
 init 5 python:
     # P.S. 'SIAD' is 'Self Injury Awareness Day', this is not a typo.
-    _mshMod_event_siad_date = datetime.date(datetime.date.today().year, 3, 1)
+    today = datetime.date.today()
+    if (today.replace(month=3, day=1) - today).days > 0:
+        _mshMod_event_siad_date = today.replace(month=3, day=1)
+    else:
+        _mshMod_event_siad_date = today.replace(year=today.year + 1, month=3, day=1)
 
     addEvent(
         Event(
@@ -51,8 +55,8 @@ init 5 python:
             category=["self-Harm"],
             start_date=_mshMod_event_siad_date,
             end_date=_mshMod_event_siad_date + datetime.timedelta(days=1),
-            years=[],
-            random=True
+            action=EV_ACT_RANDOM,
+            years=[]
         )
     )
 
