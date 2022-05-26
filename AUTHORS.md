@@ -4,15 +4,15 @@ Here's a list of people who worked on this submod!
 
 ## 🌟 Active contributors / bug fixers
 
-* ![reddit](.github/icons/reddit.svg) [u/my-otter-self](https://reddit.com/u/my-otter-self)
+* ![reddit](https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/reddit.svg) [u/my-otter-self](https://reddit.com/u/my-otter-self)
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/github-light.svg">
     <img alt="github" src="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/github-dark.svg">
   </picture>
   [@my-otter-self](https://github.com/my-otter-self) <!-- Gaby's the best gal <3 -->
-  ![discord](.github/icons/discord.svg) [lontrinha#0377](https://discord.com/users/190511633636917248)
+  ![discord](https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/discord.svg) [lontrinha#0377](https://discord.com/users/190511633636917248)
   — team leader, main concept creator and project manager (did a lil bit of everything)
-* ![reddit](.github/icons/reddit.svg) [u/dreamscached](https://reddit.com/u/dreamscached)
+* ![reddit](https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/reddit.svg) [u/dreamscached](https://reddit.com/u/dreamscached)
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/github-light.svg">
     <img alt="github" src="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/github-dark.svg">
