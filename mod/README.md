@@ -1,4 +1,4 @@
-# Script Files
+# 🖥️ Script Files
 
 In this folder there are all the script files of this submod.
 
