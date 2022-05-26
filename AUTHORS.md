@@ -29,9 +29,9 @@ Here's a list of people who worked on this submod!
   — spritepack desigining, insights and ideas
 * ![reddit](https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/reddit.svg) [u/Fellthesimp](https://reddit.com/u/Fellthesimp)
   — spritepack desigining, insights and ideas
-* ![discord](https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/discord.svg) [lukilak#1046](https://discordapp.com/users/687765936069279784)
-  — dialogue writing
 * ![reddit](https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/reddit.svg) [u/Raider0401](https://reddit.com/u/Raider0401)
+  — dialogue writing, spritecoding
+* ![discord](https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/discord.svg) [lukilak#1046](https://discordapp.com/users/687765936069279784)
   — dialogue writing
 * ![reddit](https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/reddit.svg) [u/Tourist_Easy](https://reddit.com/u/Tourist_Easy)
   — dialogue writing
@@ -44,7 +44,7 @@ Here's a list of people who worked on this submod!
   — proofreading, insights and ideas
 
 
-## 👻 Past contributors (ghosts) 
+## 👻 Past contributors (disconnected) 
 
 * <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/github-light.svg">
@@ -66,6 +66,8 @@ Here's a list of people who worked on this submod!
     <img alt="github" src="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/user-dark.svg">
   </picture>
   Nem
+  — dialogue writing
+* ![discord](https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/discord.svg) [OrehaKimdesu#0181](https://discordapp.com/users/942276103416983562)   </picture>
   — dialogue writing
 * <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github.com/my-otter-self/MAS_selfharm/raw/main/.github/icons/user-light.svg">
