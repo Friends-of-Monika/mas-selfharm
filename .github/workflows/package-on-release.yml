@@ -60,3 +60,4 @@ jobs:
           draft: true
           files: |
             build/out/msh-mod-${{ env.VERSION }}.zip
+            build/out/spritepacks-${{ env.VERSION }}.zip
