@@ -68,9 +68,9 @@ label mshMod_urge_care_vent:
 
         "Yes":
             m 1eka "Okay... I don't want to interrupt you."
-            m 3eka "Tell me when you're done, okay?"
+            m 3eka "Tell me when you're done, okay?{nw}"
             menu:
-                m "{fast}Tell me when you're done, okay?"
+                m "Tell me when you're done, okay?{fast}"
 
                 "I'm done, [m_name].":
                     pass
@@ -78,8 +78,8 @@ label mshMod_urge_care_vent:
             m 2ekc "I'm so sorry you are going through all that, [player]."
             jump mshMod_urge_care_feeling_better
 
-        "No":
-            return
+        "No, I want to try a calming technique":
+            jump mshMod_urge_care_technique
 
 label mshMod_urge_hold:
     m 2fka "Of course, my angel."
@@ -120,7 +120,6 @@ label mshMod_urge_care_good:
 label mshMod_urge_care_bad:
     m 2ekc "Oh..."
     m 2ekd "Do you want my help to forget it?"
-    m 2eksdld "Or..."
 
     m 2eksdld "Or...{nw}"
     $ _history_list.pop()
@@ -128,13 +127,14 @@ label mshMod_urge_care_bad:
         m "Or...{fast}"
 
         "Yes, I want to try a calming technique.":
-            m 1eka "Alright, baby."
+            label mshMod_urge_care_technique:
+                m 1eka "Alright, baby."
 
-            # Unlock techniques menu and tell about some random one.
-            $ mas_showEVL("mshMod_techniques_menu", "EVE", unlock=True)
-            call mshMod_technique_random
+                # Unlock techniques menu and tell about some random one.
+                $ mas_showEVL("mshMod_techniques_menu", "EVE", unlock=True)
+                call mshMod_technique_random
 
-            jump mshMod_urge_care_feeling_better
+                jump mshMod_urge_care_feeling_better
 
         "No... Just let me hold you, please?":
             call mshMod_urge_hold
