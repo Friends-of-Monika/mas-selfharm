@@ -275,7 +275,7 @@ label mshMod_topic_morning_routine:
     m 7huu "Next tip, if you have alarms, set your alarm a little further back then you usually do..."
     m 7hub "Or at least make sure you're giving yourself enough time so you aren't rushing out the doors every morning!"
     m 1hub "Now with that extra time, use it to get some quiet time in for yourself and actually {i}wake up{/i} for the day. {w=0.3}{nw}"
-    extend 1lua "Maybe do a little meditation- or pray, if you'religious... 
+    extend 1lua "Maybe do a little meditation- or pray, if you'religious... "
     m 3wub "Make breakfast, read books, or even write down your plans for day."
     m 3lub "As long as it's something that {i}you{/i} want to do and makes you happy, go for it!"
     m 3lusdld "Just... try not to go online during your morning time. {w=0.3}{nw}"
