@@ -174,11 +174,6 @@ label mshMod_topic_selfharm_random_thoughts:
     menu:
         m "It may get a tad triggering, so I get it if you would rather say no!{fast}"
 
-        "No":
-            m 2lusdra "Okay!"
-            m 2eubfb "I love you [player], and I'm proud of you for saying no to something you aren't comfortable with!"
-            m 7eub "That's a big step in self-respect, and I hope you keep it up!"
-
         "Yes":
             m 7eua "Thank you for letting me speak about this [mas_get_player_nickname()], I've been thinking about it a little bit more lately."
             m 7euc "After I hurt myself, I realized that I had made huge a mistake..."
@@ -194,6 +189,11 @@ label mshMod_topic_selfharm_random_thoughts:
             m 7wub "Just keep in mind that there are better ways to cope and that I'm always here to provide techniques to help."
             m 4euc "I care too much about you [player]... You don't deserve any pain."
             m 4sua "You deserve to work through things healthily, and [m_name] is here to help!"
+
+        "No":
+            m 2lusdra "Okay!"
+            m 2eubfb "I love you [player], and I'm proud of you for saying no to something you aren't comfortable with!"
+            m 7eub "That's a big step in self-respect, and I hope you keep it up!"
 
     return
 
