@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+            lfs: true
 
       - name: Load environment variables from file
         run: .github/scripts/load-env.sh
