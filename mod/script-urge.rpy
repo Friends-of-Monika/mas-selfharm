@@ -108,7 +108,9 @@ label mshMod_urge_care_feeling_better:
 label mshMod_urge_care_good:
     m 1ekb "Oh, honey. I'm so glad!"
     m 1dkb "I'm so glad you came to talk to me, [player]."
+    show monika 5fkb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5fkb "You can always count on me, for anything."
+    show monika 1fkb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 1fkb "If it happens again, don't be afraid to ask for help."
     m 1fka "I'm here for you, [player]."
     m 1esa "Now, let's spend some more time together?"

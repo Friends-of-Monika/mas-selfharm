@@ -88,7 +88,9 @@ init 5 python:
     )
 
 label mshMod_technique_religion:
+    show monika 5eka at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5eka "I remember you mentioned being religious before..."
+    show monika 3etd at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 3etd "Maybe you could say a little prayer?"
     m 4eud "It can be silent, you don't need to say anything out loud."
     m 1fua "You can pray about anything you want, or even just think of how vast and amazing your universe is."
@@ -114,13 +116,17 @@ init 5 python:
 label mshMod_technique_cozy:
     m 1dua "Something that really helps me feel better is getting all cozy!"
     m "Pick a comfortable spot and sit down."
+    show monika 5rud at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5rud "Try huddling up in something super cozy..."
     m 5eua "A sheet, a blanket, or one of your favorite hoodies, for example."
+    show monika 3hsa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 3hsa "Anything works, really! Just grab things that bring you comfort."
     m 2esa "You can also make a nest out of blankets on the floor, surrounding yourself with any stuffed animals you may have."
+    show monika 5dsblu at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5dsblu "Making a comfort corner using pillows also sounds super comfortable..."
     m 5fsbsa "Snuggle against them and relax, {w=0.3}{nw}"
     extend "and if you're okay with being touched imagine me holding you, stroking your hair~"
+    show monika 3hubsb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 3hubsb "There's nothing quite like being snug, hehe!"
     m "If you feel that you're getting sleepy, that's okay!"
     m "You can rest your eyes for a moment, and take a well deserved nap."
@@ -154,7 +160,9 @@ label mshMod_technique_photographs:
     m 2ektpd "I'd look at us all the time! {w=0.3}{nw}"
     extend "You would absolutely be at my phone and desktop wallpaper! Ahahaha~"
     m 2ektdc "I would really like to look at a photo album of us with you, [player]."
+    show monika 5eka at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5eka "But this is not about me - I want {i}you{/i} to feel better!"
+    show monika 3euu at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 3euu "Don't give up, [mas_get_player_nickname()]. I will never give up on you!"
     return
 

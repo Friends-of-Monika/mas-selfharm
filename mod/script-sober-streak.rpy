@@ -94,6 +94,7 @@ label mshMod_promise:
 label mshMod_promise_jump:
     hide screen mas_background_timed_jump
 
+    show monika 5ekbsb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ekbsb "I love you, [mas_get_player_nickname()]."
     m 5dkbsb "Never forget that!"
 
@@ -161,8 +162,10 @@ init 5 python:
 
 label mshMod_milestone_1w:
     m 1eka "It's been a whole week since you told me you won't do harm to yourself..."
+    show monika 5ektpa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ektpa "I just want to thank you, it makes me happy to know you're willing to step up for the better!"
     m 5fkbfa "I'll always love you, you don't know how much this means to me..."
+    show monika 3hsb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 3hsb "Anyways, I'll mark this on our calendar."
     return "love|derandom|unlock"
 
@@ -185,6 +188,7 @@ label mshMod_milestone_2w:
     m 2dsa "Either way, it's not something you can stop overnight [player]... For anyone really."
     m 4wsa "So, you're really doing well, and you make me so happy because of that!"
     m 4wsb "As before, i'll mark it on the calendar now!"
+    show monika 5ektpa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ektpa "I just want to thank you.. I hope it stays like this."
     m 5fkbfa "I really love you that much, [player]!"
     return "love|derandom|unlock"
@@ -210,6 +214,7 @@ label mshMod_milestone_3w:
     m 7rssdlc "But if it ever does happen..."
     m 7dssdld "Don't blame yourself if it ever happens... Just because you did it to yourself doesn't mean it's your fault!"
     m 1wua "I'm going to make another mark on the calendar for this!"
+    show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5fkbfa "You're my everything, [player]!"
     return "derandom|unlock"
 
@@ -231,6 +236,7 @@ label mshMod_milestone_1m:
     m 1eka "I just want you to know that I'm so proud of you. {w=0.3}{nw}"
     extend 3eka "It's not easy to do that, and I'm so happy you're making the effort."
     m 7dssdld "I've already told you I won't blame you if you do relapse. It's extremely tempting, and I know it must be hard for you."
+    show monika 5ektpa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ektpa "I'm just so proud you've made it so far."
     m 5fkbfa "I love you, [mas_get_player_nickname()]. Don't forget that~"
     return "love|derandom|unlock"
@@ -248,6 +254,7 @@ init 5 python:
     )
 
 label mshMod_milestone_3m:
+    show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5fkbfa "Y'know... It's been 3 months since you made your promise to me."
     m 3ssa "You've been doing so well! I'm so proud of you."
     m 1wua "It's been a bit, so I'll mark this on the calendar for you!"
@@ -271,6 +278,7 @@ label mshMod_milestone_6m:
     m 3ssb "It's been 6 months since you made your promise!"
     m 3wsb "That's a long time!"
     m 1eka "It may not seem like much in the grand scheme of things, but it's still a big acomplishment."
+    show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5fkbfa "I love you so much! Thank you for staying safe."
     return "love|derandom|unlock"
 
@@ -291,6 +299,7 @@ label mshMod_milestone_1y:
     m 1ektpa "You've been clean from self-harm for an entire year."
     m 3ektpb "You've been so strong this past year, and I truly can't express how happy I am."
     m 3dkblb "I hope you know how much this affects not only yourself, but me as well. Your friends, your family."
+    show monika 5ektpa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ektpa "This is a wonderful feat."
     m 5fkbfa "I love you so, so much."
     return "love|derandom|unlock"
@@ -311,6 +320,7 @@ label mshMod_milestone_2y:
     m 3ssblb "[player]! I have amazing news!"
     m 3dkblb "Did you know that you have been self-harm sober for 2 whole years now?"
     m 1eka "This is an incredible feat. Keep it up!"
+    show monika 5ektpa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ektpa "You deserve to be happy. Never forget that, and never let anyone tell you otherwise!"
     m 5fkbfa "I love you so much."
     return "love|derandom|unlock"
@@ -330,6 +340,7 @@ init 5 python:
 label mshMod_milestone_3y:
     m 3ssb "[player], I have some news for you."
     m 3ssa "The day of your 3 year sobriety mark from self-harm has finally arrived!"
+    show monika 5ektpa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ektpa "I'm so happy to see you taking care of yourself."
     m 5fkbfa "Keep on fighting! I'm so proud of you!"
     return "derandom|unlock"
@@ -350,6 +361,7 @@ label mshMod_milestone_4y:
     m 3ssa "[player]! 4 whole years, can you believe it?"
     m 1eka "It's been 4 years since you stopped harming yourself."
     m 1dka "And I can't even begin to tell you how proud of you I am."
+    show monika 5ektpa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ektpa "You are deserving of a happy and healthy life!"
     m 5fkbfa "And I'm so proud of you for your decison and for the promise you made 4 years ago."
     return "derandom|unlock"
@@ -370,6 +382,7 @@ label mshMod_milestone_5y:
     m 1dka "5 years..."
     m 1ektpa "It's been 5 years since your life changed for the better."
     m 1ektpb "You've been self-harm sober for all this time, and I couldn't be more proud."
+    show monika 5ektpa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ektpa "I'm so happy that you're doing well."
     m 5fkbfa "You are so inspiring. Congratulations, [player], for your successful journey!"
     return "derandom|unlock"

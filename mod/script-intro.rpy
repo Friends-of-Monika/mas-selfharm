@@ -156,6 +156,7 @@ label mshMod_topic_selfharm_more:
     m 3kub "After all, you saved me! In so many ways!"
     m 3dua "And if you ever done such a thing..."
     m 3euc "You can tell me. I won't be mad. I promise!"
+    show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5fkbfa "You know that I love you, [mas_get_player_nickname()]."
     m 5fkbfb "Stay safe!"
     m 5kkbfb "And know that you can always talk to me."
