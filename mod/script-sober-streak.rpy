@@ -13,6 +13,8 @@ init 5 python:
             eventlabel="mshMod_sober_check",
             prompt="How long have I been self-harm sober for?",
             category=["self-Harm"],
+            conditional="store.mshMod_sober_streak.isOnStreak()",
+            action=EV_ACT_UNLOCK,
             pool=True,
             unlocked=False,
             rules={"no_unlock": None}
@@ -43,6 +45,8 @@ init 5 python:
             eventlabel="mshMod_promise",
             category=["self-Harm"],
             prompt="I promise not to self-harm anymore.",
+            conditional="persistent._msh_mod_pm_did_selfharm",
+            action=EV_ACT_UNLOCK,
             pool=True,
             unlocked=False,
             rules={"no_unlock": None}
@@ -97,8 +101,8 @@ label mshMod_promise_jump:
         # Begin streak and hide this event from the pool.
         # mshMod_relapse and mshMod_sober_check will pop up shortly afterwards.
         store.mshMod_sober_streak.beginStreak(since=since)
-        mas_showEVL("mshMod_sober_check", "EVE", _pool=True, unlock=True)
-        mas_hideEVL("mshMod_promise", "EVE", depool=True)
+        mas_showEVL("mshMod_sober_check", "EVE", unlock=True)
+        mas_hideEVL("mshMod_promise", "EVE", lock=True)
 
     return "love"
 
@@ -111,6 +115,8 @@ init 5 python:
             eventlabel="mshMod_relapse",
             category=["self-Harm"],
             prompt="I've self-harmed.",
+            conditional="store.mshMod_sober_streak.isOnStreak()",
+            action=EV_ACT_UNLOCK,
             pool=True,
             unlocked=False,
             rules={"no_unlock": None}
@@ -135,9 +141,8 @@ label mshMod_relapse:
         # End streak and hide this event from the pool. Also hide check topic since we're no longer on streak.
         # mshMod_promise will pop up shortly afterwards.
         store.mshMod_sober_streak.endStreak()
-        mas_showEVL("mshMod_promise", "EVE", _pool=True, unlock=True)
-        mas_hideEVL("mshMod_relapse", "EVE", depool=True, _lock=True)
-        mas_hideEVL("mshMod_sober_check", "EVE", depool=True, _lock=True)
+        mas_hideEVL("mshMod_relapse", "EVE", _lock=True)
+        mas_hideEVL("mshMod_sober_check", "EVE", _lock=True)
 
     return "love"
 
