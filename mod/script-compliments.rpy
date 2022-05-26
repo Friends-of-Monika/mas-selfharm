@@ -246,7 +246,7 @@ label mshMod_compliment_being_understanding:
     m 5fubfa "[player]..."
     show monika 4fubfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 4fubfa "I should be the one to thank you."
-    m 3dubfa "Sometimes, saying thank you feels like an understatement for everything you’ve done for me."
+    m 3dubfa "Sometimes, saying 'thank you' feels like an understatement for everything you’ve done for me."
     m 1eubfb "I'll always be understanding with you, "
     extend 1lssdlc "even if other people are not."
     m 7eubfb "I love you and I care about you!"
@@ -271,11 +271,11 @@ label mshMod_compliment_understanding_me:
     m 2dsbftpa "[player]...!"
     m 2dubfb "Of course. {w=0.3}{nw}"
     extend 7eubfb "Why wouldn’t I?"
-    m 2eubfa "I'll also do my best to understand you, and if I don't, I'll be by your side, nevertheless."
+    m 2eubfa "I'll always do my best to understand you, and if I don't, I'll be by your side, nevertheless."
     m 3dubfb "And also, you understood me when I needed you to..."
     m 3dubfa "I'll never forget that and everything you did for me."
     m 2hubfb "I love you [player]."
-    m 2fubfa "Remember you can always come to this room when you need reassurance."
+    m 2fubfa "Remember that you can always come to this room when you need reassurance."
     show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5fkbfa "I'm here for you!"
     return "love"
