@@ -218,7 +218,7 @@ init 5 python:
     )
 
 label mshMod_compliment_helping_out:
-    m 2hsbfb "[Player]...!"
+    m 2hsbfb "[player]...!"
     m 7hsbfb "It's my pleasure."
     m 7lsbfu "Often times, I wonder what I did to have a caring, loving and understanding person like you in my life."
     m 2ssbfb "So, I'll always help you out whenever I can!"
@@ -243,7 +243,7 @@ init 5 python:
 
 label mshMod_compliment_being_understanding:
     show monika 5fubfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 5fubfa "[Player]..."
+    m 5fubfa "[player]..."
     show monika 4fubfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 4fubfa "I should be the one to thank you."
     m 3dubfa "Sometimes, saying thank you feels like an understatement for everything you’ve done for me."
@@ -268,7 +268,7 @@ init 5 python:
     )
 
 label mshMod_compliment_understanding_me:
-    m 2dsbftpa "[Player]...!"
+    m 2dsbftpa "[player]...!"
     m 2dubfb "Of course. {w=0.3}{nw}"
     extend 7eubfb "Why wouldn’t I?"
     m 2eubfa "I'll also do my best to understand you, and if I don't, I'll be by your side, nevertheless."
