@@ -1,4 +1,4 @@
-# Credits 
+# ©️ Credits 
 
 These are the owed credits to the media that was used in the works of this submod.<br>
 For a list of people who worked in this submod, check [CONTRIBUTORS.md](CONTRIBUTORS.md).
@@ -15,7 +15,7 @@ For a list of people who worked in this submod, check [CONTRIBUTORS.md](CONTRIBU
 #### <a href="https://calmharm.co.uk/"> Calm Harm</a>,
 ##### from stem4
 
-## Songs
+## 🎵 Songs
 
 #### <a href="https://www.youtube.com/watch?v=YkCK3ia4BpA"> Battle Scars</a>,
 ##### by Paradise Fears
