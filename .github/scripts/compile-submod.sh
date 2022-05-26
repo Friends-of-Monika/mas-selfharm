@@ -19,12 +19,12 @@ build/renpy/renpy.sh build/ddlc compile 2>&1 \
     | tee build/compile.log \
     | perl -ne 'print if (/^game\/mshMod[^\s]*: \w*Warning/ || !/^game\//)' \
     | sed 's/game\/mshMod\///g'
-# perl -ne 'print if (/^.*!ERROR! T_T.*$/)' build/ddlc/log/spj.log \
-#     | tee -a build/compile.log
+perl -ne 'print if (/^.*!ERROR! T_T.*$/)' build/ddlc/log/spj.log \
+    | tee -a build/compile.log
 
 # Scan for errors in log
 if grep -Eq '^.*Error:.*$|^File ".*", line .*:.*$' build/compile.log; then exit 1; fi
-# if tail -n +9 build/ddlc/log/spj.log | grep -Eq '^.*!ERROR! T_T.*$'; then exit 1; fi
+if tail -n +9 build/ddlc/log/spj.log | grep -Eq '^.*!ERROR! T_T.*$'; then exit 1; fi
 
 # Move compiled files to build/out
 find build/ddlc/game/mshMod/mod -type f -not -iname '*.rpyc' -delete

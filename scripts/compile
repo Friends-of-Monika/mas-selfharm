@@ -4,7 +4,7 @@ set -e
 scripts/_util/try-install-env.sh
 
 echo "# Store submod version in an environment variable"
-VERSION="$(.github/scripts/extract-version.sh)"
+export VERSION="$(.github/scripts/extract-version.sh)"
 
 echo "# Compile submod"
 .github/scripts/compile-submod.sh
@@ -13,5 +13,5 @@ echo "# Package submod"
 (cd build/out; find game | zip "msh-mod-$VERSION.zip" -9 -@)
 rm -r build/out/game
 
-# echo "# Package spritepacks"
-# .github/scripts/compile-spritepacks.sh
+echo "# Package spritepacks"
+.github/scripts/compile-spritepacks.sh

@@ -4,9 +4,12 @@ set -e
 scripts/_util/try-install-env.sh
 
 echo "# Store submod version in an environment variable"
-VERSION="$(.github/scripts/extract-version.sh)"
+export VERSION="$(.github/scripts/extract-version.sh)"
 
 echo "# Compile submod"
 .github/scripts/compile-submod.sh
+
+echo "# Package spritepacks"
+.github/scripts/compile-spritepacks.sh
 
 rm -rf build/out
