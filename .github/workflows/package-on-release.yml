@@ -52,7 +52,7 @@ jobs:
         run: (cd build/out; find game | zip "msh-mod-$VERSION.zip" -9 -@)
 
       - name: Package spritepacks
-        run: .github/scripts/compile-spritepacks.sh
+        run: .github/scripts/package-spritepacks.sh
 
       - name: Create new release draft
         uses: softprops/action-gh-release@v1
