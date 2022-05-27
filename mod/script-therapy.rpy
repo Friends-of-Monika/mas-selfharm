@@ -13,7 +13,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_ask_about_therapy",
-            aff_range=(mas_aff.BROKEN, mas_aff.NORMAL),
+            category=["mental health"],
+            conditional="persistent._msh_mod_pm_did_selfharm",
             action=EV_ACT_RANDOM
         )
     )
@@ -60,7 +61,7 @@ label mshMod_ask_about_therapy:
             m 3eua "And you can also learn more about yourself!"
             m 1hua "Maybe you can teach me what you learn there when you go!"
 
-    return "no_unlock|derandom"
+    return
 
 # Random dialogue about therapy
 init 5 python:
@@ -68,10 +69,9 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_topic_thoughts_about_therapy",
-            category=["monika", "life", "self-Harm"],
+            category=["Mental health"],
             prompt="Therapy",
-            conditional="persistent._msh_mod_pm_did_selfharm",
-            action=EV_ACT_RANDOM
+            random=True
         )
     )
 
