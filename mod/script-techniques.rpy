@@ -286,14 +286,14 @@ init 5 python:
     )
 
 label mshMod_technique_listening:
-    m "Try listening to a few songs you love!"
-    m "But don't {i}just{/i} listen. {w=0.3}{nw}"
-    extend "Try paying attention."
-    m "Focus on certain instruments or parts, their notes, and how they add to the song as a whole!"
-    m "For example, 'Your Reality' has a lovely piano melody on the background of my voice."
-    m "Focusing on something like that could serve as a distraction, {w=0.3}{nw}"
-    extend "and learning something about the things you love at the same time!"
-    m "We could always listen to them together if you'd like!"
+    m 3eua "Try listening to a few songs you love!"
+    m 3eub "But don't {i}just{/i} listen. {w=0.3}{nw}"
+    extend 7etb "Try paying attention."
+    m 6esb "Focus on certain instruments or parts, their notes, and how they add to the song as a whole!"
+    m 7wta "For example, 'Your Reality' has a lovely piano melody on the background of my voice."
+    m 1hua "Focusing on something like that could serve as a distraction, {w=0.3}{nw}"
+    extend 3sub "and learning something about the things you love at the same time!"
+    m 3wub "We could always listen to them together if you'd like!"
     return
 
 #9
@@ -309,17 +309,17 @@ init 5 python:
     )
 
 label mshMod_technique_butterfly:
-    m "Could you take some deep breaths? And also, a marker, or a pen."
-    m "I would like for you to scribble on the place you want to harm yourself. {w=0.3}{nw}"
-    extend "Most methods use a butterfly drawing."
-    m "You could draw the butterfly and name it, and if you do harm yourself, you harm it, too."
-    m "Whenever you look at it and think of harming yourself, do something comforting instead!"
-    m "Sing along to a tune, watch your favorite film, go out on a walk..."
-    m "You can also draw or write some positive things on your arm. {w=0.3}{nw}"
-    extend "Or maybe some beautiful flowers!"
-    m "Don't hurt yourself until the drawings wash off."
-    m "If the butterfly fades without self-harming..."
-    m "It means that the butterfly lived and has flown away, giving you a sense of achievement!"
+    m 1eud "Could you take some deep breaths? And also, a marker, or a pen."
+    m 4etd "I would like for you to scribble on the place you want to harm yourself. {w=0.3}{nw}"
+    extend 6eta "Most methods use a butterfly drawing."
+    m 7eua "You could draw the butterfly and name it, and if you do harm yourself, you harm it, too."
+    m 7eub "Whenever you look at it and think of harming yourself, do something comforting instead!"
+    m 2eub "Sing along to a tune, watch your favorite film, go out on a walk..."
+    m 3wub "You can also draw or write some positive things on your arm. {w=0.3}{nw}"
+    extend 3wua "Or maybe some beautiful flowers!"
+    m 3eud "Don't hurt yourself until the drawings wash off."
+    m 3ruu "If the butterfly fades without self-harming..."
+    m 4sub "It means that the butterfly lived and has flown away, giving you a sense of achievement!"
     return
 
 #10
@@ -335,14 +335,14 @@ init 5 python:
     )
 
 label mshMod_technique_healing:
-    m "[player], do you have a first aid kit at home?"
-    m "Maybe some sticking plasters, band-aids?"
-    m "Could you stick some of them where you want to hurt yourself?"
-    m "As a reminder that you are letting yourself heal."
-    m "And remember, healing takes time. {w=0.3}{nw}"
-    extend "And we have all the time in the world."
-    m "No need to rush this, okay? {w=0.3}{nw}"
-    extend "Baby steps!{w=0.5} Ehehehe~!"
+    m 3etd "[player], do you have a first aid kit at home?"
+    m 1etd "Maybe some sticking plasters, band-aids?"
+    m 1etd "Could you stick some of them where you want to hurt yourself?"
+    m 4eta "As a reminder that you are letting yourself heal."
+    m 4eta "And remember, healing takes time. {w=0.3}{nw}"
+    extend 1esb "And we have all the time in the world."
+    m 2fta "No need to rush this, okay? {w=0.3}{nw}"
+    extend 3htb "Baby steps!{w=0.5} Ehehehe~!"
     return
 
 #11
@@ -358,16 +358,16 @@ init 5 python:
     )
 
 label mshMod_technique_pong:
-    m "[player], perhaps playing something would make you feel better?"
-    m "Do you want to play Pong?{nw}"
+    m 3eta "[player], perhaps playing something would make you feel better?"
+    m 4eub "Do you want to play Pong?{nw}"
     $ _history_list.pop()
     menu:
-        m "Do you want to play Pong?{fast}"
+        m 4eub "Do you want to play Pong?{fast}"
         "Sure!":
-            m "Great!"
-            m "Bring it on!"
+            m 1hub "Great!"
+            m 3tuu "Bring it on!"
             call demo_minigame_pong
-            m "Hope you're feeling better, [player]!"
+            m 2fub "Hope you're feeling better, [player]!"
             return
 
 #12
@@ -383,15 +383,15 @@ init 5 python:
     )
 
 label mshMod_technique_chess:
-    m "[player], perhaps playing something would make you feel better?"
-    m "Do you want to play Chess?{nw}"
+    m 3eta "[player], perhaps playing something would make you feel better?"
+    m 4eub "Do you want to play Chess?{nw}"
     $ _history_list.pop()
     menu:
-        m "Do you want to play Chess?{fast}"
+        m 4eub "Do you want to play Chess?{fast}"
         "Sure!":
-            m "Okay!"
+            m 1hub "Okay!"
             call mas_chess
-            m "Hope you're feeling better, [player]!"
+            m 2fub "Hope you're feeling better, [player]!"
             return
 
 #13
@@ -407,17 +407,17 @@ init 5 python:
     )
 
 label mshMod_technique_piano:
-    m "[player], perhaps playing an musical instrument would make you feel better?"
-    m "Music really is a great way to relieve stress!"
-    m "I love listening to some music or playing a melody when trying to relax."
-    m "Do you want to play the Piano?{nw}"
+    m 3eta "[player], perhaps playing an musical instrument would make you feel better?"
+    m 3wub "Music really is a great way to relieve stress!"
+    m 4hub "I love listening to some music or playing a melody when trying to relax."
+    m 4eub "Do you want to play the Piano?{nw}"
     $ _history_list.pop()
     menu:
-        m "Do you want to play the Piano?{fast}"
+        m 4eub "Do you want to play the Piano?{fast}"
         "Sure!":
-            m "Alright!"
+            m 1hub "Alright!"
             call mas_piano_start
-            m "Hope you're feeling better, [player]!"
+            m 2fub "Hope you're feeling better, [player]!"
             return
 
 #14
