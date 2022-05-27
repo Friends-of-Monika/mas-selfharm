@@ -35,4 +35,4 @@ mv build/ddlc/game/mshMod "build/out/game/Submods/$(perl -ne 'printf $1 if /name
 
 # Remove submod and spritepack files from build directory
 rm -rf build/ddlc/game/mshMod
-find spritepacks -mindepth 2 -type f -exec sh -c 'echo "$0" | sed -nE '"'s/^.*\/((game|characters)\/.*)/\1/p'" \{\} \;
+find spritepacks -mindepth 2 -type f -exec sh -c 'rm "$(echo "$0" | sed -nE '"'s/^.*\/((game|characters)\/.*)/\1/p'"')"' \{\} \;
