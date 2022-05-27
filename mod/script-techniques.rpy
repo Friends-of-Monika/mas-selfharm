@@ -362,7 +362,7 @@ label mshMod_technique_pong:
     m 4eub "Do you want to play Pong?{nw}"
     $ _history_list.pop()
     menu:
-        m 4eub "Do you want to play Pong?{fast}"
+        m "Do you want to play Pong?{fast}"
         "Sure!":
             m 1hub "Great!"
             m 3tuu "Bring it on!"
@@ -387,7 +387,7 @@ label mshMod_technique_chess:
     m 4eub "Do you want to play Chess?{nw}"
     $ _history_list.pop()
     menu:
-        m 4eub "Do you want to play Chess?{fast}"
+        m "Do you want to play Chess?{fast}"
         "Sure!":
             m 1hub "Okay!"
             call mas_chess
@@ -413,7 +413,7 @@ label mshMod_technique_piano:
     m 4eub "Do you want to play the Piano?{nw}"
     $ _history_list.pop()
     menu:
-        m 4eub "Do you want to play the Piano?{fast}"
+        m "Do you want to play the Piano?{fast}"
         "Sure!":
             m 1hub "Alright!"
             call mas_piano_start
