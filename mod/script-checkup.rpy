@@ -42,7 +42,7 @@ label mshMod_checkup_intro:
         delay, store.mshMod_reminder_utils.INTERVAL_WEEKLY, store.mshMod_reminder_utils.LATENCY_DAILY
     )
 
-    return "derandom|love"
+    return "derandom|no_unlock|love"
 
 
 #checkup
