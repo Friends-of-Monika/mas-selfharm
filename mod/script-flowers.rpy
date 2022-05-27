@@ -1,3 +1,7 @@
+init 5 python in mas_bookmarks_derand:
+    # Ensure things get bookmarked and derandomed as usual.
+    label_prefix_map["mshMod_topic_"] = label_prefix_map["monika_"]
+
 # Sunflowers
 init 5 python:
     addEvent(
