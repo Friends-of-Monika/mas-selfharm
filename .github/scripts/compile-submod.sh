@@ -1,14 +1,16 @@
 #!/bin/sh
 
 # Clear MAS logs
-find build/ddlc/log -type f -iname '*.log' -delete
+if [ -d build/ddlc/log ]; then
+    find build/ddlc/log -type f -iname '*.log' -delete
+fi
 
 # Copy .rpy files from mod folder
 mkdir -p build/ddlc/game/mshMod
 find mod -iname '*.rpy' -exec cp -r --parents \{\} build/ddlc/game/mshMod \;
 
 # Move spritepacks into their respective locations
-find spritepacks -mindepth 2 -maxdepth 2 -type d -exec cp -RT \{\} build/ddlc/ \;
+find spritepacks -mindepth 2 -maxdepth 2 -type d -exec cp -RT \{\} build/ddlc \;
 
 # Move resources into submod folder
 mkdir build/ddlc/game/mshMod/res
@@ -30,3 +32,7 @@ if tail -n +9 build/ddlc/log/spj.log | grep -Eq '^.*!ERROR! T_T.*$'; then exit 1
 find build/ddlc/game/mshMod/mod -type f -not -iname '*.rpyc' -delete
 mkdir -p build/out/game/Submods
 mv build/ddlc/game/mshMod "build/out/game/Submods/$(perl -ne 'printf $1 if /name="([^"]*)"/' "mod/00_header.rpy")"
+
+# Remove submod and spritepack files from build directory
+rm -rf build/ddlc/game/mshMod
+find spritepacks -mindepth 2 -type f -exec sh -c 'echo "$0" | sed -nE '"'s/^.*\/((game|characters)\/.*)/\1/p'" \{\} \;
