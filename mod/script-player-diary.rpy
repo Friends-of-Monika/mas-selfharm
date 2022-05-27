@@ -56,6 +56,7 @@ label mshMod_writing_to_diary_intro:
 
             m 3esb "There you go!"
             m 1eua "It should be in the characters folder."
+            m 1fkbsu "Make sure to write on it! I love you."
 
         "No, thanks.":
             m 1eka "Oh, I see..."
