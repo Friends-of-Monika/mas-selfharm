@@ -66,4 +66,4 @@ We've had plenty of people working on and contributing to this submod! You can f
 
 We're up to chat! Come join us at our Discord server [here](https://mon.icu/discord).
 
-![Discord server invitation](https://discordapp.com/api/guilds/970747033071804426/widget.png?style=banner3)
+[![Discord server invitation](https://discordapp.com/api/guilds/970747033071804426/widget.png?style=banner3)](https://mon.icu/discord)
