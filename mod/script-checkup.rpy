@@ -7,6 +7,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_checkup_intro",
+            prompt=["1 to 10"]
+            category=["mental health"]
             random=True
         )
     )
@@ -42,7 +44,7 @@ label mshMod_checkup_intro:
         delay, store.mshMod_reminder_utils.INTERVAL_WEEKLY, store.mshMod_reminder_utils.LATENCY_DAILY
     )
 
-    return "derandom|no_unlock|love"
+    return "derandom|love"
 
 
 #checkup
