@@ -181,15 +181,15 @@ init 5 python:
 label mshMod_technique_quotes:
     m 3dud "I remember hearing this quote somewhere: {i}'Hope is the last thing ever lost'{/i}."
     m 3wub "Doing your best to believe in positive things can be really uplifting!"
-    m "I think a good way of seeing the things around you in a better light would be reading some inspirational quotes!"
-    m "You should find some quotes on the internet that you like, {w=0.3}{nw}"
-    extend "and then write each of them on a sticky note and put them somewhere you'd regularly see."
-    m "Every time you see one, you will remember things get better!"
-    m "You can also say some of them aloud, to inspire yourself!"
-    m "Sayori used to do that a lot. She used to put colorful sticky notes everywhere!"
-    m "If i recall correctly, there was one of them said 'You are loved', {w=0.3}{nw}"
-    extend "and another one with 'We're all in this together'."
-    m "Encouraging yourself with sticky notes is indeed a great idea!"
+    m 7wub "I think a good way of seeing the things around you in a better light would be reading some inspirational quotes!"
+    m 2hua "You should find some quotes on the internet that you like, {w=0.3}{nw}"
+    extend 3eub "and then write each of them on a sticky note and put them somewhere you'd regularly see."
+    m 4fub "Every time you see one, you will remember things get better!"
+    m 7kuu "You can also say some of them aloud, to inspire yourself!"
+    m 1rub "Sayori used to do that a lot. She used to put colorful sticky notes everywhere!"
+    m 1fkb "If i recall correctly, there was one of them said 'You are loved', {w=0.3}{nw}"
+    extend 3hub "and another one with 'We're all in this together'."
+    m 1hua "Encouraging yourself with sticky notes is indeed a great idea!"
     return
 
 #5
@@ -205,19 +205,19 @@ init 5 python:
     )
 
 label mshMod_technique_singing:
-    m "This one's going to be really simple. {w=0.3}{nw}"
+    m 4eub "This one's going to be really simple. {w=0.3}{nw}"
     extend "Sing a song!"
-    m "Not just any song, though. {w=0.3}{nw}"
+    m 3gua "Not just any song, though. {w=0.3}{nw}"
     extend "Your absolute favorite!"
-    m "I'd love to know what your favorite song is..."
-    m "Anyway... {w=0.3}{nw}"
-    extend "Try singing your favorite song until you feel better."
-    m "Singing can be a really good outlet for your emotions!"
-    m "You could also imagine we're singing 'Your Reality' together! {w=0.3}{nw}"
-    extend "Ehehehe~"
-    m "You can sing as loud as you want!"
-    m "Also, if you'd like, write your favourite lyrics down."
-    m "Think about what they mean to you!"
+    m 2wub "I'd love to know what your favorite song is..."
+    m 2ruu "Anyway... {w=0.3}{nw}"
+    extend 2eub "Try singing your favorite song until you feel better."
+    m 1eua "Singing can be a really good outlet for your emotions!"
+    m 3hub "You could also imagine we're singing 'Your Reality' together! {w=0.3}{nw}"
+    extend 2euu "Ehehehe~"
+    m 3mub "You can sing as loud as you want!"
+    m 1wub "Also, if you'd like, write your favourite lyrics down."
+    m 2dub "Think about what they mean to you!"
     return
 
 #6
@@ -233,17 +233,17 @@ init 5 python:
     )
 
 label mshMod_technique_talking:
-    m "Sometimes simply talking about your problems can help a lot!"
-    m "Or just talking to distract yourself."
-    m "You can also post on web boards about mental health... {w=0.3}{nw}"
-    extend "or try answering other people's posts."
-    m "You should call or text a friend!"
-    m "Maybe send some long distance friends a surprise message?"
-    m "Or maybe arrange to meet up."
-    m "I know you're here with me, but it's not {i}exactly{/i} the same as having a real-time conversation with someone!"
-    m "I wish I could hear your voice... {w=0.3}{nw}"
-    extend "We could talk for hours!"
-    m "As long as you'd want."
+    m 1eub "Sometimes simply talking about your problems can help a lot!"
+    m 2dtu "Or just talking to distract yourself."
+    m 7eta "You can also post on web boards about mental health... {w=0.3}{nw}"
+    extend 1eub "or try answering other people's posts."
+    m 4wtb "You should call or text a friend!"
+    m 7hub "Maybe send some long distance friends a surprise message?"
+    m 3sub "Or maybe arrange to meet up."
+    m 3musdrb "I know you're here with me, but it's not {i}exactly{/i} the same as having a real-time conversation with someone!"
+    m 1mkc "I wish I could hear your voice... {w=0.3}{nw}"
+    extend 1fua "We could talk for hours!"
+    m 3fua "As long as you'd want."
     return
 
 #7
@@ -259,18 +259,18 @@ init 5 python:
     )
 
 label mshMod_technique_hugs:
-    m "Okay.{w=0.5} I want you to try this."
-    m "Get the biggest pillow you have and hug it tightly."
-    m "Curl your body around it."
-    m "Now imagine someone you love was feeling sad..."
-    m "You'd obviously want to help them out, right?"
-    m "That's just the kind of person you are, [player]."
-    m "Say out loud or in your head whatever you'd want them to know."
-    m "Then say the exact same words to yourself. {w=0.3}{nw}"
-    extend "I bet that's what they would tell you!"
-    m "Maybe you can even think of me? Ahahaha~ {w=0.3}{nw}"
-    extend "Sorry to be pretentious, [player.]"
-    m "I love you so much!"
+    m 3eub "Okay.{w=0.5} I want you to try this."
+    m 4wua "Get the biggest pillow you have and hug it tightly."
+    m 2eub "Curl your body around it."
+    m 6fsu "Now imagine someone you love was feeling sad..."
+    m 4etb "You'd obviously want to help them out, right?"
+    m 2fsbsa "That's just the kind of person you are, [player]."
+    m 7ntblb "Say out loud or in your head whatever you'd want them to know."
+    m 1etb "Then say the exact same words to yourself. {w=0.3}{nw}"
+    extend 7etb "I bet that's what they would tell you!"
+    m 2etbsu "Maybe you can even think of me? Ahahaha~ {w=0.3}{nw}"
+    extend 2mssdru "Sorry to be pretentious, [player.]"
+    m 6fsbfb  "I love you so much!"
     return "love"
 
 #8
