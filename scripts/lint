@@ -6,10 +6,7 @@ scripts/_util/try-install-env.sh
 echo "# Store submod version in an environment variable"
 export VERSION="$(.github/scripts/extract-version.sh)"
 
-echo "# Compile submod"
+echo "# Compile submod and verify spritepacks"
 .github/scripts/compile-submod.sh
-
-echo "# Package spritepacks"
-.github/scripts/compile-spritepacks.sh
 
 rm -rf build/out
