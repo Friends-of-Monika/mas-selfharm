@@ -47,7 +47,7 @@ label mshMod_writing_to_diary_intro:
 
             python:
                 try:
-                    f = open(config.basedir + "/diary.txt", "w")
+                    f = open(config.basedir + "/characters/diary.txt", "w")
                     f.write("For my one and only love <3")
                 finally:
                     f.close()
@@ -98,7 +98,7 @@ label mshMod_writing_to_diary_repeat:
 
                     python:
                         try:
-                            f = open(config.basedir + "/diary.txt", "w")
+                            f = open(config.basedir + "/characters/diary.txt", "w")
                             f.write("Don't lose this one, hehe~")
                         finally:
                             f.close()
