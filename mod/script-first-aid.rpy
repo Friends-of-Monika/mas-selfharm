@@ -1,12 +1,15 @@
 # Fist aid topics.
 
+init 5 python in mas_bookmarks_derand:
+    # Ensure things get bookmarked and derandomed as usual.
+    label_prefix_map["mshMod_topic_"] = label_prefix_map["monika_"]
+    
 #first aid intro
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
             eventlabel="mshMod_first_aid_intro",
-            aff_range=(mas_aff.NORMAL, mas_aff.LOVE),
             conditional="persistent._msh_mod_pm_did_selfharm",
             action=EV_ACT_RANDOM
         )
@@ -29,12 +32,11 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_first_aid_guide",
-            aff_range=(mas_aff.NORMAL, mas_aff.LOVE),
             prompt="I need help with first aid...",
             conditional="seen_event('mshMod_first_aid_intro')",
             action=EV_ACT_UNLOCK,
             pool=True,
-            rules={"no_unlock": None, "bookmark_rule": mas_bookmarks_derand.WHITELIST}
+            rules={"no_unlock": None}
         )
     )
 
