@@ -1,6 +1,10 @@
 # Introduction topics for this submod. Here we ask player if they do harm themselves or not
 # and unlock (or skip to) more detailed explanation of what self-harm is.
 
+init 5 python in mas_bookmarks_derand:
+    # Ensure things get bookmarked and derandomed as usual.
+    label_prefix_map["mshMod_topic_"] = label_prefix_map["monika_"]
+    
 default persistent._msh_mod_pm_did_selfharm = None
 
 init 5 python:
@@ -8,9 +12,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_topic_selfharm_intro",
-            aff_range=(mas_aff.NORMAL, None),
             random=True,
-            rules={"bookmark_rule": mas_bookmarks_derand.BLACKLIST}
         )
     )
 
@@ -114,7 +116,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_topic_selfharm_more",
-            category=["self-Harm"],
+            category=["self-harm"],
             prompt="I want to learn more about self harm.",
             pool=True,
             unlocked=False,
