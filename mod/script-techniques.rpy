@@ -433,45 +433,45 @@ init 5 python:
     )
 
 label mshMod_technique_videos:
-    m "When you told me you were having those kind of thoughts, I did some research."
-    m "And there are many people on Youtube that create little comfort videos."
-    m "I selected some of them for you to watch when you were having an urge."
+    m 3eua "When you told me you were having those kind of thoughts, I did some research."
+    m 3eub "And there are many people on Youtube that create little comfort videos."
+    m 2eua "I selected some of them for you to watch when you were having an urge."
 
     python:
         all_options = tuple(_label for _label in ('mshMod_technique_videos_{0}'.format(i) for i in range(3)))
         unseen_options = tuple(_label for _label in all_options if not mas_seenLabels((_label,)))
 
     if not unseen_options:
-        m "I've shown you all the videos I have for now!"
+        m 7etb "I've shown you all the videos I have for now!"
 
-        m "Do you want me to let you pick a video now?{nw}"
+        m 1etb "Do you want me to let you pick a video now?{nw}"
         $ _history_list.pop()
         menu:
             m "Do you want me to let you pick a video now?{fast}"
             "Yes":
-                m "Great!"
+                m 2htb "Great!"
                 $ renpy.jump(all_options[random.randint(len(all_options))])
 
             "No":
-                m "That's okay, [player]."
-                m "If you ever wanna see them again, just ask!"
+                m 2eta "That's okay, [player]."
+                m 1etb "If you ever wanna see them again, just ask!"
 
     return
 
 label mshMod_technique_videos_pre:
-    m "There we go!"
-    m "I hope it helps, [player]."
-    m "I will give you some time to watch it."
+    m 3hub "There we go!"
+    m 1fua "I hope it helps, [player]."
+    m 2hua "I will give you some time to watch it."
     return
 
 label mshMod_technique_videos_post:
-    m "Do you want me to let you pick a video now?{nw}"
+    m 3eub "Do you want me to let you pick a video now?{nw}"
     $ _history_list.pop()
     menu:
         m "Do you want me to let you pick a video now?{fast}"
         "I'm done, [m_name]":
-            m "Alright!"
-            m "Hope you enjoyed it!"
+            m 1hub "Alright!"
+            m 3eua "Hope you enjoyed it!"
     return
 
 label mshMod_technique_videos_1:
@@ -508,20 +508,20 @@ init 5 python:
     )
 
 label mshMod_technique_stress_ball:
-    m "Some objects can also help with the desperate feeling."
-    m "Check if you have one of them at home, okay?"
-    m "Do you have a stress ball?"
-    m "A stress ball or hand exercise ball is a malleable toy, which is squeezed in the hand and manipulated by the fingers!"
-    m "With the intention ofto relieving stress and muscle tension or to exercise the muscles of the hand."
-    m "If you do have one, squeeze it really hard. Relive all your tension!"
-    m "You can also use a sheet of bubble wrap. So satisfying!"
-    m "If you do have one at home, burst each bubble as slowly as you can, please."
-    m "Or just enjoy yourself! The techniques have no rules, as long as they make you feel better."
-    m "I have another one! Do you have any baloons at home?"
-    m "You can blow one baloon for each emotion you feel. {w=0.3}{nw}"
-    extend "After that, pop each one of them!"
-    m "Another option is a fidget toy."
-    m "Spinning them is always so fun!"
+    m 7eua "Some objects can also help with the desperate feeling."
+    m 2fkb "Check if you have one of them at home, okay?"
+    m 6etu "Do you have a stress ball?"
+    m 7wub "A stress ball or hand exercise ball is a malleable toy, which is squeezed in the hand and manipulated by the fingers!"
+    m 1eua "With the intention ofto relieving stress and muscle tension or to exercise the muscles of the hand."
+    m 2htb "If you do have one, squeeze it really hard. Relive all your tension!"
+    m 1hsa "You can also use a sheet of bubble wrap. So satisfying!"
+    m 3eta "If you do have one at home, burst each bubble as slowly as you can, please."
+    m 1wtb "Or just enjoy yourself! The techniques have no rules, as long as they make you feel better."
+    m 2htb "I have another one! Do you have any baloons at home?"
+    m 4rtb "You can blow one baloon for each emotion you feel. {w=0.3}{nw}"
+    extend 1wub "After that, pop each one of them!"
+    m 6eua "Another option is a fidget toy."
+    m 1stb "Spinning them is always so fun!"
     return
 
 #16
@@ -537,18 +537,18 @@ init 5 python:
     )
 
 label mshMod_technique_stretching:
-    m "You know what often helps me calm down?"
-    m "Stretching myself!"
-    m "You can try stretching your body as much as you can, scrunching up your muscles until they hurt, then release."
-    m "Tense all of your body starting from toes, up to your hands, and release!"
-    m "This relaxes our body so much!"
-    m "You can also do an upper back strech."
-    m "This one is done sitting, with your feet flat on the floor."
-    m "Interlock your fingers and reach forward, bending from your middle back."
-    m "Stretch with your hands forward at shoulder level."
-    m "You should feel the stretch between your shoulder blades."
-    m "Ooh, relaxing!"
-    m "After tensing your muscles, you can let go and relax into something comfy."
+    m 3eub "You know what often helps me calm down?"
+    m 1kub "Stretching myself!"
+    m 3luu "You can try stretching your body as much as you can, scrunching up your muscles until they hurt, then release."
+    m 6wub "Tense all of your body starting from toes, up to your hands, and release!"
+    m 7sub "This relaxes our body so much!"
+    m 1hua "You can also do an upper back strech."
+    m 2eub "This one is done sitting, with your feet flat on the floor."
+    m 6euu "Interlock your fingers and reach forward, bending from your middle back."
+    m 7eub "Stretch with your hands forward at shoulder level."
+    m 7nub "You should feel the stretch between your shoulder blades."
+    m 2dua "Ooh, relaxing!"
+    m 5lub "After tensing your muscles, you can let go and relax into something comfy."
     return
 
 #17
@@ -564,20 +564,20 @@ init 5 python:
     )
 
 label mshMod_technique_punching:
-    m "Okay, [player].{w=0.5} I want you to try this."
-    m "This one is to let out all of your anger!"
-    m "We're going to punch it out!"
-    m "I need you to find a pillow and punch out how you feel."
-    m "A pillow is good because it won't hurt your fingers!"
-    m "Punch,{w=0.5} punch,{w=0.5} punch the pain away!"
-    m "If you don't want to punch, you can scream into it too."
-    m "Scream into the pillow to release your tension!"
-    m "Another way out is squashing the pillow hard... {w=0.5}And gently letting go."
-    m "Or having a pillow fight with the wall!"
-    m "Throw that pillow with all your might."
-    m "Another one that doesn't involve pillows is:"
-    m "Throwing socks against the wall."
-    m "And paying attention to the thudding sound and the strength you put in your arm to throw."
+    m 7eub "Okay, [player].{w=0.5} I want you to try this."
+    m 2efb "This one is to let out all of your anger!"
+    m 3efu "We're going to punch it out!"
+    m 4nsu "I need you to find a pillow and punch out how you feel."
+    m 6esb "A pillow is good because it won't hurt your fingers!"
+    m 1efa "Punch,{w=0.5} punch,{w=0.5} punch the pain away!"
+    m 2eub "If you don't want to punch, you can scream into it too."
+    m 3hub "Scream into the pillow to release your tension!"
+    m 1fua "Another way out is squashing the pillow hard... {w=0.5}And gently letting go."
+    m 2etb "Or having a pillow fight with the wall!"
+    m 3lub "Throw that pillow with all your might."
+    m 1lua "Another one that doesn't involve pillows is:"
+    m 3fub "Throwing socks against the wall."
+    m 7mua "And paying attention to the thudding sound and the strength you put in your arm to throw."
     return
 
 #18
@@ -593,13 +593,13 @@ init 5 python:
     )
 
 label mshMod_technique_shouting:
-    m "This one might be... a little loud."
-    m "I would like for you to go somewhere private..."
-    m "And shout very loudly."
-    m "You can shout anything you want!"
-    m "You can shout gibberish, or your feelings, even!"
-    m "Shout until you feel calmer."
-    m "We can take care of your throat later! Ahahaha~!"
+    m 2lssdlb "This one might be... a little loud."
+    m 4esa "I would like for you to go somewhere private..."
+    m 6wub "And shout very loudly."
+    m 1wfb "You can shout anything you want!"
+    m 3sub "You can shout gibberish, or your feelings, even!"
+    m 1fsa "Shout until you feel calmer."
+    m 2hub "We can take care of your throat later! Ahahaha~!"
     return
 
 #19
@@ -615,18 +615,18 @@ init 5 python:
     )
 
 label mshMod_technique_listening:
-    m "Let's try to listen to some music?"
-    m "Even better if it's music that expresses how you feel."
-    m "It can be VERY loudly if you want."
-    m "You can use your headphones to blast some songs, or even use no headphones at all."
-    m "Screaming with the lyrics might be therapeutic too!"
-    m "Or even walking fast along the song, or tapping your foot to the beat."
-    m "Wearing some boots while doing some stomping really does the trick as well!"
-    m "Concentrate on the rhythm!"
-    m "Oh, I thought of something nice to do also."
-    m "Dance to the music!"
-    m "Dance or move in a way that makes you express a feeling."
-    m "If you have the chance, going to a concert to do all those things along with other people might be a great idea as well."
+    m 3eua "Let's try to listen to some music?"
+    m 7eub "Even better if it's music that expresses how you feel."
+    m 6wub "It can be VERY loudly if you want."
+    m 7sua "You can use your headphones to blast some songs, or even use no headphones at all."
+    m 1sub "Screaming with the lyrics might be therapeutic too!"
+    m 3eub "Or even walking fast along the song, or tapping your foot to the beat."
+    m 2hua "Wearing some boots while doing some stomping really does the trick as well!"
+    m 7hub "Concentrate on the rhythm!"
+    m 1wub "Oh, I thought of something nice to do also."
+    m 3kub "Dance to the music!"
+    m 4duu "Dance or move in a way that makes you express a feeling."
+    m 5sub "If you have the chance, going to a concert to do all those things along with other people might be a great idea as well."
     return
 
 #20
@@ -642,19 +642,19 @@ init 5 python:
     )
 
 label mshMod_technique_paper:
-    m "Do you have some paper nearby?"
-    m "You could try crumpling it, to get out your anger or sad feelings."
-    m "Way better than taking it out on yourself!"
-    m "If you'd like, you can scribble on the paper until all your feelings fade away..."
-    m "And then crumple it, or rip it up if you're angry."
-    m "Drawing out how you are feeling and taking a deep breath every time you lift the pen/pencil off the paper might be nice too!"
-    m "Or writing what's upsetting you."
-    m "When drawing, you can put some strong colours on paper and then gradually fade them."
-    m "So they get lighter!"
-    m "Dark green to light green, for example."
-    m "Now, describe your strong emotions..."
-    m "And let them gradually fade away in the same way."
-    m "You can even show someone your drawings and writings before ripping it to shreds."
+    m 3eua "Do you have some paper nearby?"
+    m 3wub "You could try crumpling it, to get out your anger or sad feelings."
+    m 2sub "Way better than taking it out on yourself!"
+    m 4sub "If you'd like, you can scribble on the paper until all your feelings fade away..."
+    m 1sub "And then crumple it, or rip it up if you're angry."
+    m 7dsb "Drawing out how you are feeling and taking a deep breath every time you lift the pen/pencil off the paper might be nice too!"
+    m 2esb "Or writing what's upsetting you."
+    m 1hsb "When drawing, you can put some strong colours on paper and then gradually fade them."
+    m 3esb "So they get lighter!"
+    m 4ssb "Dark green to light green, for example."
+    m 1hsb "Now, describe your strong emotions..."
+    m 2hub "And let them gradually fade away in the same way."
+    m 4mub "You can even show someone your drawings and writings before ripping it to shreds."
     return
 
 #21
@@ -670,13 +670,13 @@ init 5 python:
     )
 
 label mshMod_technique_otter:
-    m "Well, this one is a little different."
-    m "Basically, it envolves someone else!"
-    m "The creator of this mod, u/my-otter-self on Reddit, told me to remind you that she's always available to talk."
-    m "You can DM her on Reddit, and she'll share her Discord information so you can talk about your feelings."
-    m "She's has professional experience in psychology and can listen to you."
-    m "Maybe even give some advice!"
-    m "Take this opportunity to open youself a little, if you can."
+    m 1rssdru "Well, this one is a little different."
+    m 3ssb "Basically, it envolves someone else!"
+    m 2hsb "The creator of this mod, u/my-otter-self on Reddit, told me to remind you that she's always available to talk."
+    m 4htb "You can DM her on Reddit, and she'll share her Discord information so you can talk about your feelings."
+    m 7wta "She's has professional experience in psychology and can listen to you."
+    m 3etb "Maybe even give some advice!"
+    m 1eua "Take this opportunity to open youself a little, if you can."
     return
 
 #22
