@@ -6,10 +6,9 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_medication_reminder_request",
             prompt="Can you remind me about my medication?",
-            category=["self-Harm"],
+            category=["mental health"],
             pool=True,
             unlocked=True,
-            rules={"bookmark_rule": mas_bookmarks_derand.WHITELIST}
         )
     )
 
@@ -63,7 +62,6 @@ label mshMod_medication_reminder_request:
         "Not now, [m_name].":
             m 3eka "Oh, alright!"
             m 3ekb "If you change your mind, please let me know, okay?"
-            m 2esa "You can repeat the topic in the 'Repeat conversation' category."
 
     return
 
@@ -74,9 +72,9 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_medication_reminder_stop",
             prompt="You no longer need to remind me about medication.",
-            category=["self-Harm"],
+            category=["mental health"],
             pool=True,
-            rules={"no_unlock": None, "bookmark_rule": mas_bookmarks_derand.WHITELIST}
+            rules={"no_unlock": None}
         )
     )
 
