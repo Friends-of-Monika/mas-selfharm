@@ -1,9 +1,12 @@
 # Sober check topics, milestones, etc. For API see zz_sober_streak.rpy
 
+init 5 python in mas_bookmarks_derand:
+    # Ensure things get bookmarked and derandomed as usual.
+    label_prefix_map["mshMod_topic_"] = label_prefix_map["monika_"]
+    
 label mshMod_sober_ask_since:
     $ since = datetime.today() - datetime.timedelta(days=int(renpy.input("For how long have you been sober already?", allow="0123456789", length=4)))
     return since
-
 
 #sober counter
 init 5 python:
@@ -12,7 +15,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_sober_check",
             prompt="How long have I been self-harm sober for?",
-            category=["self-Harm"],
+            category=["self-harm"],
             conditional="store.mshMod_sober_streak.isOnStreak()",
             action=EV_ACT_UNLOCK,
             pool=True,
@@ -43,7 +46,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_promise",
-            category=["self-Harm"],
+            category=["self-harm"],
             prompt="I promise not to self-harm anymore.",
             conditional="persistent._msh_mod_pm_did_selfharm",
             action=EV_ACT_UNLOCK,
@@ -114,7 +117,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_relapse",
-            category=["self-Harm"],
+            category=["self-harm"],
             prompt="I've self-harmed.",
             conditional="store.mshMod_sober_streak.isOnStreak()",
             action=EV_ACT_UNLOCK,
@@ -156,7 +159,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_1w",
             prompt="Sober, week 1",
-            category=["self-Harm"]
+            category=["self-harm"]
         )
     )
 
@@ -177,7 +180,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_2w",
             prompt="Sober, week 2",
-            category=["self-Harm"]
+            category=["self-harm"]
         )
     )
 
@@ -201,7 +204,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_3w",
             prompt="Sober, week 3",
-            category=["self-Harm"]
+            category=["self-harm"]
         )
     )
 
@@ -226,7 +229,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_1m",
             prompt="Sober, month 1",
-            category=["self-Harm"]
+            category=["self-harm"]
         )
     )
 
@@ -249,7 +252,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_3m",
             prompt="Sober, month 3",
-            category=["self-Harm"]
+            category=["self-harm"]
         )
     )
 
@@ -269,7 +272,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_6m",
             prompt="Sober, month 6",
-            category=["self-Harm"]
+            category=["self-harm"]
         )
     )
 
@@ -290,7 +293,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_1y",
             prompt="Sober, year 1",
-            category=["self-Harm"]
+            category=["self-harm"]
         )
     )
 
@@ -312,7 +315,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_2y",
             prompt="Sober, year 2",
-            category=["self-Harm"]
+            category=["self-harm"]
         )
     )
 
@@ -333,7 +336,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_3y",
             prompt="Sober, year 3",
-            category=["self-Harm"]
+            category=["self-harm"]
         )
     )
 
@@ -353,7 +356,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_4y",
             prompt="Sober, year 4",
-            category=["self-Harm"]
+            category=["self-harm"]
         )
     )
 
@@ -374,7 +377,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_milestone_5y",
             prompt="Sober, year 5",
-            category=["self-Harm"]
+            category=["self-harm"]
         )
     )
 
