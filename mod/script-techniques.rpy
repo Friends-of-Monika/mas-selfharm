@@ -692,13 +692,13 @@ init 5 python:
     )
 
 label mshMod_technique_cold_water:
-    m "Sometimes, paying attention to your senses can help."
-    m "Could you put your hands in some cold water?"
-    m "And remember, breathe a lot!"
-    m "In... {w=0.3}{nw}"
-    extend "And out."
-    m "Notice the coldness of the water witheach out breathe."
-    m "Hyper-focus on the sensation in your hands!"
+    m 1eub "Sometimes, paying attention to your senses can help."
+    m 4etb "Could you put your hands in some cold water?"
+    m 2htb "And remember, breathe a lot!"
+    m 6etd "In... {w=0.3}{nw}"
+    extend 6dtd "And out."
+    m 7wta "Notice the coldness of the water witheach out breathe."
+    m 7etb "Hyper-focus on the sensation in your hands!"
     return
 
 #23
