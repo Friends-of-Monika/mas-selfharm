@@ -1,9 +1,5 @@
 # Urge relieving technique topics.
 
-init 5 python in mas_bookmarks_derand:
-    # Ensure things get bookmarked and derandomed as usual.
-    label_prefix_map["mshMod_topic_"] = label_prefix_map["monika_"]
-    
 default persistent._msh_mod_technique_database = dict()
 
 init 5 python in mshMod_techniques:
@@ -23,7 +19,7 @@ init 5 python:
             prompt="Can you tell me some self-harm avoiding techniques?",
             pool=True,
             unlocked=False,
-            rules={"no_unlock": None}
+            rules={"no_unlock": None, "bookmark_rule": mas_bookmarks_derand.WHITELIST}
         )
     )
 

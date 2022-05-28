@@ -508,6 +508,7 @@ init 4 python in mshMod_sober_streak:
 
                 store.mas_calendar.addEvent(ev)
                 if not mas_seenLabels([ev.eventlabel]):
+                    # Random and lock this event so that it gets unlocked randomly.
                     ev.random, ev.unlocked = True, False
                     ev.unlock_date, ev.last_seen = None, None
         else:

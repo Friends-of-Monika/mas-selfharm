@@ -7,7 +7,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_checkup_intro",
-            prompt=["1 to 10"],
+            prompt="1 to 10",
             category=["mental health"],
             random=True
         )
