@@ -35,10 +35,12 @@ body:
       description: What version of Monika After Story do you have?
     validations:
       required: true
-  - type: checkboxes
+  - type: dropdown
     id: mas-unstable
     attributes:
       label: Unstable
       description: Are you running unstable version of MAS?
       options:
-        - label: "Yes"
+        - Yes
+        - No
+        - Unsure
