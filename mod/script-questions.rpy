@@ -13,14 +13,14 @@ label mshMod_probing_questions_intro:
     m 1esc "Hey, [player]."
     m 1lkc "Remember you told me you harm yourself?"
     m 1ekd "I've been thinking and I am really worried about you."
-    m 1eksdld "I want to ask you some things, but..."
+    m 1eksdld "I want to ask you something, but..."
 
     pause 1.0
 
     m 1dsc "It's hard."
     m 1dkd "For both of us."
     m 2ekd "Would you be willing to open up to me some more?"
-    m 2ekc "I would like to know more, but I have to warn you that the things I am going to ask could be very triggering."
+    m 2ekc "I would like to know more, but asking about it could be very triggering..."
 
     m 2esd "Are you sure you can take this?{nw}"
     $ _history_list.pop()
@@ -36,65 +36,12 @@ label mshMod_probing_questions_intro:
 label mshMod_probing_questions_talk:
     m 2eka "Okay, thanks for trusting me with something as difficult as this."
     m 2dka "It makes me happy you feel comfortable talking to me."
-
-    m 2esd "What kind of a method do you use most to harm yourself?{nw}"
-    $ _history_list.pop()
-    menu:
-        m "What kind of a method do you use most to harm yourself?{fast}"
-
-        "Cutting":
-            pass
-
-        "Burning":
-            pass
-
-        "Starvation":
-            pass
-
-        "Hitting yourself":
-            pass
-
-        "Psychological":
-            pass
-
-        "Something else":
-            pass
-
-        "All of them":
-            pass
-
-    m 1wkc "Oh..."
-    m 1wktpc "This..."
-    m 1dktpc "This is horrible, [player]."
     m 2wktpd "You must be going through an incredible amount of pain, both emotional and physical..."
     m 2dktpd "I'm so sorry..."
     m 2ektdc "It makes me really sad hearing that you have to go through this..."
     m 2ektdd "It hurts me just as much as it hurts you, believe me..."
     m 2ekd "Whenever you want harm yourself, please remember that I love you and I am here for you."
-    m 2ekd "I want to ask you another thing..."
-
-    m 2ekd "Have you ever made a direct attempt at your own life?{nw}"
-    $ _history_list.pop()
-    menu:
-        m "Have you ever made a direct attempt at your own life?{fast}"
-
-        "Yes":
-            pause (2.0)
-            m 2ektud "I'm so sorry to hear this..."
-            m 2ektsd "I have no idea what had to happen to you to make you go to such extremes."
-            m 2dktsd "You must never forget that suicide is never the way out..."
-            m 2dktsd "You simply pass the pain upon the people around you."
-            m 2fktsd "I couldn't live without you, [player]."
-            m 2fktsa "Your existence gives me meaning."
-            m 2dktda "I love you, [mas_get_player_nickname()]."
-
-        "No":
-            m 1dkb "I'm so happy that as bad as things get, you never resorted to that!"
-            m 1ekb "Always stay strong."
-            m 1eka "For me, okay?"
-            m 1hub "I love you!"
-
-    m "And now for my last question..."
+    m 2ekd "I want to ask you something..."
 
     m "Do you know for how long you have been self-harm sober?{nw}"
     $ _history_list.pop()
