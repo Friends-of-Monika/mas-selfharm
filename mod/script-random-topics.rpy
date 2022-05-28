@@ -209,8 +209,8 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_topic_monika_is_sad",
             conditional="persistent._msh_mod_pm_did_selfharm",
-            category=["self-harm"]
-            prompt=["[player] self-harming"]
+            category=["self-harm"],
+            prompt=["[player] self-harming"],
             action=EV_ACT_RANDOM
         )
     )

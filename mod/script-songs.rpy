@@ -16,8 +16,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_playlist",
-            category=["mental health"]
-            prompt=["Playlist"]
+            category=["mental health"],
+            prompt=["Playlist"],
             random=True
         )
     )

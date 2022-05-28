@@ -3,7 +3,7 @@
 init 5 python in mas_bookmarks_derand:
     # Ensure things get bookmarked and derandomed as usual.
     label_prefix_map["mshMod_topic_"] = label_prefix_map["monika_"]
-    
+
 #first aid intro
 init 5 python:
     addEvent(
@@ -34,7 +34,7 @@ init 5 python:
             eventlabel="mshMod_first_aid_guide",
             prompt="I need help with first aid...",
             conditional="seen_event('mshMod_first_aid_intro')",
-            category=["mental health"]
+            category=["mental health"],
             action=EV_ACT_UNLOCK,
             pool=True,
             rules={"no_unlock": None}
