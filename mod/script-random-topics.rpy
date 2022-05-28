@@ -12,7 +12,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_topic_sunny_day",
             prompt="Sunny day",
-            category=["weather"],
+            category=["mental health"],
             conditional="mas_globals.time_of_day_3state in ('morning', 'afternoon')",
             action=EV_ACT_RANDOM
         )
@@ -52,7 +52,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_topic_awareness_day",
             prompt="Self-Harm Awareness Day",
-            category=["self-Harm"],
+            category=["self-harm"],
             start_date=_mshMod_event_siad_date,
             end_date=_mshMod_event_siad_date + datetime.timedelta(days=1),
             action=EV_ACT_RANDOM,
@@ -98,7 +98,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_topic_semicolon_project",
             prompt="The Semicolon Project",
-            category=["self-Harm"],
+            category=["self-harm"],
             random=True
         )
     )
@@ -120,7 +120,7 @@ label mshMod_topic_semicolon_project:
     m 2eka "But thanks to her, millions are saved by Project Semicolon."
     m 1ekb "It's relieving to think people are able to go on and let go of their struggles..."
     m 1eub "It's really a good cause!"
-    m 3ekb "Well I won't ramble too much, Ahaha~"
+    m 3ekb "Well, I won't ramble too much! Ahaha~"
     m 3hub "Thanks for listening!"
     return
 
@@ -131,7 +131,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_topic_butterfly_project",
-            category=["self-Harm"],
+            category=["self-harm"],
             prompt="The Butterfly Project",
             random=True
         )
@@ -164,7 +164,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_topic_selfharm_random_thoughts",
             prompt="Monika's self-harm experience",
-            category=["self-Harm"],
+            category=["self-harm"],
             random=True
         )
     )
@@ -196,7 +196,7 @@ label mshMod_topic_selfharm_random_thoughts:
 
         "No":
             m 2lusdra "Okay!"
-            m 2eubfb "I love you [player], and I'm proud of you for saying no to something you aren't comfortable with!"
+            m 2eubfb "I care about you [player], and I'm proud of you for saying no to something you aren't comfortable with!"
             m 7eub "That's a big step in self-respect, and I hope you keep it up!"
 
     return
@@ -209,6 +209,8 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_topic_monika_is_sad",
             conditional="persistent._msh_mod_pm_did_selfharm",
+            category=["self-harm"]
+            prompt=["[player] self-harming"]
             action=EV_ACT_RANDOM
         )
     )
@@ -248,7 +250,7 @@ label mshMod_topic_monika_is_sad:
     m 1eka "To shield you from these painful thoughts."
     show monika 5hubsa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5hubsa "I love you, [mas_get_player_nickname()]."
-    return "love|derandom|no_unlock"
+    return "love"
 
 
 # Depression avoiding routine events
@@ -258,8 +260,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_topic_morning_routine",
-            prompt="Morning routine",
-            category=["Healthy routine"],
+            prompt="Healthy routine #1",
+            category=["mental health"],
             random=True
         )
     )
@@ -296,8 +298,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_topic_excercises",
-            prompt="Morning excercises",
-            category=["Healthy Routine"],
+            prompt="Healthy routine #2",
+            category=["mental health"],
             random=True
         )
     )
@@ -324,8 +326,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_topic_morning_excercises",
-            prompt="Morning routine",
-            category=["Healthy Routine"],
+            prompt="Healthy routine #3",
+            category=["mental health"],
             random=True
         )
     )
@@ -349,8 +351,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_topic_going_outside",
-            prompt="Going outside",
-            category=["Healthy Routine"],
+            prompt="Healthy routine #4",
+            category=["mental health"],
             random=True
         )
     )
@@ -371,8 +373,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_topic_evening_routine",
-            prompt="Evening routine",
-            category=["Healthy Routine"],
+            prompt="Healthy routine #5",
+            category=["mental health"],
             random=True
         )
     )
@@ -408,8 +410,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_topic_untried_hobbies",
-            prompt="Hobbies",
-            category=["Healthy Routine"],
+            prompt="Healthy routine #6",
+            category=["mental health"],
             random=True
         )
     )
@@ -444,8 +446,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_topic_monarch_butterfly",
-            prompt="Trivia",
-            category=["Monarch Butterflies"],
+            prompt="Monarch Butterfly",
+            category=["mental health"],
             random=True
         )
     )
