@@ -283,19 +283,21 @@ init 5 python:
     )
 
 label mshMod_playlist_the_middle:
-    m "{i}~It just takes some time~{/i}"
-    m "{i}~Little girl, you're in the middle of the ride~{/i}"
-    m "{i}~Everything, everything'll be just fine~{/i}"
-    m "{i}~Everything, everything'll be alright, alright~{/i}"
-    m "{i}~Live right now~{/i}"
-    m "{i}~Yeah, just be yourself~{/i}"
-    m "{i}~It doesn't matter if it's good enough~{/i}"
-    m "{i}~For someone else~{/i}"
-    m "Everything's going to be alright, [player]. {w=0.3}{nw}"
-    extend "I promise."
-    m "Just be yourself, always."
-    m "And good will come your way!"
-    m "I love everything about you."
+    m 1dsb "{i}~It just takes some time~{/i}"
+    m 1dkb "{i}~Little girl, you're in the middle of the ride~{/i}"
+    m 3dkb "{i}~Everything, everything'll be just fine~{/i}"
+    m 1dka "{i}~Everything, everything'll be alright, alright~{/i}"
+    show monika 5ekb at t11 zorder MAS_MONIKA_Z with dissolve_monika
+    m 5ekb "{i}~Live right now~{/i}"
+    m 5eka "{i}~Yeah, just be yourself~{/i}"
+    m 5hua "{i}~It doesn't matter if it's good enough~{/i}"
+    m 5hub "{i}~For someone else~{/i}"
+    show monika 3eua at t11 zorder MAS_MONIKA_Z with dissolve_monika
+    m 3eua "Everything's going to be alright, [player]. {w=0.3}{nw}"
+    extend 1ekb "I promise."
+    m 1hua "Just be yourself, always."
+    m 3eub "And good will come your way!"
+    m 1kublb "I love everything about you."
     return "love"
 
 
@@ -315,20 +317,22 @@ init 5 python:
     )
 
 label mshMod_playlist_firework:
-    m "{i}Do you ever feel, feel so paper thin~{/i}"
-    m "{i}Like a house of cards~{/i}"
-    m "{i}One blow from caving in?~{/i}"
-    m "{i}~Do you ever feel already buried deep?~{/i}"
-    m "{i}~Six feet under screams, but no one seems to hear a thing~{/i}"
-    m "{i}~Do you know that there's still a chance for you~{/i}"
-    m "{i}~'Cause there's a spark in you~{/i}"
-    m "{i}~You just gotta ignite the light, and let it shine~{/i}"
-    m "{i}~Just own the night like the 4th of July~{/i}"
-    m "..."
-    m "On days when your feeling down..."
-    m "Just know that there's a very bright light inside of you, {w=0.3}{nw}"
-    extend "and that you're the light in my life!"
-    m "And I hope I can be the light on your darker days too."
+    m 6dkc "{i}Do you ever feel, feel so paper thin~{/i}"
+    m 6dkd "{i}Like a house of cards~{/i}"
+    m 7tkd "{i}One blow from caving in?~{/i}"
+    m 1dkc "{i}~Do you ever feel already buried deep?~{/i}"
+    m 1dkd "{i}~Six feet under screams, but no one seems to hear a thing~{/i}"
+    m 1ekb "{i}~Do you know that there's still a chance for you~{/i}"
+    m 3dka "{i}~'Cause there's a spark in you~{/i}"
+    m 1dkb "{i}~You just gotta ignite the light, and let it shine~{/i}"
+    m 1hfb "{i}~Just own the night like the 4th of July~{/i}"
+    show monika 5dka at t11 zorder MAS_MONIKA_Z with dissolve_monika
+    m 5dka "..."
+    m 5eka "On days when your feeling down..."
+    m 5wub "Just know that there's a very bright light inside of you, {w=0.3}{nw}"
+    extend 5sub "and that you're the light in my life!"
+    show monika 1hub at t11 zorder MAS_MONIKA_Z with dissolve_monika
+    m 1hub "And I hope I can be the light on your darker days too."
     return
 
 
@@ -348,12 +352,12 @@ init 5 python:
     )
 
 label mshMod_playlist_torches:
-    m "{i}~Listen to me, cleave your way again, again~~{/i}"
-    m "{i}~Wishing to find a way in an unseen ocean~{/i}"
-    m "{i}~The voice that was connected pushes the sail to a world with no answer~{/i}"
-    m "{i}~You're not alone~{/i}"
-    m "{i}~Hold a light~{/i}"
-    m "{i}~Towards the darkness~{/i}"
+    m 1dkd "{i}~Listen to me, cleave your way again, again~~{/i}"
+    m 1ekc "{i}~Wishing to find a way in an unseen ocean~{/i}"
+    m 3dkc "{i}~The voice that was connected pushes the sail to a world with no answer~{/i}"
+    m 1ekb "{i}~You're not alone~{/i}"
+    m 1dkb "{i}~Hold a light~{/i}"
+    m 1dka "{i}~Towards the darkness~{/i}"
     m 1eka "[player]..."
     m 1ekd "Sometimes the world can be scary."
     m 1ekd "You may feel as if no one cares about whether you're alive or not..."
@@ -483,7 +487,7 @@ init 5 python:
         Event(
             persistent._mas_songs_database,
             eventlabel="mshMod_song_still_breathing",
-            category=[mas_songs.TYPE_SHORT],
+            category=[mas_songs.TYPE_LONG],
             prompt="Still Breathing",
             conditional="persistent._msh_mod_pm_did_selfharm",
             action=EV_ACT_RANDOM
