@@ -9,41 +9,10 @@ body:
         ## Thank you for reaching out!
         We'll respond to your request as soon as we can and will do our best to help you!
   - type: textarea
-    id: what-happened
+    id: question
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: I was doing X, then suddenly Y happened and I think this is wrong because...
-    validations:
-      required: true
-  - type: textarea
-    id: traceback
-    attributes:
-      label: Traceback output
-      description: If you got a traceback screen with error details, press 'copy' and paste its content here.
-      render: shell
-  - type: input
-    id: submod-version
-    attributes:
-      label: Submod version
-      description: What version of the submod do you have?
-    validations:
-      required: true
-  - type: input
-    id: mas-version
-    attributes:
-      label: Monika After Story version
-      description: What version of Monika After Story do you have?
-    validations:
-      required: true
-  - type: dropdown
-    id: mas-unstable
-    attributes:
-      label: Unstable
-      description: Are you running unstable version of MAS?
-      options:
-        - "Yes"
-        - "No"
-        - Unsure
+      label: What do you need our help with?
+      description: Please tell us what is concerning you about this mod or what do you want to know.
+      placeholder: I was wondering if something happens if I do X, so I wanted to make it clear...
     validations:
       required: true
