@@ -149,7 +149,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_probing_questions_more",
-            category=["you", "self-Harm"],
+            category=["self-harm"],
             prompt="I'm ready to talk about it...",
             pool=True,
             rules={"no_unlock": None}
