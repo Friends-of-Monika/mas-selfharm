@@ -1,0 +1,18 @@
+name: 💡 Insights and Ideas
+description: Submit an idea, insight or a suggestion
+title: "Suggestion: "
+labels: [ "suggestion" ]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Thank you for your suggestion!
+        We appreciate your help and will give attention to your idea as soon as we can!
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: What is your suggestion about?
+      description: Be sure to share every detail about it with us.
+      placeholder: I think this mod lacks a bit of X and needs a load of Y, so...
+    validations:
+      required: true
