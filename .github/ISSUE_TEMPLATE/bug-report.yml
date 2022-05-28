@@ -41,4 +41,4 @@ body:
       label: Unstable
       description: Are you running unstable version of MAS?
       options:
-        - label: Yes
+        - label: "Yes"
