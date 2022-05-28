@@ -1,5 +1,10 @@
 # Medication reminder.
 
+init 5 python in mas_bookmarks_derand:
+    # Ensure things get bookmarked and derandomed as usual.
+    label_prefix_map["mshMod_medication_reminder_"] = label_prefix_map["monika_"]
+
+
 init 5 python:
     addEvent(
         Event(
@@ -8,7 +13,7 @@ init 5 python:
             prompt="Can you remind me about my medication?",
             category=["mental health"],
             pool=True,
-            unlocked=True,
+            unlocked=True
         )
     )
 
@@ -39,6 +44,8 @@ label mshMod_medication_reminder_request:
 
                 "In the evening.":
                     $ delay, tod = store.mshMod_reminder_utils.getDailyEveningDelay(), "evening"
+
+            # P.S. 'tod' is for 'Time Of Day'
 
             m 4hub "Alright! I'll be sure to remind you, every day, in the [tod]!"
             m 2nua "Make sure to come see me so I can remind you, okay? Ehehehe~"
@@ -99,7 +106,7 @@ init 5 python:
             eventlabel="mshMod_medication_reminder",
             conditional="store.mshMod_reminder.shouldTriggerReminder('mshMod_medication_reminder')",
             action=EV_ACT_QUEUE,
-            rules={"force repeat": None}
+            rules={"force repeat": None, "bookmark_rule": mas_bookmarks_derand.BLACKLIST}
         )
     )
 

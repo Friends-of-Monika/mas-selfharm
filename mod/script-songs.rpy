@@ -4,11 +4,13 @@ init 5 python in mas_bookmarks_derand:
     # Ensure things get bookmarked and derandomed as usual.
     label_prefix_map["mshMod_playlist"] = label_prefix_map["mas_song_"]
 
+
 init 5 python in mshMod_playlist:
 
     import store
 
     PLAYLIST_FILE = store.config.basedir + "/game/Submods/MAS Self Harm Submod/res/playlist.mp3"
+
 
 #playlist
 init 5 python:
@@ -17,7 +19,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_playlist",
             category=["mental health"],
-            prompt=["Playlist"],
+            prompt="Playlist",
             random=True
         )
     )

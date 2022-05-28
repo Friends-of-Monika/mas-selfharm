@@ -1,9 +1,5 @@
 # Self-harm urge topics.
 
-init 5 python in mas_bookmarks_derand:
-    # Ensure things get bookmarked and derandomed as usual.
-    label_prefix_map["mshMod_topic_"] = label_prefix_map["monika_"]
-    
 init 5 python:
     addEvent(
         Event(
@@ -14,7 +10,7 @@ init 5 python:
             conditional="persistent._msh_mod_pm_did_selfharm",
             action=EV_ACT_UNLOCK,
             pool=True,
-            rules={"no_unlock": None}
+            rules={"no_unlock": None, "bookmark_rule": mas_bookmarks_derand.WHITELIST}
         )
     )
 

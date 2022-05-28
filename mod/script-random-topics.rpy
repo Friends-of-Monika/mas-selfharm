@@ -210,7 +210,7 @@ init 5 python:
             eventlabel="mshMod_topic_monika_is_sad",
             conditional="persistent._msh_mod_pm_did_selfharm",
             category=["self-harm"],
-            prompt=["[player] self-harming"],
+            prompt="[player] self-harming",
             action=EV_ACT_RANDOM
         )
     )
