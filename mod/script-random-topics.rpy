@@ -165,6 +165,8 @@ init 5 python:
             eventlabel="mshMod_topic_selfharm_random_thoughts",
             prompt="Monika's self-harm experience",
             category=["self-harm"],
+            conditional="persistent._msh_mod_pm_did_selfharm",
+            action=EV_ACT_RANDOM,
             random=True
         )
     )
