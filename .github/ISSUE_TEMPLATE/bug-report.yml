@@ -13,6 +13,7 @@ body:
     attributes:
       label: What happened?
       description: Also tell us, what did you expect to happen?
+      placeholder: I was doing X, then suddenly Y happened and I think this is wrong because...
     validations:
       required: true
   - type: textarea
