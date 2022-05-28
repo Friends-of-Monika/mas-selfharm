@@ -1,5 +1,5 @@
 name: 🙋 Help Request
-description: Submit a help requests
+description: Submit a request for help and support about this submod
 title: "Help: "
 labels: [ "question" ]
 body:
