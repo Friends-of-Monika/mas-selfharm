@@ -16,6 +16,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_playlist",
+            category=["mental health"]
+            prompt=["Playlist"]
             random=True
         )
     )
@@ -67,7 +69,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_playlist_play",
             category=["music"],
-            prompt="I want to listen to your playlist",
+            prompt="I want to listen to your playlist.",
             conditional="seen_event('mshMod_playlist')",
             action=EV_ACT_UNLOCK,
             pool=True,
@@ -105,7 +107,6 @@ init 5 python:
             eventlabel="mshMod_playlist_paradise_fears",
             category=[mas_songs.TYPE_SHORT],
             prompt="Paradise Fears",
-            aff_range=(mas_aff.NORMAL, None),
             conditional="seen_event('mshMod_playlist')",
             action=EV_ACT_RANDOM
         ),
@@ -141,7 +142,6 @@ init 5 python:
             eventlabel="mshMod_playlist_clay",
             category=[mas_songs.TYPE_SHORT],
             prompt="Clay",
-            aff_range=(mas_aff.NORMAL, None),
             conditional="seen_event('mshMod_playlist')",
             action=EV_ACT_RANDOM
         ),
@@ -177,7 +177,6 @@ init 5 python:
             eventlabel="mshMod_playlist_fix_you",
             category=[mas_songs.TYPE_SHORT],
             prompt="Fix You",
-            aff_range=(mas_aff.NORMAL, None),
             conditional="seen_event('mshMod_playlist')",
             action=EV_ACT_RANDOM
         ),
@@ -209,7 +208,6 @@ init 5 python:
             eventlabel="mshMod_your_heartbreak",
             category=[mas_songs.TYPE_SHORT],
             prompt="I Hate To See Your Heartbreak",
-            aff_range=(mas_aff.NORMAL, None),
             conditional="seen_event('mshMod_playlist')",
             action=EV_ACT_RANDOM
         ),
@@ -245,7 +243,6 @@ init 5 python:
             eventlabel="mshMod_playlist_child",
             category=[mas_songs.TYPE_SHORT],
             prompt="O-o-h Child",
-            aff_range=(mas_aff.NORMAL, None),
             conditional="seen_event('mshMod_playlist')",
             action=EV_ACT_RANDOM
         ),
@@ -277,7 +274,6 @@ init 5 python:
             eventlabel="mshMod_playlist_the_middle",
             category=[mas_songs.TYPE_SHORT],
             prompt="The Middle",
-            aff_range=(mas_aff.NORMAL, None),
             conditional="seen_event('mshMod_playlist')",
             action=EV_ACT_RANDOM
         ),
@@ -310,7 +306,6 @@ init 5 python:
             eventlabel="mshMod_playlist_firework",
             category=[mas_songs.TYPE_SHORT],
             prompt="Firework",
-            aff_range=(mas_aff.NORMAL, None),
             conditional="seen_event('mshMod_playlist')",
             action=EV_ACT_RANDOM
         ),
@@ -344,7 +339,6 @@ init 5 python:
             eventlabel="mshMod_playlist_torches",
             category=[mas_songs.TYPE_SHORT],
             prompt="Torches",
-            aff_range=(mas_aff.NORMAL, None),
             conditional="seen_event('mshMod_playlist')",
             action=EV_ACT_RANDOM
         ),
@@ -377,7 +371,6 @@ init 5 python:
             eventlabel="mshMod_playlist_only_wonder",
             category=[mas_songs.TYPE_SHORT],
             prompt="Only Wonder",
-            aff_range=(mas_aff.NORMAL, None),
             conditional="seen_event('mshMod_playlist')",
             action=EV_ACT_RANDOM
         ),
@@ -413,7 +406,6 @@ init 5 python:
             eventlabel="mshMod_playlist_way_home",
             category=[mas_songs.TYPE_SHORT],
             prompt="Someday I'll Find My Way Home",
-            aff_range=(mas_aff.NORMAL, None),
             conditional="seen_event('mshMod_playlist')",
             action=EV_ACT_RANDOM
         ),
@@ -448,7 +440,6 @@ init 5 python:
             eventlabel="mshMod_song_hold_on",
             category=[mas_songs.TYPE_SHORT],
             prompt="Hold On",
-            aff_range=(mas_aff.NORMAL, None),
             random=True
         ),
         code="SNG"
@@ -491,8 +482,7 @@ init 5 python:
             persistent._mas_songs_database,
             eventlabel="mshMod_song_still_breathing",
             category=[mas_songs.TYPE_SHORT],
-            prompt="Hold On",
-            aff_range=(mas_aff.NORMAL, None),
+            prompt="Still Breathing",
             conditional="persistent._msh_mod_pm_did_selfharm",
             action=EV_ACT_RANDOM
         ),
