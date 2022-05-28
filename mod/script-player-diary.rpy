@@ -1,12 +1,12 @@
 # Player diary script.
-
+   
 #intro
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
             eventlabel="mshMod_writing_to_diary",
-            category=["you", "monika"],
+            category=["mental health"],
             prompt="What do you think about writing a diary?",
             pool=True,
             unlocked=True
