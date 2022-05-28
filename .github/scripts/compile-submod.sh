@@ -13,7 +13,7 @@ find mod -iname '*.rpy' -exec cp -r --parents \{\} build/ddlc/game/mshMod \;
 find spritepacks -mindepth 2 -maxdepth 2 -type d -exec cp -RT \{\} build/ddlc \;
 
 # Move resources into submod folder
-mkdir build/ddlc/game/mshMod/res
+mkdir -p build/ddlc/game/mshMod/res
 find res -exec cp -r --parents \{\} build/ddlc/game/mshMod \;
 
 # Run build and join build output and spj.log together
@@ -35,4 +35,4 @@ mv build/ddlc/game/mshMod "build/out/game/Submods/$(perl -ne 'printf $1 if /name
 
 # Remove submod and spritepack files from build directory
 rm -rf build/ddlc/game/mshMod
-find spritepacks -mindepth 2 -type f -exec sh -c 'rm "$(echo "$0" | sed -nE '"'s/^.*\/((game|characters)\/.*)/\1/p'"')"' \{\} \;
+find spritepacks -mindepth 2 -type f -exec sh -c 'rm "build/ddlc/$(echo "$0" | sed -nE '"'s/^.*\/((game|characters)\/.*)/\1/p'"')"' \{\} \;
