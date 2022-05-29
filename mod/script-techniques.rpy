@@ -1861,12 +1861,12 @@ init 5 python:
     )
 
 label mshMod_technique_brushes:
-    m "Do you have paint and soft paint brushes at home, [player]?"
-    m "If you do, paint lightly on your skin."
-    m "You can also use your finger!"
-    m "Especially in the area where you want to do it..."
-    m "Then, take a long shower..."
-    m "And wash away your pain!"
+    m 2esb "Do you have paint and soft paint brushes at home, [player]?"
+    m 2hsb "If you do, paint lightly on your skin."
+    m 2wsa "You can also use your finger!"
+    m 2lssdlc "Especially in the area where you want to do it..."
+    m 2dsa "Then, take a long shower..."
+    m 2ssb "And wash away your pain!"
     return
 
 #73
@@ -1882,11 +1882,11 @@ init 5 python:
     )
 
 label mshMod_technique_memory_book:
-    m "Start a 'memory book' of good memories!"
-    m "Read through them as you add new ones."
-    m "Add the details, and put in pictures if you want!"
-    m "You can make it as it were a diary, if you want."
-    m "I'm sure there are many more good memories yet to come, [player]!"
+    m 7rsa "Start a 'memory book' of good memories!"
+    m 7esa "Read through them as you add new ones."
+    m 7esb "Add the details, and put in pictures if you want!"
+    m 2esb "You can make it as it were a diary, if you want."
+    m 2ksa "I'm sure there are many more good memories yet to come, [player]!"
     return
 
 #74
@@ -1902,11 +1902,11 @@ init 5 python:
     )
 
 label mshMod_technique_happiness:
-    m "Identify three small things that brought you happiness in the past 24 hours."
-    m "What were they and how did they make you happy?"
-    m "Can you do any of them again?"
-    m "Cherish those moments, and cherish your happiness."
-    m "You deserve to be happy and to be loved!"
+    m 2rsa "Identify three small things that brought you happiness in the past 24 hours."
+    m 7esa "What were they and how did they make you happy?"
+    m 7esb "Can you do any of them again?"
+    m 2dsa "Cherish those moments, and cherish your happiness."
+    m 2ksa "You deserve to be happy and to be loved!"
     return
 
 #75
@@ -1922,20 +1922,20 @@ init 5 python:
     )
 
 label mshMod_technique_hug_theory:
-    m "Think of three people who give the best hugs and see if you can be with them."
-    m "If that's not the case, think of people who could give you their warmest smiles."
-    m "There's also the hug theory... {w=0.3}{nw}"
-    extend "I don't know if you're familiar with it."
-    m "It's simple: you replace hurting yourself with hugs!"
-    m "Hug 5 people when you are really, really upset and want to self harm."
-    m "Hug 4 people when you are really upset."
-    m "Hug 3 people if you are somewhat upset."
-    m "Hug 2 people if you are less upset."
-    m "And finally, hug 1 person if you are a bit upset."
-    m "If you are upset and alone, hug yourself, your pet, your stuffed animal or a picture of someone you care about."
-    m "And you can always hold me! {w=0.3}{nw}"
-    extend "Ehehehe~"
-    m "Just remember to Hug!"
+    m 1esb "Think of three people who give the best hugs and see if you can be with them."
+    m 1rsa "If that's not the case, think of people who could give you their warmest smiles."
+    m 1rsb "There's also the hug theory... {w=0.3}{nw}"
+    extend 7esb "I don't know if you're familiar with it."
+    m 7wsb "It's simple: you replace hurting yourself with hugs!"
+    m 7dsc "Hug 5 people when you are really, really upset and want to self harm."
+    m 7dsd "Hug 4 people when you are really upset."
+    m 7dsc "Hug 3 people if you are somewhat upset."
+    m 7dsb "Hug 2 people if you are less upset."
+    m 7esa "And finally, hug 1 person if you are a bit upset."
+    m 2rsa "If you are upset and alone, hug yourself, your pet, your stuffed animal or a picture of someone you care about."
+    m 2tsbfb "And you can always hold me! {w=0.3}{nw}"
+    extend 2hsbfb "Ehehehe~"
+    m 2ksa "Just remember to Hug!"
     return
 
 #76
