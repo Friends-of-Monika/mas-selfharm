@@ -1546,15 +1546,15 @@ init 5 python:
     )
 
 label mshMod_technique_shapes:
-    m "Draw any type of line on a piece of paper..."
-    m "Then make something out of it."
-    m "Or draw lots of shapes!"
-    m "Whatever comes in your mind is valid to be on the paper."
-    m "If you feel yourself drawing negative things... {w=0.3}{nw}"
-    extend "It's okay! You'll relieve all the tension you've been holding inside."
-    m "If positivity comes out in the paper, even better!"
-    m "Enjoy yourself, [player]! {w=0.3}{nw}"
-    extend "And take your time."
+    m 1eub "Draw any type of line on a piece of paper..."
+    m 1eua "Then make something out of it."
+    m 1sub "Or draw lots of shapes!"
+    m 7eua "Whatever comes in your mind is valid to be on the paper."
+    m 7duc "If you feel yourself drawing negative things... {w=0.3}{nw}"
+    extend 7eka "It's okay! You'll relieve all the tension you've been holding inside."
+    m 7sua "If positivity comes out in the paper, even better!"
+    m 2sua "Enjoy yourself, [player]! {w=0.3}{nw}"
+    extend 2dua "And take your time."
     return
 
 #59
@@ -1570,12 +1570,12 @@ init 5 python:
     )
 
 label mshMod_technique_playlists:
-    m "How about creating a playlist?"
-    m "You can go to Youtube, and create a list of videos that make you happy."
-    m "Or that make you laugh!"
-    m "Or create a playlist on Spotify, for example, of your favourite songs."
-    m "Or comforting songs! Listen to these."
-    m "Reflect on their message."
+    m 2hub "How about creating a playlist?"
+    m 2esa "You can go to Youtube, and create a list of videos that make you happy."
+    m 2hsb "Or that make you laugh!"
+    m 2lsb "Or create a playlist on Spotify, for example, of your favourite songs."
+    m 2lsa "Or comforting songs! Listen to these."
+    m 2dua "Reflect on their message."
     return
 
 #60
@@ -1591,16 +1591,16 @@ init 5 python:
     )
 
 label mshMod_technique_self_care:
-    m "Do one self-care activity, or take some 'me' time."
-    m "For example, making your bed! {w=0.3}{nw}"
-    extend "Or brushing your hair, your teeth."
-    m "Or taking a shower! {w=0.3}{nw}"
-    extend "Or even a hot bath and try to 'be' in the moment."
-    m "Or give yourself a pedicure and manicure!"
-    m "Just getting into your pajamas and chilling also does the trick."
-    m "Just make sure that this time is yours only."
-    m "Most people with depressive episodes struggle with keeping their hygiene habits on check."
-    m "I want you to take care of yourself, [player]. Enjoy!"
+    m 2lsa "Do one self-care activity, or take some 'me' time."
+    m 7lsb "For example, making your bed! {w=0.3}{nw}"
+    extend 7dsb "Or brushing your hair, your teeth."
+    m 2hsb "Or taking a shower! {w=0.3}{nw}"
+    extend 2dsa "Or even a hot bath and try to 'be' in the moment."
+    m 2ssa "Or give yourself a pedicure and manicure!"
+    m 2ksa "Just getting into your pajamas and chilling also does the trick."
+    m 2fsa "Just make sure that this time is yours only."
+    m 2dsc "Most people with depressive episodes struggle with keeping their hygiene habits on check."
+    m 5hsa "I want you to take care of yourself, [player]. Enjoy!"
     return
 
 #61
