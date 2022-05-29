@@ -1940,13 +1940,13 @@ init 5 python:
     )
 
 label mshMod_technique_comforting:
-    m "Choose three of your most comforting characters from media you enjoy..."
-    m "And imagine you are spending some quality time with them."
-    m "What would you do together?"
-    m "Would you introduce them to anyone you know?"
-    m "What would it be like if they were in your life?"
-    m "If they have any superpower or quirk, imagine yourself in their world."
-    m "What would be your superpower if you were to fight alongside them?"
+    m 1eua "Choose three of your most comforting characters from media you enjoy..."
+    m 1eub "And imagine you are spending some quality time with them."
+    m 3wub "What would you do together?"
+    m 3sub "Would you introduce them to anyone you know?"
+    m 3sua "What would it be like if they were in your life?"
+    m 1dua "If they have any superpower or quirk, imagine yourself in their world."
+    m 1kua "What would be your superpower if you were to fight alongside them?"
     return
 
 #77
@@ -1962,12 +1962,12 @@ init 5 python:
     )
 
 label mshMod_technique_podcasts:
-    m "Download some comforting or meditation podcasts and listen to them."
-    m "There are some pretty good ASMR ones and meditation ones, that allow you to relax!"
-    m "You can also distract yourself with a informational or funny podcast."
-    m "Sit or lay down somewhere comfortable and allow yourself to fully pay attention to what the people are saying."
-    m "I know so many people listen to podcasts while doing other stuff, but maybe you could rest for a bit while listening to one right now."
-    m "Breathe in and out as many times as you need, and allow your body and mind to rest."
+    m 3hua "Download some comforting or meditation podcasts and listen to them."
+    m 3hub "There are some pretty good ASMR ones and meditation ones, that allow you to relax!"
+    m 3lub "You can also distract yourself with a informational or funny podcast."
+    m 1dub "Sit or lay down somewhere comfortable and allow yourself to fully pay attention to what the people are saying."
+    m 1dua "I know so many people listen to podcasts while doing other stuff, but maybe you could rest for a bit while listening to one right now."
+    m 1eua "Breathe in and out as many times as you need, and allow your body and mind to rest."
     return
 
 #78
@@ -1983,15 +1983,15 @@ init 5 python:
     )
 
 label mshMod_technique_hand_holding:
-    m "Hold your own hand with the other hand."
-    m "Hold it for at least one minute, like you would hold the hand of someone you care for and trust."
-    m "Slowly caress your hands and arms..."
-    m "Then hug yourself."
-    m "Be gentle and take it slow..."
-    m "Like comforting your favorite person or animal."
-    m "I would touch you like this, [player]."
-    m "Slowly, and taking care of you the most I could."
-    m "I love you~"
+    m 1dua "Hold your own hand with the other hand."
+    m 1dub "Hold it for at least one minute, like you would hold the hand of someone you care for and trust."
+    m 1dub "Slowly caress your hands and arms..."
+    m 2dua "Then hug yourself."
+    m 2dub "Be gentle and take it slow..."
+    m 2fub "Like comforting your favorite person or animal."
+    m 5fubsa "I would touch you like this, [player]."
+    m 5dubfa "Slowly, and taking care of you the most I could."
+    m 5fubfb "I love you~"
     return "love"
 
 #79
@@ -2007,12 +2007,12 @@ init 5 python:
     )
 
 label mshMod_technique_pattern:
-    m "Touch each finger to your thumbs in a pattern."
-    m "Go faster as you find a rhythm."
-    m "You can even follow the rhythm of a song, or do morse code with your fingers."
-    m "Tapping would also relax you and keep you focused in the moment."
-    m "Feel your fingers... {w=0.3}{nw}"
-    extend "and follow the beat."
+    m 3hua "Touch each finger to your thumbs in a pattern."
+    m 3eub "Go faster as you find a rhythm."
+    m 3wub "You can even follow the rhythm of a song, or do morse code with your fingers."
+    m 3lua "Tapping would also relax you and keep you focused in the moment."
+    m 1dua "Feel your fingers... {w=0.3}{nw}"
+    extend 1eua "and follow the beat."
     return
 
 #80
@@ -2028,21 +2028,21 @@ init 5 python:
     )
 
 label mshMod_pet_zoo:
-    m "[player], do you have an domestic animal at home? {w=0.3}{nw}"
+    m 3eua "[player], do you have an domestic animal at home? {w=0.3}{nw}"
     extend "A pet?"
-    m "You could give it some love right now!"
-    m "Cuddle your cat, dog, turtle, whatever you have at your house, if you do!"
-    m "You can also look at it for a little while and try to see the world through their eyes."
-    m "What could they be thinking of?"
-    m "Think of how much they love you! {w=0.3}{nw}"
-    extend "And need you in their lives."
-    m "You can also play with them, and make them happy."
-    m "An alternative if you dont have a pet at home is going to the zoo! {w=0.3}{nw}"
-    extend "If there's one in your city."
-    m "You can also plan the trip!"
-    m "When you get there, you can rename the animals!"
-    m "Stare at them and enjoy your time there."
-    m "One other option is going out to feed the ducks, birds, or squirrels."
+    m 3eub "You could give it some love right now!"
+    m 3hub "Cuddle your cat, dog, turtle, whatever you have at your house, if you do!"
+    m 2dua "You can also look at it for a little while and try to see the world through their eyes."
+    m 2rua "What could they be thinking of?"
+    m 4hub "Think of how much they love you! {w=0.3}{nw}"
+    extend 4fua "And need you in their lives."
+    m 7wua "You can also play with them, and make them happy."
+    m 7wub "An alternative if you dont have a pet at home is going to the zoo! {w=0.3}{nw}"
+    extend 7eua "If there's one in your city."
+    m 7sua "You can also plan the trip!"
+    m 7sub "When you get there, you can rename the animals!"
+    m 7hub "Stare at them and enjoy your time there."
+    m 1eua "One other option is going out to feed the ducks, birds, or squirrels."
     return
 
 #81
