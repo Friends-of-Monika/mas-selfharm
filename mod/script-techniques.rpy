@@ -801,13 +801,13 @@ init 5 python:
     )
 
 label mshMod_technique_comfort:
-    m "[player], imagine someone you love was feeling sad..."
-    m "You'd obviously want to help them out, right?"
-    m "That's just the kind of person you are, [player]."
-    m "Try to think about all the ways in which you can comfort a friend who might be having a bad time."
-    m "Please, note them down, if you feel like it."
-    m "Now, try to apply some of those strategies to yourself."
-    m "You can also note down how everything about this exercise makes you feel."
+    m 7eua "[player], imagine someone you love was feeling sad..."
+    m 7etb "You'd obviously want to help them out, right?"
+    m 2htb "That's just the kind of person you are, [player]."
+    m 3eta "Try to think about all the ways in which you can comfort a friend who might be having a bad time."
+    m 6ekb "Please, note them down, if you feel like it."
+    m 4etu "Now, try to apply some of those strategies to yourself."
+    m 2wub "You can also note down how everything about this exercise makes you feel."
     return
 
 #28
@@ -823,20 +823,20 @@ init 5 python:
     )
 
 label mshMod_technique_walk:
-    m "You can also go for a little walk outside, and connect with nature."
-    m "Maybe even go out for a run, or a swim! {w=0.3}{nw}"
-    extend "Breathe the fresh air..."
-    m "If you can't leave the house, you can watch the nature outside your window!"
-    m "In the morning, there might be many people outside."
-    m "Watch their clothing, the way they walk and talk."
-    m "Do you wonder what lives they have? Who waits them at home?"
-    m "Look at the cars rushing on the street."
-    m "Where might they be going to?"
-    m "If it's already the evening..."
-    m "Look up at the sky, and find the moon. Study it."
-    m "How many stars can you count?"
-    m "Think about what you might be smelling, hearing and feeling."
-    m "Can you put these feelings into words or draw them?"
+    m 3wua "You can also go for a little walk outside, and connect with nature."
+    m 4hub "Maybe even go out for a run, or a swim! {w=0.3}{nw}"
+    extend 2duu "Breathe the fresh air..."
+    m 1eub "If you can't leave the house, you can watch the nature outside your window!"
+    m 3wub "In the morning, there might be many people outside."
+    m 6lua "Watch their clothing, the way they walk and talk."
+    m 4eub "Do you wonder what lives they have? Who waits them at home?"
+    m 2euu "Look at the cars rushing on the street."
+    m 7esb "Where might they be going to?"
+    m 4esb "If it's already the evening..."
+    m 1dsb "Look up at the sky, and find the moon. Study it."
+    m 3ssa "How many stars can you count?"
+    m 6esb "Think about what you might be smelling, hearing and feeling."
+    m 5hsb "Can you put these feelings into words or draw them?"
     return
 
 #29
@@ -852,13 +852,13 @@ init 5 python:
     )
 
 label mshMod_technique_media:
-    m "Do you have any social media profiles, [player]?"
-    m "You can write something positive there if you do."
-    m "That way, you can make yourself feel better..."
-    m "And spread the feeling to your friends too!"
-    m "And remember... {w=0.3}{nw}"
-    extend "Make someone smile everyday, but don't forget you're someone too!"
-    m "I love you, [player]~"
+    m 3eud "Do you have any social media profiles, [player]?"
+    m 4eub "You can write something positive there if you do."
+    m 2kua "That way, you can make yourself feel better..."
+    m 7wub "And spread the feeling to your friends too!"
+    m 1rua "And remember... {w=0.3}{nw}"
+    extend 1hublb "Make someone smile everyday, but don't forget you're someone too!"
+    m 5eubfa "I love you, [player]~"
     return "love"
 
 #30
@@ -874,15 +874,15 @@ init 5 python:
     )
 
 label mshMod_technique_perspective:
-    m "Let's work on some perspective!"
-    m "Can you write down your worries?"
-    m "And think... how much will they bother you..."
-    m "Tomorrow? {w=0.3}{nw}"
-    extend "What about in a week's time? {w=0.3}{nw}"
-    extend "Maybe a month or a year?"
-    m "Working on using perspective helps on letting go of the intensity of the worry."
-    m "But never forget, [player], it doesn't matter how long the bad times last."
-    m "I'll always be right here with you."
+    m 4eub "Let's work on some perspective!"
+    m 2eta "Can you write down your worries?"
+    m 7eta "And think... how much will they bother you..."
+    m 1rtu "Tomorrow? {w=0.3}{nw}"
+    extend 7etb "What about in a week's time? {w=0.3}{nw}"
+    extend 1gtb "Maybe a month or a year?"
+    m 2eua "Working on using perspective helps on letting go of the intensity of the worry."
+    m 3eublb "But never forget, [player], it doesn't matter how long the bad times last."
+    m 5eubfb "I'll always be right here with you."
     return
 
 #31
