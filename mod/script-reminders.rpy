@@ -118,5 +118,5 @@ label mshMod_medication_reminder:
     m 1hsbla "I love you!"
 
     # Do not move this anywhere, this must be above the return.
-    $ store.mshMod_medication_reminder.extendCurrentReminder()
+    $ store.mshMod_reminder.extendCurrentReminder()
     return "no_unlock|love"
