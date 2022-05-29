@@ -714,14 +714,14 @@ init 5 python:
     )
 
 label mshMod_technique_bothering:
-    m "I want you to say out loud what's bothering you."
-    m "You can whisper if you don't want anyone to hear you!"
-    m "But I want you to pay attention to what you're saying."
-    m "Can you come up with one positive solution?"
-    m "Venting about how we feel always helps."
-    m "If you can, write down any thoughts you're having... {w=0.3}{nw}"
-    extend "Negative or not!"
-    m "Get it all out of your system!"
+    m 3eua "I want you to say out loud what's bothering you."
+    m 4wub "You can whisper if you don't want anyone to hear you!"
+    m 2eta "But I want you to pay attention to what you're saying."
+    m 6hub "Can you come up with one positive solution?"
+    m 7kub "Venting about how we feel always helps."
+    m 1eua "If you can, write down any thoughts you're having... {w=0.3}{nw}"
+    extend 3wub "Negative or not!"
+    m 5huu "Get it all out of your system!"
     return
 
 #24
@@ -737,14 +737,14 @@ init 5 python:
     )
 
 label mshMod_technique_positive:
-    m "You could start making a 'positive statements about me' thought box."
-    m "Creating a list of your strenghts, as if you were compiling a portfolio or a CV..."
-    m "That might help!"
-    m "Write down as many positive things as you can about yourself."
-    m "You can put each one of them in a jar..."
-    m "And read them when you feel down!"
-    m "You can also record yourself saying those positive things and listen to them as many times as you like."
-    m "I want you to realize how amazing you are, [player]."
+    m 4luu "You could start making a 'positive statements about me' thought box."
+    m 2kub "Creating a list of your strenghts, as if you were compiling a portfolio or a CV..."
+    m 3wua "That might help!"
+    m 3eub "Write down as many positive things as you can about yourself."
+    m 4dub "You can put each one of them in a jar..."
+    m 6hub "And read them when you feel down!"
+    m 7sub "You can also record yourself saying those positive things and listen to them as many times as you like."
+    m 5fua "I want you to realize how amazing you are, [player]."
     return
 
 #25
@@ -760,11 +760,11 @@ init 5 python:
     )
 
 label mshMod_technique_box:
-    m "What about putting your upsetting thoughts in a box?"
-    m "You can write them in slips of paper throughout the day, storing them in the box."
-    m "At the end of the day, you can throw them away!"
-    m "To have a new begginning tomorrow."
-    m "I believe in you, [player]."
+    m 1fub "What about putting your upsetting thoughts in a box?"
+    m 3dub "You can write them in slips of paper throughout the day, storing them in the box."
+    m 4wua "At the end of the day, you can throw them away!"
+    m 2hub "To have a new begginning tomorrow."
+    m 6fua "I believe in you, [player]."
     return
 
 #26
@@ -780,12 +780,12 @@ init 5 python:
     )
 
 label mshMod_technique_common:
-    m "Let's do a little mental exercise, [player]!"
-    m "Think about all the things you can find you share in common with a friend."
-    m "That will help you remmember common ground!"
-    m "You can even discuss those things with them. {w=0.3}{nw}"
-    extend "It will be a fun topic to chat about!"
-    m "You can write them down too."
+    m 7nub "Let's do a little mental exercise, [player]!"
+    m 4wua "Think about all the things you can find you share in common with a friend."
+    m 2rub "That will help you remmember common ground!"
+    m 1huu "You can even discuss those things with them. {w=0.3}{nw}"
+    extend 3wub "It will be a fun topic to chat about!"
+    m 4euu "You can write them down too."
     return
 
 #27
