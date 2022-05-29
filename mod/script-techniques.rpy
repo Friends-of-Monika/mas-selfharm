@@ -2262,21 +2262,21 @@ init 5 python:
     )
 
 label mshMod_technique_future:
-    m "[player], I know things might look hopeless now."
-    m "But why not think a little about your bright future?"
-    m "You can think about your ideal life... {w=0.3}{nw}"
-    extend "What do you have to do to get there?"
-    m "Make some plans for the near or far future."
-    m "Hunt for your perfect home in the paper or online."
-    m "Come up with baby names even if you aren't expecting."
-    m "Think of your future kids, if you want to have any."
-    m "..."
-    m "Plan your someday wedding day! How would it be?"
-    m "What kind of dress will I wear...?"
-    m "Ahahaha~!"
-    m "Thinking about the future always gives us a little perspective, [player]."
-    m "And I'm sure you have a brilliant future ahead of you."
-    m "I'll be there for you every step of the way, for sure."
+    m 1esc "[player], I know things might look hopeless now."
+    m 3ssa "But why not think a little about your bright future?"
+    m 3rsb "You can think about your ideal life... {w=0.3}{nw}"
+    extend 3wsb "What do you have to do to get there?"
+    m 2dsb "Make some plans for the near or far future."
+    m 2esa "Hunt for your perfect home in the paper or online."
+    m 4esa "Come up with baby names even if you aren't expecting."
+    m 4wsa "Think of your future kids, if you want to have any."
+    m 2gsa "..."
+    m 2gsb "Plan your someday wedding day! How would it be?"
+    m 2ksb "What kind of dress will I wear...?"
+    m 2hsb "Ahahaha~!"
+    m 2wsa "Thinking about the future always gives us a little perspective, [player]."
+    m 7ssa "And I'm sure you have a brilliant future ahead of you."
+    m 5fsbsa "I'll be there for you every step of the way, for sure."
     return
 
 #91
@@ -2292,12 +2292,12 @@ init 5 python:
     )
 
 label mshMod_technique_create:
-    m "[player], why not create something of your own?"
-    m "You can build something from scratch, start a new drawing or write a brand new story."
-    m "Even folding a paper and inventing a new origami shape goes!"
-    m "Don't you feel so proud when you create something entirely new, {w=0.3}{nw}"
-    extend "that is only yours?"
-    m "I feel proud of you nevertheless, [player]."
+    m 7kta "[player], why not create something of your own?"
+    m 7ltb "You can build something from scratch, start a new drawing or write a brand new story."
+    m 1wtb "Even folding a paper and inventing a new origami shape goes!"
+    m 5ftu "Don't you feel so proud when you create something entirely new, {w=0.3}{nw}"
+    extend 5dtu "that is only yours?"
+    m 5ktb "I feel proud of you nevertheless, [player]."
     return
 
 #92
