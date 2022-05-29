@@ -898,18 +898,18 @@ init 5 python:
     )
 
 label mshMod_technique_productivity:
-    m "[player], do you have any incomplete projects you would like to see finished?"
-    m "Have you been procrastinating anything for any reason?"
-    m "I know this one might be hard but..."
-    m "What about trying to engage in a productive activity?"
-    m "Maybe going back to it for a little while might distract you and ease your mind."
-    m "If you have been putting off something, you can try to pick it up right now."
-    m "An old drawing, that old story, a school project that has been on your mind."
-    m "Seeing old projects finally being completed always gives us an extra boost!"
-    m "It's always nice when we see work getting done."
-    m "Can be school stuff, a personal project... You name it!"
-    m "Just try to do something that makes you proud for yourself today."
-    m "Even if it's small!"
+    m 1eua "[player], do you have any incomplete projects you would like to see finished?"
+    m 3eub "Have you been procrastinating anything for any reason?"
+    m 2rusdrc "I know this one might be hard but..."
+    m 4eua "What about trying to engage in a productive activity?"
+    m 6eub "Maybe going back to it for a little while might distract you and ease your mind."
+    m 7eua "If you have been putting off something, you can try to pick it up right now."
+    m 2kuu "An old drawing, that old story, a school project that has been on your mind."
+    m 4hub "Seeing old projects finally being completed always gives us an extra boost!"
+    m 6wua "It's always nice when we see work getting done."
+    m 7rua "Can be school stuff, a personal project... You name it!"
+    m 1fub "Just try to do something that makes you proud for yourself today."
+    m 3eub "Even if it's small!"
     return
 
 #32
@@ -925,12 +925,12 @@ init 5 python:
     )
 
 label mshMod_technique_interests:
-    m "How about making a list of things you find interesting in people?"
-    m "You can also list your favorite anime, videogame or other media's characters!"
-    m "Think of why you like them, and you can even imagine that they're real!"
-    m "This can help cope with loneliness, and also distract you."
-    m "I'm always with you, [player]. {w=0.3}{nw}"
-    extend "We'll get through this together!"
+    m 3eub "How about making a list of things you find interesting in people?"
+    m 2euu "You can also list your favorite anime, videogame or other media's characters!"
+    m 4nuu "Think of why you like them, and you can even imagine that they're real!"
+    m 6eua "This can help cope with loneliness, and also distract you."
+    m 2fubla "I'm always with you, [player]. {w=0.3}{nw}"
+    extend 5eub "We'll get through this together!"
     return
 
 #33
@@ -946,12 +946,12 @@ init 5 python:
     )
 
 label mshMod_technique_mirror:
-    m "Do you have a mirror close to you, [player]?"
-    m "You could try making faces at yourself in the mirror and laugh."
-    m "I know that really cheers people up!"
-    m "Seeing the silliness in youself is such a funny thing to do."
-    m "Since you're there, you can also vent to yourself."
-    m "Look inside your eyes, and know that there's nothing that compares to the beauty in them."
+    m 4etb "Do you have a mirror close to you, [player]?"
+    m 6eta "You could try making faces at yourself in the mirror and laugh."
+    m 7htb "I know that really cheers people up!"
+    m 2etb "Seeing the silliness in youself is such a funny thing to do."
+    m 3etu "Since you're there, you can also vent to yourself."
+    m 1wublb "Look inside your eyes, and know that there's nothing that compares to the beauty in them."
     return
 
 #34
@@ -967,14 +967,14 @@ init 5 python:
     )
 
 label mshMod_technique_creativity:
-    m "Time to get creative!"
-    m "Make up a story in your head."
-    m "It can be about anything and anyone positive in your life."
-    m "Now ask yourself... Why are they in your story?"
-    m "You can create two or more characters, and give them depth!"
-    m "Drawing the scenarios and characters might be nice too."
-    m "Who knows, maybe a wonderful plot will blossom from this?"
-    m "You always make me so proud, [player]."
+    m 2kub "Time to get creative!"
+    m 4eua "Make up a story in your head."
+    m 6eub "It can be about anything and anyone positive in your life."
+    m 7dua "Now ask yourself... Why are they in your story?"
+    m 1wub "You can create two or more characters, and give them depth!"
+    m 2eub "Drawing the scenarios and characters might be nice too."
+    m 7eua "Who knows, maybe a wonderful plot will blossom from this?"
+    m 5eubfb "You always make me so proud, [player]."
     return
 
 #35
@@ -1422,12 +1422,12 @@ init 5 python:
     )
 
 label mshMod_technique_hobbies:
-    m "How about making a list of your favorite things to do?"
-    m "Hobbies, activities... even chores!"
-    m "Put them in a favourite to least favourite order."
-    m "Which of them can you do right now?"
-    m "Pick one, and go have fun! {w=0.3}{nw}"
-    extend "Ahahaha~"
+    m 3eub "How about making a list of your favorite things to do?"
+    m 2hub "Hobbies, activities... even chores!"
+    m 4eua "Put them in a favourite to least favourite order."
+    m 7euu "Which of them can you do right now?"
+    m 3wub "Pick one, and go have fun! {w=0.3}{nw}"
+    extend 1hub "Ahahaha~"
     return
 
 #54
