@@ -2313,15 +2313,15 @@ init 5 python:
     )
 
 label mshMod_technique_beads:
-    m "Another idea is to write down the names of your friends and family..."
-    m "So that when you feel the need to self-injure, you are reminded that you are important and loved by your friends and family."
-    m "As an extension to this, you could go to a craft store and buy supplies to make beads for bracelets and/or necklaces."
-    m "Then, buy butterfly charms... or any charm form/symbol you like, really! {w=0.3}{nw}"
-    extend "You'll eventually use it as a charm to be added to the bracelet/necklace."
-    m "This is how it works: First, make a bracelet or necklace out of the beads."
-    m "For every week that you have not hurt yourself, you have saved the life of the butterfly. {w=0.3}{nw}"
-    extend "Or the flower, if you picked one, for example!"
-    m "For every butterfly you save, you should add a butterfly charm to the beaded bracelet/necklace."
-    m "That way, you can tell how many weeks you have stopped hurting yourself by how many butterflies are on your beaded bracelet."
-    m "You will always be reminded of your successes every time you glance at your wrist and see all the butterflies you have saved!"
+    m 3etb "Another idea is to write down the names of your friends and family..."
+    m 3dtd "So that when you feel the need to self-injure, you are reminded that you are important and loved by your friends and family."
+    m 3wtb "As an extension to this, you could go to a craft store and buy supplies to make beads for bracelets and/or necklaces."
+    m 3wta "Then, buy butterfly charms... or any charm form/symbol you like, really! {w=0.3}{nw}"
+    extend 3nta "You'll eventually use it as a charm to be added to the bracelet/necklace."
+    m 1dta "This is how it works: First, make a bracelet or necklace out of the beads."
+    m 1dtb "For every week that you have not hurt yourself, you have saved the life of the butterfly. {w=0.3}{nw}"
+    extend 1htb "Or the flower, if you picked one, for example!"
+    m 1stb "For every butterfly you save, you should add a butterfly charm to the beaded bracelet/necklace."
+    m 7wta "That way, you can tell how many weeks you have stopped hurting yourself by how many butterflies are on your beaded bracelet."
+    m 7kta "You will always be reminded of your successes every time you glance at your wrist and see all the butterflies you have saved!"
     return
