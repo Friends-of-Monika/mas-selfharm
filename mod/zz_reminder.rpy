@@ -49,6 +49,7 @@ init 4 python in mshMod_reminder_utils:
 init 4 python in mshMod_reminder:
 
     import store
+    import datetime
 
     def _assertReminderActive(ev_label):
         if not isReminderActive(ev_label):
