@@ -2126,14 +2126,14 @@ init 5 python:
     )
 
 label mshMod_technique_clothes:
-    m "[player], why don't you go to your closet and pick a fancy outfit?"
-    m "You can change to your favorite outfit, or do a makeover, of sorts."
-    m "Style your hair in a way you never would."
-    m "Or even color it with your favorite color!"
-    m "If you like putting on makeup, have fun with it as well!"
-    m "Look into the mirror and see how amazing you look..."
-    m "And don't forget to take some pictures for posterity!"
-    m "Maybe you can even update your social media profile pictures."
+    m 3eua "[player], why don't you go to your closet and pick a fancy outfit?"
+    m 3sua "You can change to your favorite outfit, or do a makeover, of sorts."
+    m 3hua "Style your hair in a way you never would."
+    m 3wub "Or even color it with your favorite color!"
+    m 1esa "If you like putting on makeup, have fun with it as well!"
+    m 1dua "Look into the mirror and see how amazing you look..."
+    m 1fua "And don't forget to take some pictures for posterity!"
+    m 1wsa "Maybe you can even update your social media profile pictures."
     return
 
 #85
@@ -2149,16 +2149,16 @@ init 5 python:
     )
 
 label mshMod_technique_hobby:
-    m "[player], why not try learning something new?"
-    m "Or work on that hobby you always wanted to pick up."
-    m "You can try to learn a new activity, such as knitting, playing an instrument, coding, writing or drawing!"
-    m "Practice it, and be proud seeing your development!"
-    m "But most important, have fun!"
-    m "Knit your favorite animal, write about something nice, draw your favorite character or try to play your favorite song!"
-    m "If you don't feel motivated enough to start a new hobby, don't worry."
-    m "You can try starting a new habit!"
-    m "For example, you can start collecting something you like."
-    m "Seashells, dried flowers, anything goes as long as you're having fun."
+    m 3eua "[player], why not try learning something new?"
+    m 3eub "Or work on that hobby you always wanted to pick up."
+    m 1wub "You can try to learn a new activity, such as knitting, playing an instrument, coding, writing or drawing!"
+    m 1sua "Practice it, and be proud seeing your development!"
+    m 4nua "But most important, have fun!"
+    m 4lub "Knit your favorite animal, write about something nice, draw your favorite character or try to play your favorite song!"
+    m 1dub "If you don't feel motivated enough to start a new hobby, don't worry."
+    m 1wub "You can try starting a new habit!"
+    m 3sub "For example, you can start collecting something you like."
+    m 3lua "Seashells, dried flowers, anything goes as long as you're having fun."
     return
 
 #86
