@@ -1,6 +1,6 @@
 #!/bin/sh
 
-_mod_dir="game/Submods/$(perl -ne 'printf $1 if /name="([^"]*)"/' "mod/00_header.rpy")"
+_mod_dir="game/Submods/$(perl -ne 'if (/name="([^"]*)"/) { print $1; exit }' "mod/00_header.rpy")"
 
 # Clear MAS logs
 if [ -d build/ddlc/log ]; then
