@@ -44,8 +44,9 @@ going through hard times.
 Click [here](https://github.com/my-otter-self/MAS_selfharm/wiki/%F0%9F%91%90-Suicide-Hotlines) to see all the International Suicide Hotlines at the wiki.
 
 ## 🌟 Features
-
-  * Dozens of new songs (and dialogues!)
+  
+  * Tons of new dialogues and events
+  * Dozens of new songs (and dialogues for them!)
   * A whole lot of urge relieving techniques
   * Sober streak tracking
   * Medication reminders
