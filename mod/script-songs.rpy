@@ -2,7 +2,7 @@
 
 init 5 python in mas_bookmarks_derand:
     # Ensure things get bookmarked and derandomed as usual.
-    label_prefix_map["mshMod_playlist"] = label_prefix_map["mas_song_"]
+    label_prefix_map["mshMod_playlist_song_song_"] = label_prefix_map["mas_song_"]
 
 
 init 5 python in mshMod_playlist:
@@ -17,14 +17,14 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_playlist",
+            eventlabel="mshMod_playlist_intro",
             category=["mental health"],
             prompt="Playlist",
             random=True
         )
     )
 
-label mshMod_playlist:
+label mshMod_playlist_intro:
     m 1esd "Hey... [player]?"
     m 3eub "I... Have a surprise for you!"
     m 3rub "It's not much, but..."
@@ -69,7 +69,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_playlist_play",
+            eventlabel="mshMod_playlist_song_play",
             category=["music"],
             prompt="I want to listen to your playlist.",
             conditional="seen_event('mshMod_playlist')",
@@ -80,7 +80,7 @@ init 5 python:
         )
     )
 
-label mshMod_playlist_play:
+label mshMod_playlist_song_play:
     m 3eka "Oh, do you wanna listen to the playlist, [player]?"
     $ _history_list.pop()
     menu:
@@ -106,7 +106,7 @@ init 5 python:
     addEvent(
         Event(
             persistent._mas_songs_database,
-            eventlabel="mshMod_playlist_paradise_fears",
+            eventlabel="mshMod_playlist_song_paradise_fears",
             category=[mas_songs.TYPE_SHORT],
             prompt="Paradise Fears",
             conditional="seen_event('mshMod_playlist')",
@@ -115,7 +115,7 @@ init 5 python:
         code="SNG"
     )
 
-label mshMod_playlist_paradise_fears:
+label mshMod_playlist_song_paradise_fears:
     m 1dka "{i}~I'll carry you home~{/i}"
     m 3dsd "{i}~No, you're not, alone~{/i}"
     m 3hsa "{i}~Keep marching on~{/i}"
@@ -141,7 +141,7 @@ init 5 python:
     addEvent(
         Event(
             persistent._mas_songs_database,
-            eventlabel="mshMod_playlist_clay",
+            eventlabel="mshMod_playlist_song_clay",
             category=[mas_songs.TYPE_SHORT],
             prompt="Clay",
             conditional="seen_event('mshMod_playlist')",
@@ -150,7 +150,7 @@ init 5 python:
         code="SNG"
     )
 
-label mshMod_playlist_clay:
+label mshMod_playlist_song_clay:
     m 1efc "{i}~Your silly words~{/i}"
     m 1gfd "{i}~I won't live inside your world~{/i}"
     m 1dsc "{i}~'Cause your punches and your names~{/i}"
@@ -176,7 +176,7 @@ init 5 python:
     addEvent(
         Event(
             persistent._mas_songs_database,
-            eventlabel="mshMod_playlist_fix_you",
+            eventlabel="mshMod_playlist_song_fix_you",
             category=[mas_songs.TYPE_SHORT],
             prompt="Fix You",
             conditional="seen_event('mshMod_playlist')",
@@ -185,7 +185,7 @@ init 5 python:
         code="SNG"
     )
 
-label mshMod_playlist_fix_you:
+label mshMod_playlist_song_fix_you:
     m 1dsd "{i}~But if you never try, you'll never know~{/i}"
     m 1dkd "{i}~Just what you're worth~{/i}"
     m 3ekb "{i}~Lights will guide you home~{/i}"
@@ -242,7 +242,7 @@ init 5 python:
     addEvent(
         Event(
             persistent._mas_songs_database,
-            eventlabel="mshMod_playlist_child",
+            eventlabel="mshMod_playlist_song_child",
             category=[mas_songs.TYPE_SHORT],
             prompt="O-o-h Child",
             conditional="seen_event('mshMod_playlist')",
@@ -251,7 +251,7 @@ init 5 python:
         code="SNG"
     )
 
-label mshMod_playlist_child:
+label mshMod_playlist_song_child:
     show monika 5tub at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5tub "{i}~Ooh child, things are gonna get easier~{/i}"
     m 5tuu "{i}~Ooh child, things'll get brighter~{/i}"
@@ -273,7 +273,7 @@ init 5 python:
     addEvent(
         Event(
             persistent._mas_songs_database,
-            eventlabel="mshMod_playlist_the_middle",
+            eventlabel="mshMod_playlist_song_the_middle",
             category=[mas_songs.TYPE_SHORT],
             prompt="The Middle",
             conditional="seen_event('mshMod_playlist')",
@@ -282,7 +282,7 @@ init 5 python:
         code="SNG"
     )
 
-label mshMod_playlist_the_middle:
+label mshMod_playlist_song_the_middle:
     m 1dsb "{i}~It just takes some time~{/i}"
     m 1dkb "{i}~Little girl, you're in the middle of the ride~{/i}"
     m 3dkb "{i}~Everything, everything'll be just fine~{/i}"
@@ -307,7 +307,7 @@ init 5 python:
     addEvent(
         Event(
             persistent._mas_songs_database,
-            eventlabel="mshMod_playlist_firework",
+            eventlabel="mshMod_playlist_song_firework",
             category=[mas_songs.TYPE_SHORT],
             prompt="Firework",
             conditional="seen_event('mshMod_playlist')",
@@ -316,7 +316,7 @@ init 5 python:
         code="SNG"
     )
 
-label mshMod_playlist_firework:
+label mshMod_playlist_song_firework:
     m 6dkc "{i}Do you ever feel, feel so paper thin~{/i}"
     m 6dkd "{i}Like a house of cards~{/i}"
     m 7tkd "{i}One blow from caving in?~{/i}"
@@ -342,7 +342,7 @@ init 5 python:
     addEvent(
         Event(
             persistent._mas_songs_database,
-            eventlabel="mshMod_playlist_torches",
+            eventlabel="mshMod_playlist_song_torches",
             category=[mas_songs.TYPE_SHORT],
             prompt="Torches",
             conditional="seen_event('mshMod_playlist')",
@@ -351,7 +351,7 @@ init 5 python:
         code="SNG"
     )
 
-label mshMod_playlist_torches:
+label mshMod_playlist_song_torches:
     m 1dkd "{i}~Listen to me, cleave your way again, again~~{/i}"
     m 1ekc "{i}~Wishing to find a way in an unseen ocean~{/i}"
     m 3dkc "{i}~The voice that was connected pushes the sail to a world with no answer~{/i}"
@@ -374,7 +374,7 @@ init 5 python:
     addEvent(
         Event(
             persistent._mas_songs_database,
-            eventlabel="mshMod_playlist_only_wonder",
+            eventlabel="mshMod_playlist_song_only_wonder",
             category=[mas_songs.TYPE_SHORT],
             prompt="Only Wonder",
             conditional="seen_event('mshMod_playlist')",
@@ -383,7 +383,7 @@ init 5 python:
         code="SNG"
     )
 
-label mshMod_playlist_only_wonder:
+label mshMod_playlist_song_only_wonder:
     m "{i}~What're you sayin'? Everybody's different!~{/i}"
     m "{i}~Stop messin' with me, I'll have to shut you out~{/i}"
     m "{i}~The spotlight's on you, but you're acting all flashy~{/i}"
@@ -409,7 +409,7 @@ init 5 python:
     addEvent(
         Event(
             persistent._mas_songs_database,
-            eventlabel="mshMod_playlist_way_home",
+            eventlabel="mshMod_playlist_song_way_home",
             category=[mas_songs.TYPE_SHORT],
             prompt="Someday I'll Find My Way Home",
             conditional="seen_event('mshMod_playlist')",
@@ -418,7 +418,7 @@ init 5 python:
         code="SNG"
     )
 
-label mshMod_playlist_way_home:
+label mshMod_playlist_song_way_home:
     m 1dkb "{i}~Someday I'll find my way home~{/i}"
     m 1dka "{i}~The trees in the wind will lead the way~{/i}"
     m 3ekb "{i}~All of these years on my own~{/i}"
