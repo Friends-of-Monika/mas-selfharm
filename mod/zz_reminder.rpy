@@ -22,7 +22,7 @@ init 4 python in mshMod_reminder_utils:
         # if requested delay is until 6pm and it's 3am, we shouldn't
         # blindly add delta; in this case, we should subtract 6pm - 3am
         # and return that as the delay.)
-        if now.hours <= hours and now.minutes <= minutes:
+        if now.hour <= hours and now.minute <= minutes:
             return now.replace(hour=hours, minute=minutes) - now
 
         return (now + delta).replace(hour=hours, minute=minutes) - now
