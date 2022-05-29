@@ -12,8 +12,9 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_topic_selfharm_intro",
-            random=True,
-            rules={"bookmark_rule": mas_bookmarks_derand.BLACKLIST}
+            prompt="[player] and self-harm",
+            category=["self-harm"],
+            random=True
         )
     )
 
@@ -108,7 +109,7 @@ label mshMod_topic_selfharm_intro:
                     m 1hubsa "I love you, [mas_get_player_nickname()]."
                     return "love|derandom|no_unlock"
 
-    return "derandom|no_unlock"
+    return "derandom"
 
 
 init 5 python:
