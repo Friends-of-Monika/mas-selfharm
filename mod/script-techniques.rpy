@@ -1616,16 +1616,16 @@ init 5 python:
     )
 
 label mshMod_technique_outside:
-    m "Go outside if possible..."
-    m "Or imagine yourself outside."
-    m "How many shapes can you see around you?"
-    m "Notice all the things that you can see or feel."
-    m "Observe things carefully... and slowly."
-    m "You can also notice all the things you can smell where you are."
-    m "If you'd like, also notice all the things you can hear around you, or in an imaginary place."
-    m "Don't label or categorize."
-    m "Just notice the things you can see, smell and hear."
-    m "And accept them."
+    m 2eub "Go outside if possible..."
+    m 2dub "Or imagine yourself outside."
+    m 2dua "How many shapes can you see around you?"
+    m 7hua "Notice all the things that you can see or feel."
+    m 2dua "Observe things carefully... and slowly."
+    m 7eua "You can also notice all the things you can smell where you are."
+    m 7lub "If you'd like, also notice all the things you can hear around you, or in an imaginary place."
+    m 2lua "Don't label or categorize."
+    m 2hua "Just notice the things you can see, smell and hear."
+    m 2dua "And accept them."
     return
 
 #62
@@ -1641,12 +1641,12 @@ init 5 python:
     )
 
 label mshMod_technique_draw:
-    m "Attempt to draw four things around you."
-    m "It doesnt have to be good though!"
-    m "Just enjoy yourself and let your hands trace on paper whatever they want."
-    m "What is your perception in things you can see?"
-    m "Everyone sees things differently, and you are no exception!"
-    m "You can show your drawings to someone and talk about them."
+    m 2lua "Attempt to draw four things around you."
+    m 2hua "It doesnt have to be good though!"
+    m 7lua "Just enjoy yourself and let your hands trace on paper whatever they want."
+    m 7lub "What is your perception in things you can see?"
+    m 2hub "Everyone sees things differently, and you are no exception!"
+    m 2eub "You can show your drawings to someone and talk about them."
     return
 
 #63
@@ -1662,18 +1662,18 @@ init 5 python:
     )
 
 label mshMod_technique_food:
-    m "Name as many types of food as you can!"
-    m "Which do you like the most? {w=0.3}{nw}"
-    extend "And why?"
-    m "If you're up for it, you can even look for some recipes online..."
-    m "And try to cook them!"
-    m "Maybe even planning a dinner party with menus and a guest list, then carry it out!"
-    m "If you don't have the appetite or the ingredients, {w=0.3}{nw}"
-    extend "try chewing up on some gum!"
-    m "It will open your appetite and give your mouth a little sweet taste if you can't eat exactly what you want."
-    m "Or go out to eat some ice cream! {w=0.3}{nw}"
-    extend "That always does the trick, ahahaha~!"
-    m "Eating something nice can give our happy chemicals a boost."
+    m 2eub "Name as many types of food as you can!"
+    m 3eub "Which do you like the most? {w=0.3}{nw}"
+    extend 3eua "And why?"
+    m 3lua "If you're up for it, you can even look for some recipes online..."
+    m 3lub "And try to cook them!"
+    m 3hua "Maybe even planning a dinner party with menus and a guest list, then carry it out!"
+    m 3duc "If you don't have the appetite or the ingredients, {w=0.3}{nw}"
+    extend 3hua "try chewing up on some gum!"
+    m 2wua "It will open your appetite and give your mouth a little sweet taste if you can't eat exactly what you want."
+    m 2sub "Or go out to eat some ice cream! {w=0.3}{nw}"
+    extend 2hub "That always does the trick, ahahaha~!"
+    m 2kua "Eating something nice can give our happy chemicals a boost."
     return
 
 #64
@@ -1689,12 +1689,12 @@ init 5 python:
     )
 
 label mshMod_technique_colour:
-    m "Draw a picture and colour it slowly and mindfully."
-    m "Focus on not going out of the lines!"
-    m "There are also books, websites, and apps online that provide that."
-    m "If you can, pick the colours you like the most!"
-    m "Or the ones you feel would suit the picture better."
-    m "Anything goes! Just have fun and take your time."
+    m 1dua "Draw a picture and colour it slowly and mindfully."
+    m 7efa "Focus on not going out of the lines!"
+    m 7wua "There are also books, websites, and apps online that provide that."
+    m 2wub "If you can, pick the colours you like the most!"
+    m 2sub "Or the ones you feel would suit the picture better."
+    m 2kua "Anything goes! Just have fun and take your time."
     return
 
 #65
@@ -1710,15 +1710,15 @@ init 5 python:
     )
 
 label mshMod_technique_beach:
-    m "Picture yourself on a beach."
-    m "Can you focus on all the different things that you might find there?"
-    m "If you were with your toes buried in the sand right now..."
-    m "What would you do first?"
-    m "Collect some seashells? {w=0.3}{nw}"
-    extend "Enjoy the sea?"
-    m "Or maybe lay very still in the sand, feeling the sun rays on your body?"
-    m "..."
-    m "I wish I could go on a romantic beach walk with you, [player]."
+    m 2sub "Picture yourself on a beach."
+    m 2wub "Can you focus on all the different things that you might find there?"
+    m 2dua "If you were with your toes buried in the sand right now..."
+    m 1dua "What would you do first?"
+    m 7wua "Collect some seashells? {w=0.3}{nw}"
+    extend 7sua "Enjoy the sea?"
+    m 7dub "Or maybe lay very still in the sand, feeling the sun rays on your body?"
+    m 2dubfa "..."
+    m 5fubfa "I wish I could go on a romantic beach walk with you, [player]."
     return
 
 #66
