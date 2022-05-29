@@ -1734,12 +1734,12 @@ init 5 python:
     )
 
 label mshMod_technique_eat:
-    m "Eat something you enjoy."
-    m "Make it slow and just notice everything about it."
-    m "Maybe make yourself a cup of tea or warm milk?"
-    m "Something relaxing."
-    m "Drink it slowly, enjoying each sip."
-    m "Enjoy."
+    m 2sub "Eat something you enjoy."
+    m 2dsa "Make it slow and just notice everything about it."
+    m 2rsb "Maybe make yourself a cup of tea or warm milk?"
+    m 2dsa "Something relaxing."
+    m 2dsb "Drink it slowly, enjoying each sip."
+    m 2ksb "Enjoy."
     return
 
 #67
@@ -1755,11 +1755,11 @@ init 5 python:
     )
 
 label mshMod_technique_pictures:
-    m "Look at a book that has pictures and words..."
-    m "And notice all the comforting parts of it."
-    m "Children books are great for that!"
-    m "Focus on the story that's being told, and don't think about anything else for a while."
-    m "Just stay in the moment."
+    m 2rsb "Look at a book that has pictures and words..."
+    m 2hsb "And notice all the comforting parts of it."
+    m 3hsa "Children books are great for that!"
+    m 3dsa "Focus on the story that's being told, and don't think about anything else for a while."
+    m 3dsb "Just stay in the moment."
     return
 
 #68
@@ -1775,12 +1775,12 @@ init 5 python:
     )
 
 label mshMod_technique_ground:
-    m "Ground yourself."
-    m "Plant your feet firmly on the floor and visualise yourself as firmly rooted to the ground."
-    m "Think of yourself as having a firm foundation and hold your head up high."
-    m "Imagine yourself looking the world in the eyes, {w=0.3}{nw}"
-    extend "and telling it you'll make through it."
-    m "That you are good enough."
+    m 3dsb "Ground yourself."
+    m 3dsa "Plant your feet firmly on the floor and visualise yourself as firmly rooted to the ground."
+    m 4dsa "Think of yourself as having a firm foundation and hold your head up high."
+    m 4wsb "Imagine yourself looking the world in the eyes, {w=0.3}{nw}"
+    extend 3efb "and telling it you'll make through it."
+    m 3dsb "That you are good enough."
     return
 
 #69
@@ -1796,11 +1796,11 @@ init 5 python:
     )
 
 label mshMod_technique_scene:
-    m "Watch your favourite movie and focus on the most comforting scene."
-    m "Who are your favorite characters?"
-    m "Why do you love this movie and what does it make you feel?"
-    m "Can you memorize the lines of your favorite scene?"
-    m "You can even show the scene to someone and rant about how much you love it!"
+    m 3dsb "Watch your favourite movie and focus on the most comforting scene."
+    m 3hsb "Who are your favorite characters?"
+    m 2lsb "Why do you love this movie and what does it make you feel?"
+    m 2wsa "Can you memorize the lines of your favorite scene?"
+    m 5esa "You can even show the scene to someone and rant about how much you love it!"
     return
 
 #70
@@ -1816,14 +1816,14 @@ init 5 python:
     )
 
 label mshMod_technique_mindful_seeing:
-    m "Carry out a 'mindful seeing' exercise."
-    m "Mindful seeing is the practice of consciously noticing everything within your visual field!"
-    m "You do this to focus completely on one thing as much as you are able."
-    m "It takes your mind from a place of thinking and doing to a place of noticing."
-    m "Look outside a window or imagine looking outside a window."
-    m "Look at everything there is to see."
-    m "Just notice the colours, the patterns or the textures."
-    m "Try to notice the smallest movements such as leaves in the breeze."
+    m 2wsa "Carry out a 'mindful seeing' exercise."
+    m 1esb "Mindful seeing is the practice of consciously noticing everything within your visual field!"
+    m 1wsb "You do this to focus completely on one thing as much as you are able."
+    m 1dsb "It takes your mind from a place of thinking and doing to a place of noticing."
+    m 1dsa "Look outside a window or imagine looking outside a window."
+    m 1rsa "Look at everything there is to see."
+    m 7rsa "Just notice the colours, the patterns or the textures."
+    m 7dsa "Try to notice the smallest movements such as leaves in the breeze."
     return
 
 #71
@@ -1839,13 +1839,13 @@ init 5 python:
     )
 
 label mshMod_technique_acceptance:
-    m "Make a list of all the things you would like to be accepting of."
-    m "For example, accepting yourself just as you are."
-    m "Create a phrase that is compassionate."
-    m "A mantra, if you'd like!"
-    m "For example... {w=0.3}{nw}"
-    extend "'I accept myself just as I am.'"
-    m "If you feel the need, repeat it as many times as you want."
+    m 2hsa "Make a list of all the things you would like to be accepting of."
+    m 2dsb "For example, accepting yourself just as you are."
+    m 2wsb "Create a phrase that is compassionate."
+    m 2ssb "A mantra, if you'd like!"
+    m 7dsb "For example... {w=0.3}{nw}"
+    extend 7dsa "'I accept myself just as I am.'"
+    m 7ksa "If you feel the need, repeat it as many times as you want."
     return
 
 #72
