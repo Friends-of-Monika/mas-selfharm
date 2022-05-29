@@ -1064,24 +1064,28 @@ init 5 python:
     )
 
 label mshMod_technique_breathing:
-    m "Alright, baby."
-    m "I want you to try the 4-7-8 breathing exercise!..."
-    m "You can also develop a personal mantra and repeat it along with the exercise."
-    m "First of all, please straighten your back."
-    m "Once you become familiar with this breathing exercise, you can perform it while lying in bed too!"
-    m "Place and keep the tip of your tongue against the ridge of tissue behind your upper front teeth for the duration of the exercise."
-    m "Remember! Try and focus on your breath, in through your nose..."
-    m "And out through your mouth."
-    m "And let go of your thought with every out breath."
-    m "Now, let's start!"
-    m "Completely exhale through your mouth, making a {i}woosh{/i} sound."
-    m "Close your mouth and inhale quietly through your nose to a mental count of four."
-    m "{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}."
-    m "Hold your breath for a count of seven."
-    m "{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}."
-    m "Exhale completely through your mouth, making a {i}woosh{/i} sound to a count of eight."
-    m "{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}."
-    m "Aaaand, you're done!"
+    m 1dsa "Alright, baby."
+    m 3eub "I want you to try the 4-7-8 breathing exercise!..."
+    m 3eua "You can also develop a personal mantra and repeat it along with the exercise."
+    m 1dsb "First of all, please straighten your back."
+    m 1eub "Once you become familiar with this breathing exercise, you can perform it while lying in bed too!"
+    m 1eua "Place and keep the tip of your tongue against the ridge of tissue behind your upper front teeth for the duration of the exercise."
+    m 3esd "Remember! Try and focus on your breath, in through your nose..."
+    m 3esb "And out through your mouth."
+    m 1dua "And let go of your thought with every out breath."
+    m 1eub "Now, let's start!"
+    m 3eub "Completely exhale through your mouth, making a {nw}"
+    extend 3eud "{i}woosh{/i} {nw}"
+    extend 3eub "sound."
+    m 6dsb "Close your mouth and inhale quietly through your nose to a mental count of four."
+    m 6dsa "{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}."
+    m 6dsb "Hold your breath for a count of seven."
+    m 6dsa "{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}."
+    m 6dsb "Exhale completely through your mouth, making a {nw}"
+    extend 6dsd "{i}woosh{/i} {nw}"
+    extend 6dsb "sound to a count of eight."
+    m 6dsa "{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}."
+    m 7eua "Aaaand, you're done!"
     return
 
 #39
@@ -1097,14 +1101,15 @@ init 5 python:
     )
 
 label mshMod_technique_pinterest:
-    m "[player], do you have a Pinterest account?"
-    m "You can try adding some inspirational quotes to your board!"
-    m "Or some pictures you find aesthetically pleasing."
-    m "You can try to look at pictures with the same color pallete, {w=0.3}{nw}"
-    extend "and gather them somewhere!"
-    m "That always makes our brain feel so nice."
-    m "If you don't have an account, maybe you can try creating one?"
-    m "I promise it's very satisfying!"
+    m 1etc "[player], do you have a Pinterest account?"
+    m 3eub "You can try adding some inspirational quotes to your board!"
+    m 3eua "Or some pictures you find aesthetically pleasing."
+    m 1lua "You can try to look at pictures with the same color pallete, {w=0.3}{nw}"
+    extend 1hub "and gather them somewhere!"
+    m 3eub "That always makes our brain feel so nice."
+    show monika 5ksa at t11 zorder MAS_MONIKA_Z with dissolve_monika
+    m 5ksa "If you don't have an account, maybe you can try creating one?"
+    m 5hub "I promise it's very satisfying!"
     return
 
 #40
@@ -1120,15 +1125,15 @@ init 5 python:
     )
 
 label mshMod_technique_emerald:
-    m "[player], you know how much I like the color emerald green, right?"
-    m "Why don't you think of your favorite color right now?"
-    m "And try to count all the things of that color that you can see in your room."
-    m "Quietly describe to yourself what the things look like, {w=0.3}{nw}"
-    extend "and what your favorite color makes you feel."
-    m "Personally, emerald green brings me back to myself."
-    m "Makes me think of my individuality and personality."
-    m "That's why I love it so much!"
-    m "What about you? What do you love about your favorite color?"
+    m 3eub "[player], you know how much I like the color emerald green, right?"
+    m 1tta "Why don't you think of your favorite color right now?"
+    m 1hsa "And try to count all the things of that color that you can see in your room."
+    m 3dsb "Quietly describe to yourself what the things look like, {w=0.3}{nw}"
+    extend 3esb "and what your favorite color makes you feel."
+    m 1eua "Personally, emerald green brings me back to myself."
+    m 1hua "Makes me think of my individuality and personality."
+    m 1hub "That's why I love it so much!"
+    m 1etb "What about you? What do you love about your favorite color?"
     return
 
 #41
@@ -1144,14 +1149,16 @@ init 5 python:
     )
 
 label mshMod_technique_patterns:
-    m "What about counting patterns, [player]?"
-    m "Count as many as you can in your favourite room of the house."
-    m "Hyper-focus on them and breathe deeply, {w=0.3}{nw}"
-    extend "in and out..."
-    m "Every time you find a certain amount of patterns."
-    m "Think about what is your favorite pattern too."
-    m "Is it checkered? Striped? A certain print?"
-    m "Have fun thinking of that, [player]."
+    show monika 5etb at t11 zorder MAS_MONIKA_Z with dissolve_monika
+    m 5etb "What about counting patterns, [player]?"
+    m 5rsb "Count as many as you can in your favourite room of the house."
+    m 5rfa "Hyper-focus on them and breathe deeply, {w=0.3}{nw}"
+    extend 5dsb "in and out..."
+    show monika 3eua at t11 zorder MAS_MONIKA_Z with dissolve_monika
+    m 3eua "Every time you find a certain amount of patterns."
+    m 3wua "Think about what is your favorite pattern too."
+    m 1sub "Is it checkered? Striped? A certain print?"
+    m 1hua "Have fun thinking of that, [player]."
     return
 
 #42
@@ -1167,15 +1174,17 @@ init 5 python:
     )
 
 label mshMod_technique_word_play:
-    m "Now, for some word play!"
-    m "How many four letter words can you make up from the statement..."
-    m "'You learn more from failure than from success. Don't let it stop you'?"
-    m "I can think of one already... {w=0.3}{nw}"
-    extend "{i}Lean{/i}!"
-    m "Or you can also try to make as many words as possible out of your full name."
-    m "One word I can make out of the name Monika is {i}moka{/i}!"
-    m "A moka is a type of a coffee maker. "
-    extend "Ehehehe~!"
+    m 1eub "Now, for some word play!"
+    m 1tta "How many four letter words can you make up from the statement..."
+    m 3esb "'You learn more from failure than from success. Don't let it stop you'?"
+    show monika 5rsd at t11 zorder MAS_MONIKA_Z with dissolve_monika
+    m 5rsd "I can think of one already... {w=0.3}{nw}"
+    extend 5eub "{i}Lean{/i}!"
+    show monika 3eub at t11 zorder MAS_MONIKA_Z with dissolve_monika
+    m 3eub "Or you can also try to make as many words as possible out of your full name."
+    m 3esa "One word I can make out of the name Monika is {i}moka{/i}!"
+    m 2eub "A moka is a type of a coffee maker. "
+    extend 2hua "Ehehehe~!"
     return
 
 #43
@@ -1191,11 +1200,13 @@ init 5 python:
     )
 
 label mshMod_technique_lyrics:
-    m "Think of the lyrics of a song you know really well!"
-    m "Now... Try reciting it from back to front!"
-    m "Hard, huh?"
-    m "But it will surely distract you! Ahahaha~"
-    m "If that's too complicated, you can try saying the alphabet backwards."
+    show monika 5rtp at t11 zorder MAS_MONIKA_Z with dissolve_monika
+    m 5rtp "Think of the lyrics of a song you know really well!"
+    m 5esa "Now... Try reciting it from back to front!"
+    show monika 1hksdlb at t11 zorder MAS_MONIKA_Z with dissolve_monika
+    m 1hksdlb "Hard, huh?"
+    m 3tua "But it will surely distract you! Ahahaha~"
+    m 3eud "If that's too complicated, you can try saying the alphabet backwards."
     m "Z, Y, X, W... {w=0.3}{nw}"
     extend "Oops! Brain fart!"
     return
