@@ -71,7 +71,7 @@ label mshMod_playlist_intro:
         m "Do you want me to?{fast}"
 
         "Yes":
-            play_song(store.mshMod_playlist.CUSTOM_PLAYLIST_RELDIR + store.mshMod_playlist.PLAYLIST_FILE)
+            play_song(store.mshMod_playlist.CUSTOM_PLAYLIST_RELDIR + store.mshMod_playlist.PLAYLIST_FILE, set_per=True)
 
         "Not yet, [m_name]":
             m 1eka "Oh, alright."
@@ -115,7 +115,7 @@ label mshMod_playlist_song_play:
         m "Play music?{fast}"
 
         "Yes":
-            play_song(store.mshMod_playlist.CUSTOM_PLAYLIST_RELDIR + store.mshMod_playlist.PLAYLIST_FILE)
+            play_song(store.mshMod_playlist.CUSTOM_PLAYLIST_RELDIR + store.mshMod_playlist.PLAYLIST_FILE, set_per=True)
             m 7hsb "There you go!"
             m 1hsa "I hope you like it!"
 
