@@ -9,7 +9,7 @@ init 5 python in mshMod_playlist:
 
     import store
 
-    PLAYLIST_FILE = store.config.basedir + "/game/Submods/MAS Self Harm Submod/res/playlist.mp3"
+    PLAYLIST_FILE = store.config.basedir + "/game/Submods/MAS Self Harm Submod/res/playlist.ogg"
 
 
 #playlist
