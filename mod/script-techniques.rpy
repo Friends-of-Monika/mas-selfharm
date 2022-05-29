@@ -2197,14 +2197,14 @@ init 5 python:
     )
 
 label mshMod_technique_childplay:
-    m "[player], don't you miss your child days?"
-    m "You could reminisce them while playing like a child for a bit."
-    m "Buy yourself some toys and play like you are 5 years old again!"
-    m "You can also play with clay or play-dough... {w=0.3}{nw}"
-    extend "Or make slime!"
-    m "Another option is watching the cartoons or movies you loved the most as a child."
-    m "Isn't that fun? {w=0.3}{nw}"
-    extend "To remember is to relive!"
+    m 1esb "[player], don't you miss your child days?"
+    m 1wsb "You could reminisce them while playing like a child for a bit."
+    m 7ssb "Buy yourself some toys and play like you are 5 years old again!"
+    m 7ssa "You can also play with clay or play-dough... {w=0.3}{nw}"
+    extend 7ssb "Or make slime!"
+    m 2dsb "Another option is watching the cartoons or movies you loved the most as a child."
+    m 2ksb "Isn't that fun? {w=0.3}{nw}"
+    extend 3esb "To remember is to relive!"
     return
 
 #88
@@ -2221,11 +2221,11 @@ init 5 python:
     )
 
 label mshMod_technique_therapist:
-    m "[player], why not call your therapist?"
-    m "Try texting them if you think they might be busy."
-    m "Maybe you can even schedule an emergencial appointment."
-    m "Talking about your feelings or seeking for professional help is never too much."
-    m "I believe in you, [player]!"
+    m 3esb "[player], why not call your therapist?"
+    m 3esc "Try texting them if you think they might be busy."
+    m 1wsc "Maybe you can even schedule an emergencial appointment."
+    m 1dsa "Talking about your feelings or seeking for professional help is never too much."
+    m 1esb "I believe in you, [player]!"
     return
 
 #89
@@ -2241,12 +2241,12 @@ init 5 python:
     )
 
 label mshMod_technique_plants:
-    m "[player], do you take care of any plants?"
-    m "You should give them a little love right now!"
-    m "Water them and tend the garden."
-    m "Maybe there will even be some flowers there waiting for you!"
-    m "If you don't have a garden yet, why not make one right now and start a new hobby?"
-    m "And don't forget, plants are friends!"
+    m 7esb "[player], do you take care of any plants?"
+    m 7hsb "You should give them a little love right now!"
+    m 7dsa "Water them and tend the garden."
+    m 2ssa "Maybe there will even be some flowers there waiting for you!"
+    m 2wsb "If you don't have a garden yet, why not make one right now and start a new hobby?"
+    m 3ksb "And don't forget, plants are friends!"
     return
 
 #90
