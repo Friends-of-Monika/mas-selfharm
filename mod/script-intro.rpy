@@ -21,8 +21,7 @@ label mshMod_topic_selfharm_intro:
     m 1ekc "Hey, [player]?"
     m 1lkd "I know it might be an uncomfortable topic, but I have to ask..."
 
-    m 1dkc "D-{w=1.0}"
-    extend 1ekd "Do you self harm?{nw}"
+    m 1dkc "D-Do you self harm?{nw}"
     $ _history_list.pop()
     menu:
         m "D-Do you self harm?{fast}"
@@ -133,13 +132,8 @@ label mshMod_topic_selfharm_more:
     m 2esc "I want you to know that self-harm isn't about a single topic or action."
     m 4esd "There are many factors that come into play!"
     m 4lssdld "Yeah, it's not limited to... self inflicted wounds, for example."
-    m 2lssdlc "Lack of Self-Care routine, which we already talked about, is also a method."
-    m 7essdld "There's also binge eating, starving, self-poisoining, misusing alcohol or drugs."
-    m 7essdld "Some new studies even show that patients might abuse of frequency of sex in order to self-harm!"
     m 2wssdlc "This could all be result of self-hatred, feelings of wanting to punish yourself or mental ilnesses."
     m 2lssdlc "Or anything that could end on self-harm in any way."
-    m 7dssdld "The most common form of self-harm is... Well, self-inflicted wounds."
-    m 7lssdlc "Such as cutting, embedding, burning, punching or hitting oneself."
     m 2essdlc "One of the most common misconceptions about self-harm is that people do such things only as a suicide attempt."
     m 2wssdld "But it's not true at all! Not all self harmers present suicidal signs or symptoms."
     m 7wssdld "Self harm can occur without suicidal ideation. Instead, they are using it to cope with their emotions and traumas."
