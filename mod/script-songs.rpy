@@ -90,7 +90,7 @@ label mshMod_playlist_intro:
     m 2fka "I love you, [mas_get_player_nickname()]."
     m 2esa "Take care."
 
-    return "love|derandom"
+    return "love"
 
 #listen to the playlist
 init 5 python:
