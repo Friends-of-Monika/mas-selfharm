@@ -5,11 +5,38 @@ init 5 python in mas_bookmarks_derand:
     label_prefix_map["mshMod_playlist_song_song_"] = label_prefix_map["mas_song_"]
 
 
-init 5 python in mshMod_playlist:
+init 11 python in mshMod_playlist:
 
     import store
+    import mutagen.oggvorbis as mutaogg
 
-    PLAYLIST_FILE = store.config.basedir + "/game/Submods/MAS Self Harm Submod/res/playlist.ogg"
+    CUSTOM_PLAYLIST_DIR_SUFFIX = "Submods/MAS Self Harm Submod/music/"
+    CUSTOM_PLAYLIST_DIR = store.config.basedir + "/game/" + CUSTOM_PLAYLIST_DIR_SUFFIX
+    CUSTOM_PLAYLIST_RELDIR = CUSTOM_PLAYLIST_DIR_SUFFIX
+    PLAYLIST_FILE = "playlist.ogg"
+
+    def showPlaylist():
+        _audio_file, _ext = store.songs._getAudioFile(CUSTOM_PLAYLIST_DIR + PLAYLIST_FILE)
+        disp_name = store.songs._getDispName(_audio_file, _ext, PLAYLIST_FILE)
+        loop_prefix = store.songs._getLoopData(_audio_file, _ext)
+
+        choice = (
+            store.songs.cleanGUIText(disp_name),
+            loop_prefix + CUSTOM_PLAYLIST_RELDIR + PLAYLIST_FILE
+        )
+
+        store.songs.music_choices.append(choice)
+
+        page = sorted(store.songs.music_pages.keys())[-1]
+        if len(store.songs.music_pages[page]) == store.songs.PAGE_LIMIT:
+            store.songs.music_pages[page + 1] = [choice]
+        else:
+            store.songs.music_pages[page].append(choice)
+
+        store.persistent._mas_pm_added_custom_bgm = True
+
+    if store.seen_event('mshMod_playlist_intro'):
+        store.mshMod_playlist.showPlaylist()
 
 
 #playlist
@@ -36,14 +63,15 @@ label mshMod_playlist_intro:
     m 3hsb "You can access it on \"Music\"."
     m 1esa "Or I can play it for you!"
 
+    $ store.mshMod_playlist.showPlaylist()
+
     m 2eub "Do you want me to?{nw}"
     $ _history_list.pop()
     menu:
         m "Do you want me to?{fast}"
 
         "Yes":
-            stop music
-            play music store.mshMod_playlist.PLAYLIST_FILE
+            play_song(store.mshMod_playlist.CUSTOM_PLAYLIST_RELDIR + store.mshMod_playlist.PLAYLIST_FILE)
 
         "Not yet, [m_name]":
             m 1eka "Oh, alright."
@@ -87,8 +115,7 @@ label mshMod_playlist_song_play:
         m "Play music?{fast}"
 
         "Yes":
-            stop music
-            play music "mod_assets/other/playlist.mp3"
+            play_song(store.mshMod_playlist.CUSTOM_PLAYLIST_RELDIR + store.mshMod_playlist.PLAYLIST_FILE)
             m 7hsb "There you go!"
             m 1hsa "I hope you like it!"
 
