@@ -1207,8 +1207,8 @@ label mshMod_technique_lyrics:
     m 1hksdlb "Hard, huh?"
     m 3tua "But it will surely distract you! Ahahaha~"
     m 3eud "If that's too complicated, you can try saying the alphabet backwards."
-    m "Z, Y, X, W... {w=0.3}{nw}"
-    extend "Oops! Brain fart!"
+    m 3dud "Z, Y, X, W... {w=0.3}{nw}"
+    extend 3hub "Oops! Ahahaha~"
     return
 
 #44
@@ -1224,13 +1224,13 @@ init 5 python:
     )
 
 label mshMod_technique_animal:
-    m "Let's think of one animal for every letter of the alphabet."
-    m "Or a song or artist for every letter of the alphabet!"
-    m "An animal that starts with A is..."
-    m "An alligator! {w=0.3}{nw}"
-    extend "Or an ant!"
-    m "Can you continue? {w=0.3}{nw}"
-    extend "Let's do this, [player]!"
+    m 3hua "Let's think of one animal for every letter of the alphabet."
+    m 3rub "Or a song or artist for every letter of the alphabet!"
+    m 3lud "An animal that starts with A is..."
+    m 3wub "An alligator! {w=0.3}{nw}"
+    extend 3sub "Or an ant!"
+    m 1hub "Can you continue? {w=0.3}{nw}"
+    extend 1efb "Let's do this, [player]!"
     return
 
 #45
@@ -1246,18 +1246,18 @@ init 5 python:
     )
 
 label mshMod_technique_research:
-    m "Let's carry out some research!"
-    m "What about searching for the meaning of your friend's names? {w=0.3}{nw}"
-    extend "Or maybe characters' names."
-    m "You can also google yourself, or have some fun doing some quizzes!"
-    m "Certified personality tests or silly buzzfeed quizzes."
-    m "You could also research for some jokes or stand-up comedies you enjoy!"
-    m "Search for ridiculous things on the web."
-    m "Like {a=https://theuselessweb.com/}this site{/a}, which takes you to a random useless site on the internet!"
-    m "Or maybe some places to volunteer at?"
-    m "If you can't volunteer in any way, why not go through all your old stuff? {w=0.3}{nw}"
-    extend "And donate what you don't have use for anymore to those in need?"
-    m "Helping others can help us too!"
+    m 7esb "Let's carry out some research!"
+    m 7esa "What about searching for the meaning of your friend's names? {w=0.3}{nw}"
+    extend 2esa "Or maybe characters' names."
+    m 2hsb "You can also google yourself, or have some fun doing some quizzes!"
+    m 2hsa "Certified personality tests or silly buzzfeed quizzes."
+    m 7lsa "You could also research for some jokes or stand-up comedies you enjoy!"
+    m 7hsa "Search for ridiculous things on the web."
+    m 7ssa "Like {a=https://theuselessweb.com/}this site{/a}, which takes you to a random useless site on the internet!"
+    m 7wsb "Or maybe some places to volunteer at?"
+    m 2esb "If you can't volunteer in any way, why not go through all your old stuff? {w=0.3}{nw}"
+    extend 2eka "And donate what you don't have use for anymore to those in need?"
+    m 7eua "Helping others can help us too!"
     return
 
 #46
@@ -1273,14 +1273,14 @@ init 5 python:
     )
 
 label mshMod_technique_favorite_things:
-    m "How about making a list of your favorite things?"
-    m "You can pick the category!"
-    m "You can name at least ten of your favorite tv shows, for example."
-    m "Or fifteen favorite videogame titles!"
-    m "Maybe movies, or books?"
-    m "It's up to you, [player]...!"
-    m "You can also share your list with someone and see if you two have any in common."
-    m "That could be so fun!"
+    m 7eua "How about making a list of your favorite things?"
+    m 7hua "You can pick the category!"
+    m 1hub "You can name at least ten of your favorite tv shows, for example."
+    m 3hub "Or fifteen favorite videogame titles!"
+    m 3lub "Maybe movies, or books?"
+    m 3kub "It's up to you, [player]...!"
+    m 1wub "You can also share your list with someone and see if you two have any in common."
+    m 1sub "That could be so fun!"
     return
 
 #47
@@ -1296,15 +1296,15 @@ init 5 python:
     )
 
 label mshMod_technique_superheroes:
-    m "How many superheroes can you name? {w=0.3}{nw}"
-    extend "What about villains?"
-    m "How many, and which of them would you like to have as your friends?"
-    m "And why is that?"
-    m "You can try organizing them by color scheme, since many of them tend to follow the same color palletes."
-    m "Have you noticed we have many red or blue based superheroes and many purple or black?"
-    m "Wonder why that is? {w=0.3}{nw}"
-    extend "Hmmmmmm..."
-    m "Anyway!"
+    m 1sub "How many superheroes can you name? {w=0.3}{nw}"
+    extend 7wub "What about villains?"
+    m 7lub "How many, and which of them would you like to have as your friends?"
+    m 7eub "And why is that?"
+    m 2eub "You can try organizing them by color scheme, since many of them tend to follow the same color palletes."
+    m 2wub "Have you noticed we have many red or blue based superheroes and many purple or black?"
+    m 2luc "Wonder why that is? {w=0.3}{nw}"
+    extend 2dtc "Hmmmmmm..."
+    m 2hsa "Anyway!"
     return
 
 #48
@@ -1320,12 +1320,12 @@ init 5 python:
     )
 
 label mshMod_technique_artist:
-    m "Choose an artist! Any artist."
-    m "Now name all the songs from them that you can remember."
-    m "Or maybe, an author!"
-    m "And do the same, name all the books/works written by them, that you can remember."
-    m "Can you remmeber the name of all my poems, [player]?"
-    m "Ehehehe~!"
+    m 7wsb "Choose an artist! Any artist."
+    m 7esb "Now name all the songs from them that you can remember."
+    m 7esa "Or maybe, an author!"
+    m 2dsa "And do the same, name all the books/works written by them, that you can remember."
+    m 2tsb "Can you remmeber the name of all my poems, [player]?"
+    m 2hsa "Ehehehe~!"
     return
 
 #49
@@ -1341,12 +1341,12 @@ init 5 python:
     )
 
 label mshMod_technique_playlist:
-    m "Can you name the songs that you listened to the most this week?"
-    m "Or this month?"
-    m "Is there a specific artist or band that made an special appearance on your playlist?"
-    m "By the way, what's your favorite song at the moment?"
-    m "The one you are listening to the most lately?"
-    m "You can give it a listen right now, and just enjoy the tune."
+    m 2wsa "Can you name the songs that you listened to the most this week?"
+    m 2dsa "Or this month?"
+    m 7lsa "Is there a specific artist or band that made an special appearance on your playlist?"
+    m 7ssb "By the way, what's your favorite song at the moment?"
+    m 1wsb "The one you are listening to the most lately?"
+    m 1hsb "You can give it a listen right now, and just enjoy the tune."
     return
 
 #50
@@ -1362,13 +1362,13 @@ init 5 python:
     )
 
 label mshMod_technique_surroundings:
-    m "Notice all the things that you can see around you."
-    m "Observe things carefully... and slowly."
-    m "You can also notice all the things you can smell where you are."
-    m "If you'd like, also notice all the things you can hear around you, or in an imaginary place."
-    m "Don't label or categorize."
-    m "Just notice the things you can see, smell and hear."
-    m "And accept them."
+    m 1esb "Notice all the things that you can see around you."
+    m 1dsb "Observe things carefully... and slowly."
+    m 3lsb "You can also notice all the things you can smell where you are."
+    m 3esa "If you'd like, also notice all the things you can hear around you, or in an imaginary place."
+    m 3esc "Don't label or categorize."
+    m 1esa "Just notice the things you can see, smell and hear."
+    m 1dsb "And accept them."
     return
 
 #51
@@ -1384,17 +1384,17 @@ init 5 python:
     )
 
 label mshMod_technique_mess:
-    m "Is any of the rooms in your house messy?"
-    m "Maybe you could organize one of them."
-    m "Picking clothing or trash off the floor..."
-    m "In a slow and methodical way!"
-    m "If your house is completely organized, maybe organize the apps on your phone or computer?"
-    m "You can delete any you haven't used in a few months."
-    m "Or organize them by colour order!"
-    m "You could also search for a new screensaver for your computer!"
-    m "Maybe sort out your photos into files or categories?"
-    m "Organize bills, receipts... Polish silver or jewelry, color co-ordinate your wardrobe or alphabetize your books and magazines."
-    m "You can even let your creativity flow out, drawing on the walls or painting with watercolors if you don't want permanence."
+    m 1esc "Is any of the rooms in your house messy?"
+    m 7esb "Maybe you could organize one of them."
+    m 7dsb "Picking clothing or trash off the floor..."
+    m 7wsb "In a slow and methodical way!"
+    m 2wsb "If your house is completely organized, maybe organize the apps on your phone or computer?"
+    m 2esa "You can delete any you haven't used in a few months."
+    m 2ssb "Or organize them by colour order!"
+    m 2ssa "You could also search for a new screensaver for your computer!"
+    m 4esa "Maybe sort out your photos into files or categories?"
+    m 4dsa "Organize bills, receipts... Polish silver or jewelry, color co-ordinate your wardrobe or alphabetize your books and magazines."
+    m 4wsb "You can even let your creativity flow out, drawing on the walls or painting with watercolors if you don't want permanence."
     return
 
 #52
@@ -1410,14 +1410,14 @@ init 5 python:
     )
 
 label mshMod_technique_holiday:
-    m "Hey, [player]! When is your next holiday?"
-    m "Why not research for the places you can go when that time comes?"
-    m "Maybe something small like visiting a park, or a local mall!"
-    m "Or something bigger, like going sightseeing in a different city!"
-    m "Going to a beach, some nice restaurant or just your favorite place in the city!"
-    m "Wouldn't that be amazing? {w=0.3}{nw}"
-    extend "If it's not within your reach right now, you can always make plans."
-    m "That's part of the fun!"
+    m 4ssb "Hey, [player]! When is your next holiday?"
+    m 3esb "Why not research for the places you can go when that time comes?"
+    m 3dsb "Maybe something small like visiting a park, or a local mall!"
+    m 3hsa "Or something bigger, like going sightseeing in a different city!"
+    m 1lsa "Going to a beach, some nice restaurant or just your favorite place in the city!"
+    m 1hsb "Wouldn't that be amazing? {w=0.3}{nw}"
+    extend 7esb "If it's not within your reach right now, you can always make plans."
+    m 4wsb "That's part of the fun!"
     return
 
 #53
@@ -1454,18 +1454,18 @@ init 5 python:
     )
 
 label mshMod_technique_shiritori:
-    m "Can you play shiritori?"
-    m "Well... at least an simpler version of it."
-    m "The japanese game is played like this:"
-    m "You start with a word from a specific category."
-    m "After that, you take the last letter or syllable (for an extra challenge) from that word, using it to start the next word."
-    m "Then you goes on and on and on until you get bored!"
-    m "For example, let's imagine you picked the famous person category."
-    m "Pick a famous person or character and then choose another person starting with the last letter of the first person's name."
-    m "For example! If I start with {i}E. E. Cummings {/i}..."
-    m "Next, I can pick Sade, from Marquis de Sade!"
-    m "And so on! {w=0.3}{nw}"
-    extend "Have fun, [player]!"
+    m 7esb "Can you play shiritori?"
+    m 7lssdra "Well... at least an simpler version of it."
+    m 7wsa "The japanese game is played like this:"
+    m 7dsa "You start with a word from a specific category."
+    m 1dsa "After that, you take the last letter or syllable (for an extra challenge) from that word, using it to start the next word."
+    m 1hsb "Then you goes on and on and on until you get bored!"
+    m 7lsb "For example, let's imagine you picked the famous person category."
+    m 7lsa "Pick a famous person or character and then choose another person starting with the last letter of the first person's name."
+    m 7wsa "For example! If I start with {i}E. E. Cummings {/i}..."
+    m 7lsb "Next, I can pick Sade, from Marquis de Sade!"
+    m 7esb "And so on! {w=0.3}{nw}"
+    extend 2ksa "Have fun, [player]!"
     return
 
 #55
