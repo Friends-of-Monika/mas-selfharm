@@ -12,7 +12,7 @@ techniques, milestones, checkups and new dialogue and spritepacks</h3>
     <img alt="Discord server" src="https://discordapp.com/api/guilds/970747033071804426/widget.png?style=shield">
   </a>
   <a href="https://github.com/my-otter-self/MAS_selfharm/blob/main/LICENSE.txt">
-    <img alt="Creative Commons BY-NC-ND 4.0 license badge" src="https://raw.githubusercontent.com/my-otter-self/MAS_selfharm/main/.github/badges/by-nc-nd.svg">
+    <img alt="Creative Commons BY-NC-ND 4.0 license badge" src="https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-lightgrey.svg">
   </a>
 </p>
 
