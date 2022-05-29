@@ -1,20 +1,21 @@
 #!/bin/sh
 
+_mod_dir="game/Submods/$(perl -ne 'printf $1 if /name="([^"]*)"/' "mod/00_header.rpy")"
+
 # Clear MAS logs
 if [ -d build/ddlc/log ]; then
     find build/ddlc/log -type f -iname '*.log' -delete
 fi
 
 # Copy .rpy files from mod folder
-mkdir -p build/ddlc/game/mshMod
-(cd mod; find . -iname '*.rpy' -exec cp -r --parents \{\} ../build/ddlc/game/mshMod \;)
+mkdir -p "build/ddlc/$_mod_dir"
+(cd mod; find . -iname '*.rpy' -exec cp -r --parents \{\} "../build/ddlc/$_mod_dir" \;)
 
 # Move spritepacks into their respective locations
 find spritepacks -mindepth 2 -maxdepth 2 -type d -exec cp -RT \{\} build/ddlc \;
 
 # Move resources into submod folder
-mkdir -p build/ddlc/game/mshMod
-(cd res; find . -exec cp -r --parents \{\} ../build/ddlc/game/mshMod \;)
+(cd res; find . -exec cp -r --parents \{\} "../build/ddlc/$_mod_dir" \;)
 
 # Run build and join build output and spj.log together
 build/renpy/renpy.sh build/ddlc compile 2>&1 \
@@ -23,16 +24,15 @@ build/renpy/renpy.sh build/ddlc compile 2>&1 \
     | sed 's/game\/mshMod\///g'
 perl -ne 'print if (/^.*!ERROR! T_T.*$/)' build/ddlc/log/spj.log \
     | tee -a build/compile.log
+find "build/ddlc/$_mod_dir" -type f -iname '*.rpy' -delete
 
 # Scan for errors in log
 if grep -Eq '^.*Error:.*$|^File ".*", line .*:.*$' build/compile.log; then exit 1; fi
 if tail -n +9 build/ddlc/log/spj.log | grep -Eq '^.*!ERROR! T_T.*$'; then exit 1; fi
 
 # Move compiled files to build/out
-find build/ddlc/game/mshMod -type f -iname '*.rpy' -delete
-mkdir -p build/out/game/Submods
-mv build/ddlc/game/mshMod "build/out/game/Submods/$(perl -ne 'printf $1 if /name="([^"]*)"/' "mod/00_header.rpy")"
+mkdir -p "build/out/game/Submods"
+mv "build/ddlc/$_mod_dir" "build/out/game/Submods"
 
 # Remove submod and spritepack files from build directory
-rm -rf build/ddlc/game/mshMod
 find spritepacks -mindepth 2 -type f -exec sh -c 'rm "build/ddlc/$(echo "$0" | sed -nE '"'s/^.*\/((game|characters)\/.*)/\1/p'"')"' \{\} \;
