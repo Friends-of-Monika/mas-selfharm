@@ -2058,12 +2058,12 @@ init 5 python:
     )
 
 label mshMod_technique_insteadofs:
-    m "Come up with your own techniques! {w=0.3}{nw}"
-    extend "How about that?"
-    m "Create a list of things you can do instead of hurting yourself."
-    m "It doesn't need to be long, for now!"
-    m "You can keep it and go back to it if you ever need it again!"
-    m "And add new techniques or things to do whenever you think of them."
+    m 3esb "Come up with your own techniques! {w=0.3}{nw}"
+    extend 3hsb "How about that?"
+    m 3esa "Create a list of things you can do instead of hurting yourself."
+    m 1dsb "It doesn't need to be long, for now!"
+    m 1esb "You can keep it and go back to it if you ever need it again!"
+    m 1wsa "And add new techniques or things to do whenever you think of them."
     return
 
 #82
@@ -2079,12 +2079,12 @@ init 5 python:
     )
 
 label mshMod_technique_cry:
-    m "[player], I know it's hard."
-    m "But why don't you let yourself cry for a bit?"
-    m "Crying can help you release the pain, coming out as tears."
-    m "If you don't want to wipe your tears, it's okay."
-    m "Tears can remind you you're alive."
-    m "Throw a temper tantrum, if you need to."
+    m 1esc "[player], I know it's hard."
+    m 1dsc "But why don't you let yourself cry for a bit?"
+    m 1dsd "Crying can help you release the pain, coming out as tears."
+    m 3eka "If you don't want to wipe your tears, it's okay."
+    m 3dka "Tears can remind you you're alive."
+    m 3esb "Throw a temper tantrum, if you need to."
     return
 
 #83
@@ -2100,17 +2100,17 @@ init 5 python:
     )
 
 label mshMod_technique_happy_box:
-    m "[player], are you familiar with the happy box?"
-    m "I'll tell you everything I know about it!"
-    m "It's simple, and a very good coping mechanism!"
-    m "First step: get a box with a lid and decorate it any way you want."
-    m "Then, put anything in the Happy Box that makes you feel happy and puts a smile on your face."
-    m "Examples would be photos, names of your friends, concert tickets, movie stubs, names of songs, jewelry, a rose, a pressed leaf from a tree. {w=0.3}{nw}"
-    extend "You get the idea!"
-    m "Now to put it to use: open your Happy Box and pull out everything in it whenever you feel that you want to harm yourself. {w=0.3}{nw}"
-    extend "Do this mindfully!"
-    m "Take out one thing at a time, look at it, touch it, sit with it as you reflect on its' meaning and remember why you chose to put it in the Happy Box."
-    m "Let yourself take in the good memories you feel and the closeness you feel to the other people who were involved in making each item special to you!"
+    m 1wsa "[player], are you familiar with the happy box?"
+    m 7wsa "I'll tell you everything I know about it!"
+    m 7hsa "It's simple, and a very good coping mechanism!"
+    m 7dsb "First step: get a box with a lid and decorate it any way you want."
+    m 7rsb "Then, put anything in the Happy Box that makes you feel happy and puts a smile on your face."
+    m 7dsb "Examples would be photos, names of your friends, concert tickets, movie stubs, names of songs, jewelry, a rose, a pressed leaf from a tree. {w=0.3}{nw}"
+    extend 1nsb "You get the idea!"
+    m 1ssa "Now to put it to use: open your Happy Box and pull out everything in it whenever you feel that you want to harm yourself. {w=0.3}{nw}"
+    extend 1esa "Do this mindfully!"
+    m 1dsa "Take out one thing at a time, look at it, touch it, sit with it as you reflect on its' meaning and remember why you chose to put it in the Happy Box."
+    m 1wsb "Let yourself take in the good memories you feel and the closeness you feel to the other people who were involved in making each item special to you!"
     return
 
 #84
