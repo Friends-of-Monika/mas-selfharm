@@ -4,7 +4,7 @@
 init 5 python in mas_bookmarks_derand:
     # Ensure things get bookmarked and derandomed as usual.
     label_prefix_map["mshMod_topic_"] = label_prefix_map["monika_"]
-    
+
 default persistent._msh_mod_pm_did_selfharm = None
 
 init 5 python:
@@ -13,6 +13,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_topic_selfharm_intro",
             random=True,
+            rules={"bookmark_rule": mas_bookmarks_derand.BLACKLIST}
         )
     )
 
