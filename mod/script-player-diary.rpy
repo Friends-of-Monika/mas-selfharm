@@ -1,5 +1,5 @@
 # Player diary script.
-   
+
 #intro
 init 5 python:
     addEvent(
@@ -111,7 +111,7 @@ label mshMod_writing_to_diary_repeat:
             m 1hub "I'm happy to hear that, [player]!"
             show monika 5sub at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 5sub "It's so nice to hear you're taking my advice."
-            show monika 5hub at t11 zorder MAS_MONIKA_Z with dissolve_monika
+            show monika 1hub at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 1hub"I love you!"
 
             return "love"
