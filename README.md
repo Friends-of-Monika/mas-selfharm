@@ -16,13 +16,7 @@ techniques, milestones, checkups and new dialogue and spritepacks</h3>
   </a>
 </p>
 
-## 🚨 WORK IN PROGRESS
-
-This submod is still in active development and is approaching stable
-release stage. Please do not install it from source code until it is
-released. Instead, you can *watch* our repository and get notified
-when a release is created, and this mod is good to use!
-
+<h4 align="center">💜 IN MEMORY OF T. H. 💜</h4>
 
 ## ⚠️ Important notice (please read!)
 
