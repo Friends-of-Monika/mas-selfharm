@@ -1384,17 +1384,17 @@ init 5 python:
     )
 
 label mshMod_technique_mess:
-    m "Is any of the rooms in your house messy?"
-    m "Maybe you could organize one of them."
-    m "Picking clothing or trash off the floor..."
-    m "In a slow and methodical way!"
-    m "If your house is completely organized, maybe organize the apps on your phone or computer?"
-    m "You can delete any you haven't used in a few months."
-    m "Or organize them by colour order!"
-    m "You could also search for a new screensaver for your computer!"
-    m "Maybe sort out your photos into files or categories?"
-    m "Organize bills, receipts... Polish silver or jewelry, color co-ordinate your wardrobe or alphabetize your books and magazines."
-    m "You can even let your creativity flow out, drawing on the walls or painting with watercolors if you don't want permanence."
+    m 1esc "Is any of the rooms in your house messy?"
+    m 7esb "Maybe you could organize one of them."
+    m 7dsb "Picking clothing or trash off the floor..."
+    m 7wsb "In a slow and methodical way!"
+    m 2wsb "If your house is completely organized, maybe organize the apps on your phone or computer?"
+    m 2esa "You can delete any you haven't used in a few months."
+    m 2ssb "Or organize them by colour order!"
+    m 2ssa "You could also search for a new screensaver for your computer!"
+    m 4esa "Maybe sort out your photos into files or categories?"
+    m 4dsa "Organize bills, receipts... Polish silver or jewelry, color co-ordinate your wardrobe or alphabetize your books and magazines."
+    m 4wsb "You can even let your creativity flow out, drawing on the walls or painting with watercolors if you don't want permanence."
     return
 
 #52
@@ -1410,14 +1410,14 @@ init 5 python:
     )
 
 label mshMod_technique_holiday:
-    m "Hey, [player]! When is your next holiday?"
-    m "Why not research for the places you can go when that time comes?"
-    m "Maybe something small like visiting a park, or a local mall!"
-    m "Or something bigger, like going sightseeing in a different city!"
-    m "Going to a beach, some nice restaurant or just your favorite place in the city!"
-    m "Wouldn't that be amazing? {w=0.3}{nw}"
-    extend "If it's not within your reach right now, you can always make plans."
-    m "That's part of the fun!"
+    m 4ssb "Hey, [player]! When is your next holiday?"
+    m 3esb "Why not research for the places you can go when that time comes?"
+    m 3dsb "Maybe something small like visiting a park, or a local mall!"
+    m 3hsa "Or something bigger, like going sightseeing in a different city!"
+    m 1lsa "Going to a beach, some nice restaurant or just your favorite place in the city!"
+    m 1hsb "Wouldn't that be amazing? {w=0.3}{nw}"
+    extend 7esb "If it's not within your reach right now, you can always make plans."
+    m 4wsb "That's part of the fun!"
     return
 
 #53
@@ -1454,18 +1454,18 @@ init 5 python:
     )
 
 label mshMod_technique_shiritori:
-    m "Can you play shiritori?"
-    m "Well... at least an simpler version of it."
-    m "The japanese game is played like this:"
-    m "You start with a word from a specific category."
-    m "After that, you take the last letter or syllable (for an extra challenge) from that word, using it to start the next word."
-    m "Then you goes on and on and on until you get bored!"
-    m "For example, let's imagine you picked the famous person category."
-    m "Pick a famous person or character and then choose another person starting with the last letter of the first person's name."
-    m "For example! If I start with {i}E. E. Cummings {/i}..."
-    m "Next, I can pick Sade, from Marquis de Sade!"
-    m "And so on! {w=0.3}{nw}"
-    extend "Have fun, [player]!"
+    m 7esb "Can you play shiritori?"
+    m 7lssdra "Well... at least an simpler version of it."
+    m 7wsa "The japanese game is played like this:"
+    m 7dsa "You start with a word from a specific category."
+    m 1dsa "After that, you take the last letter or syllable (for an extra challenge) from that word, using it to start the next word."
+    m 1hsb "Then you goes on and on and on until you get bored!"
+    m 7lsb "For example, let's imagine you picked the famous person category."
+    m 7lsa "Pick a famous person or character and then choose another person starting with the last letter of the first person's name."
+    m 7wsa "For example! If I start with {i}E. E. Cummings {/i}..."
+    m 7lsb "Next, I can pick Sade, from Marquis de Sade!"
+    m 7esb "And so on! {w=0.3}{nw}"
+    extend 2ksa "Have fun, [player]!"
     return
 
 #55
