@@ -415,13 +415,14 @@ init 5 python:
     )
 
 label mshMod_playlist_song_only_wonder:
-    m "{i}~What're you sayin'? Everybody's different!~{/i}"
-    m "{i}~Stop messin' with me, I'll have to shut you out~{/i}"
-    m "{i}~The spotlight's on you, but you're acting all flashy~{/i}"
-    m "{i}~It's as if you're trying to be someone's answer~{/i}"
-    m "{i}~Don't go shakin' your tail like that~{/i}"
-    m "{i}~No matter what happens… In the end, you can only be your own person!~{/i}"
-    m "..."
+    m 1etc "{i}~What're you sayin'?{/i} {w=0.3}{nw}"
+    extend 3efb "{i}Everybody's different!~{/i}"
+    m 2dfo "{i}~Stop messin' with me, I'll have to shut you out~{/i}"
+    m 2esd "{i}~The spotlight's on you, but you're acting all flashy~{/i}"
+    m 3etc "{i}~It's as if you're trying to be someone's answer~{/i}"
+    m 1efo "{i}~Don't go shakin' your tail like that~{/i}"
+    m 1dkb "{i}~No matter what happens… In the end, you can only be your own person!~{/i}"
+    m 1dka "..."
     m 3eka "[player], you're beautiful just the way you are, and it'd be terrible if you stopped being that way to fit another person's standards."
     m 3eka "You might think you're too \"weird\" or shy for people to like you, but in the end, there's always someone who understands you out there."
     m 3esd "Anyone who tries to tell you otherwise is wrong."
