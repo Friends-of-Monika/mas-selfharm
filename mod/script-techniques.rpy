@@ -990,16 +990,16 @@ init 5 python:
     )
 
 label mshMod_technique_river:
-    m "[player], think about what is bothering you."
-    m "Now imagine a box... A big one!"
-    m "You can imagine yourself putting all of your worries and problems inside it."
-    m "After that, you can imagine yourself doing anything you want to the box."
-    m "You can lock it, throw it away, throw it into the bottom of the sea..."
-    m "Maybe imagine a river."
-    m "Box up the thing that is on your mind and watch it float away..."
-    m "You choose!"
-    m "Just don't keep these feelings in an important place."
-    m "Because they don't define you."
+    m 1euc "[player], think about what is bothering you."
+    m 1dud "Now imagine a box... A big one!"
+    m 1dua "You can imagine yourself putting all of your worries and problems inside it."
+    m 1eub "After that, you can imagine yourself doing anything you want to the box."
+    m 7wub "You can lock it, throw it away, throw it into the bottom of the sea..."
+    m 2eua "Maybe imagine a river."
+    m 2dua "Box up the thing that is on your mind and watch it float away..."
+    m 7hub "You choose!"
+    m 7eub "Just don't keep these feelings in an important place."
+    m 2kua "Because they don't define you."
     return
 
 #36
@@ -1015,14 +1015,14 @@ init 5 python:
     )
 
 label mshMod_technique_feelings:
-    m "How about making a list of positive feelings you have had in the last week?"
-    m "I'm sure there are at least some."
-    m "Find out what or who triggers those emotions..."
-    m "And make sure to cherish those situations and people!"
-    m "If it was someone who made you feel those positive feelings, {w=0.3}{nw}"
-    extend "make sure to thank them if you can!"
-    m "Express your gratitude for having that person in your life."
-    m "I'm sure they are just as grateful for being in yours!"
+    m 3eua "How about making a list of positive feelings you have had in the last week?"
+    m 2eka "I'm sure there are at least some."
+    m 2dka "Find out what or who triggers those emotions..."
+    m 7hua "And make sure to cherish those situations and people!"
+    m 7eub "If it was someone who made you feel those positive feelings, {w=0.3}{nw}"
+    extend 7wub "make sure to thank them if you can!"
+    m 1sub "Express your gratitude for having that person in your life."
+    m 2kua "I'm sure they are just as grateful for being in yours!"
     return
 
 #37
@@ -1038,17 +1038,17 @@ init 5 python:
     )
 
 label mshMod_technique_poem:
-    m "This technique is one of my favorites."
-    m "Let's write a poem!"
-    m "Don't be alarmed, [player]."
-    m "It doesn't have to rhyme or even be perfect!"
-    m "It can be a short poem about how you feel."
-    m "I'm sure it will be sincere!"
-    m "Like Ernest Hemingway said, {w=0.3}{nw}"
-    extend "'Write hard and clear about what hurts!'"
-    m "Ahahaha~"
-    m "If you don't feel ready to write a poem of your own..."
-    m "You can always read some from famous poets!"
+    m 2eua "This technique is one of my favorites."
+    m 3eub "Let's write a poem!"
+    m 2eka "Don't be alarmed, [player]."
+    m 2wua "It doesn't have to rhyme or even be perfect!"
+    m 2dua "It can be a short poem about how you feel."
+    m 2hub "I'm sure it will be sincere!"
+    m 4dub "Like Ernest Hemingway said, {w=0.3}{nw}"
+    extend 1dub "'Write hard and clear about what hurts!'"
+    m 1hub "Ahahaha~"
+    m 1ruc "If you don't feel ready to write a poem of your own..."
+    m 1wub "You can always read some from famous poets!"
     return
 
 #38
