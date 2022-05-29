@@ -51,11 +51,11 @@ init 4 python in mshMod_reminder:
     import store
 
     def _assertReminderActive(ev_label):
-        if isReminderActive(ev_label):
+        if not isReminderActive(ev_label):
             raise AssertionError("expected reminder to be active")
 
     def _assertReminderInactive(ev_label):
-        if not isReminderActive(ev_label):
+        if isReminderActive(ev_label):
             raise AssertionError("expected reminder to be inactive")
 
     def addRecurringReminder(ev_label, delay, delta, latency):
