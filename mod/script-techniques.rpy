@@ -2174,14 +2174,14 @@ init 5 python:
     )
 
 label mshMod_technique_shopping:
-    m "[player], why not do some healthy shopping?"
-    m "Go to a mall, and get yourself something nice."
-    m "You can buy a stuffed animal and give it a name..."
-    m "Or go to the grocery store and buy yourself some flowers!"
-    m "It has been proved that having cute and pretty things surround you improves your mental state."
-    m "But if you don't have the money to spare right now, it's no problem!"
-    m "You can hunt for stuff on Ebay or Amazon!"
-    m "Do a little wishlist of stuff you wanna buy when you get the chance."
+    m 3eua "[player], why not do some healthy shopping?"
+    m 3wub "Go to a mall, and get yourself something nice."
+    m 3dua "You can buy a stuffed animal and give it a name..."
+    m 4sua "Or go to the grocery store and buy yourself some flowers!"
+    m 2dua "It has been proved that having cute and pretty things surround you improves your mental state."
+    m 2hkb "But if you don't have the money to spare right now, it's no problem!"
+    m 7esb "You can hunt for stuff on Ebay or Amazon!"
+    m 2esb "Do a little wishlist of stuff you wanna buy when you get the chance."
     return
 
 #87
