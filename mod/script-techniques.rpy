@@ -1481,12 +1481,12 @@ init 5 python:
     )
 
 label mshMod_technique_objects:
-    m "Find five objects, [player]."
-    m "Hyper-focus on these five objects and describe them taking deep breaths between each description."
-    m "What color are they? {w=0.3}{nw}"
-    extend "Their shape?"
-    m "How do they feel in your hand?"
-    m "Take your time exploring those objects."
+    m 7rsa "Find five objects, [player]."
+    m 7dsa "Hyper-focus on these five objects and describe them taking deep breaths between each description."
+    m 2wsa "What color are they? {w=0.3}{nw}"
+    extend 2rsa "Their shape?"
+    m 2dsa "How do they feel in your hand?"
+    m 2hsa "Take your time exploring those objects."
     return
 
 #56
@@ -1502,13 +1502,13 @@ init 5 python:
     )
 
 label mshMod_technique_imagination:
-    m "Close your eyes..."
-    m "And imagine something beautiful."
-    m "You can think of a relaxing place and in your mind, run through all the comforting things you do when you are there."
-    m "Your happy place."
-    m "Visualise a comforting image."
-    m "Think of all the different things in that scene that make you feel comforted and cared for."
-    m "Think about it with as much detail as you can."
+    m 2hsa "Close your eyes..."
+    m 2dsb "And imagine something beautiful."
+    m 2dsa "You can think of a relaxing place and in your mind, run through all the comforting things you do when you are there."
+    m 2hsa "Your happy place."
+    m 2dsb "Visualise a comforting image."
+    m 2dsa "Think of all the different things in that scene that make you feel comforted and cared for."
+    m 2ksa "Think about it with as much detail as you can."
     return
 
 #57
@@ -1524,13 +1524,13 @@ init 5 python:
     )
 
 label mshMod_technique_characters:
-    m "Think of your favourite book, movie, videogame or tv show."
-    m "Can you name as many characters as you can from that media?"
-    m "And what are your favorites from that list? {w=0.3}{nw}"
-    extend "Why?"
-    m "Can you relate to any of them?"
-    m "I'm sure you feel similarities with yourself and the best characters ever."
-    m "Ehehehe~!"
+    m 2hsb "Think of your favourite book, movie, videogame or tv show."
+    m 7rsa "Can you name as many characters as you can from that media?"
+    m 7ssb "And what are your favorites from that list? {w=0.3}{nw}"
+    extend 7wsb "Why?"
+    m 7esb "Can you relate to any of them?"
+    m 2ksa "I'm sure you feel similarities with yourself and the best characters ever."
+    m 2hsb "Ehehehe~!"
     return
 
 #58
