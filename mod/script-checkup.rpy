@@ -206,5 +206,5 @@ label mshMod_checkup_reminder:
         m 5fkbfa "I love you."
 
     # Do not move this anywhere, this must be above the return.
-    $ store.mshMod_medication_reminder.extendCurrentReminder()
+    $ store.mshMod_reminder.extendCurrentReminder()
     return "love"

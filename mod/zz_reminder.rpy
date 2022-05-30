@@ -89,10 +89,6 @@ init 4 python in mshMod_reminder:
 
         extendReminder(ev_label)
 
-        # HACK: workaround so that MAS doesn't strip conditional and action from reminder event.
-        ev, conditional, action = _reminderEvents[ev_label]
-        ev.conditional, ev.action = conditional, action
-
     def extendReminder(ev_label, keep_up=False):
         _assertReminderActive(ev_label)
 
@@ -114,6 +110,10 @@ init 4 python in mshMod_reminder:
                     break
             else:
                 break
+
+        # HACK: workaround so that MAS doesn't strip conditional and action from reminder event.
+        ev, conditional, action = _reminderEvents[ev_label]
+        ev.conditional, ev.action = conditional, action
 
     def stopReminder(ev_label):
         _assertReminderActive(ev_label)

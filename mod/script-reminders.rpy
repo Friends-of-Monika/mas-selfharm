@@ -119,4 +119,4 @@ label mshMod_medication_reminder:
 
     # Do not move this anywhere, this must be above the return.
     $ store.mshMod_reminder.extendCurrentReminder()
-    return "no_unlock|love"
+    return "love"

@@ -71,8 +71,6 @@ label mshMod_technique_random:
 
         renpy.jump(items.keys()[random.randint(0, len(items) - 1)])
 
-    return
-
 #1
 init 5 python:
     addEvent(
