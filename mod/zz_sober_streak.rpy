@@ -528,7 +528,7 @@ init 4 python in mshMod_sober_streak:
             store.mas_calendar.removeRepeatable("milestone_personal_best", since)
 
             start_date, _ = _getPersonalBestDateTuple()
-            calendar.addRepeatable_dt(
+            store.mas_calendar.addRepeatable_dt(
                 "milestone_personal_best", _("Sober streak, personal best"),
                 start_date, year_param=[start_date.year]
             )
