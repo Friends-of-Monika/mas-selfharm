@@ -41,7 +41,8 @@ label mshMod_checkup_intro:
     # trigger within a day; else checkup will be attempted next week.)
     $ store.mshMod_reminder.addRecurringReminder(
         "mshMod_checkup_reminder",
-        delay, store.mshMod_reminder_utils.INTERVAL_WEEKLY, store.mshMod_reminder_utils.LATENCY_DAILY
+        store.mshMod_reminder_utils.getDailyEveningDelay(),
+        store.mshMod_reminder_utils.INTERVAL_WEEKLY, store.mshMod_reminder_utils.LATENCY_DAILY
     )
 
     return "derandom|love"
