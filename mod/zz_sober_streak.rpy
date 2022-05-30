@@ -103,7 +103,7 @@ init 4 python in mshMod_sober_streak:
         _rebuildMilestoneDates()
 
         # Show streak check event
-        mas_showEVL("mshMod_sober_check", "EVE", unlock=True)
+        store.mas_showEVL("mshMod_sober_check", "EVE", unlock=True)
 
     def endStreak():
         """
@@ -129,7 +129,7 @@ init 4 python in mshMod_sober_streak:
         _updateMilestoneEvents()
 
         # Hide streak check event
-        mas_hideEVL("mshMod_sober_check", "EVE", lock=True)
+        store.mas_hideEVL("mshMod_sober_check", "EVE", lock=True)
 
     def hasPersonalBest():
         """
