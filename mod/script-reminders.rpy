@@ -100,7 +100,7 @@ label mshMod_medication_reminder_stop:
 
 
 init 5 python:
-    addEvent(
+    store.mshMod_reminder.addReminderEvent(
         Event(
             persistent.event_database,
             eventlabel="mshMod_medication_reminder",

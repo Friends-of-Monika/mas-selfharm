@@ -22,7 +22,7 @@ init 4 python in mshMod_reminder_utils:
         # if requested delay is until 6pm and it's 3am, we shouldn't
         # blindly add delta; in this case, we should subtract 6pm - 3am
         # and return that as the delay.)
-        if now.hour <= hours and now.minute <= minutes:
+        if now < now.replace(hour=hours, minute=minutes):
             return now.replace(hour=hours, minute=minutes) - now
 
         return (now + delta).replace(hour=hours, minute=minutes) - now
@@ -79,20 +79,64 @@ init 4 python in mshMod_reminder:
 
         return trigger <= datetime.datetime.now() <= trigger + latency
 
-    def extendCurrentReminder():
-        extendReminder(mas_globals.this_ev.eventlabel)
-
-    def extendReminder(ev_label):
-        _assertReminderActive(ev_label)
-
+    def isReminderMissed(ev_label):
         trigger, delta, latency = store.persistent._mshMod_active_reminders[ev_label]
 
-        _mshMod_active_reminders[ev_label] = (
-            trigger + delta,  # ensure we base new trigger datetime off the initial trigger timedelta
-            delta, latency
-        )
+        return trigger + latency <= datetime.datetime.now()
+
+    def extendCurrentReminder():
+        ev_label = store.mas_globals.this_ev.eventlabel
+
+        extendReminder(ev_label)
+
+        # HACK: workaround so that MAS doesn't strip conditional and action from reminder event.
+        ev, conditional, action = _reminderEvents[ev_label]
+        ev.conditional, ev.action = conditional, action
+
+    def extendReminder(ev_label, keep_up=False):
+        _assertReminderActive(ev_label)
+
+        now = datetime.datetime.now()
+
+        while True:
+            trigger, delta, latency = store.persistent._mshMod_active_reminders[ev_label]
+
+            store.mas_submod_utils.submod_log.info(str((store.persistent._mshMod_active_reminders[ev_label], now)))
+            store.persistent._mshMod_active_reminders[ev_label] = (
+                trigger + delta,  # ensure we base new trigger datetime off the initial trigger timedelta
+                delta, latency
+            )
+
+            if keep_up:
+                if store.persistent._mshMod_active_reminders[ev_label][0] <= now:
+                    continue
+                else:
+                    break
+            else:
+                break
 
     def stopReminder(ev_label):
         _assertReminderActive(ev_label)
 
         del store.persistent._mshMod_active_reminders[ev_label]
+
+
+    ### Missed reminder handling
+
+    def _handleMissedReminders():
+        for ev_label in store.persistent._mshMod_active_reminders.keys():
+            trigger, delta, latency = store.persistent._mshMod_active_reminders[ev_label]
+            if isReminderMissed(ev_label):
+                extendReminder(ev_label, keep_up=True)
+
+    _handleMissedReminders()
+    store.mas_submod_utils.registerFunction("ch30_day", _handleMissedReminders)
+
+
+init 4 python in mshMod_reminder:
+
+    _reminderEvents = dict()
+
+    def addReminderEvent(event):
+        _reminderEvents[event.eventlabel] = (event, event.conditional, event.action)
+        store.addEvent(event)
