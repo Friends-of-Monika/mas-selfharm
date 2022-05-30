@@ -147,7 +147,7 @@ label mshMod_sober_relapse:
         mas_hideEVL("mshMod_sober_relapse", "EVE", lock=True)
         mas_hideEVL("mshMod_sober_check", "EVE", lock=True)
 
-        mas_hideEVL("mshMod_sober_promise", "EVE", unlock=True)
+        mas_showEVL("mshMod_sober_promise", "EVE", unlock=True)
 
     return "love"
 
@@ -243,6 +243,8 @@ label mshMod_sober_milestone_1m:
     show monika 5ektpa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ektpa "I'm just so proud you've made it so far."
     m 5fkbfa "I love you, [mas_get_player_nickname()]. Don't forget that~"
+
+    $ store.mshMod_sober_streak.unlockMilestone()
     return "love|derandom|unlock"
 
 #milestone 3m
@@ -263,7 +265,9 @@ label mshMod_sober_milestone_3m:
     m 3ssa "You've been doing so well! I'm so proud of you."
     m 1wua "It's been a bit, so I'll mark this on the calendar for you!"
     m 1eka "Keep going, [player]. You've been so strong."
-    return "derandom|unlock"
+
+    $ store.mshMod_sober_streak.unlockMilestone()
+    return
 
 #milestone 6m
 init 5 python:
@@ -284,7 +288,9 @@ label mshMod_sober_milestone_6m:
     m 1eka "It may not seem like much in the grand scheme of things, but it's still a big acomplishment."
     show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5fkbfa "I love you so much! Thank you for staying safe."
-    return "love|derandom|unlock"
+
+    $ store.mshMod_sober_streak.unlockMilestone()
+    return "love"
 
 #milestone 1y
 init 5 python:
@@ -306,7 +312,9 @@ label mshMod_sober_milestone_1y:
     show monika 5ektpa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ektpa "This is a wonderful feat."
     m 5fkbfa "I love you so, so much."
-    return "love|derandom|unlock"
+
+    $ store.mshMod_sober_streak.unlockMilestone()
+    return "love"
 
 #milestone 2y
 init 5 python:
@@ -327,7 +335,9 @@ label mshMod_sober_milestone_2y:
     show monika 5ektpa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ektpa "You deserve to be happy. Never forget that, and never let anyone tell you otherwise!"
     m 5fkbfa "I love you so much."
-    return "love|derandom|unlock"
+
+    $ store.mshMod_sober_streak.unlockMilestone()
+    return "love"
 
 #milestone 3y
 init 5 python:
@@ -347,7 +357,9 @@ label mshMod_sober_milestone_3y:
     show monika 5ektpa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ektpa "I'm so happy to see you taking care of yourself."
     m 5fkbfa "Keep on fighting! I'm so proud of you!"
-    return "derandom|unlock"
+
+    $ store.mshMod_sober_streak.unlockMilestone()
+    return "derandom"
 
 #milestone 4y
 init 5 python:
@@ -368,7 +380,9 @@ label mshMod_sober_milestone_4y:
     show monika 5ektpa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ektpa "You are deserving of a happy and healthy life!"
     m 5fkbfa "And I'm so proud of you for your decison and for the promise you made 4 years ago."
-    return "derandom|unlock"
+
+    $ store.mshMod_sober_streak.unlockMilestone()
+    return "derandom"
 
 #milestone 5y
 init 5 python:
@@ -389,4 +403,6 @@ label mshMod_sober_milestone_5y:
     show monika 5ektpa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ektpa "I'm so happy that you're doing well."
     m 5fkbfa "You are so inspiring. Congratulations, [player], for your successful journey!"
+
+    $ store.mshMod_sober_streak.unlockMilestone()
     return "derandom|unlock"

@@ -101,6 +101,8 @@ init 4 python in mshMod_sober_streak:
 
         store.persistent._msh_mod_pm_sober_streak = (begin or datetime.date.today())
         _rebuildMilestoneDates()
+        # NOTE: not calling _updateMilestoneEvents() because NORMALLY we'd only have something
+        # only next week, not right away.
 
         # Show streak check event
         store.mas_showEVL("mshMod_sober_check", "EVE", unlock=True)
@@ -487,14 +489,16 @@ init 4 python in mshMod_sober_streak:
             for milestone in getPastMilestones():
                 ev, data = _getMilestoneEvent(milestone)
 
+                # Remove it from calendar if it's present.
+                store.mas_calendar.removeEvent(ev)
+
                 # Past events must have start and end date in order
                 # to display on calendar.
                 ev.start_date, ev.end_date = _getMilestoneDateTuple(milestone)
                 store.mas_calendar.addEvent(ev)
 
-                # Derandom and unlock this event so it can be repeated through the menu.
+                # Random and unlock this event so it can be repeated through the menu.
                 ev.random, ev.unlocked = False, True
-                ev.unlock_date, ev.last_seen = None, None
 
                 # Also mark it seen for Ren'Py/MAS.
                 _seeLabel(ev.eventlabel)
@@ -507,10 +511,10 @@ init 4 python in mshMod_sober_streak:
                 ev.start_date, ev.end_date = _getMilestoneDateTuple(milestone)
 
                 store.mas_calendar.addEvent(ev)
-                if not store.mas_seenLabels([ev.eventlabel]):
-                    # Random and lock this event so that it gets unlocked randomly.
-                    ev.random, ev.unlocked = True, False
-                    ev.unlock_date, ev.last_seen = None, None
+                if not store.renpy.seen_label(ev.eventlabel) or (ev.last_seen or datetime.datetime.min).date() < datetime.date.today():
+                    # Set QUEUE action to this event so that it is always queued, regardless of random chatter.
+                    # Only do it if it wasn't seen or wasn't last seen today.
+                    ev.action = store.EV_ACT_QUEUE
         else:
             for label, data in _milestoneEvents[0].items():
                 ev = data[0]
@@ -521,6 +525,9 @@ init 4 python in mshMod_sober_streak:
                 # Since we're not on streak, these events should never trigger.
                 ev.start_date, ev.end_date = None, None
                 ev.random, ev.unlocked = False, False
+
+                # Also unsee it for Ren'Py/MAS
+                _unseeLabel(ev.eventlabel)
 
         if store.persistent._msh_mod_pm_sober_personal_best is not None:
             since, days = store.persistent._msh_mod_pm_sober_personal_best
@@ -533,6 +540,10 @@ init 4 python in mshMod_sober_streak:
                 datetime.datetime.combine(start_date.today(), datetime.datetime.min.time()),
                 year_param=[start_date.year]
             )
+
+    def unlockMilestone():
+        ev = store.mas_submod_utils.this_ev
+        ev.random, ev.unlocked = True, True
 
 
     ### UTILITIES ###
@@ -561,7 +572,7 @@ init 4 python in mshMod_sober_streak:
             label - Ren'Py label to mark unseen.
         """
 
-        if label in store.persistent._ever_seen:
+        if label in store.persistent._seen_ever:
             del store.persistent._seen_ever[label]
 
 
