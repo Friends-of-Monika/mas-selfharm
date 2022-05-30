@@ -146,8 +146,8 @@ label mshMod_sober_relapse:
         # End streak and hide this event from the pool. Also hide check topic since we're no longer on streak.
         # mshMod_promise will pop up shortly afterwards.
         store.mshMod_sober_streak.endStreak()
-        mas_hideEVL("mshMod_sober_relapse", "EVE", _lock=True)
-        mas_hideEVL("mshMod_sober_check", "EVE", _lock=True)
+        mas_hideEVL("mshMod_sober_relapse", "EVE", lock=True)
+        mas_hideEVL("mshMod_sober_check", "EVE", lock=True)
 
     return "love"
 
