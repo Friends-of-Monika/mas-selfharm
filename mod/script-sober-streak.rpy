@@ -17,8 +17,6 @@ init 5 python:
             eventlabel="mshMod_sober_check",
             prompt="How long have I been self-harm sober for?",
             category=["self-harm"],
-            conditional="store.mshMod_sober_streak.isOnStreak()",
-            action=EV_ACT_UNLOCK,
             pool=True,
             unlocked=False,
             rules={"no_unlock": None}
@@ -122,8 +120,6 @@ init 5 python:
             eventlabel="mshMod_sober_relapse",
             category=["self-harm"],
             prompt="I've self-harmed.",
-            conditional="store.mshMod_sober_streak.isOnStreak()",
-            action=EV_ACT_UNLOCK,
             pool=True,
             unlocked=False,
             rules={"no_unlock": None}
