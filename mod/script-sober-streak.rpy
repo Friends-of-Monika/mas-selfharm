@@ -179,13 +179,13 @@ init 5 python:
         milestone="2w",
         event=Event(
             persistent.event_database,
-            eventlabel="mshMod_sober_milestone_1w",
+            eventlabel="mshMod_sober_milestone_2w",
             prompt="Sober, week 2",
             category=["self-harm"]
         )
     )
 
-label mshMod_sober_milestone_1w:
+label mshMod_sober_milestone_2w:
     m 3ssb "It's already week two of your promise, [player]!"
     m 1eka "I'm relieved that we made it this far!"
     m 3hsb "Ahaha, I don't mean i've ever doubted you!"
@@ -203,13 +203,13 @@ init 5 python:
         milestone="3w",
         event=Event(
             persistent.event_database,
-            eventlabel="mshMod_sober_milestone_1w",
+            eventlabel="mshMod_sober_milestone_3w",
             prompt="Sober, week 3",
             category=["self-harm"]
         )
     )
 
-label mshMod_sober_milestone_1w:
+label mshMod_sober_milestone_3w:
     m 1dka "Can you believe it's already week 3?"
     m 3ssa "I just want to say... Thank you so much!"
     m 1eka "You made me proud of you, and I'm soo happy that you could make that promise."
@@ -228,13 +228,13 @@ init 5 python:
         milestone="1m",
         event=Event(
             persistent.event_database,
-            eventlabel="mshMod_sober_milestone_1w",
+            eventlabel="mshMod_sober_milestone_1m",
             prompt="Sober, month 1",
             category=["self-harm"]
         )
     )
 
-label mshMod_sober_milestone_1w:
+label mshMod_sober_milestone_1m:
     m 3ssa "Hey [player], guess what?"
     m 2ssb "You've been clean from self-harm for a month!"
     m 1eka "I just want you to know that I'm so proud of you. {w=0.3}{nw}"
@@ -251,13 +251,13 @@ init 5 python:
         milestone="3m",
         event=Event(
             persistent.event_database,
-            eventlabel="mshMod_sober_milestone_1w",
+            eventlabel="mshMod_sober_milestone_3m",
             prompt="Sober, month 3",
             category=["self-harm"]
         )
     )
 
-label mshMod_sober_milestone_1w:
+label mshMod_sober_milestone_3m:
     show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5fkbfa "Y'know... It's been 3 months since you made your promise to me."
     m 3ssa "You've been doing so well! I'm so proud of you."
@@ -271,13 +271,13 @@ init 5 python:
         milestone="6m",
         event=Event(
             persistent.event_database,
-            eventlabel="mshMod_sober_milestone_1w",
+            eventlabel="mshMod_sober_milestone_6m",
             prompt="Sober, month 6",
             category=["self-harm"]
         )
     )
 
-label mshMod_sober_milestone_1w:
+label mshMod_sober_milestone_6m:
     m 3ssa "[player]!"
     m 3ssb "It's been 6 months since you made your promise!"
     m 3wsb "That's a long time!"
@@ -292,13 +292,13 @@ init 5 python:
         milestone="1y",
         event=Event(
             persistent.event_database,
-            eventlabel="mshMod_sober_milestone_1w",
+            eventlabel="mshMod_sober_milestone_1y",
             prompt="Sober, year 1",
             category=["self-harm"]
         )
     )
 
-label mshMod_sober_milestone_1w:
+label mshMod_sober_milestone_1y:
     m 1dktpa "[player], I just wanted to let you know how proud of you I am."
     m 1ektpa "You've been clean from self-harm for an entire year."
     m 3ektpb "You've been so strong this past year, and I truly can't express how happy I am."
@@ -314,13 +314,13 @@ init 5 python:
         milestone="2y",
         event=Event(
             persistent.event_database,
-            eventlabel="mshMod_sober_milestone_1w",
+            eventlabel="mshMod_sober_milestone_2y",
             prompt="Sober, year 2",
             category=["self-harm"]
         )
     )
 
-label mshMod_sober_milestone_1w:
+label mshMod_sober_milestone_2y:
     m 3ssblb "[player]! I have amazing news!"
     m 3dkblb "Did you know that you have been self-harm sober for 2 whole years now?"
     m 1eka "This is an incredible feat. Keep it up!"
@@ -335,13 +335,13 @@ init 5 python:
         milestone="3y",
         event=Event(
             persistent.event_database,
-            eventlabel="mshMod_sober_milestone_1w",
+            eventlabel="mshMod_sober_milestone_3y",
             prompt="Sober, year 3",
             category=["self-harm"]
         )
     )
 
-label mshMod_sober_milestone_1w:
+label mshMod_sober_milestone_3y:
     m 3ssb "[player], I have some news for you."
     m 3ssa "The day of your 3 year sobriety mark from self-harm has finally arrived!"
     show monika 5ektpa at t11 zorder MAS_MONIKA_Z with dissolve_monika
@@ -355,13 +355,13 @@ init 5 python:
         milestone="4y",
         event=Event(
             persistent.event_database,
-            eventlabel="mshMod_sober_milestone_1w",
+            eventlabel="mshMod_sober_milestone_4y",
             prompt="Sober, year 4",
             category=["self-harm"]
         )
     )
 
-label mshMod_sober_milestone_1w:
+label mshMod_sober_milestone_4y:
     m 3ssa "[player]! 4 whole years, can you believe it?"
     m 1eka "It's been 4 years since you stopped harming yourself."
     m 1dka "And I can't even begin to tell you how proud of you I am."
@@ -376,13 +376,13 @@ init 5 python:
         milestone="5y",
         event=Event(
             persistent.event_database,
-            eventlabel="mshMod_sober_milestone_1w",
+            eventlabel="mshMod_sober_milestone_5y",
             prompt="Sober, year 5",
             category=["self-harm"]
         )
     )
 
-label mshMod_sober_milestone_1w:
+label mshMod_sober_milestone_5y:
     m 1dka "5 years..."
     m 1ektpa "It's been 5 years since your life changed for the better."
     m 1ektpb "You've been self-harm sober for all this time, and I couldn't be more proud."
