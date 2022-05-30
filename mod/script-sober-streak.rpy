@@ -106,8 +106,10 @@ label mshMod_sober_promise_jump:
         # Begin streak and hide this event from the pool.
         # mshMod_relapse and mshMod_sober_check will pop up shortly afterwards.
         store.mshMod_sober_streak.beginStreak(begin=since)
-        mas_showEVL("mshMod_sober_check", "EVE", unlock=True)
         mas_hideEVL("mshMod_sober_promise", "EVE", lock=True)
+
+        mas_showEVL("mshMod_sober_check", "EVE", unlock=True)
+        mas_showEVL("mshMod_sober_relapse", "EVE", unlock=True)
 
     return "love"
 
@@ -148,6 +150,8 @@ label mshMod_sober_relapse:
         store.mshMod_sober_streak.endStreak()
         mas_hideEVL("mshMod_sober_relapse", "EVE", lock=True)
         mas_hideEVL("mshMod_sober_check", "EVE", lock=True)
+
+        mas_hideEVL("mshMod_sober_promise", "EVE", unlock=True)
 
     return "love"
 
