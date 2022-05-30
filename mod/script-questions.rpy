@@ -63,7 +63,7 @@ label mshMod_probing_questions_talk:
 
             # Ensure we have this RIGHT BEFORE the return so that if DDLC process dies
             # and topic repeats again, we'll have HUGE odds we are not on a streak yet.
-            $ store.mshMod_sober_streak.beginStreak(since=since)
+            $ store.mshMod_sober_streak.beginStreak(begin=since)
 
         "I don't know.":
             m 2eka "Aww, [player], that's okay!"
