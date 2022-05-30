@@ -523,7 +523,7 @@ init 4 python in mshMod_sober_streak:
                 ev.random, ev.unlocked = False, False
 
         if store.persistent._msh_mod_pm_sober_personal_best is not None:
-            since, days = persistent._msh_mod_pm_sober_personal_best
+            since, days = store.persistent._msh_mod_pm_sober_personal_best
 
             store.mas_calendar.removeRepeatable("milestone_personal_best", since)
 
