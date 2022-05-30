@@ -485,7 +485,7 @@ init 4 python in mshMod_sober_streak:
 
         if isOnStreak():
             for milestone in getPastMilestones():
-                ev, _ = _getMilestoneEvent(milestone)
+                ev, data = _getMilestoneEvent(milestone)
 
                 # Past events must have start and end date in order
                 # to display on calendar.
@@ -502,7 +502,7 @@ init 4 python in mshMod_sober_streak:
             # Add today's milestone to calendar if possible.
             milestone = getTodayMilestone()
             if milestone is not None:
-                ev, _ = _getMilestoneEvent(milestone)
+                ev, data = _getMilestoneEvent(milestone)
 
                 ev.start_date, ev.end_date = _getMilestoneDateTuple(milestone)
 
@@ -527,7 +527,7 @@ init 4 python in mshMod_sober_streak:
 
             store.mas_calendar.removeRepeatable("milestone_personal_best", since)
 
-            start_date, _ = _getPersonalBestDateTuple()
+            start_date, end_date = _getPersonalBestDateTuple()
             store.mas_calendar.addRepeatable_dt(
                 "milestone_personal_best", _("Sober streak, personal best"),
                 start_date, year_param=[start_date.year]
