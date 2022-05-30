@@ -75,7 +75,7 @@ label mshMod_probing_questions_talk:
     m 5ekbsb "I love you so much!"
 
     # We're done with questions, now we need to hide this topic.
-    $ mas_hideEVL("mshMod_probing_questions_talk", lock=True)
+    $ mas_hideEVL("mshMod_probing_questions_talk", "EVE", lock=True)
 
     return "love|derandom|no_unlock"
 
