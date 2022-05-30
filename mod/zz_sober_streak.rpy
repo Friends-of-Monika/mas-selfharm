@@ -530,7 +530,7 @@ init 4 python in mshMod_sober_streak:
             start_date, end_date = _getPersonalBestDateTuple()
             store.mas_calendar.addRepeatable_dt(
                 "milestone_personal_best", _("Sober streak, personal best"),
-                datetime.datetime.combine(start_date.today(), datetime.min.time()),
+                datetime.datetime.combine(start_date.today(), datetime.datetime.min.time()),
                 year_param=[start_date.year]
             )
 
