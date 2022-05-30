@@ -237,7 +237,7 @@ init 4 python in mshMod_sober_streak:
             since = store.persistent._msh_mod_pm_sober_streak
 
         new_y, new_m = since.year, since.month + months
-        new_y, new_m = new_y + new_m // 12, new_m % 12
+        new_y, new_m = new_y + new_m // 12, (new_m % 12) or 12
 
         new_d = since.day
         if since.day > 28 and new_m == 2:
