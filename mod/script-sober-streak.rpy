@@ -6,7 +6,7 @@ init 5 python in mas_bookmarks_derand:
 
 # Technical label only used for asking for how long player is sober so that we reuse code.
 label mshMod_sober_ask_since:
-    $ since = datetime.today() - datetime.timedelta(days=int(renpy.input("For how long have you been sober already?", allow="0123456789", length=4)))
+    $ since = datetime.date.today() - datetime.timedelta(days=int(renpy.input("For how long have you been sober already?", allow="0123456789", length=4)))
     return since
 
 # Duration check dialogue
