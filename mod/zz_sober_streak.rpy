@@ -578,34 +578,12 @@ init 4 python in mshMod_sober_streak:
 
 init 7 python in mshMod_sober_streak:
 
-    ### MILESTONE EVENT PROPERTIES UNLOCK ###
-
-    _lockedProps = (
-        "unlocked", "random", "pool", "conditional",
-        "action", "start_date", "end_date", "unlock_date",
-        "shown_count", "last_seen"
-    )
-
-    def _unlockAllEventProps(ev):
-        """
-        Forcibly unlock all attributes of Event. Required for modification
-        of start_date/end_date and almost every other attribute.
-
-        NOTE:
-            An internal function. Should not be used by other submods.
-
-        IN:
-            ev - Event label to unlock attributes of.
-        """
-
-        for prop in _lockedProps:
-            store.Event.unlockInit(prop, ev=ev)
-
+    ### EVENT PROPERTIES UNLOCK ###
 
     by_label, by_code = _milestoneEvents
     for code, data in by_code.items():
         ev = store.mas_getEV(data[0].eventlabel)
-        _unlockAllEventProps(ev)
+        store.mshMod_utils.unlockAllEventProps(ev)
 
         # Keep a reference to event object saved in events list.
         data_pair = (ev, data[1])

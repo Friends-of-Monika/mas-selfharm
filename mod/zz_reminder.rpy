@@ -51,6 +51,17 @@ init 4 python in mshMod_reminder:
     import store
     import datetime
 
+    ### Workaround for handling action/conditional reassignments ###
+
+    _reminderEvents = dict()
+
+    def addReminderEvent(event):
+        _reminderEvents[event.eventlabel] = (event, event.conditional, event.action)
+        store.addEvent(event)
+
+
+    ### Assertions ###
+
     def _assertReminderActive(ev_label):
         if not isReminderActive(ev_label):
             raise AssertionError("expected reminder to be active")
@@ -58,6 +69,9 @@ init 4 python in mshMod_reminder:
     def _assertReminderInactive(ev_label):
         if isReminderActive(ev_label):
             raise AssertionError("expected reminder to be inactive")
+
+
+    ### Public methods ###
 
     def addRecurringReminder(ev_label, delay, delta, latency):
         _assertReminderInactive(ev_label)
@@ -97,7 +111,6 @@ init 4 python in mshMod_reminder:
         while True:
             trigger, delta, latency = store.persistent._mshMod_active_reminders[ev_label]
 
-            store.mas_submod_utils.submod_log.info(str((store.persistent._mshMod_active_reminders[ev_label], now)))
             store.persistent._mshMod_active_reminders[ev_label] = (
                 trigger + delta,  # ensure we base new trigger datetime off the initial trigger timedelta
                 delta, latency
@@ -121,7 +134,20 @@ init 4 python in mshMod_reminder:
         del store.persistent._mshMod_active_reminders[ev_label]
 
 
-    ### Missed reminder handling
+init 7 python in mshMod_reminder:
+
+    import store
+
+    ### Event properties unlock ###
+
+    for ev_label in _reminderEvents.keys():
+        ev = store.mas_getEV(ev_label)
+        store.mshMod_utils.unlockAllEventProps(ev)
+
+        _ev, conditional, action = _reminderEvents[ev_label]
+        _reminderEvents[ev_label] = (ev, conditional, action)
+
+    ### Missed reminder handling ###
 
     def _handleMissedReminders():
         for ev_label in store.persistent._mshMod_active_reminders.keys():
@@ -131,12 +157,3 @@ init 4 python in mshMod_reminder:
 
     _handleMissedReminders()
     store.mas_submod_utils.registerFunction("ch30_day", _handleMissedReminders)
-
-
-init 4 python in mshMod_reminder:
-
-    _reminderEvents = dict()
-
-    def addReminderEvent(event):
-        _reminderEvents[event.eventlabel] = (event, event.conditional, event.action)
-        store.addEvent(event)
