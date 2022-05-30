@@ -57,8 +57,8 @@ jobs:
       - name: Create new release draft
         uses: softprops/action-gh-release@v1
         with:
-          name: Release v${{ env.VERSION }}
-          tag_name: v${{ env.VERSION }}
+          name: Release ${{ env.VERSION }}
+          tag_name: ${{ env.VERSION }}
           draft: true
           files: |
             build/out/msh-mod-${{ env.VERSION }}.zip
