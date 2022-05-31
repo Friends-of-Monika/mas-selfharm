@@ -60,6 +60,9 @@ You can check the detailed download instructions at the [wiki](https://github.co
 
 We've had plenty of people working on and contributing to this submod! You can find the maintained list of them at the [wiki](https://github.com/my-otter-self/MAS_selfharm/wiki/%E2%9C%92%EF%B8%8F-MAS-Self-Harm-Mod-Team).
 
+**Note:** CC BY-NC-ND 4.0 only covers content created by authors, contributors or maintainers of this mod (repository) and does not cover
+anything that was created by third party (as attributed in [Credits](https://github.com/my-otter-self/MAS_selfharm/wiki/%F0%9F%93%9D-Credits) wiki page.)
+
 ## 💬 Join our Discord
 
 We're up to chat! Come join us at our Discord server [here](https://mon.icu/discord).
