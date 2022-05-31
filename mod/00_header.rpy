@@ -14,7 +14,7 @@ init -989 python:
     if store.mas_submod_utils.isSubmodInstalled("Submod Updater Plugin"):
         store.sup_utils.SubmodUpdater(
             submod="MAS Self Harm Submod",
-            user_name="friends-of-monika",
+            user_name="my-otter-self",
             repository_name="mas_selfharm",
             submod_dir="/Submods/MAS Self Harm Submod",
             extraction_depth=3
