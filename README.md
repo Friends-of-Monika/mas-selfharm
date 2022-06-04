@@ -1,6 +1,7 @@
 <h1 align="center">💛 MAS Self-Harm Submod 💛</h1>
 <h4 align="center">Awareness about self-harm and support to self-harmers, with different
 techniques, milestones, checkups and new dialogue and spritepacks</h3>
+
 <p align="center">
   <a href="https://github.com/my-otter-self/monika_selfharm/actions/workflows/lint-on-push.yml">
     <img alt="Build status" src="https://img.shields.io/github/workflow/status/my-otter-self/monika_selfharm/Lint%20source%20tree%20on%20push/main">
@@ -17,6 +18,7 @@ techniques, milestones, checkups and new dialogue and spritepacks</h3>
 </p>
 
 <h4 align="center">💜 IN MEMORY OF T. H. 💜</h4>
+
 
 ## ⚠️ Important notice (please read!)
 
@@ -37,8 +39,9 @@ going through hard times.
 
 Click [here](https://github.com/my-otter-self/MAS_selfharm/wiki/%F0%9F%91%90-Suicide-Hotlines) to see all the International Suicide Hotlines at the wiki.
 
+
 ## 🌟 Features
-  
+
   * Tons of new dialogues and events
   * Dozens of new songs (and dialogues for them!)
   * A whole lot of urge relieving techniques
@@ -52,16 +55,25 @@ Click [here](https://github.com/my-otter-self/MAS_selfharm/wiki/%F0%9F%91%90-Sui
 
 You can check the full list at the [wiki](https://github.com/my-otter-self/MAS_selfharm/wiki/%F0%9F%8C%9F-Features-(full)).
 
+
 ## ❓ Download instructions
 
 You can check the detailed download instructions at the [wiki](https://github.com/my-otter-self/MAS_selfharm/wiki/%E2%9D%93-Download-instructions).
+
 
 ## ✒️ Authors
 
 We've had plenty of people working on and contributing to this submod! You can find the maintained list of them at the [wiki](https://github.com/my-otter-self/MAS_selfharm/wiki/%E2%9C%92%EF%B8%8F-MAS-Self-Harm-Mod-Team).
 
+<p align="center">
+  <a href="https://github.com/my-otter-self/mas_selfharm/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=my-otter-self/mas_selfharm&max=6" />
+  </a>
+</p>
+
 **Note:** CC BY-NC-ND 4.0 only covers content created by authors, contributors or maintainers of this mod (repository) and does not cover
 anything that was created by third party (as attributed in [Credits](https://github.com/my-otter-self/MAS_selfharm/wiki/%F0%9F%93%9D-Credits) wiki page.)
+
 
 ## 💬 Join our Discord
 
