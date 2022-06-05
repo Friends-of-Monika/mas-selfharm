@@ -1,3 +1,16 @@
+1.0.4
+
+Fixed intro topic showing up regardless of player harming self or not
+Fixed crash occurring if player told Monika they harm self in random topic
+
+
+1.0.3
+
+Fix compliment bookmarkability
+Fixed songs having TYPE_LONG
+Fixed probing questions exception if player is on streak already
+
+
 1.0.2
 
 Added artificial error screen in case user has installed source code version of the mod

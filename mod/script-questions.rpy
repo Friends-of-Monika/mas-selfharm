@@ -5,7 +5,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_probing_questions_intro",
-            random=True
+            conditional="persistent._msh_mod_pm_did_selfharm",
+            action=EV_ACT_RANDOM
         )
     )
 
@@ -65,7 +66,14 @@ label mshMod_probing_questions_talk:
 
                 # Ensure we have this RIGHT BEFORE the return so that if DDLC process dies
                 # and topic repeats again, we'll have HUGE odds we are not on a streak yet.
-                $ store.mshMod_sober_streak.beginStreak(begin=since)
+                python:
+                    store.mshMod_sober_streak.beginStreak(begin=since)
+
+                    mas_hideEVL("mshMod_sober_promise", "EVE", lock=True)
+
+                    mas_showEVL("mshMod_sober_check", "EVE", unlock=True)
+                    mas_showEVL("mshMod_sober_relapse", "EVE", unlock=True)
+
 
             "I don't know.":
                 m 2eka "Aww, [player], that's okay!"
