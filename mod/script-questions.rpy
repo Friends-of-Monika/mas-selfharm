@@ -74,6 +74,7 @@ label mshMod_probing_questions_talk:
                     mas_showEVL("mshMod_sober_check", "EVE", unlock=True)
                     mas_showEVL("mshMod_sober_relapse", "EVE", unlock=True)
 
+
             "I don't know.":
                 m 2eka "Aww, [player], that's okay!"
                 m 7hub "If you ever want to keep track of it, you can tell me by promising you'll stay self-harm sober."
