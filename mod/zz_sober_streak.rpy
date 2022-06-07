@@ -101,8 +101,7 @@ init 4 python in mshMod_sober_streak:
 
         store.persistent._msh_mod_pm_sober_streak = (begin or datetime.date.today())
         _rebuildMilestoneDates()
-        # NOTE: not calling _updateMilestoneEvents() because NORMALLY we'd only have something
-        # only next week, not right away.
+        _updateMilestoneEvents()
 
         # Show streak check event
         store.mas_showEVL("mshMod_sober_check", "EVE", unlock=True)
@@ -583,7 +582,6 @@ init 7 python in mshMod_sober_streak:
     by_label, by_code = _milestoneEvents
     for code, data in by_code.items():
         ev = store.mas_getEV(data[0].eventlabel)
-        store.mshMod_utils.unlockAllEventProps(ev)
 
         # Keep a reference to event object saved in events list.
         data_pair = (ev, data[1])
