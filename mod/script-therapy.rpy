@@ -14,8 +14,10 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_ask_about_therapy",
             category=["mental health"],
+            prompt="[player] and therapy",
             conditional="persistent._msh_mod_pm_did_selfharm",
-            action=EV_ACT_RANDOM
+            action=EV_ACT_RANDOM,
+            rules={"bookmark_rule": store.mas_bookmarks_derand.WHITELIST}
         )
     )
 
