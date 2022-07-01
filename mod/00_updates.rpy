@@ -23,3 +23,7 @@ label mas_self_harm_submod_team_mas_self_harm_submod_v1_0_5(version="v1_0_5"):
             # Unlock start_date and end_date
             Event.unlockInit("start_date", ev_label=ev_label)
             Event.unlockInit("end_date", ev_label=ev_label)
+    return
+
+label mas_self_harm_submod_team_mas_self_harm_submod_v1_0_6(version="v1_0_6"):
+    jump mas_self_harm_submod_team_mas_self_harm_submod_v1_0_5
