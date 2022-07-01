@@ -541,7 +541,7 @@ init 4 python in mshMod_sober_streak:
             )
 
     def unlockMilestone():
-        ev = store.mas_submod_utils.this_ev
+        ev = store.mas_globals.this_ev
         ev.random, ev.unlocked = True, True
 
 
