@@ -8,10 +8,10 @@ init 5 python in mas_bookmarks_derand:
 init 11 python in mshMod_playlist:
 
     import store
-    import mutagen.oggvorbis as mutaogg
+    import os
 
     CUSTOM_PLAYLIST_DIR_SUFFIX = "Submods/MAS Self Harm Submod/music/"
-    CUSTOM_PLAYLIST_DIR = store.config.basedir + "/game/" + CUSTOM_PLAYLIST_DIR_SUFFIX
+    CUSTOM_PLAYLIST_DIR = os.path.join(renpy.config.gamedir, CUSTOM_PLAYLIST_DIR_SUFFIX)
     CUSTOM_PLAYLIST_RELDIR = CUSTOM_PLAYLIST_DIR_SUFFIX
     PLAYLIST_FILE = "playlist.ogg"
 
