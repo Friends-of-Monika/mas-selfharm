@@ -19,6 +19,10 @@ init 11 python in mshMod_playlist:
 
     def showPlaylist():
         _audio_file, _ext = store.songs._getAudioFile(CUSTOM_PLAYLIST_DIR + PLAYLIST_FILE)
+        if not _audio_file or not _ext:
+            store.mas_submod_utils.submod_log.error("[MAS Self Harm Submod] Could not load playlist file.")
+            return
+
         disp_name = store.songs._getDispName(_audio_file, _ext, PLAYLIST_FILE)
         loop_prefix = store.songs._getLoopData(_audio_file, _ext)
 
