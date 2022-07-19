@@ -1,3 +1,14 @@
+1.0.6
+
+Fixed issue on milestone unlock (thanks to @FellTheSimp)
+
+
+1.0.5
+
+Fixed milestone topics appearing repeatedly (#73)
+Fixed '[player] and therapy' popping up in 'Repeat conversation' (#74)
+
+
 1.0.4
 
 Fixed intro topic showing up regardless of player harming self or not
