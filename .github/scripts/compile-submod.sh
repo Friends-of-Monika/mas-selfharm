@@ -1,6 +1,6 @@
 #!/bin/sh
 
-_mod_dir="game/Submods/$(perl -ne 'if (/name="([^"]*)"/) { print $1; exit }' "mod/00_header.rpy")"
+_mod_dir="game/Submods/$(perl -ne 'if (/name="([^"]*)"/) { print $1; exit }' "mod/aa_header.rpy")"
 
 # Clear MAS logs
 if [ -d build/ddlc/log ]; then
@@ -9,7 +9,7 @@ fi
 
 # Copy .rpy files from mod folder
 mkdir -p "build/ddlc/$_mod_dir"
-(cd mod; find . -iname '*.rpy' -not -iname '00_source_dist_trap.rpy' -exec cp -r --parents \{\} "../build/ddlc/$_mod_dir" \;)
+(cd mod; find . -iname '*.rpy' -not -iname 'aa_source_dist_trap.rpy' -exec cp -r --parents \{\} "../build/ddlc/$_mod_dir" \;)
 
 # Move spritepacks into their respective locations
 find spritepacks -mindepth 2 -maxdepth 2 -type d -exec cp -RT \{\} build/ddlc \;
