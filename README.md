@@ -1,5 +1,5 @@
 <h1 align="center">💛 MAS Self-Harm Submod 💛</h1>
-<h4 align="center">Awareness about self-harm and support to self-harmers, with different
+<h3 align="center">Awareness about self-harm and support to self-harmers, with different
 techniques, milestones, checkups and new dialogue and spritepacks</h3>
 
 <p align="center">
