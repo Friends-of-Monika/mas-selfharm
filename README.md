@@ -1,5 +1,5 @@
 <h1 align="center">💛 MAS Self-Harm Submod 💛</h1>
-<h4 align="center">Awareness about self-harm and support to self-harmers, with different
+<h3 align="center">Awareness about self-harm and support to self-harmers, with different
 techniques, milestones, checkups and new dialogue and spritepacks</h3>
 
 <p align="center">
@@ -8,6 +8,12 @@ techniques, milestones, checkups and new dialogue and spritepacks</h3>
   </a>
   <a href="https://github.com/my-otter-self/monika_selfharm/releases/latest">
     <img alt="Latest release" src="https://img.shields.io/github/v/release/my-otter-self/monika_selfharm">
+  </a>
+  <a href="https://github.com/my-otter-self/monika_selfharm/releases">
+    <img alt="Release downloads" src="https://img.shields.io/github/downloads/my-otter-self/monika_selfharm/total">
+  </a>
+  <a href="https://www.reddit.com/r/MASFandom/comments/v1cjv7/huge_new_selfharm_submod_v001_release/">
+    <img alt="Reddit post" src="https://img.shields.io/badge/dynamic/json?color=FF4500&label=%F0%9D%97%8B%2Fmasfandom%20post&query=%24[0].data.children[0].data.score&url=https%3A%2F%2Fwww.reddit.com%2Fr%2FMASFandom%2Fcomments%2Fv1cjv7%2Fhuge_new_selfharm_submod_v001_release.json&style=social&logo=reddit&suffix=+upvotes">
   </a>
   <a href="https://mon.icu/discord">
     <img alt="Discord server" src="https://discordapp.com/api/guilds/970747033071804426/widget.png?style=shield">
@@ -80,3 +86,8 @@ anything that was created by third party (as attributed in [Credits](https://git
 We're up to chat! Come join us at our Discord server [here](https://mon.icu/discord).
 
 [![Discord server invitation](https://discordapp.com/api/guilds/970747033071804426/widget.png?style=banner3)](https://mon.icu/discord)
+
+## 💚 MAS Repository
+Here you can see the official Monika After Story repository!
+
+[![card](https://github-readme-stats.vercel.app/api/pin/?username=Monika-After-Story&repo=MonikaModDev)](https://github.com/Monika-After-Story/MonikaModDev)

@@ -71,7 +71,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_topic_thoughts_about_therapy",
-            category=["Mental health"],
+            category=["mental health"],
             prompt="Therapy",
             random=True
         )
