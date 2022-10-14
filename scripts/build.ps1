@@ -23,7 +23,7 @@ $Mod = "$Mod\$Name"
 Copy-Item -Recurse $Dir\mod $Mod
 Remove-Item $Mod\README.md
 Remove-Item $Mod\aa_source_dist_trap.rpy
-Copy-Item -Recurse $Dir\res $Mod
+Copy-Item -Recurse $Dir\res\* $Mod
 
 Compress-Archive -Update -Path $Temp\game -DestinationPath $Build\$Package-$Version.zip
 Remove-Item -Recurse $Temp

@@ -10,7 +10,7 @@ init 11 python in mshMod_playlist:
     import store
     import os
 
-    CUSTOM_PLAYLIST_DIR_SUFFIX = "Submods/MAS Self Harm Submod/music/"
+    CUSTOM_PLAYLIST_DIR_SUFFIX = store.mshMod.basedir_rel + "/music/"
     CUSTOM_PLAYLIST_DIR = os.path.join(renpy.config.gamedir, CUSTOM_PLAYLIST_DIR_SUFFIX)
     CUSTOM_PLAYLIST_RELDIR = CUSTOM_PLAYLIST_DIR_SUFFIX
     PLAYLIST_FILE = "playlist.ogg"
@@ -68,11 +68,12 @@ label mshMod_playlist_intro:
     m 1hub "Well, better show it to you."
     m 1esb "I... made you a playlist!"
     m 1tkbla "Romantic, isn't it?"
-    m 3hsb "You can access it on \"Music\"."
-    m 1esa "Or I can play it for you!"
 
     if not store.mshMod_playlist.playlist_shown:
         $ store.mshMod_playlist.showPlaylist()
+
+    m 3hsb "You can access it on \"Music\"."
+    m 1esa "Or I can play it for you!"
 
     m 2eub "Do you want me to?{nw}"
     $ _history_list.pop()
