@@ -39,6 +39,7 @@ init 11 python in mshMod_playlist:
         else:
             store.songs.music_pages[page].append(choice)
 
+        global playlist_shown
         store.persistent._mas_pm_added_custom_bgm = True
         playlist_shown = True
 
