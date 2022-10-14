@@ -5,7 +5,10 @@ init -990 python in mas_submod_utils:
             name="MAS Self Harm Submod",
             description="Awareness about self-harm and support to self-harmers, with different "
                         "techniques, milestones, checkups and new dialogue and spritepacks.",
-            version="1.0.7"
+            version="1.0.7",
+            version_updates={
+                "mas_self_harm_submod_team_mas_self_harm_submod_v1_0_6": "mas_self_harm_submod_team_mas_self_harm_submod_v1_0_7"
+            }
         )
 
 init -989 python:
@@ -15,10 +18,5 @@ init -989 python:
                 submod="MAS Self Harm Submod",
                 user_name="my-otter-self",
                 repository_name="mas_selfharm",
-                submod_dir="/Submods/MAS Self Harm Submod",
-                extraction_depth=3,
-                redirected_files=(
-                    "README.md",
-                    "LICENSE.txt"
-                )
+                extraction_depth=3
             )
