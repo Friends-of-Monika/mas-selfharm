@@ -276,14 +276,14 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_technique_listening",
+            eventlabel="mshMod_technique_listening_2",
             prompt="Listening",
             unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
 
-label mshMod_technique_listening:
+label mshMod_technique_listening_2:
     m 3eua "Try listening to a few songs you love!"
     m 3eub "But don't {i}just{/i} listen. {w=0.3}{nw}"
     extend 7etb "Try paying attention."
@@ -605,14 +605,14 @@ init 5 python:
     addEvent(
         Event(
             persistent._msh_mod_technique_database,
-            eventlabel="mshMod_technique_listening",
+            eventlabel="mshMod_technique_listening_1",
             prompt="Listening",
             unlocked=True
         ),
         code="MSH_MOD_TCH"
     )
 
-label mshMod_technique_listening:
+label mshMod_technique_listening_1:
     m 3eua "Let's try to listen to some music?"
     m 7eub "Even better if it's music that expresses how you feel."
     m 6wub "It can be VERY loudly if you want."

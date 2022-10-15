@@ -14,7 +14,7 @@ init 5 python:
             prompt="Sunny day",
             category=["mental health"],
             conditional="mas_globals.time_of_day_3state in ('morning', 'afternoon')",
-            action=EV_ACT_RANDOM
+            action=EV_ACT_QUEUE
         )
     )
 
@@ -27,6 +27,9 @@ label mshMod_topic_sunny_day:
     m 1wub "Maybe bring a book with you so you can relax even more."
     m 1dua "Enjoying literature in the nature would surely relax me..."
     m 1eka "I hope this works for you, too."
+
+    $ store.mas_globals.this_ev.random = True
+    $ store.mas_globals.this_ev.unlocked = True
     return
 
 

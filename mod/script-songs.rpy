@@ -8,10 +8,10 @@ init 5 python in mas_bookmarks_derand:
 init 11 python in mshMod_playlist:
 
     import store
-    import mutagen.oggvorbis as mutaogg
+    import os
 
-    CUSTOM_PLAYLIST_DIR_SUFFIX = "Submods/MAS Self Harm Submod/music/"
-    CUSTOM_PLAYLIST_DIR = store.config.basedir + "/game/" + CUSTOM_PLAYLIST_DIR_SUFFIX
+    CUSTOM_PLAYLIST_DIR_SUFFIX = store.mshMod.basedir_rel + "/music/"
+    CUSTOM_PLAYLIST_DIR = os.path.join(renpy.config.gamedir, CUSTOM_PLAYLIST_DIR_SUFFIX)
     CUSTOM_PLAYLIST_RELDIR = CUSTOM_PLAYLIST_DIR_SUFFIX
     PLAYLIST_FILE = "playlist.ogg"
 
@@ -19,6 +19,10 @@ init 11 python in mshMod_playlist:
 
     def showPlaylist():
         _audio_file, _ext = store.songs._getAudioFile(CUSTOM_PLAYLIST_DIR + PLAYLIST_FILE)
+        if not _audio_file or not _ext:
+            store.mas_submod_utils.submod_log.error("[MAS Self Harm Submod] Could not load playlist file.")
+            return
+
         disp_name = store.songs._getDispName(_audio_file, _ext, PLAYLIST_FILE)
         loop_prefix = store.songs._getLoopData(_audio_file, _ext)
 
@@ -35,6 +39,7 @@ init 11 python in mshMod_playlist:
         else:
             store.songs.music_pages[page].append(choice)
 
+        global playlist_shown
         store.persistent._mas_pm_added_custom_bgm = True
         playlist_shown = True
 
@@ -63,11 +68,12 @@ label mshMod_playlist_intro:
     m 1hub "Well, better show it to you."
     m 1esb "I... made you a playlist!"
     m 1tkbla "Romantic, isn't it?"
-    m 3hsb "You can access it on \"Music\"."
-    m 1esa "Or I can play it for you!"
 
     if not store.mshMod_playlist.playlist_shown:
         $ store.mshMod_playlist.showPlaylist()
+
+    m 3hsb "You can access it on \"Music\"."
+    m 1esa "Or I can play it for you!"
 
     m 2eub "Do you want me to?{nw}"
     $ _history_list.pop()

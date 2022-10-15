@@ -1,5 +1,7 @@
 # Player diary script.
 
+define persistent._mshMod_created_diary = False
+
 #intro
 init 5 python:
     addEvent(
@@ -16,7 +18,7 @@ init 5 python:
 label mshMod_writing_to_diary:
     $ shown_count = mas_getEVLPropValue("mshMod_writing_to_diary", "shown_count", 0)
 
-    if shown_count == 0:
+    if shown_count == 0 or not persistent._mshMod_created_diary:
         jump mshMod_writing_to_diary_intro
 
     jump mshMod_writing_to_diary_repeat
@@ -53,6 +55,7 @@ label mshMod_writing_to_diary_intro:
                     f.close()
 
             pause(0.5)
+            $ persistent._mshMod_created_diary = True
 
             m 3esb "There you go!"
             m 1eua "It should be in the characters folder."
