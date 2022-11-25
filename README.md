@@ -59,11 +59,6 @@ Click [here](https://github.com/my-otter-self/MAS_selfharm/wiki/%F0%9F%91%90-Sui
 You can check the full list at the [wiki](https://github.com/my-otter-self/MAS_selfharm/wiki/%F0%9F%8C%9F-Features-(full)).
 
 
-## ❓ Download instructions
-
-You can check the detailed download instructions at the [wiki](https://github.com/my-otter-self/MAS_selfharm/wiki/%E2%9D%93-Download-instructions).
-
-
 ## ✒️ Authors
 
 We've had plenty of people working on and contributing to this submod! You can find the maintained list of them at the [wiki](https://github.com/my-otter-self/MAS_selfharm/wiki/%E2%9C%92%EF%B8%8F-MAS-Self-Harm-Mod-Team).
@@ -77,12 +72,6 @@ We've had plenty of people working on and contributing to this submod! You can f
 **Note:** CC BY-NC-ND 4.0 only covers content created by authors, contributors or maintainers of this mod (repository) and does not cover
 anything that was created by third party (as attributed in [Credits](https://github.com/my-otter-self/MAS_selfharm/wiki/%F0%9F%93%9D-Credits) wiki page.)
 
-
-## 💬 Join our Discord
-
-We're up to chat! Come join us at our Discord server [here](https://mon.icu/discord).
-
-[![Discord server invitation](https://discordapp.com/api/guilds/970747033071804426/widget.png?style=banner3)](https://mon.icu/discord)
 
 ## 💚 MAS Repository
 Here you can see the official Monika After Story repository!
