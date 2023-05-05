@@ -42,8 +42,8 @@ init 5 python:
             eventlabel="mshMod_topic_awareness_day",
             prompt="Self-Harm Awareness Day",
             category=["self-harm"],
-            start_date=datetime.date(1, 3, 2022),
-            end_date=datetime.date(1, 3, 2022) + datetime.timedelta(days=1),
+            start_date=datetime.date(2022, 3, 1),
+            end_date=datetime.date(2022, 3, 1) + datetime.timedelta(days=1),
             action=EV_ACT_RANDOM,
             years=[]
         )
@@ -74,8 +74,9 @@ label mshMod_topic_awareness_day:
     m 2eka "Anyway! Thanks for listening!"
     m 1hub "I love you, [player]!"
 
-    # Ensure it'll render on calendar without a need to restart.
-    $ calendar.addRepeatable("mshMod_topic_awareness_day", _("Self-harm awareness day"), month=3, day=1, year_param=[])
+    # Ensure it'll render on calendar without a need to restart. Only add once.
+    if "mshMod_topic_awareness_day" not in calendar.calendar_database[3][1]:
+        $ calendar.addRepeatable("mshMod_topic_awareness_day", _("Self-harm awareness day"), month=3, day=1, year_param=[])
 
     return "love"
 
