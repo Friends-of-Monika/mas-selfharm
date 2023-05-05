@@ -2,6 +2,7 @@
 
 Fixed issue with SIAD date sometimes not working as expected (#1). Thanks, @Chamelllemon!
 Updated the submod header to now reference this (Friends-of-Monika/mas-selfharm) repository.
+Formatted spritepack JSON files.
 
 
 1.0.7
