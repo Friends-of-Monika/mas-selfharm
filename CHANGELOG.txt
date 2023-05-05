@@ -1,3 +1,19 @@
+1.0.8
+
+Fixed issue with SIAD date sometimes not working as expected (#1). Thanks, @Chamelllemon!
+Updated the submod header to now reference this (Friends-of-Monika/mas-selfharm) repository.
+
+
+1.0.7
+
+First version to be maintained by Friends of Monika and @dreamscached.
+Thank you for everything, Gaby. I'll take it from here.
+
+Starting with this version, no new contentful updates are expected.
+We'll focus on fixing bugs and keeping this submod compatible with future
+MAS updates and version releases.
+
+
 1.0.6
 
 Fixed issue on milestone unlock (thanks to @FellTheSimp)
@@ -17,7 +33,7 @@ Fixed crash occurring if player told Monika they harm self in random topic
 
 1.0.3
 
-Fix compliment bookmarkability
+Fixed compliment bookmarkability
 Fixed songs having TYPE_LONG
 Fixed probing questions exception if player is on streak already
 
