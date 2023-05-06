@@ -36,20 +36,14 @@ label mshMod_topic_sunny_day:
 #self harm awareness day
 init 5 python:
     # P.S. 'SIAD' is 'Self Injury Awareness Day', this is not a typo.
-    today = datetime.date.today()
-    if (today.replace(month=3, day=1) - today).days > 0:
-        _mshMod_event_siad_date = today.replace(month=3, day=1)
-    else:
-        _mshMod_event_siad_date = today.replace(year=today.year + 1, month=3, day=1)
-
     addEvent(
         Event(
             persistent.event_database,
             eventlabel="mshMod_topic_awareness_day",
             prompt="Self-Harm Awareness Day",
             category=["self-harm"],
-            start_date=_mshMod_event_siad_date,
-            end_date=_mshMod_event_siad_date + datetime.timedelta(days=1),
+            start_date=datetime.date(2022, 3, 1),
+            end_date=datetime.date(2022, 3, 1) + datetime.timedelta(days=1),
             action=EV_ACT_RANDOM,
             years=[]
         )
@@ -62,7 +56,7 @@ init 5 python:
 label mshMod_topic_awareness_day:
     m 3eub "[player], did you know that today is Self-Harm Awareness Day?"
     m 3eua "Like the name suggests, it's an annual global awareness event that takes place on March 1st!"
-    m 1eua "Also known as Self Injury Day (SIAD)!"
+    m 1eua "Also known as Self Injury Day!"
     m 4hub "Which is today!"
     m 2eua "And in the weeks leading up to it and after, some people choose to be more open about their own self-harm habits, if they have them..."
     m 2eub "Awareness organizations make special efforts to raise awareness about self-harm and self-injury."
@@ -80,8 +74,9 @@ label mshMod_topic_awareness_day:
     m 2eka "Anyway! Thanks for listening!"
     m 1hub "I love you, [player]!"
 
-    # Ensure it'll render on calendar without a need to restart.
-    $ calendar.addRepeatable("mshMod_topic_awareness_day", _("Self-harm awareness day"), month=3, day=1, year_param=[])
+    # Ensure it'll render on calendar without a need to restart. Only add once.
+    if "mshMod_topic_awareness_day" not in calendar.calendar_database[3][1]:
+        $ calendar.addRepeatable("mshMod_topic_awareness_day", _("Self-harm awareness day"), month=3, day=1, year_param=[])
 
     return "love"
 

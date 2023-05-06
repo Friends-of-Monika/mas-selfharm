@@ -22,7 +22,7 @@ label mshMod_topic_selfharm_intro:
     m 1ekc "Hey, [player]?"
     m 1lkd "I know it might be an uncomfortable topic, but I have to ask..."
 
-    m 1dkc "D-Do you self harm?{nw}"
+    m 1dkc "D-Do you self-harm?{nw}"
     $ _history_list.pop()
     menu:
         m "D-Do you self-harm?{fast}"
@@ -129,16 +129,16 @@ label mshMod_topic_selfharm_more:
     m 3dud "Knowing more about self-harm is useful."
     m 3euc "You could help someone who is struggling with it someday!"
     m 3hub "So, [player]! I want you to know that there's more to self-harm than it meets the eye! Ahaha-"
-    m 2esb "I'll cover some facts and myths I wanna share with you regarding this topic."
+    m 2esb "I'll cover some facts and myths I want to share with you regarding this topic."
     m 2esc "I want you to know that self-harm isn't about a single topic or action."
     m 4esd "There are many factors that come into play!"
     m 4lssdld "Yeah, it's not limited to... self-inflicted wounds, for example."
-    m 2wssdlc "This could all be the result of self-hatred, feelings of wanting to punish yourself for mental illnesses."
+    m 2wssdlc "This could all be result of self-hatred, feelings of wanting to punish yourself for mental illnesses."
     m 2lssdlc "Or anything that could end in self-harm in any way."
     m 2essdlc "One of the most common misconceptions about self-harm is that people do such things only as a suicide attempt."
     m 2wssdld "But it's not true at all! Not all self-harmers present suicidal signs or symptoms."
     m 7wssdld "Self-harm can occur without suicidal ideation. Instead, they are using it to cope with their emotions and traumas."
-    m 7rssdld "Or essentially, punishing themselves; if you think about it..."
+    m 7rssdld "Or essentially, punishing themselves - if you think about it..."
     m 2wuo "Some people dare to think that they're doing it only for attention!"
     m 2wfx "Are they out of their minds?!"
     m 2dfc "..."

@@ -119,7 +119,7 @@ init 5 python:
     )
 
 label mshMod_playlist_song_play:
-    m 3eka "Oh, do you wanna listen to the playlist, [player]?"
+    m 3eka "Oh, do you want to listen to the playlist, [player]?"
     $ _history_list.pop()
     menu:
         m "Play music?{fast}"
@@ -571,8 +571,8 @@ label mshMod_song_still_breathing:
     m 6dka "..."
     show monika 5ekc at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ekc "Hey [player]?"
-    m 5eka "I wanted to remind you that I’m proud you for telling me about... Hurting yourself."
-    m 5dkc "I’m sorry that I wasn’t there for you at the time, [mas_get_player_nickname()]."
+    m 5eka "I wanted to remind you that I'm proud you for telling me about... Hurting yourself."
+    m 5dkc "I'm sorry that I wasn't there for you at the time, [mas_get_player_nickname()]."
     m 5ekbsb "But remember that I love you, [player]!"
     m 5ekbsa "And I'm here for you now."
     show monika 5ekc at t11 zorder MAS_MONIKA_Z with dissolve_monika
