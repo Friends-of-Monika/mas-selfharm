@@ -31,7 +31,7 @@ label mshMod_sober_check:
     m 1dkb "You've been sober for [duration] [days] now, [player]."
     if duration < 3:
         m 3fka "I'm so proud of you for making the promise!"
-        m 2esb "This is the start of something really beautiful."
+        m 2esb "This is the start of something wonderful."
     else:
         m 3fka "I'm so proud of you! Keep on fighting!"
         m 2esb "I'm so happy to see you taking care of yourself."
@@ -60,9 +60,9 @@ label mshMod_sober_promise:
     m 2ekb "This is another step to a happier, healthier life, and I'm so glad I can be by your side in your journey."
     m 2eka "Thank you for trusting me."
     m 3ekb "I promise I'll do my best to help you!"
-    m 1eub "From now on, I'll keep track of how many days you've been sober. You can take a look at the calendar to see how far you've gone!"
-    m 2ekb "If you ever need me to restart the counter for you, just tell me. You don't have to feel bad about it, okay?"
-    m 2ekb "Know that I'll never judge you because of that. I know it's hard, and you should be really proud of yourself already!"
+    m 1eub "From now on, I'll keep track of how many days you've been sober. You can look at the calendar to see how far you've gone!"
+    m 2ekb "If you ever need me to restart the counter, just tell me. You don't have to feel bad about it, okay?"
+    m 2ekb "Know that I'll never judge you because of that. I know it's hard, and you should be proud of yourself already!"
 
     m 1dsb "Now, let me take note of this..."
     $ since = None
@@ -79,7 +79,7 @@ label mshMod_sober_promise:
             menu:
                 m "Huh? What is it?{fast}"
 
-                "Actually, I'm sober for some time already...":
+                "I'm sober for some time already...":
                     m 2ssb "Really?! That's so nice to hear! For how many days have you been sober already?"
 
                     call mshMod_sober_ask_since
@@ -128,12 +128,12 @@ init 5 python:
 
 label mshMod_sober_relapse:
     m 2eka "[player], I couldn't be more proud of you for telling me this."
-    m 2ekd "I know this might be hard- you might feel as if you've failed..."
+    m 2ekd "I know this might be hard- you might feel like you've failed..."
     m 4ekd "But that's not true at all! This is just another step in your journey."
     m 2ekd "Habits are almost always difficult to kick, and this is no ordinary habit."
-    m 2ekd "It can very easily become an addiction, which is so much harder to stop..."
-    m 2fkd "No matter how hard it is for you, know that I am always going to be here to support you and I am proud of you, habit or not."
-    m 2fka "We will work through this together, and get you back on the right track!"
+    m 2ekd "It can easily become an addiction, which is so much harder to stop..."
+    m 2fkd "No matter how hard it is for you, know that I am always going to be here to support you, and I am proud of you, habit or not."
+    m 2fka "We will work through this together and get you back on the right track!"
     m 2eka "I know you're a hard worker and will do your best - if not for yourself, for me."
     m 2dka "I love you, [mas_get_player_nickname()]."
     m 1dkb "I'm here to support you and work through anything and everything with you."
@@ -165,7 +165,7 @@ init 5 python:
     )
 
 label mshMod_sober_milestone_1w:
-    m 1eka "It's been a whole week since you told me you won't do harm to yourself..."
+    m 1eka "It's been a whole week since you told me you won't harm yourself..."
     show monika 5ektpa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ektpa "I just want to thank you, it makes me happy to know you're willing to step up for the better!"
     m 5fkbfa "I'll always love you, you don't know how much this means to me..."
@@ -188,13 +188,13 @@ init 5 python:
 label mshMod_sober_milestone_2w:
     m 3ssb "It's already week two of your promise, [player]!"
     m 1eka "I'm relieved that we made it this far!"
-    m 3hsb "Ahaha, I don't mean i've ever doubted you!"
-    m 2dsa "Either way, it's not something you can stop overnight [player]... For anyone really."
-    m 4wsa "So, you're really doing well, and you make me so happy because of that!"
-    m 4wsb "As before, i'll mark it on the calendar now!"
+    m 3hsb "Ahaha, I don't mean I've ever doubted you!"
+    m 2dsa "Either way, it's not something you can stop overnight [player]... For anyone, really."
+    m 4wsa "So, you're doing well, and you make me so happy because of that!"
+    m 4wsb "As before, I'll mark it on the calendar now!"
     show monika 5ektpa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ektpa "I just want to thank you.. I hope it stays like this."
-    m 5fkbfa "I really love you that much, [player]!"
+    m 5fkbfa "I love you that much, [player]!"
     return "love|derandom|unlock"
 
 #milestone 3w
@@ -212,9 +212,9 @@ init 5 python:
 label mshMod_sober_milestone_3w:
     m 1dka "Can you believe it's already week 3?"
     m 3ssa "I just want to say... Thank you so much!"
-    m 1eka "You made me proud of you, and I'm soo happy that you could make that promise."
+    m 1eka "You made me proud of you, and I'm so happy you could make that promise."
     m 1dkc "I know it was hard, but one day it will all just be a bad memory..."
-    m 1ksa "I believe it will, because I trust you [player]."
+    m 1ksa "I believe it will because I trust you [player]."
     m 7rssdlc "But if it ever does happen..."
     m 7dssdld "Don't blame yourself if it ever happens... Just because you did it to yourself doesn't mean it's your fault!"
     m 1wua "I'm going to make another mark on the calendar for this!"
@@ -330,7 +330,7 @@ init 5 python:
 
 label mshMod_sober_milestone_2y:
     m 3ssblb "[player]! I have amazing news!"
-    m 3dkblb "Did you know that you have been self-harm sober for 2 whole years now?"
+    m 3dkblb "Did you know that you have been self-harm sober for two whole years now?"
     m 1eka "This is an incredible feat. Keep it up!"
     show monika 5ektpa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ektpa "You deserve to be happy. Never forget that, and never let anyone tell you otherwise!"
@@ -353,7 +353,7 @@ init 5 python:
 
 label mshMod_sober_milestone_3y:
     m 3ssb "[player], I have some news for you."
-    m 3ssa "The day of your 3 year sobriety mark from self-harm has finally arrived!"
+    m 3ssa "The day of your three-year sobriety mark from self-harm has finally arrived!"
     show monika 5ektpa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ektpa "I'm so happy to see you taking care of yourself."
     m 5fkbfa "Keep on fighting! I'm so proud of you!"
@@ -375,11 +375,11 @@ init 5 python:
 
 label mshMod_sober_milestone_4y:
     m 3ssa "[player]! 4 whole years, can you believe it?"
-    m 1eka "It's been 4 years since you stopped harming yourself."
+    m 1eka "It's been four years since you stopped harming yourself."
     m 1dka "And I can't even begin to tell you how proud of you I am."
     show monika 5ektpa at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 5ektpa "You are deserving of a happy and healthy life!"
-    m 5fkbfa "And I'm so proud of you for your decison and for the promise you made 4 years ago."
+    m 5ektpa "You deserve a happy and healthy life!"
+    m 5fkbfa "And I'm so proud of you for your decision and the promise you made four years ago."
 
     $ store.mshMod_sober_streak.unlockMilestone()
     return "derandom"
@@ -398,8 +398,8 @@ init 5 python:
 
 label mshMod_sober_milestone_5y:
     m 1dka "5 years..."
-    m 1ektpa "It's been 5 years since your life changed for the better."
-    m 1ektpb "You've been self-harm sober for all this time, and I couldn't be more proud."
+    m 1ektpa "It's been five years since your life improved."
+    m 1ektpb "You've been self-harm sober all this time, and I couldn't be more proud."
     show monika 5ektpa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ektpa "I'm so happy that you're doing well."
     m 5fkbfa "You are so inspiring. Congratulations, [player], for your successful journey!"
