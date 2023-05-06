@@ -20,9 +20,9 @@ label mshMod_urge:
     m 2wkd "Are you feeling... like harming yourself again?"
     m 2dkc "Oh, [mas_get_player_nickname()]..."
     m 2ekd "Okay, let's talk about it."
-    m 2eka "Before anything, I want you to know that I am always here for you."
+    m 2eka "Before anything, I want you to know I am always here for you."
     m 2eka "You know that, don't you, my love?"
-    m 2dka "You're the most important person in the whole world for me."
+    m 2dka "You're the most important person in the world for me."
     m 2dkb "And I love you so, so much."
     m 2fkb "And I always will..."
     m 2esc "Now, my [mas_get_player_nickname()]. Tell me."
@@ -32,7 +32,7 @@ label mshMod_urge:
     menu:
         m "How big is the urge you're having?{fast}"
 
-        "It's terrible, [m_name]. I think I'm really going to do it...":
+        "It's terrible, [m_name]. I think I'm going to do it...":
             jump mshMod_urge_high
 
         "It's not so urgent. I'm just... feeling weird.":
@@ -110,7 +110,7 @@ label mshMod_urge_care_good:
     m 1ekb "Oh, honey. I'm so glad!"
     m 1dkb "I'm so glad you came to talk to me, [player]."
     show monika 5fkb at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 5fkb "You can always count on me, for anything."
+    m 5fkb "You can always count on me for anything."
     show monika 1fkb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 1fkb "If it happens again, don't be afraid to ask for help."
     m 1fka "I'm here for you, [player]."
