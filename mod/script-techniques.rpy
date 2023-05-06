@@ -452,7 +452,7 @@ label mshMod_technique_videos:
 
             "No":
                 m 2eta "That's okay, [player]."
-                m 1etb "If you ever wanna see them again, just ask!"
+                m 1etb "If you ever want to see them again, just ask!"
 
     return
 
@@ -2190,7 +2190,7 @@ label mshMod_technique_shopping:
     m 2dua "It has been proved that having cute and pretty things surround you improves your mental state."
     m 2hkb "But if you don't have the money to spare right now, it's no problem!"
     m 7esb "You can hunt for stuff on Ebay or Amazon!"
-    m 2esb "Do a little wishlist of stuff you wanna buy when you get the chance."
+    m 2esb "Do a little wishlist of stuff you want to buy when you get the chance."
     return
 
 #87

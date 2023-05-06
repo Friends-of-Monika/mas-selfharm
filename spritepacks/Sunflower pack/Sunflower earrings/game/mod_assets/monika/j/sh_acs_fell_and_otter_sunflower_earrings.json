@@ -1,28 +1,28 @@
 {
-    "__author": "MAS SH submod team // fell and otter",
-    "version": 3,
-    "type": 0,
-    "name": "sh_acs_fell_and_otter_sunflower_earrings",
-    "img_sit": "sh_fell_sunflower_earrings",
-    "pose_map": {
-        "default": "0",
-        "l_default": "5"
-    },
-    "rec_layer": 10,
-    "acs_type": "earrings",
-    "mux_type": [
-        "earrings"
-    ],
-    "stay_on_start": true,
-    "giftname": "sh_sunflowerearrings",
-    "dlg_desc": "sunflower earrings",
-    "dlg_plural": true,
-    "select_info": {
-        "display_name": "Sunflower earrings",
-        "thumb": "sh_sunflower_earrings",
-        "group": "earrings",
-        "select_dlg": [
-            "Be like a flower and turn your face to the sun!"
-        ]
-    }
+  "__author": "MAS SH submod team // fell and otter",
+  "version": 3,
+  "type": 0,
+  "name": "sh_acs_fell_and_otter_sunflower_earrings",
+  "img_sit": "sh_fell_sunflower_earrings",
+  "pose_map": {
+    "default": "0",
+    "l_default": "5"
+  },
+  "rec_layer": 10,
+  "acs_type": "earrings",
+  "mux_type": [
+    "earrings"
+  ],
+  "stay_on_start": true,
+  "giftname": "sh_sunflowerearrings",
+  "dlg_desc": "sunflower earrings",
+  "dlg_plural": true,
+  "select_info": {
+    "display_name": "Sunflower earrings",
+    "thumb": "sh_sunflower_earrings",
+    "group": "earrings",
+    "select_dlg": [
+      "Be like a flower and turn your face to the sun!"
+    ]
+  }
 }

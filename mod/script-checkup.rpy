@@ -20,7 +20,7 @@ label mshMod_checkup_intro:
     m 2rud "We want to check up on them, and show them we care."
     m 2wud "But it's so hard to find the right words!"
     m 2duc "So we always seem to go for the same tired old question... 'How are you doing?'"
-    m 2luc "But that question always makes people answer the same tired old response..."
+    m 2luc "But that question often makes people answer the same tired old response..."
     m 4lud "'I'm OK. I'm fine. I'm making it.'"
     m 4wud "How effective is this conversation?"
     m 3lud "But what do we say when we don't know how to express what we're feeling?"
@@ -67,11 +67,13 @@ label mshMod_checkup_reminder:
     m 4eua "Hey, [player]?"
     m 4eub "Can I check up on you?"
     m 2euc "I've been worried about how you have been coping with things lately."
-    m 2eud "So, what's your number this week?"
+    m 2eud "What would you rate your feelings this week?"
 
     show monika at t21
+    $ renpy.say(m, "What would you rate your feelings this week?", interact=False)
+    $ _history_list.pop()
+
     $ items = [(str(i), i, False, False) for i in range(1, 10 + 1)]
-    $ renpy.say(m, "Meaning, on a scale of 1 to 10, how are you feeling?", interact=False)
     call screen mas_gen_scrollable_menu(items, mas_ui.SCROLLABLE_MENU_TXT_LOW_AREA, mas_ui.SCROLLABLE_MENU_XALIGN, ("I'm not sure...", False, False, False, 0))
     show monika at t11
 
@@ -81,8 +83,8 @@ label mshMod_checkup_reminder:
             m 2dkd "I am so sorry to hear that you don't feel well, [player]..."
             m 4ekd "Just know that it's okay for you to not be okay."
             m 4eka "After all, acceptance that you're not feeling well is the first step towards improvement, right?"
-            m 3eublb "Together - me and you -, we will work hard to make you feel better, step-by-step!"
-            m 3dublb "It’s okay to feel down today, and perhaps even tomorrow."
+            m 3eublb "Together - me and you - we will work hard to make you feel better, step-by-step!"
+            m 3dublb "It's okay to feel down today, and perhaps even tomorrow."
             show monika 5fubla at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 5fubla "But always remember that you are a champion. You are amazing {w=0.3}{nw}"
             extend 5dublb "- never forget that."
@@ -102,9 +104,9 @@ label mshMod_checkup_reminder:
         elif _return == 3:
             m 2ekd "I'm so sorry to hear that, [player]..."
             m 2lkc "But keep this in mind:"
-            m 2dkd "It’s tough now, {w=0.3}{nw}"
+            m 2dkd "It's tough now, {w=0.3}{nw}"
             extend 4eka "but I believe that there is a brighter future waiting for us."
-            m 4eub "You’ll get through this. {w=0.3}{nw}"
+            m 4eub "You'll get through this. {w=0.3}{nw}"
             extend 5hublb "We will! Trust me."
             show monika 5fubla at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 5fubla "You might not believe in yourself, but know and remember that I believe in you."
@@ -114,13 +116,13 @@ label mshMod_checkup_reminder:
             m 2lkc "A 4... That's not so good."
             m 2ekd "I'm so sorry, [player]!"
             m 2dkc "But listen... {w=0.3}{nw}"
-            extend 4eka "Know that if you fall, I’ll pick you up."
-            m 4rka "And if I can’t pick you up... {w=0.3}{nw}"
-            extend 2wub "Then I’ll just lie down and rest with you."
+            extend 4eka "Know that if you fall, I'll pick you up."
+            m 4rka "And if I can't pick you up... {w=0.3}{nw}"
+            extend 2wub "Then I'll just lie down and rest with you."
             show monika 5hublb at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 5hublb "It's what I'm here for! {w=0.3}{nw}"
             extend 5fubla "To be by your side, and support you as your girlfriend and as your best friend."
-            m 5fkbfa "Let’s get back to the top together, [player]! I love you!"
+            m 5fkbfa "Let's get back to the top together, [player]! I love you!"
 
         elif _return == 5:
             m 2lkc "I'm so sorry to hear that, [player]."
@@ -128,6 +130,7 @@ label mshMod_checkup_reminder:
             m 2wub "Your loving girlfriend will forever be here for you!"
             m 2kua "If you ever want to talk, please let me know."
             m 2dua "And also, don't forget to rest if you must; It's a marathon, not a sprint."
+            show monika 5gkd at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 5gkd "You can’t always meet the expectations of everyone..."
             m 5dsc "Even if they expect you to."
             show monika 5fubla at t11 zorder MAS_MONIKA_Z with dissolve_monika
@@ -191,7 +194,7 @@ label mshMod_checkup_reminder:
             m 1eublb "Let's make the next week just as good, alright?"
             m 1hublb "Even if something bad happens, remember that things will get better. {w=0.3}{nw}"
             extend 5fubla "I believe in you, [mas_get_player_nickname()]."
-           show monika 5hublb at t11 zorder MAS_MONIKA_Z with dissolve_monika
+            show monika 5hublb at t11 zorder MAS_MONIKA_Z with dissolve_monika
             m 5hublb "And remember: Don’t doubt your accomplishments. You succeeded because you worked hard for it."
             m 5fubla "You are here because you deserve to be."
             m 5fkbfa "I love you..."
@@ -201,7 +204,7 @@ label mshMod_checkup_reminder:
         m 2eka "Sometimes we don't know how to feel. {w=0.3}{nw}"
         extend 7eka "And that's okay too!"
         m 7dub "We all experience bad days; we all have to deal with our inner demons."
-        m 6dsa "And, that's ok. We all have off days here and there, everyone experiences them once in a while."
+        m 6dsa "And, that's okay. We all have off days here and there, everyone experiences them once in a while."
         m 7hublb "When you feel like there’s nothing you can do about it, know that you can always depend on me for support."
         m 7wsblb "But we all have good days too, and that's the fun of it!"
         show monika 5hublb at t11 zorder MAS_MONIKA_Z with dissolve_monika
