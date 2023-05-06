@@ -1,19 +1,17 @@
 init 5 python in mas_bookmarks_derand:
-    # Ensure things get bookmarked and derandomed as usual.
-    label_prefix_map["mshMod_topic_"] = label_prefix_map["monika_"]
-
+    # Ensure things get bookmarked and derandomed as usual.
+    label_prefix_map["mshMod_topic_"] = label_prefix_map["monika_"]
 # Sunflowers
 init 5 python:
-    addEvent(
-        Event(
-            persistent.event_database,
-            eventlabel="mshMod_topic_sunflowers",
-            prompt="Sunflowers",
-            category=["flowers"],
-            random=True
-        )
-    )
-
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_topic_sunflowers",
+            prompt="Sunflowers",
+            category=["flowers"],
+            random=True
+        )
+    )
 label mshMod_topic_sunflowers:
     m 1esb "[player], today I want to talk to you about a flower."
     m 3hsb "Sunflowers, specifically!"
@@ -47,16 +45,15 @@ label mshMod_topic_sunflowers:
 
 # Acacias
 init 5 python:
-    addEvent(
-        Event(
-            persistent.event_database,
-            eventlabel="mshMod_topic_acacias",
-            prompt="Acacias",
-            category=["flowers"],
-            random=True
-        )
-    )
-
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_topic_acacias",
+            prompt="Acacias",
+            category=["flowers"],
+            random=True
+        )
+    )
 label mshMod_topic_acacias:
     m 1esb "[player], can I tell you some facts about a flower?"
     m 1esa "Today we'll talk about the acacia."
@@ -81,16 +78,15 @@ label mshMod_topic_acacias:
 
 # Hyacinths
 init 5 python:
-    addEvent(
-        Event(
-            persistent.event_database,
-            eventlabel="mshMod_topic_hyacinths",
-            prompt="Hyacinths",
-            category=["flowers"],
-            random=True
-        )
-    )
-
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_topic_hyacinths",
+            prompt="Hyacinths",
+            category=["flowers"],
+            random=True
+        )
+    )
 label mshMod_topic_hyacinths:
     m 1esa "[player], let's talk about a flower today?"
     m 1hsa "Hyacinths! The optimistic flower."
@@ -120,58 +116,55 @@ label mshMod_topic_hyacinths:
 
 # White dahlias
 init 5 python:
-    addEvent(
-        Event(
-            persistent.event_database,
-            eventlabel="mshMod_topic_whitedahlias",
-            prompt="White Dahlias",
-            category=["flowers"],
-            random=True
-        )
-    )
-
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_topic_whitedahlias",
+            prompt="White Dahlias",
+            category=["flowers"],
+            random=True
+        )
+    )
 label mshMod_topic_whitedahlias:
-    m 1lsd "[player], I've been thinking about a flower."
-    m 1esb "Dahlias! {w=0.3}{nw}"
-    extend 3esb "They symbolize eternal bonds of commitment, so they are a popular flower of choice for weddings."
-    m 1msa "..."
-    m 1msb "If I could pick any flower to give you, [mas_get_player_nickname()]..."
-    m 1hsa "I would choose the dahlia. {w=0.3}{nw}"
-    extend 1hsbfb "Ehehehe~!"
-    m 4esb "These flowers also represent strength, creativity, change, and a new begginning."
-    m 4esa "You can see why this is one of the flowers that represent mental health."
-    m 7esa "The dahlia flower is known to have the ability to survive under harsh conditions..."
-    m 7hsa "And nevertheless, come out very beautiful and lovely at all times!"
-    m 1hsb "Like humans! We are great examples of adaptability and resilience."
-    m 1esb "It's also a great flower to have around since it symbolizes a positive change that we do experience in our lives."
-    m 2esb "The dahlia flower is a sign of the difference which exists in our lives when we make up our mind to give a chance to a change."
-    m 3wsb "This flower is so beautiful, to the extent that they can be easily noticed wherever they are found."
-    m 4esb "The huge presence of this flower in any place or area where they can be found makes them very special."
-    m 4hsa "When you look at the dahlia flower, you see elegance in all ramifications and words."
-    show monika 5lsb at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 5lsb "The dahlia flower is, no doubt, a flower of uniqueness. {w=0.3}{nw}"
-    extend 5rsb "It has the ability to represent the nature of us individuals."
-    m 5hsa "This flower can be seen as a sign of our ability to live in adventure and also to stay relaxed and happy at all times."
-    m 5ksb "If I had to choose one... the dahlia would be my favorite flower."
-    m 5ksbsb "Would you give me one when I cross over?"
-    m 5dsbfa "Just thinking of it makes my heart flutter..."
-    show monika 7esa at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 7esa "Thanks for listening, [mas_get_player_nickname()]!"
-    return
-
+    m 1lsd "[player], I've been thinking about a flower."
+    m 1esb "Dahlias! {w=0.3}{nw}"
+    extend 3esb "They symbolize eternal bonds of commitment, so they are a popular flower of choice for weddings."
+    m 1msa "..."
+    m 1msb "If I could pick any flower to give you, [mas_get_player_nickname()]..."
+    m 1hsa "I would choose the dahlia. {w=0.3}{nw}"
+    extend 1hsbfb "Ehehehe~!"
+    m 4esb "These flowers also represent strength, creativity, change, and a new beginning."
+    m 4esa "You can see why this is one of the flowers that represent mental health."
+    m 7esa "The dahlia flower is known to have the ability to survive under harsh conditions..."
+    m 7hsa "And nevertheless, come out very beautiful and lovely at all times!"
+    m 1hsb "Like humans! We are great examples of adaptability and resilience."
+    m 1esb "It's also a great flower to have around since it symbolizes a positive change that we do experience in our lives."
+    m 2esb "The dahlia flower is a sign of the difference which exists in our lives when we make up our mind to give a chance to a change."
+    m 3wsb "This flower is so beautiful, to the extent that they can be easily noticed wherever they are found."
+    m 4esb "The huge presence of this flower in any place or area where they can be found makes them very special."
+    m 4hsa "When you look at the dahlia flower, you see elegance in all ramifications and words."
+    show monika 5lsb at t11 zorder MAS_MONIKA_Z with dissolve_monika
+    m 5lsb "The dahlia flower is, no doubt, a flower of uniqueness. {w=0.3}{nw}"
+    extend 5rsb "It can represent the nature of us individuals."
+    m 5hsa "This flower can be seen as a sign of our ability to live in adventure and also to stay relaxed and happy at all times."
+    m 5ksb "If I had to choose one... the dahlia would be my favorite flower."
+    m 5ksbsb "Would you give me one when I cross over?"
+    m 5dsbfa "Just thinking of it makes my heart flutter..."
+    show monika 7esa at t11 zorder MAS_MONIKA_Z with dissolve_monika
+    m 7esa "Thanks for listening, [mas_get_player_nickname()]!"
+    return
 
 # Flannel flowers
 init 5 python:
-    addEvent(
-        Event(
-            persistent.event_database,
-            eventlabel="mshMod_topic_flannelflowers",
-            prompt="Flannel Flowers",
-            category=["flowers"],
-            random=True
-        )
-    )
-
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_topic_flannelflowers",
+            prompt="Flannel Flowers",
+            category=["flowers"],
+            random=True
+        )
+    )
 label mshMod_topic_flannelflowers:
     m 1esa "[player]! Have you ever seen a flannel flower?"
     m 1hsa "They're gorgeous flowers which feel like flannel when you touch them!"
@@ -191,16 +184,15 @@ label mshMod_topic_flannelflowers:
 
 # Lotus flowers
 init 5 python:
-    addEvent(
-        Event(
-            persistent.event_database,
-            eventlabel="mshMod_topic_lotusflower",
-            prompt="Lotus Flowers",
-            category=["flowers"],
-            random=True
-        )
-    )
-
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mshMod_topic_lotusflower",
+            prompt="Lotus Flowers",
+            category=["flowers"],
+            random=True
+        )
+    )
 label mshMod_topic_lotusflower:
     m 7esb "[player], do you like lotus flowers?"
     m 7hsb "I think they're so beautiful! {w=0.3}{nw}"
@@ -226,7 +218,7 @@ label mshMod_topic_lotusflower:
     m 1esb "Our struggles enhance our natural inner strength, and that is surely something to be proud of."
     m 1tsc "Like the lotus, if you can try your hardest to see the faint light and beauty of day through murky waters..."
     m 1esa "Then you will soon rise above your circumstances and bask in the sun."
-    m 1esb "Your struggles will transform you into a unwavering flower, [player]."
+    m 1esb "Your struggles will transform you into an unwavering flower, [player]."
     m 2hsb "Believe your girlfriend's words! {w=0.3}{nw}"
     extend 5hsb "Ahahaha~"
     show monika 5fsb at t11 zorder MAS_MONIKA_Z with dissolve_monika
