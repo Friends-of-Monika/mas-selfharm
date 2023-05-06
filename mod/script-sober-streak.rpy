@@ -285,7 +285,7 @@ label mshMod_sober_milestone_6m:
     m 3ssa "[player]!"
     m 3ssb "It's been 6 months since you made your promise!"
     m 3wsb "That's a long time!"
-    m 1eka "It may not seem like much in the grand scheme of things, but it's still a big acomplishment."
+    m 1eka "It may not seem like much in the grand scheme of things, but it's still a big accomplishment."
     show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5fkbfa "I love you so much! Thank you for staying safe."
 

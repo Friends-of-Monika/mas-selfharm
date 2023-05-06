@@ -52,19 +52,21 @@ or other appropriate help; there's always hope!
 ## ✒️ Authors
 
 We've had plenty of people working on and contributing to this submod... In the past. Unfortunately, the submod is no longer
-updated with new content following Otter's leaving notice and team breakup. I, dreamscached, however swear to carry on with
-the job I once have taken under my own responsibility, and this submod will live on.
+updated with new content following Otter's leaving notice and team breakup
 
 Here's a list of people that used to work on this mod:
 
-* Otter
-* dreamscached
-* fukawabunny
-* Sol
-* Rhea
-* Kitakus
+* Otter &mdash; used to coordinate our work on the mod; no longer contributes.
+* dreamscached &mdash; currently active maintainer of this submod and the sole developer.
+* Kitakus &mdash; helped with content during development; no longer contributes.
+* MaliciousSoftware &mdash; helped with content during development; no longer contribute.
+* HistoryVariety &mdash; helped with content during development; no longer contributes.
+* MysticCreatesGames1 &mdash; helped with content during development; no longer contributes.
+* fukawabunny &mdash; helped with content during development; no longer contributes.
+* ImKvents &mdash; contributed bug fixes during development; no longer contributes.
+* LOeufmf &mdash; helped with content during development; no longer contributes.
 
-These are all I can remember. Thank you everyone for your efforts, none of it will be in vain.
+These are all I can remember. Thank you everyone for your efforts
 
 **Note:** CC BY-NC-ND 4.0 only covers content created by authors, contributors or maintainers of this mod (repository) and does not cover
 anything that was created by third party (might include songs and other content beside submod scripts.)
