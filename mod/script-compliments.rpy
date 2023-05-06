@@ -67,7 +67,7 @@ init 5 python:
 label mshMod_compliment_patient:
     m 2dsbfa "[player]..."
     m 2fsbfa "I'll always be patient with you."
-    m 7gsbfb "It's no effort!" After all, I love you and want to be by your side."
+    m 7gsbfb "It's no effort! After all, I love you and want to be by your side."
     m 7lssdlc "Even in the tough moments."
     m 1hsb "Listening to you and taking care of you is an honor!"
     show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
@@ -97,7 +97,7 @@ label mshMod_compliment_still_here:
     m 4fsbftpb "And thank you for being who you are."
     m 2nsbfu "I’m so proud of you."
     m 2dsbfu "Keep on fighting and know that you deserve to be happy."
-    m 2ssblb "You are so inspiring!" {w=0.3}{nw}"
+    m 2ssblb "You are so inspiring! {w=0.3}{nw}"
     show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     extend 5fkbfa "Never forget that."
     return
