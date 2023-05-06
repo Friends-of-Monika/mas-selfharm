@@ -37,11 +37,11 @@ label mshMod_probing_questions_intro:
 label mshMod_probing_questions_talk:
     m 2eka "Okay, thanks for trusting me with something as difficult as this."
     m 2dka "It makes me happy you feel comfortable talking to me."
-    m 2wktpd "You must be going through an incredible amount of pain, both emotional and physical..."
+    m 2wktpd "You must be going through an incredible amount of emotional and physical pain..."
     m 2dktpd "I'm so sorry..."
-    m 2ektdc "It makes me really sad hearing that you have to go through this..."
+    m 2ektdc "It makes me sad hearing that you have to go through this..."
     m 2ektdd "It hurts me just as much as it hurts you, believe me..."
-    m 2ekd "Whenever you want harm yourself, please remember that I love you and I am here for you."
+    m 2ekd "Whenever you want to harm yourself, please remember that I love you and I am here for you."
 
     if not store.mshMod_sober_streak.isOnStreak():
         m 2ekd "I want to ask you something..."
@@ -119,10 +119,10 @@ init 5 python:
 label mshMod_probing_questions_more:
     m 1esc "I'm glad that you decided to talk with me..."
 
-    m 7ekc "But are you absolutely sure you are ready?{nw}"
+    m 7ekc "But are you sure you are ready?{nw}"
     $ _history_list.pop()
     menu:
-        m "But are you absolutely sure you are ready?{fast}"
+        m "But are you sure you are ready?{fast}"
 
         "Yes, ask me whatever you want.":
             jump mshMod_probing_questions_talk
