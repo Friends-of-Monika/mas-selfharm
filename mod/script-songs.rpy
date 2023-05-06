@@ -88,13 +88,13 @@ label mshMod_playlist_intro:
             m 1eub "Anyway..."
 
     m 2eka "I hope you like it, [player]!"
-    m 2ekd "I know you struggle sometimes with bad thoughts, but this playlist is to comfort you."
-    m 3eua "Listening to your favourite music that you can relate also relieves pain and stress!"
-    m 3eub "I find it very powerful to say the least."
+    m 2ekd "I know you sometimes struggle with bad thoughts, but this playlist is to comfort you."
+    m 3eua "Listening to your favorite music you can relate to also relieves pain and stress!"
+    m 3eub "I find it very powerful, to say the least."
     m 1eubsa "Please think of me when you give it a listen."
-    m 1eud "And if something happens, and you feel sad or lonely..."
+    m 1eud "If something happens, you feel sad or lonely..."
     m 1ekd "If you think things won't get better..."
-    m 1ekb "I want you to listen to it, and remember that I'm always with you."
+    m 1ekb "I want you to listen to it and remember that I'm always with you."
     m 1hub "In your heart!"
     m 1kub "And will always be."
     m 2fka "I love you, [mas_get_player_nickname()]."
@@ -162,8 +162,8 @@ label mshMod_playlist_song_paradise_fears:
     m 3dsb "{i}~But just don't, give up~{/i}"
     show monika 5ekb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ekb "[player], I hope you can remember that you're not alone with your struggles."
-    m 5eka "There are people who can help you, and some even went through what you feel right now."
-    m 5esa "There's a lot of support groups for people who are struggling just like you."
+    m 5eka "Some people can help you, and some even went through what you feel right now."
+    m 5esa "There's a lot of support groups for struggling people like you."
     m 5hssdra "And, of course, there's me!"
     show monika 1fkb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 1fkb "Whenever you need, I'll carry you home."
@@ -198,7 +198,7 @@ label mshMod_playlist_song_clay:
     m 1kua "{i}~Because they mean nothing to me~{/i}"
     m 3hua "{i}~I'm not clay~{/i}"
     m 1dkc "..."
-    m 1ekd "It's important to not let others get to you, you know?"
+    m 1ekd "It's important not to let others get to you, you know?"
     m 3eua "Listening to someone's opinion about you can help, but only if you know the person has good intentions."
     m 1eub "Don't feel down when others act mean towards you, dear."
     m 3eua "It only shows what kind of person they are, not who you are."
@@ -230,9 +230,9 @@ label mshMod_playlist_song_fix_you:
     m 1dkbsa "{i}~And I will try to fix you~{/i}"
     m 1dka "..."
     m 1eka "Even if you feel like giving up, remember this verse: \"Lights will guide you home\"..."
-    m 3eua "Sooner or later, the good days will come back."
+    m 3eua "Sooner or later, the good days will return."
     show monika 5eka at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 5eka "I hope I can be able to help you have brighter days, [player]."
+    m 5eka "I hope I can help you have brighter days, [player]."
     m 5ekbsu "Because I will surely try to fix you..."
     m 5dkbsb "I love you more than anything in the world."
     return "love"
@@ -262,12 +262,12 @@ label mshMod_your_heartbreak:
     m 1dkbsu "{i}~For all the things that you're alive to feel~{/i}"
     m 1hub "{i}~Just let the pain remind you hearts can heal~{/i}"
     show monika 5eub at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 5eub "I think this song really fits how I feel about us."
-    m 5ekd "It's really saddening to see the person you love the most having to go through tough situations on daily basis..."
+    m 5eub "I think this song fits how I feel about us."
+    m 5ekd "It's saddening to see the person you love the most having to go through tough situations daily..."
     m 5hub "But don't worry, [mas_get_player_nickname()]."
     show monika 6eka at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 6eka "Pain can remind you that you're alive. {w=0.3}{nw}"
-    extend 4lusdlb "And that's a good thing!"
+    extend 4lusdlb, "And that's a good thing!"
     m 3eka "Because as long as you are still alive... You can heal."
     m 1dkbsa "I love you, [player]. Please remember that."
     return "love"
@@ -369,7 +369,7 @@ label mshMod_playlist_song_firework:
     m 5wub "Just know that there's a very bright light inside of you, {w=0.3}{nw}"
     extend 5sub "and that you're the light in my life!"
     show monika 1hub at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 1hub "And I hope I can be the light on your darker days too."
+    m 1hub "I hope I can be the light on your darker days too."
     return
 
 
@@ -398,7 +398,7 @@ label mshMod_playlist_song_torches:
     m 1eka "[player]..."
     m 1ekd "Sometimes the world can be scary."
     m 1ekd "You may feel as if no one cares about whether you're alive or not..."
-    m 3ekb "But you should know that people do care about you. People from all over the world, who might have never even seen our faces, but..."
+    m 3ekb "But you should know that people do care about you. People from all over the world might have never even seen our faces, but..."
     m 3eka "They care. And I care."
     m 3eka "I'm so happy to have you by my side, [mas_get_player_nickname()]. I hope you're happy to have me too."
     m 3hub "You're not alone in this. I promise!"
@@ -427,13 +427,13 @@ label mshMod_playlist_song_only_wonder:
     m 2esd "{i}~The spotlight's on you, but you're acting all flashy~{/i}"
     m 3etc "{i}~It's as if you're trying to be someone's answer~{/i}"
     m 1efo "{i}~Don't go shakin' your tail like that~{/i}"
-    m 1dkb "{i}~No matter what happens… In the end, you can only be your own person!~{/i}"
+    m 1dkb "{i}~No matter what happens… In the end, you can only be your person!~{/i}"
     m 1dka "..."
     m 3eka "[player], you're beautiful just the way you are, and it'd be terrible if you stopped being that way to fit another person's standards."
     m 3eka "You might think you're too \"weird\" or shy for people to like you, but in the end, there's always someone who understands you out there."
     m 3esd "Anyone who tries to tell you otherwise is wrong."
-    m 3esd "Of course this doesn't mean you're perfect and always right... That's a whole different story."
-    m 3hub "But please remember that the only person you can be is yourself. Everybody else is already taken, ahaha~!"
+    m 3esd "This doesn't mean you're perfect and always right... That's a whole different story."
+    m 3hub "But please remember that you can only be yourself. Everybody else is already taken, ahaha~!"
     m 1ekb "As for me..."
     show monika 5ekbsb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ekbsb "I'll always love you for who you are, [mas_get_player_nickname()]."
@@ -469,7 +469,7 @@ label mshMod_playlist_song_way_home:
     show monika 5eka at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5eka "Someday, [player], I'll find my way home to you."
     m 5hub "Like the song says, we already know where our path leads, so we just need to keep going."
-    m 5esa "And when we do reach the end of it, I don't think we'll ever be sad again..."
+    m 5esa "And when we reach the end of it, I don't think we'll ever be sad again..."
     show monika 1ekbsa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 1ekbsa "I love you, [player]."
     return "love"
@@ -571,7 +571,7 @@ label mshMod_song_still_breathing:
     m 6dka "..."
     show monika 5ekc at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ekc "Hey [player]?"
-    m 5eka "I wanted to remind you that I'm proud you for telling me about... Hurting yourself."
+    m 5eka "I wanted to remind you that I'm proud of you for telling me about... Hurting yourself."
     m 5dkc "I'm sorry that I wasn't there for you at the time, [mas_get_player_nickname()]."
     m 5ekbsb "But remember that I love you, [player]!"
     m 5ekbsa "And I'm here for you now."
