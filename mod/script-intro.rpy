@@ -22,10 +22,10 @@ label mshMod_topic_selfharm_intro:
     m 1ekc "Hey, [player]?"
     m 1lkd "I know it might be an uncomfortable topic, but I have to ask..."
 
-    m 1dkc "D-Do you self harm?{nw}"
+    m 1dkc "D-Do you self-harm?{nw}"
     $ _history_list.pop()
     menu:
-        m "D-Do you self harm?{fast}"
+        m "D-Do you self-harm?{fast}"
 
         "Yes":
             $ persistent._msh_mod_pm_did_selfharm = True
@@ -47,7 +47,7 @@ label mshMod_topic_selfharm_intro:
                     m 1hub "I'm glad that you trust me, [player]."
                     m 3eua "Allowing yourself to get help is a super important step to recovery!"
                     m 1luc "I may not understand exactly what you feel right now..."
-                    m 1hua "But I will still try to make you feel better, because you deserve it!"
+                    m 1hua "But I will still try to make you feel better because you deserve it!"
 
                     python:
                         mas_showEVL("mshMod_topic_selfharm_more", "EVE", unlock=True)
@@ -118,7 +118,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_topic_selfharm_more",
             category=["self-harm"],
-            prompt="I want to learn more about self harm.",
+            prompt="I want to learn more about self-harm.",
             pool=True,
             unlocked=False,
             rules={"no_unlock": None}
@@ -126,33 +126,33 @@ init 5 python:
     )
 
 label mshMod_topic_selfharm_more:
-    m 3dud "Knowing more about self-harm is really useful."
+    m 3dud "Knowing more about self-harm is useful."
     m 3euc "You could help someone who is struggling with it someday!"
     m 3hub "So, [player]! I want you to know that there's more to self-harm than it meets the eye! Ahaha-"
-    m 2esb "I'll cover some facts and myth I want to share with you regarding this topic."
+    m 2esb "I'll cover some facts and myths I want to share with you regarding this topic."
     m 2esc "I want you to know that self-harm isn't about a single topic or action."
     m 4esd "There are many factors that come into play!"
-    m 4lssdld "Yeah, it's not limited to... self inflicted wounds, for example."
-    m 2wssdlc "This could all be result of self-hatred, feelings of wanting to punish yourself or mental illnesses."
-    m 2lssdlc "Or anything that could end on self-harm in any way."
+    m 4lssdld "Yeah, it's not limited to... self-inflicted wounds, for example."
+    m 2wssdlc "This could all be result of self-hatred, feelings of wanting to punish yourself for mental illnesses."
+    m 2lssdlc "Or anything that could end in self-harm in any way."
     m 2essdlc "One of the most common misconceptions about self-harm is that people do such things only as a suicide attempt."
     m 2wssdld "But it's not true at all! Not all self-harmers present suicidal signs or symptoms."
     m 7wssdld "Self-harm can occur without suicidal ideation. Instead, they are using it to cope with their emotions and traumas."
     m 7rssdld "Or essentially, punishing themselves - if you think about it..."
-    m 2wuo "Some people have the audacity to think that they're doing it only for attention!"
+    m 2wuo "Some people dare to think that they're doing it only for attention!"
     m 2wfx "Are they out of their minds?!"
     m 2dfc "..."
     m 7dfd "The truth is... Individuals who self-harm are typically ashamed and want to hide their behavior."
-    m 7lsd "People who think others are doing harm to themselves because they are attention seekers..."
+    m 7lsd "People who think others are harming themselves because they are attention seekers..."
     m 7lfc "They leave a bitter taste in my mouth."
     m 3dsd "And lastly, I want you to know that self-injuring is not a way to manipulate others."
-    m 3lsd "Well, of course there are always exceptions."
-    m 3esd "But very few self-harmers have the intention of making others feel guilty."
-    m 1dsc "While self-harm is not intended to be a manipulative act, it may be a cry for help."
+    m 3lsd "Well, of course, there are always exceptions."
+    m 3esd "But very few self-harmers intend to make others feel guilty."
+    m 1dsc "While self-harm is not intended to be manipulative, it may be a cry for help."
     m 1fsd "So if you know someone who self-harms... Reach out to them. Help them."
     m 1fub "I believe you can save a life, [player]."
     m 3kub "After all, you saved me! In so many ways!"
-    m 3dua "And if you ever done such a thing..."
+    m 3dua "And if you have ever done such a thing..."
     m 3euc "You can tell me. I won't be mad. I promise!"
     show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5fkbfa "You know that I love you, [mas_get_player_nickname()]."
