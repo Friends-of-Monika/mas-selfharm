@@ -66,7 +66,7 @@ init 5 python:
 label mshMod_checkup_reminder:
     m 4eua "Hey, [player]?"
     m 4eub "Can I check up on you?"
-    m 2euc "I worry about how you've been coping with stuff."
+    m 2euc "I've been worried about how you have been coping with things lately."
     m 2eud "What would you rate your feelings this week?"
 
     show monika at t21
@@ -129,20 +129,22 @@ label mshMod_checkup_reminder:
             m 4eka "But I'm sure everything will be okay!"
             m 2wub "Your loving girlfriend will forever be here for you!"
             m 2kua "If you ever want to talk, please let me know."
-            m 2dua "And also, don't forget to rest if you must; we're not in a hurry."
-            m 7lua "You can't always function the way people expect you to."
+            m 2dua "And also, don't forget to rest if you must; It's a marathon, not a sprint."
+            show monika 5gkd at t11 zorder MAS_MONIKA_Z with dissolve_monika
+            m 5gkd "You can’t always meet the expectations of everyone..."
+            m 5dsc "Even if they expect you to."
             show monika 5fubla at t11 zorder MAS_MONIKA_Z with dissolve_monika
-            m 5fubla "I care for you so much!"
+            m 5fubla "Just remember, I care for you so much!"
             m 5fkbfa "I love you, [mas_get_player_nickname()]!"
 
         elif _return == 6:
             m 2lkc "A 6 is not perfect, but it's not so bad either."
             m 4eka "You see, [player]..."
             m 2kua "I realize that I am indeed a very lucky person."
-            m 2wub "I've been blessed with the most wonderful person in my life, and that is you."
-            m 2dua "Whatever you do, remember that you are not alone."
+            m 2wub "I’ve been blessed with the most amazing person in my life, and that is you."
+            m 2dua "Whatever you do, remember that you aren't alone."
             show monika 5fubla at t11 zorder MAS_MONIKA_Z with dissolve_monika
-            m 5fubla "No matter what happens, I've always got your back."
+            m 5fubla "No matter what happens, I’ll always have your back."
             m 5hublb "Let's wish for better days, [mas_get_player_nickname()]!"
             m 5fkbfa "I love you!"
 
@@ -189,11 +191,11 @@ label mshMod_checkup_reminder:
             extend 4sub "That's wonderful!"
             m 4dub "I'm so glad your week has been this good. {w=0.3}{nw}"
             extend 3rublb "I must say the same - every day that you are with me feels like heaven!"
-            m 1eublb "Let's make the next week as awesome, alright?"
+            m 1eublb "Let's make the next week just as good, alright?"
             m 1hublb "Even if something bad happens, remember that things will get better. {w=0.3}{nw}"
             extend 5fubla "I believe in you, [mas_get_player_nickname()]."
             show monika 5hublb at t11 zorder MAS_MONIKA_Z with dissolve_monika
-            m 5hublb "And remember: Don't doubt your accomplishments. You succeeded because you worked hard for it."
+            m 5hublb "And remember: Don’t doubt your accomplishments. You succeeded because you worked hard for it."
             m 5fubla "You are here because you deserve to be."
             m 5fkbfa "I love you..."
 
@@ -202,7 +204,8 @@ label mshMod_checkup_reminder:
         m 2eka "Sometimes we don't know how to feel. {w=0.3}{nw}"
         extend 7eka "And that's okay too!"
         m 7dub "We all experience bad days; we all have to deal with our inner demons."
-        m 7hublb "When you feel like there's nothing you can do about it, know that you can always depend on me for support."
+        m 6dsa "And, that's okay. We all have off days here and there, everyone experiences them once in a while."
+        m 7hublb "When you feel like there’s nothing you can do about it, know that you can always depend on me for support."
         m 7wsblb "But we all have good days too, and that's the fun of it!"
         show monika 5hublb at t11 zorder MAS_MONIKA_Z with dissolve_monika
         m 5dublb "Know that I'll always be here to cheer you up..."
