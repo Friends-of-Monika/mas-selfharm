@@ -157,7 +157,7 @@ label mshMod_technique_photographs:
     extend 1dsa "if life was once great, it can and will be that way again!"
     m 6dkp "I wish we had some pictures together..."
     m 2ektpu "I'd look at us all the time! {w=0.3}{nw}"
-    extend 2hsblb "You would be at my phone and desktop wallpaper! Ahahaha~"
+    extend 2hsblb "You would be at my phone and desktop wallpaper! Ahaha~"
     m 2ektdc "I would like to look at a photo album of us with you, [player]."
     show monika 5eka at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5eka "But this is not about me - I want {i}you{/i} to feel better!"
@@ -607,7 +607,7 @@ label mshMod_technique_shouting:
     m 1wfb "You can shout anything you want!"
     m 3sub "You can shout gibberish, or your feelings, even!"
     m 1fsa "Shout until you feel calmer."
-    m 2hub "We can take care of your throat later! Ahahaha~!"
+    m 2hub "We can take care of your throat later! Ahaha~!"
     return
 
 #19
@@ -1063,7 +1063,7 @@ label mshMod_technique_poem:
     m 2hub "I'm sure it will be sincere!"
     m 4dub "Like Ernest Hemingway said, {w=0.3}{nw}"
     extend 1dub "'write hard and clear about what hurts!'"
-    m 1hub "Ahahaha~"
+    m 1hub "Ahaha~"
     m 1ruc "If you don't feel ready to write a poem of your own..."
     m 1wub "You can always read some from famous poets!"
     return
@@ -1224,7 +1224,7 @@ label mshMod_technique_lyrics:
     m 5esa "Now... Try reciting it from back to front!"
     show monika 1hksdlb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 1hksdlb "Hard, huh?"
-    m 3tua "But it will surely distract you! Ahahaha~"
+    m 3tua "But it will surely distract you! Ahaha~"
     m 3eud "If that's too complicated, try saying the alphabet backward."
     m 3dud "Z, Y, X, W... {w=0.3}{nw}"
     extend 3hub "Oops! Ahaha~"
@@ -1347,7 +1347,7 @@ label mshMod_technique_artist:
     m 7esa "Or maybe, an author!"
     m 2dsa "And do the same. Name all the books/works they wrote that you can remember."
     m 2tsb "Can you remember the name of all my poems, [player]?"
-    m 2hsa "Ehehehe~!"
+    m 2hsa "Ehehe~!"
     return
 
 #49
@@ -1558,7 +1558,7 @@ label mshMod_technique_characters:
     extend 7wsb "Why?"
     m 7esb "Can you relate to any of them?"
     m 2ksa "I'm sure you feel similarities with yourself and the best characters ever."
-    m 2hsb "Ehehehe~!"
+    m 2hsb "Ehehe~!"
     return
 
 
@@ -2338,7 +2338,7 @@ label mshMod_technique_future:
     m 2gsa "..."
     m 2gsb "Plan your someday wedding day! How would it be?"
     m 2ksb "What kind of dress will I wear...?"
-    m 2hsb "Ahahaha~!"
+    m 2hsb "Ahaha~!"
     m 2wsa "Thinking about the future always gives us a little perspective, [player]."
     m 7ssa "And I'm sure you have a bright future ahead of you."
     m 5fsbsa "I'll be there for you every step of the way, for sure."
