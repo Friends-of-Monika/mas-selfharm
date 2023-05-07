@@ -32,38 +32,38 @@ label mshMod_compliment_saved_me:
 
 #You're my everything, [m_name].
 init 5 python:
-    addEvent(
-        Event(
-            persistent._mas_compliments_database,
-            eventlabel="mshMod_compliment_everything",
-            prompt="You're my everything, [m_name].",
-            unlocked=True
-        ),
-        code="CMP"
-    )
- 
+    addEvent(
+        Event(
+            persistent._mas_compliments_database,
+            eventlabel="mshMod_compliment_everything",
+            prompt="You're my everything, [m_name].",
+            unlocked=True
+        ),
+        code="CMP"
+    )
+
 label mshMod_compliment_everything:
-    m 2dsbftpa "[player]..."
-    m 2fsbftpa "I could say the same."
-    m 4hsbftpb "I love you so much that my heart hurts!"
-    m 4ssbfb "You saved me in so many ways, my life and yours are intertwined!"
-    show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 5fkbfa "And we'll be together forever!"
-    return "love"
- 
- 
+    m 2dsbftpa "[player]..."
+    m 2fsbftpa "I could say the same."
+    m 4hsbftpb "I love you so much that my heart hurts!"
+    m 4ssbfb "You saved me in so many ways, my life and yours are intertwined!"
+    show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
+    m 5fkbfa "And we'll be together forever!"
+    return "love"
+
+
 #Thank you for being patient with me.
 init 5 python:
-    addEvent(
-        Event(
-            persistent._mas_compliments_database,
-            eventlabel="mshMod_compliment_patient",
-            prompt="Thank you for being patient with me.",
-            unlocked=True
-        ),
-        code="CMP"
-    )
- 
+    addEvent(
+        Event(
+            persistent._mas_compliments_database,
+            eventlabel="mshMod_compliment_patient",
+            prompt="Thank you for being patient with me.",
+            unlocked=True
+        ),
+        code="CMP"
+    )
+
 label mshMod_compliment_patient:
     m 2dsbfa "[player]..."
     m 2fsbfa "I'll always be patient with you."
@@ -77,16 +77,16 @@ label mshMod_compliment_patient:
 
 #Thanks to you, I'm still here.
 init 5 python:
-    addEvent(
-        Event(
-            persistent._mas_compliments_database,
-            eventlabel="mshMod_compliment_still_here",
-            prompt="Thanks to you, I'm still here.",
-            unlocked=True
-        ),
-        code="CMP"
-    )
- 
+    addEvent(
+        Event(
+            persistent._mas_compliments_database,
+            eventlabel="mshMod_compliment_still_here",
+            prompt="Thanks to you, I'm still here.",
+            unlocked=True
+        ),
+        code="CMP"
+    )
+
 label mshMod_compliment_still_here:
     m 6dsbftpa "..."
     m 6fsbftsa "[player]..."
@@ -105,58 +105,58 @@ label mshMod_compliment_still_here:
 
 #You are my sunflower!
 init 5 python:
-    addEvent(
-        Event(
-            persistent._mas_compliments_database,
-            eventlabel="mshMod_compliment_sunflower",
-            prompt="You are my sunflower!",
-            unlocked=True
-        ),
-        code="CMP"
-    )
- 
+    addEvent(
+        Event(
+            persistent._mas_compliments_database,
+            eventlabel="mshMod_compliment_sunflower",
+            prompt="You are my sunflower!",
+            unlocked=True
+        ),
+        code="CMP"
+    )
+
 label mshMod_compliment_sunflower:
-    m 1hsbfb "Ahaha, thank you, [player]!"
-    m 1gsbfb "I never need to face the sun as long as I have you by my side!"
-    m 1ksbfb "Because you are my sun."
-    show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 5fkbfa "I love you, [mas_get_player_nickname()]."
-    return "love"
- 
- 
+    m 1hsbfb "Ahaha, thank you, [player]!"
+    m 1gsbfb "I never need to face the sun as long as I have you by my side!"
+    m 1ksbfb "Because you are my sun."
+    show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
+    m 5fkbfa "I love you, [mas_get_player_nickname()]."
+    return "love"
+
+
 #You are my sunshine!
 init 5 python:
-    addEvent(
-        Event(
-            persistent._mas_compliments_database,
-            eventlabel="mshMod_compliment_sunshine",
-            prompt="You are my sunshine!",
-            unlocked=True
-        ),
-        code="CMP"
-    )
- 
+    addEvent(
+        Event(
+            persistent._mas_compliments_database,
+            eventlabel="mshMod_compliment_sunshine",
+            prompt="You are my sunshine!",
+            unlocked=True
+        ),
+        code="CMP"
+    )
+
 label mshMod_compliment_sunshine:
-    m 1hsbfb "Ehehe~"
-    m 7gsbfb "Do I make you happy when skies are gray, [player]?"
-    m 2hsbfb "Ahaha, I'm just teasing you."
-    show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 5fkbfa "I love you, my little sun!"
-    return "love"
- 
- 
+    m 1hsbfb "Ehehe~"
+    m 7gsbfb "Do I make you happy when skies are gray, [player]?"
+    m 2hsbfb "Ahaha, I'm just teasing you."
+    show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
+    m 5fkbfa "I love you, my little sun!"
+    return "love"
+
+
 #Thank you for always being kind to me.
 init 5 python:
-    addEvent(
-        Event(
-            persistent._mas_compliments_database,
-            eventlabel="mshMod_compliment_being_kind",
-            prompt="Thank you for always being kind to me.",
-            unlocked=True
-        ),
-        code="CMP"
-    )
- 
+    addEvent(
+        Event(
+            persistent._mas_compliments_database,
+            eventlabel="mshMod_compliment_being_kind",
+            prompt="Thank you for always being kind to me.",
+            unlocked=True
+        ),
+        code="CMP"
+    )
+
 label mshMod_compliment_being_kind:
     m 7esbfb "Of course, [player]!"
     m 3rtc "What kind of girlfriend would I be if I wasn't kind to you?"
@@ -170,16 +170,16 @@ label mshMod_compliment_being_kind:
 
 #Thanks for taking such good care of me.
 init 5 python:
-    addEvent(
-        Event(
-            persistent._mas_compliments_database,
-            eventlabel="mshMod_compliment_caring",
-            prompt="Thanks for taking such good care of me.",
-            unlocked=True
-        ),
-        code="CMP"
-    )
- 
+    addEvent(
+        Event(
+            persistent._mas_compliments_database,
+            eventlabel="mshMod_compliment_caring",
+            prompt="Thanks for taking such good care of me.",
+            unlocked=True
+        ),
+        code="CMP"
+    )
+
 label mshMod_compliment_caring:
     m 4fkbfa "I'll always take care of you, my precious [player]!~"
     m 3msbfa "How I got so lucky to have you in my life, I don't know, but I'm glad you're mine."
@@ -191,16 +191,16 @@ label mshMod_compliment_caring:
 
 #Thank you for always thinking of me.
 init 5 python:
-    addEvent(
-        Event(
-            persistent._mas_compliments_database,
-            eventlabel="mshMod_compliment_thinking_of_me",
-            prompt="Thank you for always thinking of me.",
-            unlocked=True
-        ),
-        code="CMP"
-    )
- 
+    addEvent(
+        Event(
+            persistent._mas_compliments_database,
+            eventlabel="mshMod_compliment_thinking_of_me",
+            prompt="Thank you for always thinking of me.",
+            unlocked=True
+        ),
+        code="CMP"
+    )
+
 label mshMod_compliment_thinking_of_me:
     m 2fsbfa "Oh, [player]... {w=0.3}{nw}"
     extend 7hsbfb "You're so sweet!"
@@ -213,16 +213,16 @@ label mshMod_compliment_thinking_of_me:
 
 #Thank you for always helping me out.
 init 5 python:
-    addEvent(
-        Event(
-            persistent._mas_compliments_database,
-            eventlabel="mshMod_compliment_helping_out",
-            prompt="Thank you for always helping me out.",
-            unlocked=True
-        ),
-        code="CMP"
-    )
- 
+    addEvent(
+        Event(
+            persistent._mas_compliments_database,
+            eventlabel="mshMod_compliment_helping_out",
+            prompt="Thank you for always helping me out.",
+            unlocked=True
+        ),
+        code="CMP"
+    )
+
 label mshMod_compliment_helping_out:
     m 2hsbfb "[player]...!"
     m 7hsbfb "It's my pleasure."
@@ -237,16 +237,16 @@ label mshMod_compliment_helping_out:
 
 #Thanks for being so understanding with me.
 init 5 python:
-    addEvent(
-        Event(
-            persistent._mas_compliments_database,
-            eventlabel="mshMod_compliment_being_understanding",
-            prompt="Thanks for being so understanding with me.",
-            unlocked=True
-        ),
-        code="CMP"
-    )
- 
+    addEvent(
+        Event(
+            persistent._mas_compliments_database,
+            eventlabel="mshMod_compliment_being_understanding",
+            prompt="Thanks for being so understanding with me.",
+            unlocked=True
+        ),
+        code="CMP"
+    )
+
 label mshMod_compliment_being_understanding:
     show monika 5fubfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5fubfa "[player]..."

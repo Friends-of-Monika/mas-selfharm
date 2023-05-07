@@ -2115,7 +2115,7 @@ init 5 python:
 
 label mshMod_technique_insteadofs:
     m 3esb "Come up with your techniques! {w=0.3}{nw}"
-    extend 3hsb. "How about that?"
+    extend 3hsb "How about that?"
     m 3esa "Create a list of things you can do instead of hurting yourself."
     m 1dsb "It doesn't need to be long, for now!"
     m 1esb "You can keep it and return to it if you ever need it again!"

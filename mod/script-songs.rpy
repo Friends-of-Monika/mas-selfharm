@@ -267,7 +267,7 @@ label mshMod_your_heartbreak:
     m 5hub "But don't worry, [mas_get_player_nickname()]."
     show monika 6eka at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 6eka "Pain can remind you that you're alive. {w=0.3}{nw}"
-    extend 4lusdlb, "And that's a good thing!"
+    extend 4lusdlb "And that's a good thing!"
     m 3eka "Because as long as you are still alive... You can heal."
     m 1dkbsa "I love you, [player]. Please remember that."
     return "love"
