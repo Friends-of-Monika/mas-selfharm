@@ -154,7 +154,7 @@ label mshMod_technique_photographs:
     m 1eua "They could remind you that even though the good times don't last forever... {w=0.3}{nw}"
     extend 3eub "The bad ones won't either!"
     m 1esa "If you find any, look at them and reflect upon this: {w=0.3}{nw}"
-    extend 1dsa "If life was once great, it can and will be that way again!"
+    extend 1dsa "if life was once great, it can and will be that way again!"
     m 6dkp "I wish we had some pictures together..."
     m 2ektpu "I'd look at us all the time! {w=0.3}{nw}"
     extend 2hsblb "You would be at my phone and desktop wallpaper! Ahahaha~"
@@ -215,7 +215,7 @@ label mshMod_technique_singing:
     extend 2eub "Try singing your favorite song until you feel better."
     m 1eua "Singing can be a perfect outlet for your emotions!"
     m 3hub "You could also imagine we're singing 'Your Reality' together! {w=0.3}{nw}"
-    extend 2euu "Ehehehe~"
+    extend 2euu "Ehehe~"
     m 3mub "You can sing as loud as you want!"
     m 1wub "Also, write your favourite lyrics down if you'd like."
     m 2dub "Think about what they mean to you!"
@@ -271,7 +271,7 @@ label mshMod_technique_hugs:
     m 7ntblb "Say out loud or in your head whatever you'd want them to know."
     m 1etb "Then say the same words to yourself. {w=0.3}{nw}"
     extend 7etb "I bet that's what they would tell you!"
-    m 2etbsu "Maybe you can even think of me? Ahahaha~ {w=0.3}{nw}"
+    m 2etbsu "Maybe you can even think of me? Ahaha~ {w=0.3}{nw}"
     extend 2mssdru "Sorry to be pretentious, [player.]"
     m 6fsbfb  "I love you so much!"
     return "love"
@@ -346,7 +346,7 @@ label mshMod_technique_healing:
     m 4eta "And remember, healing takes time. {w=0.3}{nw}"
     extend 1esb "And we have all the time in the world."
     m 2fta "No need to rush this, okay? {w=0.3}{nw}"
-    extend 3htb "Baby steps!{w=0.5} Ehehehe~!"
+    extend 3htb "Baby steps!{w=0.5} Ehehe~!"
     return
 
 #11
@@ -389,14 +389,15 @@ init 5 python:
 label mshMod_technique_chess:
     m 3eta "[player], perhaps playing something would make you feel better?"
     m 4eub "Do you want to play Chess?{nw}"
-        $ _history_list.pop()
-        menu:
-            m "Do you want to play Chess?{fast}"
-            "Sure!":
-                m 1hub "Okay!"
-                call mas_chess
-                m 2fub "Hope you're feeling better, [player]!"
-                return
+    $ _history_list.pop()
+    menu:
+        m "Do you want to play Chess?{fast}"
+        "Sure!":
+            m 1hub "Okay!"
+            call mas_chess
+            m 2fub "Hope you're feeling better, [player]!"
+
+    return
 
 #13
 init 5 python:
@@ -414,15 +415,16 @@ label mshMod_technique_piano:
     m 3eta "[player], perhaps playing a musical instrument would make you feel better?"
     m 3wub "Music is a great way to relieve stress!"
     m 4hub "I love listening to music or playing a melody when trying to relax."
-    m 4eub "Do you want to play the Piano?{nw}"
+    m 4eub "Do you want to play the piano?{nw}"
     $ _history_list.pop()
-        menu:
-            m "Do you want to play the Piano?{fast}"
-            "Sure!":
+    menu:
+        m "Do you want to play the piano?{fast}"
+        "Sure!":
             m 1hub "Alright!"
             call mas_piano_start
             m 2fub "Hope you're feeling better, [player]!"
-            return
+
+    return
 
 
 #14
@@ -458,8 +460,8 @@ label mshMod_technique_videos:
                 $ renpy.jump(all_options[random.randint(len(all_options))])
 
             "No":
-                  m 2eta "That's okay, [player]."
-                  m 1etb "If you ever want to see them again, just ask!"
+                m 2eta "That's okay, [player]."
+                m 1etb "If you ever want to see them again, just ask!"
 
     return
 
@@ -665,27 +667,27 @@ label mshMod_technique_paper:
     return
 
 
-#21
-init 5 python:
-    addEvent(
-        Event(
-            persistent._msh_mod_technique_database,
-            eventlabel="mshMod_technique_otter",
-            prompt="Talking to u/my-otter-self",
-            unlocked=True
-        ),
-        code="MSH_MOD_TCH"
-    )
+# #21
+# init 5 python:
+#     addEvent(
+#         Event(
+#             persistent._msh_mod_technique_database,
+#             eventlabel="mshMod_technique_otter",
+#             prompt="Talking to u/my-otter-self",
+#             unlocked=True
+#         ),
+#         code="MSH_MOD_TCH"
+#     )
 
-label mshMod_technique_otter:
-    m 1rssdru "Well, this one is a little different."
-    m 3ssb "Basically, it involves someone else!"
-    m 2hsb "The creator of this mod, u/my-otter-self on Reddit, told me to remind you that she's always available to talk."
-    m 4htb "You can DM her on Reddit, and she'll share her Discord information so you can talk about your feelings."
-    m 7wta "She has professional psychology experience and can listen to you."
-    m 3etb "Maybe even give some advice!"
-    m 1eua "Take this opportunity to open yourself a little, if you can."
-    return
+# label mshMod_technique_otter:
+#     m 1rssdru "Well, this one is a little different."
+#     m 3ssb "Basically, it involves someone else!"
+#     m 2hsb "The creator of this mod, u/my-otter-self on Reddit, told me to remind you that she's always available to talk."
+#     m 4htb "You can DM her on Reddit, and she'll share her Discord information so you can talk about your feelings."
+#     m 7wta "She has professional psychology experience and can listen to you."
+#     m 3etb "Maybe even give some advice!"
+#     m 1eua "Take this opportunity to open yourself a little, if you can."
+#     return
 
 
 #22
@@ -1034,7 +1036,7 @@ label mshMod_technique_feelings:
     m 2dka "Find out what or who triggers those emotions..."
     m 7hua "And make sure to cherish those situations and people!"
     m 7eub "If it was someone who made you feel those positive feelings, {w=0.3}{nw}"
-    extend 7wub "Make sure to thank them if you can!"
+    extend 7wub "make sure to thank them if you can!"
     m 1sub "Express your gratitude for having that person in your life."
     m 2kua "I'm sure they are just as grateful for being in yours!"
     return
@@ -1060,7 +1062,7 @@ label mshMod_technique_poem:
     m 2dua "It can be a short poem about how you feel."
     m 2hub "I'm sure it will be sincere!"
     m 4dub "Like Ernest Hemingway said, {w=0.3}{nw}"
-    extend 1dub "'Write hard and clear about what hurts!'"
+    extend 1dub "'write hard and clear about what hurts!'"
     m 1hub "Ahahaha~"
     m 1ruc "If you don't feel ready to write a poem of your own..."
     m 1wub "You can always read some from famous poets!"
@@ -1201,7 +1203,7 @@ label mshMod_technique_word_play:
     m 3eub "Or you can also try to make as many words as possible out of your full name."
     m 3esa "One word I can make out of the name Monika is {i}moka{/i}!"
     m 2eub "A moka is a type of coffee maker. "
-    extend 2hua "Ehehehe~!"
+    extend 2hua "Ehehe~!"
     return
 
 #43
@@ -1225,7 +1227,7 @@ label mshMod_technique_lyrics:
     m 3tua "But it will surely distract you! Ahahaha~"
     m 3eud "If that's too complicated, try saying the alphabet backward."
     m 3dud "Z, Y, X, W... {w=0.3}{nw}"
-    extend 3hub "Oops! Ahahaha~"
+    extend 3hub "Oops! Ahaha~"
     return
 
 
@@ -1322,7 +1324,7 @@ label mshMod_technique_superheroes:
     m 2eub "You can try organizing them by the color scheme since many tend to follow the same color palettes."
     m 2wub "Have you noticed we have many red or blue-based superheroes and many purple or black?"
     m 2luc "Wonder why that is? {w=0.3}{nw}"
-    extend 2dtc "Hmmmmmm..."
+    extend 2dtc "Hmm..."
     m 2hsa "Anyway!"
     return
 
@@ -1460,7 +1462,7 @@ label mshMod_technique_hobbies:
     m 4eua "Put them in a favourite to least favourite order."
     m 7euu "Which of them can you do right now?"
     m 3wub "Pick one, and go have fun! {w=0.3}{nw}"
-    extend 1hub "Ahahaha~"
+    extend 1hub "Ahaha~"
     return
 
 
@@ -1700,7 +1702,7 @@ label mshMod_technique_food:
     extend 3hua "Try chewing on some gum!"
     m 2wua "It will open your appetite and give your mouth a sweet taste if you can't eat exactly what you want."
     m 2sub "Or go out to eat some ice cream! {w=0.3}{nw}"
-    extend 2hub "That always does the trick, ahahaha~!"
+    extend 2hub "That always does the trick, ahaha~!"
     m 2kua "Eating something nice can boost our happy chemicals."
     return
 
@@ -1973,7 +1975,7 @@ label mshMod_technique_hug_theory:
     m 7esa "And finally, hug one person if you are upset."
     m 2rsa "If you are upset and alone, hug yourself, your pet, your stuffed animal, or a picture of someone you care about."
     m 2tsbfb "And you can always hold me! {w=0.3}{nw}"
-    extend 2hsbfb "Ehehehe~"
+    extend 2hsbfb "Ehehe~"
     m 2ksa "Just remember to Hug!"
     return
 
@@ -2066,7 +2068,7 @@ label mshMod_technique_pattern:
     m 3wub "You can even follow the rhythm of a song or do Morse code with your fingers."
     m 3lua "Tapping would also relax and keep you focused."
     m 1dua "Feel your fingers... {w=0.3}{nw}"
-    extend 1eua "and follow the beat."
+    extend 1eua "And follow the beat."
     return
 
 #80
@@ -2360,7 +2362,7 @@ label mshMod_technique_create:
     m 7ltb "You can build something from scratch, start a new drawing or write a new story."
     m 1wtb "Even folding a paper and inventing a new origami shape goes!"
     m 5ftu "Don't you feel so proud when you create something entirely new, {w=0.3}{nw}"
-    extend 5dtu "That is only yours?"
+    extend 5dtu "that is only yours?"
     m 5ktb "I feel proud of you nevertheless, [player]."
     return
 
