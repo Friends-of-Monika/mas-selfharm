@@ -48,7 +48,7 @@ label mshMod_medication_reminder_request:
             # P.S. 'tod' is for 'Time Of Day'
 
             m 4hub "Alright! I'll be sure to remind you, every day, in the [tod]!"
-            m 2nua "Make sure to come see me so I can remind you, okay? Ehehehe~"
+            m 2nua "Make sure to come see me so I can remind you, okay? Ehehe~"
 
             # This has to be performed AFTER all the lines. We must ensure this applies
             # instantly and is not blocked by user idling at some dialogue line.

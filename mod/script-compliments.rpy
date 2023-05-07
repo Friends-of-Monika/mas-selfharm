@@ -116,7 +116,7 @@ init 5 python:
     )
  
 label mshMod_compliment_sunflower:
-    m 1hsbfb "Ahahaha, thank you, [player]!"
+    m 1hsbfb "Ahaha, thank you, [player]!"
     m 1gsbfb "I never need to face the sun as long as I have you by my side!"
     m 1ksbfb "Because you are my sun."
     show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
@@ -137,7 +137,7 @@ init 5 python:
     )
  
 label mshMod_compliment_sunshine:
-    m 1hsbfb "Ehehehe~"
+    m 1hsbfb "Ehehe~"
     m 7gsbfb "Do I make you happy when skies are gray, [player]?"
     m 2hsbfb "Ahaha, I'm just teasing you."
     show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
@@ -161,7 +161,7 @@ label mshMod_compliment_being_kind:
     m 7esbfb "Of course, [player]!"
     m 3rtc "What kind of girlfriend would I be if I wasn't kind to you?"
     m 2rsbfsdlb "Coming to think of it though, I think Natsuki would disagree."
-    m 2hsbfb "Ahahaha~"
+    m 2hsbfb "Ahaha~"
     show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5fsbfa "I love you, [player]. {w=0.3}{nw}"
     extend 5fkbfa "I'll always be kind to you."

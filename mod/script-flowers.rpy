@@ -132,7 +132,7 @@ label mshMod_topic_whitedahlias:
     m 1msa "..."
     m 1msb "If I could pick any flower to give you, [mas_get_player_nickname()]..."
     m 1hsa "I would choose the dahlia. {w=0.3}{nw}"
-    extend 1hsbfb "Ehehehe~!"
+    extend 1hsbfb "Ehehe~!"
     m 4esb "These flowers also represent strength, creativity, change, and a new beginning."
     m 4esa "You can see why this is one of the flowers that represent mental health."
     m 7esa "The dahlia flower is known to have the ability to survive under harsh conditions..."
@@ -220,7 +220,7 @@ label mshMod_topic_lotusflower:
     m 1esa "Then you will soon rise above your circumstances and bask in the sun."
     m 1esb "Your struggles will transform you into an unwavering flower, [player]."
     m 2hsb "Believe your girlfriend's words! {w=0.3}{nw}"
-    extend 5hsb "Ahahaha~"
+    extend 5hsb "Ahaha~"
     show monika 5fsb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5fsb "Thanks for listening, [mas_get_player_nickname()]!"
     return
