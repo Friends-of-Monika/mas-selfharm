@@ -1,7 +1,6 @@
 init 5 python in mas_bookmarks_derand:
     # Ensure things get bookmarked and derandomed as usual.
     label_prefix_map["mshMod_topic_"] = label_prefix_map["monika_"]
-
 # Sunflowers
 init 5 python:
     addEvent(
@@ -13,7 +12,6 @@ init 5 python:
             random=True
         )
     )
-
 label mshMod_topic_sunflowers:
     m 1esb "[player], today I want to talk to you about a flower."
     m 3hsb "Sunflowers, specifically!"
@@ -23,7 +21,7 @@ label mshMod_topic_sunflowers:
     show monika 5hsa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5hsa "It's funny, most people think that a flowering sunflower heads track of the sun across the sky."
     show monika 7esd at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 7esd "But that's a misconception! Only immature flower buds do so - a fenomenon called heliotropism."
+    m 7esd "But that's a misconception! Only immature flower buds do so - a phenomenon called heliotropism."
     m 7esc "Another misconception is that when there's no sun in the sky, sunflowers face each other."
     m 1rsc "I've seen people make analogies relating that to..."
     m 1hua "'When you can't find sunshine, become someone else's sunshine. Be someone else's sunflower.'"
@@ -56,15 +54,14 @@ init 5 python:
             random=True
         )
     )
-
 label mshMod_topic_acacias:
     m 1esb "[player], can I tell you some facts about a flower?"
     m 1esa "Today we'll talk about the acacia."
-    m 4esa "Acacias are also known as wattles, wattleseed, and embers, and can represent the immortality of the human soul."
+    m 4esa "Acacias are also known as wattles, wattleseed, and mimosa trees, and can represent the immortality of the human soul."
     m 4hsb "That's because acacia bushes are always green, no matter the season!"
     m 7esb "In some rituals, those flowers are used as a reminder that the soul, like energy..."
     m 7wsb "Cannot be destroyed, but continues beyond the earthly plane!"
-    m 1esa "Acacia’s primary meaning is strength, rebirth, and eternal life. {w=0.3}{nw}"
+    m 1esa "Acacia's primary meaning is strength, rebirth, and eternal life. {w=0.3}{nw}"
     extend 1esb "It is mentioned in both the Torah and the Bible as the wood used for building the Tabernacle."
     m 2hsb "It is also important in the Buddhist tradition as a symbol of compassion for all living things!"
     m 2lsb "Their meaning changes depending on the flower color, but summarizing, we can say they mean..."
@@ -90,11 +87,10 @@ init 5 python:
             random=True
         )
     )
-
 label mshMod_topic_hyacinths:
     m 1esa "[player], let's talk about a flower today?"
     m 1hsa "Hyacinths! The optimistic flower."
-    m 1hsb "They are even mentioned my T.S Elliot in a poem called 'The Waste Land'."
+    m 1hsb "They are even mentioned my T.S. Eliot in a poem called 'The Waste Land'."
     m 1esb "I'll read some of its verses to you!"
     m 1dsc "..."
     m 1esc "{i}'You gave me hyacinths first a year ago;'{/i}"
@@ -104,10 +100,10 @@ label mshMod_topic_hyacinths:
     m 4esa "{i}Speak, and my eyes failed, I was neither{/i}"
     m 6esc "{i}Living nor dead, and I knew nothing,{/i}"
     m 7esc "{i}Looking into the heart of light, the silence.{/i}"
-    m 7esd "'{i}Oed’ und leer das Meer.{/i}', which translates to:"
+    m 7esd "'{i}Oed' und leer das Meer.{/i}', which translates to:"
     m 7esa "'Empty and desolate is the sea.'"
     m 1dsc "..."
-    m 1esa "Isn't it a mesmerazing poem, [player]?"
+    m 1esa "Isn't it a mesmerizing poem, [player]?"
     m 1hsb "The hyacinth is the flower of the sun god Apollo and is a symbol of peace, rebirth, commitment and beauty, but also of power and pride."
     m 1esp "Giving a hyacinth to someone may also indicate jealousy - especially if its yellow -, so be careful, [player]!"
     m 1esa "But white hyacinths symbolize a wish for healing, and that's what I wanted to emphasize."
@@ -129,7 +125,6 @@ init 5 python:
             random=True
         )
     )
-
 label mshMod_topic_whitedahlias:
     m 1lsd "[player], I've been thinking about a flower."
     m 1esb "Dahlias! {w=0.3}{nw}"
@@ -137,8 +132,8 @@ label mshMod_topic_whitedahlias:
     m 1msa "..."
     m 1msb "If I could pick any flower to give you, [mas_get_player_nickname()]..."
     m 1hsa "I would choose the dahlia. {w=0.3}{nw}"
-    extend 1hsbfb "Ehehehe~!"
-    m 4esb "These flowers also represent strength, creativity, change, and a new begginning."
+    extend 1hsbfb "Ehehe~!"
+    m 4esb "These flowers also represent strength, creativity, change, and a new beginning."
     m 4esa "You can see why this is one of the flowers that represent mental health."
     m 7esa "The dahlia flower is known to have the ability to survive under harsh conditions..."
     m 7hsa "And nevertheless, come out very beautiful and lovely at all times!"
@@ -150,7 +145,7 @@ label mshMod_topic_whitedahlias:
     m 4hsa "When you look at the dahlia flower, you see elegance in all ramifications and words."
     show monika 5lsb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5lsb "The dahlia flower is, no doubt, a flower of uniqueness. {w=0.3}{nw}"
-    extend 5rsb "It has the ability to represent the nature of us individuals."
+    extend 5rsb "It can represent the nature of us individuals."
     m 5hsa "This flower can be seen as a sign of our ability to live in adventure and also to stay relaxed and happy at all times."
     m 5ksb "If I had to choose one... the dahlia would be my favorite flower."
     m 5ksbsb "Would you give me one when I cross over?"
@@ -158,7 +153,6 @@ label mshMod_topic_whitedahlias:
     show monika 7esa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 7esa "Thanks for listening, [mas_get_player_nickname()]!"
     return
-
 
 # Flannel flowers
 init 5 python:
@@ -171,7 +165,6 @@ init 5 python:
             random=True
         )
     )
-
 label mshMod_topic_flannelflowers:
     m 1esa "[player]! Have you ever seen a flannel flower?"
     m 1hsa "They're gorgeous flowers which feel like flannel when you touch them!"
@@ -181,7 +174,7 @@ label mshMod_topic_flannelflowers:
     m 4esa "So the flannel flower, as all the native Australian plants, needs to be adaptable and enduring in order to survive."
     m 1esa "In the same way as all of us, that regardless of our life circumstances, develop resilience and the ability to adapt to change..."
     m 1hsa "In order to maintain good mental health. Our adaptability is what makes us human!"
-    m 3hsb "Taking this into consideration, being open and empathetic to a person’s expression of distress can assist in the recovery of a person living with mental illness."
+    m 3hsb "Taking this into consideration, being open and empathetic to a person's expression of distress can assist in the recovery of a person living with mental illness."
     m 3hub "And also change the negative attitudes of our society as a whole!"
     m 4esb "All of us can learn to be a little more empathetic."
     show monika 5hsb at t11 zorder MAS_MONIKA_Z with dissolve_monika
@@ -200,7 +193,6 @@ init 5 python:
             random=True
         )
     )
-
 label mshMod_topic_lotusflower:
     m 7esb "[player], do you like lotus flowers?"
     m 7hsb "I think they're so beautiful! {w=0.3}{nw}"
@@ -217,18 +209,18 @@ label mshMod_topic_lotusflower:
     m 2esb "The reason for that is because it's the kind of flower that can only grow in muddy, murky water."
     m 2hsb "But when it gets its chance to bloom, it comes out as one of the most beautiful flowers ever."
     m 2esb "This can be a metaphor for how difficult it is to struggle with a mental illness."
-    m 3esc "Sometimes, it can seem like running a race you can’t win."
-    m 3esa "However, giving up is the worst possible option because it doesn’t allow you to grow."
-    m 1esd "If mud didn’t exist, neither would the lotus. {w=0.3}{nw}"
-    extend 7esd "Likewise, if bad situations didn’t exist, resilient people wouldn’t either."
+    m 3esc "Sometimes, it can seem like running a race you can't win."
+    m 3esa "However, giving up is the worst possible option because it doesn't allow you to grow."
+    m 1esd "If mud didn't exist, neither would the lotus. {w=0.3}{nw}"
+    extend 7esd "Likewise, if bad situations didn't exist, resilient people wouldn't either."
     m 7esp "No mud, no lotus, {w=0.3}{nw}"
     extend 1esa "you see?"
     m 1esb "Our struggles enhance our natural inner strength, and that is surely something to be proud of."
     m 1tsc "Like the lotus, if you can try your hardest to see the faint light and beauty of day through murky waters..."
     m 1esa "Then you will soon rise above your circumstances and bask in the sun."
-    m 1esb "Your struggles will transform you into a unwavering flower, [player]."
+    m 1esb "Your struggles will transform you into an unwavering flower, [player]."
     m 2hsb "Believe your girlfriend's words! {w=0.3}{nw}"
-    extend 5hsb "Ahahaha~"
+    extend 5hsb "Ahaha~"
     show monika 5fsb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5fsb "Thanks for listening, [mas_get_player_nickname()]!"
     return

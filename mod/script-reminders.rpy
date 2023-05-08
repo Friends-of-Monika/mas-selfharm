@@ -22,7 +22,7 @@ label mshMod_medication_reminder_request:
     m 7wua "I perfected my coding skills even more and now I'm able to create a daily reminder for you."
     m 2dua "I know a lot of people take daily medications for a lot of different reasons!"
     m 2eub "So I thought it would be nice if I could help you remember to take your medication correctly."
-    m 3nublb "After all, your health and safety is my number one priority!"
+    m 3nublb "After all, your health and safety are my number one priority!"
     m 3wublb "So, [player], do you like that idea?"
 
     m 3wubla "Do you want to set a reminder?{nw}"
@@ -48,7 +48,7 @@ label mshMod_medication_reminder_request:
             # P.S. 'tod' is for 'Time Of Day'
 
             m 4hub "Alright! I'll be sure to remind you, every day, in the [tod]!"
-            m 2nua "Make sure to come see me so I can remind you, okay? Ehehehe~"
+            m 2nua "Make sure to come see me so I can remind you, okay? Ehehe~"
 
             # This has to be performed AFTER all the lines. We must ensure this applies
             # instantly and is not blocked by user idling at some dialogue line.
@@ -120,3 +120,5 @@ label mshMod_medication_reminder:
     # Do not move this anywhere, this must be above the return.
     $ store.mshMod_reminder.extendCurrentReminder()
     return "love"
+
+

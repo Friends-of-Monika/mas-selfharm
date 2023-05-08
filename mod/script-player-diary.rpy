@@ -26,7 +26,7 @@ label mshMod_writing_to_diary:
 label mshMod_writing_to_diary_intro:
     m 1lta "A diary, huh?"
     m 3eua "I've honestly been thinking about this for a bit."
-    m 1huu "It can really be a great outlet for anyone's emotions!"
+    m 1huu "It can be a great outlet for anyone's emotions!"
     show monika 5rub at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5rub "You could write your innermost feelings and thoughts..."
     show monika 4rub at t11 zorder MAS_MONIKA_Z with dissolve_monika
