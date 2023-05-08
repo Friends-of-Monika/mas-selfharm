@@ -1,26 +1,21 @@
 init -990 python in mas_submod_utils:
-    if not store.mshMod_update.zeroFilesRemoved:
-        Submod(
-            author="MAS Self Harm Submod Team",
-            coauthors=["Friends of Monika"],
-            name="MAS Self Harm Submod",
-            description="Awareness about self-harm and support to self-harmers, with different "
-                        "techniques, milestones, checkups and new dialogue and spritepacks.",
-            version="1.0.8",
-            version_updates={
-                "mas_self_harm_submod_team_mas_self_harm_submod_v1_0_6": "mas_self_harm_submod_team_mas_self_harm_submod_v1_0_7"
-            }
-        )
+    Submod(
+        author="MAS Self Harm Submod Team",
+        coauthors=["Friends of Monika"],
+        name="Self Harm Awareness Submod",
+        description="Awareness about self-harm and support to self-harmers, with different "
+                    "techniques, milestones, checkups and new dialogue and spritepacks.",
+        version="1.0.8"
+    )
 
 init -989 python:
-    if not store.mshMod_update.zeroFilesRemoved:
-        if store.mas_submod_utils.isSubmodInstalled("Submod Updater Plugin"):
-            store.sup_utils.SubmodUpdater(
-                submod="MAS Self Harm Submod",
-                user_name="friends-of-monika",
-                repository_name="mas-selfharm",
-                extraction_depth=3
-            )
+    if store.mas_submod_utils.isSubmodInstalled("Submod Updater Plugin"):
+        store.sup_utils.SubmodUpdater(
+            submod="MAS Self Harm Submod Team",
+            user_name="friends-of-monika",
+            repository_name="mas-selfharm",
+            extraction_depth=3
+        )
 
 init -100 python in mshMod:
     import os
@@ -119,6 +114,6 @@ init -100 python in mshMod:
             return "/".join(parts)
 
     basedir_rel = os.path.join(*get_script_file(
-        fallback="Submods/MAS Self Harm Submod/aa_header.rpy",
+        fallback="Submods/Self Harm Awareness Submod/aa_header.rpy",
         relative=True
     ).split("/")[:-1])

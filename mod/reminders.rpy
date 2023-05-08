@@ -37,13 +37,13 @@ label mshMod_medication_reminder_request:
                 m "Okay! What time do you want me to remind you about it?{fast}"
 
                 "In the morning.":
-                    $ delay, tod = store.mshMod_reminder_utils.getDailyMorningDelay(), "morning"
+                    $ trigger_at, tod = store._msh_reminder_utils.getMorningTimeOfDay(), "morning"
 
                 "In the afternoon.":
-                    $ delay, tod = store.mshMod_reminder_utils.getDailyAfternoonDelay(), "afternoon"
+                    $ trigger_at, tod = store._msh_reminder_utils.getAfternoonTimeOfDay(), "afternoon"
 
                 "In the evening.":
-                    $ delay, tod = store.mshMod_reminder_utils.getDailyEveningDelay(), "evening"
+                    $ trigger_at, tod = store._msh_reminder_utils.getEveningTimeOfDay(), "evening"
 
             # P.S. 'tod' is for 'Time Of Day'
 
@@ -56,9 +56,14 @@ label mshMod_medication_reminder_request:
                 # Start reminding player, daily, with a latency of one hour.
                 # (Meaning that if player missed exact expected time of a reminder, it'll still
                 # trigger within an hour; else a reminder will be attempted next day.)
-                store.mshMod_reminder.addRecurringReminder(
-                    "mshMod_medication_reminder",
-                    delay, store.mshMod_reminder_utils.INTERVAL_DAILY, store.mshMod_reminder_utils.LATENCY_HOURLY
+                store._msh_reminder.queue_reminder(
+                    _msh_reminder.Reminder(
+                        trigger_at=trigger_at,
+                        target_evl="mshMod_medication_reminder",
+                        key="medication_reminder",
+                        interval=store._msh_reminder_utils.INTERVAL_DAILY,
+                        grace_period=store._msh_reminder_utils.LATENCY_HOURLY
+                    )
                 )
 
                 # Hide this event since we have set a reminder and no longer need
@@ -90,7 +95,7 @@ label mshMod_medication_reminder_stop:
 
     python:
         # Same here, DO NOT move this anywhere, this has to be right above the return statement.
-        store.mshMod_reminder.stopReminder("mshMod_medication_reminder")
+        store._msh_reminder.dequeue_reminder("medication_reminder")
 
         # Hide this event as now we need to enable player to ask to remind again.
         mas_hideEVL("mshMod_medication_reminder_stop", "EVE", lock=True)
@@ -100,13 +105,11 @@ label mshMod_medication_reminder_stop:
 
 
 init 5 python:
-    store.mshMod_reminder.addReminderEvent(
+    addEvent(
         Event(
             persistent.event_database,
             eventlabel="mshMod_medication_reminder",
-            conditional="store.mshMod_reminder.shouldTriggerReminder('mshMod_medication_reminder')",
-            action=EV_ACT_QUEUE,
-            rules={"force repeat": None, "bookmark_rule": mas_bookmarks_derand.BLACKLIST}
+            rules={"bookmark_rule": mas_bookmarks_derand.BLACKLIST}
         )
     )
 
@@ -116,9 +119,4 @@ label mshMod_medication_reminder:
     m 1wsb "That's right, it's time to take your meds! Don't forget to have lots of water with them~"
     m 1ksb "You can do it~"
     m 1hsbla "I love you!"
-
-    # Do not move this anywhere, this must be above the return.
-    $ store.mshMod_reminder.extendCurrentReminder()
     return "love"
-
-

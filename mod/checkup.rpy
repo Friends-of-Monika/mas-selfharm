@@ -40,12 +40,15 @@ label mshMod_checkup_intro:
     # (Meaning that if player missed exact expected time of checkup, it'll still
     # trigger within a day; else checkup will be attempted next week.)
 
-    if not store.mshMod_reminder.isReminderActive("mshMod_checkup_reminder"):
-        # NOTE: Ensure we don't have one active already.
-        $ store.mshMod_reminder.addRecurringReminder(
-            "mshMod_checkup_reminder",
-            store.mshMod_reminder_utils.getDailyEveningDelay(),
-            store.mshMod_reminder_utils.INTERVAL_WEEKLY, store.mshMod_reminder_utils.LATENCY_DAILY
+    if not store._msh_reminder.is_reminder_queued("mshMod_checkup_reminder"):
+        store._msh_reminder.queue_reminder(
+            _msh_reminder.Reminder(
+                trigger_at=store._msh_reminder_utils.getWeeklyEveningDelay(),
+                target_evl="mshMod_checkup_reminder",
+                key="checkup_reminder",
+                interval=store._msh_reminder_utils.INTERVAL_WEEKLY,
+                grace_period=store._msh_reminder_utils.LATENCY_DAILY
+            )
         )
 
     return "derandom|love"
@@ -53,13 +56,10 @@ label mshMod_checkup_intro:
 
 #checkup
 init 5 python:
-    store.mshMod_reminder.addReminderEvent(
+    addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mshMod_checkup_reminder",
-            conditional="store.mshMod_reminder.shouldTriggerReminder('mshMod_checkup_reminder')",
-            action=EV_ACT_QUEUE,
-            rules={"force repeat": None}
+            eventlabel="mshMod_checkup_reminder"
         )
     )
 
@@ -213,6 +213,4 @@ label mshMod_checkup_reminder:
         m 5hublb "You mean the world to me, [mas_get_player_nickname()]."
         m 5fkbfa "I love you."
 
-    # Do not move this anywhere, this must be above the return.
-    $ store.mshMod_reminder.extendCurrentReminder()
     return "love"
