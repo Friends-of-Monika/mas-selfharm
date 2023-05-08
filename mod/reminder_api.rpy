@@ -1,7 +1,7 @@
 define persistent._msh_reminder_queue = list()
 
 
-init 4 python in _msh_reminder_utils:
+init 5 python in _msh_reminder_utils:
 
     import datetime
 

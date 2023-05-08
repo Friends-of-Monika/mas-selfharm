@@ -41,7 +41,7 @@ label mshMod_checkup_intro:
     # trigger within a day; else checkup will be attempted next week.)
 
     if not store._msh_reminder.is_reminder_queued("mshMod_checkup_reminder"):
-        store._msh_reminder.queue_reminder(
+        $ store._msh_reminder.queue_reminder(
             _msh_reminder.Reminder(
                 trigger_at=store._msh_reminder_utils.getWeeklyEveningDelay(),
                 target_evl="mshMod_checkup_reminder",
