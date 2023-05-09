@@ -5,7 +5,7 @@ init -990 python in mas_submod_utils:
         name="Self Harm Awareness Submod",
         description="Awareness about self-harm and support to self-harmers, with different "
                     "techniques, milestones, checkups and new dialogue and spritepacks.",
-        version="1.0.8"
+        version="2.0.0"
     )
 
 init -989 python:
