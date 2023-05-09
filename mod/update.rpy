@@ -1,3 +1,9 @@
+init -980 python:
+    if store.mas_submod_utils.isSubmodInstalled("MAS Self Harm Submod"):
+        raise RuntimeException("Self Harm Awareness Submod (previously named MAS Self Harm Submod) "
+                               "is in conflict with its older version that is already installed.\n"
+                               "Please uninstall MAS Self Harm Submod before installing Self Harm Awareness Submod.")
+
 init 11 python:
     if hasattr(store.persistent, "_mshMod_active_reminders") and store.persistent._mshMod_active_reminders is not None:
         if "mshMod_checkup_reminder" in store.persistent._mshMod_active_reminders:
