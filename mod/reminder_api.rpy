@@ -389,8 +389,8 @@ init 10 python in _msh_reminder:
         if reminder.trigger_at > now:
             return
 
-        elapsed_intervals = (now - reminder.trigger_at) // reminder.interval
-        reminder.trigger_at += (elapsed_intervals + 1) * reminder.interval
+        elapsed_intervals = (now - reminder.trigger_at).total_seconds() // reminder.interval.total_seconds()
+        reminder.trigger_at += datetime.timedelta(seconds=((elapsed_intervals + 1) * reminder.interval.total_seconds()))
 
 
     def __sort_queue():
