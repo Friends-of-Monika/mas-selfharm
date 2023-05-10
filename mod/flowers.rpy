@@ -1,6 +1,7 @@
 init 5 python in mas_bookmarks_derand:
     # Ensure things get bookmarked and derandomed as usual.
     label_prefix_map["mshMod_topic_"] = label_prefix_map["monika_"]
+
 # Sunflowers
 init 5 python:
     addEvent(
@@ -12,6 +13,7 @@ init 5 python:
             random=True
         )
     )
+
 label mshMod_topic_sunflowers:
     m 1esb "[player], today I want to talk to you about a flower."
     m 3hsb "Sunflowers, specifically!"
@@ -54,6 +56,7 @@ init 5 python:
             random=True
         )
     )
+
 label mshMod_topic_acacias:
     m 1esb "[player], can I tell you some facts about a flower?"
     m 1esa "Today we'll talk about the acacia."
@@ -125,6 +128,7 @@ init 5 python:
             random=True
         )
     )
+
 label mshMod_topic_whitedahlias:
     m 1lsd "[player], I've been thinking about a flower."
     m 1esb "Dahlias! {w=0.3}{nw}"
@@ -165,6 +169,7 @@ init 5 python:
             random=True
         )
     )
+
 label mshMod_topic_flannelflowers:
     m 1esa "[player]! Have you ever seen a flannel flower?"
     m 1hsa "They're gorgeous flowers which feel like flannel when you touch them!"
@@ -193,6 +198,7 @@ init 5 python:
             random=True
         )
     )
+
 label mshMod_topic_lotusflower:
     m 7esb "[player], do you like lotus flowers?"
     m 7hsb "I think they're so beautiful! {w=0.3}{nw}"
