@@ -66,7 +66,8 @@ init python:
             elif nh_tens == 1:
                 h_words.append(teens[nh_ones])
             else:
-                h_words.append(ones[nh_ones - 1])
+                if nh_ones > 0:
+                    h_words.append(ones[nh_ones - 1])
 
             return " ".join(h_words)
 
@@ -77,7 +78,8 @@ init python:
         if n_thousands > 0:
             words.append(_convert_hundreds(n_thousands))
             words.append("thousand")
-        words.append(_convert_hundreds(n_hundreds))
+        if n_hundreds > 0 or n_thousands == 0:
+            words.append(_convert_hundreds(n_hundreds))
 
         return " ".join(words)
 
