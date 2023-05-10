@@ -81,6 +81,9 @@ init python:
         if n_hundreds > 0 or n_thousands == 0:
             words.append(_convert_hundreds(n_hundreds))
 
+        if len(words) > 1:
+            words.insert(-1, "and")
+
         return " ".join(words)
 
 label mshMod_sober_check:
