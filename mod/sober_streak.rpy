@@ -23,12 +23,74 @@ init 5 python:
         )
     )
 
+init python:
+    def _msh_number_to_words(n):
+        """
+        Converts a given integer (n) between 0 and 999999 to its English words
+        equivalent.
+
+        This is an internal function and should not be used by other submods.
+
+        IN:
+            n -> int:
+                The integer value to convert, where 0 <= n <= 999999.
+
+        RETURNS:
+            str: The English words representation of the given integer.
+
+        NOTE:
+            An internal function. Should not be used by other submods.
+        """
+
+        ones = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+        teens = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
+        tens = ["twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
+        thousands = ["thousand"]
+
+        def _convert_hundreds(nh):
+            if nh == 0:
+                return "zero"
+
+            nh_hundreds = nh // 100
+            nh_tens = nh % 100 // 10
+            nh_ones = nh % 10
+
+            h_words = []
+            if nh_hundreds > 0:
+                h_words.append(ones[nh_hundreds - 1])
+                h_words.append("hundred")
+            if nh_tens > 1:
+                h_words.append(tens[nh_tens - 2])
+                if nh_ones > 0:
+                    h_words.append(ones[nh_ones - 1])
+            elif nh_tens == 1:
+                h_words.append(teens[nh_ones])
+            else:
+                h_words.append(ones[nh_ones - 1])
+
+            return " ".join(h_words)
+
+        n_hundreds = n % 1000
+        n_thousands = n // 1000
+
+        words = []
+        if n_thousands > 0:
+            words.append(_convert_hundreds(n_thousands))
+            words.append("thousand")
+        words.append(_convert_hundreds(n_hundreds))
+
+        return " ".join(words)
+
 label mshMod_sober_check:
     python:
         duration = store.mshMod_sober_streak.getStreakDuration()
         days = "day" if duration == 1 else "days"
 
-    m 1dkb "You've been sober for [duration] [days] now, [player]."
+    if duration == 0:
+        m 3hksdlb "You've just started your sober streak, [mas_get_player_nickname()]!"
+    else:
+        m 1dkb "You've been sober for [_msh_number_to_words(duration)] [days] now, [player]."
+
     if duration < 3:
         m 3fka "I'm so proud of you for making the promise!"
         m 2esb "This is the start of something wonderful."
