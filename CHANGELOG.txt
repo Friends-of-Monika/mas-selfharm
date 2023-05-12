@@ -2,7 +2,11 @@
 
 Starting from this version, submod is now named Self-Harm Awareness Submod!
 
+Contributions:
+- Typo fixes and spell/grammar check. Thanks, @Survivor-2-22-22! Grace will be proud of you~
 - Fixed issue with SIAD date sometimes not working as expected (#1). Thanks, @Chamelllemon!
+
+Other changes:
 - Updated the submod header to now reference this (Friends-of-Monika/mas-selfharm) repository
 - Formatted spritepack JSON files
 
@@ -19,23 +23,27 @@ MAS updates and version releases.
 
 1.0.6
 
+Changes:
 - Fixed issue on milestone unlock (thanks to @FellTheSimp)
 
 
 1.0.5
 
+Changes:
 - Fixed milestone topics appearing repeatedly (#73)
 - Fixed '[player] and therapy' popping up in 'Repeat conversation' (#74)
 
 
 1.0.4
 
+Changes:
 - Fixed intro topic showing up regardless of player harming self or not
 - Fixed crash occurring if player told Monika they harm self in random topic
 
 
 1.0.3
 
+Changes:
 - Fixed compliment bookmarkability
 - Fixed songs having TYPE_LONG
 - Fixed probing questions exception if player is on streak already
@@ -43,6 +51,7 @@ MAS updates and version releases.
 
 1.0.2
 
+Changes:
 - Added artificial error screen in case user has installed source code version of the mod
 - Added README.md and LICENSE.txt to redirected_files in updater submod hook
 - Switched to .rpy file packaging
@@ -50,6 +59,7 @@ MAS updates and version releases.
 
 1.0.1
 
+Changes:
 - Fixed issue with first aid help dialogue was not bookmarkable (#43)
 - Fixed issue with checkup reminder activating twice causing traceback screen popups (#45)
 
