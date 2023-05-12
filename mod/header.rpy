@@ -1,7 +1,7 @@
 init -990 python in mas_submod_utils:
     Submod(
-        author="MAS Self Harm Submod Team",
-        coauthors=["Friends of Monika"],
+        author="Friends of Monika",
+        coauthors=["former MAS Self Harm Submod Team"],
         name="Self Harm Awareness Submod",
         description="Awareness about self-harm and support to self-harmers, with different "
                     "techniques, milestones, checkups and new dialogue and spritepacks.",
@@ -11,7 +11,7 @@ init -990 python in mas_submod_utils:
 init -989 python:
     if store.mas_submod_utils.isSubmodInstalled("Submod Updater Plugin"):
         store.sup_utils.SubmodUpdater(
-            submod="MAS Self Harm Submod Team",
+            submod="Self Harm Awareness Submod",
             user_name="friends-of-monika",
             repository_name="mas-selfharm",
             extraction_depth=3
