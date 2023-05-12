@@ -1,3 +1,21 @@
+# A tribute to all of the people taking part in making this submod. Thank you, everyone!
+# Things were really nice while they lasted, and it was pleasure working with you.
+# It's a shame we had to part our ways like that, I hope everyone is alright out there.
+#
+# Without you, there wouldn't be Self-Harm submod:
+#
+#   * Paulius1290
+#   * your otter friend
+#   * Bunny
+#   * maliciousSoftware
+#   * LOeufmf
+#   * Lumella
+#   * HistoryVariety
+#   * Kventis
+#
+# Thank you, MAS Self Harm Submod Team; we'll take it from here.
+# - Friends of Monika
+
 init -990 python in mas_submod_utils:
     Submod(
         author="Friends of Monika",
