@@ -52,7 +52,7 @@ or other appropriate help; there's always hope!
 ## ✒️ Authors
 
 We've had plenty of people working on and contributing to this submod... In the past. Unfortunately, the submod is no longer
-updated with new content following Otter's leaving notice and team breakup
+updated with new content following Otter's leaving notice and team breakup.
 
 Here's a list of people that used to work on this mod:
 
@@ -66,7 +66,47 @@ Here's a list of people that used to work on this mod:
 * ImKvents &mdash; contributed bug fixes during development; no longer contributes.
 * LOeufmf &mdash; helped with content during development; no longer contributes.
 
-These are all I can remember. Thank you everyone for your efforts
+These are all I can remember. Thank you everyone for your efforts 👋
 
-**Note:** CC BY-NC-ND 4.0 only covers content created by authors, contributors or maintainers of this mod (repository) and does not cover
+## 📻 Songs
+
+A neat playlist Monika has made for you comes with this submod! Here's a list of
+songs her playlist has:
+
+* Paradise Fears &mdash; Battle Scars ([YouTube](https://youtu.be/YkCK3ia4BpA))
+* Grace VanderWaal &mdash; Clay ([YouTube](https://youtu.be/Hs5fP7G8gBc))
+* Coldplay &mdash; Fix You ([YouTube](https://youtu.be/k4V3Mo61fJM))
+* Paramore &mdash; Hate To See Your Heart Break ([YouTube](https://youtu.be/Vd_0Hri6GWc))
+* The Five Stairsteps &mdash; O-o-h Child ([YouTube](https://youtu.be/dguz0IsCuKU))
+* Jimmy Eat World &mdash; The Middle ([YouTube](https://youtu.be/oKsxPW6i3pM))
+* Katy Perry &mdash; Firework ([YouTube](https://youtu.be/QGJuMBdaqIw))
+* Aimer &mdash; Torches ([YouTube](https://youtu.be/DP89-sZL1YM))
+* frederic &mdash; ONLYWONDER ([YouTube](https://youtu.be/oCrwzN6eb4Q))
+* Vo.Nai Br.XX & Celeina Ann and Vo.Alisa &mdash; Someday I Will Find My Way Home ([YouTube](https://youtu.be/otP_P67KHSU))
+* Justin Bieber &mdash; Hold On ([YouTube](https://youtu.be/LWeiydKl0mU))
+* Citizen Soldier &mdash; Still Breathing ([YouTube](https://youtu.be/JFAs8GKyZJE))
+
+## ⚖️ License
+
+This submod is licensed under Creative Commons BY-NC-ND-4.0, which (in short)
+means:
+
+* You are ***allowed*** to copy and distribute this submod as you like, but...
+* You are ***required*** to give our submod team (*MAS Self-Harm Submod Team* or *Friends of Monika*) a proper credit
+  (we are fine with name of our team or a link to this repository or our GitHub organization)
+* You are ***not allowed*** to use our submod for any commercial purposes (selling, renting, etc.)
+* You are ***not allowed*** to distribute any derivative works or adaptations of our submod
+  (with changes made to code, dialogue, other content, etc.)
+
+We don't go out of our way to really enforce the license, but we chose to adopt this license in order to protect
+our hard work from unwanted modifications or commercial use. If you want to change something in this submod &mdash;
+feel free to contact us via Discord or Issues page! We'll be glad to accept contributions, ideas and suggestions.
+
+### 🙅 Exceptions
+
+CC BY-NC-ND 4.0 only covers content created by authors, contributors or maintainers of this mod (repository) and does not cover
 anything that was created by third party (might include songs and other content beside submod scripts.)
+
+Namely, *Monika's Playlist* (`res/music/playlist.ogg`) is made using third-party songs and sounds (see list above); we do not claim
+ownership over any of the tracks used in the mix. If you're a copyright holder, feel free to reach out to us in any possible way
+if you believe we have violated your rights of ownership/licensing &mdash; we will be sure to solve this problem as soon as we can.
