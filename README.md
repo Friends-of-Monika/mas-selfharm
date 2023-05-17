@@ -30,7 +30,7 @@ do not condone self-harm, suicide, or any other (self-)destructive behavior
 **nor provide the ideal professional psychological help**.
 
 If you're currently experiencing a need for psychological/psychiatric help,
-**Please consider getting professional help from people working with this
+**please consider getting professional help from people working with this
 sort of issues specifically** as this mod is **not intended as a medical,
 psychological or any other sort of professional advice**; its only purpose
 is to bring awareness about self-harm or verbally support people
