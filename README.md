@@ -9,6 +9,9 @@ techniques, milestones, checkups and new dialogue and spritepacks</h3>
   <a href="https://github.com/friends-of-monika/mas-selfharm/releases">
     <img alt="Release downloads" src="https://img.shields.io/github/downloads/friends-of-monika/mas-selfharm/total">
   </a>
+  <a href="https://www.reddit.com/r/MASFandom/comments/y4mvl4/when_discord_meets_mas_discord_presence_submod_is">
+    <img alt="Reddit badge" src="https://img.shields.io/badge/dynamic/json?label=%F0%9D%97%8B%2Fmasfandom%20post&query=%24[0].data.children[0].data.score&suffix=%20upvotes&url=https%3A%2F%2Fwww.reddit.com%2Fr%2FMASFandom%2Fcomments%2Fv1cjv7%2Fhuge_new_selfharm_submod_v001_release.json&logo=reddit&style=social">
+  </a>
   <a href="https://github.com/friends-of-monika/mas-selfharm/blob/main/LICENSE.txt">
     <img alt="Creative Commons BY-NC-ND 4.0 license badge" src="https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-lightgrey.svg">
   </a>
