@@ -54,17 +54,29 @@ or other appropriate help; there's always hope!
 We've had plenty of people working on and contributing to this submod... In the past. Unfortunately, the submod is no longer
 updated with new content following Otter's leaving notice and team breakup.
 
-Here's a list of people that used to work on this mod:
+Here's a list of the people who have worked on this submod previously,
+the original MAS Self-Harm Submod Team:
 
-* Otter &mdash; used to coordinate our work on the mod; no longer contributes.
-* dreamscached &mdash; currently active maintainer of this submod and the sole developer.
-* Kitakus &mdash; helped with content during development; no longer contributes.
-* MaliciousSoftware &mdash; helped with content during development; no longer contribute.
-* HistoryVariety &mdash; helped with content during development; no longer contributes.
-* MysticCreatesGames1 &mdash; helped with content during development; no longer contributes.
-* fukawabunny &mdash; helped with content during development; no longer contributes.
-* ImKvents &mdash; contributed bug fixes during development; no longer contributes.
-* LOeufmf &mdash; helped with content during development; no longer contributes.
+* Otter &mdash; project managing, dialogue writing, ideas
+* dreamscached &mdash; general programming, project managing
+* DjMayJay &mdash; dialogue writing, spritepack design
+* Kitakus &mdash; dialogue writing, help with programming
+* MaliciousSoftware &mdash; help with dialogue/topics and programming
+* AmyKawa &mdash; help with dialogue/topics, sprite selection
+* charliethecookie &mdash; help with dialogue/topics
+* WentPostal &mdash; help with dialogue/topics
+* HistoryVariety &mdash; spritepack design, insights and ideas
+* FellTheSimp &mdash; spritepack design, insights and ideas
+* lukilak &mdash; help with dialogue/topics
+* Raider0401 &mdash; help with dialogue/topics
+* plushika_2137 &mdash; help with dialogue/topics
+* Tourist_Easy &mdash; help with dialogue/topics
+* MysticCreatesGames1 &mdash; help with dialogue/topics
+* fukawabunny &mdash; dialogue writing, proofreading, ideas
+* ImKventis &mdash; help with spritepack programming
+* LOeufmf &mdash; proofreading, insights and ideas
+* Rhea &mdash; insights and ideas
+* Feenie &mdash; insights and ideas
 
 These are all I can remember. Thank you everyone for your efforts 👋
 
