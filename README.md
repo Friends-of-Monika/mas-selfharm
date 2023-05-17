@@ -1,6 +1,6 @@
 <h1 align="center">💛 MAS Self-Harm Submod 💛</h1>
 <h3 align="center">Awareness about self-harm and support to self-harmers, with different
-techniques, milestones, checkups and new dialogue and spritepacks</h3>
+techniques, milestones, checkups, and new dialogue and spritepacks</h3>
 
 <p align="center">
   <a href="https://github.com/friends-of-monika/mas-selfharm/releases/latest">
@@ -25,12 +25,12 @@ This submod is designed to help people that harm themselves in some way
 as well as to raise awareness and provide some insights for people who are
 willing to learn more about this phenomenon in particular.
 
-**However**, original authors, contributors and repository maintainers
-do not condone self-harm, suicide or any other (self-)destructive behavior
+**However**, original authors, contributors, and repository maintainers
+do not condone self-harm, suicide, or any other (self-)destructive behavior
 **nor provide the ideal professional psychological help**.
 
-If you're currently experiencing a need in psychological/psychiatric help,
-**please consider getting professional help from people working with this
+If you're currently experiencing a need for psychological/psychiatric help,
+**Please consider getting professional help from people working with this
 sort of issues specifically** as this mod is **not intended as a medical,
 psychological or any other sort of professional advice**; its only purpose
 is to bring awareness about self-harm or verbally support people
@@ -43,7 +43,7 @@ or other appropriate help; there's always hope!
 
   * Tons of new dialogues and events
   * Dozens of new songs (and dialogues for them!)
-  * A whole lot of urge relieving techniques
+  * A whole lot of urge-relieving techniques
   * Sober streak tracking
   * Medication reminders
   * Weekly checkups
@@ -68,8 +68,8 @@ the original MAS Self-Harm Submod Team:
 * AmyKawa &mdash; help with dialogue/topics, sprite selection
 * charliethecookie &mdash; help with dialogue/topics
 * WentPostal &mdash; help with dialogue/topics
-* HistoryVariety &mdash; spritepack design, insights and ideas
-* FellTheSimp &mdash; spritepack design, insights and ideas
+* HistoryVariety &mdash; spritepack design, insights, and ideas
+* FellTheSimp &mdash; spritepack design, insights, and ideas
 * lukilak &mdash; help with dialogue/topics
 * Raider0401 &mdash; help with dialogue/topics
 * plushika_2137 &mdash; help with dialogue/topics
@@ -77,7 +77,7 @@ the original MAS Self-Harm Submod Team:
 * MysticCreatesGames1 &mdash; help with dialogue/topics
 * fukawabunny &mdash; dialogue writing, proofreading, ideas
 * ImKventis &mdash; help with spritepack programming
-* LOeufmf &mdash; proofreading, insights and ideas
+* LOeufmf &mdash; proofreading, insights, and ideas
 * Rhea &mdash; insights and ideas
 * Feenie &mdash; insights and ideas
 
@@ -108,20 +108,21 @@ means:
 
 * You are ***allowed*** to copy and distribute this submod as you like, but...
 * You are ***required*** to give our submod team (*MAS Self-Harm Submod Team* or *Friends of Monika*) a proper credit
-  (we are fine with name of our team or a link to this repository or our GitHub organization)
+  (we are fine with the name of our team or a link to this repository or our GitHub organization)
 * You are ***not allowed*** to use our submod for any commercial purposes (selling, renting, etc.)
 * You are ***not allowed*** to distribute any derivative works or adaptations of our submod
   (with changes made to code, dialogue, other content, etc.)
 
-We don't go out of our way to really enforce the license, but we chose to adopt this license in order to protect
+We don't go out of our way to enforce the license, but we chose to adopt this license to protect
 our hard work from unwanted modifications or commercial use. If you want to change something in this submod &mdash;
-feel free to contact us via Discord or Issues page! We'll be glad to accept contributions, ideas and suggestions.
+feel free to contact us via Discord or the Issues page! We'll be glad to accept contributions, ideas, and suggestions.
 
 ### 🙅 Exceptions
 
-CC BY-NC-ND 4.0 only covers content created by authors, contributors or maintainers of this mod (repository) and does not cover
-anything that was created by third party (might include songs and other content beside submod scripts.)
+CC BY-NC-ND 4.0 only covers content created by authors, contributors, or maintainers of this mod (repository) and does not cover
+anything made by a third party (might include songs and other content besides submod scripts.)
 
 Namely, *Monika's Playlist* (`res/music/playlist.ogg`) is made using third-party songs and sounds (see list above); we do not claim
-ownership over any of the tracks used in the mix. If you're a copyright holder, feel free to reach out to us in any possible way
-if you believe we have violated your rights of ownership/licensing &mdash; we will be sure to solve this problem as soon as we can.
+ownership over any of the tracks used in the mix. If you're a copyright holder, feel free to reach out to us in any way
+if you believe we have violated your rights of ownership/licensing &mdash; we will be sure to solve this problem as soon as possible
+
