@@ -1,4 +1,4 @@
-# Sober check topics, milestones, etc. For API see zz_sober_streak.rpy
+# Sober check topics, milestones, etc. For API see sober_streak_api.rpy
 
 init 5 python in mas_bookmarks_derand:
     # Ensure things get bookmarked and derandomed as usual.
@@ -45,7 +45,6 @@ init python:
         ones = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
         teens = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
         tens = ["twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
-        thousands = ["thousand"]
 
         def _convert_hundreds(nh):
             if nh == 0:
