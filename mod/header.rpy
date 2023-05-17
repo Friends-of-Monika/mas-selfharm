@@ -4,14 +4,26 @@
 #
 # Without you, there wouldn't be Self-Harm submod:
 #
-#   * Paulius1290
-#   * your otter friend
-#   * Bunny
-#   * maliciousSoftware
-#   * LOeufmf
-#   * Lumella
+#   * Otter
+#   * dreamscached
+#   * DjMayJay
+#   * Kitakus
+#   * MaliciousSoftware
+#   * AmyKawa
+#   * charliethecookie
+#   * WentPostal
 #   * HistoryVariety
-#   * Kventis
+#   * FellTheSimp
+#   * lukilak
+#   * Raider0401
+#   * plushika_2137
+#   * Tourist_Easy
+#   * MysticCreatesGames1
+#   * fukawabunny
+#   * ImKventis
+#   * LOeufmf
+#   * Rhea
+#   * Feenie
 #
 # Thank you, MAS Self Harm Submod Team; we'll take it from here.
 # - Friends of Monika
