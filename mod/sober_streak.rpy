@@ -1,13 +1,8 @@
-# Sober check topics, milestones, etc. For API see sober_streak_api.rpy
+# Sober check topics, milestones, etc. For API see sober_streak.rpy
 
 init 5 python in mas_bookmarks_derand:
     # Ensure things get bookmarked and derandomed as usual.
     label_prefix_map["mshMod_sober_"] = label_prefix_map["monika_"]
-
-# Technical label only used for asking for how long player is sober so that we reuse code.
-label mshMod_sober_ask_since:
-    $ since = datetime.date.today() - datetime.timedelta(days=int(renpy.input("For how long have you been sober already?", allow="0123456789", length=4)))
-    return since
 
 # Duration check dialogue
 init 5 python:
@@ -146,12 +141,52 @@ label mshMod_sober_promise:
                 m "Huh? What is it?{fast}"
 
                 "I'm sober for some time already...":
-                    m 2ssb "Really?! That's so nice to hear! For how many days have you been sober already?"
+                    m 2sub "Really?! That's so nice to hear! For how long do you think you are sober now?"
 
-                    call mshMod_sober_ask_since
-                    $ since = _return
+                    label .select_since_date:
+                        m 3hub "If you don't remember exactly, it's alright! Pick a day when you think you decided to quit it~"
+                        call mas_start_calendar_select_date
+                        $ since = _return
 
-                    m 1dsb "Okay! I'll keep that in mind~"
+                    $ today = datetime.date.today()
+
+                    if since > today:
+                        m 1hksdla "[player]!"
+                        m 3lksdlb "You couldn't have possibly decided to quit self-harming in the future!"
+                        m 1hua "Try again!"
+                        jump .select_since_date
+
+                    # In case we possibly do not know player's birthday yet, we can do a simplified
+                    # check for 'honest' date (actually just relying on player's conscience) that
+                    # probably is less than 5 years
+                    if not persistent._mas_player_bday and (today - since).days // 365 > 10:
+                        m 3wub "[mas_get_player_nickname()], it's been a while since that day!"
+                        m 2lksdla "But just to be completely sure...{w=0.3}{nw} "
+                        extend 3wud "Are you absolutely sure you're sober for more than {i}twenty{/i} years now?{nw}"
+
+                        $ _history_list.pop()
+                        menu:
+                            m "But just to be completely sure... Are you absolutely sure you're sober for more than {i}twenty{/i} years now?{fast}"
+
+                            "Yes!":
+                                m 3hub "Amazing! Alright, I'll write it down right away~"
+                                jump mshMod_sober_promise_jump
+
+                            "Well, actually...":
+                                m 2dka "It's okay, [mas_get_player_nickname()].{w=0.3} Don't worry!"
+                                jump .select_since_date
+
+                    if persistent._mas_player_bday and since < persistent._mas_player_bday:
+                        m 1rkb "[mas_get_player_nickname()]...{w=0.3} The day you chose is before your own birthday!"
+                        m 3eka "Try again, please."
+                        jump .select_since_date
+
+                    if since == datetime.date.today():
+                        m 1hub "[player]!"
+                        m 3eua "The day you picked is today, ahaha!"
+                        m 1hua "But it's alright, I'll be sure to write it down anyway~"
+                    else:
+                        m 1dsb "Okay! I'll keep that in mind~"
 
                 "...No, nothing.":
                     m 1eka "Oh, okay!"
