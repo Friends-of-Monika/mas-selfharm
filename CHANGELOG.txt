@@ -1,15 +1,21 @@
 2.0.0
 
+*** Happy 1st release anniversary! ***
+
 Starting from this version, submod is now named Self-Harm Awareness Submod!
+Unfortunately, we have to deprecate previous submod versions in order to simplify
+our work at transitioning from Otter's MAS Self-Harm Submod and perform major
+reworks in code, topics and submod logic (both now, and in future)
 
 Contributions:
 - Typo fixes and spell/grammar check. Thanks, @Survivor-2-22-22! Grace will be proud of you~
 - Fixed issue with SIAD date sometimes not working as expected (#1). Thanks, @Chamelllemon!
 
 Other changes:
+- Project transition finished, all missing resources, credits and content were recovered
 - Updated the submod header to now reference this (Friends-of-Monika/mas-selfharm) repository
-- Formatted spritepack JSON files
-
+- Now using Timers and Reminders API for improved and more stable reminder work
+- Reformatted spritepack JSON files
 
 1.0.7
 
