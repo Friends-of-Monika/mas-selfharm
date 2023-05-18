@@ -177,7 +177,7 @@ label mshMod_sober_promise:
                                 jump .select_since_date
 
                     if persistent._mas_player_bday and since < persistent._mas_player_bday:
-                        m 1rkb "[mas_get_player_nickname()]...{w=0.3} The day you chose is before your own birthday!"
+                        m 1rkb "[mas_get_player_nickname()]...{w=0.3} The day you chose is before your birthday!"
                         m 3eka "Try again, please."
                         jump .select_since_date
 
