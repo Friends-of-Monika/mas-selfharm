@@ -73,7 +73,7 @@ init 5 python:
         ev.end_date = date + datetime.timedelta(days=1)
         ev.years = []
 
-    def _mshMod_migrateSetConditionalIfUnlocked(evl, conditional)
+    def _mshMod_migrateSetConditionalIfUnlocked(evl, conditional):
         ## Don't do anything if MSH was never installed or already migrated
         if not (persistent._msh_mod_was_installed and not persistent._msh_mod_sha_migrated):
             return
