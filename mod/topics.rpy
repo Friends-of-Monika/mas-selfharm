@@ -49,9 +49,12 @@ init 5 python:
         )
     )
 
-    # Only add it to calendar after it was seen.
-    if seen_event("mshMod_topic_awareness_day"):
-        calendar.addRepeatable("mshMod_topic_awareness_day", _("Self-Harm Awareness Day"), month=3, day=1, year_param=[])
+    def _mshMod_registerSiadDate():
+        # Only add it to calendar after it was seen and isn't on calendar.
+        if seen_event("mshMod_topic_awareness_day") or "mshMod_topic_awareness_day" not in calendar.calendar_database[3][1]:
+            calendar.addRepeatable("mshMod_topic_awareness_day", _("Self-Harm Awareness Day"), month=3, day=1, year_param=[])
+
+    _mshMod_registerSiadDate()
 
 label mshMod_topic_awareness_day:
     m 3eub "[player], did you know that today is Self-Harm Awareness Day?"
@@ -74,10 +77,7 @@ label mshMod_topic_awareness_day:
     m 2eka "Anyway! Thanks for listening!"
     m 1hub "I love you, [player]!"
 
-    # Ensure it'll render on calendar without a need to restart. Only add once.
-    if "mshMod_topic_awareness_day" not in calendar.calendar_database[3][1]:
-        $ calendar.addRepeatable("mshMod_topic_awareness_day", _("Self-harm awareness day"), month=3, day=1, year_param=[])
-
+    $ _mshMod_registerSiadDate()
     return "love"
 
 
@@ -292,7 +292,7 @@ init 5 python:
             eventlabel="mshMod_topic_excercises",
             prompt="Healthy routine #2",
             category=["mental health"],
-            random=True
+            conditional="seen_event('mshMod_topic_morning_routine')"
         )
     )
 
@@ -320,7 +320,7 @@ init 5 python:
             eventlabel="mshMod_topic_morning_excercises",
             prompt="Healthy routine #3",
             category=["mental health"],
-            random=True
+            conditional="seen_event('mshMod_topic_excercises')"
         )
     )
 
@@ -345,7 +345,7 @@ init 5 python:
             eventlabel="mshMod_topic_going_outside",
             prompt="Healthy routine #4",
             category=["mental health"],
-            random=True
+            conditional="seen_event('mshMod_topic_morning_excercises')"
         )
     )
 
@@ -366,8 +366,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_topic_evening_routine",
             prompt="Healthy routine #5",
-            category=["mental health"],
-            random=True
+            category=["mental health"]
         )
     )
 
@@ -403,8 +402,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_topic_untried_hobbies",
             prompt="Healthy routine #6",
-            category=["mental health"],
-            random=True
+            category=["mental health"]
         )
     )
 
