@@ -253,7 +253,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_topic_morning_routine",
             prompt="Healthy routine #1",
-            category=["mental health"],
+            category=["mental health", "healthy routine"],
             random=True
         )
     )
@@ -291,7 +291,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_topic_excercises",
             prompt="Healthy routine #2",
-            category=["mental health"],
+            category=["mental health", "healthy routine"],
             conditional="seen_event('mshMod_topic_morning_routine')"
         )
     )
@@ -319,7 +319,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_topic_morning_excercises",
             prompt="Healthy routine #3",
-            category=["mental health"],
+            category=["mental health", "healthy routine"],
             conditional="seen_event('mshMod_topic_excercises')"
         )
     )
@@ -344,7 +344,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_topic_going_outside",
             prompt="Healthy routine #4",
-            category=["mental health"],
+            category=["mental health", "healthy routine"],
             conditional="seen_event('mshMod_topic_morning_excercises')"
         )
     )
@@ -366,7 +366,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_topic_evening_routine",
             prompt="Healthy routine #5",
-            category=["mental health"]
+            category=["mental health", "healthy routine"]
         )
     )
 
@@ -402,7 +402,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_topic_untried_hobbies",
             prompt="Healthy routine #6",
-            category=["mental health"]
+            category=["mental health", "healthy routine"]
         )
     )
 
