@@ -11,9 +11,9 @@ init -980 python:
     ## after startup
 
     if store.mas_submod_utils.isSubmodInstalled("MAS Self Harm Submod"):
-        raise RuntimeException("Self Harm Awareness Submod (previously named MAS Self Harm Submod) "
-                               "is in conflict with its older version that is already installed.\n"
-                               "Please uninstall MAS Self Harm Submod before installing Self Harm Awareness Submod.")
+        raise RuntimeError("Self Harm Awareness Submod (previously named MAS Self Harm Submod) "
+                           "is in conflict with its older version that is already installed.\n"
+                           "Please uninstall MAS Self Harm Submod before installing Self Harm Awareness Submod.")
 
 init 5 python:
     def _mshMod_migrateReminder(evl, key):             # No-op if:
