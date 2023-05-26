@@ -73,7 +73,7 @@ init 5 python:
         ev.end_date = date + datetime.timedelta(days=1)
         ev.years = []
 
-    def _mshMod_migrateSetConditionalIfUnlocked(evl, conditional):
+    def _mshMod_migrateSetConditionalIfLocked(evl, conditional, action=EV_ACT_RANDOM):
         ## Don't do anything if MSH was never installed or already migrated
         if not (persistent._msh_mod_was_installed and not persistent._msh_mod_sha_migrated):
             return
@@ -85,6 +85,7 @@ init 5 python:
 
         if not ev.unlocked:
             ev.conditional = conditional
+            ev.action = action
 
 
 init 10 python:
@@ -97,9 +98,9 @@ init 10 python:
     ## We also need to update healthy routine tips so that they use
     ## proper conditionals and all that
 
-    _mshMod_migrateSetConditionalIfUnlocked("mshMod_topic_excercises", "seen_event('mshMod_topic_morning_routine')")
-    _mshMod_migrateSetConditionalIfUnlocked("mshMod_topic_morning_excercises", "seen_event('mshMod_topic_excercises')")
-    _mshMod_migrateSetConditionalIfUnlocked("mshMod_topic_going_outside", "seen_event('mshMod_topic_morning_excercises')")
+    _mshMod_migrateSetConditionalIfLocked("mshMod_topic_excercises", "seen_event('mshMod_topic_morning_routine')")
+    _mshMod_migrateSetConditionalIfLocked("mshMod_topic_morning_excercises", "seen_event('mshMod_topic_excercises')")
+    _mshMod_migrateSetConditionalIfLocked("mshMod_topic_going_outside", "seen_event('mshMod_topic_morning_excercises')")
 
 
 init 11 python:
