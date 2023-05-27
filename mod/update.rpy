@@ -110,7 +110,8 @@ init 11 python:
 
     _mshMod_migrateReminder("mshMod_checkup_reminder", "checkup_reminder")
     _mshMod_migrateReminder("mshMod_medication_reminder", "medication_reminder")
-    del store.persistent._mshMod_active_reminders
+    if "_mshMod_active_reminders" in persistent.__dict__:
+        del persistent.__dict__["_mshMod_active_reminders"]
 
     _mshMod_migrateResetTopic("mshMod_checkup_reminder", action=True, conditional=True)
     _mshMod_migrateResetTopic("mshMod_medication_reminder", action=True, conditional=True)

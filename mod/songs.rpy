@@ -11,7 +11,7 @@ init 11 python in mshMod_playlist:
     import os
 
     CUSTOM_PLAYLIST_DIR_SUFFIX = store.mshMod.basedir_rel + "/music/"
-    CUSTOM_PLAYLIST_DIR = renpy.config.gamedir + CUSTOM_PLAYLIST_DIR_SUFFIX
+    CUSTOM_PLAYLIST_DIR = renpy.config.gamedir + "/" + CUSTOM_PLAYLIST_DIR_SUFFIX
     PLAYLIST_FILE = "playlist.ogg"
 
     playlist_shown = False
@@ -20,6 +20,7 @@ init 11 python in mshMod_playlist:
         _audio_file, _ext = store.songs._getAudioFile(CUSTOM_PLAYLIST_DIR + PLAYLIST_FILE)
         if not _audio_file or not _ext:
             store.mas_submod_utils.submod_log.error("[Self Harm Awareness Submod] Could not load playlist file.")
+            store.mas_submod_utils.submod_log.error("[Self Harm Awareness Submod] CUSTOM_PLAYLIST_DIR=" + CUSTOM_PLAYLIST_DIR + ", FILE=" + CUSTOM_PLAYLIST_DIR + PLAYLIST_FILE)
             return
 
         disp_name = store.songs._getDispName(_audio_file, _ext, PLAYLIST_FILE)
