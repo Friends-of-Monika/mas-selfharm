@@ -302,7 +302,7 @@ init 10 python in _msh_reminder:
                 None if lookup failed.
         """
 
-        if isinstance(query, str):
+        if isinstance(query, unicode):
             reminder = get_reminder(query)
             if reminder is None:
                 return None

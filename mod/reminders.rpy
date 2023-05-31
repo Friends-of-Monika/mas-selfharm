@@ -37,13 +37,15 @@ label mshMod_medication_reminder_request:
                 m "Okay! What time do you want me to remind you about it?{fast}"
 
                 "In the morning.":
-                    $ trigger_at, tod = store._msh_reminder_utils.getMorningTimeOfDay(), "morning"
+                    $ trigger_delay, tod = store._msh_reminder_utils.getMorningTimeOfDay(), "morning"
 
                 "In the afternoon.":
-                    $ trigger_at, tod = store._msh_reminder_utils.getAfternoonTimeOfDay(), "afternoon"
+                    $ trigger_delay, tod = store._msh_reminder_utils.getAfternoonTimeOfDay(), "afternoon"
 
                 "In the evening.":
-                    $ trigger_at, tod = store._msh_reminder_utils.getEveningTimeOfDay(), "evening"
+                    $ trigger_delay, tod = store._msh_reminder_utils.getEveningTimeOfDay(), "evening"
+
+            $ trigger_at = datetime.datetime.now() + trigger_delay
 
             # P.S. 'tod' is for 'Time Of Day'
 
