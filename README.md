@@ -114,10 +114,6 @@ means:
 * You are ***not allowed*** to distribute any derivative works or adaptations of our submod
   (with changes made to code, dialogue, other content, etc.)
 
-**However!** Since distributions of this submod also include creative works of other people (who at the moment have been
-a part of MAS Self-Harm Submod Team), these people are allowed to share and modify their own works with no restrictions
-implied by CC BY-NC-ND 4.0.
-
 We don't go out of our way to enforce the license, but we chose to adopt this license to protect
 our hard work from unwanted modifications or commercial use. If you want to change something in this submod &mdash;
 feel free to contact us via Discord or the Issues page! We'll be glad to accept contributions, ideas, and suggestions.
@@ -131,3 +127,11 @@ Namely, *Monika's Playlist* (`res/music/playlist.ogg`) is made using third-party
 ownership over any of the tracks used in the mix. If you're a copyright holder, feel free to reach out to us in any way
 if you believe we have violated your rights of ownership/licensing &mdash; we will be sure to solve this problem as soon as possible
 
+Additionally, since distributions of this submod also include creative works of other people (who at the moment have been
+a part of MAS Self-Harm Submod Team), these people are allowed to share and modify their own works (only their own or those
+they have taken part in working on!) with no restrictions implied by CC BY-NC-ND 4.0:
+
+* Otter
+* FellTheSimp
+* HistoryVariety
+* DJMayJay
