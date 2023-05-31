@@ -17,6 +17,8 @@ Other changes:
 - Updated the submod header to now reference this (Friends-of-Monika/mas-selfharm) repository
 - Now using Timers and Reminders API for improved and more stable reminder work
 - Reformatted spritepack JSON files
+- Healthy routine topics are now unlocked sequentially, not randomly
+- First aid is now in self-harm category
 
 1.0.7
 
