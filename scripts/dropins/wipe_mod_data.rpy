@@ -1,5 +1,7 @@
 #
-# MOD DATE WIPE SCRIPT
+# MOD DATA WIPE SCRIPT
+# WARNING: UNTESTED SINCE V2
+# DO NOT USE UNLESS GUIDED
 #
 # Programmatically wipes mod-related data from persistent.
 # Apply in case there is a need to wipe mod data from persistent in a safe way,
