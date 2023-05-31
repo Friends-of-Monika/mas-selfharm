@@ -1,4 +1,4 @@
-<h1 align="center">💛 MAS Self-Harm Submod 💛</h1>
+<h1 align="center">💛 Self-Harm Awareness Submod 💛</h1>
 <h3 align="center">Awareness about self-harm and support to self-harmers, with different
 techniques, milestones, checkups, and new dialogue and spritepacks</h3>
 
@@ -16,8 +16,6 @@ techniques, milestones, checkups, and new dialogue and spritepacks</h3>
     <img alt="Creative Commons BY-NC-ND 4.0 license badge" src="https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-lightgrey.svg">
   </a>
 </p>
-
-<h4 align="center">💜 IN MEMORY OF T. H. 💜</h4>
 
 ## ⚠️ Important notice
 
@@ -80,6 +78,9 @@ the original MAS Self-Harm Submod Team:
 * LOeufmf &mdash; proofreading, insights, and ideas
 * Rhea &mdash; insights and ideas
 * Feenie &mdash; insights and ideas
+
+Additionally, I would want to mention T. H., in whose memory the original team
+has released this submod. Thank you for being with us.
 
 These are all I can remember. Thank you everyone for your efforts 👋
 

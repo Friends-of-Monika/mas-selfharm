@@ -10,6 +10,7 @@ reworks in code, topics and submod logic (both now, and in future)
 Contributions:
 - Typo fixes and spell/grammar check. Thanks, @Survivor-2-22-22! Grace will be proud of you~
 - Fixed issue with SIAD date sometimes not working as expected (#1). Thanks, @Chamelllemon!
+- Fixed a long-lasting issue with Monika's Playlist not playing properly. Much appreciated, @​Rainy Day!
 
 Other changes:
 - Project transition finished, all missing resources, credits and content were recovered
