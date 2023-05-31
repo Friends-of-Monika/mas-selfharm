@@ -87,8 +87,24 @@ init 5 python:
             ev.conditional = conditional
             ev.action = action
 
+    def _mshMod_migrateUnlockIfLockedAndSeen(evl):
+        ## Don't do anything if MSH was never installed or already migrated
+        if not (persistent._msh_mod_was_installed and not persistent._msh_mod_sha_migrated):
+            return
+
+        ev = mas_getEV(evl)
+        if ev is None:
+            return
+
+        if not ev.unlocked and ev.last_seen is not None:
+            ev.unlocked = True
+
 
 init 10 python:
+
+    ## Introduction does no_unlock previously, not needed
+
+    _mshMod_migrateUnlockIfLockedAndSeen("mshMod_topic_selfharm_intro")
 
     ## Since we have updated SIAD topic, need to force these updates
     ## on locked properties here

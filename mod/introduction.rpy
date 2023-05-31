@@ -107,7 +107,7 @@ label mshMod_topic_selfharm_intro:
                     m 5hua "If you ever feel like you want to talk about this topic, just ask!"
                     show monika 1hubsa at t11 zorder MAS_MONIKA_Z with dissolve_monika
                     m 1hubsa "I love you, [mas_get_player_nickname()]."
-                    return "love|derandom|no_unlock"
+                    return "love|derandom"
 
     return "derandom"
 
