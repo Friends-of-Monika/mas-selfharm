@@ -1,0 +1,30 @@
+{
+  "__author": "MAS Self Harm Submod Team // otter and mayjay",
+  "version": 3,
+  "type": 0,
+  "name": "otter_and_mayjay_hair_sunflower",
+  "img_sit": "hair_sunflower",
+  "pose_map": {
+    "default": "0",
+    "l_default": "5"
+  },
+  "stay_on_start": true,
+  "rec_layer": 1,
+  "priority": 20,
+  "acs_type": "left-hair-flower",
+  "mux_type": [
+    "left-hair-flower"
+  ],
+  "ex_props": {
+    "left-hair-strand-eye-level": false
+  },
+  "select_info": {
+    "display_name": "Sunflower",
+    "thumb": "hair_sunflower",
+    "group": "left-hair-flower",
+    "select_dlg": [
+      "Despite knowing they won't be here for long, they still choose to live their brightest lives — sunflowers."
+    ]
+  },
+  "giftname": "hairsunflower"
+}
