@@ -147,6 +147,9 @@ label mshMod_sober_promise:
                         m 3hub "If you don't remember exactly, it's alright! Pick a day when you think you decided to quit it~"
                         call mas_start_calendar_select_date
                         $ since = _return
+                        if not since:
+                            jump .select_nothing
+                        $ since = _return.date()
 
                     $ today = datetime.date.today()
 
@@ -156,17 +159,16 @@ label mshMod_sober_promise:
                         m 1hua "Try again!"
                         jump .select_since_date
 
-                    # In case we possibly do not know player's birthday yet, we can do a simplified
-                    # check for 'honest' date (actually just relying on player's conscience) that
-                    # probably is less than 5 years
-                    if not persistent._mas_player_bday and (today - since).days // 365 > 10:
-                        m 3wub "[mas_get_player_nickname()], it's been a while since that day!"
+                    # We can do a simplified check for 'honest' date (actually just relying
+                    # on player's conscience) that probably is less than 5 years
+                    if (today - since).days // 365 > 5:
+                        m 3wub "[mas_get_player_nickname(capitalize=True)], it's been a while since that day!"
                         m 2lksdla "But just to be completely sure...{w=0.3}{nw} "
-                        extend 3wud "Are you absolutely sure you're sober for more than {i}twenty{/i} years now?{nw}"
+                        extend 3wud "Are you absolutely sure you're sober for more than {i}five{/i} years now?{nw}"
 
                         $ _history_list.pop()
                         menu:
-                            m "But just to be completely sure... Are you absolutely sure you're sober for more than {i}twenty{/i} years now?{fast}"
+                            m "But just to be completely sure... Are you absolutely sure you're sober for more than {i}five{/i} years now?{fast}"
 
                             "Yes!":
                                 m 3hub "Amazing! Alright, I'll write it down right away~"
@@ -177,7 +179,7 @@ label mshMod_sober_promise:
                                 jump .select_since_date
 
                     if persistent._mas_player_bday and since < persistent._mas_player_bday:
-                        m 1rkb "[mas_get_player_nickname()]...{w=0.3} The day you chose is before your birthday!"
+                        m 1rkb "[mas_get_player_nickname(capitalize=True)]...{w=0.3} The day you chose is before your birthday!"
                         m 3eka "Try again, please."
                         jump .select_since_date
 
@@ -189,8 +191,9 @@ label mshMod_sober_promise:
                         m 1dsb "Okay! I'll keep that in mind~"
 
                 "...No, nothing.":
-                    m 1eka "Oh, okay!"
-                    m 1dsb "I'll keep this in mind!"
+                    label .select_nothing:
+                        m 1eka "Oh, okay!"
+                        m 1dsb "I'll keep this in mind!"
 
     # NOTE: Fallthrough to mshMod_promise_jump unless jumped by timed jump.
 
