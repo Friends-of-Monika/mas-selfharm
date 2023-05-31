@@ -114,6 +114,10 @@ means:
 * You are ***not allowed*** to distribute any derivative works or adaptations of our submod
   (with changes made to code, dialogue, other content, etc.)
 
+**However!** Since distributions of this submod also include creative works of other people (who at the moment have been
+a part of MAS Self-Harm Submod Team), these people are allowed to share and modify their own works with no restrictions
+implied by CC BY-NC-ND 4.0.
+
 We don't go out of our way to enforce the license, but we chose to adopt this license to protect
 our hard work from unwanted modifications or commercial use. If you want to change something in this submod &mdash;
 feel free to contact us via Discord or the Issues page! We'll be glad to accept contributions, ideas, and suggestions.
