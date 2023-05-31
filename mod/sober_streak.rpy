@@ -155,7 +155,7 @@ label mshMod_sober_promise:
 
                     if since > today:
                         m 1hksdla "[player]!"
-                        m 3lksdlb "You couldn't have possibly decided to quit self-harming in the future!"
+                        m 3lksdlb "It's great that you plan on quitting it in future, but I asked you for a day in the past, ahaha!"
                         m 1hua "Try again!"
                         jump .select_since_date
 
