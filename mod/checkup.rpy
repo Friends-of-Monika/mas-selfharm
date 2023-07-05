@@ -43,7 +43,7 @@ label mshMod_checkup_intro:
     if not store._msh_reminder.is_reminder_queued("mshMod_checkup_reminder"):
         $ store._msh_reminder.queue_reminder(
             _msh_reminder.Reminder(
-                trigger_at=store._msh_reminder_utils.getWeeklyEveningDelay(),
+                trigger_at=datetime.datetime.now() + store._msh_reminder_utils.getWeeklyEveningDelay(),
                 target_evl="mshMod_checkup_reminder",
                 key="checkup_reminder",
                 interval=store._msh_reminder_utils.INTERVAL_WEEKLY,

@@ -99,6 +99,16 @@ init 5 python:
         if not ev.unlocked and ev.last_seen is not None:
             ev.unlocked = True
 
+    def _mshMod_migrateBrokenReminder(key):
+        rem_idx = store._msh_reminder.get_reminder(key)
+        if rem_idx is None:
+            return
+
+        rem = store._msh_reminder.queue[rem_idx]
+        if isinstance(rem.trigger_at, datetime.timedelta):
+            store._msh_reminder.pop_reminder(rem_idx, remove=True)
+            rem.trigger_at = datetime.datetime.now() + rem.trigger_at
+            store._msh_reminder.queue_reminder(rem)
 
 init 10 python:
 
@@ -142,3 +152,10 @@ init 996 python:
     if not persistent._msh_mod_sha_migrated and persistent._msh_mod_was_installed:
         persistent._msh_mod_sha_migrated = True
         _msh_mod_migrated_now = True
+
+
+init 996 python:
+
+    ## Fix reminder that was broken until 2.0.0
+
+    _mshMod_migrateBrokenReminder("checkup_reminder")

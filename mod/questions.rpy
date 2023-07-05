@@ -54,10 +54,47 @@ label mshMod_probing_questions_talk:
             "Yes!":
                 show monika 5husdlb at t11 zorder MAS_MONIKA_Z with dissolve_monika
                 m 5husdlb "Oh, yay!"
-                m 5esa "Can you tell me for how many days have you been sober?{nw}"
+                m 5esa "Can you tell me since when have you been sober?{nw}"
 
-                call mshMod_sober_ask_since
-                $ since = _return
+                label .select_since_date:
+                    m 3hub "If you don't remember exactly, it's alright! Pick a day when you think you decided to quit it~"
+                    call mas_start_calendar_select_date
+                    $ since = _return
+                    if not since:
+                        jump .select_nothing
+                    $ since = _return.date()
+
+                $ today = datetime.date.today()
+
+                if since > today:
+                    m 1hksdla "[player]!"
+                    m 3lksdlb "It's great that you plan on quitting it in future, but I asked you for a day in the past, ahaha!"
+                    m 1hua "Try again!"
+                    jump .select_since_date
+
+                # We can do a simplified check for 'honest' date (actually just relying
+                # on player's conscience) that probably is less than 5 years
+                if (today - since).days // 365 > 5:
+                    m 3wub "[mas_get_player_nickname(capitalize=True)], it's been a while since that day!"
+                    m 2lksdla "But just to be completely sure...{w=0.3}{nw} "
+                    extend 3wud "Are you absolutely sure you're sober for more than {i}five{/i} years now?{nw}"
+
+                    $ _history_list.pop()
+                    menu:
+                        m "But just to be completely sure... Are you absolutely sure you're sober for more than {i}five{/i} years now?{fast}"
+
+                        "Yes!":
+                            m 3hub "Amazing! Alright, I'll write it down right away~"
+                            jump mshMod_sober_promise_jump
+
+                        "Well, actually...":
+                            m 2dka "It's okay, [mas_get_player_nickname()].{w=0.3} Don't worry!"
+                            jump .select_since_date
+
+                if persistent._mas_player_bday and since < persistent._mas_player_bday:
+                    m 1rkb "[mas_get_player_nickname(capitalize=True)]...{w=0.3} The day you chose is before your birthday!"
+                    m 3eka "Try again, please."
+                    jump .select_since_date
 
                 show monika 1sub at t11 zorder MAS_MONIKA_Z with dissolve_monika
                 m 1sub "I'm so proud of you, [mas_get_player_nickname()]."
@@ -73,7 +110,6 @@ label mshMod_probing_questions_talk:
 
                     mas_showEVL("mshMod_sober_check", "EVE", unlock=True)
                     mas_showEVL("mshMod_sober_relapse", "EVE", unlock=True)
-
 
             "I don't know.":
                 m 2eka "Aww, [player], that's okay!"
