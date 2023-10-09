@@ -514,6 +514,12 @@ init 4 python in mshMod_sober_streak:
                     # Set QUEUE action to this event so that it is always queued, regardless of random chatter.
                     # Only do it if it wasn't seen or wasn't last seen today.
                     ev.action = store.EV_ACT_QUEUE
+
+                else:
+                    # If we've seen the event already, we should reset the dates
+                    # so it doesn't cause looping every minute, just to be safe
+                    ev.start_date, ev.end_date = None, None
+
         else:
             for label, data in _milestoneEvents[0].items():
                 ev = data[0]
