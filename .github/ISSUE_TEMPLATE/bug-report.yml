@@ -21,7 +21,7 @@ body:
     attributes:
       label: Traceback output
       description: If you got a traceback screen with error details, press 'copy' and paste its content here.
-      render: shell
+      render: plaintext
   - type: input
     id: submod-version
     attributes:
