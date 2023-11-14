@@ -272,7 +272,7 @@ label mshMod_technique_hugs:
     m 1etb "Then say the same words to yourself. {w=0.3}{nw}"
     extend 7etb "I bet that's what they would tell you!"
     m 2etbsu "Maybe you can even think of me? Ahaha~ {w=0.3}{nw}"
-    extend 2mssdru "Sorry to be pretentious, [player.]"
+    extend 2mssdru "Sorry to be pretentious, [player]."
     m 6fsbfb  "I love you so much!"
     return "love"
 

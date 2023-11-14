@@ -131,7 +131,7 @@ label mshMod_topic_butterfly_project:
     m 3eub "Hey [player], do you know what The Butterfly Project is?"
     m 1eub "It's a movement to help people that struggle with self-harm."
     m 3eud "It's really interesting! Drawing on yourself is already a good way to deal with self-harming, but this project approaches it differently."
-    m 2eua "There are about 5 steps, so I'll list them all now."
+    m 2eua "There are about four steps, so I'll list them all now."
     m 3euc "First, when you feel like hurting yourself, draw a butterfly on or around the spot where you might hurt yourself."
     m 2eua "This butterfly can be any size, color, or pattern. It might help if you make it your favorite color!"
     m 3eud "Second, a lot of people name the butterfly after a loved one. Friends, family, their beloved one. This helps them avoid hurting themself and their butterfly."
