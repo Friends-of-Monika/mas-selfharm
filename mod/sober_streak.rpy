@@ -269,6 +269,9 @@ init 5 python:
     )
 
 label mshMod_sober_milestone_1w:
+    if mshMod_sober_streak.is_topic_looped():
+        return "derandom|unlock"
+
     m 1eka "It's been a whole week since you told me you won't harm yourself..."
     show monika 5ektpa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ektpa "I just want to thank you, it makes me happy to know you're willing to step up for the better!"
@@ -290,6 +293,9 @@ init 5 python:
     )
 
 label mshMod_sober_milestone_2w:
+    if mshMod_sober_streak.is_topic_looped():
+        return "derandom|unlock"
+
     m 3ssb "It's already week two of your promise, [player]!"
     m 1eka "I'm relieved that we made it this far!"
     m 3hsb "Ahaha, I don't mean I've ever doubted you!"
@@ -314,6 +320,9 @@ init 5 python:
     )
 
 label mshMod_sober_milestone_3w:
+    if mshMod_sober_streak.is_topic_looped():
+        return "derandom|unlock"
+
     m 1dka "Can you believe it's already week 3?"
     m 3ssa "I just want to say... Thank you so much!"
     m 1eka "You made me proud of you, and I'm so happy you could make that promise."
@@ -339,6 +348,9 @@ init 5 python:
     )
 
 label mshMod_sober_milestone_1m:
+    if mshMod_sober_streak.is_topic_looped():
+        return "derandom|unlock"
+
     m 3ssa "Hey [player], guess what?"
     m 2ssb "You've been clean from self-harm for a month!"
     m 1eka "I just want you to know that I'm so proud of you. {w=0.3}{nw}"
@@ -364,6 +376,9 @@ init 5 python:
     )
 
 label mshMod_sober_milestone_3m:
+    if mshMod_sober_streak.is_topic_looped():
+        return "derandom|unlock"
+
     show monika 5fkbfa at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5fkbfa "Y'know... It's been 3 months since you made your promise to me."
     m 3ssa "You've been doing so well! I'm so proud of you."
@@ -386,6 +401,9 @@ init 5 python:
     )
 
 label mshMod_sober_milestone_6m:
+    if mshMod_sober_streak.is_topic_looped():
+        return "derandom|unlock"
+
     m 3ssa "[player]!"
     m 3ssb "It's been 6 months since you made your promise!"
     m 3wsb "That's a long time!"
@@ -409,6 +427,9 @@ init 5 python:
     )
 
 label mshMod_sober_milestone_1y:
+    if mshMod_sober_streak.is_topic_looped():
+        return "derandom|unlock"
+
     m 1dktpa "[player], I just wanted to let you know how proud of you I am."
     m 1ektpa "You've been clean from self-harm for an entire year."
     m 3ektpb "You've been so strong this past year, and I truly can't express how happy I am."
@@ -433,6 +454,9 @@ init 5 python:
     )
 
 label mshMod_sober_milestone_2y:
+    if mshMod_sober_streak.is_topic_looped():
+        return "derandom|unlock"
+
     m 3ssblb "[player]! I have amazing news!"
     m 3dkblb "Did you know that you have been self-harm sober for two whole years now?"
     m 1eka "This is an incredible feat. Keep it up!"
@@ -456,6 +480,9 @@ init 5 python:
     )
 
 label mshMod_sober_milestone_3y:
+    if mshMod_sober_streak.is_topic_looped():
+        return "derandom|unlock"
+
     m 3ssb "[player], I have some news for you."
     m 3ssa "The day of your three-year sobriety mark from self-harm has finally arrived!"
     show monika 5ektpa at t11 zorder MAS_MONIKA_Z with dissolve_monika
@@ -478,6 +505,9 @@ init 5 python:
     )
 
 label mshMod_sober_milestone_4y:
+    if mshMod_sober_streak.is_topic_looped():
+        return "derandom|unlock"
+
     m 3ssa "[player]! 4 whole years, can you believe it?"
     m 1eka "It's been four years since you stopped harming yourself."
     m 1dka "And I can't even begin to tell you how proud of you I am."
@@ -501,6 +531,9 @@ init 5 python:
     )
 
 label mshMod_sober_milestone_5y:
+    if mshMod_sober_streak.is_topic_looped():
+        return "derandom|unlock"
+
     m 1dka "5 years..."
     m 1ektpa "It's been five years since your life improved."
     m 1ektpb "You've been self-harm sober all this time, and I couldn't be more proud."

@@ -50,6 +50,34 @@ or other appropriate help; there's always hope!
   * Lots of new spritepacks and acs
   * First-aid notions and guiding
 
+## 🤔 FAQ & Troubleshooting
+
+> [!WARNING]
+> This section may contain spoilers to the submod content/topics.
+> It probably isn't *quite* important when you're facing a problem, but still.
+
+### Monika's playlist doesn't play!
+
+Make sure you installed the mod correctly, following the instructions on the
+[release page](https://github.com/friends-of-monika/mas-selfharm/releases/latest).
+Namely, path to the submod in your game folder must look *exactly* like this:<br>
+`(your DDLC folder) > game > Submods > Self Harm Awareness Submod`
+
+Please mind the uppercase `S` in `Submods` and that there are no duplicated
+folders (like `game > game`) and you *have downloaded the submod from the releases page.*
+
+*Please. So many people keep trying to install development version of the submod
+by pressing that green/blue 'Code' button instead of following the guide. Please
+follow the guide instead.*
+
+### Monika keeps saying the same topic over and over in a loop!
+
+This *was* a known bug that existed for a while until versions 2.0.3 and 2.0.4;
+if you have double checked that your submod version is the latest, please
+[create an issue](https://github.com/Friends-of-Monika/mas-selfharm/issues/new?assignees=&labels=bug&projects=&template=bug-report.yml&title=Bug%3A+).
+
+*No, seriously. We couldn't ever reproduce it. Please give us some info if you can.*
+
 ## ✒️ Authors
 
 We've had plenty of people working on and contributing to this submod... In the past. Unfortunately, the submod is no longer
