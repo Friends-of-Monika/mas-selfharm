@@ -498,6 +498,8 @@ init 4 python in mshMod_sober_streak:
 
                 # Random and unlock this event so it can be repeated through the menu.
                 ev.random, ev.unlocked = False, True
+                # Ensure the event has no action, so it doesn't accidentally queue
+                ev.action = None
 
                 # Also mark it seen for Ren'Py/MAS.
                 _seeLabel(ev.eventlabel)
@@ -519,6 +521,8 @@ init 4 python in mshMod_sober_streak:
                     # If we've seen the event already, we should reset the dates
                     # so it doesn't cause looping every minute, just to be safe
                     ev.start_date, ev.end_date = None, None
+                    # Also ensure the action is not set
+                    ev.action = None
 
         else:
             for label, data in _milestoneEvents[0].items():
@@ -530,6 +534,8 @@ init 4 python in mshMod_sober_streak:
                 # Since we're not on streak, these events should never trigger.
                 ev.start_date, ev.end_date = None, None
                 ev.random, ev.unlocked = False, False
+                # Also ensure action is unset
+                ev.action = None
 
                 # Also unsee it for Ren'Py/MAS
                 _unseeLabel(ev.eventlabel)
@@ -549,6 +555,8 @@ init 4 python in mshMod_sober_streak:
     def unlockMilestone():
         ev = store.mas_globals.this_ev
         ev.random, ev.unlocked = True, True
+        # Make sure it doesn't queue
+        ev.action = None
 
 
     ### UTILITIES ###
@@ -579,6 +587,45 @@ init 4 python in mshMod_sober_streak:
 
         if label in store.persistent._seen_ever:
             del store.persistent._seen_ever[label]
+
+
+# Added in v2.0.4 as a last resort to solve the infinite dialogue looping issue.
+init 5 python in mshMod_sober_streak:
+    from store.mas_submod_utils import submod_log
+    from store import mas_globals
+    from store import persistent
+
+    # MUST BE called in EVERY milestone dialogue which can possibly loop and return
+    # value must be checked. Checks if current topic has already been seen less than
+    # a day ago, and if so, logs an error and indicates we should return from the topic.
+    def is_topic_looped():
+        this_ev = mas_globals.this_ev
+        if this_ev.last_seen.date() < datetime.date.today():
+            return False
+
+        submod_log.error("[Self Harm Awareness] Milestone topic looping is detected! This is a bug, please report.")
+        remove_from_eli(this_ev.eventlabel)
+        return True
+
+    # Removes either all/all-except-first occurrences of given event label from the queue.
+    def remove_from_eli(evl, dedupe=False):
+        if not dedupe:
+            submod_log.warning("[Self Harm Awareness] Removing all entries of {0} from event list.".format(evl))
+        else:
+            submod_log.info("[Self Harm Awareness] De-duplicating entries of {0} from event list.".format(evl))
+
+        found_first = False
+        for idx in range(len(persistent.event_list)-1, -1, -1):
+            ev_label = persistent.event_list[idx][0]
+
+            if ev_label == evl:
+                if dedupe and not found_first:
+                    # If we are deduping, leave just the first occurence.
+                    found_first = True
+                    return
+
+                # Remove all the rest.
+                persistent.event_list.pop(idx)
 
 
 init 7 python in mshMod_sober_streak:

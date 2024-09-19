@@ -74,7 +74,7 @@ follow the guide instead.*
 
 This *was* a known bug that existed for a while until versions 2.0.3 and 2.0.4;
 if you have double checked that your submod version is the latest, please
-[create an issue](https://github.com/Friends-of-Monika/mas-selfharm/issues/new?assignees=&labels=bug&projects=&template=bug-report.yml&title=Bug%3A+)
+[create an issue](https://github.com/Friends-of-Monika/mas-selfharm/issues/new?assignees=&labels=bug&projects=&template=bug-report.yml&title=Bug%3A+).
 
 *No, seriously. We couldn't ever reproduce it. Please give us some info if you can.*
 
