@@ -278,7 +278,14 @@ init 10 python in _msh_reminder:
         IN:
             reminder -> Reminder:
                 Reminder object to add to queue.
+
+        RAISES:
+            KeyError:
+                When reminder with the same key is already queued.
         """
+
+        if self.is_reminder_queued(reminder.key):
+            raise KeyError("Reminder with key {0!r} is already queued.".format(reminder.key))
 
         queue.append(reminder)
         __sort_queue()
@@ -319,7 +326,7 @@ init 10 python in _msh_reminder:
         reminder is before due.
 
         IN:
-            index -> int or None, default None:
+            index -> int, Reminder or None, default None:
                 Index of reminder to remove or None to remove next.
 
             remove -> bool, default False:
@@ -335,10 +342,15 @@ init 10 python in _msh_reminder:
             ValueError:
                 When queue is empty or when next (or specified) reminder is
                 before due.
+
+            IndexError:
+                When index is out of range or if provided Reminder is not queued.
         """
 
         if index is None:
             index = 0
+        elif isinstance(index, Reminder):
+            index = get_reminder(index.key)
 
         if len(queue) == 0:
             raise ValueError("queue is empty")
