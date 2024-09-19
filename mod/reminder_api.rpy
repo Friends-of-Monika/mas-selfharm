@@ -439,7 +439,6 @@ init 10 python in _msh_reminder:
         the delegate event:
 
             * start date (reminder trigger timestamp)
-            * end date (trigger timestamp + trigger grace period if any)
             * action (reminder delegate action)
 
         Custom delegate event authors must keep that in mind.
@@ -451,8 +450,6 @@ init 10 python in _msh_reminder:
 
         ev = mas_getEV(reminder.delegate_evl)
         ev.start_date = reminder.trigger_at
-        if reminder.grace_period is not None:
-            ev.end_date = reminder.trigger_at + reminder.grace_period
         ev.action = reminder.delegate_act
 
 
@@ -462,7 +459,6 @@ init 10 python in _msh_reminder:
         attributes of the delegate event:
 
             * start date
-            * end date
             * action
 
         Custom delegate event authors must keep that in mind.
@@ -474,7 +470,6 @@ init 10 python in _msh_reminder:
 
         ev = mas_getEV(reminder.delegate_evl)
         ev.start_date = None
-        ev.end_date = None
         ev.action = None
 
 
