@@ -115,6 +115,24 @@ init 5 python:
         for evl in ev_labels:
             store.mshMod_sober_streak.remove_from_eli(evl, dedupe=True)
 
+    def _mshMod_fixDuplicateReminders():
+        def count_reminders(key):
+            return len(filter(lambda it: it.key == key,
+                              store._msh_reminder.queue))
+
+        def dedupe_reminders(key):
+            while count_reminders(key) > 1:
+                store._msh_reminder.dequeue_reminder(key)
+
+        dedupe_reminders("checkup_reminder")
+        dedupe_reminders("medication_reminder")
+
+    def _mshMod_extendReminders():
+        today = datetime.date.today()
+        for reminder in list(store._msh_reminder.queue):
+            if reminder.interval is not None and reminder.trigger_at.date() < today:
+                store._msh_reminder.pop_reminder(reminder)
+
 init 10 python:
 
     ## Introduction does no_unlock previously, not needed
@@ -173,4 +191,6 @@ label friends_of_monika_self_harm_awareness_submod_v2_0_3(version="v2_0_4"):
 
 label friends_of_monika_self_harm_awareness_submod_v2_0_4(version="v2_0_4"):
     $ _mshMod_fixMasEli() # fix possibly broken ELI with looped milestones
+    $ _mshMod_fixDuplicateReminders() # remove duplicated reminders
+    $ _mshMod_extendReminders() # fix reminders not triggering anymore
     return
