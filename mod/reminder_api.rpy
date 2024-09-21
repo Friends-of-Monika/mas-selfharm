@@ -278,7 +278,14 @@ init 10 python in _msh_reminder:
         IN:
             reminder -> Reminder:
                 Reminder object to add to queue.
+
+        RAISES:
+            KeyError:
+                When reminder with the same key is already queued.
         """
+
+        if self.is_reminder_queued(reminder.key):
+            raise KeyError("Reminder with key {0!r} is already queued.".format(reminder.key))
 
         queue.append(reminder)
         __sort_queue()
@@ -319,7 +326,7 @@ init 10 python in _msh_reminder:
         reminder is before due.
 
         IN:
-            index -> int or None, default None:
+            index -> int, Reminder or None, default None:
                 Index of reminder to remove or None to remove next.
 
             remove -> bool, default False:
@@ -335,10 +342,15 @@ init 10 python in _msh_reminder:
             ValueError:
                 When queue is empty or when next (or specified) reminder is
                 before due.
+
+            IndexError:
+                When index is out of range or if provided Reminder is not queued.
         """
 
         if index is None:
             index = 0
+        elif isinstance(index, Reminder):
+            index = get_reminder(index.key)
 
         if len(queue) == 0:
             raise ValueError("queue is empty")
@@ -439,7 +451,6 @@ init 10 python in _msh_reminder:
         the delegate event:
 
             * start date (reminder trigger timestamp)
-            * end date (trigger timestamp + trigger grace period if any)
             * action (reminder delegate action)
 
         Custom delegate event authors must keep that in mind.
@@ -451,8 +462,6 @@ init 10 python in _msh_reminder:
 
         ev = mas_getEV(reminder.delegate_evl)
         ev.start_date = reminder.trigger_at
-        if reminder.grace_period is not None:
-            ev.end_date = reminder.trigger_at + reminder.grace_period
         ev.action = reminder.delegate_act
 
 
@@ -462,7 +471,6 @@ init 10 python in _msh_reminder:
         attributes of the delegate event:
 
             * start date
-            * end date
             * action
 
         Custom delegate event authors must keep that in mind.
@@ -474,7 +482,6 @@ init 10 python in _msh_reminder:
 
         ev = mas_getEV(reminder.delegate_evl)
         ev.start_date = None
-        ev.end_date = None
         ev.action = None
 
 
