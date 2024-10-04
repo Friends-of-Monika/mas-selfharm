@@ -186,7 +186,7 @@ init 996 python:
 
 ## After v2.0.0 we can use normal update approaches
 
-label friends_of_monika_self_harm_awareness_submod_v2_0_3(version="v2_0_4"):
+label friends_of_monika_self_harm_awareness_submod_v2_0_3(version="v2_0_3"):
     return
 
 label friends_of_monika_self_harm_awareness_submod_v2_0_4(version="v2_0_4"):
