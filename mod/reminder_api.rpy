@@ -284,7 +284,7 @@ init 10 python in _msh_reminder:
                 When reminder with the same key is already queued.
         """
 
-        if self.is_reminder_queued(reminder.key):
+        if is_reminder_queued(reminder.key):
             raise KeyError("Reminder with key {0!r} is already queued.".format(reminder.key))
 
         queue.append(reminder)
