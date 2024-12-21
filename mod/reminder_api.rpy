@@ -397,7 +397,6 @@ init 10 python in _msh_reminder:
             raise ValueError("reminder has no interval")
 
         now = datetime.datetime.now()
-
         if reminder.trigger_at > now:
             return
 
@@ -504,6 +503,11 @@ init 10 python in _msh_reminder:
 
     # Load queue from persistent on start.
     __load_queue()
+
+    # Re-arm the delegate on startup as a safeguard against softlocks.
+    if len(queue) > 0:
+        __disarm_reminder_delegate(queue[0])
+        __arm_reminder_delegate(queue[0])
 
 
 init 5 python:

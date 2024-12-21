@@ -603,7 +603,7 @@ init 5 python in mshMod_sober_streak:
         if this_ev.last_seen.date() < datetime.date.today():
             return False
 
-        submod_log.error("[Self Harm Awareness] Milestone topic looping is detected! This is a bug, please report.")
+        submod_log.warning("[Self Harm Awareness] Milestone topic looping is detected! This is a bug, please report.")
         remove_from_eli(this_ev.eventlabel)
         return True
 

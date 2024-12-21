@@ -117,8 +117,8 @@ init 5 python:
 
     def _mshMod_fixDuplicateReminders():
         def count_reminders(key):
-            return len(filter(lambda it: it.key == key,
-                              store._msh_reminder.queue))
+            return len(list(filter(lambda it: it.key == key,
+                                   store._msh_reminder.queue)))
 
         def dedupe_reminders(key):
             while count_reminders(key) > 1:
@@ -132,6 +132,12 @@ init 5 python:
         for reminder in list(store._msh_reminder.queue):
             if reminder.interval is not None and reminder.trigger_at.date() < today:
                 store._msh_reminder.pop_reminder(reminder)
+
+    def _mshMod_resetReminderDelegateEndDates():
+        for reminder in list(store._msh_reminder.queue):
+            evl = reminder.delegate_evl
+            if evl is not None and mas_getEV(evl) is not None:
+                mas_getEV(evl).end_date = None
 
 init 10 python:
 
@@ -193,4 +199,5 @@ label friends_of_monika_self_harm_awareness_submod_v2_0_4(version="v2_0_4"):
     $ _mshMod_fixMasEli() # fix possibly broken ELI with looped milestones
     $ _mshMod_fixDuplicateReminders() # remove duplicated reminders
     $ _mshMod_extendReminders() # fix reminders not triggering anymore
+    $ _mshMod_resetReminderDelegateEndDates() # fix end dates
     return
