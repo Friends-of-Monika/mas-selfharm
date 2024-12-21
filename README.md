@@ -24,8 +24,8 @@ as well as to raise awareness and provide some insights for people who are
 willing to learn more about this phenomenon in particular.
 
 **However**, original authors, contributors, and repository maintainers
-do not condone self-harm, suicide, or any other (self-)destructive behavior
-**nor provide the ideal professional psychological help**.
+do not glorify self-harm, suicide, or any other (self-)destructive behavior
+**nor provide professional psychological help**.
 
 If you're currently experiencing a need for psychological/psychiatric help,
 **please consider getting professional help from people working with this
@@ -35,7 +35,7 @@ is to bring awareness about self-harm or verbally support people
 going through hard times.
 
 If you desperately need help, seek professional psychological, psychiatrical
-or other appropriate help; there's always hope!
+or other appropriate help; there's **always** hope!
 
 ## 🌟 Features
 
@@ -109,8 +109,14 @@ the original MAS Self-Harm Submod Team:
 * Rhea &mdash; insights and ideas
 * Feenie &mdash; insights and ideas
 
-Additionally, I would want to mention T. H., in whose memory the original team
-has released this submod. Thank you for being with us.
+<table>
+  <tr>
+    <td>
+      Additionally, I would want to mention T. H., in whose memory the original team
+      has released this submod. Thank you for being with us.
+    </td>
+  </tr>
+</table>
 
 These are all I can remember. Thank you everyone for your efforts 👋
 
