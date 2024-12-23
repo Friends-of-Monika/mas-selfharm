@@ -1,3 +1,24 @@
+2.0.4
+
+Changes:
+- Fixes in reminder logic that prevented reminders from repeating or going off
+  at correct and expected times (thanks @DevilGolde!)
+
+2.0.3
+
+Changes:
+- Fixes related to repeating milestone dialogues, reported by so many.
+
+2.0.2
+
+Changes:
+- Minor bugfixes.
+
+2.0.1
+
+Changes:
+- Quickfix of v2.0.0, major bugfixes.
+
 2.0.0
 
 *** Happy 1st release anniversary! ***

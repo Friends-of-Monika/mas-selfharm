@@ -55,18 +55,19 @@ label mshMod_medication_reminder_request:
             # This has to be performed AFTER all the lines. We must ensure this applies
             # instantly and is not blocked by user idling at some dialogue line.
             python:
-                # Start reminding player, daily, with a latency of one hour.
-                # (Meaning that if player missed exact expected time of a reminder, it'll still
-                # trigger within an hour; else a reminder will be attempted next day.)
-                store._msh_reminder.queue_reminder(
-                    _msh_reminder.Reminder(
-                        trigger_at=trigger_at,
-                        target_evl="mshMod_medication_reminder",
-                        key="medication_reminder",
-                        interval=store._msh_reminder_utils.INTERVAL_DAILY,
-                        grace_period=store._msh_reminder_utils.LATENCY_HOURLY
+                if not store._msh_reminder.is_reminder_queued("medication_reminder"):
+                    # Start reminding player, daily, with a latency of one hour.
+                    # (Meaning that if player missed exact expected time of a reminder, it'll still
+                    # trigger within an hour; else a reminder will be attempted next day.)
+                    store._msh_reminder.queue_reminder(
+                        _msh_reminder.Reminder(
+                            trigger_at=trigger_at,
+                            target_evl="mshMod_medication_reminder",
+                            key="medication_reminder",
+                            interval=store._msh_reminder_utils.INTERVAL_DAILY,
+                            grace_period=store._msh_reminder_utils.LATENCY_HOURLY
+                        )
                     )
-                )
 
                 # Hide this event since we have set a reminder and no longer need
                 # it until player asks not to remind anymore.
