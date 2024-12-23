@@ -196,6 +196,7 @@ label friends_of_monika_self_harm_awareness_submod_v2_0_3(version="v2_0_3"):
     return
 
 label friends_of_monika_self_harm_awareness_submod_v2_0_4(version="v2_0_4"):
+    $ store.mas_submod_utils.submod_log.info("[Self-Harm Awareness] Running migration...")
     $ _mshMod_fixMasEli() # fix possibly broken ELI with looped milestones
     $ _mshMod_fixDuplicateReminders() # remove duplicated reminders
     $ _mshMod_extendReminders() # fix reminders not triggering anymore
