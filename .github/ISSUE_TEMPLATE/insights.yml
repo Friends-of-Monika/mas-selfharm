@@ -6,14 +6,14 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Thank you for your suggestion!
-        We appreciate your help and will give attention to your idea as soon as we can!
-
         > [!NOTE]
         > Self-Harm Awareness submod is no longer actively developed. We're just fixing
         > bugs, typos, and otherwise maintain the submod, but we are not planning on adding
         > more features. Feel free to share your thoughts, but don't expect suggestions to
         > be implemented shortly or at all. Thank you for using our submod.
+
+        ## Thank you for your suggestion!
+        We appreciate your help and will give attention to your idea as soon as we can!
 
   - type: textarea
     id: suggestion
