@@ -611,21 +611,26 @@ init 5 python in mshMod_sober_streak:
     def remove_from_eli(evl, dedupe=False):
         if not dedupe:
             submod_log.warning("[Self Harm Awareness] Removing all entries of {0} from event list.".format(evl))
+            for idx in range(len(persistent.event_list)-1, -1, -1):
+                ev_label = persistent.event_list[idx][0]
+                if ev_label == evl:
+                    persistent.event_list.pop(idx)
+
         else:
             submod_log.info("[Self Harm Awareness] De-duplicating entries of {0} from event list.".format(evl))
+            found_first = False
+            idx = 0
 
-        found_first = False
-        for idx in range(len(persistent.event_list)-1, -1, -1):
-            ev_label = persistent.event_list[idx][0]
-
-            if ev_label == evl:
-                if dedupe and not found_first:
-                    # If we are deduping, leave just the first occurence.
-                    found_first = True
-                    return
-
-                # Remove all the rest.
-                persistent.event_list.pop(idx)
+            while idx < len(persistent.event_list):
+                ev_label = persistent.event_list[idx][0]
+                if ev_label == evl:
+                    if not found_first:
+                        found_first = True
+                        idx += 1
+                    else:
+                        persistent.event_list.pop(idx)
+                else:
+                    idx += 1
 
 
 init 7 python in mshMod_sober_streak:
