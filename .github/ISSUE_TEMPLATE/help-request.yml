@@ -6,6 +6,9 @@ body:
   - type: markdown
     attributes:
       value: |
+        > [!TIP]
+        > Before submitting an issue, please look [into FAQ section](https://github.com/Friends-of-Monika/mas-selfharm/?tab=readme-ov-file#-faq--troubleshooting). Thank you!
+
         ## Thank you for reaching out!
         We'll respond to your request as soon as we can and will do our best to help you!
   - type: textarea

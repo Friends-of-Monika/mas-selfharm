@@ -56,6 +56,12 @@ or other appropriate help; there's **always** hope!
 > This section may contain spoilers to the submod content/topics.
 > It probably isn't *quite* important when you're facing a problem, but still.
 
+### Where's the self-harm topic?
+
+Her introduction topic is random and will show up sometime in the future, sooner
+or later (depends on how many unseen random topics you still have.)
+Be patient, you'll see it eventually.
+
 ### Monika's playlist doesn't play!
 
 Make sure you installed the mod correctly, following the instructions on the
