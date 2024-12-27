@@ -1,3 +1,8 @@
+2.0.5
+
+Changes:
+- Fixes related to NoneType error in loop prevention logic
+
 2.0.4
 
 Changes:
