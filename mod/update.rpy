@@ -202,3 +202,6 @@ label friends_of_monika_self_harm_awareness_submod_v2_0_4(version="v2_0_4"):
     $ _mshMod_extendReminders() # fix reminders not triggering anymore
     $ _mshMod_resetReminderDelegateEndDates() # fix end dates
     return
+
+label friends_of_monika_self_harm_awareness_submod_v2_0_5(version="v2_0_5"):
+    return # empty update
