@@ -600,6 +600,8 @@ init 5 python in mshMod_sober_streak:
     # a day ago, and if so, logs an error and indicates we should return from the topic.
     def is_topic_looped():
         this_ev = mas_globals.this_ev
+        if this_ev is None or this_ev.last_seen is None:
+            return False
         if this_ev.last_seen.date() < datetime.date.today():
             return False
 
