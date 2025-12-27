@@ -154,7 +154,12 @@ init python:
         def insert_newline(self):
             caret_pos = self.get_caret_pos()
             self.current_value = self.current_value[:caret_pos] + "\n" + self.current_value[caret_pos:]
-            self.move_caret("down")
+
+            widget = renpy.get_widget("_msh_note_multiline_input", "text_input", "screens")
+            widget.content = self.current_value
+            widget.caret_pos = caret_pos + 1
+
+            self.redraw_input()
 
         def update_text(self, new_text):
             self.current_value = new_text
@@ -166,35 +171,35 @@ init python:
 
             current_line = 0
             char_count = 0
+            column = 0
 
             for i, line in enumerate(lines):
-                if char_count + len(line) + 1 > caret_position:
+                if char_count + len(line) >= caret_position:
                     current_line = i
                     column = caret_position - char_count
                     break
                 char_count += len(line) + 1
+            else:
+                current_line = len(lines) - 1
+                column = len(lines[-1])
 
             if direction == "up":
                 if current_line == 0:
                     self.set_caret_pos(0)
-                    return
-
-                previous_line_length = len(lines[current_line - 1])
-                new_column = min(column, previous_line_length)
-                new_caret_position = sum(len(line) + 1 for line in lines[:current_line - 1]) + new_column
-                self.set_caret_pos(new_caret_position)
-                return
+                else:
+                    target_line = current_line - 1
+                    new_start = sum(len(lines[i]) + 1 for i in range(target_line))
+                    new_column = min(column, len(lines[target_line]))
+                    self.set_caret_pos(new_start + new_column)
 
             elif direction == "down":
                 if current_line == len(lines) - 1:
                     self.set_caret_pos(len(self.current_value))
-                    return
-
-                next_line_length = len(lines[current_line + 1])
-                new_column = min(column, next_line_length)
-                new_caret_position = sum(len(line) + 1 for line in lines[:current_line + 1]) + new_column
-                self.set_caret_pos(new_caret_position)
-                return
+                else:
+                    target_line = current_line + 1
+                    new_start = sum(len(lines[i]) + 1 for i in range(target_line))
+                    new_column = min(column, len(lines[target_line]))
+                    self.set_caret_pos(new_start + new_column)
 
 # Based on mas_generic_poem
 # https://github.com/Monika-After-Story/MonikaModDev/blob/06baf319a34c2ef585bc7c0a1e969a7eaa894b35/Monika%20After%20Story/game/screens.rpy#L3104-L3116
