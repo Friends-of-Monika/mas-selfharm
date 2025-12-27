@@ -165,6 +165,18 @@ init python:
             self.current_value = new_text
             self.redraw_input()
 
+        def move_to_home(self):
+            caret_pos = self.get_caret_pos()
+            line_start = self.current_value.rfind("\n", 0, caret_pos) + 1
+            self.set_caret_pos(line_start)
+
+        def move_to_end(self):
+            caret_pos = self.get_caret_pos()
+            line_end = self.current_value.find("\n", caret_pos)
+            if line_end == -1:
+                line_end = len(self.current_value)
+            self.set_caret_pos(line_end)
+
         def move_caret(self, direction):
             lines = self.current_value.split("\n")
             caret_position = self.get_caret_pos()
@@ -227,6 +239,8 @@ screen _msh_note_multiline_input(obj):
     key "K_RETURN" action Function(obj.insert_newline)
     key "K_UP" action Function(obj.move_caret, "up")
     key "K_DOWN" action Function(obj.move_caret, "down")
+    key "noshift_K_HOME" action Function(obj.move_to_home)
+    key "noshift_K_END" action Function(obj.move_to_end)
 
 label msh_note_multiline_input(_default=None, paper="paper", style="chibika_note_text"):
     # Yes, [player] uses Chibika's font. Hurry to make a game theory based off that :)
