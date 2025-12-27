@@ -205,3 +205,6 @@ label friends_of_monika_self_harm_awareness_submod_v2_0_4(version="v2_0_4"):
 
 label friends_of_monika_self_harm_awareness_submod_v2_0_5(version="v2_0_5"):
     return # empty update
+
+label friends_of_monika_self_harm_awareness_submod_v2_1_0(version="v2_1_0"):
+    return # empty update
