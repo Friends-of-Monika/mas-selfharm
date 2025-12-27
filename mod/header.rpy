@@ -38,7 +38,7 @@ init -990 python in mas_submod_utils:
         version="2.1.0",
         version_updates={
             "friends_of_monika_self_harm_awareness_submod_v2_0_3": "friends_of_monika_self_harm_awareness_submod_v2_0_4",
-            "friends_of_monika_self_harm_awareness_submod_v2_0_4": "friends_of_monika_self_harm_awareness_submod_v2_0_5",,
+            "friends_of_monika_self_harm_awareness_submod_v2_0_4": "friends_of_monika_self_harm_awareness_submod_v2_0_5",
             "friends_of_monika_self_harm_awareness_submod_v2_0_5": "friends_of_monika_self_harm_awareness_submod_v2_1_0"
         }
     )
