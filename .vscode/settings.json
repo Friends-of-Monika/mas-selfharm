@@ -1,0 +1,10 @@
+{
+    "files.exclude": {
+        "**/*.rpyc": true,
+        "**/*.rpa": true,
+        "**/*.rpymc": true,
+        "**/cache/": true
+    },
+    "renpy.warnOnUndefinedPersistents": false,
+    "renpy.warnOnUndefinedStoreVariables": false
+}
